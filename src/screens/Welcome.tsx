@@ -36,7 +36,7 @@ export function Welcome({ onDone }: { onDone: () => void }) {
   // --- 1 · Vaat ---
   if (adim === 'vaat') {
     return (
-      <Screen>
+      <Screen yanMenusuz>
         <div className="flex-1 flex flex-col justify-center gap-6 py-6">
           <div className="rise text-center">
             <h1 className="word text-3xl font-extrabold leading-tight">Ezberlemeyeceksin.</h1>
@@ -74,7 +74,7 @@ export function Welcome({ onDone }: { onDone: () => void }) {
     const dogru = secilen === card.tr;
 
     return (
-      <Screen>
+      <Screen yanMenusuz>
         <div className="flex-1 flex flex-col justify-center gap-6 py-6">
           {secilen === null ? (
             <>
@@ -138,7 +138,7 @@ export function Welcome({ onDone }: { onDone: () => void }) {
 
   // --- 3 · Gunluk hedef ---
   return (
-    <Screen>
+    <Screen yanMenusuz>
       <div className="flex-1 flex flex-col justify-center gap-6 py-6">
         <div className="rise text-center">
           <h1 className="word text-3xl font-extrabold leading-tight">Günde kaç kelime?</h1>

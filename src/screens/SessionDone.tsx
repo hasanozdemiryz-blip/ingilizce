@@ -37,7 +37,7 @@ export function SessionDone({
   const yuzde = toplam > 0 ? Math.round((dogru / toplam) * 100) : null;
 
   return (
-    <Screen>
+    <Screen yanMenusuz>
       <div className="flex-1 flex flex-col justify-center items-center gap-5 text-center">
         {/*
           Seti bitiren ders: seans yuzdesi geri cekiliyor. O an "%80 aldin"

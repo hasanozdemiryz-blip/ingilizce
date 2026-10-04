@@ -503,7 +503,7 @@ export function Lesson({
     const card = dersKartlari[i];
     if (!card) return null;
     return (
-      <Screen>
+      <Screen yanMenusuz>
         {/*
           "Biliyorum" ust barda, "Devam"dan UZAKTA. Ikisi yan yana olsaydi
           kazara basilir ve basan kisi kelimeyi kaybettigini fark etmezdi.
@@ -576,7 +576,7 @@ export function Lesson({
   }
 
   return (
-    <Screen>
+    <Screen yanMenusuz>
       <TopBar left={<BackButton onClick={cikmakIstiyor} />} />
       {/* `mt-2` diger yoldaki etiketle ayni: serit ile etiket birlesik durmasin */}
       <p className="text-center text-xs font-bold uppercase tracking-[0.14em] text-ink-faint mt-2">

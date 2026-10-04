@@ -257,7 +257,7 @@ export function Practice({
       : ogrenilenler;
 
     return (
-      <Screen>
+      <Screen yanMenusuz>
         <TopBar
           left={<BackButton onClick={() => setSecimEkrani(false)} />}
           right={<span className="tabular-nums">{secilenIdler.size} seçili</span>}
@@ -354,7 +354,7 @@ export function Practice({
       return null;
     }
     return (
-      <Screen>
+      <Screen yanMenusuz>
         <TopBar
           left={<BackButton onClick={() => durdur()} />}
           right={
@@ -388,7 +388,7 @@ export function Practice({
 
   if (calisiyor && gorevler.length > 0) {
     return (
-      <Screen>
+      <Screen yanMenusuz>
         <TopBar left={<BackButton onClick={() => durdur()} />} />
         <p className="text-center text-xs font-bold uppercase tracking-[0.14em] text-ink-faint">
           {adim === 'ders' ? 'Ders tekrarı · alıştırma' : 'Egzersiz'}
@@ -428,7 +428,7 @@ export function Practice({
   };
 
   return (
-    <Screen>
+    <Screen yanMenusuz>
       <header className="flex items-center justify-between h-14 shrink-0">
         <span className="word text-lg font-bold">Egzersiz</span>
         <span className="text-sm text-ink-soft tabular-nums">{ogrenilenler.length} kelime</span>

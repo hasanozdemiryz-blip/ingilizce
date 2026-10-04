@@ -52,7 +52,7 @@ export function Gecis({
   }[renk];
 
   return (
-    <Screen>
+    <Screen yanMenusuz>
       <div className="flex-1 flex flex-col justify-center items-center gap-5 text-center">
         <div className={`pop grid h-24 w-24 place-items-center rounded-full ${zemin}`}>
           <Ikon ad={ikon} className="h-12 w-12" />

@@ -70,9 +70,20 @@ export function Logo({
  * Soldaki bosluk yan menuyle AYNI sayidan beslenmeli; ikisi ayrisirsa
  * icerik menunun altina kayar.
  */
-export function Screen({ children }: { children: ReactNode }) {
+export function Screen({
+  children,
+  yanMenusuz = false,
+}: {
+  children: ReactNode;
+  /**
+   * Yan menu gorunmuyorken true. Ders, egzersiz, karsilama ve profil
+   * ekranlari menuyu gizliyor (bkz. App `egzersizde` ve erken donusler);
+   * bosluk yine de ayrilirsa icerik bos bir seridin saginda kalir.
+   */
+  yanMenusuz?: boolean;
+}) {
   return (
-    <div className="min-h-full flex justify-center lg:pl-60">
+    <div className={`min-h-full flex justify-center ${yanMenusuz ? '' : 'lg:pl-60'}`}>
       <div className="w-full max-w-md lg:max-w-2xl px-5 lg:px-8 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-[max(0.75rem,env(safe-area-inset-top))] flex flex-col">
         {children}
       </div>

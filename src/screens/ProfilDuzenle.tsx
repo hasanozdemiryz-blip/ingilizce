@@ -93,7 +93,7 @@ export function ProfilDuzenle({
   }
 
   return (
-    <Screen>
+    <Screen yanMenusuz>
       <TopBar left={<BackButton onClick={onKapat} />} />
 
       <div className="flex-1 flex flex-col gap-4 pb-6">
