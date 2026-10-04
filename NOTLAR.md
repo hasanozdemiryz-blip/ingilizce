@@ -1863,55 +1863,234 @@ kayıtlarda yok, varsayılanı 0, yani eski kullanıcının 19:00'ı 19:00 kalı
 
 ---
 
+## 2026-10-04 — Web yayını, üyelik ve senkron
+
+Tek günde web sürümü yayına çıktı, tasarım dili değişti ve üyelik
+gerçekten bir şey ifade eder hale geldi. Sıra şu: **alan adı → tasarım →
+üyelik → senkron.**
+
+### Alan adı ve yayın
+
+`hafizada.com` alındı (Natro), DNS **Cloudflare**'de. Depo `ingilizce`
+olarak yeniden adlandırıldı; kullanıcı sitesi (`hasanozdemiryz-blip.github.io`)
+alan adını taşıyor ve proje depoları ondan miras alıyor:
+
+| | |
+|---|---|
+| `hafizada.com/` | tanıtım sayfası (portal deposu) |
+| `hafizada.com/ingilizce/` | uygulama (`ingilizce` deposu) |
+
+**HTTPS'te saatler kaybedildi.** A kayıtları doğruydu, Cloudflare proxy'si
+kapalıydı, CAA engeli yoktu, proje deposu çakışmıyordu — GitHub yine de
+sertifika üretmiyordu. Eksik olan **AAAA kayıtlarıydı**. Dördü eklenince
+(`2606:50c0:8000::153` … `8003::153`, hepsi gri bulut) sertifika dakikalar
+içinde onaylandı ve HTTPS zorlaması açıldı.
+
+> Apex alan adında GitHub Pages AAAA istiyor. Belgelerde "önerilir" diyor
+> ama pratikte sertifika üretimi bunsuz başlamıyor.
+
+### Tasarım: ölçülen değerler
+
+Memrise referans alındı. İlk denemede dili doğru okuyup **değerleri tahmin
+ettim** ve ortaya karikatürü çıktı — kullanıcının tepkisi "kaba durdu"
+oldu, haklıydı. İkinci turda memrise.com'un hesaplanmış stilleri tarandı:
+
+| | Memrise | İlk denemem |
+|---|---|---|
+| Başlık ağırlığı | 700 | 900 |
+| Kenarlık | 2px | 3–4px |
+| Sert gölge | `0 2px 0` | `4px 4px 0` |
+| Düğme köşesi | 6–8px | hap (999px) |
+| Harf aralığı | normal | −0.028em |
+| Sarı | `#FFC000` | `#FFD23F` |
+
+**Ders:** referans alırken gözle bakma, `getComputedStyle` ile ölç. Her
+boyutta yaklaşık iki katına çıkmışım.
+
+Yazı tipi Archivo'dan **Nunito**'ya döndü: Memrise'ın Boing'i yuvarlak
+geometrik, Archivo sıkı bir grotesk — sertliğin bir kısmı oradan geliyordu.
+Nunito zaten uygulamanın başlık fontu, yani tanıtım sayfasıyla uygulama
+artık aynı yüzü kullanıyor.
+
+**İki register, tek marka.** Tanıtım sayfası kalın çerçeve + sert gölge +
+koyu bölümler (tanımadığını ikna etmesi gerekiyor); uygulama açık, yumuşak,
+krem (her gün geleni yormaması gerekiyor). Memrise'ın kendi ayrımı da bu.
+
+Uygulama paleti gök mavisinden **kreme** döndü, geniş ekranda alt sekme
+çubuğu **beyaz yan menüye** dönüşüyor — tek bileşen iki biçim veriyor,
+sekme listesi bölünmüyor.
+
+### Üyelik
+
+Sihirli bağlantıyla başladı, **e-posta + şifreye** döndü. Şifresiz yol
+tamamen kaldırıldı: iki giriş yolu sunmak kullanıcıyı hangisini
+kullandığını hatırlamak zorunda bırakıyor.
+
+**Üyelik = onay + ad.** E-posta onayı tek başına yetmiyor. E-posta ile
+kayıt olana ad, seviye ve hedef soruluyor; **Google ile girende ad
+sağlayıcıdan geldiği için üyelik ilk anda tamam** ve bilgi adımı hiç
+görünmüyor. (Kullanıcının düzeltmesi: "normal sistemlerde nasılsa öyle
+olsun.")
+
+Bilgi `user_metadata`da, ayrı tablo yok — oturumla birlikte geldiği için
+"tamamlamış mı" sorusu açılışta ek istek olmadan cevaplanıyor.
+
+**Google kodda hazır, sağlayıcı kapalı.** `VITE_GOOGLE_GIRIS=1` secret'ı
+verilene kadar düğme görünmüyor; kapalıyken göstermek tıklayan herkese
+Google hata sayfası demek.
+
+### İlerleme senkronu — hesabın asıl sebebi
+
+Bir süre üyelik yalnızca "hesap"tı: e-posta vardı, ilerleme cihazdaydı ve
+arayüz "telefonunu değiştirsen de devam edersin" diyordu. **Yalandı.**
+Proje taramasında yayını durduran tek şey buydu.
+
+Sunucuda kullanıcı başına **tek satır, tek jsonb paket** (`public.ilerleme`,
+RLS ile kendi satırına kilitli). Kart başına satır granüler senkron
+sağlardı ama her ders sonunda onlarca upsert ve satır bazlı çakışma çözümü
+demekti; havuz 300 kelime ve hesabı tek kişi kullanıyor.
+
+**Çakışmayı sunucu değil istemci çözüyor** (`birlestir`, saf, 15 test):
+
+| Ölçek | Kural |
+|---|---|
+| Kartlar | Kart bazında **son hareket eden**; eşitlikte ileri basamak |
+| Seriler | En büyüğü |
+| Günler | Aynı gün iki cihazda → en yüksek sayaç (toplamak iki katına çıkarırdı) |
+| Cevaplar | Birleşim, tekrarlar ayıklanmış, son 3000 |
+| Tercihler | Daha **taze** paketinki |
+
+**Yayına almadan yakalanan hata — paketin tazeliği.** `yereliOku` paketi
+*şimdiki zamanla* damgalıyordu, yani yeni kurulmuş boş bir cihaz sunucudaki
+paketten hep taze görünüyordu. Çıkış yapıp tekrar giren kullanıcı adını,
+günlük hedefini ve serisini kaybederdi. Damga artık **verinin kendisinden**
+hesaplanıyor (en son cevap, en son kart hareketi, son ders günü); hiçbir
+hareketi olmayan cihaz sıfır döner ve her karşılaştırmayı kaybeder.
+
+> Genel ders: "ne zaman paketlendi" ile "veri ne zaman değişti" aynı şey
+> değil. Senkronda ikincisi lazım.
+
+**Çıkışta temizlik.** Çıkan kişinin ilerlemesi cihazda kalmıyor. Önce
+gönderiliyor, sonra siliniyor; senkron tutmazsa çıkış **yapılmıyor** ve
+sebebi söyleniyor.
+
+**Hesap silme** edge function ile (`hesap-sil`): kullanıcı silmek yönetici
+yetkisi istiyor, o anahtar tarayıcıya konulamaz. Silinecek kimlik gövdeden
+değil **jetondan** okunuyor. Onay için `SİL` yazdırılıyor.
+
+### Üç hata ve sebepleri
+
+Kullanıcı üç şikâyet etti, üçünün de sebebi farklı çıktı:
+
+| Şikâyet | Sebep |
+|---|---|
+| "Bilgileri doldurdum, hâlâ tamamla diyor" | Veritabanında kayıtlıydı; `getSession` **depodan** okuyor ve kullanıcının eski halini taşıyabiliyor. Açılışta `getUser` ile tazeleniyor |
+| "Kayıtlı adrese posta gelmiyor, uyarı da yok" | Supabase kullanıcı sayımını engellemek için **hata döndürmüyor**, sessizce hiçbir posta göndermiyor. Tek işaret `identities` dizisinin boş olması |
+| "Giriş yap derse atıyor" | Kod doğruydu. **Servis çalışanı eski paketi tutuyordu.** `controllerchange` dinlenip sayfa bir kez yenileniyor |
+
+> Üçüncüsü en sinsisi: ben "düzelttim" diyordum, kullanıcıda eski paket
+> çalıştığı için düzelmiyordu. PWA'da sürüm geçişi kurulmadan hata
+> ayıklamak zaman kaybı.
+
+### Görsel üretimi
+
+Kart reçetesi (`tools/gorsel-recetesi.md`) aynen kullanıldı — aynı stil
+referansı, aynı `seed 20260918`, aynı iskelet. Üretilenler:
+`brand/anasayfa/` altında üç bölüm çizimi (kulaklık, merdiven, cihazlar) ve
+`kisiler/` altında dört kullanım sahnesi. Toplam **~600 kredi**.
+
+İki ders: "%75 yükseklik" demek yetmiyor, kenarlara dayanınca "WIDE empty
+margin" diye ayrıca yazmak gerekiyor; ve bant zeminini görselin kendi köşe
+tonundan almak kırpmayı tamamen gereksiz kılıyor (`zeminTonu`).
+
+### Tarayıcıda doğrulama tuzağı
+
+`Page.captureScreenshot` kaydırılmış sayfada değil, **çalışan bir
+zamanlayıcı** varken takılıyor. Slider'ın `setInterval`'i sayfayı hiç
+durağan bırakmıyordu. Her ekran görüntüsünden önce:
+
+```js
+for (let i = 1; i < 9999; i++) { clearInterval(i); clearTimeout(i); }
+// + geçişleri kapatan bir <style>
+```
+
 ## Sırada
 
-Kapsam kararı gereği sıra **veriden sonra** açılıyor: **100 kartlık** set
-yayına çıkacak, D1/D7 ölçülecek, kalan işler ondan sonra sıralanacak.
-*(Kapsam 26'ydı; görseller üretilince 100'e çıktı.)*
+### Nerede duruyoruz (4 Ekim 2026)
 
-### Nerede duruyoruz (23 Eylül 2026)
+**Web yayında.** `https://hafizada.com` ve `https://hafizada.com/ingilizce/`
+— HTTPS açık ve zorunlu. 257 test, tip denetimi ve derleme temiz.
 
-**Hazır olanlar.** Uygulama 1.0.0; 236 test, tip denetimi ve derleme temiz.
-Ölçüm tablosu Supabase'de kurulu ve doğrulandı (RLS yalnızca INSERT,
-`pg_cron` temizliği aktif). Android araç zinciri Windows'ta kuruldu;
-imzalı `.aab` ve `.apk` üretildi, imzaları doğrulandı. Keystore üretildi
-ve yedeklendi.
+| | |
+|---|---|
+| Tanıtım sayfası | ✅ kişi slider'ı, kanca bölümü, yöntem, senkron kartı |
+| Üyelik | ✅ e-posta + şifre, doğrulama, şifre sıfırlama, bilgi adımı |
+| İlerleme senkronu | ✅ çek-birleştir-yaz, açılışta ve her ders sonunda |
+| Çıkışta temizlik | ✅ önce gönder, sonra sil |
+| Hesap silme | ✅ edge function + yazarak onay |
+| Ölçüm | ✅ `olaylar` tablosu, `pg_cron` temizliği |
+| Android | ⏸ imzalı paket hazır, web'e dönünce rafa kalktı |
 
-**Cihaz turu tamamlandı.** Telaffuz, bildirim ikonu, hatırlatma + serbest
-saat seçici, yedeklemenin iki yolu, geri tuşu ve uygulama simgesi —
-hepsi gerçek telefonda görüldü, dördü ayrıca ölçüm kayıtlarıyla
-doğrulandı (bkz. yukarısı).
+### Yapılacaklar
 
-**Adımların tamamı `YAYIN.md`'de.** Sıfırdan makine kurulumu, telefonda
-deneme, Pages ve Play adımları orada; burada tekrarlanmıyor.
+**Hasan'da (panelden, kod değil):**
 
-**Sırada bekleyen iki iş:**
+1. **Sızmış şifre koruması** — Supabase → Authentication → Policies →
+   *Leaked password protection*. Güvenlik taraması uyarıyor; tek anahtar.
+2. **Google sağlayıcısı** — Google Cloud Console'da OAuth istemcisi,
+   yetkili yönlendirme adresi
+   `https://safbupshatjmfxdviwvp.supabase.co/auth/v1/callback`. Sonra
+   Supabase'e Client ID + Secret, sonra Actions'a `VITE_GOOGLE_GIRIS=1`.
+   Kod hazır; secret gelene kadar düğme görünmüyor.
+3. **Gerçek uçtan uca test** — test adresi bende yok:
+   - Kayıt → doğrulama postası → bilgi adımı → gerçek ad ana ekranda
+   - Çıkış → her şey sıfırlanmalı → tekrar giriş → her şey geri gelmeli
+   - İki ayrı cihaz/tarayıcı → ilerleme ikisinde de aynı
 
-1. **Web yayını** — Actions'a iki secret (`VITE_SUPABASE_*`) ve Pages
-   ayarı. Play'in istediği gizlilik adresi buradan geliyor, yani **Play'den
-   önce.** Secret'lar konmazsa site çıkar ama ölçüm sessizce kapalı kalır.
-2. **Play Console** — hesap açılışı (kimlik doğrulama günler sürüyor) ve
-   mağaza varlıkları: metinler, 512×512 ikon, 1024×500 grafik, ekran
-   görüntüleri, Veri Güvenliği formu (cevapları hazır, bkz. yukarısı).
+**Kodda bekleyenler:**
+
+4. **Karşılama akışı üyelikten hiç bahsetmiyor.** İlk gelen kişi ürünü
+   tanıyor ama hesabın ne işe yaradığını görmüyor.
+5. **Android'e dönüş** — paket, imzalama ve sürüm betiği hazır; Play
+   Console hesabı ve mağaza varlıkları kaldı (bkz. `YAYIN.md`).
+6. **Kanca aday üretim hattı** — havuzu ~600'e çıkaran tek kaldıraç.
+   CMU fonetik sözlüğü + Türkçe kelime listesi + fonem mesafesi → sıralı
+   aday listesi. "Haa testi" insanda kalır; moat orası.
+7. Kalan 200 kartın görseli.
+8. **Drive'a yedek — ikinci aşama.** Aşama 1 (paylaş menüsü) yapıldı.
+   Senkron geldiği için aciliyeti düştü; yedek yine de duruyor ve
+   öneriliyor (senkron hesaba bağlı, yedek değil).
 
 **Karar bekleyen:** depo herkese açık. Sır sızmıyor (kontrol edildi) ama
 `NOTLAR.md` görsel üretim reçetesini ve gelir modelini taşıyor. Pages
 ücretsiz planda yalnızca açık depoda çalışıyor, yani kapatmanın bedeli var.
 
-**Açık kalan öneriler (kullanıcı karar vermedi):** kullanım istatistikleri
-anahtarını Ayarlar'ın altına taşımak, istenmese de arada bildirim
-göndermek, tek kart paylaşımı (`renderCardPost`) — Instagram içeriği için.
+**Açık öneriler (karar verilmedi):** kullanım istatistikleri anahtarını
+Ayarlar'ın altına taşımak, istenmese de arada bildirim göndermek, tek kart
+paylaşımı (`renderCardPost`) — Instagram içeriği için.
 
-### Veriden sonra açılacaklar
+### Başka bilgisayarda devam etmek
 
-4. **Kanca aday üretim hattı** — havuzu ~600'e çıkaran tek kaldıraç.
-   CMU fonetik sözlüğü + Türkçe kelime listesi + fonem mesafesi → sıralı aday
-   listesi. "Haa testi" insanda kalır; moat orası.
-5. Kalan 200 kartın görseli.
-6. **Drive'a yedek — ikinci aşama.** Aşama 1 (paylaş menüsü) YAPILDI;
-   sırada gerçek Google Drive entegrasyonu: "Yedekle" → hesap seç → bitti, ve
-   otomatik yedek. OAuth client gerekiyor; **release keystore'un SHA-1'i
-   artık var** (bkz. "Play yayını: sürüm ve imza"), yani tek engel kalmadı —
-   yine de yayından sonraya bırakıldı, sıra bozulmasın.
-7. Hesap + bulut senkronu — yalnızca retention verisi gerektirirse. Drive
-   yedeği bunun büyük kısmını zaten çözüyorsa hiç gerekmeyebilir.
+```
+git clone https://github.com/hasanozdemiryz-blip/ingilizce
+npm install
+npm run dev
+```
+
+`.env.local` **gerekmiyor**: ölçüm ve üyelik için Supabase bilgileri
+Actions secret'larında duruyor ve yalnızca üretim derlemesine giriyor.
+Yerelde üyelik kapalı çalışır — arayüz üyeliksiz hâliyle açılır, hiçbir
+şey bozulmaz. Üyeliği yerelde denemek istersen `.env.local` içine
+`VITE_SUPABASE_URL` ve `VITE_SUPABASE_ANON_KEY` koy.
+
+Tanıtım sayfası ayrı depoda ama **kaynağı burada**:
+
+```
+node tools/anasayfa.mjs ../hasanozdemiryz-blip.github.io/index.html
+```
+
+`anasayfa/sablon.html` düzenlenir, betik görselleri gömüp tek dosya
+üretir, portal deposuna commit edilir. Portal deposunda derleme adımı yok.
+
+Yayın adımlarının tamamı `YAYIN.md`'de.
+
