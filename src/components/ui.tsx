@@ -59,10 +59,21 @@ export function Logo({
   );
 }
 
+/**
+ * Ekran kabugu.
+ *
+ * Telefonda tek sutun, ortada, en fazla `max-w-md`. Genis ekranda sol
+ * yan menu (bkz. TabBar) icin yer aciliyor ve sutun biraz genisliyor —
+ * ama SINIRSIZ degil: 2xl bir monitorde tam genislige yayilan bir ders
+ * ekrani okunmuyor, satirlar cok uzuyor.
+ *
+ * Soldaki bosluk yan menuyle AYNI sayidan beslenmeli; ikisi ayrisirsa
+ * icerik menunun altina kayar.
+ */
 export function Screen({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-full flex justify-center">
-      <div className="w-full max-w-md px-5 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-[max(0.75rem,env(safe-area-inset-top))] flex flex-col">
+    <div className="min-h-full flex justify-center lg:pl-60">
+      <div className="w-full max-w-md lg:max-w-2xl px-5 lg:px-8 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-[max(0.75rem,env(safe-area-inset-top))] flex flex-col">
         {children}
       </div>
     </div>
@@ -191,7 +202,7 @@ export function Progressbar({ done, total }: { done: number; total: number }) {
   return (
     <div className="h-2.5 w-full rounded-full bg-white/70 overflow-hidden shrink-0">
       <div
-        className="h-full rounded-full bg-gradient-to-r from-brand to-[#7db2ff] transition-[width] duration-500 ease-out"
+        className="h-full rounded-full bg-spark transition-[width] duration-500 ease-out"
         style={{ width: `${pct}%` }}
       />
     </div>

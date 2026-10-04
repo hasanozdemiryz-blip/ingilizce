@@ -96,8 +96,32 @@ export function Home({
 
   const gunlukPct = Math.min(100, Math.round((todayCount / state.dailyLimit) * 100));
 
+  /*
+    Genis ekranda panelin alti bos kaliyordu — telefon icin tasarlanmis
+    tek sutun, 900 piksellik bir ekranda ucte birini dolduruyor. Bosluga
+    arkaya tasan bir kart cizimi konuyor: yeni bir ozellik degil, zaten
+    sahip oldugumuz gorsellerden biri. Maske olmadan cizimin kendi acik
+    zemini krem uzerinde dikdortgen bir leke birakiyor.
+
+    Gun icinde degismesin diye bugunun anahtarindan seciliyor; her acilista
+    baska bir cizim yanip sonse dikkat dagitirdi. Liste elle secili: rastgele
+    kart cogu zaman soluk bir nesne cikariyor ve krem uzerinde leke gibi
+    duruyor.
+  */
+  const SUS_KARTLAR = ['snake', 'fox', 'boat', 'cup', 'leaf', 'bad'];
+  const susId = SUS_KARTLAR[[...bugun].reduce((t, c) => t + c.charCodeAt(0), 0) % SUS_KARTLAR.length];
+  const susGorsel = CARD_BY_ID.get(susId)?.image ?? null;
+
   return (
     <Screen>
+      {susGorsel && (
+        <img
+          src={susGorsel}
+          alt=""
+          aria-hidden
+          className="pointer-events-none fixed -bottom-6 -right-6 hidden lg:block w-[30rem] opacity-90 [mask-image:radial-gradient(68%_68%_at_55%_45%,#000_45%,transparent_80%)]"
+        />
+      )}
       <header className="flex items-center justify-between h-[4.25rem] shrink-0">
         {/*
           Logo burada degil, acilis ekraninda (bkz. Splash). Yatay kilit bu
@@ -120,7 +144,7 @@ export function Home({
       </header>
 
       {/* Kahraman blok dikey ORTADA — ekran bos gorunmesin, karar tek olsun */}
-      <div className={`flex-1 flex flex-col justify-center gap-4 ${TAB_SPACE}`}>
+      <div className={`flex-1 flex flex-col justify-center lg:justify-start lg:pt-2 gap-4 ${TAB_SPACE}`}>
         {/*
           Set bitince gunluk hedef cubugu YALAN soyluyor: yeni kelime
           kalmadigi icin "0 / 10" her gun boyle kalacak ve kullanici
@@ -147,7 +171,7 @@ export function Home({
           <div className="h-3 w-full rounded-full bg-sunken overflow-hidden">
             <div
               className={`h-full rounded-full transition-[width] duration-700 ease-out ${
-                limitDoldu || setBitti ? 'bg-grow' : 'bg-gradient-to-r from-brand to-[#7db2ff]'
+                limitDoldu || setBitti ? 'bg-grow' : 'bg-spark'
               }`}
               style={{ width: `${setBitti ? 100 : gunlukPct}%` }}
             />
@@ -207,14 +231,14 @@ export function Home({
             )}
           </Card>
         ) : (
-          <div className="rise rounded-card p-6 bg-gradient-to-br from-brand to-[#7db2ff] text-white shadow-[0_16px_34px_-16px_rgba(79,146,246,0.95)]">
-            <p className="text-sm font-medium text-white/80">
+          <div className="rise rounded-card p-6 bg-spark text-ink shadow-[0_14px_30px_-16px_rgba(240,184,0,0.9)]">
+            <p className="text-sm font-bold text-ink/55">
               {ilkDers ? 'Hazır' : yeniGun ? 'Yeni gün' : 'Bugünün dersi'}
             </p>
             <p className="word text-3xl font-extrabold mt-0.5 mb-1">
               {ilkDers ? 'İlk dersin hazır' : yeniGun ? 'Yeni güne başla' : paket}
             </p>
-            <p className="text-sm text-white/75 mb-4">
+            <p className="text-sm text-ink/65 mb-4">
               {ilkDers
                 ? `${newCards.length} kelime · önce tanış, sonra öğrenme testi.`
                 : yeniGun
@@ -223,9 +247,7 @@ export function Home({
                     ? 'Önce kelimeler, sonra öğrenme testi.'
                     : 'Bugün gelen kelimeler seni bekliyor.'}
             </p>
-            <Button variant="soft" onClick={onStart}>
-              Başla
-            </Button>
+            <Button onClick={onStart}>Başla</Button>
 
             {/*
               Ikinci bir HEDEF degil, ayni dersin sirasi. Yalnizca tekrar
@@ -235,7 +257,7 @@ export function Home({
             {newCards.length > 0 && tekrar >= agirTekrar && (
               <button
                 onClick={onReviewFirst}
-                className="mt-3 w-full text-center text-sm font-semibold text-white/80 underline decoration-white/40 underline-offset-4 transition-opacity active:opacity-60"
+                className="mt-3 w-full text-center text-sm font-semibold text-ink/70 underline decoration-ink/30 underline-offset-4 transition-opacity active:opacity-60"
               >
                 Önce {tekrar} tekrarı yap
               </button>

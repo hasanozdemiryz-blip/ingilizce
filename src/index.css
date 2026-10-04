@@ -58,11 +58,15 @@
 }
 
 @theme {
-  /* --- Zemin: yumusak gokyuzu --- */
-  --color-paper: #eaf1fb;
+  /* --- Zemin: krem kagit ---
+         Gokyuzu mavisiydi (#eaf1fb). Tanitim sayfasiyla ayni aileye
+         girmesi icin kreme dondu: icerik kremin uzerinde, kartlar beyaz.
+         Iki acik ton arasindaki fark derinligi veriyor; agir golgeye
+         gerek kalmiyor. --- */
+  --color-paper: #fdf8ed;
   --color-surface: #ffffff;
-  --color-sunken: #eef3fa;
-  --color-line: #dfe8f5;
+  --color-sunken: #fdf3de;
+  --color-line: #ece4d3;
 
   /* --- Murekkep: lacivert --- */
   --color-ink: #16233a;
@@ -98,9 +102,10 @@
 
   --radius-card: 2rem;
 
-  /* Kartlarin yumusak, yayvan golgesi */
-  --shadow-soft: 0 10px 30px -12px rgba(22, 35, 58, 0.22);
-  --shadow-lift: 0 18px 40px -16px rgba(22, 35, 58, 0.3);
+  /* Golgeler hafifledi: krem zeminde koyu mavi golge kirli gorunuyor,
+     ayrimi artik zemin-kart ton farki tasiyor. */
+  --shadow-soft: 0 6px 18px -10px rgba(22, 35, 58, 0.16);
+  --shadow-lift: 0 14px 32px -16px rgba(22, 35, 58, 0.22);
 }
 
 html,
@@ -116,11 +121,9 @@ body {
   -webkit-font-smoothing: antialiased;
   overscroll-behavior-y: none;
 
-  /* Referanstaki gibi: acik gokyuzu, ustte hafif isik */
-  background:
-    radial-gradient(120% 70% at 50% -10%, #ffffff 0%, rgba(255, 255, 255, 0) 55%),
-    linear-gradient(180deg, #e3edfb 0%, var(--color-paper) 45%, #f3f7fd 100%);
-  background-attachment: fixed;
+  /* Duz krem. Onceki gokyuzu degradesi yan menuyle yan yana gelince
+     iki ayri zemin gibi duruyordu; tek ton ikisini birlestiriyor. */
+  background: var(--color-paper);
 }
 
 button {
