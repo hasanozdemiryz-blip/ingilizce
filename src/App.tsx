@@ -87,6 +87,17 @@ export default function App() {
     Baslangic degeri bir kez hesaplaniyor ve `?giris=1` adresten siliniyor:
     kalirsa kullanici sayfayi her yenilediginde giris sayfasi yeniden acilir.
   */
+  /*
+    Giris penceresi TANITIM SAYFASINDAN mi acildi.
+
+    Acildiysa kapatmak uygulamaya birakmamali: kullanici "Giris yap"a
+    basti, giris yapmadi — iceride isi yok, geldigi yere donmeli. Icerideki
+    bir dugmeyle acilan ayni pencere ise kapaninca yerinde kalmali.
+
+    Kurulum fonksiyonunun icinde isaretleniyor; o yalnizca bir kez
+    calisiyor ve karar oracikta veriliyor.
+  */
+  const disaridanGiris = useRef(false);
   const [girisKip, setGirisKip] = useState<'giris' | 'yeniSifre' | 'bilgi' | null>(() => {
     if (!uyelikVarMi()) return null;
     if (sifirlamaDonusuMu()) return 'yeniSifre';
@@ -100,6 +111,7 @@ export default function App() {
       Depoya bakiliyor cunku SDK bu noktada henuz inmemis olabilir.
     */
     if (oturumVarGibi()) return null;
+    disaridanGiris.current = true;
     return 'giris';
   });
 
@@ -242,7 +254,13 @@ export default function App() {
     <Giris
       baslangicKip={girisKip}
       zorunlu={girisKip === 'yeniSifre'}
-      onKapat={() => setGirisKip(null)}
+      onKapat={() => {
+        if (disaridanGiris.current && !uye) {
+          window.location.href = '/';
+          return;
+        }
+        setGirisKip(null);
+      }}
       /*
         Yerel profilin adi da guncellenmeli: kullanici adini yazdigi halde
         ana ekranda otomatik uretilmis `Şen Balık` gormeye devam ederse

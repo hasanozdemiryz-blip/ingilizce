@@ -53,7 +53,7 @@
 
   header { background: var(--lacivert); position: sticky; top: 0; z-index: 40; }
   header .kap { display: flex; align-items: center; gap: 18px; padding-block: 12px; }
-  .marka { display: flex; align-items: center; gap: 11px; }
+  .marka { display: flex; align-items: center; gap: 6px; }
   .marka img { width: 44px; height: 44px; }
   .marka .ad { font-family: var(--d); font-weight: 800; font-size: 1.22rem; color: var(--sari); line-height: 1; letter-spacing: -.02em; }
   .marka .alt { display: block; font-size: .64rem; font-weight: 800; letter-spacing: .18em; color: #8795ae; text-transform: uppercase; margin-top: 2px; }
@@ -87,14 +87,12 @@
   .gosteri .cerceve { border: 2px solid var(--lacivert); border-radius: 16px; background: var(--beyaz); box-shadow: var(--sert); overflow: hidden; }
   .ray { display: flex; transition: transform .45s cubic-bezier(.4,0,.2,1); }
   .slayt { flex: 0 0 100%; min-width: 0; }
-  .slayt .resim { aspect-ratio: 16/9; background: var(--krem-2); overflow: hidden; }
+  .slayt .resim { aspect-ratio: 16/9; overflow: hidden; }
   .slayt .resim img { width: 100%; height: 100%; object-fit: cover; }
-  .slayt .bilgi { border-top: 2px solid var(--lacivert); padding: 14px 18px 16px; }
-  .slayt .ust-satir { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-  .slayt .en { font-family: var(--d); font-weight: 800; font-size: 1.55rem; }
-  .slayt .tr { color: var(--soft); font-weight: 700; }
-  .kanca-rozet { background: var(--sari); border: 2px solid var(--lacivert); border-radius: 999px; padding: 4px 14px; font-family: var(--d); font-weight: 800; font-size: .98rem; margin-left: auto; }
-  .slayt .cumle { margin: 10px 0 0; color: var(--soft); font-style: italic; }
+  .slayt .bilgi { border-top: 2px solid var(--lacivert); padding: 13px 18px; background: var(--beyaz); }
+  .slayt .an { font-family: var(--d); font-weight: 800; font-size: 1.05rem; color: var(--lacivert); margin: 0; }
+  .slayt .sure { font-size: .88rem; color: var(--soft); margin: 2px 0 0; }
+  .kanca-rozet { background: var(--sari); border: 2px solid var(--lacivert); border-radius: 999px; padding: 3px 12px; font-family: var(--d); font-weight: 800; font-size: .92rem; }
 
   .gosteri .etiket { position: absolute; top: -16px; left: 16px; background: var(--lacivert); color: var(--sari); font-family: var(--d); font-weight: 800; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; padding: 7px 16px; border-radius: 999px; z-index: 2; }
   .noktalar { display: flex; justify-content: center; gap: 9px; margin-top: 18px; }
@@ -116,6 +114,21 @@
   .adim h3 { font-size: 1.3rem; font-weight: 700; margin-top: 12px; color: var(--krem); }
   .adim p { color: #a9b6cb; margin: 7px 0 0; font-size: .97rem; }
 
+  /* ---------- KANCA ORNEKLERI ---------- */
+  .kancalar { padding-block: 56px 10px; }
+  .kancalar h2 { font-size: clamp(1.8rem,4.4vw,2.7rem); font-weight: 700; text-align: center; }
+  .kancalar .ust { text-align: center; color: var(--soft); margin: 10px auto 0; max-width: 54ch; }
+  .kanca-izgara { display: grid; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); gap: 16px; margin-top: 32px; }
+  .kanca-kart { background: var(--beyaz); border: 2px solid var(--lacivert); border-radius: 16px; overflow: hidden; box-shadow: var(--sert-k); transition: opacity .35s; }
+  .kanca-kart.soluk { opacity: 0; }
+  .kanca-kart .resim { aspect-ratio: 4/3; overflow: hidden; background: var(--krem-2); }
+  .kanca-kart .resim img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .kanca-kart .alt { border-top: 2px solid var(--lacivert); padding: 12px 14px 14px; }
+  .kanca-kart .satir { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+  .kanca-kart .en { font-family: var(--d); font-weight: 800; font-size: 1.3rem; }
+  .kanca-kart .tr { color: var(--soft); font-weight: 700; font-size: .95rem; }
+  .kanca-kart .cumle { margin: 8px 0 0; font-size: .9rem; color: var(--soft); font-style: italic; }
+
   /* ---------- NEDEN ---------- */
   .neden { padding-block: 60px; }
   .neden h2 { font-size: clamp(1.8rem, 4.4vw, 2.7rem); font-weight: 700; text-align: center; }
@@ -126,7 +139,7 @@
   .fayda .ikon img { width: 100%; height: 100%; object-fit: contain; }
   .fayda .ikon-telaffuz { background: #e9f6fe; }
   .fayda .ikon-merdiven { background: #f6fded; }
-  .fayda .ikon-fidan { background: #eaf2e3; }
+  .fayda .ikon-cihaz { background: __ZEMIN_CIHAZ__; }
   .fayda .govde { padding: 20px 22px 24px; }
   .fayda h3 { font-size: 1.2rem; font-weight: 700; }
   .fayda p { color: var(--soft); margin: 7px 0 0; font-size: .97rem; }
@@ -169,7 +182,7 @@
 
 <div class="serit">
   <div class="kap">
-    <span>Ücretsiz · Kayıt gerekmez</span>
+    <span>Ücretsiz</span>
     <a href="/ingilizce/?giris=1">Giriş yap</a>
   </div>
 </div>
@@ -218,13 +231,12 @@
     </div>
 
     <div class="gosteri">
-      <span class="etiket">Kanca</span>
       <div class="cerceve">
-        <div class="ray" id="ray">__SLAYTLAR__</div>
+        <div class="ray" id="ray">__KISILER__</div>
       </div>
       <div class="oklar">
-        <button type="button" id="geri" aria-label="Önceki kelime">‹</button>
-        <button type="button" id="ileri" aria-label="Sonraki kelime">›</button>
+        <button type="button" id="geri" aria-label="Önceki">‹</button>
+        <button type="button" id="ileri" aria-label="Sonraki">›</button>
       </div>
       <div class="noktalar" id="noktalar"></div>
     </div>
@@ -263,6 +275,17 @@
   <path d="M0 18 C 160 34, 340 6, 540 20 C 740 34, 920 8, 1120 22 C 1270 32, 1370 14, 1440 24 L1440 0 L0 0 Z" fill="#16233a"/>
 </svg>
 
+<section class="kancalar" id="kancalar">
+  <div class="kap">
+    <h2>Kanca nasıl bir şey?</h2>
+    <p class="ust">
+      Her kelimenin benzer sesli bir Türkçe karşılığı ve onu anlatan bir sahnesi var.
+      Üç örnek — kendiliğinden değişiyor.
+    </p>
+    <div class="kanca-izgara" id="kanca-izgara">__KANCA_KARTLARI__</div>
+  </div>
+</section>
+
 <section class="neden" id="neden">
   <div class="kap">
     <h2>Neden işe yarıyor?</h2>
@@ -283,10 +306,10 @@
         </div>
       </div>
       <div>
-        <span class="ikon ikon-fidan"><img src="__IK_FIDAN__" alt="Saksıda filizlenen fidan" loading="lazy"></span>
+        <span class="ikon ikon-cihaz"><img src="__IK_CIHAZ__" alt="Telefon ve bilgisayar arasında senkron" loading="lazy"></span>
         <div class="govde">
-          <h3>Ceza yok</h3>
-          <p>Kaçırdığın gün suçlayan bildirim gelmiyor. Günlük hedef dolunca gün kapanıyor, tekrarlar sürüyor.</p>
+          <h3>Nerede kaldıysan orada</h3>
+          <p>Hesabını açınca ilerlemen her ders sonunda kaydediliyor. Telefonda başlayıp bilgisayarda sürdürüyorsun.</p>
         </div>
       </div>
     </div>
@@ -300,7 +323,7 @@
 <section class="kapanis">
   <div class="kap kutu">
     <h2>İlk kelimen 15 saniye uzakta.</h2>
-    <p>Kayıt yok, form yok. Beğenirsen ilerlemeni kaydetmek için sonra hesap açarsın.</p>
+    <p>Önce dene, beğenirsen hesabını aç; ilerlemen cihazdan cihaza seninle gelsin.</p>
     <a class="btn btn-lacivert btn-buyuk" href="/ingilizce/">Hemen başla</a>
     <p class="ufak">Ücretsiz · Telefonda da çalışır · Çevrimdışı açılır</p>
   </div>
@@ -320,50 +343,92 @@
   </div>
 </footer>
 
+<script type="application/json" id="kanca-havuz">__KANCA_HAVUZ__</script>
+
 <script>
 (function () {
+  // --- Kahraman slider: kullanim anlari ---
   var ray = document.getElementById('ray');
   var noktalar = document.getElementById('noktalar');
-  if (!ray) return;
-  var adet = ray.children.length;
-  var i = 0;
-  var otomatik;
+  if (ray) {
+    var adet = ray.children.length;
+    var i = 0;
+    var otomatik;
 
-  for (var n = 0; n < adet; n++) {
-    var b = document.createElement('button');
-    b.type = 'button';
-    b.setAttribute('aria-label', (n + 1) + '. kelime');
-    b.addEventListener('click', (function (k) { return function () { git(k); dur(); }; })(n));
-    noktalar.appendChild(b);
-  }
+    for (var n = 0; n < adet; n++) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', (n + 1) + '. görsel');
+      b.addEventListener('click', (function (k) { return function () { git(k); dur(); }; })(n));
+      noktalar.appendChild(b);
+    }
 
-  function ciz() {
-    ray.style.transform = 'translateX(' + (-i * 100) + '%)';
-    var d = noktalar.children;
-    for (var k = 0; k < d.length; k++) {
-      d[k].setAttribute('aria-current', k === i ? 'true' : 'false');
+    var ciz = function () {
+      ray.style.transform = 'translateX(' + (-i * 100) + '%)';
+      var d = noktalar.children;
+      for (var k = 0; k < d.length; k++) {
+        d[k].setAttribute('aria-current', k === i ? 'true' : 'false');
+      }
+    };
+    var git = function (k) { i = (k + adet) % adet; ciz(); };
+    var dur = function () { clearInterval(otomatik); };
+
+    document.getElementById('ileri').addEventListener('click', function () { git(i + 1); dur(); });
+    document.getElementById('geri').addEventListener('click', function () { git(i - 1); dur(); });
+
+    var x0 = null;
+    ray.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; dur(); }, { passive: true });
+    ray.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var fark = e.changedTouches[0].clientX - x0;
+      if (Math.abs(fark) > 40) git(i + (fark < 0 ? 1 : -1));
+      x0 = null;
+    }, { passive: true });
+
+    ciz();
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      otomatik = setInterval(function () { git(i + 1); }, 4600);
     }
   }
-  function git(k) { i = (k + adet) % adet; ciz(); }
-  function dur() { clearInterval(otomatik); }
 
-  document.getElementById('ileri').addEventListener('click', function () { git(i + 1); dur(); });
-  document.getElementById('geri').addEventListener('click', function () { git(i - 1); dur(); });
+  // --- Kanca ornekleri: ucu ekranda, havuzdan donerek ---
+  var izgara = document.getElementById('kanca-izgara');
+  var ham = document.getElementById('kanca-havuz');
+  if (!izgara || !ham) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  // Dokunmatik kaydırma
-  var x0 = null;
-  ray.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; dur(); }, { passive: true });
-  ray.addEventListener('touchend', function (e) {
-    if (x0 === null) return;
-    var fark = e.changedTouches[0].clientX - x0;
-    if (Math.abs(fark) > 40) git(i + (fark < 0 ? 1 : -1));
-    x0 = null;
-  }, { passive: true });
+  var havuz;
+  try { havuz = JSON.parse(ham.textContent); } catch (e) { return; }
+  if (!havuz || havuz.length <= izgara.children.length) return;
 
-  ciz();
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    otomatik = setInterval(function () { git(i + 1); }, 4200);
+  var gorunen = izgara.children.length;
+  var sira = gorunen;   // havuzda siradaki kart
+  var hedef = 0;        // degisecek kutu
+
+  function doldur(kutu, k) {
+    kutu.querySelector('img').src = k.img;
+    kutu.querySelector('img').alt = k.sentence;
+    kutu.querySelector('.en').textContent = k.en;
+    kutu.querySelector('.tr').textContent = k.tr;
+    kutu.querySelector('.kanca-rozet').textContent = '≈ ' + k.hook;
+    kutu.querySelector('.cumle').textContent = '"' + k.sentence + '"';
   }
+
+  /*
+    Ayni anda ucu birden degistirmek goz icin sicrama oluyor; sirayla tek
+    kart degisince bolum canli duruyor ama okumayi bolmuyor.
+  */
+  setInterval(function () {
+    var kutu = izgara.children[hedef];
+    var kart = havuz[sira % havuz.length];
+    kutu.classList.add('soluk');
+    setTimeout(function () {
+      doldur(kutu, kart);
+      kutu.classList.remove('soluk');
+    }, 350);
+    sira++;
+    hedef = (hedef + 1) % gorunen;
+  }, 2600);
 })();
 </script>
 

@@ -12,7 +12,7 @@ import {
   useHatirlatma,
 } from '../reminder';
 import { useTelaffuz } from '../speech';
-import { HEDEFLER, SEVIYELER, etiket, useUyelik, uyelikVarMi } from '../uyelik';
+import { HEDEFLER, SEVIYELER, etiket, hesabiSil, useUyelik, uyelikVarMi } from '../uyelik';
 import { cikisVeTemizle } from '../senkron';
 import { Giris } from '../components/Giris';
 import { DevPanel } from './DevPanel';
@@ -55,6 +55,36 @@ export function Settings({
   const [cikisDurum, setCikisDurum] = useState<'kapali' | 'soruyor' | 'calisiyor' | 'senkronYok'>(
     'kapali',
   );
+
+  /*
+    HESAP SILME. Cikistan ayri ve geri donusu YOK: cikista veri hesapta
+    kaliyor, burada hesabin kendisi gidiyor. Onay bu yuzden iki asamali
+    degil ama metin acik.
+  */
+  const [silmeDurum, setSilmeDurum] = useState<'kapali' | 'soruyor' | 'calisiyor'>('kapali');
+  const [silmeHata, setSilmeHata] = useState<string | null>(null);
+  /*
+    Onay icin KELIME YAZDIRILIYOR. Geri donusu olmayan bir islemde tek bir
+    dugme yetmiyor: yanlis dugmeye basmak bir saniyelik hata, hesabi
+    kaybetmek kalici. Yazmak kullaniciyi bir an durduruyor ve ne yaptigini
+    okutuyor — bankalardan GitHub'a kadar standart olan kalip bu.
+  */
+  const [silOnay, setSilOnay] = useState('');
+  const SIL_SOZ = 'SİL';
+
+  async function hesabiKaldir() {
+    setSilmeDurum('calisiyor');
+    setSilmeHata(null);
+    const sonuc = await hesabiSil();
+    if (!sonuc.oldu) {
+      setSilmeHata(sonuc.hata ?? 'Hesap silinemedi.');
+      setSilmeDurum('soruyor');
+      return;
+    }
+    // Hesap gitti; cihazdaki kopya da gitmeli.
+    await resetAll();
+    location.reload();
+  }
 
   async function cik(zorla = false) {
     setCikisDurum('calisiyor');
@@ -351,6 +381,7 @@ export function Settings({
                   <Kucuk onClick={() => setBilgiAcik(true)}>Bilgilerimi düzenle</Kucuk>
                   <Kucuk onClick={() => setSifreAcik(true)}>Şifre değiştir</Kucuk>
                   <Kucuk onClick={() => setCikisDurum('soruyor')}>Çıkış yap</Kucuk>
+                  <Kucuk onClick={() => setSilmeDurum('soruyor')}>Hesabı sil</Kucuk>
                 </div>
               </>
             ) : (
@@ -472,6 +503,62 @@ export function Settings({
       {girisAcik && <Giris onKapat={() => setGirisAcik(false)} />}
       {sifreAcik && <Giris baslangicKip="yeniSifre" onKapat={() => setSifreAcik(false)} />}
       {bilgiAcik && <Giris baslangicKip="bilgi" onKapat={() => setBilgiAcik(false)} />}
+
+      {silmeDurum !== 'kapali' && (
+        <div className="fixed inset-0 z-30 flex items-end justify-center bg-ink/45 px-5 pb-8 backdrop-blur-sm sm:items-center sm:pb-0">
+          <Card className="rise w-full max-w-md p-6">
+            <p className="word text-xl font-extrabold text-[#c2417f]">
+              Hesabını kalıcı olarak sil
+            </p>
+            <p className="mt-2 text-sm font-bold text-ink">
+              Bu işlemin geri dönüşü yok. Silinen hiçbir şey kurtarılamaz.
+            </p>
+            <ul className="mt-3 flex flex-col gap-1.5 text-sm text-ink-soft">
+              <li>• Öğrendiğin <b>bütün kelimeler</b> ve ilerlemen</li>
+              <li>• <b>Serin</b> ve bütün çalışma geçmişin</li>
+              <li>• Hesabın, e-posta adresin ve bilgilerin</li>
+              <li>• Bu cihazdaki kayıtlar</li>
+            </ul>
+            <p className="mt-3 text-sm text-ink-soft">
+              Vazgeçersen <b>Çıkış yap</b> da seçebilirsin; o zaman hesabın durur, yalnızca bu
+              cihaz temizlenir.
+            </p>
+            <label className="mt-4 block">
+              <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">
+                Onaylamak için {SIL_SOZ} yaz
+              </span>
+              <input
+                type="text"
+                autoComplete="off"
+                value={silOnay}
+                onChange={(e) => setSilOnay(e.target.value)}
+                placeholder={SIL_SOZ}
+                className="mt-1.5 w-full rounded-2xl border border-line bg-sunken px-4 py-3 text-base text-ink outline-none focus:border-ink/30 focus:ring-2 focus:ring-ink/15"
+              />
+            </label>
+            {silmeHata && <p className="mt-3 text-sm text-[#c2417f]">{silmeHata}</p>}
+            <div className="mt-5 flex flex-col gap-2.5">
+              <Button
+                variant="spark"
+                onClick={() => {
+                  setSilmeDurum('kapali');
+                  setSilOnay('');
+                  setSilmeHata(null);
+                }}
+              >
+                Vazgeç, hesabım kalsın
+              </Button>
+              <Button
+                variant="ghost"
+                disabled={silmeDurum === 'calisiyor' || silOnay.trim() !== SIL_SOZ}
+                onClick={() => void hesabiKaldir()}
+              >
+                {silmeDurum === 'calisiyor' ? 'Siliniyor…' : 'Hesabı kalıcı olarak sil'}
+              </Button>
+            </div>
+          </Card>
+        </div>
+      )}
 
       {cikisDurum !== 'kapali' && (
         <div className="fixed inset-0 z-30 flex items-end justify-center bg-ink/45 px-5 pb-8 backdrop-blur-sm sm:items-center sm:pb-0">

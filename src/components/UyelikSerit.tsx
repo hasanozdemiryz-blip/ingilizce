@@ -32,9 +32,14 @@ export function UyelikSerit({
 
   if (!uyelikVarMi()) return null;
   if (uye?.bilgi?.tamam) return null;
-  if (!uye && ogrenilen === 0) return null;
 
   const eksikBilgi = Boolean(uye);
+  /*
+    Hic kelime yokken de gorunuyor ama metni degisiyor: "0 kelimen risk
+    altinda" demek anlamsiz olurdu. Bir sure sifirda hic gosterilmiyordu;
+    karar degisti, cagri surekli dursun istendi.
+  */
+  const hicIlerleme = !eksikBilgi && ogrenilen === 0;
 
   return (
     <button
@@ -42,14 +47,22 @@ export function UyelikSerit({
       className="rise flex w-full items-center gap-3 rounded-2xl border border-spark bg-spark-soft px-4 py-3 text-left transition active:scale-[0.99]"
     >
       <span className="text-lg leading-none" aria-hidden>
-        {eksikBilgi ? '🙂' : '⚠️'}
+        {eksikBilgi || hicIlerleme ? '🙂' : '⚠️'}
       </span>
       <span className="min-w-0 flex-1">
         <span className="block text-sm font-bold text-ink">
-          {eksikBilgi ? 'Üyeliğini tamamla' : `${ogrenilen} kelimen yalnızca bu cihazda`}
+          {eksikBilgi
+            ? 'Üyeliğini tamamla'
+            : hicIlerleme
+              ? 'Üye ol, ilerlemen kaybolmasın'
+              : `${ogrenilen} kelimen yalnızca bu cihazda`}
         </span>
         <span className="block text-xs text-ink-soft">
-          {eksikBilgi ? 'Otuz saniye sürer.' : 'Üye ol, cihaza bağlı kalmasın.'}
+          {eksikBilgi
+            ? 'Otuz saniye sürer.'
+            : hicIlerleme
+              ? 'Telefonda başla, bilgisayarda sürdür.'
+              : 'Üye ol, cihaza bağlı kalmasın.'}
         </span>
       </span>
       <span className="text-sm font-extrabold text-ink" aria-hidden>

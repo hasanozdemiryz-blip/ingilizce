@@ -470,6 +470,37 @@ export async function sifreBelirle(yeniSifre: string): Promise<Sonuc> {
   return error ? { oldu: false, hata: cevir(error.message) } : { oldu: true };
 }
 
+/**
+ * Hesabi tamamen siler — geri donusu yok.
+ *
+ * Silme islemi sunucuda (`hesap-sil` edge function): kullanici silmek
+ * yonetici yetkisi istiyor ve o anahtar tarayiciya konulamaz. Silinecek
+ * kimlik govdeden degil JETONDAN okunuyor, yoksa biri baskasinin
+ * kimligini gonderip onu silerdi.
+ *
+ * `ilerleme` satiri veritabaninda `on delete cascade` ile gidiyor;
+ * cihazdaki kopyayi cagiran temizliyor (bkz. senkron.ts).
+ */
+export async function hesabiSil(): Promise<Sonuc> {
+  const c = await istemciyiKur();
+  if (!c) return BAGLANAMADI;
+  const { data } = await c.auth.getSession();
+  const jeton = data.session?.access_token;
+  if (!jeton) return { oldu: false, hata: 'Önce giriş yapman gerekiyor.' };
+
+  try {
+    const { error } = await c.functions.invoke('hesap-sil', { method: 'POST' });
+    if (error) return { oldu: false, hata: 'Hesap silinemedi. Biraz sonra tekrar dene.' };
+  } catch {
+    return { oldu: false, hata: 'Hesap silinemedi. Biraz sonra tekrar dene.' };
+  }
+
+  await c.auth.signOut();
+  uye = null;
+  haberVer();
+  return { oldu: true };
+}
+
 export async function cikisYap(): Promise<void> {
   const c = await istemciyiKur();
   await c?.auth.signOut();

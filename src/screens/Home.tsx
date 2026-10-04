@@ -265,6 +265,28 @@ export function Home({
                     ? 'Önce kelimeler, sonra öğrenme testi.'
                     : 'Bugün gelen kelimeler seni bekliyor.'}
             </p>
+            {/*
+              DERS ONIZLEMESI. Kart yalnizca "5 kelime" diyordu ve ekranin
+              yarisi bos duruyordu; kullanici neye basacagini bilmeden
+              basiyordu. Kelimeler goruldugunde ders somut bir sey oluyor.
+
+              KANCA GOSTERILMIYOR — bilerek. Kanca dersin kendi ani; burada
+              gosterilirse ilk karsilasmanin etkisi onizlemede harcanir.
+            */}
+            {newCards.length > 0 && (
+              <ul className="mb-4 flex flex-col gap-1.5">
+                {newCards.slice(0, 5).map((c) => (
+                  <li
+                    key={c.id}
+                    className="flex items-baseline gap-2 rounded-xl bg-white/55 px-3 py-2"
+                  >
+                    <span className="word font-extrabold text-ink">{c.en}</span>
+                    <span className="text-sm text-ink/60">{c.tr}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+
             <Button onClick={onStart}>Başla</Button>
 
             {/*
