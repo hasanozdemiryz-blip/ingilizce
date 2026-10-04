@@ -2003,6 +2003,38 @@ referansı, aynı `seed 20260918`, aynı iskelet. Üretilenler:
 margin" diye ayrıca yazmak gerekiyor; ve bant zeminini görselin kendi köşe
 tonundan almak kırpmayı tamamen gereksiz kılıyor (`zeminTonu`).
 
+### Akşam turunda çıkanlar
+
+Kullanıcı canlıda gezip tek tek bildirdi; dördü de gerçek hataydı.
+
+**Giriş yapınca ana sayfaya atıyordu.** Başarılı girişten sonra `onKapat`
+aynı tikte çağrılıyor ve o kapanış, giriş anındaki **eski render'ın**
+kapanışı oluyor — oradaki `uye` hâlâ `null`. "Girmemiş" sanıp geri
+gönderiyordu. Kapanışın sebebi artık tahmin edilmiyor, açıktan
+bildiriliyor: `onKapat(girisYapildi)`.
+
+> Genel kural: bir geri çağrı "şu an durum ne" diye React state'ine
+> bakıyorsa ve o durum aynı tikte değişiyorsa, cevabı **çağıran** vermeli.
+
+**Hesap silme hiç çalışmıyordu.** Edge function `jsr:@supabase/supabase-js`
+ile yazılmıştı; Edge Runtime bu biçimi desteklemiyor ve işlev **hiç
+başlamıyordu**. İstemci "hesap silinemedi" görüyor, sebebi hiçbir yerde
+görünmüyordu. `npm:` biçimine geçildi. Doğrulama da ağ geçidinden alınıp
+işlevin içine taşındı (`verify_jwt: false`): geçit doğrularsa hatayı o
+döndürüyor ve istemciye anlamsız bir gövde gidiyor.
+
+> Edge function yazarken `npm:` kullan. Ve dağıttıktan sonra jetonsuz bir
+> `curl` at — işlev başlıyor mu, orada görülüyor.
+
+**Ad değişmiyor sanıldı, aslında eski paket çalışıyordu.** Yerelde test
+edildi, anında değişiyordu. Gün boyunca üç ayrı "düzelmedi" bildiriminin
+ikisi bu yüzdendi. Sürüm geçişi düzeltmesi (`controllerchange`) yayında
+ama bir kez elle `Unregister` gerekiyor.
+
+**Profil ile hesap karışıyordu.** Ad iki ayrı yerden değiştirilebiliyordu
+ve biri diğerini sessizce eziyordu. Artık üyenin adı yalnızca hesaptan;
+profil ekranında avatar, fotoğraf ve çerçeve kalıyor.
+
 ### Tarayıcıda doğrulama tuzağı
 
 `Page.captureScreenshot` kaydırılmış sayfada değil, **çalışan bir
@@ -2033,19 +2065,84 @@ for (let i = 1; i < 9999; i++) { clearInterval(i); clearTimeout(i); }
 
 ### Yapılacaklar
 
-**Hasan'da (panelden, kod değil):**
+#### 1. Sızmış şifre koruması (2 dakika)
 
-1. **Sızmış şifre koruması** — Supabase → Authentication → Policies →
-   *Leaked password protection*. Güvenlik taraması uyarıyor; tek anahtar.
-2. **Google sağlayıcısı** — Google Cloud Console'da OAuth istemcisi,
-   yetkili yönlendirme adresi
-   `https://safbupshatjmfxdviwvp.supabase.co/auth/v1/callback`. Sonra
-   Supabase'e Client ID + Secret, sonra Actions'a `VITE_GOOGLE_GIRIS=1`.
-   Kod hazır; secret gelene kadar düğme görünmüyor.
-3. **Gerçek uçtan uca test** — test adresi bende yok:
-   - Kayıt → doğrulama postası → bilgi adımı → gerçek ad ana ekranda
-   - Çıkış → her şey sıfırlanmalı → tekrar giriş → her şey geri gelmeli
-   - İki ayrı cihaz/tarayıcı → ilerleme ikisinde de aynı
+Supabase panel → **Authentication → Policies** → *Leaked password
+protection* → aç. Bunsuz kullanıcılar `123456789` gibi sızmış şifrelerle
+kayıt olabiliyor; güvenlik taraması uyarıyor.
+
+#### 2. Google ile giriş (20 dakika, iki panel)
+
+Kod tamamen hazır. Düğme `VITE_GOOGLE_GIRIS` secret'ı gelene kadar
+görünmüyor — sağlayıcı kapalıyken göstermek, tıklayan herkese Google hata
+sayfası demek.
+
+**A) Google Cloud Console** — `console.cloud.google.com`
+
+1. Sağ üstten proje seç ya da **yeni proje** oluştur (ad önemsiz).
+2. **APIs & Services → OAuth consent screen**
+   - User Type: **External** → Create
+   - App name: `Hafızada İngilizce`
+   - User support email ve Developer contact: kendi adresin
+   - Scope eklemeden **Save and Continue** ile geç
+   - Sonunda **PUBLISH APP** — yayınlamazsan yalnızca test kullanıcısı
+     olarak eklediğin adresler girebilir, başkası "erişim engellendi" görür
+3. **APIs & Services → Credentials → + Create Credentials → OAuth client ID**
+   - Application type: **Web application**
+   - Name: `Hafizada Web`
+   - **Authorized redirect URIs** → ADD URI → tam olarak:
+
+     ```
+     https://safbupshatjmfxdviwvp.supabase.co/auth/v1/callback
+     ```
+
+   - **Create** → çıkan **Client ID** ve **Client Secret** kopyala
+
+> Tek kritik alan redirect URI. Harfi harfine aynı olmazsa Google
+> `redirect_uri_mismatch` der ve giriş hiç açılmaz.
+
+**B) Supabase** — `supabase.com/dashboard` → proje
+
+1. **Authentication → Sign In / Providers → Google** → aç, Client ID ve
+   Secret'i yapıştır → **Save**
+2. **Authentication → URL Configuration → Redirect URLs** listesinde
+   şunlar olmalı:
+
+   ```
+   https://hafizada.com/ingilizce/
+   http://localhost:5173/
+   ```
+
+**C) Düğmeyi açmak**
+
+GitHub → depo **ingilizce** → Settings → Secrets and variables → Actions
+→ **New repository secret**:
+
+| Name | Secret |
+|---|---|
+| `VITE_GOOGLE_GIRIS` | `1` |
+
+Sonra Actions'tan son iş akışını **Re-run** et ya da herhangi bir commit
+at; yeni derlemede düğme belirir.
+
+> Google ile giren kişi **o anda tam üye** olur: ad sağlayıcıdan gelir,
+> bilgi adımı hiç çıkmaz. Seviye ve hedef boş kalır, isterse sonra
+> Ayarlar'dan doldurur.
+
+#### 3. Gerçek uçtan uca test
+
+Test adresi bende yok, Resend'in gönderdiği postayı göremiyorum.
+
+- Kayıt → doğrulama postası → bilgi adımı → ana ekranda gerçek ad
+- Çıkış → tanıtım sayfasına döner, cihaz temizlenir → tekrar giriş →
+  her şey geri gelir
+- İki ayrı cihaz/tarayıcı → ilerleme ikisinde de aynı
+- Hesabı sil → `SİL` yaz → hesap ve sunucudaki ilerleme gider
+
+> **İlk denemeden önce bir kerelik:** `F12 → Application → Service
+> Workers → Unregister`, sonra `Ctrl+Shift+R`. Gün boyunca üç kez
+> "düzelmedi" sanmamızın sebebi buydu; sürüm geçişi düzeltmesi artık
+> yayında ama bir kez elle temizlemek gerekiyor.
 
 **Kodda bekleyenler:**
 
