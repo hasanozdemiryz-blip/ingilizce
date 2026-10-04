@@ -6,7 +6,6 @@ import {
   SEVIYELER,
   SIFRE_EN_AZ,
   bilgiKaydet,
-  girisBaglantisiGonder,
   googleAcikMi,
   googleIleGiris,
   sifreBelirle,
@@ -29,9 +28,14 @@ import {
  * → giris). Ayri bilesenlere bolununce metinler ve dogrulama kurallari
  * sessizce ayrisiyor.
  *
- * SIFRESIZ YOL DURUYOR. Sifre birincil ama tek yol degil; sifre hatirlamak
- * istemeyen tek kullanimlik baglanti alabiliyor. Eski hesaplarin zaten
- * sifresi yok, onlarin tek yolu buydu.
+ * E-POSTA YALNIZCA DOGRULAMA ICIN. Bir sure "sifre yerine baglanti gonder"
+ * secenegi de vardi; kaldirildi. Iki ayri giris yolu sunmak kullaniciya
+ * hangisini kullandigini hatirlatmak zorunda birakiyor ve "gecen sefer
+ * nasil girmistim" sorusunu uretiyor.
+ *
+ * Sihirli baglantiyla acilmis ESKI hesaplarin sifresi yok; onlar
+ * "Sifremi unuttum" ile bir tane belirliyor. `uyelik.ts` icindeki hata
+ * cevirisi onlari oraya yonlendiriyor.
  *
  * IKI BICIM. Telefonda alttan acilan sayfa (basparmak menzili), genis
  * ekranda ortada pencere.
@@ -170,23 +174,6 @@ export function Giris({
 
     // Giris, Google ve yeni sifre: oturum acildi, yapacak bir sey kalmadi.
     onKapat();
-  }
-
-  async function baglantiIste() {
-    if (gonderiliyor) return;
-    setHata(null);
-    setGonderiliyor(true);
-    const sonuc = await girisBaglantisiGonder(eposta);
-    setGonderiliyor(false);
-    if (!sonuc.oldu) {
-      setHata(sonuc.hata ?? 'Bir şeyler ters gitti.');
-      return;
-    }
-    setBitis({
-      baslik: 'Bağlantıyı gönderdik',
-      metin: `${eposta} adresine tek kullanımlık bir giriş bağlantısı yolladık. Aç, dokun, geri dön — hepsi bu.`,
-      ipucu: 'Gelmediyse spam klasörüne bak. Birkaç dakika sürebiliyor.',
-    });
   }
 
   async function google() {
@@ -386,9 +373,6 @@ export function Giris({
                 <span className="text-ink-faint">
                   Hesabın yok mu?{' '}
                   <Baglanti onClick={() => kipDegistir('kayit')}>Hesap aç</Baglanti>
-                </span>
-                <span className="mt-1">
-                  <Baglanti onClick={baglantiIste}>Şifre yerine e-posta bağlantısı gönder</Baglanti>
                 </span>
               </div>
             )}

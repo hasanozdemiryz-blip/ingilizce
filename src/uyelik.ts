@@ -1,8 +1,7 @@
 /**
  * UYELIK — hesabin tek kapisi.
  *
- * Uygulamanin geri kalani yalnizca `useUyelik()`, `girisBaglantisiGonder()`
- * ve `cikisYap()` cagiriyor. Saglayici degisirse degisen tek yer burasi —
+ * Uygulamanin geri kalani yalnizca bu modulu cagiriyor. Saglayici degisirse degisen tek yer burasi —
  * `analitik.ts` ile ayni desen, ve o deseni bir kez Firebase'den Supabase'e
  * gecerken tek dosya degistirerek kullandik.
  *
@@ -300,26 +299,6 @@ export type Sonuc = {
 const BAGLANAMADI: Sonuc = { oldu: false, hata: 'Şu an bağlanamıyoruz. Biraz sonra dene.' };
 
 // --- Disariya acilan islemler ----------------------------------------------
-
-/**
- * Giris baglantisi gonderir. Hesap yoksa kendiliginden olusur.
- *
- * Sifre YOK. Sifre demek unutma, sifirlama akisi ve destek yuku demek;
- * tek kullanimlik baglanti bunlarin hicbirini getirmiyor.
- */
-export async function girisBaglantisiGonder(
-  eposta: string,
-): Promise<{ oldu: boolean; hata?: string }> {
-  const c = await istemciyiKur();
-  if (!c) return { oldu: false, hata: 'Şu an bağlanamıyoruz. Biraz sonra dene.' };
-
-  const { error } = await c.auth.signInWithOtp({
-    email: eposta.trim(),
-    options: { shouldCreateUser: true, emailRedirectTo: donusAdresi() },
-  });
-
-  return error ? { oldu: false, hata: cevir(error.message) } : { oldu: true };
-}
 
 /**
  * Sifreyle kayit. Supabase'de "Confirm email" acik oldugu icin hesap
