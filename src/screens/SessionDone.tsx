@@ -1,5 +1,8 @@
+import { useState } from 'react';
 import { SetFinale } from '../components/SetFinale';
+import { Giris } from '../components/Giris';
 import { Button, Ikon, Screen, Streak } from '../components/ui';
+import { useUyelik, uyelikVarMi } from '../uyelik';
 
 /**
  * Ders bitisi.
@@ -36,6 +39,22 @@ export function SessionDone({
 }) {
   const yuzde = toplam > 0 ? Math.round((dogru / toplam) * 100) : null;
 
+  /*
+    Uyelik daveti BURADA, kapida degil. Kayit ekrani ilk acilista
+    cikarsa kullanici urunu gormeden karar vermek zorunda kalir; ders
+    bitince elinde korunmaya deger bir sey var ve teklif anlam kazaniyor.
+
+    Sessiz bir kart, engelleyici bir sayfa degil: "Ana ekran" dugmesi
+    yerinde duruyor ve davet atlanabiliyor. Kapatildiginda bu seans
+    boyunca geri gelmiyor.
+
+    Zaten giris yapmis kullaniciya ve uyelik kapaliyken hic cikmiyor.
+  */
+  const { uye } = useUyelik();
+  const [girisAcik, setGirisAcik] = useState(false);
+  const [davetKapandi, setDavetKapandi] = useState(false);
+  const davetVar = uyelikVarMi() && !uye && !davetKapandi;
+
   return (
     <Screen yanMenusuz>
       <div className="flex-1 flex flex-col justify-center items-center gap-5 text-center">
@@ -67,7 +86,7 @@ export function SessionDone({
             </p>
             <div className="h-2.5 w-full rounded-full bg-white/70 overflow-hidden mt-3">
               <div
-                className="h-full rounded-full bg-gradient-to-r from-brand to-[#7db2ff] transition-[width] duration-700"
+                className="h-full rounded-full bg-spark transition-[width] duration-700"
                 style={{ width: `${yuzde}%` }}
               />
             </div>
@@ -95,9 +114,33 @@ export function SessionDone({
         )}
       </div>
 
-      <div className="shrink-0 rise delay-3">
+      <div className="shrink-0 rise delay-3 flex flex-col gap-3">
+        {davetVar && (
+          <div className="rounded-card bg-surface px-5 py-4 text-left shadow-[var(--shadow-soft)]">
+            <p className="text-sm font-bold">İlerlemen şu an yalnızca bu cihazda</p>
+            <p className="mt-1 text-sm text-ink-soft">
+              Hesap açarsan tarayıcını temizlesen de kaybolmaz.
+            </p>
+            <div className="mt-3 flex items-center gap-2">
+              <button
+                onClick={() => setGirisAcik(true)}
+                className="rounded-full bg-spark px-4 py-2 text-sm font-bold text-ink active:scale-95 transition"
+              >
+                Hesap aç
+              </button>
+              <button
+                onClick={() => setDavetKapandi(true)}
+                className="rounded-full px-3 py-2 text-sm font-semibold text-ink-faint active:scale-95 transition"
+              >
+                Sonra
+              </button>
+            </div>
+          </div>
+        )}
         <Button onClick={onHome}>Ana ekran</Button>
       </div>
+
+      {girisAcik && <Giris onKapat={() => setGirisAcik(false)} />}
     </Screen>
   );
 }
