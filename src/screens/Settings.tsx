@@ -72,6 +72,22 @@ export function Settings({
   const [silOnay, setSilOnay] = useState('');
   const SIL_SOZ = 'SİL';
 
+  /*
+    Cikista ve hesap silmede TANITIM SAYFASINA donuluyor, uygulama
+    yenilenmiyor: ikisinden sonra da kullanicinin uygulamada isi yok ve
+    karsisina karsilama akisi cikmasi "silinmedi mi?" izlenimi veriyordu.
+
+    Tam yenileme sart — depo bosaldi, React'teki eski durumla devam etmek
+    karma bir ekran birakirdi.
+
+    Kok adres gelistirmede uygulamanin kendisi, uretimde tanitim sayfasi
+    (uygulama `/ingilizce/` altinda). Gelistirmede davranis yenilemeye
+    esdeger oluyor, bir sey bozulmuyor.
+  */
+  const anaSayfayaDon = () => {
+    window.location.href = '/';
+  };
+
   async function hesabiKaldir() {
     setSilmeDurum('calisiyor');
     setSilmeHata(null);
@@ -83,7 +99,7 @@ export function Settings({
     }
     // Hesap gitti; cihazdaki kopya da gitmeli.
     await resetAll();
-    location.reload();
+    anaSayfayaDon();
   }
 
   async function cik(zorla = false) {
@@ -93,8 +109,7 @@ export function Settings({
       setCikisDurum('senkronYok');
       return;
     }
-    // Depo bosaldi; React'teki eski durumla devam etmek yerine bastan kur.
-    location.reload();
+    anaSayfayaDon();
   }
   const { uye } = useUyelik();
 
