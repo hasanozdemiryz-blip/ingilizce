@@ -49,6 +49,9 @@ jobs:
         env:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          # Google saglayicisi Supabase panelinde acilinca "1" veriliyor;
+          # bos oldugunda giris penceresinde dugme hic gorunmuyor.
+          VITE_GOOGLE_GIRIS: ${{ secrets.VITE_GOOGLE_GIRIS }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
