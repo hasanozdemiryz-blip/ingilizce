@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { olay } from './analitik';
 import { TabBar, type Tab } from './components/TabBar';
@@ -29,7 +29,7 @@ import { Welcome } from './screens/Welcome';
 import { Settings } from './screens/Settings';
 import { ProfilDuzenle } from './screens/ProfilDuzenle';
 import { Giris } from './components/Giris';
-import { sifirlamaDonusuMu, uyelikVarMi } from './uyelik';
+import { sifirlamaDonusuMu, useUyelik, uyelikVarMi } from './uyelik';
 import { gecerliCerceve, type Kazanim } from './cerceveler';
 import { uygulamadanCik, useGeri } from './geri';
 // `Card` adi types.ts'teki KART tipiyle cakisiyor; arayuz bileseni takma adla.
@@ -86,7 +86,7 @@ export default function App() {
     Baslangic degeri bir kez hesaplaniyor ve `?giris=1` adresten siliniyor:
     kalirsa kullanici sayfayi her yenilediginde giris sayfasi yeniden acilir.
   */
-  const [girisKip, setGirisKip] = useState<'giris' | 'yeniSifre' | null>(() => {
+  const [girisKip, setGirisKip] = useState<'giris' | 'yeniSifre' | 'bilgi' | null>(() => {
     if (!uyelikVarMi()) return null;
     if (sifirlamaDonusuMu()) return 'yeniSifre';
     const adres = new URL(window.location.href);
@@ -95,6 +95,29 @@ export default function App() {
     history.replaceState(null, '', adres.pathname + adres.search + adres.hash);
     return 'giris';
   });
+
+  /*
+    BILGI ADIMI. E-posta onayi tek basina uyelik vermiyor; ad girilene kadar
+    kullanici uye sayilmiyor (bkz. uyelik.ts `uyelikTamamMi`).
+
+    Acilista hesaplanamiyor: uyelik SDK'si asenkron iniyor ve oturum ancak
+    o zaman biliniyor. Bu yuzden efekt — `hazir` olunca bir kez bakiliyor.
+
+    `soruldu` bayragi olmadan kullanici "Sonra doldururum" dedigi anda efekt
+    yeniden calisip pencereyi geri aciyor; kapatilamaz bir donguye donuyor.
+    Kapatan kisi uye sayilmamaya devam ediyor ve serit onu hatirlatiyor.
+
+    Google ile girende bu hic tetiklenmiyor: ad saglayicidan geldigi icin
+    `bilgi` zaten dolu.
+  */
+  const { uye, hazir: uyelikHazir } = useUyelik();
+  const bilgiSoruldu = useRef(false);
+  useEffect(() => {
+    if (!uyelikHazir || bilgiSoruldu.current) return;
+    if (!uye || uye.bilgi) return;
+    bilgiSoruldu.current = true;
+    setGirisKip((o) => o ?? 'bilgi');
+  }, [uyelikHazir, uye]);
 
   /*
     Gunun degistigini fark eden yer BURASI (bkz. today.ts). Onceden
@@ -186,7 +209,20 @@ export default function App() {
     tam olarak bu kisi.
   */
   const girisPenceresi = girisKip ? (
-    <Giris baslangicKip={girisKip} zorunlu={girisKip === 'yeniSifre'} onKapat={() => setGirisKip(null)} />
+    <Giris
+      baslangicKip={girisKip}
+      zorunlu={girisKip === 'yeniSifre'}
+      onKapat={() => setGirisKip(null)}
+      /*
+        Yerel profilin adi da guncellenmeli: kullanici adini yazdigi halde
+        ana ekranda otomatik uretilmis `Şen Balık` gormeye devam ederse
+        bilgi adimi bir ise yaramamis gibi duruyor.
+      */
+      onBilgiKaydedildi={(ad) => {
+        const mevcut = state.profil;
+        if (mevcut) void setState({ profil: { ...mevcut, ad } });
+      }}
+    />
   ) : null;
 
   if (!state.onboarded) {
@@ -257,6 +293,13 @@ export default function App() {
         */
         setBitti={flow.yeni > 0 && setBittiMi(progress)}
         kancalar={ogrenilenKancalar(progress)}
+        kazanim={kazanim}
+        davetGorulen={state.uyelikDavetGorulen ?? []}
+        onDavetKapandi={(id) =>
+          void setState({
+            uyelikDavetGorulen: [...(state.uyelikDavetGorulen ?? []), id],
+          })
+        }
         onHome={kapat}
       />
     );
@@ -299,6 +342,7 @@ export default function App() {
           onQuickReview={() =>
             setFlow({ name: 'ders', yeni: [], yedek: [], tekrar: bugununKartlari, eslestirmesiz: true })
           }
+          onUyelik={() => setGirisKip(uye ? 'bilgi' : 'giris')}
           onPractice={() => setFlow({ name: 'ders', yeni: [], yedek: [], tekrar: ahead })}
         />
       )}

@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 import { Button } from './ui';
+import type { Hedef, Seviye } from '../uyelik';
 import {
+  HEDEFLER,
+  SEVIYELER,
   SIFRE_EN_AZ,
+  bilgiKaydet,
   girisBaglantisiGonder,
   googleAcikMi,
   googleIleGiris,
@@ -9,6 +13,7 @@ import {
   sifreSifirlamaGonder,
   sifreyleGiris,
   sifreyleKayit,
+  uyeOku,
 } from '../uyelik';
 
 /**
@@ -31,7 +36,9 @@ import {
  * IKI BICIM. Telefonda alttan acilan sayfa (basparmak menzili), genis
  * ekranda ortada pencere.
  */
-type Kip = 'giris' | 'kayit' | 'unuttum' | 'yeniSifre';
+type Kip = 'giris' | 'kayit' | 'unuttum' | 'yeniSifre' | 'bilgi';
+
+
 
 /** Islem bitti ve kullanicinin yapacagi baska bir is var. */
 type Bitis = { baslik: string; metin: string; ipucu?: string };
@@ -42,6 +49,7 @@ export function Giris({
   zorunlu = false,
   baslik,
   aciklama,
+  onBilgiKaydedildi,
 }: {
   onKapat: () => void;
   /** Sifre sifirlama donusunde 'yeniSifre' geliyor (bkz. App). */
@@ -55,11 +63,25 @@ export function Giris({
   zorunlu?: boolean;
   baslik?: string;
   aciklama?: string;
+  /**
+   * Bilgi adimi bitince cagrilir. Yerel profilin adi da guncellenmeli,
+   * yoksa kullanici adini yazdigi halde ana ekranda `Şen Balık` gormeye
+   * devam eder (bkz. profil.ts).
+   */
+  onBilgiKaydedildi?: (ad: string) => void;
 }) {
   const [kip, setKip] = useState<Kip>(baslangicKip);
   const [eposta, setEposta] = useState('');
   const [sifre, setSifre] = useState('');
   const [sifreAcik, setSifreAcik] = useState(false);
+  /*
+    Ayarlar'dan "bilgilerimi duzenle" ile gelindiginde alanlar MEVCUT
+    degerlerle dolu gelmeli; bos form kullaniciya her seyi yeniden
+    yazdirir ve bir alani bos birakirsa eskisini siler.
+  */
+  const [ad, setAd] = useState(() => uyeOku()?.bilgi?.ad ?? '');
+  const [seviye, setSeviye] = useState<Seviye | null>(() => uyeOku()?.bilgi?.seviye ?? null);
+  const [hedef, setHedef] = useState<Hedef | null>(() => uyeOku()?.bilgi?.hedef ?? null);
   const [gonderiliyor, setGonderiliyor] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
   const [bitis, setBitis] = useState<Bitis | null>(null);
@@ -99,7 +121,13 @@ export function Giris({
           ? await sifreyleKayit(eposta, sifre)
           : kip === 'unuttum'
             ? await sifreSifirlamaGonder(eposta)
-            : await sifreBelirle(sifre);
+            : kip === 'bilgi'
+              ? await bilgiKaydet({
+                  ad,
+                  ...(seviye ? { seviye } : {}),
+                  ...(hedef ? { hedef } : {}),
+                })
+              : await sifreBelirle(sifre);
 
     setGonderiliyor(false);
 
@@ -115,6 +143,20 @@ export function Giris({
         metin: `${eposta} adresine bir doğrulama bağlantısı yolladık. Aç, dokun, geri dön.`,
         ipucu: 'Gelmediyse spam klasörüne bak. Birkaç dakika sürebiliyor.',
       });
+      return;
+    }
+    /*
+      Dogrulama KAPALIYSA kayit oturumu hemen aciyor; o zaman bilgi adimi
+      buradan devam ediyor. Acikken kullanici e-postadaki baglantiyla
+      donunce App adimi aciyor (bkz. App `girisKip`).
+    */
+    if (kip === 'kayit') {
+      kipDegistir('bilgi');
+      return;
+    }
+    if (kip === 'bilgi') {
+      onBilgiKaydedildi?.(ad.trim());
+      onKapat();
       return;
     }
     if (kip === 'unuttum') {
@@ -177,10 +219,15 @@ export function Giris({
       aciklama: 'Bundan sonra bu şifreyle gireceksin.',
       dugme: 'Şifreyi kaydet',
     },
+    bilgi: {
+      baslik: 'Seni tanıyalım',
+      aciklama: 'Üyeliğin bununla tamamlanıyor. Otuz saniye sürer.',
+      dugme: 'Tamamla',
+    },
   };
   const m = metinler[kip];
-  const sifreVar = kip !== 'unuttum';
-  const epostaVar = kip !== 'yeniSifre';
+  const sifreVar = kip === 'giris' || kip === 'kayit' || kip === 'yeniSifre';
+  const epostaVar = kip === 'giris' || kip === 'kayit' || kip === 'unuttum';
 
   return (
     <div
@@ -214,7 +261,7 @@ export function Giris({
             <p className="word text-xl font-extrabold">{m.baslik}</p>
             <p className="mt-2 text-sm text-ink-soft">{m.aciklama}</p>
 
-            {googleAcikMi() && kip !== 'yeniSifre' && (
+            {googleAcikMi() && (kip === 'giris' || kip === 'kayit') && (
               <>
                 <button
                   type="button"
@@ -229,6 +276,39 @@ export function Giris({
                   veya
                   <span className="h-px flex-1 bg-line" />
                 </div>
+              </>
+            )}
+
+            {kip === 'bilgi' && (
+              <>
+                <label className="mt-4 block">
+                  <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">
+                    Adın
+                  </span>
+                  <input
+                    ref={alan}
+                    type="text"
+                    required
+                    autoComplete="given-name"
+                    value={ad}
+                    onChange={(e) => setAd(e.target.value)}
+                    placeholder="Adın"
+                    className="mt-1.5 w-full rounded-2xl border border-line bg-sunken px-4 py-3 text-base text-ink outline-none focus:border-ink/30 focus:ring-2 focus:ring-ink/15"
+                  />
+                </label>
+
+                <Secenekler
+                  baslik="İngilizcen ne durumda?"
+                  secenekler={SEVIYELER}
+                  secili={seviye}
+                  sec={setSeviye}
+                />
+                <Secenekler
+                  baslik="Niçin öğreniyorsun?"
+                  secenekler={HEDEFLER}
+                  secili={hedef}
+                  sec={setHedef}
+                />
               </>
             )}
 
@@ -292,7 +372,7 @@ export function Giris({
               </Button>
               {kapatilabilir && (
                 <Button variant="ghost" onClick={onKapat}>
-                  Şimdi değil
+                  {kip === 'bilgi' ? 'Sonra doldururum' : 'Şimdi değil'}
                 </Button>
               )}
             </div>
@@ -322,8 +402,55 @@ export function Giris({
                 <Baglanti onClick={() => kipDegistir('giris')}>Girişe dön</Baglanti>
               </p>
             )}
+            {kip === 'bilgi' && (
+              <p className="mt-4 text-center text-xs text-ink-faint">
+                Seviye ve hedefi sonra Ayarlar&apos;dan da değiştirebilirsin.
+              </p>
+            )}
           </form>
         )}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Tek secimli secenek grubu. Radyo dugmesi degil dokunulabilir hap:
+ * telefonda 16 piksellik bir daireyi isaretlemek zor, hapin tamami hedef.
+ */
+function Secenekler<T extends string>({
+  baslik,
+  secenekler,
+  secili,
+  sec,
+}: {
+  baslik: string;
+  secenekler: { deger: T; yazi: string }[];
+  secili: T | null;
+  sec: (d: T) => void;
+}) {
+  return (
+    <div className="mt-4">
+      <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">{baslik}</span>
+      <div className="mt-1.5 flex flex-wrap gap-2">
+        {secenekler.map((o) => {
+          const acik = secili === o.deger;
+          return (
+            <button
+              key={o.deger}
+              type="button"
+              aria-pressed={acik}
+              onClick={() => sec(o.deger)}
+              className={`rounded-2xl border px-3.5 py-2 text-sm font-bold transition active:scale-[0.97] ${
+                acik
+                  ? 'border-spark bg-spark text-ink'
+                  : 'border-line bg-sunken text-ink-soft'
+              }`}
+            >
+              {o.yazi}
+            </button>
+          );
+        })}
       </div>
     </div>
   );

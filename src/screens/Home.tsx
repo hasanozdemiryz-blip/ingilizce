@@ -2,6 +2,7 @@ import { Avatar } from '../components/Avatar';
 import { Button, Card, Ikon, Screen, Streak } from '../components/ui';
 import { SetFinale } from '../components/SetFinale';
 import { TAB_SPACE } from '../components/TabBar';
+import { UyelikSerit } from '../components/UyelikSerit';
 import { CARD_BY_ID, CARDS, ogrenilenKancalar, setBittiMi } from '../content';
 import { relativeDue } from '../dates';
 import type { AppState, Card as CardType, Progress } from '../types';
@@ -27,6 +28,8 @@ type Props = {
   onReviewFirst: () => void;
   onQuickReview: () => void;
   onPractice: () => void;
+  /** Uyelik seridi buna basinca giris penceresini aciyor (bkz. App). */
+  onUyelik: () => void;
 };
 
 /**
@@ -55,6 +58,7 @@ export function Home({
   onReviewFirst,
   onQuickReview,
   onPractice,
+  onUyelik,
 }: Props) {
   const ogrenilen = progress.filter((p) => p.introduced).length;
   const tekrar = due.length;
@@ -157,6 +161,8 @@ export function Home({
           Cubugun zemini de `sunken`: beyaz kartin uzerinde `white/70`
           kayboluyor.
         */}
+        <UyelikSerit ogrenilen={ogrenilen} onAc={onUyelik} />
+
         <Card className="rise !py-4">
           <div className="flex items-baseline justify-between mb-2.5">
             <span className="text-sm font-bold text-ink-soft">

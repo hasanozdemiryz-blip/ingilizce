@@ -3,6 +3,8 @@ import { SetFinale } from '../components/SetFinale';
 import { Giris } from '../components/Giris';
 import { Button, Ikon, Screen, Streak } from '../components/ui';
 import { useUyelik, uyelikVarMi } from '../uyelik';
+import { siradakiDavet } from '../davet';
+import type { Kazanim } from '../cerceveler';
 
 /**
  * Ders bitisi.
@@ -24,6 +26,9 @@ export function SessionDone({
   ilerleyen,
   setBitti,
   kancalar,
+  kazanim,
+  davetGorulen,
+  onDavetKapandi,
   onHome,
 }: {
   count: number;
@@ -35,25 +40,31 @@ export function SessionDone({
   /** Bu ders setin SON kelimelerini getirdiyse true — bir kez yasanan an */
   setBitti: boolean;
   kancalar: { en: string; hook: string }[];
+  /** Davet esikleri bundan besleniyor (bkz. davet.ts). */
+  kazanim: Kazanim;
+  davetGorulen: readonly string[];
+  /** "Sonra" denince o ESIK susuyor — seans degil. */
+  onDavetKapandi: (id: string) => void;
   onHome: () => void;
 }) {
   const yuzde = toplam > 0 ? Math.round((dogru / toplam) * 100) : null;
 
   /*
-    Uyelik daveti BURADA, kapida degil. Kayit ekrani ilk acilista
-    cikarsa kullanici urunu gormeden karar vermek zorunda kalir; ders
-    bitince elinde korunmaya deger bir sey var ve teklif anlam kazaniyor.
+    Uyelik daveti BURADA, kapida degil. Kayit ekrani ilk acilista cikarsa
+    kullanici urunu gormeden karar vermek zorunda kalir; ders bitince
+    elinde korunmaya deger bir sey var ve teklif anlam kazaniyor.
 
-    Sessiz bir kart, engelleyici bir sayfa degil: "Ana ekran" dugmesi
-    yerinde duruyor ve davet atlanabiliyor. Kapatildiginda bu seans
-    boyunca geri gelmiyor.
-
-    Zaten giris yapmis kullaniciya ve uyelik kapaliyken hic cikmiyor.
+    Her derste DEGIL, yalnizca kilometre taslarinda (bkz. davet.ts) —
+    her gun ayni seyi demek yildiriyor. Zaten uye olana ve uyelik
+    kapaliyken hic cikmiyor.
   */
   const { uye } = useUyelik();
   const [girisAcik, setGirisAcik] = useState(false);
-  const [davetKapandi, setDavetKapandi] = useState(false);
-  const davetVar = uyelikVarMi() && !uye && !davetKapandi;
+  const [kapatildi, setKapatildi] = useState(false);
+  const davet =
+    uyelikVarMi() && !uye?.bilgi?.tamam && !kapatildi
+      ? siradakiDavet(kazanim, davetGorulen)
+      : null;
 
   return (
     <Screen yanMenusuz>
@@ -115,21 +126,22 @@ export function SessionDone({
       </div>
 
       <div className="shrink-0 rise delay-3 flex flex-col gap-3">
-        {davetVar && (
+        {davet && (
           <div className="rounded-card bg-surface px-5 py-4 text-left shadow-[var(--shadow-soft)]">
-            <p className="text-sm font-bold">İlerlemen şu an yalnızca bu cihazda</p>
-            <p className="mt-1 text-sm text-ink-soft">
-              Hesap açarsan tarayıcını temizlesen de kaybolmaz.
-            </p>
+            <p className="text-sm font-bold">{davet.baslik}</p>
+            <p className="mt-1 text-sm text-ink-soft">{davet.metin}</p>
             <div className="mt-3 flex items-center gap-2">
               <button
                 onClick={() => setGirisAcik(true)}
-                className="rounded-full bg-spark px-4 py-2 text-sm font-bold text-ink active:scale-95 transition"
+                className="rounded-2xl bg-spark px-4 py-2 text-sm font-bold text-ink active:scale-95 transition"
               >
-                Hesap aç
+                {uye ? 'Tamamla' : 'Hesap aç'}
               </button>
               <button
-                onClick={() => setDavetKapandi(true)}
+                onClick={() => {
+                  setKapatildi(true);
+                  onDavetKapandi(davet.id);
+                }}
                 className="rounded-full px-3 py-2 text-sm font-semibold text-ink-faint active:scale-95 transition"
               >
                 Sonra
@@ -140,7 +152,9 @@ export function SessionDone({
         <Button onClick={onHome}>Ana ekran</Button>
       </div>
 
-      {girisAcik && <Giris onKapat={() => setGirisAcik(false)} />}
+      {girisAcik && (
+        <Giris baslangicKip={uye ? 'bilgi' : 'kayit'} onKapat={() => setGirisAcik(false)} />
+      )}
     </Screen>
   );
 }

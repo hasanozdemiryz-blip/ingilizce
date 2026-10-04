@@ -86,7 +86,46 @@ export const sifirlamaDonusuMu = (): boolean => sifirlamaDonusu;
 
 // --- Durum -----------------------------------------------------------------
 
-export type Uye = { id: string; eposta: string | null };
+/**
+ * Uyenin kendi girdigi bilgiler. Supabase'in `user_metadata` alaninda
+ * duruyor — AYRI TABLO YOK.
+ *
+ * Gerekce: bu bilgi oturumla BIRLIKTE geliyor, yani "bu kisi uyeligini
+ * tamamlamis mi" sorusu acilista ek istek olmadan cevaplaniyor. Ayri tablo
+ * her acilista bir sorgu ve bir RLS politikasi demekti. Ilerleme senkronu
+ * geldiginde zaten bir tablo gerekecek; bilgi o zaman oraya tasinabilir.
+ */
+export type UyeBilgi = {
+  ad: string;
+  /** Google ile girende bos kalir; Ayarlar'dan sonra doldurulabilir. */
+  seviye?: 'yok' | 'biraz' | 'orta';
+  hedef?: 'is' | 'seyahat' | 'sinav' | 'kendim';
+  tamam: true;
+};
+
+export type Uye = { id: string; eposta: string | null; bilgi: UyeBilgi | null };
+
+export type Seviye = NonNullable<UyeBilgi['seviye']>;
+export type Hedef = NonNullable<UyeBilgi['hedef']>;
+
+/** Tek liste: giris formu da Ayarlar da buradan okuyor, yoksa ayrisirlar. */
+export const SEVIYELER: { deger: Seviye; yazi: string }[] = [
+  { deger: 'yok', yazi: 'Hiç bilmiyorum' },
+  { deger: 'biraz', yazi: 'Biraz anlıyorum' },
+  { deger: 'orta', yazi: 'Orta seviye' },
+];
+
+export const HEDEFLER: { deger: Hedef; yazi: string }[] = [
+  { deger: 'is', yazi: 'İş' },
+  { deger: 'seyahat', yazi: 'Seyahat' },
+  { deger: 'sinav', yazi: 'Sınav' },
+  { deger: 'kendim', yazi: 'Kendim için' },
+];
+
+export const etiket = <T extends string>(
+  liste: { deger: T; yazi: string }[],
+  deger: T | undefined,
+): string | null => liste.find((x) => x.deger === deger)?.yazi ?? null;
 
 let istemci: SupabaseClient | null = null;
 let uye: Uye | null = null;
@@ -106,7 +145,34 @@ const abone = (f: () => void) => {
 
 function oturumdan(s: Session | null): Uye | null {
   if (!s?.user) return null;
-  return { id: s.user.id, eposta: s.user.email ?? null };
+  const ham = s.user.user_metadata as Partial<UyeBilgi> | undefined;
+  return {
+    id: s.user.id,
+    eposta: s.user.email ?? null,
+    // `tamam` yoksa bilgi girilmemis demektir; yarim metadata'yi bilgi sayma.
+    bilgi: ham?.tamam && ham.ad ? (ham as UyeBilgi) : null,
+  };
+}
+
+/**
+ * Google ile girende uyelik ILK ANDA tamamdir: ad zaten geliyor, bilgi
+ * adimi hic gosterilmiyor. Sosyal giris tek dokunus olmasaydi tercih
+ * edilme sebebi kalmazdi.
+ *
+ * Yazma bir kez: `updateUser` kendisi bir USER_UPDATED olayi tetikliyor ve
+ * bayrak olmadan bu kendini cagiran bir donguye donuyor.
+ */
+let googleAdiYazildi = false;
+
+async function googleAdiniYaz(c: SupabaseClient, s: Session | null): Promise<void> {
+  if (googleAdiYazildi || !s?.user) return;
+  if (s.user.app_metadata?.provider !== 'google') return;
+  const ham = s.user.user_metadata as Record<string, unknown> | undefined;
+  if (ham?.tamam) return;
+  const ad = (ham?.full_name ?? ham?.name) as string | undefined;
+  if (!ad) return;
+  googleAdiYazildi = true;
+  await c.auth.updateUser({ data: { ad, tamam: true } });
 }
 
 /**
@@ -130,9 +196,11 @@ function istemciyiKur(): Promise<SupabaseClient | null> {
       });
       const { data } = await istemci.auth.getSession();
       uye = oturumdan(data.session);
+      void googleAdiniYaz(istemci, data.session);
       istemci.auth.onAuthStateChange((_olay, oturum) => {
         uye = oturumdan(oturum);
         haberVer();
+        if (istemci) void googleAdiniYaz(istemci, oturum);
       });
       return istemci;
     } catch {
@@ -325,6 +393,40 @@ export async function sifreSifirlamaGonder(eposta: string): Promise<Sonuc> {
     redirectTo: donusAdresi(),
   });
   return error ? { oldu: false, hata: cevir(error.message) } : { oldu: true };
+}
+
+/**
+ * Uyelik TAMAM mi.
+ *
+ * E-posta onayi tek basina yetmiyor: hesap acilmis ama kullaniciya dair
+ * hicbir sey bilmiyorsak uyelik yarim. Kural tek — elimizde bir ad varsa
+ * tamamdir. Google ile girende ad saglayicidan geliyor, e-posta ile
+ * girende bilgi adiminda soruluyor.
+ */
+export const uyelikTamamMi = (): boolean => Boolean(uye?.bilgi?.tamam);
+
+/** Bilgi adiminin kaydi. Seviye ve hedef bos birakilabilir. */
+export async function bilgiKaydet(bilgi: Omit<UyeBilgi, 'tamam'>): Promise<Sonuc> {
+  const ad = bilgi.ad.trim();
+  if (!ad) return { oldu: false, hata: 'Adını yazman gerekiyor.' };
+
+  const c = await istemciyiKur();
+  if (!c) return BAGLANAMADI;
+
+  const { data, error } = await c.auth.updateUser({ data: { ...bilgi, ad, tamam: true } });
+  if (error) return { oldu: false, hata: cevir(error.message) };
+
+  /*
+    `updateUser` oturumu dondurmuyor, yalnizca kullaniciyi. Olay zinciri
+    uyeyi tazeleyecek ama cagiranin HEMEN sonra `uyelikTamamMi()` sormasi
+    cok muhtemel (serit gizlenecek) — o yuzden yerel kopya burada
+    guncelleniyor.
+  */
+  if (data.user && uye) {
+    uye = { ...uye, bilgi: { ...bilgi, ad, tamam: true } };
+    haberVer();
+  }
+  return { oldu: true };
 }
 
 /** Yeni sifre belirler — sifirlama donusunde ya da Ayarlar'dan. */

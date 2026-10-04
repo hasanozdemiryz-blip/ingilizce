@@ -155,6 +155,11 @@ export type AppState = {
   /** Karsilama ekrani goruldu mu */
   onboarded: boolean;
   /**
+   * Gosterilip "sonra" denen uyelik davetlerinin kimlikleri (bkz. davet.ts).
+   * Eski kurulumlarda yok; okuyan taraf `?? []` ile karsiliyor.
+   */
+  uyelikDavetGorulen?: string[];
+  /**
    * Yerel profil. Ilk acilista kendiliginden uretilir (bkz. db.ts
    * `profilSagla`); eski kurulumlarda bir sure yok olabilir, o yuzden
    * opsiyonel.

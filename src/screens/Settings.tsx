@@ -12,7 +12,7 @@ import {
   useHatirlatma,
 } from '../reminder';
 import { useTelaffuz } from '../speech';
-import { cikisYap, useUyelik, uyelikVarMi } from '../uyelik';
+import { HEDEFLER, SEVIYELER, cikisYap, etiket, useUyelik, uyelikVarMi } from '../uyelik';
 import { Giris } from '../components/Giris';
 import { DevPanel } from './DevPanel';
 import type { AppState } from '../types';
@@ -45,6 +45,7 @@ export function Settings({
     metinlerini ikinci kez tanimlamak olurdu.
   */
   const [sifreAcik, setSifreAcik] = useState(false);
+  const [bilgiAcik, setBilgiAcik] = useState(false);
   const { uye } = useUyelik();
 
   /**
@@ -298,13 +299,34 @@ export function Settings({
         {uyelikVarMi() && (
           <Card className="rise delay-1">
             <h2 className="text-sm font-bold text-ink-soft mb-1">Hesap</h2>
-            {uye ? (
+            {uye && !uye.bilgi?.tamam ? (
+              /*
+                UCUNCU HAL. E-posta onaylanmis ama bilgi girilmemis: hesap
+                var, uyelik yarim. Bunu soylemezsek kullanici neden hala
+                serit gordugunu anlamiyor.
+              */
               <>
                 <p className="text-sm text-ink-soft mb-3">
-                  <b className="break-all">{uye.eposta}</b> ile giriş yaptın. İlerlemen bu
-                  hesaba bağlı.
+                  <b className="break-all">{uye.eposta}</b> ile giriş yaptın ama{' '}
+                  <b>üyeliğin tamamlanmadı</b>. Otuz saniyelik bir adım kaldı.
                 </p>
                 <div className="flex flex-wrap gap-2">
+                  <Kucuk onClick={() => setBilgiAcik(true)}>Tamamla</Kucuk>
+                  <Kucuk onClick={() => void cikisYap()}>Çıkış yap</Kucuk>
+                </div>
+              </>
+            ) : uye ? (
+              <>
+                <p className="text-sm text-ink-soft mb-1">
+                  <b className="break-all">{uye.eposta}</b> ile giriş yaptın.
+                </p>
+                <div className="mb-3">
+                  <Satir ad="Ad" deger={uye.bilgi?.ad ?? '—'} />
+                  <Satir ad="Seviye" deger={etiket(SEVIYELER, uye.bilgi?.seviye) ?? '—'} />
+                  <Satir ad="Hedef" deger={etiket(HEDEFLER, uye.bilgi?.hedef) ?? '—'} />
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <Kucuk onClick={() => setBilgiAcik(true)}>Bilgilerimi düzenle</Kucuk>
                   <Kucuk onClick={() => setSifreAcik(true)}>Şifre değiştir</Kucuk>
                   <Kucuk onClick={() => void cikisYap()}>Çıkış yap</Kucuk>
                 </div>
@@ -418,6 +440,7 @@ export function Settings({
       */}
       {girisAcik && <Giris onKapat={() => setGirisAcik(false)} />}
       {sifreAcik && <Giris baslangicKip="yeniSifre" onKapat={() => setSifreAcik(false)} />}
+      {bilgiAcik && <Giris baslangicKip="bilgi" onKapat={() => setBilgiAcik(false)} />}
 
       {sifirlaSoruluyor && (
         <div className="fixed inset-0 z-20 flex items-end justify-center bg-ink/40 px-5 pb-8 backdrop-blur-sm">
