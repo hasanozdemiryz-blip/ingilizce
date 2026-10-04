@@ -7,6 +7,7 @@ import { profilSagla } from './db';
 import { geriHazirla } from './geri';
 import { hatirlatmaHazirla } from './reminder';
 import { telaffuzHazirla } from './speech';
+import { uyelikHazirla } from './uyelik';
 
 /**
  * Ilerleme yalnizca IndexedDB'de. Tarayicilar "best-effort" depolamayi
@@ -47,6 +48,13 @@ void profilSagla().then((state) => {
 
 // Donanim geri tusu — yalnizca native kabukta (bkz. geri.ts)
 void geriHazirla();
+
+/**
+ * Uyelik durumu. SDK yalnizca GEREKIRSE iniyor — depoda oturum varsa ya da
+ * giris baglantisindan donulduyse. Ilk kez gelen ziyaretciye tek bayt
+ * inmiyor (bkz. uyelik.ts).
+ */
+void uyelikHazirla();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

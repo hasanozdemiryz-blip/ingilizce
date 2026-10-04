@@ -159,15 +159,24 @@ export function Button({
   variant = 'primary',
   disabled,
   className = '',
+  type = 'button',
 }: {
   children: ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
   variant?: Variant;
   disabled?: boolean;
   className?: string;
+  /**
+   * Varsayilan `button`, bilerek. HTML'de form icindeki tipsiz dugme
+   * SUBMIT sayiliyor — yani bir formun icine konan "Vazgec" dugmesi
+   * formu gonderiyor. Varsayilani `button` yapmak o tuzagi kapatiyor;
+   * gonderen dugme tipini aciktan yaziyor.
+   */
+  type?: 'button' | 'submit';
 }) {
   return (
     <button
+      type={type}
       onClick={onClick}
       disabled={disabled}
       className={`w-full rounded-full px-5 py-4 font-bold transition-all active:scale-[0.97] disabled:opacity-40 disabled:active:scale-100 ${VARIANTS[variant]} ${className}`}

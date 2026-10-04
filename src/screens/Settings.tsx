@@ -12,6 +12,8 @@ import {
   useHatirlatma,
 } from '../reminder';
 import { useTelaffuz } from '../speech';
+import { cikisYap, useUyelik, uyelikVarMi } from '../uyelik';
+import { Giris } from '../components/Giris';
 import { DevPanel } from './DevPanel';
 import type { AppState } from '../types';
 import { dosyayiVer, paylasilabilir, telefonaKaydet, yedekAdi, yol } from '../dosya';
@@ -36,6 +38,8 @@ export function Settings({
   const [sifirlaSoruluyor, setSifirlaSoruluyor] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
   const [bilgi, setBilgi] = useState<string | null>(null);
+  const [girisAcik, setGirisAcik] = useState(false);
+  const { uye } = useUyelik();
 
   /**
    * Yedek paylas menusune verilebiliyor mu. Yalnizca METIN degistiriyor:
@@ -279,6 +283,35 @@ export function Settings({
           </Card>
         )}
 
+        {/*
+          HESAP. Uyelik yapilandirmasi yoksa satir hic acilmiyor — telaffuz
+          ve hatirlatmadaki kural: calismayan bir anahtar gostermektense hic
+          gostermemek. Giris KAPIDA degil; buradan ya da ilk ders sonrasindan
+          yapiliyor.
+        */}
+        {uyelikVarMi() && (
+          <Card className="rise delay-1">
+            <h2 className="text-sm font-bold text-ink-soft mb-1">Hesap</h2>
+            {uye ? (
+              <>
+                <p className="text-sm text-ink-soft mb-3">
+                  <b className="break-all">{uye.eposta}</b> ile giriş yaptın. İlerlemen bu
+                  hesaba bağlı.
+                </p>
+                <Kucuk onClick={() => void cikisYap()}>Çıkış yap</Kucuk>
+              </>
+            ) : (
+              <>
+                <p className="text-sm text-ink-soft mb-3">
+                  İlerlemen şu an <b>yalnızca bu cihazda</b>. Giriş yaparsan telefonunu
+                  değiştirsen de kaldığın yerden devam edersin.
+                </p>
+                <Kucuk onClick={() => setGirisAcik(true)}>Giriş yap</Kucuk>
+              </>
+            )}
+          </Card>
+        )}
+
         <Card className="rise delay-2">
           <h2 className="text-sm font-bold text-ink-soft mb-1">Verilerim</h2>
           <p className="text-sm text-ink-soft mb-3">
@@ -374,6 +407,8 @@ export function Settings({
         bloklayan bir sistem diyalogu; akisi donduruyor ve uygulamanin
         diline hic benzemiyor.
       */}
+      {girisAcik && <Giris onKapat={() => setGirisAcik(false)} />}
+
       {sifirlaSoruluyor && (
         <div className="fixed inset-0 z-20 flex items-end justify-center bg-ink/40 px-5 pb-8 backdrop-blur-sm">
           <div className="rise w-full max-w-md rounded-card bg-white p-6 shadow-[var(--shadow-lift)]">
