@@ -30,6 +30,8 @@ type Props = {
   onPractice: () => void;
   /** Uyelik seridi buna basinca giris penceresini aciyor (bkz. App). */
   onUyelik: () => void;
+  /** Ustteki avatar + ad kullanici paneline (Ayarlar) goturuyor. */
+  onAyarlar: () => void;
 };
 
 /**
@@ -59,6 +61,7 @@ export function Home({
   onQuickReview,
   onPractice,
   onUyelik,
+  onAyarlar,
 }: Props) {
   const ogrenilen = progress.filter((p) => p.introduced).length;
   const tekrar = due.length;
@@ -135,12 +138,21 @@ export function Home({
           milisaniyeler) uygulama adina duser.
         */}
         {state.profil ? (
-          <span className="flex items-center gap-3 min-w-0">
+          /*
+            Avatar artik bir DUGME: kullanicinin kendi panelini aramasi
+            gerekmemeli. Her uygulamada profil fotografina basinca ayarlar
+            acilir; burada da oyle.
+          */
+          <button
+            onClick={onAyarlar}
+            className="flex items-center gap-3 min-w-0 rounded-2xl -ml-1 pl-1 pr-2 py-1 transition active:scale-[0.98]"
+            aria-label="Hesabım ve ayarlar"
+          >
             <Avatar avatar={state.profil.avatar} cerceve={state.profil.cerceve} boyut="sm" />
             <span className="word text-lg font-extrabold text-ink truncate">
               {state.profil.ad}
             </span>
-          </span>
+          </button>
         ) : (
           <span className="word text-base font-extrabold text-ink-soft">Hafızada İngilizce</span>
         )}

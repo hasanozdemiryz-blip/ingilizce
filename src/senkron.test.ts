@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { birlestir, type Paket } from './senkron';
+import { birlestir, tazelik, type Paket } from './senkron';
 import type { AppState, Cevap, Progress } from './types';
 
 const durum = (p: Partial<AppState> = {}): AppState => ({
@@ -156,5 +156,44 @@ describe('birlestir — saflik', () => {
     birlestir(a, b);
     expect(a.progress).toHaveLength(1);
     expect(b.progress).toHaveLength(1);
+  });
+});
+
+describe('tazelik', () => {
+  it('bos cihaz sifir doner — sunucudaki veriyi ezmesin', () => {
+    expect(tazelik({ state: durum(), progress: [], answers: [] })).toBe(
+      new Date(0).toISOString(),
+    );
+  });
+
+  it('en son hareket kazanir', () => {
+    const t = tazelik({
+      state: durum({ lastSessionDate: '2026-10-01' }),
+      progress: [kart('snake', { introducedAt: '2026-10-03T00:00:00Z' })],
+      answers: [cevap('fox', Date.parse('2026-10-02T00:00:00Z'))],
+    });
+    expect(t).toBe('2026-10-03T00:00:00.000Z');
+  });
+
+  it('cikis sonrasi bos cihaz, sunucudaki ada ve tercihlere dokunmaz', () => {
+    // Senaryo: kullanici cikti, cihaz sifirlandi, tekrar girdi.
+    const bos: Paket = {
+      surum: 1,
+      yazildi: tazelik({ state: durum({ dailyLimit: 10 }), progress: [], answers: [] }),
+      state: durum({ dailyLimit: 10, streakCount: 0 }),
+      progress: [],
+      answers: [],
+    };
+    const sunucu: Paket = {
+      surum: 1,
+      yazildi: '2026-10-04T12:00:00Z',
+      state: durum({ dailyLimit: 15, streakCount: 9 }),
+      progress: [kart('snake', { step: 4, introducedAt: '2026-10-04T12:00:00Z' })],
+      answers: [],
+    };
+    const s = birlestir(bos, sunucu);
+    expect(s.state.dailyLimit).toBe(15);
+    expect(s.state.streakCount).toBe(9);
+    expect(s.progress).toHaveLength(1);
   });
 });

@@ -70,6 +70,19 @@ function baglantidanDonuldu(): boolean {
 }
 
 /**
+ * Depoda oturum jetonu var mi — SDK inmeden, esanli cevap.
+ *
+ * Acilista "bu kisi zaten girisli mi" sorusuna cevap vermek icin:
+ * tanitim sayfasindaki "Giris yap" girisli kullaniciyi giris formuna
+ * degil dogrudan uygulamaya goturmeli.
+ *
+ * Jetonun GECERLI oldugunu soylemiyor, yalnizca var oldugunu. Suresi
+ * dolmussa SDK sonradan oturumu kapatiyor ve arayuz kendiliginden
+ * "girisli degil" haline doner.
+ */
+export const oturumVarGibi = (): boolean => depodaOturumVar();
+
+/**
  * Sifre sifirlama baglantisindan mi donuldu.
  *
  * MODUL YUKLENIRKEN okunuyor, fonksiyon icinde degil: SDK

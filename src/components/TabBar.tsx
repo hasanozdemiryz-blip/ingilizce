@@ -1,5 +1,7 @@
+import { Avatar } from './Avatar';
 import { Ikon, Logo } from './ui';
 import type { IkonAd } from '../icons';
+import type { Profil } from '../types';
 
 export type Tab = 'ogren' | 'egzersiz' | 'ilerleme' | 'ayarlar';
 
@@ -42,7 +44,16 @@ export const YAN_MENU = 'w-60';
  * zemin yerine. Dolu zemin dar menude ikonu bogup yaziyi ezerken,
  * kenar cubugu sekmenin kendi rengini koruyor.
  */
-export function TabBar({ active, onChange }: { active: Tab; onChange: (t: Tab) => void }) {
+export function TabBar({
+  active,
+  onChange,
+  profil,
+}: {
+  active: Tab;
+  onChange: (t: Tab) => void;
+  /** Yan menunun dibindeki kullanici satiri. Dar ekranda yer yok. */
+  profil?: Profil;
+}) {
   return (
     <>
       {/* --- Telefon: alttaki hap --- */}
@@ -110,6 +121,26 @@ export function TabBar({ active, onChange }: { active: Tab; onChange: (t: Tab) =
             );
           })}
         </div>
+
+        {/*
+          KULLANICI SATIRI. Girisli kisinin kendi panelini aramasi
+          gerekmemeli; her uygulamada fotografin durdugu yer burasi ve
+          basinca ayarlar aciliyor. Dar ekranda yok — orada ayni is
+          ustteki avatara dusuyor (bkz. Home).
+        */}
+        {profil && (
+          <button
+            onClick={() => onChange('ayarlar')}
+            className="mt-auto mx-3 flex items-center gap-2.5 rounded-2xl border border-line bg-paper px-3 py-2.5 text-left transition hover:bg-sunken active:scale-[0.98]"
+            aria-label="Hesabım ve ayarlar"
+          >
+            <Avatar avatar={profil.avatar} cerceve={profil.cerceve} boyut="sm" />
+            <span className="min-w-0 flex-1">
+              <span className="block truncate text-sm font-extrabold text-ink">{profil.ad}</span>
+              <span className="block text-xs font-bold text-ink-faint">Hesabım</span>
+            </span>
+          </button>
+        )}
       </nav>
     </>
   );

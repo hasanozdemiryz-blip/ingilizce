@@ -29,7 +29,7 @@ import { Welcome } from './screens/Welcome';
 import { Settings } from './screens/Settings';
 import { ProfilDuzenle } from './screens/ProfilDuzenle';
 import { Giris } from './components/Giris';
-import { sifirlamaDonusuMu, useUyelik, uyelikVarMi } from './uyelik';
+import { oturumVarGibi, sifirlamaDonusuMu, useUyelik, uyelikVarMi } from './uyelik';
 import { senkronla } from './senkron';
 import { gecerliCerceve, type Kazanim } from './cerceveler';
 import { uygulamadanCik, useGeri } from './geri';
@@ -94,6 +94,12 @@ export default function App() {
     if (adres.searchParams.get('giris') !== '1') return null;
     adres.searchParams.delete('giris');
     history.replaceState(null, '', adres.pathname + adres.search + adres.hash);
+    /*
+      Zaten girisliyse giris formu gostermek anlamsiz: tanitim
+      sayfasindaki "Giris yap" o kisiyi dogruca uygulamaya birakmali.
+      Depoya bakiliyor cunku SDK bu noktada henuz inmemis olabilir.
+    */
+    if (oturumVarGibi()) return null;
     return 'giris';
   });
 
@@ -367,6 +373,7 @@ export default function App() {
             setFlow({ name: 'ders', yeni: [], yedek: [], tekrar: bugununKartlari, eslestirmesiz: true })
           }
           onUyelik={() => setGirisKip(uye ? 'bilgi' : 'giris')}
+          onAyarlar={() => setTab('ayarlar')}
           onPractice={() => setFlow({ name: 'ders', yeni: [], yedek: [], tekrar: ahead })}
         />
       )}
@@ -389,7 +396,7 @@ export default function App() {
       )}
 
       {/* Egzersiz kosarken menu gizlenir: tam ekran odak, ve dugmeler menunun altinda kalmaz */}
-      {!egzersizde && <TabBar active={tab} onChange={setTab} />}
+      {!egzersizde && <TabBar active={tab} onChange={setTab} profil={state.profil} />}
 
       {girisPenceresi}
 

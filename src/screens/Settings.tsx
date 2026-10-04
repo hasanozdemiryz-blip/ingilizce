@@ -12,7 +12,8 @@ import {
   useHatirlatma,
 } from '../reminder';
 import { useTelaffuz } from '../speech';
-import { HEDEFLER, SEVIYELER, cikisYap, etiket, useUyelik, uyelikVarMi } from '../uyelik';
+import { HEDEFLER, SEVIYELER, etiket, useUyelik, uyelikVarMi } from '../uyelik';
+import { cikisVeTemizle } from '../senkron';
 import { Giris } from '../components/Giris';
 import { DevPanel } from './DevPanel';
 import type { AppState } from '../types';
@@ -46,6 +47,25 @@ export function Settings({
   */
   const [sifreAcik, setSifreAcik] = useState(false);
   const [bilgiAcik, setBilgiAcik] = useState(false);
+  /*
+    Cikis ONAY istiyor: cihazdaki ilerleme siliniyor. Senkron tutmazsa
+    silmiyoruz ve sebebini soyluyoruz — cevrimdisi bir cihazda son dersin
+    ilerlemesi henuz gitmemis olabilir.
+  */
+  const [cikisDurum, setCikisDurum] = useState<'kapali' | 'soruyor' | 'calisiyor' | 'senkronYok'>(
+    'kapali',
+  );
+
+  async function cik(zorla = false) {
+    setCikisDurum('calisiyor');
+    const sonuc = await cikisVeTemizle(zorla);
+    if (sonuc === 'senkronOlmadi') {
+      setCikisDurum('senkronYok');
+      return;
+    }
+    // Depo bosaldi; React'teki eski durumla devam etmek yerine bastan kur.
+    location.reload();
+  }
   const { uye } = useUyelik();
 
   /**
@@ -312,7 +332,7 @@ export function Settings({
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <Kucuk onClick={() => setBilgiAcik(true)}>Tamamla</Kucuk>
-                  <Kucuk onClick={() => void cikisYap()}>Çıkış yap</Kucuk>
+                  <Kucuk onClick={() => setCikisDurum('soruyor')}>Çıkış yap</Kucuk>
                 </div>
               </>
             ) : uye ? (
@@ -330,7 +350,7 @@ export function Settings({
                 <div className="flex flex-wrap gap-2">
                   <Kucuk onClick={() => setBilgiAcik(true)}>Bilgilerimi düzenle</Kucuk>
                   <Kucuk onClick={() => setSifreAcik(true)}>Şifre değiştir</Kucuk>
-                  <Kucuk onClick={() => void cikisYap()}>Çıkış yap</Kucuk>
+                  <Kucuk onClick={() => setCikisDurum('soruyor')}>Çıkış yap</Kucuk>
                 </div>
               </>
             ) : (
@@ -452,6 +472,50 @@ export function Settings({
       {girisAcik && <Giris onKapat={() => setGirisAcik(false)} />}
       {sifreAcik && <Giris baslangicKip="yeniSifre" onKapat={() => setSifreAcik(false)} />}
       {bilgiAcik && <Giris baslangicKip="bilgi" onKapat={() => setBilgiAcik(false)} />}
+
+      {cikisDurum !== 'kapali' && (
+        <div className="fixed inset-0 z-30 flex items-end justify-center bg-ink/45 px-5 pb-8 backdrop-blur-sm sm:items-center sm:pb-0">
+          <Card className="rise w-full max-w-md p-6">
+            {cikisDurum === 'senkronYok' ? (
+              <>
+                <p className="word text-xl font-extrabold">Bağlanamadık</p>
+                <p className="mt-2 text-sm text-ink-soft">
+                  Bu cihazdaki son ilerleme hesabına <b>gönderilemedi</b>. Şimdi çıkarsan o
+                  kısım kaybolur. İnternetin gelince tekrar dene.
+                </p>
+                <div className="mt-5 flex flex-col gap-2.5">
+                  <Button variant="spark" onClick={() => setCikisDurum('kapali')}>
+                    Vazgeç
+                  </Button>
+                  <Button variant="ghost" onClick={() => void cik(true)}>
+                    Yine de çık
+                  </Button>
+                </div>
+              </>
+            ) : (
+              <>
+                <p className="word text-xl font-extrabold">Çıkış yapılsın mı?</p>
+                <p className="mt-2 text-sm text-ink-soft">
+                  İlerlemen önce hesabına gönderilecek, sonra bu cihazdan silinecek. Tekrar
+                  giriş yaptığında olduğu gibi geri gelir.
+                </p>
+                <div className="mt-5 flex flex-col gap-2.5">
+                  <Button variant="spark" onClick={() => setCikisDurum('kapali')}>
+                    Vazgeç
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    disabled={cikisDurum === 'calisiyor'}
+                    onClick={() => void cik()}
+                  >
+                    {cikisDurum === 'calisiyor' ? 'Gönderiliyor…' : 'Çık'}
+                  </Button>
+                </div>
+              </>
+            )}
+          </Card>
+        </div>
+      )}
 
       {sifirlaSoruluyor && (
         <div className="fixed inset-0 z-20 flex items-end justify-center bg-ink/40 px-5 pb-8 backdrop-blur-sm">

@@ -1,5 +1,5 @@
-import { APP_KEY, db, getAnswers, getState, normalizeProgress } from './db';
-import { istemciAl, uyeOku } from './uyelik';
+import { APP_KEY, db, getAnswers, getState, normalizeProgress, resetAll } from './db';
+import { cikisYap, istemciAl, uyeOku } from './uyelik';
 import type { AppState, Cevap, Progress } from './types';
 
 /**
@@ -37,7 +37,15 @@ const CEVAP_TAVANI = 3000;
 
 export type Paket = {
   surum: number;
-  /** ISO — hangi paketin daha taze oldugu buradan */
+  /**
+   * Paketteki VERININ en son ne zaman degistigi — paketin ne zaman
+   * hazirlandigi degil.
+   *
+   * Ayrim kritik: "simdi" damgalansaydi yeni kurulmus bos bir cihaz
+   * sunucudaki paketten hep taze gorunur ve `birlestir` tercihleri,
+   * profili, adi o bos cihazdan alirdi. Cikis yapip tekrar giren
+   * kullanici adini kaybederdi.
+   */
   yazildi: string;
   state: AppState;
   progress: Progress[];
@@ -141,6 +149,22 @@ export function birlestir(a: Paket, b: Paket): Paket {
 
 // --- Cihaz tarafi ----------------------------------------------------------
 
+/**
+ * Paketin tazeligi: icindeki en son hareket.
+ *
+ * Hicbir hareket yoksa sifir — bos bir cihaz her karsilastirmayi
+ * kaybetsin, sunucudaki veriyi ezmesin.
+ */
+export function tazelik(p: Pick<Paket, 'state' | 'progress' | 'answers'>): string {
+  const adaylar = [
+    ...p.answers.map((c) => c.ts),
+    ...p.progress.map(sonHareket),
+    Date.parse(p.state.lastSessionDate ?? '') || 0,
+  ];
+  const enSon = adaylar.length > 0 ? Math.max(...adaylar) : 0;
+  return new Date(enSon).toISOString();
+}
+
 /** Cihazdaki her seyi paketler. */
 export async function yereliOku(): Promise<Paket> {
   const [progress, state, answers] = await Promise.all([
@@ -148,7 +172,7 @@ export async function yereliOku(): Promise<Paket> {
     getState(),
     getAnswers(),
   ]);
-  return { surum: SURUM, yazildi: new Date().toISOString(), state, progress, answers };
+  return { surum: SURUM, yazildi: tazelik({ state, progress, answers }), state, progress, answers };
 }
 
 /**
@@ -224,7 +248,7 @@ export function senkronla(): Promise<SenkronSonuc> {
       const uzak = await uzaktanOku();
       const sonuc = uzak ? birlestir(yerel, uzak) : yerel;
       if (uzak) await yereleYaz(sonuc);
-      const yazildi = await uzagaYaz({ ...sonuc, yazildi: new Date().toISOString() });
+      const yazildi = await uzagaYaz(sonuc);
       return yazildi ? 'yapildi' : 'hata';
     } catch {
       return 'hata';
@@ -233,4 +257,26 @@ export function senkronla(): Promise<SenkronSonuc> {
     }
   })();
   return suruyor;
+}
+
+/**
+ * Cikis: once gonder, sonra temizle.
+ *
+ * NEDEN TEMIZLIYORUZ. Cihazda birden fazla kisi olabilir ve cikis yapan
+ * kisinin ilerlemesi, seri sayaci ve adi ekranda kalmamali. Artik
+ * guvenli, cunku veri hesapta duruyor ve tekrar girince geri geliyor.
+ *
+ * NEDEN ONCE SENKRON. Cevrimdisi bir cihazda son dersin ilerlemesi henuz
+ * sunucuya gitmemis olabilir; once silip sonra gondermeye calismak o
+ * ilerlemeyi yok etmek demek. Senkron tutmazsa cikis YAPILMIYOR ve
+ * cagirana bildiriliyor — karari kullanici veriyor.
+ */
+export type CikisSonuc = 'yapildi' | 'senkronOlmadi';
+
+export async function cikisVeTemizle(zorla = false): Promise<CikisSonuc> {
+  const sonuc = await senkronla();
+  if (sonuc === 'hata' && !zorla) return 'senkronOlmadi';
+  await cikisYap();
+  await resetAll();
+  return 'yapildi';
 }
