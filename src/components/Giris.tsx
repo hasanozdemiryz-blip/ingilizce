@@ -55,7 +55,16 @@ export function Giris({
   aciklama,
   onBilgiKaydedildi,
 }: {
-  onKapat: () => void;
+  /**
+   * Pencere kapandi. `girisYapildi` yalnizca OTURUM ACILDIYSA true.
+   *
+   * Cagiranin "girdi mi girmedi mi" sorusunu kendi `uye` degerinden
+   * cevaplamasi hataliydi: basarili giristen sonra `onKapat` ayni tikta
+   * cagriliyor ve o anki kapanis hala ESKI (null) uyeyi goruyor. Tanitim
+   * sayfasindan gelen kullanici giris yaptigi halde ana sayfaya geri
+   * atiliyordu. Sebep burada aciktan bildiriliyor.
+   */
+  onKapat: (girisYapildi?: boolean) => void;
   /** Sifre sifirlama donusunde 'yeniSifre' geliyor (bkz. App). */
   baslangicKip?: Kip;
   /**
@@ -160,7 +169,7 @@ export function Giris({
     }
     if (kip === 'bilgi') {
       onBilgiKaydedildi?.(ad.trim());
-      onKapat();
+      onKapat(true);
       return;
     }
     if (kip === 'unuttum') {
@@ -173,7 +182,7 @@ export function Giris({
     }
 
     // Giris, Google ve yeni sifre: oturum acildi, yapacak bir sey kalmadi.
-    onKapat();
+    onKapat(true);
   }
 
   async function google() {

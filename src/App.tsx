@@ -29,7 +29,7 @@ import { Welcome } from './screens/Welcome';
 import { Settings } from './screens/Settings';
 import { ProfilDuzenle } from './screens/ProfilDuzenle';
 import { Giris } from './components/Giris';
-import { oturumVarGibi, sifirlamaDonusuMu, useUyelik, uyelikVarMi } from './uyelik';
+import { oturumVarGibi, sifirlamaDonusuMu, useUyelik, uyeOku, uyelikVarMi } from './uyelik';
 import { senkronla } from './senkron';
 import { gecerliCerceve, type Kazanim } from './cerceveler';
 import { uygulamadanCik, useGeri } from './geri';
@@ -254,8 +254,19 @@ export default function App() {
     <Giris
       baslangicKip={girisKip}
       zorunlu={girisKip === 'yeniSifre'}
-      onKapat={() => {
-        if (disaridanGiris.current && !uye) {
+      onKapat={(girisYapildi) => {
+        /*
+          Tanitim sayfasindan gelip GIRMEDIYSE geldigi yere donuyor;
+          girdiyse uygulamada kaliyor — zaten gelmek istedigi yer burasi.
+
+          `uye` yerine `uyeOku()`: bu kapanis, giris aninda olusan eski
+          render'in kapanisi olabiliyor ve oradaki `uye` hala null.
+        */
+        const disaridan = disaridanGiris.current;
+        // Tek kullanimlik: sonra Ayarlar'dan acilan ayni pencere
+        // kapaninca kullaniciyi uygulamadan atmasin.
+        disaridanGiris.current = false;
+        if (disaridan && !girisYapildi && !uyeOku()) {
           window.location.href = '/';
           return;
         }
