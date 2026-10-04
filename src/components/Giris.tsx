@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { profilAdiniGuncelle } from '../db';
 import { Button } from './ui';
 import type { Hedef, Seviye } from '../uyelik';
 import {
@@ -53,7 +54,6 @@ export function Giris({
   zorunlu = false,
   baslik,
   aciklama,
-  onBilgiKaydedildi,
 }: {
   /**
    * Pencere kapandi. `girisYapildi` yalnizca OTURUM ACILDIYSA true.
@@ -76,12 +76,6 @@ export function Giris({
   zorunlu?: boolean;
   baslik?: string;
   aciklama?: string;
-  /**
-   * Bilgi adimi bitince cagrilir. Yerel profilin adi da guncellenmeli,
-   * yoksa kullanici adini yazdigi halde ana ekranda `Şen Balık` gormeye
-   * devam eder (bkz. profil.ts).
-   */
-  onBilgiKaydedildi?: (ad: string) => void;
 }) {
   const [kip, setKip] = useState<Kip>(baslangicKip);
   const [eposta, setEposta] = useState('');
@@ -168,7 +162,7 @@ export function Giris({
       return;
     }
     if (kip === 'bilgi') {
-      onBilgiKaydedildi?.(ad.trim());
+      await profilAdiniGuncelle(ad);
       onKapat(true);
       return;
     }

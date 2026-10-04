@@ -168,13 +168,15 @@ export function Settings({
                   {state.profil.ad}
                 </span>
                 <span className="block text-sm text-ink-soft mt-0.5">
-                  Adını ve avatarını değiştir
+                  {uye?.bilgi?.ad ? 'Resmini ve çerçeveni seç' : 'Adını ve resmini değiştir'}
                 </span>
               </span>
               <span className="text-xl text-ink-faint shrink-0">›</span>
             </div>
             <p className="text-xs text-ink-faint mt-3">
-              Profil bu cihazda tutulur — hesap değil, giriş gerekmez.
+              {uye?.bilgi?.ad
+                ? 'Adın hesabından geliyor; Hesap bölümünden değiştirebilirsin. Resmin bu cihazda kalıyor.'
+                : 'Profil bu cihazda tutulur — hesap değil, giriş gerekmez.'}
             </p>
           </button>
         )}
@@ -396,62 +398,76 @@ export function Settings({
           </Card>
         )}
 
-        <Card className="rise delay-2">
-          <h2 className="text-sm font-bold text-ink-soft mb-1">Verilerim</h2>
-          <p className="text-sm text-ink-soft mb-3">
-            {uye?.bilgi?.tamam ? (
-              <>
-                İlerlemen hesabına yedekleniyor, <b>fotoğrafın yalnızca bu cihazda</b>{' '}
-                kalıyor. Hesaptan bağımsız bir kopya istersen yedekle
-              </>
-            ) : (
-              <>
-                İlerleme, profilin ve fotoğrafın <b>yalnızca bu cihazda</b> tutuluyor.
-                Taşımak veya korumak için yedekle
-              </>
-            )}
-            {paylasSecenegi && " — açılan menüden Drive'a, e-postaya ya da istediğin yere gönderebilirsin"}.
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {telefonSecenegi && (
+        {/*
+          VERILERIM yalnizca UYESIZ kullaniciya.
+
+          Uye icin bu bolum hem gereksiz hem YANILTICI: "Sifirla" cihazi
+          temizler, sonraki senkron her seyi sunucudan geri getirir ve
+          kullanici neden silinmedigini anlamaz. Uyenin karsiligi Hesap
+          bolumunde: "Cikis yap" cihazi temizler, "Hesabi sil" her seyi
+          siler.
+
+          Uyesizde ise tek koruma bu — ilerlemesi yalnizca cihazda ve
+          yedek almazsa kaybolur.
+        */}
+        {!uye?.bilgi?.tamam && (
+          <Card className="rise delay-2">
+            <h2 className="text-sm font-bold text-ink-soft mb-1">Verilerim</h2>
+            <p className="text-sm text-ink-soft mb-3">
+              {uye?.bilgi?.tamam ? (
+                <>
+                  İlerlemen hesabına yedekleniyor, <b>fotoğrafın yalnızca bu cihazda</b>{' '}
+                  kalıyor. Hesaptan bağımsız bir kopya istersen yedekle
+                </>
+              ) : (
+                <>
+                  İlerleme, profilin ve fotoğrafın <b>yalnızca bu cihazda</b> tutuluyor.
+                  Taşımak veya korumak için yedekle
+                </>
+              )}
+              {paylasSecenegi && " — açılan menüden Drive'a, e-postaya ya da istediğin yere gönderebilirsin"}.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {telefonSecenegi && (
+                <Kucuk
+                  onClick={() => {
+                    setHata(null);
+                    void telefonaYedekle(state.profil?.ad)
+                      .then((nereye) => setBilgi(`Kaydedildi: ${nereye}`))
+                      .catch(() => setHata('Telefona kaydedilemedi.'));
+                  }}
+                >
+                  Telefona kaydet
+                </Kucuk>
+              )}
               <Kucuk
                 onClick={() => {
-                  setHata(null);
-                  void telefonaYedekle(state.profil?.ad)
-                    .then((nereye) => setBilgi(`Kaydedildi: ${nereye}`))
-                    .catch(() => setHata('Telefona kaydedilemedi.'));
+                  setBilgi(null);
+                  void disaAktar(state.profil?.ad);
                 }}
               >
-                Telefona kaydet
+                {telefonSecenegi ? 'Paylaş' : paylasSecenegi ? 'Yedekle' : 'Yedek al'}
               </Kucuk>
-            )}
-            <Kucuk
-              onClick={() => {
-                setBilgi(null);
-                void disaAktar(state.profil?.ad);
+              <Kucuk onClick={() => fileRef.current?.click()}>Geri yükle</Kucuk>
+              <Kucuk tehlike onClick={() => setSifirlaSoruluyor(true)}>
+                Sıfırla
+              </Kucuk>
+            </div>
+            {hata && <p className="text-sm text-[#c2417f] mt-3">{hata}</p>}
+            {bilgi && <p className="text-sm text-ink-soft mt-3 break-all">{bilgi}</p>}
+            <input
+              ref={fileRef}
+              type="file"
+              accept="application/json"
+              className="hidden"
+              onChange={(e) => {
+                const f = e.target.files?.[0];
+                e.target.value = '';
+                if (f) void iceAktar(f).catch(() => setHata('Yedek dosyası okunamadı.'));
               }}
-            >
-              {telefonSecenegi ? 'Paylaş' : paylasSecenegi ? 'Yedekle' : 'Yedek al'}
-            </Kucuk>
-            <Kucuk onClick={() => fileRef.current?.click()}>Geri yükle</Kucuk>
-            <Kucuk tehlike onClick={() => setSifirlaSoruluyor(true)}>
-              Sıfırla
-            </Kucuk>
-          </div>
-          {hata && <p className="text-sm text-[#c2417f] mt-3">{hata}</p>}
-          {bilgi && <p className="text-sm text-ink-soft mt-3 break-all">{bilgi}</p>}
-          <input
-            ref={fileRef}
-            type="file"
-            accept="application/json"
-            className="hidden"
-            onChange={(e) => {
-              const f = e.target.files?.[0];
-              e.target.value = '';
-              if (f) void iceAktar(f).catch(() => setHata('Yedek dosyası okunamadı.'));
-            }}
-          />
-        </Card>
+            />
+          </Card>
+        )}
 
         <Card className="rise delay-3">
           <h2 className="text-sm font-bold text-ink-soft mb-2">Hakkında</h2>

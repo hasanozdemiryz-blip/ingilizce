@@ -215,6 +215,23 @@ export async function profilSagla(): Promise<AppState> {
   return setState({ profil: yeniProfil() });
 }
 
+/**
+ * Yerel profilin adini hesaptaki adla esitler.
+ *
+ * Uyelik bilgisi kaydedilen HER yerden cagrilmali; bir sure yalnizca
+ * App'teki pencereye prop olarak geciyordu ve Ayarlar'dan ya da ders
+ * sonundan duzenleyen kullanici adini yazdigi halde ana ekranda
+ * otomatik uretilmis `Şen Balık`'i gormeye devam ediyordu. Artik
+ * kaydeden bilesenin kendisi cagiriyor, unutulacak bir prop yok.
+ */
+export async function profilAdiniGuncelle(ad: string): Promise<void> {
+  const temiz = ad.trim();
+  if (!temiz) return;
+  const state = await getState();
+  if (!state.profil || state.profil.ad === temiz) return;
+  await setState({ profil: { ...state.profil, ad: temiz } });
+}
+
 export async function setState(patch: Partial<AppState>): Promise<AppState> {
   const next = { ...(await getState()), ...patch };
   await db.meta.put({ key: APP_KEY, value: next });

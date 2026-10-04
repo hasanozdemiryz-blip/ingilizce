@@ -272,15 +272,6 @@ export default function App() {
         }
         setGirisKip(null);
       }}
-      /*
-        Yerel profilin adi da guncellenmeli: kullanici adini yazdigi halde
-        ana ekranda otomatik uretilmis `Şen Balık` gormeye devam ederse
-        bilgi adimi bir ise yaramamis gibi duruyor.
-      */
-      onBilgiKaydedildi={(ad) => {
-        const mevcut = state.profil;
-        if (mevcut) void setState({ profil: { ...mevcut, ad } });
-      }}
     />
   ) : null;
 

@@ -9,6 +9,7 @@ import {
 } from '../cerceveler';
 import { AD_SINIR, HAYVANLAR, adDuzelt, rastgeleAd } from '../profil';
 import type { Avatar as AvatarVerisi, Profil } from '../types';
+import { useUyelik } from '../uyelik';
 
 /**
  * PROFILI DEGISTIR.
@@ -78,6 +79,7 @@ export function ProfilDuzenle({
   const [ad, setAd] = useState(profil.ad);
   const [avatar, setAvatar] = useState<AvatarVerisi>(profil.avatar);
   const [cerceve, setCerceve] = useState(profil.cerceve);
+  const { uye } = useUyelik();
   const [sekme, setSekme] = useState<Sekme>(profil.avatar.tip);
   const [hata, setHata] = useState<string | null>(null);
   const dosyaGirisi = useRef<HTMLInputElement>(null);
@@ -103,28 +105,36 @@ export function ProfilDuzenle({
           <p className="word text-xl font-extrabold">{ad.trim() || 'Adsız'}</p>
         </div>
 
-        {/* --- Ad --- */}
-        <Card>
-          <div className="flex items-center justify-between mb-2">
-            <h2 className="text-sm font-bold text-ink-soft">Adın</h2>
-            <button
-              onClick={() => setAd(rastgeleAd())}
-              className="rounded-full bg-sunken px-3 py-1.5 text-xs font-bold text-ink transition-all active:scale-95"
-            >
-              Karıştır
-            </button>
-          </div>
-          <input
-            value={ad}
-            maxLength={AD_SINIR}
-            onChange={(e) => setAd(e.target.value)}
-            placeholder="Adını yaz"
-            className="w-full rounded-2xl bg-sunken px-4 py-3 text-sm outline-none placeholder:text-ink-faint focus:ring-2 focus:ring-brand"
-          />
-          <p className="text-xs text-ink-faint mt-2">
-            Boş bırakırsan sana eğlenceli bir ad seçeriz.
-          </p>
-        </Card>
+        {/*
+          AD YALNIZCA UYESIZ KULLANICIYA SORULUYOR.
+
+          Uyenin adi hesabindan geliyor; iki ayri yerden degistirilebilse
+          hangisinin dogru oldugu belirsiz olurdu ve biri digerini sessizce
+          ezerdi. Uyesizin ise adindan baska bir sey yok, onda duruyor.
+        */}
+        {!uye?.bilgi?.ad && (
+          <Card>
+            <div className="flex items-center justify-between mb-2">
+              <h2 className="text-sm font-bold text-ink-soft">Adın</h2>
+              <button
+                onClick={() => setAd(rastgeleAd())}
+                className="rounded-full bg-sunken px-3 py-1.5 text-xs font-bold text-ink transition-all active:scale-95"
+              >
+                Karıştır
+              </button>
+            </div>
+            <input
+              value={ad}
+              maxLength={AD_SINIR}
+              onChange={(e) => setAd(e.target.value)}
+              placeholder="Adını yaz"
+              className="w-full rounded-2xl bg-sunken px-4 py-3 text-sm outline-none placeholder:text-ink-faint focus:ring-2 focus:ring-brand"
+            />
+            <p className="text-xs text-ink-faint mt-2">
+              Boş bırakırsan sana eğlenceli bir ad seçeriz.
+            </p>
+          </Card>
+        )}
 
         {/* --- Resim: hayvan ya da fotograf --- */}
         <Card>
@@ -206,7 +216,8 @@ export function ProfilDuzenle({
         <Card>
           <h2 className="text-sm font-bold text-ink-soft">Çerçeven</h2>
           <p className="text-xs text-ink-faint mt-1 mb-3">
-            Çerçeveler satın alınmaz, çalışınca açılır.
+            Çerçeveler satın alınmaz, <b>çalışınca açılır</b>: kelime öğrendikçe ve seri
+            tuttukça yenileri geliyor. Kilitliye dokununca neyin gerektiğini yazıyor.
           </p>
 
           <div className="grid grid-cols-3 gap-3">
