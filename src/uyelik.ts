@@ -142,16 +142,20 @@ const abone = (f: () => void) => {
   };
 };
 
-function oturumdan(s: Session | null): Uye | null {
-  if (!s?.user) return null;
-  const ham = s.user.user_metadata as Partial<UyeBilgi> | undefined;
+type HamKullanici = { id: string; email?: string | null; user_metadata?: unknown };
+
+function uyeden(k: HamKullanici | null | undefined): Uye | null {
+  if (!k) return null;
+  const ham = k.user_metadata as Partial<UyeBilgi> | undefined;
   return {
-    id: s.user.id,
-    eposta: s.user.email ?? null,
+    id: k.id,
+    eposta: k.email ?? null,
     // `tamam` yoksa bilgi girilmemis demektir; yarim metadata'yi bilgi sayma.
     bilgi: ham?.tamam && ham.ad ? (ham as UyeBilgi) : null,
   };
 }
+
+const oturumdan = (s: Session | null): Uye | null => uyeden(s?.user);
 
 /**
  * Google ile girende uyelik ILK ANDA tamamdir: ad zaten geliyor, bilgi
@@ -196,6 +200,23 @@ function istemciyiKur(): Promise<SupabaseClient | null> {
       const { data } = await istemci.auth.getSession();
       uye = oturumdan(data.session);
       void googleAdiniYaz(istemci, data.session);
+
+      /*
+        Depodaki oturum kullanicinin ESKI halini tasiyabiliyor: bilgi baska
+        bir cihazda ya da baska bir sekmede girildiyse burada hala eksik
+        gorunur ve kullaniciya doldurdugu halde "uyeligini tamamla" denir.
+        `getUser` sunucudan okuyor, `getSession` depodan.
+
+        Beklenmiyor: acilisi geciktirmesin. Cevap gelince arayuz
+        kendiliginden tazeleniyor.
+      */
+      if (data.session) {
+        void istemci.auth.getUser().then(({ data: taze }) => {
+          if (!taze.user) return;
+          uye = uyeden(taze.user);
+          haberVer();
+        });
+      }
       istemci.auth.onAuthStateChange((_olay, oturum) => {
         uye = oturumdan(oturum);
         haberVer();
@@ -318,6 +339,23 @@ export async function sifreyleKayit(eposta: string, sifre: string): Promise<Sonu
     options: { emailRedirectTo: donusAdresi() },
   });
   if (error) return { oldu: false, hata: cevir(error.message) };
+
+  /*
+    ADRES ZATEN KAYITLIYSA SUPABASE HATA DONDURMUYOR.
+
+    Kullanici sayimini (email enumeration) engellemek icin basarili gibi
+    cevap veriyor ve HICBIR e-posta gondermiyor. Tek isaret: donen
+    kullanicinin `identities` dizisi bos.
+
+    Yakalanmazsa kullanici "dogrulama postasi yolladik" yazisini okuyup
+    hic gelmeyecek bir postayi bekliyor — bu tam olarak yasandi.
+  */
+  if (data.user && (data.user.identities?.length ?? 0) === 0) {
+    return {
+      oldu: false,
+      hata: 'Bu adres zaten kayıtlı. "Giriş yap" ile devam et; şifreni bilmiyorsan "Şifremi unuttum" de.',
+    };
+  }
 
   /*
     Dogrulama acikken `session` null doner, `user` dolu gelir. Kapaliysa

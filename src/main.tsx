@@ -50,6 +50,31 @@ void profilSagla().then((state) => {
 void geriHazirla();
 
 /**
+ * YENI SURUME GECIS.
+ *
+ * Servis calisani `autoUpdate` ile kuruluyor: yeni paket arkada iniyor ve
+ * etkinlesiyor. Ama ACIK olan sayfa eski JavaScript'i calistirmaya devam
+ * ediyor — kullanici yenilemedikce yeni surumu hic gormuyor.
+ *
+ * Bu teorik bir sorun degil: tanitim sayfasina `?giris=1` eklendikten
+ * sonra sunucudaki paket dogru oldugu halde kullanici eski pakette kaldi
+ * ve baglanti ise yaramadi. Hata kodda degil, surumde.
+ *
+ * `controllerchange` yeni calisan devrali alinca atiyor. Dinleyici
+ * YALNIZCA zaten bir calisan varken kuruluyor: ilk ziyarette calisan
+ * sifirdan kuruldugu icin olay yine atar ve sayfa gereksiz yere
+ * yenilenirdi.
+ */
+if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+  let yenilendi = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (yenilendi) return;
+    yenilendi = true;
+    location.reload();
+  });
+}
+
+/**
  * Uyelik durumu. SDK yalnizca GEREKIRSE iniyor — depoda oturum varsa ya da
  * giris baglantisindan donulduyse. Ilk kez gelen ziyaretciye tek bayt
  * inmiyor (bkz. uyelik.ts).
