@@ -166,10 +166,16 @@ export function Card({
   );
 }
 
-type Variant = 'primary' | 'brand' | 'soft' | 'ghost';
+type Variant = 'primary' | 'brand' | 'spark' | 'soft' | 'ghost';
 
 const VARIANTS: Record<Variant, string> = {
   primary: 'bg-ink text-white shadow-[0_8px_20px_-8px_rgba(22,35,58,0.6)]',
+  /*
+    Sari birincil — BEYAZ yuzeyin uzerinde. Kanca sarisiyla ayni renk ve
+    bu bilincli: kancanin gorunmedigi ekranlarda (uyelik, ana sayfa)
+    rengin yarisacagi bir sey yok. Ders ve kart ekranlarinda kullanilmaz.
+  */
+  spark: 'bg-spark text-ink shadow-[0_8px_20px_-8px_rgba(240,184,0,0.85)]',
   brand: 'bg-brand text-white shadow-[0_8px_20px_-8px_rgba(79,146,246,0.85)]',
   soft: 'bg-white text-ink shadow-[var(--shadow-soft)]',
   ghost: 'text-ink-soft hover:bg-white/60',
