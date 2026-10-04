@@ -464,6 +464,15 @@ export async function cikisYap(): Promise<void> {
   haberVer();
 }
 
+/**
+ * Kurulu Supabase istemcisi — `senkron.ts` icin.
+ *
+ * Disariya aciliyor cunku senkron da ayni oturumu ve ayni dinamik
+ * indirmeyi kullanmali; ikinci bir istemci kurmak ikinci bir oturum
+ * yonetimi demekti.
+ */
+export const istemciAl = (): Promise<SupabaseClient | null> => istemciyiKur();
+
 /** Giris yapmis kullanicinin kimligi; yoksa null. Senkron okuma. */
 export const uyeOku = (): Uye | null => uye;
 

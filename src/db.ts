@@ -151,7 +151,7 @@ class AppDB extends Dexie {
  * Yedek dosyasi v2 oncesinden olabilir — eksik alanlar `undefined` kalirsa
  * sayimlar ve `??` zincirleri sessizce yanlis calisir.
  */
-function normalizeProgress(p: Progress): Progress {
+export function normalizeProgress(p: Progress): Progress {
   return {
     cardId: p.cardId,
     step: p.step ?? 1,
@@ -175,7 +175,7 @@ function normalizeProgress(p: Progress): Progress {
 
 export const db = new AppDB();
 
-const APP_KEY = 'app';
+export const APP_KEY = 'app';
 
 export const EMPTY_STATE: AppState = {
   onboarded: false,

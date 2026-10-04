@@ -318,7 +318,9 @@ export function Settings({
             ) : uye ? (
               <>
                 <p className="text-sm text-ink-soft mb-1">
-                  <b className="break-all">{uye.eposta}</b> ile giriş yaptın.
+                  <b className="break-all">{uye.eposta}</b> ile giriş yaptın. İlerlemen her
+                  ders sonunda <b>hesabına yedekleniyor</b>; başka bir cihazdan girince
+                  kaldığın yerden devam edersin.
                 </p>
                 <div className="mb-3">
                   <Satir ad="Ad" deger={uye.bilgi?.ad ?? '—'} />
@@ -346,8 +348,17 @@ export function Settings({
         <Card className="rise delay-2">
           <h2 className="text-sm font-bold text-ink-soft mb-1">Verilerim</h2>
           <p className="text-sm text-ink-soft mb-3">
-            İlerleme, profilin ve fotoğrafın <b>yalnızca bu cihazda</b> tutuluyor.
-            Taşımak veya korumak için yedekle
+            {uye?.bilgi?.tamam ? (
+              <>
+                İlerlemen hesabına yedekleniyor, <b>fotoğrafın yalnızca bu cihazda</b>{' '}
+                kalıyor. Hesaptan bağımsız bir kopya istersen yedekle
+              </>
+            ) : (
+              <>
+                İlerleme, profilin ve fotoğrafın <b>yalnızca bu cihazda</b> tutuluyor.
+                Taşımak veya korumak için yedekle
+              </>
+            )}
             {paylasSecenegi && " — açılan menüden Drive'a, e-postaya ya da istediğin yere gönderebilirsin"}.
           </p>
           <div className="flex flex-wrap gap-2">

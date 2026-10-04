@@ -30,6 +30,7 @@ import { Settings } from './screens/Settings';
 import { ProfilDuzenle } from './screens/ProfilDuzenle';
 import { Giris } from './components/Giris';
 import { sifirlamaDonusuMu, useUyelik, uyelikVarMi } from './uyelik';
+import { senkronla } from './senkron';
 import { gecerliCerceve, type Kazanim } from './cerceveler';
 import { uygulamadanCik, useGeri } from './geri';
 // `Card` adi types.ts'teki KART tipiyle cakisiyor; arayuz bileseni takma adla.
@@ -120,6 +121,25 @@ export default function App() {
   }, [uyelikHazir, uye]);
 
   /*
+    ILERLEME SENKRONU. Oturum hazir olur olmaz bir kez: sunucudaki paket
+    cekiliyor, cihazdakiyle birlestiriliyor, sonuc iki tarafa da yaziliyor
+    (bkz. senkron.ts).
+
+    Burada olmasi onemli — giristen hemen SONRA degil. Kullanici zaten
+    oturumu acik halde baska bir cihazdan gelmis olabilir; her acilista
+    cekmezsek o cihazdaki ilerleme hic inmez.
+
+    Bekleyen yok: senkron bir kolaylik, ag yoksa uygulama cihazdaki
+    veriyle calismaya devam ediyor.
+  */
+  const senkronKimlik = useRef<string | null>(null);
+  useEffect(() => {
+    if (!uyelikHazir || !uye || senkronKimlik.current === uye.id) return;
+    senkronKimlik.current = uye.id;
+    void senkronla();
+  }, [uyelikHazir, uye]);
+
+  /*
     Gunun degistigini fark eden yer BURASI (bkz. today.ts). Onceden
     `new Date()` yalnizca render aninda okunuyordu ve render de ancak
     veritabani degisince oluyordu: uygulama acik dururken gece yarisi
@@ -169,7 +189,11 @@ export default function App() {
   if (!data) return <Splash />;
 
   const { progress, state: kayitliState } = data;
-  const kapat = () => setFlow(null);
+  const kapat = () => {
+    setFlow(null);
+    // Ders bitti: kazanilan ilerleme bu cihazda kalmasin.
+    void senkronla();
+  };
 
   /**
    * Cerceve kilitlerini acan uc sayi (bkz. cerceveler.ts).
