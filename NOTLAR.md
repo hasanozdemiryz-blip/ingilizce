@@ -2071,63 +2071,37 @@ Supabase panel → **Authentication → Policies** → *Leaked password
 protection* → aç. Bunsuz kullanıcılar `123456789` gibi sızmış şifrelerle
 kayıt olabiliyor; güvenlik taraması uyarıyor.
 
-#### 2. Google ile giriş (20 dakika, iki panel)
+#### 2. Google ile giriş — ✅ YAPILDI (4 Ekim)
 
-Kod tamamen hazır. Düğme `VITE_GOOGLE_GIRIS` secret'ı gelene kadar
-görünmüyor — sağlayıcı kapalıyken göstermek, tıklayan herkese Google hata
-sayfası demek.
+Çalışıyor ve doğrulandı: sağlayıcı `google`, e-posta onaylı, ad Google'dan
+geliyor, üyelik ilk anda tamam (bilgi adımı çıkmıyor), ilerleme senkronu
+dönüyor.
 
-**A) Google Cloud Console** — `console.cloud.google.com`
+Kurulum kayıt olsun diye duruyor:
 
-1. Sağ üstten proje seç ya da **yeni proje** oluştur (ad önemsiz).
-2. **APIs & Services → OAuth consent screen**
-   - User Type: **External** → Create
-   - App name: `Hafızada İngilizce`
-   - User support email ve Developer contact: kendi adresin
-   - Scope eklemeden **Save and Continue** ile geç
-   - Sonunda **PUBLISH APP** — yayınlamazsan yalnızca test kullanıcısı
-     olarak eklediğin adresler girebilir, başkası "erişim engellendi" görür
-3. **APIs & Services → Credentials → + Create Credentials → OAuth client ID**
-   - Application type: **Web application**
-   - Name: `Hafizada Web`
-   - **Authorized redirect URIs** → ADD URI → tam olarak:
+- **Google Cloud Console** → proje → *Google Auth Platform* → Audience:
+  **External** → Branding: App name `Hafızada İngilizce` → **Clients** →
+  Web application → Authorized redirect URI:
+  `https://safbupshatjmfxdviwvp.supabase.co/auth/v1/callback`
+  → **Audience → Publish app**
+- **Supabase** → Authentication → Sign In / Providers → Google → Client ID
+  + Secret → Save. Redirect URLs'te `https://hafizada.com/ingilizce/**` ve
+  `http://localhost:5173/**`.
+- **GitHub** → Actions secret `VITE_GOOGLE_GIRIS = 1`
 
-     ```
-     https://safbupshatjmfxdviwvp.supabase.co/auth/v1/callback
-     ```
+> **Secret eklemek yetmiyor.** Vite yalnizca `env` bloğunda duran
+> değişkeni paketliyor; `deploy.yml`'daki `env:` listesine de eklenmeli.
+> Bu atlandı ve secret varken düğme görünmedi.
 
-   - **Create** → çıkan **Client ID** ve **Client Secret** kopyala
+**Onay ekranında uygulama adı yerine `…supabase.co` yazıyor.** Branding'de
+ad doğru girilmiş olsa bile böyle: Google doğrulanmamış uygulamalarda
+OAuth geri dönüş adresinin alan adını gösteriyor, callback de Supabase'de.
+Çözümü ya Google doğrulaması (gizlilik politikası + ana sayfa, günler) ya
+da Supabase özel auth alan adı (ücretli). Şimdilik bırakıldı.
 
-> Tek kritik alan redirect URI. Harfi harfine aynı olmazsa Google
-> `redirect_uri_mismatch` der ve giriş hiç açılmaz.
-
-**B) Supabase** — `supabase.com/dashboard` → proje
-
-1. **Authentication → Sign In / Providers → Google** → aç, Client ID ve
-   Secret'i yapıştır → **Save**
-2. **Authentication → URL Configuration → Redirect URLs** listesinde
-   şunlar olmalı:
-
-   ```
-   https://hafizada.com/ingilizce/
-   http://localhost:5173/
-   ```
-
-**C) Düğmeyi açmak**
-
-GitHub → depo **ingilizce** → Settings → Secrets and variables → Actions
-→ **New repository secret**:
-
-| Name | Secret |
-|---|---|
-| `VITE_GOOGLE_GIRIS` | `1` |
-
-Sonra Actions'tan son iş akışını **Re-run** et ya da herhangi bir commit
-at; yeni derlemede düğme belirir.
-
-> Google ile giren kişi **o anda tam üye** olur: ad sağlayıcıdan gelir,
-> bilgi adımı hiç çıkmaz. Seviye ve hedef boş kalır, isterse sonra
-> Ayarlar'dan doldurur.
+**Açık soru:** aynı e-postayla hem şifreyle hem Google'la giriş yapılırsa
+tek hesap mı oluyor, iki ayrı hesap mı? Supabase e-posta eşleşmesiyle
+birleştiriyor ama **test edilmedi.**
 
 #### 3. Gerçek uçtan uca test
 
