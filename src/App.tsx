@@ -374,6 +374,7 @@ export default function App() {
           todayCount={introducedToday(progress)}
           remaining={remainingToday(progress, state.dailyLimit)}
           todaysCount={bugununKartlari.length}
+          todaysIds={bugununKartlari.map((p) => p.cardId)}
           aheadCount={ahead.length}
           agirTekrar={AGIR_TEKRAR}
           onStart={() =>

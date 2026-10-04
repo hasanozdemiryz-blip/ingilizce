@@ -21,6 +21,8 @@ type Props = {
   remaining: number;
   /** Gunluk hedef dolduysa tekrarlanacak, o gunun kartlari */
   todaysCount: number;
+  /** Ayni kartlarin kendisi — hizli tekrar onizlemesi icin */
+  todaysIds: string[];
   aheadCount: number;
   /** Tekrar yuku bunu gecince "Önce tekrar et" satiri gorunur */
   agirTekrar: number;
@@ -54,6 +56,7 @@ export function Home({
   todayCount,
   remaining,
   todaysCount,
+  todaysIds,
   aheadCount,
   agirTekrar,
   onStart,
@@ -102,6 +105,11 @@ export function Home({
     .filter((c): c is CardType => Boolean(c));
 
   const gunlukPct = Math.min(100, Math.round((todayCount / state.dailyLimit) * 100));
+
+  /** Hizli tekrarda gelecek kelimeler — onizleme icin. */
+  const bugununKelimeleri = todaysIds
+    .map((id) => CARD_BY_ID.get(id))
+    .filter((c): c is CardType => Boolean(c));
 
   /*
     Genis ekranda panelin alti bos kaliyordu — telefon icin tasarlanmis
@@ -212,6 +220,31 @@ export function Home({
                 ? `Bugünün ${todaysCount} kelimesini istediğin kadar çalış.`
                 : 'Bekleyen tekrarlarını çalışabilirsin.'}
             </p>
+            {/*
+              Onizleme burada da var: "Bugunun 10 kelimesi" demek neyin
+              gelecegini soylemiyor. Yeni kelime kartindakiyle ayni mantik
+              — fark su ki bunlar zaten TANISILMIS kelimeler, yani kanca
+              saklanacak bir sir degil; yine de gosterilmiyor, tekrarin
+              isi hatirlamak.
+            */}
+            {bugununKelimeleri.length > 0 && (
+              <ul className="mb-4 flex flex-wrap gap-1.5">
+                {bugununKelimeleri.slice(0, 8).map((c) => (
+                  <li
+                    key={c.id}
+                    className="word rounded-full bg-white/25 px-3 py-1.5 text-sm font-bold text-white"
+                  >
+                    {c.en}
+                  </li>
+                ))}
+                {bugununKelimeleri.length > 8 && (
+                  <li className="rounded-full px-2 py-1.5 text-sm font-bold text-white/70">
+                    +{bugununKelimeleri.length - 8}
+                  </li>
+                )}
+              </ul>
+            )}
+
             <Button variant="soft" onClick={todaysCount > 0 ? onQuickReview : onStart}>
               Hızlı tekrar
             </Button>
