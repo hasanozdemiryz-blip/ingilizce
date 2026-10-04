@@ -377,10 +377,7 @@ export function Settings({
                   <b className="break-all">{uye.eposta}</b> ile giriş yaptın ama{' '}
                   <b>üyeliğin tamamlanmadı</b>. Otuz saniyelik bir adım kaldı.
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  <Kucuk onClick={() => setBilgiAcik(true)}>Tamamla</Kucuk>
-                  <Kucuk onClick={() => setCikisDurum('soruyor')}>Çıkış yap</Kucuk>
-                </div>
+                <Kucuk onClick={() => setBilgiAcik(true)}>Tamamla</Kucuk>
               </>
             ) : uye ? (
               <>
@@ -397,8 +394,6 @@ export function Settings({
                 <div className="flex flex-wrap gap-2">
                   <Kucuk onClick={() => setBilgiAcik(true)}>Bilgilerimi düzenle</Kucuk>
                   <Kucuk onClick={() => setSifreAcik(true)}>Şifre değiştir</Kucuk>
-                  <Kucuk onClick={() => setCikisDurum('soruyor')}>Çıkış yap</Kucuk>
-                  <Kucuk onClick={() => setSilmeDurum('soruyor')}>Hesabı sil</Kucuk>
                 </div>
               </>
             ) : (
@@ -481,6 +476,31 @@ export function Settings({
                 if (f) void iceAktar(f).catch(() => setHata('Yedek dosyası okunamadı.'));
               }}
             />
+          </Card>
+        )}
+
+        {/*
+          OTURUM ISLEMLERI EN ALTTA ve kirmizi.
+
+          Ikisi de geri donusu olan islemler degil: cikis cihazi temizler,
+          silme hesabi bitirir. Ayarlarin ortasinda, gunluk hedefin yaninda
+          durmalari yanlisti — yanlislikla basilabilecek yerde olmamalilar.
+        */}
+        {uye && (
+          <Card className="rise delay-3">
+            <h2 className="text-sm font-bold text-ink-soft mb-1">Oturum</h2>
+            <p className="mb-3 text-sm text-ink-soft">
+              Çıkınca ilerlemen hesabına gönderilip bu cihazdan silinir; tekrar girince
+              geri gelir.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <Kucuk tehlike onClick={() => setCikisDurum('soruyor')}>
+                Çıkış yap
+              </Kucuk>
+              <Kucuk tehlike onClick={() => setSilmeDurum('soruyor')}>
+                Hesabı sil
+              </Kucuk>
+            </div>
           </Card>
         )}
 

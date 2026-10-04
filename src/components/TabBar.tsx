@@ -89,9 +89,16 @@ export function TabBar({
       >
         <span className="flex items-center gap-2.5 px-5">
           <Logo className="h-9" />
+          {/*
+            Iki kelime TEK kilit gibi durmali: aradaki bosluk kapatildi ve
+            alttaki yazi harf araligiyla ustekinin genisligine oturtuldu.
+            Ayri ayri duran iki satir marka degil, etiket gibi goruluyordu.
+          */}
           <span className="leading-none">
-            <span className="word block text-base font-extrabold text-ink">Hafızada</span>
-            <span className="block text-[0.62rem] font-bold uppercase tracking-[0.18em] text-ink-faint">
+            <span className="word block text-base font-extrabold leading-none text-ink">
+              Hafızada
+            </span>
+            <span className="-mt-px block text-[0.58rem] font-bold uppercase leading-none tracking-[0.3em] text-ink-faint">
               İngilizce
             </span>
           </span>
