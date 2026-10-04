@@ -39,6 +39,12 @@ export function Settings({
   const [hata, setHata] = useState<string | null>(null);
   const [bilgi, setBilgi] = useState<string | null>(null);
   const [girisAcik, setGirisAcik] = useState(false);
+  /*
+    Sifre degistirme giris sayfasinin `yeniSifre` kipini yeniden kullaniyor.
+    Ayri bir form yazmak ayni kurali (en az 8 karakter) ve ayni hata
+    metinlerini ikinci kez tanimlamak olurdu.
+  */
+  const [sifreAcik, setSifreAcik] = useState(false);
   const { uye } = useUyelik();
 
   /**
@@ -298,7 +304,10 @@ export function Settings({
                   <b className="break-all">{uye.eposta}</b> ile giriş yaptın. İlerlemen bu
                   hesaba bağlı.
                 </p>
-                <Kucuk onClick={() => void cikisYap()}>Çıkış yap</Kucuk>
+                <div className="flex flex-wrap gap-2">
+                  <Kucuk onClick={() => setSifreAcik(true)}>Şifre değiştir</Kucuk>
+                  <Kucuk onClick={() => void cikisYap()}>Çıkış yap</Kucuk>
+                </div>
               </>
             ) : (
               <>
@@ -408,6 +417,7 @@ export function Settings({
         diline hic benzemiyor.
       */}
       {girisAcik && <Giris onKapat={() => setGirisAcik(false)} />}
+      {sifreAcik && <Giris baslangicKip="yeniSifre" onKapat={() => setSifreAcik(false)} />}
 
       {sifirlaSoruluyor && (
         <div className="fixed inset-0 z-20 flex items-end justify-center bg-ink/40 px-5 pb-8 backdrop-blur-sm">

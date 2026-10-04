@@ -79,9 +79,11 @@
   --color-brand-soft: #e2edfd;
 
   /* --- Kanca: fosforlu kalem sarisi.
-         Kanca zaten "isaretlenmis" seydir — renk bunu soyluyor. --- */
-  --color-spark: #ffd23f;
-  --color-spark-soft: #fff4cf;
+         Kanca zaten "isaretlenmis" seydir — renk bunu soyluyor.
+         Ton tanitim sayfasiyla ayni (#ffc000); once #ffd23f'ti ve yan yana
+         konunca iki ayri sari gibi duruyordu. --- */
+  --color-spark: #ffc000;
+  --color-spark-soft: #fff2c9;
 
   /* --- Basari: nane --- */
   --color-grow: #2bc48a;
@@ -100,7 +102,9 @@
   --font-sans: 'Jakarta', 'Segoe UI', system-ui, sans-serif;
   --font-display: 'Nunito', 'Jakarta', system-ui, sans-serif;
 
-  --radius-card: 2rem;
+  /* 2rem'di. Olculdu: Memrise'in kart yaricapi 16px; 32px fazla
+     yuvarlak kaliyor ve arayuzu oyuncaklastiriyor. */
+  --radius-card: 1rem;
 
   /* Golgeler hafifledi: krem zeminde koyu mavi golge kirli gorunuyor,
      ayrimi artik zemin-kart ton farki tasiyor. */

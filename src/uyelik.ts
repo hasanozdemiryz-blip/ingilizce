@@ -70,6 +70,20 @@ function baglantidanDonuldu(): boolean {
   return location.hash.includes('access_token=') || location.search.includes('code=');
 }
 
+/**
+ * Sifre sifirlama baglantisindan mi donuldu.
+ *
+ * MODUL YUKLENIRKEN okunuyor, fonksiyon icinde degil: SDK
+ * `detectSessionInUrl` ile jetonlari isleyip adresi TEMIZLIYOR, sonra
+ * sorulursa diyez bos cikar. Yakalanmazsa kullanici oturumu acilmis ama ne
+ * yapacagini bilmez halde ana ekrana duser — oysa yapmasi gereken yeni bir
+ * sifre belirlemek.
+ */
+const sifirlamaDonusu =
+  typeof location !== 'undefined' && location.hash.includes('type=recovery');
+
+export const sifirlamaDonusuMu = (): boolean => sifirlamaDonusu;
+
 // --- Durum -----------------------------------------------------------------
 
 export type Uye = { id: string; eposta: string | null };
@@ -153,6 +167,70 @@ export async function uyelikHazirla(): Promise<void> {
   hazir = true;
 }
 
+// --- Ortak yardimcilar -----------------------------------------------------
+
+/**
+ * Supabase'in geri donecegi adres: UYGULAMANIN adresi, kok DEGIL.
+ *
+ * `window.location.origin` yalnizca `https://hafizada.com` veriyor; uygulama
+ * ise `/ingilizce/` altinda. Kok adres `/ingilizce/`ye yonlendiriyor ama
+ * yonlendirme adresin DIYEZ kismini dusuruyor — Supabase jetonlari tam orada
+ * gonderiyor. Yani baglantiya tiklayan kullanici uygulamaya varir ama oturumu
+ * acilmaz, hicbir hata da gormez.
+ *
+ * Giris baglantisi, sifre sifirlama ve Google donusu ayni adresi kullanmali;
+ * uclu ayrisirsa biri sessizce bozulur.
+ *
+ * `BASE_URL` Vite'in derleme anindaki taban yolu: gelistirmede `/`, uretimde
+ * `/ingilizce/`.
+ */
+function donusAdresi(): string {
+  return new URL(import.meta.env.BASE_URL, window.location.origin).href;
+}
+
+/** En az bu kadar karakter. Supabase varsayilani 6; kisa sifre istemiyoruz. */
+export const SIFRE_EN_AZ = 8;
+
+/**
+ * Supabase hatalari Ingilizce ve teknik. Kullaniciya "AuthApiError" gostermek
+ * hicbir sey anlatmiyor; sik gorulenler tek tek cevriliyor.
+ *
+ * `invalid login credentials` ozel bir durum: sihirli baglantiyla acilmis
+ * hesaplarin sifresi YOK ve kullanici neden giremedigini anlamiyor. Metin
+ * bunu soyluyor.
+ */
+function cevir(mesaj: string): string {
+  const m = mesaj.toLowerCase();
+  if (m.includes('rate') || m.includes('limit')) {
+    return 'Çok fazla deneme oldu. Birkaç dakika sonra tekrar dene.';
+  }
+  if (m.includes('invalid login credentials')) {
+    return 'E-posta ya da şifre hatalı. Daha önce e-posta bağlantısıyla girdiysen şifren yok — "Şifremi unuttum" ile bir tane oluştur.';
+  }
+  if (m.includes('already registered') || m.includes('already exists')) {
+    return 'Bu adres zaten kayıtlı. Giriş yapmayı dene.';
+  }
+  if (m.includes('email not confirmed')) {
+    return 'Adresini henüz doğrulamadın. Kayıt e-postandaki bağlantıya dokun.';
+  }
+  if (m.includes('password') && (m.includes('weak') || m.includes('short') || m.includes('least'))) {
+    return `Şifre en az ${SIFRE_EN_AZ} karakter olmalı.`;
+  }
+  if (m.includes('invalid') && m.includes('email')) {
+    return 'Bu e-posta adresi geçerli görünmüyor.';
+  }
+  return 'Bir şeyler ters gitti. Biraz sonra tekrar dene.';
+}
+
+export type Sonuc = {
+  oldu: boolean;
+  hata?: string;
+  /** Kayit basarili ama oturum ACILMADI: once e-posta dogrulanacak. */
+  dogrulamaBekliyor?: boolean;
+};
+
+const BAGLANAMADI: Sonuc = { oldu: false, hata: 'Şu an bağlanamıyoruz. Biraz sonra dene.' };
+
 // --- Disariya acilan islemler ----------------------------------------------
 
 /**
@@ -167,40 +245,97 @@ export async function girisBaglantisiGonder(
   const c = await istemciyiKur();
   if (!c) return { oldu: false, hata: 'Şu an bağlanamıyoruz. Biraz sonra dene.' };
 
-  /*
-    Donus adresi UYGULAMANIN ADRESI, kok DEGIL.
-
-    `window.location.origin` yalnizca `https://hafizada.com` veriyor; uygulama
-    ise `/ingilizce/` altinda. Kok adres `/ingilizce/`ye yonlendiriyor ama
-    yonlendirme adresin DIYEZ kismini dusuruyor — Supabase jetonlari tam
-    orada gonderiyor. Yani baglantiya tiklayan kullanici uygulamaya varir
-    ama oturumu acilmaz, hicbir hata da gormez.
-
-    `BASE_URL` Vite'in derleme anindaki taban yolu: gelistirmede `/`,
-    uretimde `/ingilizce/`.
-  */
-  const donus = new URL(import.meta.env.BASE_URL, window.location.origin).href;
-
   const { error } = await c.auth.signInWithOtp({
     email: eposta.trim(),
-    options: { shouldCreateUser: true, emailRedirectTo: donus },
+    options: { shouldCreateUser: true, emailRedirectTo: donusAdresi() },
   });
 
-  if (!error) return { oldu: true };
+  return error ? { oldu: false, hata: cevir(error.message) } : { oldu: true };
+}
+
+/**
+ * Sifreyle kayit. Supabase'de "Confirm email" acik oldugu icin hesap
+ * dogrulama e-postasi gonderiliyor ve oturum ancak dogrulamadan sonra
+ * aciliyor — `dogrulamaBekliyor` bunu soyluyor ki arayuz "girdin" demesin.
+ */
+export async function sifreyleKayit(eposta: string, sifre: string): Promise<Sonuc> {
+  if (sifre.length < SIFRE_EN_AZ) {
+    return { oldu: false, hata: `Şifre en az ${SIFRE_EN_AZ} karakter olmalı.` };
+  }
+  const c = await istemciyiKur();
+  if (!c) return BAGLANAMADI;
+
+  const { data, error } = await c.auth.signUp({
+    email: eposta.trim(),
+    password: sifre,
+    options: { emailRedirectTo: donusAdresi() },
+  });
+  if (error) return { oldu: false, hata: cevir(error.message) };
 
   /*
-    Supabase hata metinleri Ingilizce ve teknik. En sik ikisi cevriliyor;
-    gerisi genel mesaja dusuyor — kullaniciya "AuthApiError" gostermek
-    hicbir sey anlatmiyor.
+    Dogrulama acikken `session` null doner, `user` dolu gelir. Kapaliysa
+    oturum hemen acilir. Ikisini de destekliyoruz ki panel ayari degisince
+    arayuz bozulmasin.
   */
-  const m = error.message.toLowerCase();
-  if (m.includes('rate') || m.includes('limit')) {
-    return { oldu: false, hata: 'Çok fazla deneme oldu. Birkaç dakika sonra tekrar dene.' };
+  return { oldu: true, dogrulamaBekliyor: !data.session };
+}
+
+/** Sifreyle giris. */
+export async function sifreyleGiris(eposta: string, sifre: string): Promise<Sonuc> {
+  const c = await istemciyiKur();
+  if (!c) return BAGLANAMADI;
+  const { error } = await c.auth.signInWithPassword({ email: eposta.trim(), password: sifre });
+  return error ? { oldu: false, hata: cevir(error.message) } : { oldu: true };
+}
+
+/**
+ * Google ile giris.
+ *
+ * Tarayici Google'a gidip geri donuyor; bu cagri basariliysa sayfa zaten
+ * terk ediliyor, yani donus degeri yalnizca HATA icin anlamli.
+ *
+ * Saglayici Supabase panelinde kapaliyken dugme hic gosterilmiyor
+ * (bkz. `googleAcikMi`), yoksa kullanici tiklar ve hata sayfasi gorur.
+ */
+export async function googleIleGiris(): Promise<Sonuc> {
+  const c = await istemciyiKur();
+  if (!c) return BAGLANAMADI;
+  const { error } = await c.auth.signInWithOAuth({
+    provider: 'google',
+    options: { redirectTo: donusAdresi() },
+  });
+  return error ? { oldu: false, hata: cevir(error.message) } : { oldu: true };
+}
+
+/**
+ * Google dugmesi gosterilsin mi.
+ *
+ * Saglayicinin acik olup olmadigini istemciden ogrenmenin yolu yok; derleme
+ * zamani bayragi kullaniliyor. Supabase panelinde Google acildiginda
+ * `VITE_GOOGLE_GIRIS=1` ekleniyor (Actions secret) ve dugme beliriyor.
+ */
+export const googleAcikMi = (): boolean =>
+  uyelikVarMi() && import.meta.env.VITE_GOOGLE_GIRIS === '1';
+
+/** Sifre sifirlama baglantisi gonderir. */
+export async function sifreSifirlamaGonder(eposta: string): Promise<Sonuc> {
+  const c = await istemciyiKur();
+  if (!c) return BAGLANAMADI;
+  const { error } = await c.auth.resetPasswordForEmail(eposta.trim(), {
+    redirectTo: donusAdresi(),
+  });
+  return error ? { oldu: false, hata: cevir(error.message) } : { oldu: true };
+}
+
+/** Yeni sifre belirler — sifirlama donusunde ya da Ayarlar'dan. */
+export async function sifreBelirle(yeniSifre: string): Promise<Sonuc> {
+  if (yeniSifre.length < SIFRE_EN_AZ) {
+    return { oldu: false, hata: `Şifre en az ${SIFRE_EN_AZ} karakter olmalı.` };
   }
-  if (m.includes('invalid') && m.includes('email')) {
-    return { oldu: false, hata: 'Bu e-posta adresi geçerli görünmüyor.' };
-  }
-  return { oldu: false, hata: 'Bağlantı gönderilemedi. Biraz sonra tekrar dene.' };
+  const c = await istemciyiKur();
+  if (!c) return BAGLANAMADI;
+  const { error } = await c.auth.updateUser({ password: yeniSifre });
+  return error ? { oldu: false, hata: cevir(error.message) } : { oldu: true };
 }
 
 export async function cikisYap(): Promise<void> {

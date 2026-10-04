@@ -28,6 +28,8 @@ import { SessionDone } from './screens/SessionDone';
 import { Welcome } from './screens/Welcome';
 import { Settings } from './screens/Settings';
 import { ProfilDuzenle } from './screens/ProfilDuzenle';
+import { Giris } from './components/Giris';
+import { sifirlamaDonusuMu, uyelikVarMi } from './uyelik';
 import { gecerliCerceve, type Kazanim } from './cerceveler';
 import { uygulamadanCik, useGeri } from './geri';
 // `Card` adi types.ts'teki KART tipiyle cakisiyor; arayuz bileseni takma adla.
@@ -67,6 +69,32 @@ export default function App() {
   const [flow, setFlow] = useState<Flow>(null);
   const [egzersizde, setEgzersizde] = useState(false);
   const [cikisSoruluyor, setCikisSoruluyor] = useState(false);
+
+  /*
+    Uyelik sayfasi iki yoldan ACILISTA acilabiliyor:
+
+      ?giris=1   — tanitim sayfasindaki "Giris yap" buraya getiriyor.
+                   Once hem o baglanti hem "Hemen basla" ayni adrese
+                   gidiyordu; giris yapmak isteyen kendini derste buluyordu.
+
+      type=recovery — sifre sifirlama baglantisindan donus. Yakalanmazsa
+                   kullanici oturumu acilmis ama ne yapacagini bilmez halde
+                   ana ekrana duser; oysa yapmasi gereken yeni sifre
+                   belirlemek. `uyelik.ts` bunu SDK adresi temizlemeden ONCE
+                   okuyor.
+
+    Baslangic degeri bir kez hesaplaniyor ve `?giris=1` adresten siliniyor:
+    kalirsa kullanici sayfayi her yenilediginde giris sayfasi yeniden acilir.
+  */
+  const [girisKip, setGirisKip] = useState<'giris' | 'yeniSifre' | null>(() => {
+    if (!uyelikVarMi()) return null;
+    if (sifirlamaDonusuMu()) return 'yeniSifre';
+    const adres = new URL(window.location.href);
+    if (adres.searchParams.get('giris') !== '1') return null;
+    adres.searchParams.delete('giris');
+    history.replaceState(null, '', adres.pathname + adres.search + adres.hash);
+    return 'giris';
+  });
 
   /*
     Gunun degistigini fark eden yer BURASI (bkz. today.ts). Onceden
@@ -150,9 +178,21 @@ export default function App() {
 
   // Sifirlama sonrasi da buraya dusulur — kullaniciyi kaldigi sekmede
   // degil, basa dondurmek gerek.
+  /*
+    Giris penceresi HEM karsilama ekraninda hem ana akista gorunmeli.
+    Karsilama erken donuyor; pencere yalnizca sondaki donuse konsaydi
+    hesabi olup bu cihaza ilk kez gelen kullanici "Giris yap"a bastiginda
+    giris yerine tanitim akisini gorurdu — oysa o baglantinin hedef kitlesi
+    tam olarak bu kisi.
+  */
+  const girisPenceresi = girisKip ? (
+    <Giris baslangicKip={girisKip} zorunlu={girisKip === 'yeniSifre'} onKapat={() => setGirisKip(null)} />
+  ) : null;
+
   if (!state.onboarded) {
     return (
-      <Welcome
+      <>
+        <Welcome
         onDone={() => {
           /*
             Bir sure DOGRUDAN ilk derse giriliyordu — bir karar eksiltmek
@@ -163,7 +203,9 @@ export default function App() {
           */
           setTab('ogren');
         }}
-      />
+        />
+        {girisPenceresi}
+      </>
     );
   }
 
@@ -280,6 +322,8 @@ export default function App() {
 
       {/* Egzersiz kosarken menu gizlenir: tam ekran odak, ve dugmeler menunun altinda kalmaz */}
       {!egzersizde && <TabBar active={tab} onChange={setTab} />}
+
+      {girisPenceresi}
 
       {/*
         Cikis onayi. Ana ekranda geri tusuna basilinca cikiyor — kullanici
