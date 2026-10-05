@@ -1,3 +1,4 @@
+import { t } from './dil';
 /** Saf tarih mantigi — IndexedDB'ye bagimli degil, test edilebilir. */
 
 export const todayKey = (d = new Date()) =>
@@ -15,19 +16,19 @@ export function isYesterday(dateKey: string, now = new Date()): boolean {
  */
 export function relativeDue(due: Date, now = new Date()): string {
   const ms = due.getTime() - now.getTime();
-  if (ms <= 0) return 'şimdi';
+  if (ms <= 0) return t('şimdi');
 
   const dk = Math.round(ms / 60_000);
-  if (dk < 60) return `${dk} dakika sonra`;
+  if (dk < 60) return t('{dk} dakika sonra', { dk });
 
   const saat = Math.round(dk / 60);
-  if (saat < 24 && todayKey(due) === todayKey(now)) return `${saat} saat sonra`;
+  if (saat < 24 && todayKey(due) === todayKey(now)) return t('{saat} saat sonra', { saat });
 
   const gun = Math.round((new Date(todayKey(due)).getTime() - new Date(todayKey(now)).getTime()) / 86_400_000);
-  if (gun <= 1) return 'yarın';
-  if (gun < 7) return `${gun} gün sonra`;
-  if (gun < 30) return `${Math.round(gun / 7)} hafta sonra`;
-  return `${Math.round(gun / 30)} ay sonra`;
+  if (gun <= 1) return t('yarın');
+  if (gun < 7) return t('{gun} gün sonra', { gun });
+  if (gun < 30) return t('{n} hafta sonra', { n: Math.round(gun / 7) });
+  return t('{n} ay sonra', { n: Math.round(gun / 30) });
 }
 
 /** YYYY-MM-DD anahtarini yerel ogleye sabitler — yaz saati kaymalarina dayanikli. */

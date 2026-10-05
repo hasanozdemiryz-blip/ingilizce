@@ -1,5 +1,6 @@
 import { VARSAYILAN_CERCEVE } from './cerceveler';
 import type { Profil } from './types';
+import { t } from './dil';
 
 /**
  * YEREL PROFIL.
@@ -70,7 +71,7 @@ const sec = <T,>(xs: readonly T[], rastgele: () => number) =>
   xs[Math.floor(rastgele() * xs.length)];
 
 export const rastgeleAd = (rastgele: () => number = Math.random): string =>
-  `${sec(SIFATLAR, rastgele)} ${sec(HAYVANLAR, rastgele).ad}`;
+  `${t(sec(SIFATLAR, rastgele))} ${t(sec(HAYVANLAR, rastgele).ad)}`;
 
 /**
  * Ilk acilista bir kez uretilir ve kaydedilir (bkz. db.ts `profilSagla`).
@@ -83,7 +84,7 @@ export function yeniProfil(rastgele: () => number = Math.random): Profil {
   const hayvan = sec(HAYVANLAR, rastgele);
   return {
     id: yeniKimlik(),
-    ad: `${sec(SIFATLAR, rastgele)} ${hayvan.ad}`,
+    ad: `${t(sec(SIFATLAR, rastgele))} ${t(hayvan.ad)}`,
     avatar: { tip: 'hayvan', ad: hayvan.dosya },
     cerceve: VARSAYILAN_CERCEVE,
     olusturuldu: new Date().toISOString(),
@@ -109,6 +110,8 @@ export function adDuzelt(girdi: string, rastgele: () => number = Math.random): s
  */
 export function profilDuzelt(profil: Profil): Profil {
   if (profil.avatar.tip === 'hayvan' || profil.avatar.tip === 'foto') return profil;
-  const eslesen = HAYVANLAR.find((h) => profil.ad.endsWith(h.ad)) ?? HAYVANLAR[0];
+  // Ad Ingilizce arayuzde uretildiyse hayvan adi da Ingilizce (bkz. dil.ts).
+  const eslesen =
+    HAYVANLAR.find((h) => profil.ad.endsWith(h.ad) || profil.ad.endsWith(t(h.ad))) ?? HAYVANLAR[0];
   return { ...profil, avatar: { tip: 'hayvan', ad: eslesen.dosya } };
 }

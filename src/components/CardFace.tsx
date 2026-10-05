@@ -3,6 +3,7 @@ import { CardVisual } from './CardVisual';
 import { seslendir } from '../speech';
 import { Card as CardShell, HookChip, Ikon, SpeakButton, Yonerge } from './ui';
 import type { Card } from '../types';
+import { t } from '../dil';
 
 /**
  * YENI KELIME — tanisma yuzu.
@@ -37,7 +38,7 @@ export function WriteFace({ card, hookRevealed }: { card: Card; hookRevealed: bo
   return (
     <CardShell className="w-full">
       <div className="flex flex-col items-center gap-3 py-8">
-        <Yonerge>İngilizcesi ne?</Yonerge>
+        <Yonerge>{t('İngilizcesi ne?')}</Yonerge>
         <p className="text-[2.5rem] leading-none font-extrabold text-center">{card.tr}</p>
         {hookRevealed && (
           <span className="pop">
@@ -65,17 +66,17 @@ export function ListenFace({ card, hookRevealed }: { card: Card; hookRevealed: b
   return (
     <CardShell className="w-full">
       <div className="flex flex-col items-center gap-4 py-10">
-        <Yonerge>Ne duyuyorsun?</Yonerge>
+        <Yonerge>{t('Ne duyuyorsun?')}</Yonerge>
         <button
           type="button"
-          aria-label="Tekrar dinle"
+          aria-label={t('Tekrar dinle')}
           onClick={() => seslendir(card.en)}
           className="h-32 w-32 grid place-items-center rounded-full bg-brand shadow-[0_14px_30px_-12px_rgba(79,146,246,0.95)] transition-all active:scale-90"
         >
           {/* Mavi zemin: ikon ters (krem) varyantta, yoksa lacivert kayboluyor */}
           <Ikon ad="ses" ters className="h-16 w-16" />
         </button>
-        <span className="text-base font-semibold text-ink-soft">Dokun, tekrar dinle</span>
+        <span className="text-base font-semibold text-ink-soft">{t('Dokun, tekrar dinle')}</span>
         {hookRevealed && (
           <span className="pop">
             <HookChip>{card.hook}</HookChip>

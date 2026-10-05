@@ -3,6 +3,7 @@ import type { Uye } from '../uyelik';
 import { Ikon, Logo } from './ui';
 import type { IkonAd } from '../icons';
 import type { Profil } from '../types';
+import { t } from '../dil';
 
 export type Tab = 'ogren' | 'egzersiz' | 'ilerleme' | 'ayarlar';
 
@@ -15,10 +16,10 @@ export type Tab = 'ogren' | 'egzersiz' | 'ilerleme' | 'ayarlar';
  * tutulmuyor, cunku ikisi ayrisirsa sessizce yanlis ikon cikar.
  */
 const TABS: { id: Tab & IkonAd; ad: string; renk: string }[] = [
-  { id: 'ogren', ad: 'Öğren', renk: 'bg-brand' },
-  { id: 'egzersiz', ad: 'Egzersiz', renk: 'bg-grow' },
-  { id: 'ilerleme', ad: 'İlerleme', renk: 'bg-ink' },
-  { id: 'ayarlar', ad: 'Ayarlar', renk: 'bg-ink-soft' },
+  { id: 'ogren', ad: t('Öğren'), renk: 'bg-brand' },
+  { id: 'egzersiz', ad: t('Egzersiz'), renk: 'bg-grow' },
+  { id: 'ilerleme', ad: t('İlerleme'), renk: 'bg-ink' },
+  { id: 'ayarlar', ad: t('Ayarlar'), renk: 'bg-ink-soft' },
 ];
 
 /**
@@ -68,14 +69,14 @@ export function TabBar({
       {/* --- Telefon: alttaki hap --- */}
       <nav className="fixed inset-x-0 bottom-0 z-10 px-4 pb-[max(1rem,env(safe-area-inset-bottom))] lg:hidden">
         <div className="mx-auto flex max-w-md gap-1 rounded-full bg-white/90 p-1.5 shadow-[var(--shadow-lift)] backdrop-blur">
-          {TABS.map((t) => {
-            const secili = active === t.id;
+          {TABS.map((sekme) => {
+            const secili = active === sekme.id;
             return (
               <button
-                key={t.id}
-                onClick={() => onChange(t.id)}
+                key={sekme.id}
+                onClick={() => onChange(sekme.id)}
                 className={`flex-1 rounded-full py-2 text-[11px] font-bold transition-all active:scale-95 ${
-                  secili ? `${t.renk} text-white` : 'text-ink-faint'
+                  secili ? `${sekme.renk} text-white` : 'text-ink-faint'
                 }`}
               >
                 {/*
@@ -84,8 +85,8 @@ export function TabBar({
                   Secili olmayan sekmenin YAZISI soluyor ama ikonu tam
                   renginde duruyor: dort ikon her zaman okunur kalsin diye.
                 */}
-                <Ikon ad={t.id} ters={secili} className="mx-auto mb-0.5 h-6 w-6" />
-                {t.ad}
+                <Ikon ad={sekme.id} ters={secili} className="mx-auto mb-0.5 h-6 w-6" />
+                {t(sekme.ad)}
               </button>
             );
           })}
@@ -103,7 +104,11 @@ export function TabBar({
             alttaki yazi harf araligiyla ustekinin genisligine oturtuldu.
             Ayri ayri duran iki satir marka degil, etiket gibi goruluyordu.
           */}
-          <span className="leading-none">
+          {/*
+            Marka adi CEVRILMIYOR ve `lang="tr"`: sayfa Ingilizceyken CSS
+            `uppercase` Turkce i kuralini bilmiyor ve "İNGILIZCE" yaziyordu.
+          */}
+          <span className="leading-none" lang="tr">
             <span className="word block text-base font-extrabold leading-none text-ink">
               Hafızada
             </span>
@@ -114,22 +119,22 @@ export function TabBar({
         </span>
 
         <div className="flex flex-col">
-          {TABS.map((t) => {
-            const secili = active === t.id;
+          {TABS.map((sekme) => {
+            const secili = active === sekme.id;
             return (
               <button
-                key={t.id}
-                onClick={() => onChange(t.id)}
+                key={sekme.id}
+                onClick={() => onChange(sekme.id)}
                 aria-current={secili ? 'page' : undefined}
                 className={`relative flex items-center gap-3 px-5 py-3 text-left text-sm font-bold transition-colors ${
                   secili ? 'bg-sunken text-ink' : 'text-ink-soft hover:bg-sunken/60'
                 }`}
               >
-                <Ikon ad={t.id} className="h-6 w-6 shrink-0" />
-                {t.ad}
+                <Ikon ad={sekme.id} className="h-6 w-6 shrink-0" />
+                {t(sekme.ad)}
                 {secili && (
                   <span
-                    className={`absolute inset-y-1.5 right-0 w-1.5 rounded-l ${t.renk}`}
+                    className={`absolute inset-y-1.5 right-0 w-1.5 rounded-l ${sekme.renk}`}
                     aria-hidden
                   />
                 )}
@@ -153,7 +158,7 @@ export function TabBar({
           <button
             onClick={() => (onHesap && (uye || girisVar) ? onHesap() : onChange('ayarlar'))}
             className="mt-auto mx-3 flex items-center gap-2.5 rounded-2xl border border-line bg-paper px-3 py-2.5 text-left transition hover:bg-sunken active:scale-[0.98]"
-            aria-label={uye ? 'Hesap menüsü' : 'Giriş yap'}
+            aria-label={uye ? t('Hesap menüsü') : t('Giriş yap')}
           >
             <Avatar avatar={profil.avatar} cerceve={profil.cerceve} boyut="sm" />
             <span className="min-w-0 flex-1">
@@ -164,12 +169,12 @@ export function TabBar({
               */}
               {uye ? (
                 <span className="block truncate text-xs font-semibold text-ink-faint">
-                  {uye.eposta ?? 'Hesabım'}
+                  {uye.eposta ?? t('Hesabım')}
                 </span>
               ) : girisVar ? (
-                <span className="block text-xs font-bold text-brand-deep">Giriş yap ›</span>
+                <span className="block text-xs font-bold text-brand-deep">{t('Giriş yap ›')}</span>
               ) : (
-                <span className="block text-xs font-bold text-ink-faint">Ayarlar</span>
+                <span className="block text-xs font-bold text-ink-faint">{t('Ayarlar')}</span>
               )}
             </span>
           </button>

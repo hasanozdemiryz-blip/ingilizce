@@ -15,6 +15,7 @@ import {
   type Uye,
 } from '../uyelik';
 import type { Profil } from '../types';
+import { t } from '../dil';
 
 /**
  * "GIRIS YAPILDI" — her giristen sonra bir kez.
@@ -67,7 +68,7 @@ export function GirisYapildi({
       });
       setKaydediliyor(false);
       if (!sonuc.oldu) {
-        setHata(sonuc.hata ?? 'Kaydedilemedi.');
+        setHata(sonuc.hata ?? t('Kaydedilemedi.'));
         return;
       }
     }
@@ -81,14 +82,14 @@ export function GirisYapildi({
       className="fixed inset-0 z-30 flex items-end justify-center bg-ink/45 px-5 pb-8 backdrop-blur-sm sm:items-center sm:pb-0"
       role="dialog"
       aria-modal="true"
-      aria-label="Giriş yapıldı"
+      aria-label={t('Giriş yapıldı')}
     >
       <Card className="rise w-full max-w-md p-6 max-h-[calc(100dvh-4rem)] overflow-y-auto">
         <div className="flex flex-col items-center text-center">
           <div className="pop grid h-16 w-16 place-items-center rounded-full bg-grow text-3xl font-extrabold text-white shadow-[0_10px_24px_-10px_rgba(43,196,138,0.9)]">
             ✓
           </div>
-          <p className="word mt-3 text-2xl font-extrabold">Giriş yapıldı</p>
+          <p className="word mt-3 text-2xl font-extrabold">{t('Giriş yapıldı')}</p>
           <div className="mt-3 flex items-center gap-2.5">
             {profil && <Avatar avatar={profil.avatar} cerceve={profil.cerceve} boyut="sm" />}
             <div className="min-w-0 text-left">
@@ -98,17 +99,16 @@ export function GirisYapildi({
             </div>
           </div>
           <p className="mt-4 text-sm text-ink-soft">
-            İlerlemen hesabına bağlandı. Hangi cihazdan girersen gir kaldığın yerden devam
-            edersin.
+            {t('İlerlemen hesabına bağlandı. Hangi cihazdan girersen gir kaldığın yerden devam edersin.')}
           </p>
         </div>
 
         <div className="mt-5 border-t border-line pt-4">
           <p className="text-sm font-bold text-ink">
-            İstersen kendini tanıt <span className="font-semibold text-ink-faint">· isteğe bağlı</span>
+            {t('İstersen kendini tanıt')}{' '}<span className="font-semibold text-ink-faint">{t('· isteğe bağlı')}</span>
           </p>
           <label className="mt-3 block">
-            <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">Adın</span>
+            <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">{t('Adın')}</span>
             <input
               type="text"
               autoComplete="given-name"
@@ -119,18 +119,18 @@ export function GirisYapildi({
             />
           </label>
           <Secenekler
-            baslik="İngilizcen ne durumda?"
+            baslik={t('İngilizcen ne durumda?')}
             secenekler={SEVIYELER}
             secili={seviye}
             sec={setSeviye}
           />
-          <Secenekler baslik="Niçin öğreniyorsun?" secenekler={HEDEFLER} secili={hedef} sec={setHedef} />
+          <Secenekler baslik={t('Niçin öğreniyorsun?')} secenekler={HEDEFLER} secili={hedef} sec={setHedef} />
         </div>
 
         {hata && <p className="mt-3 text-sm text-[#c2417f]">{hata}</p>}
         <div className="mt-5">
           <Button variant="spark" disabled={kaydediliyor} onClick={() => void devam()}>
-            {kaydediliyor ? 'Kaydediliyor…' : 'Devam'}
+            {kaydediliyor ? t('Kaydediliyor…') : t('Devam')}
           </Button>
         </div>
       </Card>

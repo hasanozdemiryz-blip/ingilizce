@@ -1,6 +1,7 @@
 import { CardVisual } from './CardVisual';
 import { Card as CardShell, HookChip, Yonerge } from './ui';
 import type { Card } from '../types';
+import { t } from '../dil';
 
 /**
  * COKTAN SECMELI — merdivenin 2. ve 3. basamagi.
@@ -34,7 +35,7 @@ export function Choice({
       <CardShell className="w-full">
         {!ters && <CardVisual card={card} size="compact" />}
         <div className={`flex flex-col items-center gap-3 ${ters ? 'py-6' : 'pt-5'}`}>
-          <Yonerge>{ters ? 'İngilizcesi hangisi?' : 'Türkçesi hangisi?'}</Yonerge>
+          <Yonerge>{ters ? t('İngilizcesi hangisi?') : t('Türkçesi hangisi?')}</Yonerge>
           <p className={`text-[2.25rem] leading-none font-extrabold ${ters ? '' : 'word'}`}>
             {sorulan}
           </p>

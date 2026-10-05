@@ -1,5 +1,6 @@
 import { Button, Ikon, Screen } from './ui';
 import type { IkonAd } from '../icons';
+import { t } from '../dil';
 
 /**
  * GECIS ANI — bolum ve bolge araligi.
@@ -68,7 +69,7 @@ export function Gecis({
 
       <div className="shrink-0">
         <Button variant="brand" onClick={onDevam}>
-          Devam
+          {t('Devam')}
         </Button>
       </div>
     </Screen>

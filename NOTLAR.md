@@ -2119,6 +2119,21 @@ Karar: blog + sıklık sırasına göre ilk **20** kelime (`VITRIN`). Blogdaki
 yayında olmayan kelime bağlantıları üretimde düz yazıya dönüyor. Search
 Console verisi gelince (4–6 hafta) genişletme kararı verilecek.
 
+**İngilizce arayüz.** `src/dil.ts` + `src/dil/en.ts`: anahtar Türkçe
+metnin kendisi (`t('Devam')`), sözlükte ~400 karşılık. Kart içeriği
+(Türkçe anlam, Türkçe kanca) çevrilmiyor — yöntem Türkçe konuşana göre.
+Dil değişince uygulama yeniden açılıyor (modül düzeyindeki listeler bir
+kez çevriliyor). `dil.test.ts` üç şeyi yakalıyor: sözlükte olmayan
+anahtar, `t()` dışında kalan Türkçe metin, Türkçe harfi olmayan ama
+çevrilmemiş metin ("Atla" böyle kaçmıştı) ve yer tutucu uyumsuzluğu.
+
+> Varsayılan **Türkçe**, tarayıcı diline göre otomatik seçim yok:
+> tarayıcısı İngilizce olan Türk kullanıcılar güncellemeyle bir anda
+> İngilizce arayüze düşerdi. Seçim karşılama ekranında ve Ayarlar'da.
+
+> Sayfa `lang="en"` iken CSS `uppercase` "İngilizce"yi "İNGILIZCE"
+> yapıyor; marka kilidi `lang="tr"` taşıyor.
+
 **İletişim formu bekliyor.** `iletisim` tablosu + edge function yazıldı;
 Supabase CLI bu makinede girişli değil, kurulum kullanıcıyla en sona kaldı.
 O zamana kadar formun yerinde e-posta bağlantısı var (`ILETISIM_HAZIR`).

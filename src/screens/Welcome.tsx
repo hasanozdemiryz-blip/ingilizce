@@ -5,6 +5,8 @@ import { Button, Card, HookChip, Ikon, Screen } from '../components/ui';
 import { CARDS, LIMIT_CHOICES, LIMIT_DEFAULT, SHOWCASE_CARD } from '../content';
 import { setState } from '../db';
 import { secenekler } from '../exercise';
+import { t } from '../dil';
+import { DilSecici } from '../components/DilSecici';
 
 type Adim = 'vaat' | 'dene' | 'hedef';
 
@@ -22,12 +24,14 @@ type Adim = 'vaat' | 'dene' | 'hedef';
 /** Deneme adimlarinin sag ustundeki "Atla". Hedef secimi atlanamaz. */
 function Atla({ onClick }: { onClick: () => void }) {
   return (
-    <div className="flex h-12 shrink-0 items-center justify-end">
+    <div className="flex h-12 shrink-0 items-center justify-between">
+      {/* Ilk ekranda dil: Ingilizce tarayicili Turk kullanici Turkceye donebilsin */}
+      <DilSecici kucuk />
       <button
         onClick={onClick}
         className="rounded-full px-4 py-2 text-sm font-bold text-ink-soft transition hover:bg-sunken active:scale-95"
       >
-        Atla
+        {t('Atla')}
       </button>
     </div>
   );
@@ -69,9 +73,9 @@ export function Welcome({
         <Atla onClick={atla} />
         <div className="flex-1 flex flex-col justify-center gap-6 py-6">
           <div className="rise text-center">
-            <h1 className="word text-3xl font-extrabold leading-tight">Ezberlemeyeceksin.</h1>
+            <h1 className="word text-3xl font-extrabold leading-tight">{t('Ezberlemeyeceksin.')}</h1>
             <p className="text-ink-soft mt-2 leading-relaxed max-w-[30ch] mx-auto">
-              Her İngilizce kelimeyi benzer sesli bir Türkçe kelimeye bağlayacaksın.
+              {t('Her İngilizce kelimeyi benzer sesli bir Türkçe kelimeye bağlayacaksın.')}
             </p>
           </div>
 
@@ -92,7 +96,7 @@ export function Welcome({
 
         <div className="shrink-0 rise delay-2">
           <Button variant="brand" onClick={() => setAdim('dene')}>
-            Devam
+            {t('Devam')}
           </Button>
         </div>
       </Screen>
@@ -110,9 +114,9 @@ export function Welcome({
           {secilen === null ? (
             <>
               <div className="rise text-center">
-                <p className="text-base font-semibold text-ink-soft">Kart kayboldu. Sende ne kaldı?</p>
+                <p className="text-base font-semibold text-ink-soft">{t('Kart kayboldu. Sende ne kaldı?')}</p>
                 <p className="word text-[3rem] leading-none font-extrabold mt-3">{card.en}</p>
-                <p className="text-lg font-extrabold text-ink-soft mt-3">ne demekti?</p>
+                <p className="text-lg font-extrabold text-ink-soft mt-3">{t('ne demekti?')}</p>
               </div>
 
               <div className="rise delay-1 grid gap-2.5">
@@ -140,12 +144,12 @@ export function Welcome({
                 <Ikon ad="ogren" className="pop h-16 w-16 mx-auto mb-4" />
               )}
               <h1 className="word text-3xl font-extrabold leading-tight">
-                {dogru ? 'Hiç ezberlemedin.' : 'Olsun.'}
+                {dogru ? t('Hiç ezberlemedin.') : t('Olsun.')}
               </h1>
               <p className="text-ink-soft mt-3 leading-relaxed max-w-[28ch] mx-auto">
                 {dogru
-                  ? `Kanca tuttu: ${card.en} ≈ ${card.hook}. Yöntem bu kadar.`
-                  : `Kanca birkaç tekrarda oturuyor: ${card.en} ≈ ${card.hook}. Acelesi yok.`}
+                  ? t('Kanca tuttu: {en} ≈ {hook}. Yöntem bu kadar.', { en: card.en, hook: card.hook })
+                  : t('Kanca birkaç tekrarda oturuyor: {en} ≈ {hook}. Acelesi yok.', { en: card.en, hook: card.hook })}
               </p>
               <div className="mt-6 inline-flex">
                 <HookChip big>
@@ -159,7 +163,7 @@ export function Welcome({
         {secilen !== null && (
           <div className="shrink-0 rise delay-1">
             <Button variant="brand" onClick={() => setAdim('hedef')}>
-              Devam
+              {t('Devam')}
             </Button>
           </div>
         )}
@@ -172,9 +176,9 @@ export function Welcome({
     <Screen yanMenusuz>
       <div className="flex-1 flex flex-col justify-center gap-6 py-6">
         <div className="rise text-center">
-          <h1 className="word text-3xl font-extrabold leading-tight">Günde kaç kelime?</h1>
+          <h1 className="word text-3xl font-extrabold leading-tight">{t('Günde kaç kelime?')}</h1>
           <p className="text-ink-soft mt-2 leading-relaxed max-w-[30ch] mx-auto">
-            Her gün bu kadar yeni kelime gelir.
+            {t('Her gün bu kadar yeni kelime gelir.')}
           </p>
         </div>
 
@@ -192,14 +196,14 @@ export function Welcome({
                 }`}
               >
                 <span className="word block text-4xl font-extrabold tabular-nums">{n}</span>
-                <span className="block text-xs mt-1 opacity-80">kelime</span>
+                <span className="block text-xs mt-1 opacity-80">{t('kelime')}</span>
                 {n === LIMIT_DEFAULT && (
                   <span
                     className={`block text-[10px] font-bold mt-1.5 ${
                       secili ? 'text-white/85' : 'text-brand-deep'
                     }`}
                   >
-                    önerilen
+                    {t('önerilen')}
                   </span>
                 )}
               </button>
@@ -208,14 +212,14 @@ export function Welcome({
         </div>
 
         <p className="rise delay-2 text-center text-sm text-ink-faint">
-          Sonra Ayarlar'dan değiştirebilirsin.
+          {t('Sonra Ayarlar\'dan değiştirebilirsin.')}
         </p>
       </div>
 
       <div className="shrink-0 rise delay-3">
         {/* "Baslayalim" ders hemen basliyor demekti; artik ana ekrana dusuyor */}
         <Button variant="brand" onClick={() => void bitir()}>
-          Hazırım
+          {t('Hazırım')}
         </Button>
       </div>
     </Screen>

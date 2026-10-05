@@ -20,6 +20,7 @@ import {
   todaysCards,
 } from '../scheduler';
 import type { Progress, Step } from '../types';
+import { t } from '../dil';
 
 /**
  * Otomatik kapsamlarda parti boyutu.
@@ -47,33 +48,33 @@ const SON_DERS = { id: 'son', ikon: 'bugun' } as const;
 const KAPSAMLAR = [
   {
     id: 'onceki',
-    ad: 'Önceki ders',
+    ad: t('Önceki ders'),
     ikon: 'onceki',
-    alt: 'bir önceki dersin kelimeleri',
+    alt: t('bir önceki dersin kelimeleri'),
     secili: 'bg-ink text-white shadow-[var(--shadow-lift)]',
     zemin: 'bg-sunken',
   },
   {
     id: 'bekleyen',
-    ad: 'Bekleyen tekrarlar',
+    ad: t('Bekleyen tekrarlar'),
     ikon: 'bekleyen',
-    alt: `vadesi gelmiş ${PARTI}`,
+    alt: t('vadesi gelmiş {PARTI}', { PARTI }),
     secili: 'bg-grow text-white shadow-[0_8px_18px_-8px_rgba(43,196,138,0.85)]',
     zemin: 'bg-grow-soft',
   },
   {
     id: 'zor',
-    ad: 'Zorlandıklarım',
+    ad: t('Zorlandıklarım'),
     ikon: 'zor',
-    alt: `en çok düştüğüm ${PARTI}`,
+    alt: t('en çok düştüğüm {PARTI}', { PARTI }),
     secili: 'bg-blush text-white shadow-[0_8px_18px_-8px_rgba(247,154,201,0.95)]',
     zemin: 'bg-blush-soft',
   },
   {
     id: 'eski',
-    ad: 'Eski kelimeler',
+    ad: t('Eski kelimeler'),
     ikon: 'eski',
-    alt: `${ESKI_GUN}+ günlük, rastgele ${PARTI}`,
+    alt: t('{ESKI_GUN}+ günlük, rastgele {PARTI}', { ESKI_GUN, PARTI }),
     secili: 'bg-brand-deep text-white shadow-[0_8px_18px_-8px_rgba(47,111,208,0.9)]',
     zemin: 'bg-brand-soft',
   },
@@ -94,7 +95,7 @@ const ADIM_RENK: Record<Step, string> = {
 };
 
 /** Elle secim otomatik kapsamlarla ayni eksende degil; kendi satirinda. */
-const SEC = { id: 'sec', ad: 'Seç', ikon: 'sec', alt: 'kendin işaretle, sınır yok' } as const;
+const SEC = { id: 'sec', ad: t('Seç'), ikon: 'sec', alt: t('kendin işaretle, sınır yok') } as const;
 
 type Kapsam = typeof SON_DERS.id | (typeof KAPSAMLAR)[number]['id'] | typeof SEC.id;
 
@@ -260,9 +261,9 @@ export function Practice({
       <Screen yanMenusuz>
         <TopBar
           left={<BackButton onClick={() => setSecimEkrani(false)} />}
-          right={<span className="tabular-nums">{secilenIdler.size} seçili</span>}
+          right={<span className="tabular-nums">{t('{n} seçili', { n: secilenIdler.size })}</span>}
         />
-        <p className="word text-lg font-bold shrink-0 mb-3">Kelime seç</p>
+        <p className="word text-lg font-bold shrink-0 mb-3">{t('Kelime seç')}</p>
 
         <div className="flex-1 flex flex-col gap-3 pb-6">
           <div className="relative shrink-0">
@@ -271,16 +272,16 @@ export function Practice({
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder="Kelime, anlam veya kanca ara…"
+              placeholder={t('Kelime, anlam veya kanca ara…')}
               className="w-full rounded-full bg-white pl-11 pr-5 py-3.5 text-sm shadow-[var(--shadow-soft)] outline-none placeholder:text-ink-faint focus:ring-2 focus:ring-brand"
             />
           </div>
 
           <div className="flex gap-2 shrink-0">
             <Kucuk onClick={() => setSecilenIdler(new Set(liste.map((p) => p.cardId)))}>
-              Görünenleri seç
+              {t('Görünenleri seç')}
             </Kucuk>
-            <Kucuk onClick={() => setSecilenIdler(new Set())}>Temizle</Kucuk>
+            <Kucuk onClick={() => setSecilenIdler(new Set())}>{t('Temizle')}</Kucuk>
           </div>
 
           <div className="flex flex-col gap-1.5">
@@ -336,7 +337,7 @@ export function Practice({
           <div className="fixed inset-x-0 bottom-0 px-5 pb-[max(1rem,env(safe-area-inset-bottom))]">
             <div className="mx-auto max-w-md">
               <Button variant="brand" onClick={() => setSecimEkrani(false)}>
-                {secilenIdler.size} kelime seçildi · Tamam
+                {t('{n} kelime seçildi · Tamam', { n: secilenIdler.size })}
               </Button>
             </div>
           </div>
@@ -364,7 +365,7 @@ export function Practice({
           }
         />
         <p className="text-center text-xs font-bold uppercase tracking-[0.14em] text-ink-faint">
-          {adim === 'ders' ? 'Ders tekrarı · kartlar' : 'Kartları gözden geçir'}
+          {adim === 'ders' ? t('Ders tekrarı · kartlar') : t('Kartları gözden geçir')}
         </p>
         <div key={card.id} className="rise flex-1 flex flex-col justify-center py-6">
           <LearnFace card={card} />
@@ -379,7 +380,7 @@ export function Practice({
               else durdur();
             }}
           >
-            Devam
+            {t('Devam')}
           </Button>
         </div>
       </Screen>
@@ -391,7 +392,7 @@ export function Practice({
       <Screen yanMenusuz>
         <TopBar left={<BackButton onClick={() => durdur()} />} />
         <p className="text-center text-xs font-bold uppercase tracking-[0.14em] text-ink-faint">
-          {adim === 'ders' ? 'Ders tekrarı · alıştırma' : 'Egzersiz'}
+          {adim === 'ders' ? t('Ders tekrarı · alıştırma') : t('Egzersiz')}
         </p>
         <Runner
           /*
@@ -430,8 +431,8 @@ export function Practice({
   return (
     <Screen yanMenusuz>
       <header className="flex items-center justify-between h-14 shrink-0">
-        <span className="word text-lg font-bold">Egzersiz</span>
-        <span className="text-sm text-ink-soft tabular-nums">{ogrenilenler.length} kelime</span>
+        <span className="word text-lg font-bold">{t('Egzersiz')}</span>
+        <span className="text-sm text-ink-soft tabular-nums">{t('{n} kelime', { n: ogrenilenler.length })}</span>
       </header>
 
       <div className={`flex-1 flex flex-col gap-3 ${TAB_SPACE}`}>
@@ -441,12 +442,12 @@ export function Practice({
         */}
         {ozet && ozet.toplam > 0 && (
           <Card className="rise text-center">
-            <p className="text-sm text-ink-soft">Egzersiz bitti</p>
+            <p className="text-sm text-ink-soft">{t('Egzersiz bitti')}</p>
             <p className="word text-4xl font-extrabold tabular-nums leading-none mt-1">
               %{Math.round((ozet.dogru / ozet.toplam) * 100)}
             </p>
             <p className="text-sm text-ink-soft mt-1.5">
-              {ozet.dogru} doğru · {ozet.toplam - ozet.dogru} yanlış
+              {t('{dogru} doğru · {yanlis} yanlış', { dogru: ozet.dogru, yanlis: ozet.toplam - ozet.dogru })}
             </p>
             <div className="h-2.5 w-full rounded-full bg-sunken overflow-hidden mt-3">
               <div
@@ -458,7 +459,7 @@ export function Practice({
               onClick={() => setOzet(null)}
               className="mt-3 rounded-full bg-sunken px-4 py-2 text-sm font-bold text-ink transition-all active:scale-95"
             >
-              Kapat
+              {t('Kapat')}
             </button>
           </Card>
         )}
@@ -466,9 +467,9 @@ export function Practice({
         {ogrenilenler.length === 0 ? (
           <Card className="rise text-center py-10">
             <Ikon ad="ogren" className="h-14 w-14 mx-auto mb-3" />
-            <p className="word text-lg font-bold">Henüz kelime yok</p>
+            <p className="word text-lg font-bold">{t('Henüz kelime yok')}</p>
             <p className="text-sm text-ink-soft mt-1.5">
-              Önce birkaç kelime öğren, sonra burada istediğin kadar çalış.
+              {t('Önce birkaç kelime öğren, sonra burada istediğin kadar çalış.')}
             </p>
           </Card>
         ) : (
@@ -503,7 +504,7 @@ export function Practice({
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="word block text-lg font-extrabold leading-tight">
-                      Dersi tekrar et
+                      {t('Dersi tekrar et')}
                     </span>
                     <span
                       className={`block text-xs mt-1 ${
@@ -511,8 +512,8 @@ export function Practice({
                       }`}
                     >
                       {bugunDersKartlari.length > 0
-                        ? `bugünün ${bugunDersKartlari.length} kelimesi`
-                        : 'bugün henüz ders yapmadın'}
+                        ? t('bugünün {n} kelimesi', { n: bugunDersKartlari.length })
+                        : t('bugün henüz ders yapmadın')}
                     </span>
                   </span>
                   {bugunDersKartlari.length > 0 && (
@@ -523,7 +524,7 @@ export function Practice({
             </section>
 
             <section>
-              <h2 className="text-sm font-semibold text-ink-soft mb-2">Hangi kelimeler</h2>
+              <h2 className="text-sm font-semibold text-ink-soft mb-2">{t('Hangi kelimeler')}</h2>
 
               {/* En son ders tam satir: gunluk dersin pekistirmesi en sik istenen sey */}
               <button
@@ -545,12 +546,12 @@ export function Practice({
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="block text-sm font-bold">
-                      {bugunDers ? 'Bugün' : 'Son ders'}
+                      {bugunDers ? t('Bugün') : t('Son ders')}
                     </span>
                     <span
                       className={`block text-[11px] mt-0.5 ${kapsam === 'son' ? 'text-white/75' : 'text-ink-faint'}`}
                     >
-                      {bugunDers ? 'bugün öğrendiklerim' : 'en son dersin kelimeleri'}
+                      {bugunDers ? t('bugün öğrendiklerim') : 'en son dersin kelimeleri'}
                     </span>
                   </span>
                   <span className="text-sm font-bold tabular-nums shrink-0">{sayilar.son}</span>
@@ -618,7 +619,7 @@ export function Practice({
                       className={`block text-[11px] mt-0.5 ${kapsam === 'sec' ? 'text-white/75' : 'text-ink-faint'}`}
                     >
                       {kapsam === 'sec' && secilenIdler.size > 0
-                        ? `${secilenIdler.size} kelime seçili · değiştir`
+                        ? t('{size} kelime seçili · değiştir', { size: secilenIdler.size })
                         : SEC.alt}
                     </span>
                   </span>
@@ -627,13 +628,13 @@ export function Practice({
             </section>
 
             <section className="mt-1">
-              <h2 className="text-sm font-semibold text-ink-soft mb-2">Hangi egzersiz</h2>
+              <h2 className="text-sm font-semibold text-ink-soft mb-2">{t('Hangi egzersiz')}</h2>
 
               <div className="grid grid-cols-2 gap-2">
                 <EgzersizKare
                   ikon="karisik"
-                  ad="Karışık"
-                  alt="her kelime kendi basamağında"
+                  ad={t('Karışık')}
+                  alt={t('her kelime kendi basamağında')}
                   zemin="bg-sunken"
                   secili={adim === 'karisik'}
                   onClick={() => setAdim('karisik')}
@@ -641,7 +642,7 @@ export function Practice({
                 <EgzersizKare
                   ikon="kartlar"
                   ad="Kartlar"
-                  alt="görsel + kanca + cümle"
+                  alt={t('görsel + kanca + cümle')}
                   zemin="bg-sunken"
                   secili={adim === 'kart'}
                   onClick={() => {
@@ -674,10 +675,10 @@ export function Practice({
               }}
             >
               {partiSayisi > 0
-                ? `Başla (${partiSayisi} kelime)`
+                ? t('Başla ({partiSayisi} kelime)', { partiSayisi })
                 : kapsam === 'sec'
-                  ? 'Önce kelime seç'
-                  : 'Bu seçimde kelime yok'}
+                  ? t('Önce kelime seç')
+                  : t('Bu seçimde kelime yok')}
             </Button>
           </>
         )}

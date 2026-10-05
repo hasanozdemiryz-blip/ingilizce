@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Logo } from '../components/ui';
 import { CARDS } from '../content';
+import { t } from '../dil';
 
 /**
  * ACILIS EKRANI.
@@ -28,8 +29,8 @@ export function Splash() {
   const [gorundu, setGorundu] = useState(false);
 
   useEffect(() => {
-    const t = setTimeout(() => setGorundu(true), 60);
-    return () => clearTimeout(t);
+    const zamanlayici = setTimeout(() => setGorundu(true), 60);
+    return () => clearTimeout(zamanlayici);
   }, []);
 
   return (
@@ -40,7 +41,7 @@ export function Splash() {
         }`}
       >
         <Logo className="h-20" />
-        <p className="word text-2xl font-extrabold text-ink">Hafızada İngilizce</p>
+        <p className="word text-2xl font-extrabold text-ink">{t('Hafızada İngilizce')}</p>
       </div>
 
       <p

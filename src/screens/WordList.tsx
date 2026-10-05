@@ -6,6 +6,7 @@ import { bilinenGeriAl } from '../db';
 import { shareHookBoard } from '../share';
 import { Button } from '../components/ui';
 import type { Progress } from '../types';
+import { t } from '../dil';
 
 /**
  * Uc bolum, daha fazlasi degil.
@@ -16,9 +17,9 @@ import type { Progress } from '../types';
  * "Neler yapabildin" cubuklari zaten anlatiyor. Uc sekme kalkti.
  */
 const FILTRELER = [
-  { id: 'ogrenilen', ad: 'Öğrendiklerim' },
-  { id: 'havuz', ad: 'Tüm set' },
-  { id: 'bilinen', ad: 'Bildiklerim' },
+  { id: 'ogrenilen', ad: t('Öğrendiklerim') },
+  { id: 'havuz', ad: t('Tüm set') },
+  { id: 'bilinen', ad: t('Bildiklerim') },
 ] as const;
 type Filtre = (typeof FILTRELER)[number]['id'];
 
@@ -63,9 +64,9 @@ export function WordList({ progress, onExit }: { progress: Progress[]; onExit: (
     <Screen>
       <TopBar
         left={<BackButton onClick={onExit} />}
-        right={<span className="tabular-nums">{ogrenilenler.length} kelime</span>}
+        right={<span className="tabular-nums">{t('{n} kelime', { n: ogrenilenler.length })}</span>}
       />
-      <p className="word text-lg font-bold shrink-0 mb-3">Kelimeler</p>
+      <p className="word text-lg font-bold shrink-0 mb-3">{t('Kelimeler')}</p>
 
       <div className="flex-1 flex flex-col gap-3 pb-6">
         <div className="relative shrink-0">
@@ -74,7 +75,7 @@ export function WordList({ progress, onExit }: { progress: Progress[]; onExit: (
           <input
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Kelime, anlam veya kanca ara…"
+            placeholder={t('Kelime, anlam veya kanca ara…')}
             className="w-full rounded-full bg-white pl-11 pr-5 py-3.5 text-sm shadow-[var(--shadow-soft)] outline-none placeholder:text-ink-faint focus:ring-2 focus:ring-brand"
           />
         </div>
@@ -95,7 +96,7 @@ export function WordList({ progress, onExit }: { progress: Progress[]; onExit: (
 
         {filtre === 'bilinen' && (
           <p className="text-sm text-ink-soft px-1">
-            “Bunu biliyorum” dediğin kelimeler. İstersen derslere geri ekleyebilirsin.
+            {t('“Bunu biliyorum” dediğin kelimeler. İstersen derslere geri ekleyebilirsin.')}
           </p>
         )}
 
@@ -108,7 +109,7 @@ export function WordList({ progress, onExit }: { progress: Progress[]; onExit: (
               )
             }
           >
-            Kanca panosunu paylaş
+            {t('Kanca panosunu paylaş')}
           </Button>
         )}
 
@@ -148,12 +149,12 @@ export function WordList({ progress, onExit }: { progress: Progress[]; onExit: (
                     onClick={() => void bilinenGeriAl(c.id)}
                     className="shrink-0 rounded-full bg-sunken px-3 py-1.5 text-xs font-bold text-ink transition-all active:scale-95"
                   >
-                    Geri ekle
+                    {t('Geri ekle')}
                   </button>
                 )}
                 {ogrenildi && <SpeakButton word={c.en} size="small" />}
                 <span
-                  title={ogrenildi ? ADIM[p!.step].ad : 'Henüz öğrenilmedi'}
+                  title={ogrenildi ? ADIM[p!.step].ad : t('Henüz öğrenilmedi')}
                   className="shrink-0 text-[10px] font-bold text-ink-faint tabular-nums"
                 >
                   {ogrenildi ? `${p!.step}/6` : '—'}
@@ -163,7 +164,7 @@ export function WordList({ progress, onExit }: { progress: Progress[]; onExit: (
           })}
           {liste.length === 0 && (
             <Card className="text-center py-8">
-              <p className="text-sm text-ink-faint">Eşleşen kelime yok.</p>
+              <p className="text-sm text-ink-faint">{t('Eşleşen kelime yok.')}</p>
             </Card>
           )}
         </div>

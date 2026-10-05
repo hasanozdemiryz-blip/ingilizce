@@ -10,12 +10,13 @@ import { CARDS, EN_HAVUZ } from '../content';
 import { ADIM, bloklaraBol, secenekler, shuffle, type Gorev } from '../exercise';
 import type { Step } from '../types';
 import { seslendir, seslendirmeyiDurdur, useTelaffuz } from '../speech';
+import { t } from '../dil';
 
 
 const GERI_BILDIRIM: Record<Judgement, { baslik: string; tone: string }> = {
-  dogru: { baslik: 'Doğru', tone: 'bg-grow text-white' },
-  yakin: { baslik: 'Neredeyse', tone: 'bg-spark text-ink' },
-  yanlis: { baslik: 'Yanlış', tone: 'bg-blush text-white' },
+  dogru: { baslik: t('Doğru'), tone: 'bg-grow text-white' },
+  yakin: { baslik: t('Neredeyse'), tone: 'bg-spark text-ink' },
+  yanlis: { baslik: t('Yanlış'), tone: 'bg-blush text-white' },
 };
 
 /**
@@ -208,7 +209,7 @@ export function Runner({
             </span>
             {verdict.typed && verdict.judgement !== 'dogru' && (
               <span className="text-sm text-ink-faint">
-                yazdığın: <span className="line-through">{verdict.typed}</span>
+                {t('yazdığın:')}{' '}<span className="line-through">{verdict.typed}</span>
               </span>
             )}
 
@@ -223,7 +224,7 @@ export function Runner({
             */}
             {verdict.judgement === 'dogru' && hookRevealed && (
               <span className="text-sm text-ink-faint">
-                kancayla bildin · bir dahakine kancasız dene
+                {t('kancayla bildin · bir dahakine kancasız dene')}
               </span>
             )}
           </div>
@@ -239,7 +240,7 @@ export function Runner({
                 onClick={() => setHookRevealed(true)}
                 className="px-4 py-2 text-sm font-bold text-brand-deep rounded-full bg-white/70 shadow-[var(--shadow-soft)] hover:bg-white transition"
               >
-                Kancayı göster
+                {t('Kancayı göster')}
               </button>
             )}
           </div>
@@ -247,7 +248,7 @@ export function Runner({
 
         {verdict && (
           <Button variant="brand" onClick={ilerle}>
-            Devam
+            {t('Devam')}
           </Button>
         )}
       </div>

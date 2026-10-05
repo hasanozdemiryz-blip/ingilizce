@@ -15,10 +15,12 @@ import { useTelaffuz } from '../speech';
 import { HEDEFLER, SEVIYELER, etiket, hesabiSil, useUyelik, uyelikVarMi } from '../uyelik';
 import { Giris } from '../components/Giris';
 import { CikisOnayi } from '../components/Cikis';
+import { DilSecici } from '../components/DilSecici';
 import { GirisRozeti } from '../components/HesapMenusu';
 import { DevPanel } from './DevPanel';
 import type { AppState } from '../types';
 import { dosyayiVer, paylasilabilir, telefonaKaydet, yedekAdi, yol } from '../dosya';
+import { t } from '../dil';
 
 /**
  * AYARLAR.
@@ -64,7 +66,7 @@ export function Settings({
     okutuyor — bankalardan GitHub'a kadar standart olan kalip bu.
   */
   const [silOnay, setSilOnay] = useState('');
-  const SIL_SOZ = 'SİL';
+  const SIL_SOZ = t('SİL');
 
   /*
     Cikista ve hesap silmede TANITIM SAYFASINA donuluyor, uygulama
@@ -87,7 +89,7 @@ export function Settings({
     setSilmeHata(null);
     const sonuc = await hesabiSil();
     if (!sonuc.oldu) {
-      setSilmeHata(sonuc.hata ?? 'Hesap silinemedi.');
+      setSilmeHata(sonuc.hata ?? t('Hesap silinemedi.'));
       setSilmeDurum('soruyor');
       return;
     }
@@ -142,7 +144,7 @@ export function Settings({
   return (
     <Screen>
       <header className="flex items-center h-14 shrink-0">
-        <span className="word text-lg font-bold">Ayarlar</span>
+        <span className="word text-lg font-bold">{t('Ayarlar')}</span>
       </header>
 
       <div className={`flex-1 flex flex-col gap-3 ${TAB_SPACE}`}>
@@ -168,7 +170,7 @@ export function Settings({
                   {state.profil.ad}
                 </span>
                 <span className="block text-sm text-ink-soft mt-0.5">
-                  {uye ? 'Resmini ve çerçeveni seç' : 'Adını ve resmini değiştir'}
+                  {uye ? t('Resmini ve çerçeveni seç') : t('Adını ve resmini değiştir')}
                 </span>
               </span>
               <span className="text-xl text-ink-faint shrink-0">›</span>
@@ -184,47 +186,54 @@ export function Settings({
         */}
         {uyelikVarMi() && (
           <Card className="rise">
-            <h2 className="text-sm font-bold text-ink-soft mb-1">Hesap</h2>
+            <h2 className="text-sm font-bold text-ink-soft mb-1">{t('Hesap')}</h2>
             {uye ? (
               <>
                 <GirisRozeti uye={uye} />
                 <p className="text-sm text-ink-soft mt-1 mb-1">
-                  <b className="break-all">{uye.eposta}</b> · İlerlemen hesabında saklanıyor.
+                  <b className="break-all">{uye.eposta}</b>{' '}{t('· İlerlemen hesabında saklanıyor.')}
                 </p>
                 <div className="mb-3">
-                  <Satir ad="Ad" deger={uye.bilgi?.ad ?? '—'} />
-                  <Satir ad="Seviye" deger={etiket(SEVIYELER, uye.bilgi?.seviye) ?? '—'} />
-                  <Satir ad="Hedef" deger={etiket(HEDEFLER, uye.bilgi?.hedef) ?? '—'} />
+                  <Satir ad={t('Ad')} deger={uye.bilgi?.ad ?? '—'} />
+                  <Satir ad={t('Seviye')} deger={etiket(SEVIYELER, uye.bilgi?.seviye) ?? '—'} />
+                  <Satir ad={t('Hedef')} deger={etiket(HEDEFLER, uye.bilgi?.hedef) ?? '—'} />
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  <Kucuk onClick={() => setBilgiAcik(true)}>Bilgilerimi düzenle</Kucuk>
+                  <Kucuk onClick={() => setBilgiAcik(true)}>{t('Bilgilerimi düzenle')}</Kucuk>
                   {/* Google ile girenin sifresi yok; dugme kafa karistiriyordu */}
                   {uye.saglayici !== 'google' && (
-                    <Kucuk onClick={() => setSifreAcik(true)}>Şifre değiştir</Kucuk>
+                    <Kucuk onClick={() => setSifreAcik(true)}>{t('Şifre değiştir')}</Kucuk>
                   )}
                   {/*
                     CIKIS BURADA, hesabin yaninda. Once sayfanin dibinde,
                     "Hesabi sil"in yaninda ve kirmiziydi; kullanici "cikis cok
                     zor" dedi. Ayni is ust menude de var (avatar).
                   */}
-                  <Kucuk onClick={() => setCikisAcik(true)}>Çıkış yap</Kucuk>
+                  <Kucuk onClick={() => setCikisAcik(true)}>{t('Çıkış yap')}</Kucuk>
                 </div>
               </>
             ) : (
               <>
                 <p className="text-sm text-ink-soft mb-3">
-                  İlerlemen şu an <b>yalnızca bu cihazda</b>. Giriş yaparsan kaybolmaz.
+                  {t('İlerlemen şu an')}{' '}<b>{t('yalnızca bu cihazda')}</b>{t('. Giriş yaparsan kaybolmaz.')}
                 </p>
-                <Kucuk onClick={() => setGirisAcik(true)}>Giriş yap</Kucuk>
+                <Kucuk onClick={() => setGirisAcik(true)}>{t('Giriş yap')}</Kucuk>
               </>
             )}
           </Card>
         )}
 
         <Card className="rise delay-1">
-          <h2 className="text-sm font-bold text-ink-soft mb-1">Günlük hedef</h2>
+          <div className="flex items-center justify-between gap-3">
+            <h2 className="text-sm font-bold text-ink-soft">Dil · Language</h2>
+            <DilSecici />
+          </div>
+        </Card>
+
+        <Card className="rise delay-1">
+          <h2 className="text-sm font-bold text-ink-soft mb-1">{t('Günlük hedef')}</h2>
           <p className="text-sm text-ink-soft mb-3">
-            Günde kaç yeni kelime öğrenmek istersin? Yeni kelimeler her gece 00:00'da gelir.
+            {t('Günde kaç yeni kelime öğrenmek istersin? Yeni kelimeler her gece 00:00\'da gelir.')}
           </p>
           <div className="flex gap-2">
             {LIMIT_CHOICES.map((n) => {
@@ -240,7 +249,7 @@ export function Settings({
                   }`}
                 >
                   <span className="word block text-2xl font-extrabold tabular-nums">{n}</span>
-                  <span className="block text-xs mt-0.5 opacity-80">kelime</span>
+                  <span className="block text-xs mt-0.5 opacity-80">{t('kelime')}</span>
                 </button>
               );
             })}
@@ -251,17 +260,16 @@ export function Settings({
           <Card className="rise delay-1">
             <div className="flex items-center justify-between gap-3">
               <div>
-                <p className="font-bold">Telaffuz sesi</p>
+                <p className="font-bold">{t('Telaffuz sesi')}</p>
                 <p className="text-sm text-ink-soft mt-0.5">
-                  Cevap açılınca kendiliğinden çalsın. Kapalıyken{' '}
-                  <Ikon ad="ses" className="inline-block h-4 w-4 align-text-bottom" /> ile
-                  dinleyebilirsin.
+                  {t('Cevap açılınca kendiliğinden çalsın. Kapalıyken')}{' '}
+                  <Ikon ad="ses" className="inline-block h-4 w-4 align-text-bottom" />{' '}{t('ile dinleyebilirsin.')}
                 </p>
               </div>
               <button
                 role="switch"
                 aria-checked={state.sound}
-                aria-label="Telaffuz sesi"
+                aria-label={t('Telaffuz sesi')}
                 onClick={() => void tercihKaydet({ sound: !state.sound })}
                 className={`shrink-0 h-8 w-14 rounded-full p-1 transition-colors ${
                   state.sound ? 'bg-grow' : 'bg-line'
@@ -286,15 +294,15 @@ export function Settings({
           <Card className="rise delay-1">
             <div className="flex items-center justify-between gap-3">
               <div>
-                <p className="font-bold">Günlük hatırlatma</p>
+                <p className="font-bold">{t('Günlük hatırlatma')}</p>
                 <p className="text-sm text-ink-soft mt-0.5">
-                  Seçtiğin saatte kısa bir bildirim. Kaçırırsan bir şey olmaz.
+                  {t('Seçtiğin saatte kısa bir bildirim. Kaçırırsan bir şey olmaz.')}
                 </p>
               </div>
               <button
                 role="switch"
                 aria-checked={state.reminderHour !== null}
-                aria-label="Günlük hatırlatma"
+                aria-label={t('Günlük hatırlatma')}
                 onClick={() =>
                   void hatirlatmayiAyarla(
                     state.reminderHour === null ? HATIRLATMA_VARSAYILAN.saat : null,
@@ -321,7 +329,7 @@ export function Settings({
                 kotu calisirdi hem cihazin 12/24 saat tercihini bilmezdi.
               */
               <label className="mt-4 flex items-center justify-between gap-3">
-                <span className="text-sm text-ink-soft">Saat</span>
+                <span className="text-sm text-ink-soft">{t('Saat')}</span>
                 <input
                   type="time"
                   value={`${String(state.reminderHour).padStart(2, '0')}:${String(
@@ -351,16 +359,15 @@ export function Settings({
           <Card className="rise delay-2">
             <div className="flex items-center justify-between gap-3">
               <div>
-                <p className="font-bold">Kullanım istatistikleri</p>
+                <p className="font-bold">{t('Kullanım istatistikleri')}</p>
                 <p className="text-sm text-ink-soft mt-0.5">
-                  Hangi ekranların kullanıldığını anonim olarak ölçeriz. Adın,
-                  fotoğrafın ve cevapların <b>gönderilmez</b>.
+                  {t('Hangi ekranların kullanıldığını anonim olarak ölçeriz. Adın, fotoğrafın ve cevapların')}{' '}<b>{t('gönderilmez')}</b>.
                 </p>
               </div>
               <button
                 role="switch"
                 aria-checked={state.olcum !== false}
-                aria-label="Kullanım istatistikleri"
+                aria-label={t('Kullanım istatistikleri')}
                 onClick={() => {
                   const yeni = state.olcum === false;
                   void tercihKaydet({ olcum: yeni });
@@ -395,11 +402,11 @@ export function Settings({
         */}
         {!uye && (
           <Card className="rise delay-2">
-            <h2 className="text-sm font-bold text-ink-soft mb-1">Verilerim</h2>
+            <h2 className="text-sm font-bold text-ink-soft mb-1">{t('Verilerim')}</h2>
             <p className="text-sm text-ink-soft mb-3">
-              İlerleme, profilin ve fotoğrafın <b>yalnızca bu cihazda</b> tutuluyor.
-              Taşımak veya korumak için yedekle
-              {paylasSecenegi && " — açılan menüden Drive'a, e-postaya ya da istediğin yere gönderebilirsin"}.
+              {t('İlerleme, profilin ve fotoğrafın yalnızca bu cihazda tutuluyor. Taşımak veya korumak için yedekle.')}
+              {paylasSecenegi &&
+                ` ${t("Açılan menüden Drive'a, e-postaya ya da istediğin yere gönderebilirsin.")}`}
             </p>
             <div className="flex flex-wrap gap-2">
               {telefonSecenegi && (
@@ -408,10 +415,10 @@ export function Settings({
                     setHata(null);
                     void telefonaYedekle(state.profil?.ad)
                       .then((nereye) => setBilgi(`Kaydedildi: ${nereye}`))
-                      .catch(() => setHata('Telefona kaydedilemedi.'));
+                      .catch(() => setHata(t('Telefona kaydedilemedi.')));
                   }}
                 >
-                  Telefona kaydet
+                  {t('Telefona kaydet')}
                 </Kucuk>
               )}
               <Kucuk
@@ -420,11 +427,11 @@ export function Settings({
                   void disaAktar(state.profil?.ad);
                 }}
               >
-                {telefonSecenegi ? 'Paylaş' : paylasSecenegi ? 'Yedekle' : 'Yedek al'}
+                {telefonSecenegi ? t('Paylaş') : paylasSecenegi ? t('Yedekle') : t('Yedek al')}
               </Kucuk>
-              <Kucuk onClick={() => fileRef.current?.click()}>Geri yükle</Kucuk>
+              <Kucuk onClick={() => fileRef.current?.click()}>{t('Geri yükle')}</Kucuk>
               <Kucuk tehlike onClick={() => setSifirlaSoruluyor(true)}>
-                Sıfırla
+                {t('Sıfırla')}
               </Kucuk>
             </div>
             {hata && <p className="text-sm text-[#c2417f] mt-3">{hata}</p>}
@@ -437,7 +444,7 @@ export function Settings({
               onChange={(e) => {
                 const f = e.target.files?.[0];
                 e.target.value = '';
-                if (f) void iceAktar(f).catch(() => setHata('Yedek dosyası okunamadı.'));
+                if (f) void iceAktar(f).catch(() => setHata(t('Yedek dosyası okunamadı.')));
               }}
             />
           </Card>
@@ -451,10 +458,10 @@ export function Settings({
           durmalari yanlisti — yanlislikla basilabilecek yerde olmamalilar.
         */}
         <Card className="rise delay-3">
-          <h2 className="text-sm font-bold text-ink-soft mb-2">Hakkında</h2>
-          <Satir ad="Toplam kelime" deger={String(CARDS.length)} />
-          <Satir ad="Öğrendiğin" deger={String(progress.length)} />
-          <Satir ad="Sürüm" deger={__APP_VERSION__} />
+          <h2 className="text-sm font-bold text-ink-soft mb-2">{t('Hakkında')}</h2>
+          <Satir ad={t('Toplam kelime')} deger={String(CARDS.length)} />
+          <Satir ad={t('Öğrendiğin')} deger={String(progress.length)} />
+          <Satir ad={t('Sürüm')} deger={__APP_VERSION__} />
         </Card>
 
         {/*
@@ -467,13 +474,13 @@ export function Settings({
           adres, cunku uygulama `/ingilizce/` altinda, site kokte.
         */}
         <Card className="rise delay-3">
-          <h2 className="text-sm font-bold text-ink-soft mb-2">Yasal ve iletişim</h2>
+          <h2 className="text-sm font-bold text-ink-soft mb-2">{t('Yasal ve iletişim')}</h2>
           <div className="flex flex-col">
             {[
-              ['https://hafizada.com/gizlilik/', 'Gizlilik Politikası'],
-              ['https://hafizada.com/kullanim-kosullari/', 'Kullanım Koşulları'],
-              ['https://hafizada.com/kvkk/', 'KVKK Aydınlatma Metni'],
-              ['https://hafizada.com/iletisim/', 'İletişim'],
+              ['https://hafizada.com/gizlilik/', t('Gizlilik Politikası')],
+              ['https://hafizada.com/kullanim-kosullari/', t('Kullanım Koşulları')],
+              ['https://hafizada.com/kvkk/', t('KVKK Aydınlatma Metni')],
+              ['https://hafizada.com/iletisim/', t('İletişim')],
             ].map(([adres, ad]) => (
               <a
                 key={adres}
@@ -499,7 +506,7 @@ export function Settings({
             onClick={() => setSilmeDurum('soruyor')}
             className="mx-auto mt-1 px-3 py-2 text-xs font-bold text-ink-faint underline-offset-2 transition hover:text-[#c2417f] hover:underline"
           >
-            Hesabımı kalıcı olarak sil
+            {t('Hesabımı kalıcı olarak sil')}
           </button>
         )}
 
@@ -519,24 +526,23 @@ export function Settings({
         <div className="fixed inset-0 z-30 flex items-end justify-center bg-ink/45 px-5 pb-8 backdrop-blur-sm sm:items-center sm:pb-0">
           <Card className="rise w-full max-w-md p-6">
             <p className="word text-xl font-extrabold text-[#c2417f]">
-              Hesabını kalıcı olarak sil
+              {t('Hesabını kalıcı olarak sil')}
             </p>
             <p className="mt-2 text-sm font-bold text-ink">
-              Bu işlemin geri dönüşü yok. Silinen hiçbir şey kurtarılamaz.
+              {t('Bu işlemin geri dönüşü yok. Silinen hiçbir şey kurtarılamaz.')}
             </p>
             <ul className="mt-3 flex flex-col gap-1.5 text-sm text-ink-soft">
-              <li>• Öğrendiğin <b>bütün kelimeler</b> ve ilerlemen</li>
-              <li>• <b>Serin</b> ve bütün çalışma geçmişin</li>
-              <li>• Hesabın, e-posta adresin ve bilgilerin</li>
-              <li>• Bu cihazdaki kayıtlar</li>
+              <li>{t('• Öğrendiğin bütün kelimeler ve ilerlemen')}</li>
+              <li>{t('• Serin ve bütün çalışma geçmişin')}</li>
+              <li>{t('• Hesabın, e-posta adresin ve bilgilerin')}</li>
+              <li>{t('• Bu cihazdaki kayıtlar')}</li>
             </ul>
             <p className="mt-3 text-sm text-ink-soft">
-              Vazgeçersen <b>Çıkış yap</b> da seçebilirsin; o zaman hesabın durur, yalnızca bu
-              cihaz temizlenir.
+              {t('Vazgeçersen Çıkış yap da seçebilirsin; o zaman hesabın durur, yalnızca bu cihaz temizlenir.')}
             </p>
             <label className="mt-4 block">
               <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">
-                Onaylamak için {SIL_SOZ} yaz
+                {t('Onaylamak için {soz} yaz', { soz: SIL_SOZ })}
               </span>
               <input
                 type="text"
@@ -557,14 +563,14 @@ export function Settings({
                   setSilmeHata(null);
                 }}
               >
-                Vazgeç, hesabım kalsın
+                {t('Vazgeç, hesabım kalsın')}
               </Button>
               <Button
                 variant="ghost"
                 disabled={silmeDurum === 'calisiyor' || silOnay.trim() !== SIL_SOZ}
                 onClick={() => void hesabiKaldir()}
               >
-                {silmeDurum === 'calisiyor' ? 'Siliniyor…' : 'Hesabı kalıcı olarak sil'}
+                {silmeDurum === 'calisiyor' ? t('Siliniyor…') : t('Hesabı kalıcı olarak sil')}
               </Button>
             </div>
           </Card>
@@ -576,14 +582,13 @@ export function Settings({
       {sifirlaSoruluyor && (
         <div className="fixed inset-0 z-20 flex items-end justify-center bg-ink/40 px-5 pb-8 backdrop-blur-sm">
           <div className="rise w-full max-w-md rounded-card bg-white p-6 shadow-[var(--shadow-lift)]">
-            <p className="word text-xl font-extrabold">Her şey silinecek</p>
+            <p className="word text-xl font-extrabold">{t('Her şey silinecek')}</p>
             <p className="text-sm text-ink-soft mt-2">
-              Öğrendiğin <b>{progress.length} kelime</b>, serin ve tüm geçmişin silinir.
-              Bu geri alınamaz — önce yedek almak istersen şimdi iyi bir an.
+              {t('Öğrendiğin {n} kelime, serin ve tüm geçmişin silinir. Bu geri alınamaz — önce yedek almak istersen şimdi iyi bir an.', { n: progress.length })}
             </p>
             <div className="mt-5 flex flex-col gap-2.5">
               <Button variant="brand" onClick={() => setSifirlaSoruluyor(false)}>
-                Vazgeç
+                {t('Vazgeç')}
               </Button>
               <Button
                 variant="ghost"
@@ -592,7 +597,7 @@ export function Settings({
                   void resetAll();
                 }}
               >
-                Evet, sıfırla
+                {t('Evet, sıfırla')}
               </Button>
             </div>
           </div>
@@ -605,7 +610,7 @@ export function Settings({
 
 async function disaAktar(profilAdi?: string) {
   const blob = new Blob([await exportProgress()], { type: 'application/json' });
-  const { yol, verildi } = await dosyayiVer(blob, yedekAdi(profilAdi), 'Hafızada İngilizce yedeği');
+  const { yol, verildi } = await dosyayiVer(blob, yedekAdi(profilAdi), t('Hafızada İngilizce yedeği'));
   // Iptal eden kullanici yedek ALMAMISTIR; olay yalnizca dosya gercekten
   // verildiginde yaziliyor. `yol` ise "Android'de paylas menusu aciliyor mu"
   // sorusunu tek bir cihazdan degil, kullanimdan cevapliyor.

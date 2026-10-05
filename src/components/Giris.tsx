@@ -15,6 +15,7 @@ import {
   sifreyleKayit,
   uyeOku,
 } from '../uyelik';
+import { t } from '../dil';
 
 /**
  * UYELIK — giris, kayit, sifre sifirlama.
@@ -139,16 +140,16 @@ export function Giris({
     setGonderiliyor(false);
 
     if (!sonuc.oldu) {
-      setHata(sonuc.hata ?? 'Bir şeyler ters gitti.');
+      setHata(sonuc.hata ?? t('Bir şeyler ters gitti.'));
       return;
     }
 
     // Kayitta dogrulama bekleniyorsa oturum henuz ACILMADI — "girdin" deme.
     if (kip === 'kayit' && sonuc.dogrulamaBekliyor) {
       setBitis({
-        baslik: 'Adresini doğrula',
-        metin: `${eposta} adresine bir doğrulama bağlantısı yolladık. Aç, dokun, geri dön.`,
-        ipucu: 'Gelmediyse spam klasörüne bak. Birkaç dakika sürebiliyor.',
+        baslik: t('Adresini doğrula'),
+        metin: t('{eposta} adresine bir doğrulama bağlantısı yolladık. Aç, dokun, geri dön.', { eposta }),
+        ipucu: t('Gelmediyse spam klasörüne bak. Birkaç dakika sürebiliyor.'),
       });
       return;
     }
@@ -168,9 +169,9 @@ export function Giris({
     }
     if (kip === 'unuttum') {
       setBitis({
-        baslik: 'Sıfırlama bağlantısı yolda',
-        metin: `${eposta} adresine şifre belirleme bağlantısı gönderdik.`,
-        ipucu: 'Gelmediyse spam klasörüne bak.',
+        baslik: t('Sıfırlama bağlantısı yolda'),
+        metin: t('{eposta} adresine şifre belirleme bağlantısı gönderdik.', { eposta }),
+        ipucu: t('Gelmediyse spam klasörüne bak.'),
       });
       return;
     }
@@ -183,36 +184,36 @@ export function Giris({
     setHata(null);
     const sonuc = await googleIleGiris();
     // Basariliysa sayfa zaten Google'a gitti; buraya yalnizca hata doner.
-    if (!sonuc.oldu) setHata(sonuc.hata ?? 'Google ile girilemedi.');
+    if (!sonuc.oldu) setHata(sonuc.hata ?? t('Google ile girilemedi.'));
   }
 
   const metinler: Record<Kip, { baslik: string; aciklama: string; dugme: string }> = {
     giris: {
-      baslik: baslik ?? 'Tekrar hoş geldin',
-      aciklama: aciklama ?? 'İlerlemen hesabında duruyor; kaldığın yerden devam edersin.',
-      dugme: 'Giriş yap',
+      baslik: baslik ?? t('Tekrar hoş geldin'),
+      aciklama: aciklama ?? t('İlerlemen hesabında duruyor; kaldığın yerden devam edersin.'),
+      dugme: t('Giriş yap'),
     },
     kayit: {
-      baslik: baslik ?? 'İlerlemeni kaydet',
+      baslik: baslik ?? t('İlerlemeni kaydet'),
       aciklama:
         aciklama ??
-        'Telefonunu değiştirsen de, tarayıcını temizlesen de kaldığın yerden devam edersin.',
-      dugme: 'Hesap aç',
+        t('Telefonunu değiştirsen de, tarayıcını temizlesen de kaldığın yerden devam edersin.'),
+      dugme: t('Hesap aç'),
     },
     unuttum: {
-      baslik: 'Şifreni mi unuttun?',
-      aciklama: 'Adresini yaz, yeni şifre belirleme bağlantısı gönderelim.',
-      dugme: 'Bağlantı gönder',
+      baslik: t('Şifreni mi unuttun?'),
+      aciklama: t('Adresini yaz, yeni şifre belirleme bağlantısı gönderelim.'),
+      dugme: t('Bağlantı gönder'),
     },
     yeniSifre: {
-      baslik: 'Yeni şifreni belirle',
-      aciklama: 'Bundan sonra bu şifreyle gireceksin.',
-      dugme: 'Şifreyi kaydet',
+      baslik: t('Yeni şifreni belirle'),
+      aciklama: t('Bundan sonra bu şifreyle gireceksin.'),
+      dugme: t('Şifreyi kaydet'),
     },
     bilgi: {
-      baslik: 'Bilgilerin',
-      aciklama: 'Seviye ve hedef isteğe bağlı.',
-      dugme: 'Kaydet',
+      baslik: t('Bilgilerin'),
+      aciklama: t('Seviye ve hedef isteğe bağlı.'),
+      dugme: t('Kaydet'),
     },
   };
   const m = metinler[kip];
@@ -242,7 +243,7 @@ export function Giris({
             {bitis.ipucu && <p className="mt-3 text-xs text-ink-faint">{bitis.ipucu}</p>}
             <div className="mt-5">
               <Button variant="spark" onClick={onKapat}>
-                Tamam
+                {t('Tamam')}
               </Button>
             </div>
           </>
@@ -259,11 +260,11 @@ export function Giris({
                   className="mt-4 flex w-full items-center justify-center gap-2.5 rounded-2xl border border-line bg-surface px-5 py-3.5 font-bold text-ink transition active:scale-[0.97]"
                 >
                   <GoogleIsareti />
-                  Google ile devam et
+                  {t('Google ile devam et')}
                 </button>
                 <div className="my-4 flex items-center gap-3 text-xs font-bold text-ink-faint">
                   <span className="h-px flex-1 bg-line" />
-                  veya
+                  {t('veya')}
                   <span className="h-px flex-1 bg-line" />
                 </div>
               </>
@@ -273,7 +274,7 @@ export function Giris({
               <>
                 <label className="mt-4 block">
                   <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">
-                    Adın
+                    {t('Adın')}
                   </span>
                   <input
                     ref={alan}
@@ -282,19 +283,19 @@ export function Giris({
                     autoComplete="given-name"
                     value={ad}
                     onChange={(e) => setAd(e.target.value)}
-                    placeholder="Adın"
+                    placeholder={t('Adın')}
                     className="mt-1.5 w-full rounded-2xl border border-line bg-sunken px-4 py-3 text-base text-ink outline-none focus:border-ink/30 focus:ring-2 focus:ring-ink/15"
                   />
                 </label>
 
                 <Secenekler
-                  baslik="İngilizcen ne durumda?"
+                  baslik={t('İngilizcen ne durumda?')}
                   secenekler={SEVIYELER}
                   secili={seviye}
                   sec={setSeviye}
                 />
                 <Secenekler
-                  baslik="Niçin öğreniyorsun?"
+                  baslik={t('Niçin öğreniyorsun?')}
                   secenekler={HEDEFLER}
                   secili={hedef}
                   sec={setHedef}
@@ -305,7 +306,7 @@ export function Giris({
             {epostaVar && (
               <label className="mt-4 block first:mt-0">
                 <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">
-                  E-posta
+                  {t('E-posta')}
                 </span>
                 <input
                   ref={epostaVar ? alan : undefined}
@@ -315,7 +316,7 @@ export function Giris({
                   inputMode="email"
                   value={eposta}
                   onChange={(e) => setEposta(e.target.value)}
-                  placeholder="ornek@eposta.com"
+                  placeholder={t('ornek@eposta.com')}
                   className="mt-1.5 w-full rounded-2xl border border-line bg-sunken px-4 py-3 text-base text-ink outline-none focus:border-ink/30 focus:ring-2 focus:ring-ink/15"
                 />
               </label>
@@ -324,7 +325,7 @@ export function Giris({
             {sifreVar && (
               <label className="mt-3 block">
                 <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">
-                  Şifre
+                  {t('Şifre')}
                 </span>
                 <span className="relative mt-1.5 block">
                   <input
@@ -342,9 +343,9 @@ export function Giris({
                     type="button"
                     onClick={() => setSifreAcik((v) => !v)}
                     className="absolute inset-y-0 right-0 px-4 text-xs font-bold text-ink-faint"
-                    aria-label={sifreAcik ? 'Şifreyi gizle' : 'Şifreyi göster'}
+                    aria-label={sifreAcik ? t('Şifreyi gizle') : t('Şifreyi göster')}
                   >
-                    {sifreAcik ? 'Gizle' : 'Göster'}
+                    {sifreAcik ? t('Gizle') : t('Göster')}
                   </button>
                 </span>
               </label>
@@ -358,11 +359,11 @@ export function Giris({
 
             <div className="mt-5 flex flex-col gap-2.5">
               <Button variant="spark" type="submit" disabled={gonderiliyor}>
-                {gonderiliyor ? 'Gönderiliyor…' : m.dugme}
+                {gonderiliyor ? t('Gönderiliyor…') : m.dugme}
               </Button>
               {kapatilabilir && (
                 <Button variant="ghost" onClick={onKapat}>
-                  {kip === 'bilgi' ? 'Sonra doldururum' : 'Şimdi değil'}
+                  {kip === 'bilgi' ? t('Sonra doldururum') : t('Şimdi değil')}
                 </Button>
               )}
             </div>
@@ -371,27 +372,27 @@ export function Giris({
             {kip === 'giris' && (
               <div className="mt-4 flex flex-col items-center gap-1.5 text-sm">
                 <span>
-                  <Baglanti onClick={() => kipDegistir('unuttum')}>Şifremi unuttum</Baglanti>
+                  <Baglanti onClick={() => kipDegistir('unuttum')}>{t('Şifremi unuttum')}</Baglanti>
                 </span>
                 <span className="text-ink-faint">
-                  Hesabın yok mu?{' '}
-                  <Baglanti onClick={() => kipDegistir('kayit')}>Hesap aç</Baglanti>
+                  {t('Hesabın yok mu?')}{' '}
+                  <Baglanti onClick={() => kipDegistir('kayit')}>{t('Hesap aç')}</Baglanti>
                 </span>
               </div>
             )}
             {kip === 'kayit' && (
               <p className="mt-4 text-center text-sm text-ink-faint">
-                Hesabın var mı? <Baglanti onClick={() => kipDegistir('giris')}>Giriş yap</Baglanti>
+                {t('Hesabın var mı?')}{' '}<Baglanti onClick={() => kipDegistir('giris')}>{t('Giriş yap')}</Baglanti>
               </p>
             )}
             {kip === 'unuttum' && (
               <p className="mt-4 text-center text-sm">
-                <Baglanti onClick={() => kipDegistir('giris')}>Girişe dön</Baglanti>
+                <Baglanti onClick={() => kipDegistir('giris')}>{t('Girişe dön')}</Baglanti>
               </p>
             )}
             {kip === 'bilgi' && (
               <p className="mt-4 text-center text-xs text-ink-faint">
-                Seviye ve hedefi sonra Ayarlar&apos;dan da değiştirebilirsin.
+                {t("Seviye ve hedefi sonra Ayarlar'dan da değiştirebilirsin.")}
               </p>
             )}
           </form>

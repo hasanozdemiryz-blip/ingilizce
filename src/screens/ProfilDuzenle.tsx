@@ -10,6 +10,7 @@ import {
 import { AD_SINIR, HAYVANLAR, adDuzelt, rastgeleAd } from '../profil';
 import type { Avatar as AvatarVerisi, Profil } from '../types';
 import { useUyelik } from '../uyelik';
+import { t } from '../dil';
 
 /**
  * PROFILI DEGISTIR.
@@ -90,7 +91,7 @@ export function ProfilDuzenle({
     try {
       setAvatar({ tip: 'foto', veri: await fotografiHazirla(dosya) });
     } catch {
-      setHata('Bu dosya okunamadı. Başka bir görsel dene.');
+      setHata(t('Bu dosya okunamadı. Başka bir görsel dene.'));
     }
   }
 
@@ -102,7 +103,7 @@ export function ProfilDuzenle({
         {/* --- Onizleme: degistirdigin sey hemen burada --- */}
         <div className="flex flex-col items-center gap-3 pt-1">
           <Avatar avatar={avatar} cerceve={cerceve} boyut="xl" className="pop" />
-          <p className="word text-xl font-extrabold">{ad.trim() || 'Adsız'}</p>
+          <p className="word text-xl font-extrabold">{ad.trim() || t('Adsız')}</p>
         </div>
 
         {/*
@@ -115,36 +116,36 @@ export function ProfilDuzenle({
         {!uye?.bilgi?.ad && (
           <Card>
             <div className="flex items-center justify-between mb-2">
-              <h2 className="text-sm font-bold text-ink-soft">Adın</h2>
+              <h2 className="text-sm font-bold text-ink-soft">{t('Adın')}</h2>
               <button
                 onClick={() => setAd(rastgeleAd())}
                 className="rounded-full bg-sunken px-3 py-1.5 text-xs font-bold text-ink transition-all active:scale-95"
               >
-                Karıştır
+                {t('Karıştır')}
               </button>
             </div>
             <input
               value={ad}
               maxLength={AD_SINIR}
               onChange={(e) => setAd(e.target.value)}
-              placeholder="Adını yaz"
+              placeholder={t('Adını yaz')}
               className="w-full rounded-2xl bg-sunken px-4 py-3 text-sm outline-none placeholder:text-ink-faint focus:ring-2 focus:ring-brand"
             />
             <p className="text-xs text-ink-faint mt-2">
-              Boş bırakırsan sana eğlenceli bir ad seçeriz.
+              {t('Boş bırakırsan sana eğlenceli bir ad seçeriz.')}
             </p>
           </Card>
         )}
 
         {/* --- Resim: hayvan ya da fotograf --- */}
         <Card>
-          <h2 className="text-sm font-bold text-ink-soft mb-3">Resmin</h2>
+          <h2 className="text-sm font-bold text-ink-soft mb-3">{t('Resmin')}</h2>
 
           <div className="grid grid-cols-2 gap-1 rounded-full bg-sunken p-1 mb-4">
             {(
               [
-                ['hayvan', 'Hayvanlar'],
-                ['foto', 'Fotoğraf'],
+                ['hayvan', t('Hayvanlar')],
+                ['foto', t('Fotoğraf')],
               ] as const
             ).map(([id, baslik]) => (
               <button
@@ -186,7 +187,7 @@ export function ProfilDuzenle({
                 onClick={() => dosyaGirisi.current?.click()}
                 className="rounded-full bg-brand px-5 py-3 text-sm font-bold text-white transition-all active:scale-95"
               >
-                {avatar.tip === 'foto' ? 'Başka fotoğraf seç' : 'Fotoğraf yükle'}
+                {avatar.tip === 'foto' ? t('Başka fotoğraf seç') : t('Fotoğraf yükle')}
               </button>
               {/*
                 Nereye gittigi yaziyor cunku "yukle" kelimesi bunu sorduruyor.
@@ -195,8 +196,8 @@ export function ProfilDuzenle({
               */}
               <p className="text-xs text-ink-faint mt-3 max-w-[30ch] mx-auto">
                 {uye
-                  ? 'Fotoğrafın hesabında saklanır, diğer cihazlarında da görünür.'
-                  : 'Fotoğraf yalnızca bu cihazda kalır.'}
+                  ? t('Fotoğrafın hesabında saklanır, diğer cihazlarında da görünür.')
+                  : t('Fotoğraf yalnızca bu cihazda kalır.')}
               </p>
               {hata && <p className="text-xs text-blush mt-2 font-semibold">{hata}</p>}
             </div>
@@ -216,9 +217,9 @@ export function ProfilDuzenle({
 
         {/* --- Cerceveler --- */}
         <Card>
-          <h2 className="text-sm font-bold text-ink-soft">Çerçeven</h2>
+          <h2 className="text-sm font-bold text-ink-soft">{t('Çerçeven')}</h2>
           <p className="text-xs text-ink-faint mt-1 mb-3">
-            Çalıştıkça yeni çerçeveler açılır.
+            {t('Çalıştıkça yeni çerçeveler açılır.')}
           </p>
 
           <div className="grid grid-cols-3 gap-3">
@@ -253,7 +254,7 @@ export function ProfilDuzenle({
           variant="brand"
           onClick={() => onKaydet({ ...profil, ad: adDuzelt(ad), avatar, cerceve })}
         >
-          Tamam
+          {t('Tamam')}
         </Button>
       </div>
     </Screen>

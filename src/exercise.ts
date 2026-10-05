@@ -6,6 +6,7 @@
  */
 import type { IkonAd } from './icons';
 import type { Card, Step } from './types';
+import { t } from './dil';
 
 export type Egzersiz = 'kart' | 'eslestirme' | 'secmeli' | 'ters-secmeli' | 'harf' | 'yazma' | 'dinleme';
 
@@ -38,12 +39,12 @@ type AdimBilgisi = {
 };
 
 export const ADIM: Record<Step, AdimBilgisi> = {
-  1: { egzersiz: 'eslestirme',   ad: 'Eşleştirme',     ikon: 'eslestirme', alt: 'kelime ↔ karşılık',   kancaGorunur: true,  kartGorunur: true,  cevapDili: 'tr' },
-  2: { egzersiz: 'secmeli',      ad: 'Çoktan seçmeli', ikon: 'secmeli',    alt: 'İngilizceyi gör, seç', kancaGorunur: true,  kartGorunur: true,  cevapDili: 'tr' },
-  3: { egzersiz: 'ters-secmeli', ad: 'Ters seçmeli',   ikon: 'ters',       alt: 'Türkçeyi gör, seç',    kancaGorunur: false, kartGorunur: false, cevapDili: 'en' },
-  4: { egzersiz: 'harf',         ad: 'Harf dizme',     ikon: 'harf',       alt: 'harfleri sıraya diz',  kancaGorunur: false, kartGorunur: false, cevapDili: 'en' },
-  5: { egzersiz: 'yazma',        ad: 'Yazma',          ikon: 'yazma',      alt: 'baştan yaz',           kancaGorunur: false, kartGorunur: false, cevapDili: 'en' },
-  6: { egzersiz: 'dinleme',      ad: 'Dinleme',        ikon: 'ses',        alt: 'yazı yok, sadece ses', kancaGorunur: false, kartGorunur: false, cevapDili: 'en' },
+  1: { egzersiz: 'eslestirme',   ad: t('Eşleştirme'),     ikon: 'eslestirme', alt: t('kelime ↔ karşılık'),   kancaGorunur: true,  kartGorunur: true,  cevapDili: 'tr' },
+  2: { egzersiz: 'secmeli',      ad: t('Çoktan seçmeli'), ikon: 'secmeli',    alt: t('İngilizceyi gör, seç'), kancaGorunur: true,  kartGorunur: true,  cevapDili: 'tr' },
+  3: { egzersiz: 'ters-secmeli', ad: t('Ters seçmeli'),   ikon: 'ters',       alt: t('Türkçeyi gör, seç'),    kancaGorunur: false, kartGorunur: false, cevapDili: 'en' },
+  4: { egzersiz: 'harf',         ad: t('Harf dizme'),     ikon: 'harf',       alt: t('harfleri sıraya diz'),  kancaGorunur: false, kartGorunur: false, cevapDili: 'en' },
+  5: { egzersiz: 'yazma',        ad: t('Yazma'),          ikon: 'yazma',      alt: t('baştan yaz'),           kancaGorunur: false, kartGorunur: false, cevapDili: 'en' },
+  6: { egzersiz: 'dinleme',      ad: t('Dinleme'),        ikon: 'ses',        alt: t('yazı yok, sadece ses'), kancaGorunur: false, kartGorunur: false, cevapDili: 'en' },
 };
 
 /**
@@ -75,22 +76,22 @@ export type Bolge = {
 export const BOLGELER: Bolge[] = [
   {
     adimlar: [1, 2],
-    ad: 'Tanıdın',
-    sonraki: 'Şimdi kanca ekrandan kalkıyor',
+    ad: t('Tanıdın'),
+    sonraki: t('Şimdi kanca ekrandan kalkıyor'),
     ikon: 'secmeli',
     renk: 'brand',
   },
   {
     adimlar: [3, 4],
-    ad: 'Hatırladın',
-    sonraki: 'Şimdi kelimeyi baştan sen yazacaksın',
+    ad: t('Hatırladın'),
+    sonraki: t('Şimdi kelimeyi baştan sen yazacaksın'),
     ikon: 'harf',
     renk: 'spark',
   },
   {
     adimlar: [5, 6],
-    ad: 'Ürettin',
-    sonraki: 'Merdivenin tepesi',
+    ad: t('Ürettin'),
+    sonraki: t('Merdivenin tepesi'),
     ikon: 'yazma',
     renk: 'grow',
   },

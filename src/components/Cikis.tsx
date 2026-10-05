@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { olay } from '../analitik';
 import { cikisVeTemizle } from '../senkron';
 import { Button, Card } from './ui';
+import { t } from '../dil';
 
 /**
  * CIKIS ONAYI — hesap menusunden de Ayarlar'dan da ayni pencere.
@@ -40,30 +41,29 @@ export function CikisOnayi({ onKapat }: { onKapat: () => void }) {
       }}
       role="dialog"
       aria-modal="true"
-      aria-label="Çıkış"
+      aria-label={t('Çıkış')}
     >
       <Card className="rise w-full max-w-md p-6">
         {durum === 'senkronYok' ? (
           <>
-            <p className="word text-xl font-extrabold">Bağlanamadık</p>
+            <p className="word text-xl font-extrabold">{t('Bağlanamadık')}</p>
             <p className="mt-2 text-sm text-ink-soft">
-              Son ilerlemen hesabına <b>gönderilemedi</b>. Şimdi çıkarsan o kısım kaybolur.
-              İnternetin gelince tekrar dene.
+              {t('Son ilerlemen hesabına')}{' '}<b>{t('gönderilemedi')}</b>{t('. Şimdi çıkarsan o kısım kaybolur. İnternetin gelince tekrar dene.')}
             </p>
             <div className="mt-5 flex flex-col gap-2.5">
               <Button variant="spark" onClick={onKapat}>
-                Vazgeç
+                {t('Vazgeç')}
               </Button>
               <Button variant="ghost" onClick={() => void cik(true)}>
-                Yine de çık
+                {t('Yine de çık')}
               </Button>
             </div>
           </>
         ) : (
           <>
-            <p className="word text-xl font-extrabold">Çıkış yapılsın mı?</p>
+            <p className="word text-xl font-extrabold">{t('Çıkış yapılsın mı?')}</p>
             <p className="mt-2 text-sm text-ink-soft">
-              İlerlemen hesabında kalır, tekrar girince geri gelir.
+              {t('İlerlemen hesabında kalır, tekrar girince geri gelir.')}
             </p>
             <div className="mt-5 flex flex-col gap-2.5">
               <Button
@@ -71,10 +71,10 @@ export function CikisOnayi({ onKapat }: { onKapat: () => void }) {
                 disabled={durum === 'calisiyor'}
                 onClick={() => void cik()}
               >
-                {durum === 'calisiyor' ? 'Çıkılıyor…' : 'Çıkış yap'}
+                {durum === 'calisiyor' ? t('Çıkılıyor…') : t('Çıkış yap')}
               </Button>
               <Button variant="ghost" disabled={durum === 'calisiyor'} onClick={onKapat}>
-                Vazgeç
+                {t('Vazgeç')}
               </Button>
             </div>
           </>

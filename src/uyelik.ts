@@ -23,6 +23,7 @@
  */
 import { useSyncExternalStore } from 'react';
 import type { SupabaseClient, Session } from '@supabase/supabase-js';
+import { t } from './dil';
 
 const ADRES = import.meta.env.VITE_SUPABASE_URL;
 const ANAHTAR = import.meta.env.VITE_SUPABASE_ANON_KEY;
@@ -154,7 +155,7 @@ export type Uye = {
  * e-postanin @ oncesi. Bilgi adimi artik ZORUNLU degil; ad bos kalabilir.
  */
 export function uyeAdi(u: Uye): string {
-  return u.bilgi?.ad || u.saglayiciAdi || (u.eposta ?? '').split('@')[0] || 'Üye';
+  return u.bilgi?.ad || u.saglayiciAdi || (u.eposta ?? '').split('@')[0] || t('Üye');
 }
 
 export type Seviye = NonNullable<UyeBilgi['seviye']>;
@@ -162,16 +163,16 @@ export type Hedef = NonNullable<UyeBilgi['hedef']>;
 
 /** Tek liste: giris formu da Ayarlar da buradan okuyor, yoksa ayrisirlar. */
 export const SEVIYELER: { deger: Seviye; yazi: string }[] = [
-  { deger: 'yok', yazi: 'Hiç bilmiyorum' },
-  { deger: 'biraz', yazi: 'Biraz anlıyorum' },
-  { deger: 'orta', yazi: 'Orta seviye' },
+  { deger: 'yok', yazi: t('Hiç bilmiyorum') },
+  { deger: 'biraz', yazi: t('Biraz anlıyorum') },
+  { deger: 'orta', yazi: t('Orta seviye') },
 ];
 
 export const HEDEFLER: { deger: Hedef; yazi: string }[] = [
-  { deger: 'is', yazi: 'İş' },
-  { deger: 'seyahat', yazi: 'Seyahat' },
-  { deger: 'sinav', yazi: 'Sınav' },
-  { deger: 'kendim', yazi: 'Kendim için' },
+  { deger: 'is', yazi: t('İş') },
+  { deger: 'seyahat', yazi: t('Seyahat') },
+  { deger: 'sinav', yazi: t('Sınav') },
+  { deger: 'kendim', yazi: t('Kendim için') },
 ];
 
 export const etiket = <T extends string>(
@@ -351,24 +352,24 @@ export const SIFRE_EN_AZ = 8;
 function cevir(mesaj: string): string {
   const m = mesaj.toLowerCase();
   if (m.includes('rate') || m.includes('limit')) {
-    return 'Çok fazla deneme oldu. Birkaç dakika sonra tekrar dene.';
+    return t('Çok fazla deneme oldu. Birkaç dakika sonra tekrar dene.');
   }
   if (m.includes('invalid login credentials')) {
-    return 'E-posta ya da şifre hatalı. Daha önce e-posta bağlantısıyla girdiysen şifren yok — "Şifremi unuttum" ile bir tane oluştur.';
+    return t('E-posta ya da şifre hatalı. Daha önce e-posta bağlantısıyla girdiysen şifren yok — "Şifremi unuttum" ile bir tane oluştur.');
   }
   if (m.includes('already registered') || m.includes('already exists')) {
-    return 'Bu adres zaten kayıtlı. Giriş yapmayı dene.';
+    return t('Bu adres zaten kayıtlı. Giriş yapmayı dene.');
   }
   if (m.includes('email not confirmed')) {
-    return 'Adresini henüz doğrulamadın. Kayıt e-postandaki bağlantıya dokun.';
+    return t('Adresini henüz doğrulamadın. Kayıt e-postandaki bağlantıya dokun.');
   }
   if (m.includes('password') && (m.includes('weak') || m.includes('short') || m.includes('least'))) {
-    return `Şifre en az ${SIFRE_EN_AZ} karakter olmalı.`;
+    return t('Şifre en az {SIFRE_EN_AZ} karakter olmalı.', { SIFRE_EN_AZ });
   }
   if (m.includes('invalid') && m.includes('email')) {
-    return 'Bu e-posta adresi geçerli görünmüyor.';
+    return t('Bu e-posta adresi geçerli görünmüyor.');
   }
-  return 'Bir şeyler ters gitti. Biraz sonra tekrar dene.';
+  return t('Bir şeyler ters gitti. Biraz sonra tekrar dene.');
 }
 
 export type Sonuc = {
@@ -378,7 +379,7 @@ export type Sonuc = {
   dogrulamaBekliyor?: boolean;
 };
 
-const BAGLANAMADI: Sonuc = { oldu: false, hata: 'Şu an bağlanamıyoruz. Biraz sonra dene.' };
+const BAGLANAMADI: Sonuc = { oldu: false, hata: t('Şu an bağlanamıyoruz. Biraz sonra dene.') };
 
 // --- Disariya acilan islemler ----------------------------------------------
 
@@ -389,7 +390,7 @@ const BAGLANAMADI: Sonuc = { oldu: false, hata: 'Şu an bağlanamıyoruz. Biraz 
  */
 export async function sifreyleKayit(eposta: string, sifre: string): Promise<Sonuc> {
   if (sifre.length < SIFRE_EN_AZ) {
-    return { oldu: false, hata: `Şifre en az ${SIFRE_EN_AZ} karakter olmalı.` };
+    return { oldu: false, hata: t('Şifre en az {SIFRE_EN_AZ} karakter olmalı.', { SIFRE_EN_AZ }) };
   }
   const c = await istemciyiKur();
   if (!c) return BAGLANAMADI;
@@ -414,7 +415,7 @@ export async function sifreyleKayit(eposta: string, sifre: string): Promise<Sonu
   if (data.user && (data.user.identities?.length ?? 0) === 0) {
     return {
       oldu: false,
-      hata: 'Bu adres zaten kayıtlı. "Giriş yap" ile devam et; şifreni bilmiyorsan "Şifremi unuttum" de.',
+      hata: t('Bu adres zaten kayıtlı. "Giriş yap" ile devam et; şifreni bilmiyorsan "Şifremi unuttum" de.'),
     };
   }
 
@@ -498,7 +499,7 @@ export const uyelikTamamMi = (): boolean => Boolean(uye);
 /** Bilgi adiminin kaydi. Seviye ve hedef bos birakilabilir. */
 export async function bilgiKaydet(bilgi: Omit<UyeBilgi, 'tamam'>): Promise<Sonuc> {
   const ad = bilgi.ad.trim();
-  if (!ad) return { oldu: false, hata: 'Adını yazman gerekiyor.' };
+  if (!ad) return { oldu: false, hata: t('Adını yazman gerekiyor.') };
 
   const c = await istemciyiKur();
   if (!c) return BAGLANAMADI;
@@ -522,7 +523,7 @@ export async function bilgiKaydet(bilgi: Omit<UyeBilgi, 'tamam'>): Promise<Sonuc
 /** Yeni sifre belirler — sifirlama donusunde ya da Ayarlar'dan. */
 export async function sifreBelirle(yeniSifre: string): Promise<Sonuc> {
   if (yeniSifre.length < SIFRE_EN_AZ) {
-    return { oldu: false, hata: `Şifre en az ${SIFRE_EN_AZ} karakter olmalı.` };
+    return { oldu: false, hata: t('Şifre en az {SIFRE_EN_AZ} karakter olmalı.', { SIFRE_EN_AZ }) };
   }
   const c = await istemciyiKur();
   if (!c) return BAGLANAMADI;
@@ -546,13 +547,13 @@ export async function hesabiSil(): Promise<Sonuc> {
   if (!c) return BAGLANAMADI;
   const { data } = await c.auth.getSession();
   const jeton = data.session?.access_token;
-  if (!jeton) return { oldu: false, hata: 'Önce giriş yapman gerekiyor.' };
+  if (!jeton) return { oldu: false, hata: t('Önce giriş yapman gerekiyor.') };
 
   try {
     const { error } = await c.functions.invoke('hesap-sil', { method: 'POST' });
-    if (error) return { oldu: false, hata: 'Hesap silinemedi. Biraz sonra tekrar dene.' };
+    if (error) return { oldu: false, hata: t('Hesap silinemedi. Biraz sonra tekrar dene.') };
   } catch {
-    return { oldu: false, hata: 'Hesap silinemedi. Biraz sonra tekrar dene.' };
+    return { oldu: false, hata: t('Hesap silinemedi. Biraz sonra tekrar dene.') };
   }
 
   await c.auth.signOut();

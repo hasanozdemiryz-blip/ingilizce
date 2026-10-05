@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { harfKarolari } from '../exercise';
 import { Card as CardShell, HookChip, Yonerge } from './ui';
 import type { Card } from '../types';
+import { t } from '../dil';
 
 /**
  * HARF DIZME — merdivenin 4. basamagi.
@@ -64,7 +65,7 @@ export function Scramble({
     <div className="flex flex-col gap-3">
       <CardShell className="w-full">
         <div className="flex flex-col items-center gap-3 py-6">
-          <Yonerge>Harfleri sıraya diz</Yonerge>
+          <Yonerge>{t('Harfleri sıraya diz')}</Yonerge>
           <p className="text-[2.25rem] leading-none font-extrabold text-center">{card.tr}</p>
           {hookRevealed && (
             <span className="pop">

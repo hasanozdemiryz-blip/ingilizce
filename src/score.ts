@@ -14,15 +14,16 @@
 import { SON_ADIM, ILK_ADIM } from './exercise';
 import { lastNDays } from './dates';
 import type { AppState, Cevap, Progress } from './types';
+import { t } from './dil';
 
 export type Pencere = 'gun' | 'hafta' | 'ay' | 'toplam';
 
 /** `gun: null` = sinir yok, butun gecmis. */
 export const PENCERELER: { id: Pencere; ad: string; gun: number | null }[] = [
-  { id: 'gun', ad: 'Gün', gun: 1 },
-  { id: 'hafta', ad: 'Hafta', gun: 7 },
-  { id: 'ay', ad: 'Ay', gun: 30 },
-  { id: 'toplam', ad: 'Toplam', gun: null },
+  { id: 'gun', ad: t('Gün'), gun: 1 },
+  { id: 'hafta', ad: t('Hafta'), gun: 7 },
+  { id: 'ay', ad: t('Ay'), gun: 30 },
+  { id: 'toplam', ad: t('Toplam'), gun: null },
 ];
 
 export const pencereGun = (p: Pencere) => PENCERELER.find((x) => x.id === p)!.gun;

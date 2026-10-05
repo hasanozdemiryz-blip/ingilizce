@@ -10,6 +10,7 @@
  * bu uygulamada odul, yapilan sey icin verilir.
  */
 import type { Profil } from './types';
+import { t } from './dil';
 
 /** Kullanicinin kazanimlari — kilitleri bu uc sayi acar. */
 export type Kazanim = {
@@ -50,12 +51,12 @@ export type Cerceve = {
  * kirilinca kazanilmis cerceve geri alinirdi ve bu CEZA olurdu.
  */
 export const CERCEVELER: Cerceve[] = [
-  { ad: 'halka', baslik: 'Halka', kilit: null },
-  { ad: 'halat', baslik: 'Halat', kilit: { tip: 'kelime', esik: 10 } },
-  { ad: 'bronz', baslik: 'Bronz', kilit: { tip: 'kelime', esik: 25 } },
-  { ad: 'gumus', baslik: 'Gümüş', kilit: { tip: 'seri', esik: 7 } },
-  { ad: 'altin', baslik: 'Altın', kilit: { tip: 'kelime', esik: 50 } },
-  { ad: 'elmas', baslik: 'Elmas', kilit: { tip: 'set' } },
+  { ad: 'halka', baslik: t('Halka'), kilit: null },
+  { ad: 'halat', baslik: t('Halat'), kilit: { tip: 'kelime', esik: 10 } },
+  { ad: 'bronz', baslik: t('Bronz'), kilit: { tip: 'kelime', esik: 25 } },
+  { ad: 'gumus', baslik: t('Gümüş'), kilit: { tip: 'seri', esik: 7 } },
+  { ad: 'altin', baslik: t('Altın'), kilit: { tip: 'kelime', esik: 50 } },
+  { ad: 'elmas', baslik: t('Elmas'), kilit: { tip: 'set' } },
 ];
 
 /** Profili olmayan/eski kayitlar icin — herkeste olan cerceve. */
@@ -81,11 +82,11 @@ export function kilitYazisi(cerceve: Cerceve): string {
   if (!cerceve.kilit) return '';
   switch (cerceve.kilit.tip) {
     case 'kelime':
-      return `${cerceve.kilit.esik} kelime`;
+      return t('{esik} kelime', { esik: cerceve.kilit.esik });
     case 'seri':
-      return `${cerceve.kilit.esik} gün üst üste`;
+      return t('{esik} gün üst üste', { esik: cerceve.kilit.esik });
     case 'set':
-      return 'Seti bitir';
+      return t('Seti bitir');
   }
 }
 

@@ -13,6 +13,7 @@ import {
   type Pencere,
 } from '../score';
 import type { AppState, Cevap, Progress as ProgressRow } from '../types';
+import { t } from '../dil';
 
 /**
  * ILERLEME — profil.
@@ -56,7 +57,7 @@ export function ProgressScreen({
   return (
     <Screen>
       <header className="flex items-center justify-between h-14 shrink-0">
-        <span className="word text-lg font-bold">İlerleme</span>
+        <span className="word text-lg font-bold">{t('İlerleme')}</span>
         {state.streakCount > 0 && <Streak count={state.streakCount} />}
       </header>
 
@@ -68,9 +69,9 @@ export function ProgressScreen({
           <div className="flex items-center gap-4">
             <Ikon ad="kartlar" ters className="h-8 w-8 shrink-0" />
             <span className="min-w-0 flex-1">
-              <span className="word block text-xl font-extrabold">Kelimeler</span>
+              <span className="word block text-xl font-extrabold">{t('Kelimeler')}</span>
               <span className="block text-sm text-white/70 mt-0.5">
-                Öğrendiğin kelimeler ve kancaları
+                {t('Öğrendiğin kelimeler ve kancaları')}
               </span>
             </span>
             <span className="text-xl text-white/60">›</span>
@@ -79,7 +80,7 @@ export function ProgressScreen({
 
         {/* --- Basari: donemsel yuzde --- */}
         <Card className="rise delay-1">
-          <h2 className="text-sm font-bold text-ink-soft mb-2.5">Başarı</h2>
+          <h2 className="text-sm font-bold text-ink-soft mb-2.5">{t('Başarı')}</h2>
           {/* Dort pencere tek satira sigmiyordu; grid esit boler */}
           <div className="grid grid-cols-4 gap-1 rounded-full bg-sunken p-1 mb-4">
             {PENCERELER.map((p) => (
@@ -106,7 +107,7 @@ export function ProgressScreen({
                 altinda duruyor — yoksa "%100" tek alistirmayla da yazilabilir.
               */}
               <p className="text-center text-sm text-ink-soft mt-2">
-                {basari.toplam} alıştırmanın {basari.dogru} tanesi doğru
+                {t('{toplam} alıştırmanın {dogru} tanesi doğru', { toplam: basari.toplam, dogru: basari.dogru })}
               </p>
               <div className="h-2.5 w-full rounded-full bg-sunken overflow-hidden mt-4">
                 <div
@@ -115,12 +116,12 @@ export function ProgressScreen({
                 />
               </div>
               <p className="text-center text-xs text-ink-faint mt-2.5">
-                {basari.kelime} kelime · {basari.cevap} cevap · {basari.yanlisCevap} yanlış
+                {t('{kelime} kelime · {cevap} cevap · {yanlis} yanlış', { kelime: basari.kelime, cevap: basari.cevap, yanlis: basari.yanlisCevap })}
               </p>
             </>
           ) : (
             <p className="text-center text-sm text-ink-faint py-6">
-              Bu dönemde henüz cevap yok.
+              {t('Bu dönemde henüz cevap yok.')}
             </p>
           )}
 
@@ -128,11 +129,11 @@ export function ProgressScreen({
           <p className="text-center text-xs text-ink-faint mt-4">
             {pencere === 'gun'
               ? duzen.calisilan > 0
-                ? 'Bugün çalıştın.'
-                : 'Bugün henüz çalışmadın.'
+                ? t('Bugün çalıştın.')
+                : t('Bugün henüz çalışmadın.')
               : duzen.toplam === null
-                ? `Toplam ${duzen.calisilan} gün çalıştın.`
-                : `Son ${duzen.toplam} günde ${duzen.calisilan} gün çalıştın.`}
+                ? t('Toplam {calisilan} gün çalıştın.', { calisilan: duzen.calisilan })
+                : t('Son {toplam} günde {calisilan} gün çalıştın.', { toplam: duzen.toplam, calisilan: duzen.calisilan })}
           </p>
         </Card>
 
@@ -143,15 +144,15 @@ export function ProgressScreen({
           (mavi birincil, sari kanca/ustalik, pembe seri, nane toplam).
         */}
         <div className="grid grid-cols-2 gap-3">
-          <Kutu buyuk={String(ogrenilen)} kucuk="kelime öğrendin" renk="bg-brand-soft" />
+          <Kutu buyuk={String(ogrenilen)} kucuk={t('kelime öğrendin')} renk="bg-brand-soft" />
           {/* "ustalık" kimseye bir sey soylemiyordu — ne oldugu soruldu */}
           <Kutu
             buyuk={ustalik === null ? '—' : `%${ustalik}`}
-            kucuk="kalıcılık"
+            kucuk={t('kalıcılık')}
             renk="bg-spark-soft"
           />
-          <Kutu buyuk={String(state.streakCount)} kucuk="günlük seri" renk="bg-blush-soft" />
-          <Kutu buyuk={String(toplamTekrar)} kucuk="toplam çalışma" renk="bg-grow-soft" />
+          <Kutu buyuk={String(state.streakCount)} kucuk={t('günlük seri')} renk="bg-blush-soft" />
+          <Kutu buyuk={String(toplamTekrar)} kucuk={t('toplam çalışma')} renk="bg-grow-soft" />
         </div>
 
         {/*
@@ -159,29 +160,28 @@ export function ProgressScreen({
           icine sigmayan tanim hemen altinda, tek satirda.
         */}
         <p className="-mt-1 px-2 text-center text-xs text-ink-faint leading-relaxed">
-          <b className="font-bold text-ink-soft">Kalıcılık</b>: kelimeleri ne kadar
-          sağlam bildiğin. Tekrar ettikçe yükselir.
+          <b className="font-bold text-ink-soft">{t('Kalıcılık')}</b>{t(': kelimeleri ne kadar sağlam bildiğin. Tekrar ettikçe yükselir.')}
         </p>
 
         {/* --- Neler yapabiliyorsun: BIRIKIMLI --- */}
         {yetenek.toplam > 0 && (
           <Card className="rise delay-2">
-            <h2 className="text-sm font-bold text-ink-soft mb-3">Neler yapabildin</h2>
+            <h2 className="text-sm font-bold text-ink-soft mb-3">{t('Neler yapabildin')}</h2>
             <div className="flex flex-col gap-3">
               <Yetenek
-                ad="Tanıştım"
+                ad={t('Tanıştım')}
                 sayi={yetenek.taniyor}
                 toplam={yetenek.toplam}
                 renk="bg-brand"
               />
               <Yetenek
-                ad="Türkçesinden seçtim"
+                ad={t('Türkçesinden seçtim')}
                 sayi={yetenek.seciyor}
                 toplam={yetenek.toplam}
                 renk="bg-spark"
               />
               <Yetenek
-                ad="Baştan yazdım"
+                ad={t('Baştan yazdım')}
                 sayi={yetenek.yaziyor}
                 toplam={yetenek.toplam}
                 renk="bg-grow"
@@ -195,7 +195,7 @@ export function ProgressScreen({
               ikincisi hemen ustteki kalicilik yuzdesi.
             */}
             <p className="text-xs text-ink-faint mt-4 leading-relaxed">
-              Kancaya bakmadan doğru yaptıkların sayılır.
+              {t('Kancaya bakmadan doğru yaptıkların sayılır.')}
             </p>
           </Card>
         )}
@@ -203,9 +203,9 @@ export function ProgressScreen({
         <Card className="rise delay-2">
           <div className="flex items-center justify-between">
             <div>
-              <p className="font-bold">Seri koruma</p>
+              <p className="font-bold">{t('Seri koruma')}</p>
               <p className="text-sm text-ink-soft mt-0.5">
-                Bir gün kaçırırsan seriyi korur. 7 günde bir kazanılır.
+                {t('Bir gün kaçırırsan seriyi korur. 7 günde bir kazanılır.')}
               </p>
             </div>
             <div className="flex gap-1 shrink-0 ml-3">

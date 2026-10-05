@@ -2,6 +2,7 @@ import { useMemo, useRef, useState } from 'react';
 import { shuffle } from '../exercise';
 import { Card as CardShell, Yonerge } from './ui';
 import type { Card } from '../types';
+import { t } from '../dil';
 
 /**
  * ESLESTIRME — merdivenin ilk basamagi.
@@ -57,7 +58,7 @@ export function Match({
 
   return (
     <CardShell className="w-full">
-      <p className="text-center mb-4"><Yonerge>Eşleşenleri bul</Yonerge></p>
+      <p className="text-center mb-4"><Yonerge>{t('Eşleşenleri bul')}</Yonerge></p>
       <div className="grid grid-cols-2 gap-2.5">
         <div className="flex flex-col gap-2.5">
           {sol.map((c) => (

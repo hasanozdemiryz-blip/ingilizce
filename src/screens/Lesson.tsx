@@ -10,6 +10,7 @@ import { CARD_BY_ID } from '../content';
 import { db, logAnswer, logSession } from '../db';
 import { introduceCard, learningCheck, learningDone, markKnown, reviewCard } from '../scheduler';
 import type { Card, Progress, Step } from '../types';
+import { t } from '../dil';
 
 type Bolum = 'yeni' | 'ogrenme' | 'tekrar';
 
@@ -343,16 +344,16 @@ export function Lesson({
       return {
         ikon: 'ogren',
         renk: 'brand',
-        baslik: `${n} kelimeyle tanıştın`,
-        sonraki: 'Şimdi kancalar tuttu mu bakalım',
+        baslik: t('{n} kelimeyle tanıştın', { n }),
+        sonraki: t('Şimdi kancalar tuttu mu bakalım'),
       };
     }
     if (simdiki === 'tekrar') {
       return {
         ikon: 'bekleyen',
         renk: 'grow',
-        baslik: 'Tekrarlar bitti',
-        sonraki: 'Şimdi bugünün yeni kelimeleri',
+        baslik: t('Tekrarlar bitti'),
+        sonraki: t('Şimdi bugünün yeni kelimeleri'),
       };
     }
     return null;
@@ -394,7 +395,7 @@ export function Lesson({
       ikon: simdiki.bolge.ikon,
       renk: simdiki.bolge.renk,
       baslik: simdiki.bolge.ad,
-      sayi: toplam > 0 ? `${dogru} / ${toplam} doğru` : undefined,
+      sayi: toplam > 0 ? t('{dogru} / {toplam} doğru', { dogru, toplam }) : undefined,
       sonraki: simdiki.bolge.sonraki,
     };
     const sonBolge = bolgeIndex + 1 >= ogrenmeBolgeleri.length;
@@ -411,7 +412,7 @@ export function Lesson({
     }
 
     void yeniKartlariYaz().then(() =>
-      gec('ogrenme', { ...ani, sonraki: 'Sırada bekleyen tekrarların' }),
+      gec('ogrenme', { ...ani, sonraki: t('Sırada bekleyen tekrarların') }),
     );
   }
 
@@ -439,9 +440,9 @@ export function Lesson({
   }
 
   const basilik: Record<Bolum, string> = {
-    yeni: 'Yeni kelimeler',
-    ogrenme: 'Öğrenme testi',
-    tekrar: 'Tekrar',
+    yeni: t('Yeni kelimeler'),
+    ogrenme: t('Öğrenme testi'),
+    tekrar: t('Tekrar'),
   };
 
   /*
@@ -450,7 +451,7 @@ export function Lesson({
   */
   const bolumEtiketi =
     bolumler.length > 1
-      ? `Bölüm ${bolumler.indexOf(bolum) + 1}/${bolumler.length} · ${basilik[bolum]}`
+      ? t('Bölüm {no}/{toplam} · {ad}', { no: bolumler.indexOf(bolum) + 1, toplam: bolumler.length, ad: basilik[bolum] })
       : basilik[bolum];
 
   /**
@@ -465,17 +466,16 @@ export function Lesson({
   const uyari = cikisSoruluyor ? (
     <div className="fixed inset-0 z-20 flex items-end justify-center bg-ink/40 px-5 pb-8 backdrop-blur-sm">
       <div className="rise w-full max-w-md rounded-card bg-white p-6 shadow-[var(--shadow-lift)]">
-        <p className="word text-xl font-extrabold">Ders yarıda kalacak</p>
+        <p className="word text-xl font-extrabold">{t('Ders yarıda kalacak')}</p>
         <p className="text-sm text-ink-soft mt-2">
-          Bu dersin <b>{dersKartlari.length} yeni kelimesi henüz kaydedilmedi</b>. Şimdi
-          çıkarsan hiçbiri öğrenilmiş sayılmaz ve ders bir dahakine <b>baştan</b> başlar.
+          {t('Bu dersin {n} yeni kelimesi henüz kaydedilmedi. Şimdi çıkarsan hiçbiri öğrenilmiş sayılmaz ve ders bir dahakine baştan başlar.', { n: dersKartlari.length })}
         </p>
         <div className="mt-5 flex flex-col gap-2.5">
           <Button variant="brand" onClick={() => setCikisSoruluyor(false)}>
-            Derse dön
+            {t('Derse dön')}
           </Button>
           <Button variant="ghost" onClick={onExit}>
-            Yine de çık
+            {t('Yine de çık')}
           </Button>
         </div>
       </div>
@@ -522,7 +522,7 @@ export function Lesson({
                 onClick={() => biliyorum(card)}
                 className="rounded-full bg-white/70 px-3 py-1.5 text-xs font-bold text-ink-soft shadow-[var(--shadow-soft)] transition-all active:scale-95 hover:bg-white"
               >
-                Bunu biliyorum
+                {t('Bunu biliyorum')}
               </button>
               <span className="tabular-nums">
                 {i + 1} / {dersKartlari.length}
@@ -546,20 +546,20 @@ export function Lesson({
         {sonBilinen && (
           <div className="rise shrink-0 mb-3 flex items-center justify-center gap-2 text-sm">
             <span className="text-ink-faint">
-              <b className="word font-bold text-ink-soft">{sonBilinen.card.en}</b> kenara ayrıldı
+              <b className="word font-bold text-ink-soft">{sonBilinen.card.en}</b>{' '}{t('kenara ayrıldı')}
             </span>
             <button
               onClick={bilinenGeriAl}
               className="rounded-full bg-sunken px-3 py-1.5 text-xs font-bold text-ink transition-all active:scale-95"
             >
-              Geri al
+              {t('Geri al')}
             </button>
           </div>
         )}
 
         <div className="shrink-0">
           <Button variant="brand" onClick={() => kartiGor(card)}>
-            Devam
+            {t('Devam')}
           </Button>
         </div>
         {uyari}

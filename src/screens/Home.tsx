@@ -7,6 +7,7 @@ import { uyelikVarMi, type Uye } from '../uyelik';
 import { CARD_BY_ID, CARDS, ogrenilenKancalar, setBittiMi } from '../content';
 import { relativeDue } from '../dates';
 import type { AppState, Card as CardType, Progress } from '../types';
+import { t } from '../dil';
 
 type Props = {
   progress: Progress[];
@@ -162,7 +163,7 @@ export function Home({
           <button
             onClick={onHesap}
             className="flex items-center gap-3 min-w-0 rounded-2xl -ml-1 pl-1 pr-2 py-1 transition hover:bg-sunken/70 active:scale-[0.98]"
-            aria-label={uye ? 'Hesap menüsü' : 'Hesabım ve ayarlar'}
+            aria-label={uye ? t('Hesap menüsü') : t('Hesabım ve ayarlar')}
           >
             <Avatar avatar={state.profil.avatar} cerceve={state.profil.cerceve} boyut="sm" />
             {/*
@@ -175,7 +176,7 @@ export function Home({
             </span>
           </button>
         ) : (
-          <span className="word text-base font-extrabold text-ink-soft">Hafızada İngilizce</span>
+          <span className="word text-base font-extrabold text-ink-soft">{t('Hafızada İngilizce')}</span>
         )}
         <span className="flex shrink-0 items-center gap-2">
           {state.streakCount > 0 && <Streak count={state.streakCount} />}
@@ -185,7 +186,7 @@ export function Home({
               onClick={onUyelik}
               className="rounded-full bg-white px-3.5 py-1.5 text-sm font-bold text-brand-deep shadow-[var(--shadow-soft)] transition hover:bg-brand-soft active:scale-95"
             >
-              Giriş yap
+              {t('Giriş yap')}
             </button>
           )}
         </span>
@@ -210,7 +211,7 @@ export function Home({
         <Card className="rise !py-4">
           <div className="flex items-baseline justify-between mb-2.5">
             <span className="text-sm font-bold text-ink-soft">
-              {setBitti ? 'Set tamamlandı' : 'Bugünün hedefi'}
+              {setBitti ? t('Set tamamlandı') : t('Bugünün hedefi')}
             </span>
             <span className="word text-sm font-extrabold tabular-nums">
               {setBitti
@@ -237,12 +238,12 @@ export function Home({
             bir gunde soylenecek tek sey var: istedigin kadar pekistir.
           */
           <div className="rise rounded-card p-6 bg-gradient-to-br from-grow to-[#5fe0ad] text-white shadow-[0_16px_34px_-16px_rgba(43,196,138,0.95)]">
-            <p className="text-sm font-medium text-white/85">Günlük hedef tamam ✓</p>
-            <p className="word text-3xl font-extrabold mt-0.5 mb-1">Hızlı tekrar</p>
+            <p className="text-sm font-medium text-white/85">{t('Günlük hedef tamam ✓')}</p>
+            <p className="word text-3xl font-extrabold mt-0.5 mb-1">{t('Hızlı tekrar')}</p>
             <p className="text-sm text-white/80 mb-4">
               {todaysCount > 0
-                ? `Bugünün ${todaysCount} kelimesini istediğin kadar çalış.`
-                : 'Bekleyen tekrarlarını çalışabilirsin.'}{' '}
+                ? t('Bugünün {todaysCount} kelimesini istediğin kadar çalış.', { todaysCount })
+                : t('Bekleyen tekrarlarını çalışabilirsin.')}{' '}
               Yeni kelimeler gece 00:00'da gelir.
             </p>
             {/*
@@ -271,7 +272,7 @@ export function Home({
             )}
 
             <Button variant="soft" onClick={todaysCount > 0 ? onQuickReview : onStart}>
-              Hızlı tekrar
+              {t('Hızlı tekrar')}
             </Button>
           </div>
         ) : bosGun && setBitti ? (
@@ -284,24 +285,24 @@ export function Home({
             <SetFinale kancalar={ogrenilenKancalar(progress)} variant="kart" />
             {aheadCount > 0 && (
               <Button variant="soft" onClick={onPractice}>
-                Yine de tekrar et
+                {t('Yine de tekrar et')}
               </Button>
             )}
           </div>
         ) : bosGun ? (
           <Card className="rise text-center py-10">
             <Ikon ad="ogren" className="h-14 w-14 mx-auto mb-3" />
-            <p className="word text-2xl font-extrabold">Bugünlük tamam</p>
+            <p className="word text-2xl font-extrabold">{t('Bugünlük tamam')}</p>
             <p className="text-ink-soft mt-2 text-sm">
-              {siradaki ? `Sıradaki tekrar ${relativeDue(siradaki)}.` : 'Yarın görüşürüz.'}
+              {siradaki ? t('Sıradaki tekrar {p0}.', { p0: relativeDue(siradaki) }) : t('Yarın görüşürüz.')}
             </p>
             {aheadCount > 0 && (
               <div className="mt-5">
                 <Button variant="soft" onClick={onPractice}>
-                  Yine de tekrar et
+                  {t('Yine de tekrar et')}
                 </Button>
                 <p className="text-xs text-ink-faint mt-2">
-                  Sırada bekleyen {aheadCount} kartı öne alır.
+                  {t('Sırada bekleyen {n} kartı öne alır.', { n: aheadCount })}
                 </p>
               </div>
             )}
@@ -309,19 +310,19 @@ export function Home({
         ) : (
           <div className="rise rounded-card p-6 bg-spark text-ink shadow-[0_14px_30px_-16px_rgba(240,184,0,0.9)]">
             <p className="text-sm font-bold text-ink/55">
-              {ilkDers ? 'Hazır' : yeniGun ? 'Yeni gün' : 'Bugünün dersi'}
+              {ilkDers ? t('Hazır') : yeniGun ? t('Yeni gün') : t('Bugünün dersi')}
             </p>
             <p className="word text-3xl font-extrabold mt-0.5 mb-1">
-              {ilkDers ? 'İlk dersin hazır' : yeniGun ? 'Yeni güne başla' : paket}
+              {ilkDers ? t('İlk dersin hazır') : yeniGun ? t('Yeni güne başla') : paket}
             </p>
             <p className="text-sm text-ink/65 mb-4">
               {ilkDers
-                ? `${newCards.length} yeni kelime seni bekliyor.`
+                ? t('{n} yeni kelime seni bekliyor.', { n: newCards.length })
                 : yeniGun
                   ? paket
                   : newCards.length > 0
-                    ? 'Önce kelimeler, sonra öğrenme testi.'
-                    : 'Bugün gelen kelimeler seni bekliyor.'}
+                    ? t('Önce kelimeler, sonra öğrenme testi.')
+                    : t('Bugün gelen kelimeler seni bekliyor.')}
             </p>
             {/*
               DERS ONIZLEMESI. Kart yalnizca "5 kelime" diyordu ve ekranin
@@ -345,7 +346,7 @@ export function Home({
               </ul>
             )}
 
-            <Button onClick={onStart}>Başla</Button>
+            <Button onClick={onStart}>{t('Başla')}</Button>
 
             {/*
               Ikinci bir HEDEF degil, ayni dersin sirasi. Yalnizca tekrar
@@ -357,7 +358,7 @@ export function Home({
                 onClick={onReviewFirst}
                 className="mt-3 w-full text-center text-sm font-semibold text-ink/70 underline decoration-ink/30 underline-offset-4 transition-opacity active:opacity-60"
               >
-                Önce {tekrar} tekrarı yap
+                {t('Önce {n} tekrarı yap', { n: tekrar })}
               </button>
             )}
           </div>
@@ -372,7 +373,7 @@ export function Home({
         */}
         {sonKancalar.length > 0 && (
           <Card className="rise delay-2 !py-4">
-            <h2 className="text-sm font-bold text-ink-soft mb-2.5">Son tanıştıkların</h2>
+            <h2 className="text-sm font-bold text-ink-soft mb-2.5">{t('Son tanıştıkların')}</h2>
             <div className="flex flex-wrap gap-1.5">
               {sonKancalar.map((c) => (
                 <span key={c.id} className="rounded-full bg-sunken px-3 py-1.5 text-sm">

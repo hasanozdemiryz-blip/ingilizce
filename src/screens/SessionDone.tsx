@@ -5,6 +5,7 @@ import { Button, Ikon, Screen, Streak } from '../components/ui';
 import { useUyelik, uyelikVarMi } from '../uyelik';
 import { siradakiDavet } from '../davet';
 import type { Kazanim } from '../cerceveler';
+import { t } from '../dil';
 
 /**
  * Ders bitisi.
@@ -84,8 +85,8 @@ export function SessionDone({
             <Ikon ad="ogren" className="pop h-16 w-16 mx-auto" />
 
             <div className="rise delay-1">
-              <h1 className="word text-3xl font-bold">Ders bitti</h1>
-              <p className="text-ink-soft mt-2">{count} kelime çalıştın.</p>
+              <h1 className="word text-3xl font-bold">{t('Ders bitti')}</h1>
+              <p className="text-ink-soft mt-2">{t('{n} kelime çalıştın.', { n: count })}</p>
             </div>
           </>
         )}
@@ -94,7 +95,7 @@ export function SessionDone({
           <div className="rise delay-2 w-full max-w-[16rem]">
             <p className="word text-5xl font-extrabold tabular-nums leading-none">%{yuzde}</p>
             <p className="text-sm text-ink-soft mt-2">
-              {dogru} doğru · {toplam - dogru} yanlış
+              {t('{dogru} doğru · {yanlis} yanlış', { dogru, yanlis: toplam - dogru })}
             </p>
             <div className="h-2.5 w-full rounded-full bg-white/70 overflow-hidden mt-3">
               <div
@@ -112,7 +113,7 @@ export function SessionDone({
         */}
         {ilerleyen > 0 && (
           <p className="rise delay-3 text-sm font-bold text-[#128a5f] bg-grow-soft rounded-full px-4 py-2">
-            {ilerleyen} kelime bir basamak ilerledi
+            {t('{n} kelime bir basamak ilerledi', { n: ilerleyen })}
           </p>
         )}
 
@@ -120,7 +121,7 @@ export function SessionDone({
           <div className="rise delay-3">
             <Streak count={streak} />
             <p className="text-sm text-ink-faint mt-2">
-              {streak === 1 ? 'İlk günün' : `${streak} gündür aralıksız`}
+              {streak === 1 ? t('İlk günün') : t('{streak} gündür aralıksız', { streak })}
             </p>
           </div>
         )}
@@ -136,7 +137,7 @@ export function SessionDone({
                 onClick={() => setGirisAcik(true)}
                 className="rounded-2xl bg-spark px-4 py-2 text-sm font-bold text-ink active:scale-95 transition"
               >
-                {uye ? 'Tamamla' : 'Hesap aç'}
+                {uye ? t('Tamamla') : t('Hesap aç')}
               </button>
               <button
                 onClick={() => {
@@ -145,12 +146,12 @@ export function SessionDone({
                 }}
                 className="rounded-full px-3 py-2 text-sm font-semibold text-ink-faint active:scale-95 transition"
               >
-                Sonra
+                {t('Sonra')}
               </button>
             </div>
           </div>
         )}
-        <Button onClick={onHome}>Ana ekran</Button>
+        <Button onClick={onHome}>{t('Ana ekran')}</Button>
       </div>
 
       {girisAcik && (

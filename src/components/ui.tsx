@@ -3,6 +3,7 @@ import { seslendir, useTelaffuz } from '../speech';
 import { ikonUrl, type IkonAd } from '../icons';
 import kilit from '../assets/brand/kilit.webp';
 import isaret from '../assets/brand/isaret.webp';
+import { t } from '../dil';
 
 /**
  * Arayuz ikonu — markanin cizim setinden (bkz. icons.ts).
@@ -133,7 +134,7 @@ export function BackButton({ onClick }: { onClick: () => void }) {
     <button
       onClick={onClick}
       className="h-10 w-10 rounded-full bg-white text-ink shadow-[0_6px_16px_-4px_rgba(22,35,58,0.28)] ring-1 ring-black/5 grid place-items-center hover:bg-white active:scale-95 transition"
-      aria-label="Geri"
+      aria-label={t('Geri')}
     >
       <svg
         viewBox="0 0 24 24"
@@ -274,7 +275,7 @@ export function SpeakButton({
   return (
     <button
       type="button"
-      aria-label={`${word} nasil okunur`}
+      aria-label={t('{word} nasil okunur', { word })}
       onClick={(e) => {
         e.stopPropagation(); // kart yuzunde "cevabi goster"i tetiklemesin
         seslendir(word);

@@ -1,4 +1,5 @@
 import { useUyelik, uyelikVarMi } from '../uyelik';
+import { t } from '../dil';
 
 /**
  * ANA EKRANDAKI UYELIK SERIDI.
@@ -56,10 +57,10 @@ export function UyelikSerit({
       </span>
       <span className="min-w-0 flex-1">
         <span className="block text-sm font-bold text-ink">
-          {hicIlerleme ? 'Üye ol, ilerlemen kaybolmasın' : `${ogrenilen} kelimen yalnızca bu cihazda`}
+          {hicIlerleme ? t('Üye ol, ilerlemen kaybolmasın') : t('{ogrenilen} kelimen yalnızca bu cihazda', { ogrenilen })}
         </span>
         <span className="block text-xs text-ink-soft">
-          {hicIlerleme ? 'Telefonda başla, bilgisayarda sürdür.' : 'Üye ol, cihaza bağlı kalmasın.'}
+          {hicIlerleme ? t('Telefonda başla, bilgisayarda sürdür.') : t('Üye ol, cihaza bağlı kalmasın.')}
         </span>
       </span>
       <span className="text-sm font-extrabold text-ink" aria-hidden>

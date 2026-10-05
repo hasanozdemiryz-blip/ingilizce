@@ -4,6 +4,7 @@
  * dagitim kanali. (Kart paylasimi gorseller gelince — Faz 2/4.)
  */
 import { dosyayiVer } from './dosya';
+import { t } from './dil';
 
 const W = 1080;
 const H = 1350; // 4:5
@@ -142,7 +143,7 @@ export async function renderHookBoard(pairs: { en: string; hook: string }[]): Pr
   ctx.fillText('her kelime bir görüntüye bağlı', W / 2, H - 80);
 
   return new Promise((resolve, reject) => {
-    canvas.toBlob((b) => (b ? resolve(b) : reject(new Error('Görsel üretilemedi'))), 'image/png');
+    canvas.toBlob((b) => (b ? resolve(b) : reject(new Error(t('Görsel üretilemedi')))), 'image/png');
   });
 }
 

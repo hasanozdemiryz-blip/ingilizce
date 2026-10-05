@@ -4,6 +4,7 @@ import { CikisOnayi } from './Cikis';
 import { Card } from './ui';
 import { uyeAdi, type Uye } from '../uyelik';
 import type { Profil } from '../types';
+import { t } from '../dil';
 
 /**
  * "Giris yapildi" isareti — yesil tik ve giris yolu.
@@ -13,7 +14,7 @@ import type { Profil } from '../types';
  * (yan menu, ana ekran basligi, hesap menusu) ayni sekilde duruyor.
  */
 export function GirisRozeti({ uye, kucuk = false }: { uye: Uye; kucuk?: boolean }) {
-  const yol = uye.saglayici === 'google' ? 'Google ile' : 'E-posta ile';
+  const yol = uye.saglayici === 'google' ? t('Google ile') : t('E-posta ile');
   return (
     <span
       className={`inline-flex items-center gap-1 font-bold text-grow-deep ${
@@ -28,7 +29,7 @@ export function GirisRozeti({ uye, kucuk = false }: { uye: Uye; kucuk?: boolean 
       >
         ✓
       </span>
-      {kucuk ? 'Giriş yapıldı' : `${yol} giriş yapıldı`}
+      {kucuk ? t('Giriş yapıldı') : t('{yol} giriş yapıldı', { yol })}
     </span>
   );
 }
@@ -78,7 +79,7 @@ export function HesapMenusu({
       }}
       role="dialog"
       aria-modal="true"
-      aria-label="Hesap menüsü"
+      aria-label={t('Hesap menüsü')}
     >
       <Card className="rise w-full max-w-sm p-0 overflow-hidden">
         <div className="flex items-center gap-3 px-5 pt-5 pb-4">
@@ -92,10 +93,10 @@ export function HesapMenusu({
           </div>
         </div>
         <div className="border-t border-line">
-          <MenuSatiri onClick={sec(onProfil)}>Profili düzenle</MenuSatiri>
-          <MenuSatiri onClick={sec(onAyarlar)}>Hesabım ve ayarlar</MenuSatiri>
+          <MenuSatiri onClick={sec(onProfil)}>{t('Profili düzenle')}</MenuSatiri>
+          <MenuSatiri onClick={sec(onAyarlar)}>{t('Hesabım ve ayarlar')}</MenuSatiri>
           <MenuSatiri onClick={() => setCikisAcik(true)} vurgu>
-            Çıkış yap
+            {t('Çıkış yap')}
           </MenuSatiri>
         </div>
       </Card>

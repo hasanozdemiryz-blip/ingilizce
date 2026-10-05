@@ -49,6 +49,7 @@ import { Splash } from './screens/Splash';
 import { useToday } from './today';
 import { WordList } from './screens/WordList';
 import type { Card, Progress } from './types';
+import { t } from './dil';
 
 /** Sekmeli ekranlarin disindaki akis — alt menu burada gizli. */
 type Flow =
@@ -229,8 +230,8 @@ export default function App() {
     }
     if (tercihDamgasi === ilkDamga.current) return;
     ilkDamga.current = tercihDamgasi;
-    const t = setTimeout(() => void senkronla(), 1500);
-    return () => clearTimeout(t);
+    const zamanlayici = setTimeout(() => void senkronla(), 1500);
+    return () => clearTimeout(zamanlayici);
   }, [veriVar, tercihDamgasi]);
 
   if (!data) return <Splash />;
@@ -504,16 +505,16 @@ export default function App() {
       {cikisSoruluyor && (
         <div className="fixed inset-0 z-20 flex items-end justify-center bg-ink/40 px-5 pb-8 backdrop-blur-sm">
           <Kutu className="rise w-full max-w-md p-6">
-            <p className="word text-xl font-extrabold">Çıkmak istiyor musun?</p>
+            <p className="word text-xl font-extrabold">{t('Çıkmak istiyor musun?')}</p>
             <p className="text-sm text-ink-soft mt-2">
-              İlerlemen kayıtlı, kaldığın yerden devam edebilirsin.
+              {t('İlerlemen kayıtlı, kaldığın yerden devam edebilirsin.')}
             </p>
             <div className="mt-5 flex flex-col gap-2.5">
               <Button variant="brand" onClick={() => setCikisSoruluyor(false)}>
-                Vazgeç
+                {t('Vazgeç')}
               </Button>
               <Button variant="ghost" onClick={() => void uygulamadanCik()}>
-                Çık
+                {t('Çık')}
               </Button>
             </div>
           </Kutu>

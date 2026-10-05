@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { t } from '../dil';
 
 /**
  * Yazarak cevap.
@@ -13,7 +14,7 @@ import { useEffect, useRef, useState } from 'react';
 export function TypeAnswer({
   onSubmit,
   disabled,
-  placeholder = 'İngilizcesini yaz…',
+  placeholder = t('İngilizcesini yaz…'),
 }: {
   onSubmit: (value: string) => void;
   disabled?: boolean;
@@ -55,7 +56,7 @@ export function TypeAnswer({
         disabled={disabled || value.trim().length === 0}
         className="shrink-0 rounded-full bg-brand px-6 py-4 font-bold text-white shadow-[var(--shadow-soft)] transition-all active:scale-95 disabled:opacity-30"
       >
-        Bak
+        {t('Bak')}
       </button>
     </div>
   );

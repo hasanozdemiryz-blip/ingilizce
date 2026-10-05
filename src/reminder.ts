@@ -15,6 +15,7 @@
  * da oyle olmali. "Serin kirilacak" demiyoruz.
  */
 import { useSyncExternalStore } from 'react';
+import { t } from './dil';
 
 type Eklenti = (typeof import('@capacitor/local-notifications'))['LocalNotifications'];
 
@@ -83,7 +84,7 @@ export async function hatirlatmayiKur(saat: number, dakika = 0): Promise<boolean
         {
           id: KIMLIK,
           title: 'Hafızada İngilizce',
-          body: 'Bugünün kelimeleri hazır.',
+          body: t('Bugünün kelimeleri hazır.'),
           schedule: { on: { hour: saat, minute: dakika }, allowWhileIdle: true },
         },
       ],

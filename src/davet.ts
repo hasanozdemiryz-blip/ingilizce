@@ -1,4 +1,5 @@
 import type { Kazanim } from './cerceveler';
+import { t } from './dil';
 
 /**
  * UYELIK DAVETININ ZAMANLAMASI.
@@ -33,26 +34,26 @@ const ESIKLER: Esik[] = [
   {
     id: 'set',
     kosul: (k) => k.setBitti,
-    baslik: 'Seti bitirdin',
-    metin: 'Bu kadar emeğin tek bir cihazda durmasın. Üye ol, nereden açarsan aç yanında olsun.',
+    baslik: t('Seti bitirdin'),
+    metin: t('Bu kadar emeğin tek bir cihazda durmasın. Üye ol, nereden açarsan aç yanında olsun.'),
   },
   {
     id: 'seri3',
     kosul: (k) => k.seri >= 3,
-    baslik: `${3} gündür aralıksız`,
-    metin: 'Alışkanlık oluşuyor. Üye olursan bu seri tarayıcını temizlesen de bozulmaz.',
+    baslik: t('{p0} gündür aralıksız', { p0: 3 }),
+    metin: t('Alışkanlık oluşuyor. Üye olursan bu seri tarayıcını temizlesen de bozulmaz.'),
   },
   {
     id: 'kelime10',
     kosul: (k) => k.ogrenilen >= 10,
-    baslik: '10 kelime oldu',
-    metin: 'Onu da kancasıyla öğrendin. Üye ol ki bu liste bu cihaza bağlı kalmasın.',
+    baslik: t('10 kelime oldu'),
+    metin: t('Onu da kancasıyla öğrendin. Üye ol ki bu liste bu cihaza bağlı kalmasın.'),
   },
   {
     id: 'ilk',
     kosul: (k) => k.ogrenilen >= 1,
-    baslik: 'İlk kelimelerin hazır',
-    metin: 'İlerlemen şu an yalnızca bu cihazda. Hesap açarsan kaybolmaz.',
+    baslik: t('İlk kelimelerin hazır'),
+    metin: t('İlerlemen şu an yalnızca bu cihazda. Hesap açarsan kaybolmaz.'),
   },
 ];
 

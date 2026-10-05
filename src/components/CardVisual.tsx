@@ -1,4 +1,5 @@
 import type { Card } from '../types';
+import { t } from '../dil';
 
 /**
  * Kart gorseli — urunun kalbi.
@@ -37,7 +38,7 @@ export function CardVisual({ card, size = 'full' }: { card: Card; size?: 'full' 
       className={`w-full ${ratio} rounded-[1.4rem] bg-gradient-to-br ${zeminOf(card.id)} px-6 flex flex-col items-center justify-center text-center gap-2 overflow-hidden`}
     >
       <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-ink/35">
-        görsel gelecek
+        {t('görsel gelecek')}
       </span>
       <p className="text-sm font-medium leading-snug text-ink/70 max-w-[30ch]">{card.imageNote}</p>
     </div>

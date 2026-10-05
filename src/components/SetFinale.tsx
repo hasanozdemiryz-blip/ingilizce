@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button, Card, Ikon } from './ui';
 import { shareHookBoard } from '../share';
+import { t } from '../dil';
 
 /**
  * SET SONU.
@@ -42,12 +43,12 @@ export function SetFinale({
   const govde = (
     <>
       <p className="text-ink-soft mt-2 text-sm">
-        Setteki {kancalar.length} kelimenin hepsini tanıdın.
+        {t('Setteki {n} kelimenin hepsini tanıdın.', { n: kancalar.length })}
       </p>
 
       <div className="mt-5">
         <Button variant="brand" onClick={paylas} disabled={paylasiliyor}>
-          {paylasiliyor ? 'Hazırlanıyor…' : 'Kanca panosunu paylaş'}
+          {paylasiliyor ? t('Hazırlanıyor…') : t('Kanca panosunu paylaş')}
         </Button>
       </div>
 
@@ -57,7 +58,7 @@ export function SetFinale({
         "bitti" kelimesi uygulamayi silmenin davetiyesi olur.
       */}
       <p className="text-xs text-ink-faint mt-4 leading-relaxed">
-        Yeni kelimeler yakında geliyor. O zamana kadar tekrarlarla devam.
+        {t('Yeni kelimeler yakında geliyor. O zamana kadar tekrarlarla devam.')}
       </p>
     </>
   );
@@ -66,7 +67,7 @@ export function SetFinale({
     return (
       <Card className="rise text-center py-8">
         <Ikon ad="kutlama" className="h-14 w-14 mx-auto mb-2" />
-        <p className="word text-2xl font-extrabold">Seti bitirdin</p>
+        <p className="word text-2xl font-extrabold">{t('Seti bitirdin')}</p>
         {govde}
       </Card>
     );
@@ -75,7 +76,7 @@ export function SetFinale({
   return (
     <div className="text-center">
       <Ikon ad="kutlama" className="pop h-16 w-16 mx-auto" />
-      <h1 className="word text-3xl font-bold mt-4">Seti bitirdin</h1>
+      <h1 className="word text-3xl font-bold mt-4">{t('Seti bitirdin')}</h1>
       {govde}
     </div>
   );
