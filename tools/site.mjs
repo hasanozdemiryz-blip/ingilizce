@@ -107,8 +107,13 @@ const KISILER = [
  */
 const VITRIN = 20;
 
-/** Kanca bolumunun havuzu: kancasi en net anlasilan dokuz kart. */
-const HAVUZ = ['snake', 'bad', 'fox', 'leaf', 'boat', 'cup', 'sell', 'dark', 'salt'];
+/**
+ * Kanca bolumunun havuzu: kancasi en net anlasilan dokuz kart — YALNIZCA
+ * sitede sayfasi olan (VITRIN) kelimelerden. Disaridan bir kelime ana
+ * sayfada donerse, sakladigimiz kancalari orada gostermis oluruz;
+ * derleme bu durumda durur (bkz. `derle`).
+ */
+const HAVUZ = ['sell', 'door', 'bad', 'car', 'dust', 'dark', 'salt', 'sick', 'fish'];
 const GORUNEN = 3;
 
 /** Bolum cizimleri: brand/anasayfa/<ad>.png */
@@ -383,6 +388,8 @@ async function derle(hedef) {
     .sort((a, b) => a.order - b.order);
   const kelimeler = setKartlari.slice(0, VITRIN);
   const yayinda = new Set(kelimeler.map((k) => k.id));
+  const disarida = HAVUZ.filter((id) => !yayinda.has(id));
+  if (disarida.length) throw new Error(`kanca havuzunda vitrin disi kelime: ${disarida.join(', ')}`);
   for (const k of kelimeler) {
     k.sayfaResmi = await webpYaz(
       hedef,
