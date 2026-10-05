@@ -219,4 +219,17 @@ export type AppState = {
    * Eski kayitlarda alan yok; yoklugu ACIK sayilir.
    */
   olcum?: boolean;
+  /**
+   * Kullanicinin bir tercihi ya da profili EN SON ne zaman degistirdi (ms).
+   *
+   * Senkron tercihleri bu damgaya gore birlestiriyor (bkz. senkron.ts).
+   * Yokken tercihler paketin ders hareketine gore seciliyordu: telefonda
+   * avatar degistirip bilgisayarda ders yapan kullanicinin yeni avatari
+   * bilgisayarin eski profiliyle eziliyordu.
+   *
+   * Yalnizca KULLANICININ yaptigi degisiklik damgalaniyor (`tercihKaydet`).
+   * Acilista kendiliginden uretilen profil damgalanmiyor; damgalansaydi
+   * yeni kurulmus bos bir cihaz sunucudaki tercihleri ezerdi.
+   */
+  tercihDegisti?: number;
 };

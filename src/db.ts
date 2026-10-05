@@ -229,7 +229,7 @@ export async function profilAdiniGuncelle(ad: string): Promise<void> {
   if (!temiz) return;
   const state = await getState();
   if (!state.profil || state.profil.ad === temiz) return;
-  await setState({ profil: { ...state.profil, ad: temiz } });
+  await tercihKaydet({ profil: { ...state.profil, ad: temiz } });
 }
 
 export async function setState(patch: Partial<AppState>): Promise<AppState> {
@@ -237,6 +237,14 @@ export async function setState(patch: Partial<AppState>): Promise<AppState> {
   await db.meta.put({ key: APP_KEY, value: next });
   return next;
 }
+
+/**
+ * Kullanicinin kendi degistirdigi bir tercihi ya da profili yazar ve
+ * damgalar — senkron bu damgayla hangi cihazin tercihinin gecerli
+ * oldugunu biliyor (bkz. types.ts `tercihDegisti`).
+ */
+export const tercihKaydet = (patch: Partial<AppState>): Promise<AppState> =>
+  setState({ ...patch, tercihDegisti: Date.now() });
 
 /**
  * Seans tamamlaninca cagrilir: gunluk etkinligi kaydeder ve seriyi isler.

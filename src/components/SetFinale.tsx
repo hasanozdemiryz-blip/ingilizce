@@ -57,8 +57,7 @@ export function SetFinale({
         "bitti" kelimesi uygulamayi silmenin davetiyesi olur.
       */}
       <p className="text-xs text-ink-faint mt-4 leading-relaxed">
-        Sonraki set hazırlanıyor. O gelene kadar tekrarların devam ediyor — bağlar asıl orada
-        kalıcı oluyor.
+        Yeni kelimeler yakında geliyor. O zamana kadar tekrarlarla devam.
       </p>
     </>
   );

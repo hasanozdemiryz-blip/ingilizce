@@ -126,6 +126,36 @@ export function birlestir(a: Paket, b: Paket): Paket {
     ...(b.state.uyelikDavetGorulen ?? []),
   ]);
 
+  /*
+    Tercihler ve profil KENDI damgalariyla seciliyor, paketin ders
+    hareketiyle degil. Yoksa telefonda avatar degistirip sonra
+    bilgisayarda ders yapan kullanicinin bilgisayari "daha taze" sayiliyor
+    ve eski avatari telefondakini eziyordu. Iki tarafta da damga yoksa
+    (eski paketler) eski kural: taze paketinki.
+  */
+  const da = a.state.tercihDegisti ?? 0;
+  const db_ = b.state.tercihDegisti ?? 0;
+  const tercihKaynagi = da === db_ ? taze : da > db_ ? a : b;
+  const t = tercihKaynagi.state;
+  const tercihler: Partial<AppState> = {
+    profil: t.profil,
+    sound: t.sound,
+    dailyLimit: t.dailyLimit,
+    reminderHour: t.reminderHour,
+    reminderMinute: t.reminderMinute,
+    olcum: t.olcum,
+    tercihDegisti: t.tercihDegisti,
+  };
+  // Tanimsiz alan karsi tarafin degerini silmesin.
+  for (const k of Object.keys(tercihler) as (keyof AppState)[]) {
+    if (tercihler[k] === undefined) delete tercihler[k];
+  }
+
+  const sonDers = [a.state.lastSessionDate, b.state.lastSessionDate]
+    .filter((x): x is string => Boolean(x))
+    .sort()
+    .pop();
+
   return {
     surum: SURUM,
     yazildi: taze.yazildi,
@@ -135,6 +165,8 @@ export function birlestir(a: Paket, b: Paket): Paket {
       // Tercihler ve profil taze paketten: kullanicinin SON karari gecerli.
       ...eski.state,
       ...taze.state,
+      ...tercihler,
+      lastSessionDate: sonDers ?? null,
       // Kazanimlar kaybolmamali.
       streakCount: enBuyuk(a.state.streakCount, b.state.streakCount),
       bestStreak: enBuyuk(a.state.bestStreak, b.state.bestStreak),

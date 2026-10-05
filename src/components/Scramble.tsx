@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { harfKarolari } from '../exercise';
-import { Card as CardShell, HookChip } from './ui';
+import { Card as CardShell, HookChip, Yonerge } from './ui';
 import type { Card } from '../types';
 
 /**
@@ -64,7 +64,7 @@ export function Scramble({
     <div className="flex flex-col gap-3">
       <CardShell className="w-full">
         <div className="flex flex-col items-center gap-3 py-6">
-          <span className="text-sm text-ink-faint">Harfleri sıraya diz</span>
+          <Yonerge>Harfleri sıraya diz</Yonerge>
           <p className="text-[2.25rem] leading-none font-extrabold text-center">{card.tr}</p>
           {hookRevealed && (
             <span className="pop">

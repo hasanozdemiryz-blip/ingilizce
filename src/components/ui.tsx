@@ -101,7 +101,7 @@ export function Screen({
  */
 export function TopBar({ left, right }: { left?: ReactNode; right?: ReactNode }) {
   return (
-    <div className="flex items-center justify-between h-12 shrink-0 text-sm font-medium text-ink-soft">
+    <div className="flex items-center justify-between h-12 mb-1 shrink-0 text-sm font-medium text-ink-soft">
       <div>{left}</div>
       <div className="tabular-nums">{right}</div>
     </div>
@@ -123,18 +123,21 @@ export function TopBar({ left, right }: { left?: ReactNode; right?: ReactNode })
  * eksik olan kontrasttı.
  *
  * Gecmisi: once `←` karakteri 36x36 icinde. Karakterin cizgisi yazi
- * tipinden geliyordu ve inceydi.
+ * tipinden geliyordu ve inceydi. Sonra 48x48 ve `-ml-2` ile kenara
+ * yaslanmisti; bu sefer "cok buyuk ve yapisik" dendi. Simdi 40x40,
+ * kenardan ve alttaki seritten bosluklu — dolu beyaz zemin ve kalin ok
+ * gorunurlugu tasimaya devam ediyor.
  */
 export function BackButton({ onClick }: { onClick: () => void }) {
   return (
     <button
       onClick={onClick}
-      className="-ml-2 h-12 w-12 rounded-full bg-white text-ink shadow-[0_6px_16px_-4px_rgba(22,35,58,0.28)] ring-1 ring-black/5 grid place-items-center hover:bg-white active:scale-95 transition"
+      className="h-10 w-10 rounded-full bg-white text-ink shadow-[0_6px_16px_-4px_rgba(22,35,58,0.28)] ring-1 ring-black/5 grid place-items-center hover:bg-white active:scale-95 transition"
       aria-label="Geri"
     >
       <svg
         viewBox="0 0 24 24"
-        className="h-6 w-6"
+        className="h-5 w-5"
         fill="none"
         stroke="currentColor"
         strokeWidth="2.75"
@@ -227,6 +230,17 @@ export function Progressbar({ done, total }: { done: number; total: number }) {
 }
 
 /**
+ * Egzersizin sorusu: "Ne duyuyorsun?", "Türkçesi hangisi?"...
+ *
+ * Kucuk ve soluktu (14px, en acik gri) — kullanici "cok zayif, gorunmuyor"
+ * dedi. Ekranda o an ne yapilacagini soyleyen tek cumle bu; kelimenin
+ * kendisinden sonra en okunur sey olmali.
+ */
+export function Yonerge({ children }: { children: ReactNode }) {
+  return <span className="text-lg font-extrabold text-ink-soft text-center">{children}</span>;
+}
+
+/**
  * Ses kancasi — urunun imzasi.
  * Fosforlu kalem izi: kanca zaten "isaretlenmis" seydir.
  */
@@ -266,10 +280,10 @@ export function SpeakButton({
         seslendir(word);
       }}
       className={`shrink-0 inline-flex items-center justify-center rounded-full bg-sunken transition-all active:scale-90 hover:bg-brand-soft ${
-        kucuk ? 'h-8 w-8' : 'h-11 w-11'
+        kucuk ? 'h-11 w-11' : 'h-14 w-14'
       }`}
     >
-      <Ikon ad="ses" className={kucuk ? 'h-4 w-4' : 'h-6 w-6'} />
+      <Ikon ad="ses" className={kucuk ? 'h-6 w-6' : 'h-8 w-8'} />
     </button>
   );
 }

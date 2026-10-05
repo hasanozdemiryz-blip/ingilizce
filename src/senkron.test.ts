@@ -197,3 +197,41 @@ describe('tazelik', () => {
     expect(s.progress).toHaveLength(1);
   });
 });
+
+describe('birlestir — tercihler kendi damgasiyla', () => {
+  const avatar = (ad: string) =>
+    ({ ad: 'Hasan', avatar: { tip: 'hayvan', ad }, cerceve: 'yok', olusturuldu: '' }) as unknown as AppState['profil'];
+
+  it('telefonda degisen avatar, bilgisayardaki daha yeni dersle ezilmez', () => {
+    // Telefon: 10:00'da avatar degisti, dersi eski
+    const telefon = paket('2026-10-04T08:00:00Z', {
+      state: durum({ profil: avatar('tilki'), tercihDegisti: Date.parse('2026-10-04T10:00:00Z') }),
+    });
+    // Bilgisayar: 11:00'de ders yapti, profili eski
+    const pc = paket('2026-10-04T11:00:00Z', {
+      state: durum({ profil: avatar('kedi'), tercihDegisti: Date.parse('2026-10-03T10:00:00Z') }),
+    });
+    expect(birlestir(telefon, pc).state.profil).toEqual(avatar('tilki'));
+    expect(birlestir(pc, telefon).state.profil).toEqual(avatar('tilki'));
+  });
+
+  it('damgasiz yeni cihaz, damgali sunucu tercihini ezmez', () => {
+    const yeni = paket('2026-10-05T09:00:00Z', { state: durum({ dailyLimit: 5 }) });
+    const sunucu = paket('2026-10-04T09:00:00Z', {
+      state: durum({ dailyLimit: 15, tercihDegisti: 1 }),
+    });
+    expect(birlestir(yeni, sunucu).state.dailyLimit).toBe(15);
+  });
+
+  it('iki tarafta da damga yoksa taze paketin tercihi gecerli (eski kural)', () => {
+    const eski = paket('2026-10-04T09:00:00Z', { state: durum({ dailyLimit: 5 }) });
+    const taze = paket('2026-10-04T10:00:00Z', { state: durum({ dailyLimit: 15 }) });
+    expect(birlestir(eski, taze).state.dailyLimit).toBe(15);
+  });
+
+  it('son ders gunu iki tarafin en yenisi', () => {
+    const a = paket('2026-10-04T12:00:00Z', { state: durum({ lastSessionDate: '2026-10-03' }) });
+    const b = paket('2026-10-04T09:00:00Z', { state: durum({ lastSessionDate: '2026-10-04' }) });
+    expect(birlestir(a, b).state.lastSessionDate).toBe('2026-10-04');
+  });
+});

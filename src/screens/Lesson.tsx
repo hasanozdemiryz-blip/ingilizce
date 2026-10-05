@@ -118,6 +118,12 @@ export function Lesson({
    * Ders artik BUTUN: ya tamamlanir ya bastan baslanir.
    */
   const yeniKayitlar = useRef(new Map<string, Progress>());
+  /*
+    DERS BASLADIGI GUNE AITTIR. Kartlar gorulduklari anin tarihiyle
+    yaziliyordu; gece yarisini gecen 5 kelimelik bir derste 3'u dune, 2'si
+    bugune dusuyor ve iki gunun hedefi de dolmamis gorunuyordu.
+  */
+  const dersBasi = useRef(new Date()).current;
 
   /** Seansin kendi sayaclari — bitis ekrani bunlari gosterir. */
   const sayac = useRef({ dogru: 0, toplam: 0, ilerleyen: 0 });
@@ -273,7 +279,7 @@ export function Lesson({
   function kartiGor(card: Card) {
     setSonBilinen(null);
     if (!yeniKayitlar.current.has(card.id)) {
-      yeniKayitlar.current.set(card.id, introduceCard(card));
+      yeniKayitlar.current.set(card.id, introduceCard(card, dersBasi));
     }
     if (i + 1 >= dersKartlari.length) gec('yeni');
     else setI(i + 1);
@@ -291,7 +297,7 @@ export function Lesson({
    */
   function biliyorum(card: Card) {
     olay('biliyorum_dendi', { basamak: 'yeni' });
-    bilinenler.current.set(card.id, markKnown(card));
+    bilinenler.current.set(card.id, markKnown(card, dersBasi));
     yeniKayitlar.current.delete(card.id);
 
     const yedek = yedekler.current.shift();
@@ -413,7 +419,7 @@ export function Lesson({
     if (bitiyor.current) return;
     bitiyor.current = true;
     const { dogru, toplam: cevap, ilerleyen } = sayac.current;
-    const state = await logSession(toplam, dogru, cevap - dogru);
+    const state = await logSession(toplam, dogru, cevap - dogru, dersBasi);
     olay('ders_bitti', {
       kelime: toplam,
       dogru,
@@ -525,7 +531,7 @@ export function Lesson({
           }
         />
         <Progressbar done={i} total={dersKartlari.length} />
-        <p className="text-center text-xs font-bold uppercase tracking-[0.14em] text-ink-faint mt-2">
+        <p className="text-center text-sm font-extrabold uppercase tracking-[0.12em] text-ink-soft mt-2">
           {bolumEtiketi}
         </p>
 
@@ -579,7 +585,7 @@ export function Lesson({
     <Screen yanMenusuz>
       <TopBar left={<BackButton onClick={cikmakIstiyor} />} />
       {/* `mt-2` diger yoldaki etiketle ayni: serit ile etiket birlesik durmasin */}
-      <p className="text-center text-xs font-bold uppercase tracking-[0.14em] text-ink-faint mt-2">
+      <p className="text-center text-sm font-extrabold uppercase tracking-[0.12em] text-ink-soft mt-2">
         {bolumEtiketi}
       </p>
       <Runner

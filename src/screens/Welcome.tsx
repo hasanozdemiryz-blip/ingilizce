@@ -79,9 +79,9 @@ export function Welcome({ onDone }: { onDone: () => void }) {
           {secilen === null ? (
             <>
               <div className="rise text-center">
-                <p className="text-sm text-ink-faint">Kart kayboldu. Sende ne kaldı?</p>
+                <p className="text-base font-semibold text-ink-soft">Kart kayboldu. Sende ne kaldı?</p>
                 <p className="word text-[3rem] leading-none font-extrabold mt-3">{card.en}</p>
-                <p className="text-ink-soft mt-3">ne demekti?</p>
+                <p className="text-lg font-extrabold text-ink-soft mt-3">ne demekti?</p>
               </div>
 
               <div className="rise delay-1 grid gap-2.5">
@@ -143,7 +143,7 @@ export function Welcome({ onDone }: { onDone: () => void }) {
         <div className="rise text-center">
           <h1 className="word text-3xl font-extrabold leading-tight">Günde kaç kelime?</h1>
           <p className="text-ink-soft mt-2 leading-relaxed max-w-[30ch] mx-auto">
-            Hedef dolunca gün kapanır, tekrarlar devam eder.
+            Her gün bu kadar yeni kelime gelir.
           </p>
         </div>
 

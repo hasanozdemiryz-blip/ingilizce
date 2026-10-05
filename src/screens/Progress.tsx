@@ -70,7 +70,7 @@ export function ProgressScreen({
             <span className="min-w-0 flex-1">
               <span className="word block text-xl font-extrabold">Kelimeler</span>
               <span className="block text-sm text-white/70 mt-0.5">
-                Öğrendiklerin, kancalarıyla · ara ve filtrele
+                Öğrendiğin kelimeler ve kancaları
               </span>
             </span>
             <span className="text-xl text-white/60">›</span>
@@ -106,7 +106,7 @@ export function ProgressScreen({
                 altinda duruyor — yoksa "%100" tek alistirmayla da yazilabilir.
               */}
               <p className="text-center text-sm text-ink-soft mt-2">
-                {basari.dogru} / {basari.toplam} alıştırmayı en son doğru yaptın
+                {basari.toplam} alıştırmanın {basari.dogru} tanesi doğru
               </p>
               <div className="h-2.5 w-full rounded-full bg-sunken overflow-hidden mt-4">
                 <div
@@ -116,10 +116,6 @@ export function ProgressScreen({
               </div>
               <p className="text-center text-xs text-ink-faint mt-2.5">
                 {basari.kelime} kelime · {basari.cevap} cevap · {basari.yanlisCevap} yanlış
-              </p>
-              <p className="text-center text-xs text-ink-faint mt-1.5 leading-relaxed">
-                Her alıştırma bir kez sayılır: aynı kelimenin eşleştirmesi ve yazması
-                ayrı. Yanlış yaptığını tekrar edip doğru yapınca bu oran yükselir.
               </p>
             </>
           ) : (
@@ -163,8 +159,8 @@ export function ProgressScreen({
           icine sigmayan tanim hemen altinda, tek satirda.
         */}
         <p className="-mt-1 px-2 text-center text-xs text-ink-faint leading-relaxed">
-          <b className="font-bold text-ink-soft">Kalıcılık</b>: kelimelerin merdivende ne
-          kadar yukarı çıktığı. Tekrarlarla yükselir.
+          <b className="font-bold text-ink-soft">Kalıcılık</b>: kelimeleri ne kadar
+          sağlam bildiğin. Tekrar ettikçe yükselir.
         </p>
 
         {/* --- Neler yapabiliyorsun: BIRIKIMLI --- */}
@@ -199,8 +195,7 @@ export function ProgressScreen({
               ikincisi hemen ustteki kalicilik yuzdesi.
             */}
             <p className="text-xs text-ink-faint mt-4 leading-relaxed">
-              Bir kelimeyi o basamakta <b className="font-bold text-ink-soft">kancaya
-              basmadan</b> en az bir kez doğru yaptıysan burada sayılır.
+              Kancaya bakmadan doğru yaptıkların sayılır.
             </p>
           </Card>
         )}

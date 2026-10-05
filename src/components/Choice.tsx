@@ -1,5 +1,5 @@
 import { CardVisual } from './CardVisual';
-import { Card as CardShell, HookChip } from './ui';
+import { Card as CardShell, HookChip, Yonerge } from './ui';
 import type { Card } from '../types';
 
 /**
@@ -34,9 +34,7 @@ export function Choice({
       <CardShell className="w-full">
         {!ters && <CardVisual card={card} size="compact" />}
         <div className={`flex flex-col items-center gap-3 ${ters ? 'py-6' : 'pt-5'}`}>
-          <span className="text-sm text-ink-faint">
-            {ters ? 'İngilizcesi hangisi?' : 'Türkçesi hangisi?'}
-          </span>
+          <Yonerge>{ters ? 'İngilizcesi hangisi?' : 'Türkçesi hangisi?'}</Yonerge>
           <p className={`text-[2.25rem] leading-none font-extrabold ${ters ? '' : 'word'}`}>
             {sorulan}
           </p>

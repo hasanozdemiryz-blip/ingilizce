@@ -400,7 +400,12 @@ export async function googleIleGiris(): Promise<Sonuc> {
   if (!c) return BAGLANAMADI;
   const { error } = await c.auth.signInWithOAuth({
     provider: 'google',
-    options: { redirectTo: donusAdresi() },
+    /*
+      `select_account`: Google tarayicida acik hesapla sormadan giriyordu.
+      Iki hesabi olan kisi hangisiyle girdigini secemiyor, yanlis hesapla
+      girdigini de fark etmiyordu.
+    */
+    options: { redirectTo: donusAdresi(), queryParams: { prompt: 'select_account' } },
   });
   return error ? { oldu: false, hata: cevir(error.message) } : { oldu: true };
 }
@@ -545,7 +550,13 @@ const BOS: { uye: Uye | null; hazir: boolean } = { uye: null, hazir: false };
 let paket = BOS;
 
 function durumPaketi(): { uye: Uye | null; hazir: boolean } {
-  if (paket.uye?.id !== uye?.id || paket.hazir !== hazir) {
+  /*
+    Kimlige degil NESNEYE bakiliyor. Kimlik karsilastirilirken bilgi adimi
+    kaydedildiginde (ayni kisi, yeni `bilgi`) paket yenilenmiyor ve ekran
+    sayfa yenilenene kadar "uyeligini tamamla" demeye devam ediyordu.
+    `uye` yalnizca gercek bir degisiklikte yeniden ataniyor.
+  */
+  if (paket.uye !== uye || paket.hazir !== hazir) {
     paket = { uye, hazir };
   }
   return paket;

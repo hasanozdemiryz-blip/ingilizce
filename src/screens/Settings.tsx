@@ -2,9 +2,9 @@ import { useRef, useState } from 'react';
 import { TAB_SPACE } from '../components/TabBar';
 import { Avatar } from '../components/Avatar';
 import { Button, Card, Ikon, Screen } from '../components/ui';
-import { CARDS, LIMIT_CHOICES, LIMIT_MAX } from '../content';
+import { CARDS, LIMIT_CHOICES } from '../content';
 import { olay, olcumHazirla, olcumVarMi, olcumuKapat } from '../analitik';
-import { exportProgress, importProgress, resetAll, setState } from '../db';
+import { exportProgress, importProgress, resetAll, tercihKaydet } from '../db';
 import {
   HATIRLATMA_VARSAYILAN,
   hatirlatmayiKapat,
@@ -147,11 +147,11 @@ export function Settings({
     olay('hatirlatma_degisti', { saat: saat ?? 'kapali', dakika });
     if (saat === null) {
       await hatirlatmayiKapat();
-      await setState({ reminderHour: null });
+      await tercihKaydet({ reminderHour: null });
       return;
     }
     if (await hatirlatmayiKur(saat, dakika))
-      await setState({ reminderHour: saat, reminderMinute: dakika });
+      await tercihKaydet({ reminderHour: saat, reminderMinute: dakika });
   }
 
   return (
@@ -188,18 +188,13 @@ export function Settings({
               </span>
               <span className="text-xl text-ink-faint shrink-0">›</span>
             </div>
-            <p className="text-xs text-ink-faint mt-3">
-              {uye?.bilgi?.ad
-                ? 'Adın hesabından geliyor; Hesap bölümünden değiştirebilirsin. Resmin bu cihazda kalıyor.'
-                : 'Profil bu cihazda tutulur — hesap değil, giriş gerekmez.'}
-            </p>
           </button>
         )}
 
         <Card className="rise delay-1">
           <h2 className="text-sm font-bold text-ink-soft mb-1">Günlük hedef</h2>
           <p className="text-sm text-ink-soft mb-3">
-            Günde en fazla kaç yeni kelime. Dolduğunda gün kapanır; tekrarlar devam eder.
+            Günde kaç yeni kelime öğrenmek istersin? Yeni kelimeler her gece 00:00'da gelir.
           </p>
           <div className="flex gap-2">
             {LIMIT_CHOICES.map((n) => {
@@ -207,7 +202,7 @@ export function Settings({
               return (
                 <button
                   key={n}
-                  onClick={() => void setState({ dailyLimit: n })}
+                  onClick={() => void tercihKaydet({ dailyLimit: n })}
                   className={`flex-1 rounded-2xl px-3 py-4 transition-all active:scale-95 ${
                     secili
                       ? 'bg-brand text-white shadow-[0_8px_18px_-8px_rgba(79,146,246,0.85)]'
@@ -220,7 +215,6 @@ export function Settings({
               );
             })}
           </div>
-          <p className="text-xs text-ink-faint mt-3">En fazla {LIMIT_MAX} — üstü serbest değil.</p>
         </Card>
 
         {sesVar && (
@@ -238,7 +232,7 @@ export function Settings({
                 role="switch"
                 aria-checked={state.sound}
                 aria-label="Telaffuz sesi"
-                onClick={() => void setState({ sound: !state.sound })}
+                onClick={() => void tercihKaydet({ sound: !state.sound })}
                 className={`shrink-0 h-8 w-14 rounded-full p-1 transition-colors ${
                   state.sound ? 'bg-grow' : 'bg-line'
                 }`}
@@ -339,7 +333,7 @@ export function Settings({
                 aria-label="Kullanım istatistikleri"
                 onClick={() => {
                   const yeni = state.olcum === false;
-                  void setState({ olcum: yeni });
+                  void tercihKaydet({ olcum: yeni });
                   if (yeni) olcumHazirla(true, state.profil?.id);
                   else olcumuKapat();
                 }}
@@ -382,9 +376,8 @@ export function Settings({
             ) : uye ? (
               <>
                 <p className="text-sm text-ink-soft mb-1">
-                  <b className="break-all">{uye.eposta}</b> ile giriş yaptın. İlerlemen her
-                  ders sonunda <b>hesabına yedekleniyor</b>; başka bir cihazdan girince
-                  kaldığın yerden devam edersin.
+                  <b className="break-all">{uye.eposta}</b> ile giriş yaptın. İlerlemen
+                  hesabında saklanıyor.
                 </p>
                 <div className="mb-3">
                   <Satir ad="Ad" deger={uye.bilgi?.ad ?? '—'} />
@@ -399,8 +392,7 @@ export function Settings({
             ) : (
               <>
                 <p className="text-sm text-ink-soft mb-3">
-                  İlerlemen şu an <b>yalnızca bu cihazda</b>. Giriş yaparsan telefonunu
-                  değiştirsen de kaldığın yerden devam edersin.
+                  İlerlemen şu an <b>yalnızca bu cihazda</b>. Giriş yaparsan kaybolmaz.
                 </p>
                 <Kucuk onClick={() => setGirisAcik(true)}>Giriş yap</Kucuk>
               </>
@@ -490,8 +482,7 @@ export function Settings({
           <Card className="rise delay-3">
             <h2 className="text-sm font-bold text-ink-soft mb-1">Oturum</h2>
             <p className="mb-3 text-sm text-ink-soft">
-              Çıkınca ilerlemen hesabına gönderilip bu cihazdan silinir; tekrar girince
-              geri gelir.
+              İlerlemen hesabında kalır, tekrar girince geri gelir.
             </p>
             <div className="flex flex-wrap gap-2">
               <Kucuk tehlike onClick={() => setCikisDurum('soruyor')}>
@@ -506,7 +497,7 @@ export function Settings({
 
         <Card className="rise delay-3">
           <h2 className="text-sm font-bold text-ink-soft mb-2">Hakkında</h2>
-          <Satir ad="Setteki kelime" deger={String(CARDS.length)} />
+          <Satir ad="Toplam kelime" deger={String(CARDS.length)} />
           <Satir ad="Öğrendiğin" deger={String(progress.length)} />
           <Satir ad="Sürüm" deger={__APP_VERSION__} />
         </Card>

@@ -2046,6 +2046,37 @@ for (let i = 1; i < 9999; i++) { clearInterval(i); clearTimeout(i); }
 // + geçişleri kapatan bir <style>
 ```
 
+## 2026-10-05 — Kullanıcı turu: üyelik kararlılığı, senkron, ders ekranı
+
+Kullanıcı canlıda gezip bir liste getirdi. Sebepler:
+
+| Şikâyet | Sebep | Çözüm |
+|---|---|---|
+| Bilgiler doldurulduğu halde yenilenene kadar "üyeliğini tamamla" | `useUyelik` anlık görüntüsü yalnızca **kimliği** karşılaştırıyordu; aynı kişinin `bilgi`si değişince ekran tazelenmiyordu | Nesne karşılaştırması |
+| Girişliyken "10 kelimeyi kaydetmek için üye ol" anlık çıkıp kayboluyor | SDK açılıştan sonra iniyor; şerit ve ders sonu daveti `hazir`ı beklemiyordu | `hazir` olmadan davet gösterilmiyor |
+| Google hesap sormadan giriyor | — | `prompt: select_account` |
+| Telefonda avatar/fotoğraf değişmiyor | Senkron tercihleri **paketin ders hareketine** göre seçiyordu; telefonda avatar değişip bilgisayarda ders yapılınca eski profil yenisini eziyordu | `tercihDegisti` damgası (`tercihKaydet`), tercihler kendi damgasıyla birleşiyor; tercih değişince senkron tetikleniyor |
+| Gizli sekmede ilerleme "kendiliğinden" geldi | Oturumsuz okuma **mümkün değil** (anon anahtarla `ilerleme` sorgusu boş döndü, RLS doğru). Gizli sekmede Google hesap sormadan aynı e-postayla girmiş; Supabase aynı e-postayı tek hesap sayıyor | Hesap seçimi artık soruluyor |
+| Gece yarısı hedef dolmamış göründü | Kartlar **görüldükleri anın** tarihiyle yazılıyordu; 00:00'ı geçen ders iki güne bölünüyordu | Ders başladığı güne yazılıyor (`dersBasi`) |
+
+> Genel ders: senkronda "hangi paket daha taze" tek soru değil. Ders
+> ilerlemesi ve tercihler ayrı zamanlarda, ayrı cihazlarda değişiyor —
+> her birinin kendi damgası olmalı.
+
+**Ders ekranı.** Yazma kutusu ekranın dibinden kartın hemen altına alındı.
+Yönergeler ("Ne duyuyorsun?", "Türkçesi hangisi?") 14px soluktan 18px
+kalına çıktı (`Yonerge`); hoparlörler büyüdü (dinleme 128px, küçük
+düğmeler 44/56px). Geri düğmesi 48px + `-ml-2`'den 40px'e, kenardan boşluklu.
+
+**Metin sadeleştirme.** Kullanıcıya iç işleyişi anlatan cümleler çıkarıldı
+ya da kısaltıldı ("kartlar + 6 basamak", "merdivende ne kadar yukarı",
+"her alıştırma bir kez sayılır…", "üstü serbest değil"…). Yeni kelimelerin
+gece 00:00'da geldiği Ayarlar'da ve hedef dolunca ana ekranda yazıyor.
+
+**Doğrulanmayan:** giriş gerektiren akışlar (bilgi adımı, Google hesap
+seçimi, girişli açılışta davetin görünmemesi) kullanıcının hesabıyla
+`localhost:5173`'te denenecek — bende test hesabı yok.
+
 ## Sırada
 
 ### Nerede duruyoruz (4 Ekim 2026)

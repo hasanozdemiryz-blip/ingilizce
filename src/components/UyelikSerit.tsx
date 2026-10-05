@@ -28,9 +28,15 @@ export function UyelikSerit({
   ogrenilen: number;
   onAc: () => void;
 }) {
-  const { uye } = useUyelik();
+  const { uye, hazir } = useUyelik();
 
   if (!uyelikVarMi()) return null;
+  /*
+    Oturum henuz okunmadiysa SUSUYOR. Acilista uyelik paketi yarim saniye
+    kadar sonra iniyor; o arada `uye` bos ve serit girisli kullaniciya
+    "uye ol" deyip kayboluyordu.
+  */
+  if (!hazir) return null;
   if (uye?.bilgi?.tamam) return null;
 
   const eksikBilgi = Boolean(uye);

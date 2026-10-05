@@ -218,7 +218,8 @@ export function Home({
             <p className="text-sm text-white/80 mb-4">
               {todaysCount > 0
                 ? `Bugünün ${todaysCount} kelimesini istediğin kadar çalış.`
-                : 'Bekleyen tekrarlarını çalışabilirsin.'}
+                : 'Bekleyen tekrarlarını çalışabilirsin.'}{' '}
+              Yeni kelimeler gece 00:00'da gelir.
             </p>
             {/*
               Onizleme burada da var: "Bugunun 10 kelimesi" demek neyin
@@ -291,7 +292,7 @@ export function Home({
             </p>
             <p className="text-sm text-ink/65 mb-4">
               {ilkDers
-                ? `${newCards.length} kelime · önce tanış, sonra öğrenme testi.`
+                ? `${newCards.length} yeni kelime seni bekliyor.`
                 : yeniGun
                   ? paket
                   : newCards.length > 0

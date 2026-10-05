@@ -180,6 +180,16 @@ export function Runner({
     <>
       <div className="flex-1 flex flex-col justify-center py-6">
         {soru}
+        {/*
+          Yazma kutusu KARTIN HEMEN ALTINDA. Ekranin en altindaydi: goz
+          soruyla kutu arasinda gidip geliyordu, telefonda klavye acilinca
+          kart da kutu da ekrandan tasiyordu.
+        */}
+        {!verdict && yaziliMi && (
+          <div className="mt-4">
+            <TypeAnswer key={card.id} onSubmit={yaziliCevap} disabled={busy} />
+          </div>
+        )}
         {verdict && (
           /*
             Karar cumlesi buyuk: ekranda o an OKUNMASI gereken tek sey bu.
@@ -235,7 +245,6 @@ export function Runner({
           </div>
         )}
 
-        {!verdict && yaziliMi && <TypeAnswer key={card.id} onSubmit={yaziliCevap} disabled={busy} />}
         {verdict && (
           <Button variant="brand" onClick={ilerle}>
             Devam

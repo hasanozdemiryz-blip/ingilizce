@@ -10,7 +10,7 @@ import {
   setBittiMi,
   setteOlanlar,
 } from './content';
-import { db, getState, setState } from './db';
+import { db, getState, setState, tercihKaydet } from './db';
 import {
   aheadQueue,
   dueQueue,
@@ -204,6 +204,28 @@ export default function App() {
     return { progress: setteOlanlar(hepsi), state };
   }, [bugun]);
 
+  /*
+    TERCIH DEGISINCE SENKRON. Senkron yalnizca acilista ve ders sonunda
+    calisiyordu; avatar ya da gunluk hedef degistiren kullanicinin
+    degisikligi bir sonraki derse kadar cihazda bekliyordu. Kisa bir
+    bekleme var: Ayarlar'da art arda dokunulan uc secenek tek gonderim olsun.
+    Ilk deger atlaniyor — o acilistaki durum, degisiklik degil.
+  */
+  const tercihDamgasi = data?.state.tercihDegisti;
+  const veriVar = data !== undefined;
+  const ilkDamga = useRef<number | undefined | null>(null);
+  useEffect(() => {
+    if (!veriVar) return;
+    if (ilkDamga.current === null) {
+      ilkDamga.current = tercihDamgasi;
+      return;
+    }
+    if (tercihDamgasi === ilkDamga.current) return;
+    ilkDamga.current = tercihDamgasi;
+    const t = setTimeout(() => void senkronla(), 1500);
+    return () => clearTimeout(t);
+  }, [veriVar, tercihDamgasi]);
+
   if (!data) return <Splash />;
 
   const { progress, state: kayitliState } = data;
@@ -319,7 +341,7 @@ export default function App() {
         kazanim={kazanim}
         onKapat={kapat}
         onKaydet={(profil) => {
-          void setState({ profil });
+          void tercihKaydet({ profil });
           // Adin kendisi GONDERILMIYOR — yalnizca neyin degistigi.
           olay('profil_degisti', { avatar: profil.avatar.tip, cerceve: profil.cerceve });
           kapat();

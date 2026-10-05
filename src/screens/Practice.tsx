@@ -511,7 +511,7 @@ export function Practice({
                       }`}
                     >
                       {bugunDersKartlari.length > 0
-                        ? `bugünün ${bugunDersKartlari.length} kelimesi · kartlar + 6 basamak`
+                        ? `bugünün ${bugunDersKartlari.length} kelimesi`
                         : 'bugün henüz ders yapmadın'}
                     </span>
                   </span>

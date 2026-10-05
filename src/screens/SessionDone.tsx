@@ -58,11 +58,12 @@ export function SessionDone({
     her gun ayni seyi demek yildiriyor. Zaten uye olana ve uyelik
     kapaliyken hic cikmiyor.
   */
-  const { uye } = useUyelik();
+  const { uye, hazir } = useUyelik();
   const [girisAcik, setGirisAcik] = useState(false);
   const [kapatildi, setKapatildi] = useState(false);
   const davet =
-    uyelikVarMi() && !uye?.bilgi?.tamam && !kapatildi
+    // `hazir` olmadan girisli kullaniciya da "uye ol" gorunup kayboluyordu
+    uyelikVarMi() && hazir && !uye?.bilgi?.tamam && !kapatildi
       ? siradakiDavet(kazanim, davetGorulen)
       : null;
 

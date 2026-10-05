@@ -95,8 +95,7 @@ export function WordList({ progress, onExit }: { progress: Progress[]; onExit: (
 
         {filtre === 'bilinen' && (
           <p className="text-sm text-ink-soft px-1">
-            Derste “bunu biliyorum” dediğin kelimeler. Hiçbir sayıya girmiyorlar;
-            istersen sisteme geri alabilirsin.
+            “Bunu biliyorum” dediğin kelimeler. İstersen derslere geri ekleyebilirsin.
           </p>
         )}
 

@@ -189,12 +189,14 @@ export function ProfilDuzenle({
                 {avatar.tip === 'foto' ? 'Başka fotoğraf seç' : 'Fotoğraf yükle'}
               </button>
               {/*
-                Fotograf CIHAZDA kaliyor. Yazili duruyor cunku "yukle"
-                kelimesi nereye yuklendigini sormayi akla getiriyor.
+                Nereye gittigi yaziyor cunku "yukle" kelimesi bunu sorduruyor.
+                Uyede fotograf senkronla hesaba gidiyor; "bu cihazda kalir"
+                demek artik yanlis olurdu.
               */}
               <p className="text-xs text-ink-faint mt-3 max-w-[30ch] mx-auto">
-                Fotoğraf bu cihazda kalır, hiçbir yere gönderilmez. Kare olarak
-                ortadan kırpılır.
+                {uye
+                  ? 'Fotoğrafın hesabında saklanır, diğer cihazlarında da görünür.'
+                  : 'Fotoğraf yalnızca bu cihazda kalır.'}
               </p>
               {hata && <p className="text-xs text-blush mt-2 font-semibold">{hata}</p>}
             </div>
@@ -216,8 +218,7 @@ export function ProfilDuzenle({
         <Card>
           <h2 className="text-sm font-bold text-ink-soft">Çerçeven</h2>
           <p className="text-xs text-ink-faint mt-1 mb-3">
-            Çerçeveler satın alınmaz, <b>çalışınca açılır</b>: kelime öğrendikçe ve seri
-            tuttukça yenileri geliyor. Kilitliye dokununca neyin gerektiğini yazıyor.
+            Çalıştıkça yeni çerçeveler açılır.
           </p>
 
           <div className="grid grid-cols-3 gap-3">
