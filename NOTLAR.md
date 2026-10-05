@@ -2085,6 +2085,44 @@ gece 00:00'da geldiği Ayarlar'da ve hedef dolunca ana ekranda yazıyor.
 seçimi, girişli açılışta davetin görünmemesi) kullanıcının hesabıyla
 `localhost:5173`'te denenecek — bende test hesabı yok.
 
+## 2026-10-05 (öğleden sonra) — Giriş/çıkış, site çatısı, blog
+
+**Uygulama.** Girişten sonra "Giriş yapıldı" ekranı (ad/seviye/hedef isteğe
+bağlı; zorunlu bilgi adımı kalktı). Avatara dokununca hesap menüsü: profil,
+ayarlar, **çıkış — iki dokunuş**. Çıkış eskiden Ayarlar'ın dibinde, "Hesabı
+sil"in yanında ve kırmızıydı. Girişli kullanıcı deneme dersini görmüyor;
+denemede "Atla" var. Tıklanabilir her şeyde el imleci (Tailwind 4 düğmede
+varsayılan oku bırakıyor). Sürekli duran "✓ Giriş yapıldı" rozeti kullanıcı
+isteğiyle kalktı; menüde e-posta duruyor.
+
+**Site tek kabuk.** `tools/site.mjs` + `site/`: ana sayfa, iletişim, yasal
+sayfalar, blog ve kelime sayfaları aynı menü ve footer'la üretiliyor; eski
+`anasayfa/sablon.html` kalktı. Görseller artık dosya (`varliklar/`), ana
+sayfa 248 KB → 24 KB. `public/*.html` yasal sayfaları yönlendirme oldu
+(Play Console'daki adres bozulmasın).
+
+**Yasal metinler senkrona göre güncellendi.** "Verilerin cihazından hiç
+çıkmaz" diyordu; senkrondan beri üye için doğru değildi. Üyelik verileri,
+iletişim formu ve uygulama içi hesap silme eklendi. Avukat okuması yok.
+
+**Kelime sayfaları: 100 değil 20.** Önce setin tamamı sayfalaştırıldı;
+kullanıcı "çok riskli değil mi" diye sordu, haklıydı:
+
+- Kancalar ürünün asıl değeri ([[blarma-rakip]]); yüzünü aramaya açmak
+  kopyalanmayı kolaylaştırır.
+- "X ne demek" aramalarında Google kendi çeviri kutusunu ve sözlükleri
+  gösteriyor; yeni sitenin oradan trafik alması zor.
+- Aynı şablondan yüz sayfa "toplu üretilmiş içerik" sayılıp bütün sitenin
+  sıralamasını düşürebilir.
+
+Karar: blog + sıklık sırasına göre ilk **20** kelime (`VITRIN`). Blogdaki
+yayında olmayan kelime bağlantıları üretimde düz yazıya dönüyor. Search
+Console verisi gelince (4–6 hafta) genişletme kararı verilecek.
+
+**İletişim formu bekliyor.** `iletisim` tablosu + edge function yazıldı;
+Supabase CLI bu makinede girişli değil, kurulum kullanıcıyla en sona kaldı.
+O zamana kadar formun yerinde e-posta bağlantısı var (`ILETISIM_HAZIR`).
+
 ## Sırada
 
 ### Nerede duruyoruz (4 Ekim 2026)

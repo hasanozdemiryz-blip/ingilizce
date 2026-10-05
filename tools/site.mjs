@@ -95,6 +95,18 @@ const KISILER = [
   { dosya: 'kanepe', an: 'Akşam kanepede', sure: 'Günlük hedef dolunca gün kapanıyor' },
 ];
 
+/**
+ * Sitede sayfasi olan kelime sayisi — uygulamadaki setin EN SIK kullanilan
+ * kelimeleri (`order` = siklik sirasi).
+ *
+ * Neden hepsi degil: kancalar urunun asil degeri; yuzunu birden aramaya
+ * acmak kopyalanmalarini kolaylastirir. Ayrica ayni sablondan yuz sayfa,
+ * Google'in "toplu uretilmis" saydigi turden ve butun sitenin siralamasini
+ * asagi cekebilir. Yirmi vitrin kelime; Search Console verisi gelince
+ * genisletme karari verilecek (bkz. NOTLAR, 5 Ekim).
+ */
+const VITRIN = 20;
+
 /** Kanca bolumunun havuzu: kancasi en net anlasilan dokuz kart. */
 const HAVUZ = ['snake', 'bad', 'fox', 'leaf', 'boat', 'cup', 'sell', 'dark', 'salt'];
 const GORUNEN = 3;
@@ -234,7 +246,11 @@ function kelimeAciklama(k) {
 
 // --- Uretim ------------------------------------------------------------------
 
+/** Uretilen klasorler — her derlemede bastan yaziliyor, eskisi kalmasin. */
+const URETILEN = ['varliklar', 'kelime', 'kelimeler', 'blog', 'iletisim', 'gizlilik', 'kullanim-kosullari', 'kvkk'];
+
 async function derle(hedef) {
+  for (const k of URETILEN) fs.rmSync(path.join(hedef, k), { recursive: true, force: true });
   const surum = Date.now().toString(36);
   const kabuk = oku('kabuk.html');
   const kartlar = JSON.parse(fs.readFileSync(path.join(KOK, 'content/cards.json'), 'utf8'));
@@ -362,9 +378,11 @@ async function derle(hedef) {
   const anaJs = oku('sayfalar/anasayfa.js.html').replace('__KANCA_HAVUZ__', JSON.stringify(havuz));
 
   // --- Kelimeler: gorseli olan kartlar (uygulamadaki set) ---
-  const kelimeler = tumKartlar.filter((k) =>
-    fs.existsSync(path.join(KOK, 'src/assets/cards', `${k.id}.webp`)),
-  );
+  const setKartlari = tumKartlar
+    .filter((k) => fs.existsSync(path.join(KOK, 'src/assets/cards', `${k.id}.webp`)))
+    .sort((a, b) => a.order - b.order);
+  const kelimeler = setKartlari.slice(0, VITRIN);
+  const yayinda = new Set(kelimeler.map((k) => k.id));
   for (const k of kelimeler) {
     k.sayfaResmi = await webpYaz(
       hedef,
@@ -403,7 +421,7 @@ async function derle(hedef) {
       <button class="btn btn-beyaz dinle" type="button" data-dinle="${k.en}">${HOPARLOR} Dinle</button>
       ${kelimeAciklama(k)}
       <div class="cagri">
-        <p>${k.en} ve ${kelimeler.length - 1} kelime daha uygulamada kancası ve görseliyle seni bekliyor.</p>
+        <p>${k.en} ve ${setKartlari.length - 1} kelime daha uygulamada kancası ve görseliyle seni bekliyor.</p>
         <a class="btn btn-lacivert" href="/ingilizce/" data-basla>Hemen başla</a>
       </div>
     </div>
@@ -447,13 +465,13 @@ async function derle(hedef) {
   }
   const kelimeListesi = {
     yol: '/kelimeler/',
-    baslik: `İngilizce kelimeler ve Türkçe anlamları — ${kelimeler.length} kelime, ses kancalarıyla`,
-    aciklama: `Hafızada İngilizce'deki ${kelimeler.length} kelime: her birinin Türkçe anlamı, benzer sesli Türkçe kancası ve akılda kalan sahnesi.`,
+    baslik: `En sık kullanılan ${kelimeler.length} İngilizce kelime ve Türkçe anlamları — Hafızada İngilizce`,
+    aciklama: `En sık kullanılan ${kelimeler.length} İngilizce kelime: her birinin Türkçe anlamı, benzer sesli Türkçe kancası ve akılda kalan sahnesi.`,
     ogTur: 'website',
     icerik:
       altBaslik(
         'Kelimeler',
-        `${kelimeler.length} İngilizce kelime, her biri Türkçe anlamı ve ses kancasıyla. Bir kelimeye dokun, sahnesini gör.`,
+        `En sık kullanılan ${kelimeler.length} İngilizce kelime, Türkçe anlamı ve ses kancasıyla. Uygulamada ${setKartlari.length} kelimenin hepsi seni bekliyor.`,
         [['Kelimeler', '/kelimeler/']],
       ) +
       `<section class="benzerler">
@@ -474,7 +492,17 @@ ${[...harfGruplari]
   };
 
   // --- Blog ---
-  const yazilar = blogYazilari();
+  /*
+    Yazilar kelime sayfalarina bagliyor; sayfasi olmayan kelimeye giden
+    baglanti duz yaziya donuyor. Elle takip edilseydi vitrin degistikce
+    kirik baglanti birikirdi.
+  */
+  const yazilar = blogYazilari().map((y) => ({
+    ...y,
+    govde: y.govde.replace(/<a href="\/kelime\/([^/"]+)\/">(.*?)<\/a>/g, (tam, id, ic) =>
+      yayinda.has(id) ? tam : ic,
+    ),
+  }));
   const blogSayfalari = yazilar.map((y) => {
     const yol = `/blog/${y.kisa}/`;
     const digerleri = yazilar.filter((x) => x !== y).slice(0, 3);
