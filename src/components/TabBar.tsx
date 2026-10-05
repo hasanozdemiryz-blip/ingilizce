@@ -1,5 +1,4 @@
 import { Avatar } from './Avatar';
-import { GirisRozeti } from './HesapMenusu';
 import type { Uye } from '../uyelik';
 import { Ikon, Logo } from './ui';
 import type { IkonAd } from '../icons';
@@ -159,8 +158,14 @@ export function TabBar({
             <Avatar avatar={profil.avatar} cerceve={profil.cerceve} boyut="sm" />
             <span className="min-w-0 flex-1">
               <span className="block truncate text-sm font-extrabold text-ink">{profil.ad}</span>
+              {/*
+                Girisliyken e-posta: hangi hesapla girildigi belli, ama
+                "Giris yapildi" diye surekli bagirmiyor (kullanici istegi).
+              */}
               {uye ? (
-                <GirisRozeti uye={uye} kucuk />
+                <span className="block truncate text-xs font-semibold text-ink-faint">
+                  {uye.eposta ?? 'Hesabım'}
+                </span>
               ) : girisVar ? (
                 <span className="block text-xs font-bold text-brand-deep">Giriş yap ›</span>
               ) : (

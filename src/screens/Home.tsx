@@ -3,7 +3,6 @@ import { Button, Card, Ikon, Screen, Streak } from '../components/ui';
 import { SetFinale } from '../components/SetFinale';
 import { TAB_SPACE } from '../components/TabBar';
 import { UyelikSerit } from '../components/UyelikSerit';
-import { GirisRozeti } from '../components/HesapMenusu';
 import { uyelikVarMi, type Uye } from '../uyelik';
 import { CARD_BY_ID, CARDS, ogrenilenKancalar, setBittiMi } from '../content';
 import { relativeDue } from '../dates';
@@ -166,12 +165,13 @@ export function Home({
             aria-label={uye ? 'Hesap menüsü' : 'Hesabım ve ayarlar'}
           >
             <Avatar avatar={state.profil.avatar} cerceve={state.profil.cerceve} boyut="sm" />
-            <span className="min-w-0 text-left">
-              <span className="word block text-lg font-extrabold text-ink truncate leading-tight">
-                {state.profil.ad}
-              </span>
-              {/* Girisli oldugu her an gorulsun — once hicbir isaret yoktu */}
-              {uyelikHazir && uye && <GirisRozeti uye={uye} kucuk />}
+            {/*
+              Girisli oldugu burada YAZMIYOR — kullanici "surekli giris
+              yapildi yazmasin" dedi. Isaret, girissizde sagda duran
+              "Giris yap"in yoklugu; ayrinti hesap menusunde.
+            */}
+            <span className="word text-lg font-extrabold text-ink truncate">
+              {state.profil.ad}
             </span>
           </button>
         ) : (
