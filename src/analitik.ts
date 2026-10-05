@@ -50,6 +50,9 @@ export const olcumVarMi = (): boolean => Boolean(ADRES && ANAHTAR);
 export type Olay =
   | 'uygulama_acildi'
   | 'karsilama_bitti'
+  | 'karsilama_atlandi'
+  | 'giris_yapildi'
+  | 'cikis_yapildi'
   | 'ders_basladi'
   | 'ders_bitti'
   | 'biliyorum_dendi'

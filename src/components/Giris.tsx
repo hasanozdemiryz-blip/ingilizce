@@ -153,12 +153,12 @@ export function Giris({
       return;
     }
     /*
-      Dogrulama KAPALIYSA kayit oturumu hemen aciyor; o zaman bilgi adimi
-      buradan devam ediyor. Acikken kullanici e-postadaki baglantiyla
-      donunce App adimi aciyor (bkz. App `girisKip`).
+      Dogrulama KAPALIYSA kayit oturumu hemen aciyor. Bilgiler artik zorunlu
+      degil: pencere kapaniyor ve "Giris yapildi" ekrani onlari istege bagli
+      soruyor (bkz. GirisYapildi).
     */
     if (kip === 'kayit') {
-      kipDegistir('bilgi');
+      onKapat(true);
       return;
     }
     if (kip === 'bilgi') {
@@ -210,9 +210,9 @@ export function Giris({
       dugme: 'Şifreyi kaydet',
     },
     bilgi: {
-      baslik: 'Seni tanıyalım',
-      aciklama: 'Üyeliğin bununla tamamlanıyor. Otuz saniye sürer.',
-      dugme: 'Tamamla',
+      baslik: 'Bilgilerin',
+      aciklama: 'Seviye ve hedef isteğe bağlı.',
+      dugme: 'Kaydet',
     },
   };
   const m = metinler[kip];
@@ -405,7 +405,7 @@ export function Giris({
  * Tek secimli secenek grubu. Radyo dugmesi degil dokunulabilir hap:
  * telefonda 16 piksellik bir daireyi isaretlemek zor, hapin tamami hedef.
  */
-function Secenekler<T extends string>({
+export function Secenekler<T extends string>({
   baslik,
   secenekler,
   secili,
@@ -456,7 +456,7 @@ function Baglanti({ children, onClick }: { children: React.ReactNode; onClick: (
 }
 
 /** Google'in resmi renkli "G" isareti — marka kurallari baska bicime izin vermiyor. */
-function GoogleIsareti() {
+export function GoogleIsareti() {
   return (
     <svg viewBox="0 0 48 48" className="h-5 w-5" aria-hidden>
       <path

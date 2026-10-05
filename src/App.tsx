@@ -29,7 +29,16 @@ import { Welcome } from './screens/Welcome';
 import { Settings } from './screens/Settings';
 import { ProfilDuzenle } from './screens/ProfilDuzenle';
 import { Giris } from './components/Giris';
-import { oturumVarGibi, sifirlamaDonusuMu, useUyelik, uyeOku, uyelikVarMi } from './uyelik';
+import { GirisYapildi } from './components/GirisYapildi';
+import { HesapMenusu } from './components/HesapMenusu';
+import {
+  oturumVarGibi,
+  sifirlamaDonusuMu,
+  useUyelik,
+  uyeOku,
+  uyelikVarMi,
+  yeniGirisGoruldu,
+} from './uyelik';
 import { senkronla } from './senkron';
 import { gecerliCerceve, type Kazanim } from './cerceveler';
 import { uygulamadanCik, useGeri } from './geri';
@@ -70,6 +79,7 @@ export default function App() {
   const [flow, setFlow] = useState<Flow>(null);
   const [egzersizde, setEgzersizde] = useState(false);
   const [cikisSoruluyor, setCikisSoruluyor] = useState(false);
+  const [hesapMenusu, setHesapMenusu] = useState(false);
 
   /*
     Uyelik sayfasi iki yoldan ACILISTA acilabiliyor:
@@ -116,27 +126,12 @@ export default function App() {
   });
 
   /*
-    BILGI ADIMI. E-posta onayi tek basina uyelik vermiyor; ad girilene kadar
-    kullanici uye sayilmiyor (bkz. uyelik.ts `uyelikTamamMi`).
-
-    Acilista hesaplanamiyor: uyelik SDK'si asenkron iniyor ve oturum ancak
-    o zaman biliniyor. Bu yuzden efekt — `hazir` olunca bir kez bakiliyor.
-
-    `soruldu` bayragi olmadan kullanici "Sonra doldururum" dedigi anda efekt
-    yeniden calisip pencereyi geri aciyor; kapatilamaz bir donguye donuyor.
-    Kapatan kisi uye sayilmamaya devam ediyor ve serit onu hatirlatiyor.
-
-    Google ile girende bu hic tetiklenmiyor: ad saglayicidan geldigi icin
-    `bilgi` zaten dolu.
+    Bilgi adimi artik ZORUNLU degil ve kendiliginden acilmiyor: giristen
+    sonra "Giris yapildi" ekrani cikiyor ve bilgiler orada istege bagli
+    (bkz. GirisYapildi). Zorunlu adim kullaniciyi her giriste bir forma
+    dusuruyordu.
   */
-  const { uye, hazir: uyelikHazir } = useUyelik();
-  const bilgiSoruldu = useRef(false);
-  useEffect(() => {
-    if (!uyelikHazir || bilgiSoruldu.current) return;
-    if (!uye || uye.bilgi) return;
-    bilgiSoruldu.current = true;
-    setGirisKip((o) => o ?? 'bilgi');
-  }, [uyelikHazir, uye]);
+  const { uye, hazir: uyelikHazir, yeniGiris } = useUyelik();
 
   /*
     ILERLEME SENKRONU. Oturum hazir olur olmaz bir kez: sunucudaki paket
@@ -151,10 +146,18 @@ export default function App() {
     veriyle calismaya devam ediyor.
   */
   const senkronKimlik = useRef<string | null>(null);
+  /*
+    Ilk senkron bitti mi — karsilama karari buna bagli. Hesabi olan biri
+    yeni bir cihazdan girdiginde "karsilama goruldu" bilgisi sunucudan
+    geliyor; senkron bitmeden karar verilirse bir an deneme dersi
+    gorunuyordu.
+  */
+  const [ilkSenkron, setIlkSenkron] = useState<string | null>(null);
   useEffect(() => {
     if (!uyelikHazir || !uye || senkronKimlik.current === uye.id) return;
     senkronKimlik.current = uye.id;
-    void senkronla();
+    const kimlik = uye.id;
+    void senkronla().finally(() => setIlkSenkron(kimlik));
   }, [uyelikHazir, uye]);
 
   /*
@@ -181,6 +184,10 @@ export default function App() {
    * once duruyor.
    */
   useGeri(() => {
+    if (hesapMenusu) {
+      setHesapMenusu(false);
+      return true;
+    }
     if (cikisSoruluyor) {
       setCikisSoruluyor(false);
       return true;
@@ -297,10 +304,30 @@ export default function App() {
     />
   ) : null;
 
+  /* Giristen hemen sonra, bir kez. Sifre belirlenirken araya girmesin. */
+  const girisYapildiPenceresi =
+    yeniGiris && uye && !girisKip ? (
+      <GirisYapildi uye={uye} profil={state.profil} onKapat={yeniGirisGoruldu} />
+    ) : null;
+
   if (!state.onboarded) {
+    /*
+      GIRIS YAPMIS KULLANICI DENEMEYI GORMUYOR. Yontemi taniyor, hesabini
+      acmis; "kendin dene" ona geri gitmek. Once sunucudan "karsilama
+      goruldu" bilgisi gelsin diye ilk senkron bekleniyor — gelirse bu
+      ekran hic gorunmez. Gelmezse (yeni hesap) yalnizca gunluk hedef
+      soruluyor.
+
+      Oturum depoda var ama SDK henuz inmediyse de bekleniyor: yoksa
+      girisli kullaniciya yarim saniye deneme dersi gorunuyordu.
+    */
+    const oturumBekleniyor = !uyelikHazir && oturumVarGibi();
+    const senkronBekleniyor = Boolean(uye) && ilkSenkron !== uye?.id;
+    if (oturumBekleniyor || senkronBekleniyor) return <Splash />;
     return (
       <>
         <Welcome
+        yalnizcaHedef={Boolean(uye)}
         onDone={() => {
           /*
             Bir sure DOGRUDAN ilk derse giriliyordu — bir karar eksiltmek
@@ -313,6 +340,7 @@ export default function App() {
         }}
         />
         {girisPenceresi}
+        {girisYapildiPenceresi}
       </>
     );
   }
@@ -416,8 +444,10 @@ export default function App() {
           onQuickReview={() =>
             setFlow({ name: 'ders', yeni: [], yedek: [], tekrar: bugununKartlari, eslestirmesiz: true })
           }
-          onUyelik={() => setGirisKip(uye ? 'bilgi' : 'giris')}
-          onAyarlar={() => setTab('ayarlar')}
+          onUyelik={() => setGirisKip('giris')}
+          onHesap={() => (uye ? setHesapMenusu(true) : setTab('ayarlar'))}
+          uye={uye}
+          uyelikHazir={uyelikHazir}
           onPractice={() => setFlow({ name: 'ders', yeni: [], yedek: [], tekrar: ahead })}
         />
       )}
@@ -440,9 +470,30 @@ export default function App() {
       )}
 
       {/* Egzersiz kosarken menu gizlenir: tam ekran odak, ve dugmeler menunun altinda kalmaz */}
-      {!egzersizde && <TabBar active={tab} onChange={setTab} profil={state.profil} />}
+      {!egzersizde && (
+        <TabBar
+          active={tab}
+          onChange={setTab}
+          profil={state.profil}
+          uye={uyelikHazir ? uye : null}
+          girisVar={uyelikVarMi() && uyelikHazir}
+          onHesap={() => (uye ? setHesapMenusu(true) : setGirisKip('giris'))}
+        />
+      )}
 
       {girisPenceresi}
+
+      {hesapMenusu && uye && (
+        <HesapMenusu
+          uye={uye}
+          profil={state.profil}
+          onProfil={() => setFlow({ name: 'profil' })}
+          onAyarlar={() => setTab('ayarlar')}
+          onKapat={() => setHesapMenusu(false)}
+        />
+      )}
+
+      {girisYapildiPenceresi}
 
       {/*
         Cikis onayi. Ana ekranda geri tusuna basilinca cikiyor — kullanici

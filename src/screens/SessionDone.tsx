@@ -63,7 +63,7 @@ export function SessionDone({
   const [kapatildi, setKapatildi] = useState(false);
   const davet =
     // `hazir` olmadan girisli kullaniciya da "uye ol" gorunup kayboluyordu
-    uyelikVarMi() && hazir && !uye?.bilgi?.tamam && !kapatildi
+    uyelikVarMi() && hazir && !uye && !kapatildi
       ? siradakiDavet(kazanim, davetGorulen)
       : null;
 

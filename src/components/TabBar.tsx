@@ -1,4 +1,6 @@
 import { Avatar } from './Avatar';
+import { GirisRozeti } from './HesapMenusu';
+import type { Uye } from '../uyelik';
 import { Ikon, Logo } from './ui';
 import type { IkonAd } from '../icons';
 import type { Profil } from '../types';
@@ -48,11 +50,19 @@ export function TabBar({
   active,
   onChange,
   profil,
+  uye = null,
+  girisVar = false,
+  onHesap,
 }: {
   active: Tab;
   onChange: (t: Tab) => void;
   /** Yan menunun dibindeki kullanici satiri. Dar ekranda yer yok. */
   profil?: Profil;
+  /** Girisliyse satir "Giris yapildi" der ve hesap menusunu acar. */
+  uye?: Uye | null;
+  /** Uyelik acik ve durum biliniyor — girissize "Giris yap" gosterilsin mi. */
+  girisVar?: boolean;
+  onHesap?: () => void;
 }) {
   return (
     <>
@@ -135,16 +145,27 @@ export function TabBar({
           basinca ayarlar aciliyor. Dar ekranda yok — orada ayni is
           ustteki avatara dusuyor (bkz. Home).
         */}
+        {/*
+          Alt satir girisli kullaniciya "Giris yapildi" (yesil tik) diyor ve
+          hesap menusunu aciyor; girissize "Giris yap" diyor. Once ikisine
+          de "Hesabim" yaziyordu ve girisin olup olmadigi anlasilmiyordu.
+        */}
         {profil && (
           <button
-            onClick={() => onChange('ayarlar')}
+            onClick={() => (onHesap && (uye || girisVar) ? onHesap() : onChange('ayarlar'))}
             className="mt-auto mx-3 flex items-center gap-2.5 rounded-2xl border border-line bg-paper px-3 py-2.5 text-left transition hover:bg-sunken active:scale-[0.98]"
-            aria-label="Hesabım ve ayarlar"
+            aria-label={uye ? 'Hesap menüsü' : 'Giriş yap'}
           >
             <Avatar avatar={profil.avatar} cerceve={profil.cerceve} boyut="sm" />
             <span className="min-w-0 flex-1">
               <span className="block truncate text-sm font-extrabold text-ink">{profil.ad}</span>
-              <span className="block text-xs font-bold text-ink-faint">Hesabım</span>
+              {uye ? (
+                <GirisRozeti uye={uye} kucuk />
+              ) : girisVar ? (
+                <span className="block text-xs font-bold text-brand-deep">Giriş yap ›</span>
+              ) : (
+                <span className="block text-xs font-bold text-ink-faint">Ayarlar</span>
+              )}
             </span>
           </button>
         )}

@@ -96,6 +96,30 @@ const sifirlamaDonusu =
 
 export const sifirlamaDonusuMu = (): boolean => sifirlamaDonusu;
 
+/**
+ * YENI GIRIS — "Giris yapildi" ekraninin tetigi.
+ *
+ * Kullanici giris yaptiginda bunu ACIKCA gormeli: once hicbir sey
+ * olmuyordu, pencere kapanip ayni ekran duruyordu ve "girdim mi?" sorusu
+ * cevapsiz kaliyordu. Bayrak uc yerden kalkiyor: sifreyle giris, oturumu
+ * hemen acan kayit ve bir giris baglantisindan DONUS (Google, e-posta
+ * dogrulama). Donus, `sifirlamaDonusu` gibi modul yuklenirken okunuyor —
+ * SDK adresi temizledikten sonra sorulursa cevap kaybolur.
+ *
+ * Sifirlama donusu sayilmiyor: orada once yeni sifre belirleniyor.
+ */
+let yeniGiris =
+  typeof location !== 'undefined' &&
+  !sifirlamaDonusu &&
+  (location.hash.includes('access_token=') || location.search.includes('code='));
+
+/** Ekran gosterildi; bir daha cikmasin. */
+export function yeniGirisGoruldu(): void {
+  if (!yeniGiris) return;
+  yeniGiris = false;
+  haberVer();
+}
+
 // --- Durum -----------------------------------------------------------------
 
 /**
@@ -115,7 +139,23 @@ export type UyeBilgi = {
   tamam: true;
 };
 
-export type Uye = { id: string; eposta: string | null; bilgi: UyeBilgi | null };
+export type Uye = {
+  id: string;
+  eposta: string | null;
+  bilgi: UyeBilgi | null;
+  /** 'google' | 'email' — "Google ile giris yaptin" yazabilmek icin. */
+  saglayici: string | null;
+  /** Saglayicinin verdigi ad (Google). Bilgi adimi atlandiysa gosterilen ad. */
+  saglayiciAdi: string | null;
+};
+
+/**
+ * Ekranda gosterilecek ad: girdigi ad, yoksa Google'daki adi, yoksa
+ * e-postanin @ oncesi. Bilgi adimi artik ZORUNLU degil; ad bos kalabilir.
+ */
+export function uyeAdi(u: Uye): string {
+  return u.bilgi?.ad || u.saglayiciAdi || (u.eposta ?? '').split('@')[0] || 'Üye';
+}
 
 export type Seviye = NonNullable<UyeBilgi['seviye']>;
 export type Hedef = NonNullable<UyeBilgi['hedef']>;
@@ -155,14 +195,22 @@ const abone = (f: () => void) => {
   };
 };
 
-type HamKullanici = { id: string; email?: string | null; user_metadata?: unknown };
+type HamKullanici = {
+  id: string;
+  email?: string | null;
+  user_metadata?: unknown;
+  app_metadata?: { provider?: string };
+};
 
 function uyeden(k: HamKullanici | null | undefined): Uye | null {
   if (!k) return null;
-  const ham = k.user_metadata as Partial<UyeBilgi> | undefined;
+  const ham = k.user_metadata as (Partial<UyeBilgi> & Record<string, unknown>) | undefined;
+  const sAdi = (ham?.full_name ?? ham?.name) as string | undefined;
   return {
     id: k.id,
     eposta: k.email ?? null,
+    saglayici: k.app_metadata?.provider ?? null,
+    saglayiciAdi: sAdi ?? null,
     // `tamam` yoksa bilgi girilmemis demektir; yarim metadata'yi bilgi sayma.
     bilgi: ham?.tamam && ham.ad ? (ham as UyeBilgi) : null,
   };
@@ -375,6 +423,10 @@ export async function sifreyleKayit(eposta: string, sifre: string): Promise<Sonu
     oturum hemen acilir. Ikisini de destekliyoruz ki panel ayari degisince
     arayuz bozulmasin.
   */
+  if (data.session) {
+    yeniGiris = true;
+    haberVer();
+  }
   return { oldu: true, dogrulamaBekliyor: !data.session };
 }
 
@@ -383,7 +435,10 @@ export async function sifreyleGiris(eposta: string, sifre: string): Promise<Sonu
   const c = await istemciyiKur();
   if (!c) return BAGLANAMADI;
   const { error } = await c.auth.signInWithPassword({ email: eposta.trim(), password: sifre });
-  return error ? { oldu: false, hata: cevir(error.message) } : { oldu: true };
+  if (error) return { oldu: false, hata: cevir(error.message) };
+  yeniGiris = true;
+  haberVer();
+  return { oldu: true };
 }
 
 /**
@@ -431,14 +486,14 @@ export async function sifreSifirlamaGonder(eposta: string): Promise<Sonuc> {
 }
 
 /**
- * Uyelik TAMAM mi.
+ * Uyelik TAMAM mi — giris yapmis olmak yetiyor.
  *
- * E-posta onayi tek basina yetmiyor: hesap acilmis ama kullaniciya dair
- * hicbir sey bilmiyorsak uyelik yarim. Kural tek — elimizde bir ad varsa
- * tamamdir. Google ile girende ad saglayicidan geliyor, e-posta ile
- * girende bilgi adiminda soruluyor.
+ * Bir sure "ad girilmeden uye sayilmaz" kurali vardi ve e-postayla gelen
+ * kullanici zorunlu bir bilgi adimina dusuyordu; kullanici bunu istemedi
+ * ("ister doldursun ister doldurmasin"). Bilgiler artik "Giris yapildi"
+ * ekraninda ISTEGE BAGLI soruluyor; ad yoksa `uyeAdi` e-postadan uretiyor.
  */
-export const uyelikTamamMi = (): boolean => Boolean(uye?.bilgi?.tamam);
+export const uyelikTamamMi = (): boolean => Boolean(uye);
 
 /** Bilgi adiminin kaydi. Seviye ve hedef bos birakilabilir. */
 export async function bilgiKaydet(bilgi: Omit<UyeBilgi, 'tamam'>): Promise<Sonuc> {
@@ -534,7 +589,7 @@ export const uyelikHazirMi = (): boolean => hazir;
  * SDK acilistan SONRA inebildigi icin duz cagri yetmiyor: oturum
  * bulundugunda yeniden cizim gerekiyor (`useTelaffuz` ile ayni sebep).
  */
-export function useUyelik(): { uye: Uye | null; hazir: boolean } {
+export function useUyelik(): Durum {
   return useSyncExternalStore(
     abone,
     () => durumPaketi(),
@@ -546,18 +601,21 @@ export function useUyelik(): { uye: Uye | null; hazir: boolean } {
   `useSyncExternalStore` her cagrida AYNI nesneyi gormeli, yoksa sonsuz
   yeniden cizim olur. Paket yalnizca gercekten degisince yenileniyor.
 */
-const BOS: { uye: Uye | null; hazir: boolean } = { uye: null, hazir: false };
+type Durum = { uye: Uye | null; hazir: boolean; yeniGiris: boolean };
+const BOS: Durum = { uye: null, hazir: false, yeniGiris: false };
 let paket = BOS;
 
-function durumPaketi(): { uye: Uye | null; hazir: boolean } {
+function durumPaketi(): Durum {
   /*
     Kimlige degil NESNEYE bakiliyor. Kimlik karsilastirilirken bilgi adimi
     kaydedildiginde (ayni kisi, yeni `bilgi`) paket yenilenmiyor ve ekran
     sayfa yenilenene kadar "uyeligini tamamla" demeye devam ediyordu.
     `uye` yalnizca gercek bir degisiklikte yeniden ataniyor.
   */
-  if (paket.uye !== uye || paket.hazir !== hazir) {
-    paket = { uye, hazir };
+  // Yeni giris yalnizca oturum varken anlamli.
+  const yg = yeniGiris && Boolean(uye);
+  if (paket.uye !== uye || paket.hazir !== hazir || paket.yeniGiris !== yg) {
+    paket = { uye, hazir, yeniGiris: yg };
   }
   return paket;
 }

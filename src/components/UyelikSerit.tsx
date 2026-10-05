@@ -8,10 +8,10 @@ import { useUyelik, uyelikVarMi } from '../uyelik';
  * gormuyordu. Serit o bosluğu dolduruyor — surekli duruyor ama ince, ve
  * hicbir seyi engellemiyor.
  *
- * UC HALI VAR:
- *   hic uye degil   — kac kelimenin risk altinda oldugunu SAYIYLA soyler
- *   uye, bilgi eksik — "uyeligini tamamla"
- *   uye ve tamam    — hic gorunmez
+ * IKI HALI VAR:
+ *   uye degil — kac kelimenin risk altinda oldugunu SAYIYLA soyler
+ *   girisli   — hic gorunmez. Bir sure "uyeligini tamamla" hali de vardi;
+ *               bilgi adimi istege baglı olunca kalkti.
  *
  * SIFIR KELIMEDE CIKMAZ. Kaybedecek bir seyi olmayana kayip uyarisi
  * yapmak hem anlamsiz hem de ilk izlenimi bozuyor; uygulamayi yeni acan
@@ -37,15 +37,14 @@ export function UyelikSerit({
     "uye ol" deyip kayboluyordu.
   */
   if (!hazir) return null;
-  if (uye?.bilgi?.tamam) return null;
+  if (uye) return null;
 
-  const eksikBilgi = Boolean(uye);
   /*
     Hic kelime yokken de gorunuyor ama metni degisiyor: "0 kelimen risk
     altinda" demek anlamsiz olurdu. Bir sure sifirda hic gosterilmiyordu;
     karar degisti, cagri surekli dursun istendi.
   */
-  const hicIlerleme = !eksikBilgi && ogrenilen === 0;
+  const hicIlerleme = ogrenilen === 0;
 
   return (
     <button
@@ -53,22 +52,14 @@ export function UyelikSerit({
       className="rise flex w-full items-center gap-3 rounded-2xl border border-spark bg-spark-soft px-4 py-3 text-left transition active:scale-[0.99]"
     >
       <span className="text-lg leading-none" aria-hidden>
-        {eksikBilgi || hicIlerleme ? '🙂' : '⚠️'}
+        {hicIlerleme ? '🙂' : '⚠️'}
       </span>
       <span className="min-w-0 flex-1">
         <span className="block text-sm font-bold text-ink">
-          {eksikBilgi
-            ? 'Üyeliğini tamamla'
-            : hicIlerleme
-              ? 'Üye ol, ilerlemen kaybolmasın'
-              : `${ogrenilen} kelimen yalnızca bu cihazda`}
+          {hicIlerleme ? 'Üye ol, ilerlemen kaybolmasın' : `${ogrenilen} kelimen yalnızca bu cihazda`}
         </span>
         <span className="block text-xs text-ink-soft">
-          {eksikBilgi
-            ? 'Otuz saniye sürer.'
-            : hicIlerleme
-              ? 'Telefonda başla, bilgisayarda sürdür.'
-              : 'Üye ol, cihaza bağlı kalmasın.'}
+          {hicIlerleme ? 'Telefonda başla, bilgisayarda sürdür.' : 'Üye ol, cihaza bağlı kalmasın.'}
         </span>
       </span>
       <span className="text-sm font-extrabold text-ink" aria-hidden>

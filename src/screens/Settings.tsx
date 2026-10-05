@@ -13,8 +13,9 @@ import {
 } from '../reminder';
 import { useTelaffuz } from '../speech';
 import { HEDEFLER, SEVIYELER, etiket, hesabiSil, useUyelik, uyelikVarMi } from '../uyelik';
-import { cikisVeTemizle } from '../senkron';
 import { Giris } from '../components/Giris';
+import { CikisOnayi } from '../components/Cikis';
+import { GirisRozeti } from '../components/HesapMenusu';
 import { DevPanel } from './DevPanel';
 import type { AppState } from '../types';
 import { dosyayiVer, paylasilabilir, telefonaKaydet, yedekAdi, yol } from '../dosya';
@@ -47,15 +48,8 @@ export function Settings({
   */
   const [sifreAcik, setSifreAcik] = useState(false);
   const [bilgiAcik, setBilgiAcik] = useState(false);
-  /*
-    Cikis ONAY istiyor: cihazdaki ilerleme siliniyor. Senkron tutmazsa
-    silmiyoruz ve sebebini soyluyoruz — cevrimdisi bir cihazda son dersin
-    ilerlemesi henuz gitmemis olabilir.
-  */
-  const [cikisDurum, setCikisDurum] = useState<'kapali' | 'soruyor' | 'calisiyor' | 'senkronYok'>(
-    'kapali',
-  );
-
+  /* Cikis onayi ortak pencerede (bkz. Cikis.tsx) — hesap menusuyle ayni. */
+  const [cikisAcik, setCikisAcik] = useState(false);
   /*
     HESAP SILME. Cikistan ayri ve geri donusu YOK: cikista veri hesapta
     kaliyor, burada hesabin kendisi gidiyor. Onay bu yuzden iki asamali
@@ -102,15 +96,6 @@ export function Settings({
     anaSayfayaDon();
   }
 
-  async function cik(zorla = false) {
-    setCikisDurum('calisiyor');
-    const sonuc = await cikisVeTemizle(zorla);
-    if (sonuc === 'senkronOlmadi') {
-      setCikisDurum('senkronYok');
-      return;
-    }
-    anaSayfayaDon();
-  }
   const { uye } = useUyelik();
 
   /**
@@ -183,12 +168,57 @@ export function Settings({
                   {state.profil.ad}
                 </span>
                 <span className="block text-sm text-ink-soft mt-0.5">
-                  {uye?.bilgi?.ad ? 'Resmini ve çerçeveni seç' : 'Adını ve resmini değiştir'}
+                  {uye ? 'Resmini ve çerçeveni seç' : 'Adını ve resmini değiştir'}
                 </span>
               </span>
               <span className="text-xl text-ink-faint shrink-0">›</span>
             </div>
           </button>
+        )}
+
+        {/*
+          HESAP. Uyelik yapilandirmasi yoksa satir hic acilmiyor — telaffuz
+          ve hatirlatmadaki kural: calismayan bir anahtar gostermektense hic
+          gostermemek. Giris KAPIDA degil; buradan ya da ilk ders sonrasindan
+          yapiliyor.
+        */}
+        {uyelikVarMi() && (
+          <Card className="rise">
+            <h2 className="text-sm font-bold text-ink-soft mb-1">Hesap</h2>
+            {uye ? (
+              <>
+                <GirisRozeti uye={uye} />
+                <p className="text-sm text-ink-soft mt-1 mb-1">
+                  <b className="break-all">{uye.eposta}</b> · İlerlemen hesabında saklanıyor.
+                </p>
+                <div className="mb-3">
+                  <Satir ad="Ad" deger={uye.bilgi?.ad ?? '—'} />
+                  <Satir ad="Seviye" deger={etiket(SEVIYELER, uye.bilgi?.seviye) ?? '—'} />
+                  <Satir ad="Hedef" deger={etiket(HEDEFLER, uye.bilgi?.hedef) ?? '—'} />
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <Kucuk onClick={() => setBilgiAcik(true)}>Bilgilerimi düzenle</Kucuk>
+                  {/* Google ile girenin sifresi yok; dugme kafa karistiriyordu */}
+                  {uye.saglayici !== 'google' && (
+                    <Kucuk onClick={() => setSifreAcik(true)}>Şifre değiştir</Kucuk>
+                  )}
+                  {/*
+                    CIKIS BURADA, hesabin yaninda. Once sayfanin dibinde,
+                    "Hesabi sil"in yaninda ve kirmiziydi; kullanici "cikis cok
+                    zor" dedi. Ayni is ust menude de var (avatar).
+                  */}
+                  <Kucuk onClick={() => setCikisAcik(true)}>Çıkış yap</Kucuk>
+                </div>
+              </>
+            ) : (
+              <>
+                <p className="text-sm text-ink-soft mb-3">
+                  İlerlemen şu an <b>yalnızca bu cihazda</b>. Giriş yaparsan kaybolmaz.
+                </p>
+                <Kucuk onClick={() => setGirisAcik(true)}>Giriş yap</Kucuk>
+              </>
+            )}
+          </Card>
         )}
 
         <Card className="rise delay-1">
@@ -352,55 +382,6 @@ export function Settings({
         )}
 
         {/*
-          HESAP. Uyelik yapilandirmasi yoksa satir hic acilmiyor — telaffuz
-          ve hatirlatmadaki kural: calismayan bir anahtar gostermektense hic
-          gostermemek. Giris KAPIDA degil; buradan ya da ilk ders sonrasindan
-          yapiliyor.
-        */}
-        {uyelikVarMi() && (
-          <Card className="rise delay-1">
-            <h2 className="text-sm font-bold text-ink-soft mb-1">Hesap</h2>
-            {uye && !uye.bilgi?.tamam ? (
-              /*
-                UCUNCU HAL. E-posta onaylanmis ama bilgi girilmemis: hesap
-                var, uyelik yarim. Bunu soylemezsek kullanici neden hala
-                serit gordugunu anlamiyor.
-              */
-              <>
-                <p className="text-sm text-ink-soft mb-3">
-                  <b className="break-all">{uye.eposta}</b> ile giriş yaptın ama{' '}
-                  <b>üyeliğin tamamlanmadı</b>. Otuz saniyelik bir adım kaldı.
-                </p>
-                <Kucuk onClick={() => setBilgiAcik(true)}>Tamamla</Kucuk>
-              </>
-            ) : uye ? (
-              <>
-                <p className="text-sm text-ink-soft mb-1">
-                  <b className="break-all">{uye.eposta}</b> ile giriş yaptın. İlerlemen
-                  hesabında saklanıyor.
-                </p>
-                <div className="mb-3">
-                  <Satir ad="Ad" deger={uye.bilgi?.ad ?? '—'} />
-                  <Satir ad="Seviye" deger={etiket(SEVIYELER, uye.bilgi?.seviye) ?? '—'} />
-                  <Satir ad="Hedef" deger={etiket(HEDEFLER, uye.bilgi?.hedef) ?? '—'} />
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  <Kucuk onClick={() => setBilgiAcik(true)}>Bilgilerimi düzenle</Kucuk>
-                  <Kucuk onClick={() => setSifreAcik(true)}>Şifre değiştir</Kucuk>
-                </div>
-              </>
-            ) : (
-              <>
-                <p className="text-sm text-ink-soft mb-3">
-                  İlerlemen şu an <b>yalnızca bu cihazda</b>. Giriş yaparsan kaybolmaz.
-                </p>
-                <Kucuk onClick={() => setGirisAcik(true)}>Giriş yap</Kucuk>
-              </>
-            )}
-          </Card>
-        )}
-
-        {/*
           VERILERIM yalnizca UYESIZ kullaniciya.
 
           Uye icin bu bolum hem gereksiz hem YANILTICI: "Sifirla" cihazi
@@ -412,21 +393,12 @@ export function Settings({
           Uyesizde ise tek koruma bu — ilerlemesi yalnizca cihazda ve
           yedek almazsa kaybolur.
         */}
-        {!uye?.bilgi?.tamam && (
+        {!uye && (
           <Card className="rise delay-2">
             <h2 className="text-sm font-bold text-ink-soft mb-1">Verilerim</h2>
             <p className="text-sm text-ink-soft mb-3">
-              {uye?.bilgi?.tamam ? (
-                <>
-                  İlerlemen hesabına yedekleniyor, <b>fotoğrafın yalnızca bu cihazda</b>{' '}
-                  kalıyor. Hesaptan bağımsız bir kopya istersen yedekle
-                </>
-              ) : (
-                <>
-                  İlerleme, profilin ve fotoğrafın <b>yalnızca bu cihazda</b> tutuluyor.
-                  Taşımak veya korumak için yedekle
-                </>
-              )}
+              İlerleme, profilin ve fotoğrafın <b>yalnızca bu cihazda</b> tutuluyor.
+              Taşımak veya korumak için yedekle
               {paylasSecenegi && " — açılan menüden Drive'a, e-postaya ya da istediğin yere gönderebilirsin"}.
             </p>
             <div className="flex flex-wrap gap-2">
@@ -478,23 +450,6 @@ export function Settings({
           silme hesabi bitirir. Ayarlarin ortasinda, gunluk hedefin yaninda
           durmalari yanlisti — yanlislikla basilabilecek yerde olmamalilar.
         */}
-        {uye && (
-          <Card className="rise delay-3">
-            <h2 className="text-sm font-bold text-ink-soft mb-1">Oturum</h2>
-            <p className="mb-3 text-sm text-ink-soft">
-              İlerlemen hesabında kalır, tekrar girince geri gelir.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <Kucuk tehlike onClick={() => setCikisDurum('soruyor')}>
-                Çıkış yap
-              </Kucuk>
-              <Kucuk tehlike onClick={() => setSilmeDurum('soruyor')}>
-                Hesabı sil
-              </Kucuk>
-            </div>
-          </Card>
-        )}
-
         <Card className="rise delay-3">
           <h2 className="text-sm font-bold text-ink-soft mb-2">Hakkında</h2>
           <Satir ad="Toplam kelime" deger={String(CARDS.length)} />
@@ -533,6 +488,20 @@ export function Settings({
             ))}
           </div>
         </Card>
+
+        {/*
+          HESAP SILME en altta ve kucuk. Once "Cikis yap"in hemen yanindaydi —
+          geri donusu olan islemle olmayani yan yana koymak yanlis dugmeye
+          basmayi davet ediyordu.
+        */}
+        {uye && (
+          <button
+            onClick={() => setSilmeDurum('soruyor')}
+            className="mx-auto mt-1 px-3 py-2 text-xs font-bold text-ink-faint underline-offset-2 transition hover:text-[#c2417f] hover:underline"
+          >
+            Hesabımı kalıcı olarak sil
+          </button>
+        )}
 
         {import.meta.env.DEV && <DevPanel />}
       </div>
@@ -602,49 +571,7 @@ export function Settings({
         </div>
       )}
 
-      {cikisDurum !== 'kapali' && (
-        <div className="fixed inset-0 z-30 flex items-end justify-center bg-ink/45 px-5 pb-8 backdrop-blur-sm sm:items-center sm:pb-0">
-          <Card className="rise w-full max-w-md p-6">
-            {cikisDurum === 'senkronYok' ? (
-              <>
-                <p className="word text-xl font-extrabold">Bağlanamadık</p>
-                <p className="mt-2 text-sm text-ink-soft">
-                  Bu cihazdaki son ilerleme hesabına <b>gönderilemedi</b>. Şimdi çıkarsan o
-                  kısım kaybolur. İnternetin gelince tekrar dene.
-                </p>
-                <div className="mt-5 flex flex-col gap-2.5">
-                  <Button variant="spark" onClick={() => setCikisDurum('kapali')}>
-                    Vazgeç
-                  </Button>
-                  <Button variant="ghost" onClick={() => void cik(true)}>
-                    Yine de çık
-                  </Button>
-                </div>
-              </>
-            ) : (
-              <>
-                <p className="word text-xl font-extrabold">Çıkış yapılsın mı?</p>
-                <p className="mt-2 text-sm text-ink-soft">
-                  İlerlemen önce hesabına gönderilecek, sonra bu cihazdan silinecek. Tekrar
-                  giriş yaptığında olduğu gibi geri gelir.
-                </p>
-                <div className="mt-5 flex flex-col gap-2.5">
-                  <Button variant="spark" onClick={() => setCikisDurum('kapali')}>
-                    Vazgeç
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    disabled={cikisDurum === 'calisiyor'}
-                    onClick={() => void cik()}
-                  >
-                    {cikisDurum === 'calisiyor' ? 'Gönderiliyor…' : 'Çık'}
-                  </Button>
-                </div>
-              </>
-            )}
-          </Card>
-        </div>
-      )}
+      {cikisAcik && <CikisOnayi onKapat={() => setCikisAcik(false)} />}
 
       {sifirlaSoruluyor && (
         <div className="fixed inset-0 z-20 flex items-end justify-center bg-ink/40 px-5 pb-8 backdrop-blur-sm">

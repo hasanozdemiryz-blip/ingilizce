@@ -88,6 +88,8 @@
   /* --- Basari: nane --- */
   --color-grow: #2bc48a;
   --color-grow-soft: #d9f8ec;
+  /* Beyaz uzerinde okunur yesil yazi — `grow` yazi olarak soluk kaliyor. */
+  --color-grow-deep: #12865c;
 
   /* --- Marka kremi: yalnizca ACILIS zincirinde ---
          Logonun zemini bu; urun ekranlarinda kullanilmaz. Ikona basmaktan
@@ -128,6 +130,25 @@ body {
   /* Duz krem. Onceki gokyuzu degradesi yan menuyle yan yana gelince
      iki ayri zemin gibi duruyordu; tek ton ikisini birlestiriyor. */
   background: var(--color-paper);
+}
+
+/*
+  EL IMLECI. Tailwind 4 dugmelerde imleci tarayicinin varsayilanina
+  (ok) birakiyor; tiklanabilir seyin uzerinde el cikmayinca menuler
+  "tiklanmiyor" gibi duruyordu.
+*/
+button:not(:disabled),
+[role='button'],
+[role='switch'],
+a[href],
+summary,
+label:has(input),
+select {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
 
 button {

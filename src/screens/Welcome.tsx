@@ -19,8 +19,37 @@ type Adim = 'vaat' | 'dene' | 'hedef';
  * geciyor ama kancanin ise yaradigina INANMIYORDU, cunku kendi denemedi.
  * 2. adim tam olarak bunu duzeltiyor: anlatmiyoruz, yasatiyoruz.
  */
-export function Welcome({ onDone }: { onDone: () => void }) {
-  const [adim, setAdim] = useState<Adim>('vaat');
+/** Deneme adimlarinin sag ustundeki "Atla". Hedef secimi atlanamaz. */
+function Atla({ onClick }: { onClick: () => void }) {
+  return (
+    <div className="flex h-12 shrink-0 items-center justify-end">
+      <button
+        onClick={onClick}
+        className="rounded-full px-4 py-2 text-sm font-bold text-ink-soft transition hover:bg-sunken active:scale-95"
+      >
+        Atla
+      </button>
+    </div>
+  );
+}
+
+export function Welcome({
+  onDone,
+  yalnizcaHedef = false,
+}: {
+  onDone: () => void;
+  /**
+   * Deneme hic gosterilmez, yalnizca gunluk hedef sorulur. Giris yapmis
+   * kullanici icin: yontemi zaten taniyor, hesabini acmis — ona "kendin
+   * dene" demek geri gitmek.
+   */
+  yalnizcaHedef?: boolean;
+}) {
+  const [adim, setAdim] = useState<Adim>(yalnizcaHedef ? 'hedef' : 'vaat');
+  const atla = () => {
+    olay('karsilama_atlandi', { adim });
+    setAdim('hedef');
+  };
   const [secilen, setSecilen] = useState<string | null>(null);
   const [hedef, setHedef] = useState<number>(LIMIT_DEFAULT);
 
@@ -37,6 +66,7 @@ export function Welcome({ onDone }: { onDone: () => void }) {
   if (adim === 'vaat') {
     return (
       <Screen yanMenusuz>
+        <Atla onClick={atla} />
         <div className="flex-1 flex flex-col justify-center gap-6 py-6">
           <div className="rise text-center">
             <h1 className="word text-3xl font-extrabold leading-tight">Ezberlemeyeceksin.</h1>
@@ -75,6 +105,7 @@ export function Welcome({ onDone }: { onDone: () => void }) {
 
     return (
       <Screen yanMenusuz>
+        <Atla onClick={atla} />
         <div className="flex-1 flex flex-col justify-center gap-6 py-6">
           {secilen === null ? (
             <>

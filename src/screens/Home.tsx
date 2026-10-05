@@ -3,6 +3,8 @@ import { Button, Card, Ikon, Screen, Streak } from '../components/ui';
 import { SetFinale } from '../components/SetFinale';
 import { TAB_SPACE } from '../components/TabBar';
 import { UyelikSerit } from '../components/UyelikSerit';
+import { GirisRozeti } from '../components/HesapMenusu';
+import { uyelikVarMi, type Uye } from '../uyelik';
 import { CARD_BY_ID, CARDS, ogrenilenKancalar, setBittiMi } from '../content';
 import { relativeDue } from '../dates';
 import type { AppState, Card as CardType, Progress } from '../types';
@@ -32,8 +34,13 @@ type Props = {
   onPractice: () => void;
   /** Uyelik seridi buna basinca giris penceresini aciyor (bkz. App). */
   onUyelik: () => void;
-  /** Ustteki avatar + ad kullanici paneline (Ayarlar) goturuyor. */
-  onAyarlar: () => void;
+  /**
+   * Ustteki avatar + ad: girisliyse hesap menusu, degilse Ayarlar
+   * (bkz. App). Cikis bu menude — iki dokunus.
+   */
+  onHesap: () => void;
+  uye: Uye | null;
+  uyelikHazir: boolean;
 };
 
 /**
@@ -64,7 +71,9 @@ export function Home({
   onQuickReview,
   onPractice,
   onUyelik,
-  onAyarlar,
+  onHesap,
+  uye,
+  uyelikHazir,
 }: Props) {
   const ogrenilen = progress.filter((p) => p.introduced).length;
   const tekrar = due.length;
@@ -152,19 +161,34 @@ export function Home({
             acilir; burada da oyle.
           */
           <button
-            onClick={onAyarlar}
-            className="flex items-center gap-3 min-w-0 rounded-2xl -ml-1 pl-1 pr-2 py-1 transition active:scale-[0.98]"
-            aria-label="Hesabım ve ayarlar"
+            onClick={onHesap}
+            className="flex items-center gap-3 min-w-0 rounded-2xl -ml-1 pl-1 pr-2 py-1 transition hover:bg-sunken/70 active:scale-[0.98]"
+            aria-label={uye ? 'Hesap menüsü' : 'Hesabım ve ayarlar'}
           >
             <Avatar avatar={state.profil.avatar} cerceve={state.profil.cerceve} boyut="sm" />
-            <span className="word text-lg font-extrabold text-ink truncate">
-              {state.profil.ad}
+            <span className="min-w-0 text-left">
+              <span className="word block text-lg font-extrabold text-ink truncate leading-tight">
+                {state.profil.ad}
+              </span>
+              {/* Girisli oldugu her an gorulsun — once hicbir isaret yoktu */}
+              {uyelikHazir && uye && <GirisRozeti uye={uye} kucuk />}
             </span>
           </button>
         ) : (
           <span className="word text-base font-extrabold text-ink-soft">Hafızada İngilizce</span>
         )}
-        {state.streakCount > 0 && <Streak count={state.streakCount} />}
+        <span className="flex shrink-0 items-center gap-2">
+          {state.streakCount > 0 && <Streak count={state.streakCount} />}
+          {/* Girissize ustte de bir kapi; serit asagida kalabiliyor */}
+          {uyelikVarMi() && uyelikHazir && !uye && (
+            <button
+              onClick={onUyelik}
+              className="rounded-full bg-white px-3.5 py-1.5 text-sm font-bold text-brand-deep shadow-[var(--shadow-soft)] transition hover:bg-brand-soft active:scale-95"
+            >
+              Giriş yap
+            </button>
+          )}
+        </span>
       </header>
 
       {/* Kahraman blok dikey ORTADA — ekran bos gorunmesin, karar tek olsun */}
