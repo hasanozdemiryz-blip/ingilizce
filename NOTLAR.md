@@ -2137,8 +2137,11 @@ anahtar, `t()` dışında kalan Türkçe metin, Türkçe harfi olmayan ama
 **İletişim formu açık.** CLI girişi bu makinede çalışmadı (TTY'siz ortam
 tarayıcı akışına izin vermiyor), kurulum panelden yapıldı: SQL editörde
 migration, Edge Functions → editörden `iletisim`, **Verify JWT kapalı**.
-Alıcı/gönderen/tuz varsayılanları kodda; tek sır `RESEND_API_KEY`. Anahtar
-yokken mesaj yine kaydediliyor (`eposta_gitti = false`). Gönderen
+Alıcı/gönderen/tuz varsayılanları kodda; tek sır `RESEND_API_KEY`.
+**Kullanıcı e-posta bildirimi istemedi** ("panelden bakarım, daha az
+uğraş"); anahtar eklenmedi, mesajlar Table Editor → `iletisim`te okunuyor
+(`eposta_gitti = false`). Yasal metinler buna göre: e-postayla iletim yok.
+İleride bildirim istenirse yalnızca sır eklemek yetiyor, kod hazır. Gönderen
 `iletisim@hafizada.com` — giriş postaları da Resend'de aynı alan adından.
 
 ## Sırada
