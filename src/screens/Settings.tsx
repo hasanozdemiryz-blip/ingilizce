@@ -462,22 +462,22 @@ export function Settings({
           olmasi gerekiyor. Play ve App Store gizlilik metnine uygulama
           icinden erisilmesini bekliyor.
 
-          Sayfalar React degil, `public/` icinde duz HTML: magazalar
-          uygulama YUKLENMEDEN acilabilen bir gizlilik adresi istiyor,
-          yani ayni metin hem uygulamada hem internette olmali. Tek
-          kaynakta tutmanin yolu bu.
+          Metinler sitenin kendi sayfalarinda (site/yasal/, tools/site.mjs):
+          ayni menu ve footer'la, "ayri bir site" gibi durmadan. Mutlak
+          adres, cunku uygulama `/ingilizce/` altinda, site kokte.
         */}
         <Card className="rise delay-3">
-          <h2 className="text-sm font-bold text-ink-soft mb-2">Yasal</h2>
+          <h2 className="text-sm font-bold text-ink-soft mb-2">Yasal ve iletişim</h2>
           <div className="flex flex-col">
             {[
-              ['gizlilik.html', 'Gizlilik Politikası'],
-              ['kullanim-kosullari.html', 'Kullanım Koşulları'],
-              ['kvkk-aydinlatma.html', 'KVKK Aydınlatma Metni'],
-            ].map(([dosya, ad]) => (
+              ['https://hafizada.com/gizlilik/', 'Gizlilik Politikası'],
+              ['https://hafizada.com/kullanim-kosullari/', 'Kullanım Koşulları'],
+              ['https://hafizada.com/kvkk/', 'KVKK Aydınlatma Metni'],
+              ['https://hafizada.com/iletisim/', 'İletişim'],
+            ].map(([adres, ad]) => (
               <a
-                key={dosya}
-                href={`${import.meta.env.BASE_URL}${dosya}`}
+                key={adres}
+                href={adres}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-between py-2.5 text-sm transition-opacity active:opacity-60"

@@ -708,18 +708,20 @@ fonksiyonu HTTP ucundan hiç görünmüyor.
 > geliyor. Yasal metinler ve Play'in Veri Güvenliği formu buna göre.
 > Play'de ret sebebi analitik değil, **beyan uyuşmazlığıdır**.
 
-### Yasal metinler
+### Yasal metinler ve site
 
-`public/` içinde **düz HTML**, React değil — çünkü mağazalar uygulama
-**yüklenmeden** açılabilen bir gizlilik adresi istiyor. Aynı dosyalar hem
-internette hem uygulama paketinde; tek kaynak.
+Yasal metinler **sitenin kendi sayfaları**: `hafizada.com/gizlilik/`,
+`/kullanim-kosullari/`, `/kvkk/`. Kaynakları `site/yasal/`; ana sayfa,
+iletişim ve bu sayfalar tek kabuktan (`site/kabuk.html`, aynı menü ve
+footer) `tools/site.mjs` ile üretilip portal deposuna yazılıyor:
 
-| Dosya | Ne |
-|---|---|
-| `gizlilik.html` | Gizlilik Politikası |
-| `kullanim-kosullari.html` | Kullanım Koşulları |
-| `kvkk-aydinlatma.html` | KVKK Aydınlatma Metni (6698 m.10) |
-| `yasal.css` | Ortak stil — açık/koyu tema |
+```bash
+npm run site -- ../hasanozdemiryz-blip.github.io
+ILETISIM_HAZIR=1 npm run site -- ../hasanozdemiryz-blip.github.io   # form açık
+```
+
+`public/gizlilik.html` ve diğer ikisi artık **yönlendirme**: Play
+Console'a verilen gizlilik adresi bozulmasın diye siliniyor değil.
 
 Uygulamadan erişim: **Ayarlar → Yasal** (en altta; aranan bir şey değil
 ama bulunabilir olmak zorunda).

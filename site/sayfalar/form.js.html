@@ -1,0 +1,48 @@
+<script>
+(function () {
+  /*
+    ILETISIM FORMU. Mesaj Supabase'deki `iletisim` islevine gidiyor; islev
+    kaydi tutuyor ve e-postayla iletiyor (bkz. supabase/functions/iletisim).
+    `web` alani gorunmez bir tuzak: insan doldurmaz, bot doldurur.
+  */
+  var ADRES = '__ILETISIM_ADRESI__';
+  document.querySelectorAll('form[data-iletisim]').forEach(function (form) {
+    var durum = form.querySelector('.durum');
+    var dugme = form.querySelector('button[type=submit]');
+    var yaz = function (metin, iyi) {
+      durum.textContent = metin;
+      durum.className = 'durum ' + (iyi ? 'iyi' : 'kotu');
+    };
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var v = {
+        ad: form.ad.value.trim(),
+        eposta: form.eposta.value.trim(),
+        mesaj: form.mesaj.value.trim(),
+        web: form.web.value,
+        sayfa: location.pathname
+      };
+      if (!v.ad || !v.mesaj) return yaz('Adını ve mesajını yazman gerekiyor.', false);
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.eposta)) return yaz('E-posta adresin geçerli görünmüyor.', false);
+      dugme.disabled = true;
+      dugme.textContent = 'Gönderiliyor…';
+      fetch(ADRES, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(v) })
+        .then(function (r) {
+          if (r.status === 429) throw new Error('cok');
+          if (!r.ok) throw new Error('hata');
+          form.reset();
+          yaz('Teşekkürler, mesajın bize ulaştı. En kısa sürede dönüş yapacağız.', true);
+        })
+        .catch(function (err) {
+          yaz(err.message === 'cok'
+            ? 'Kısa sürede çok mesaj gönderildi. Biraz sonra tekrar dene.'
+            : 'Mesaj gönderilemedi. Biraz sonra tekrar dene ya da Instagram\'dan yaz.', false);
+        })
+        .finally(function () {
+          dugme.disabled = false;
+          dugme.textContent = 'Gönder';
+        });
+    });
+  });
+})();
+</script>

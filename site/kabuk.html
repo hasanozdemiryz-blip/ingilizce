@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>__BASLIK__</title>
+<meta name="description" content="__ACIKLAMA__">
+<link rel="canonical" href="__KANONIK__">
+<meta name="theme-color" content="#16233a">
+<link rel="icon" href="/varliklar/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/varliklar/apple-touch-icon.png">
+<meta property="og:site_name" content="Hafızada İngilizce">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="__BASLIK__">
+<meta property="og:description" content="__ACIKLAMA__">
+<meta property="og:type" content="__OG_TUR__">
+<meta property="og:url" content="__KANONIK__">
+<meta property="og:image" content="__OG_RESIM__">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap">
+<link rel="stylesheet" href="/varliklar/site.css?v=__SURUM__">
+__JSONLD__
+</head>
+<body>
+
+<div class="serit">
+  <div class="kap">
+    <span>Ücretsiz</span>
+    <a href="/ingilizce/?giris=1" data-giris>Giriş yap</a>
+  </div>
+</div>
+
+<header>
+  <div class="kap">
+    <a class="marka" href="/" aria-label="Hafızada İngilizce ana sayfa">
+      <img src="/varliklar/logo-koyu.svg" alt="" width="44" height="44">
+      <span>
+        <span class="ad">HAFIZADA</span>
+        <span class="alt">İngilizce</span>
+      </span>
+    </a>
+    <nav class="baglar" aria-label="Ana menü">
+__MENU__
+    </nav>
+    <span class="ust-cta"><a class="btn btn-sari" href="/ingilizce/" data-basla>Hemen başla</a></span>
+    <button class="menu-dugme" type="button" aria-expanded="false" aria-controls="mobil-menu">Menü</button>
+  </div>
+  <nav class="mobil-menu" id="mobil-menu" aria-label="Menü">
+__MENU__
+  </nav>
+</header>
+
+<main>
+__ICERIK__
+</main>
+
+<footer>
+  <div class="kap alt-izgara">
+    <div class="alt-marka">
+      <a class="marka" href="/">
+        <img src="/varliklar/logo-koyu.svg" alt="" width="30" height="30">
+        <span>
+          <span class="ad">HAFIZADA</span>
+          <span class="alt">İngilizce</span>
+        </span>
+      </a>
+      <p>İngilizce kelimeleri benzer sesli Türkçe kelimelere bağlayarak öğren. Ezber yok, reklam yok, ücretsiz.</p>
+      <a class="sosyal" href="https://www.instagram.com/hafizadaingilizce" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Instagram
+      </a>
+    </div>
+    <nav aria-label="Uygulama">
+      <h3>Uygulama</h3>
+      <a href="/ingilizce/" data-basla>Hemen başla</a>
+      <a href="/ingilizce/?giris=1" data-giris>Giriş yap</a>
+      <a href="/#yontem">Nasıl çalışıyor?</a>
+      <a href="/#neden">Neden işe yarıyor?</a>
+    </nav>
+    <nav aria-label="Öğren">
+      <h3>Öğren</h3>
+__OGREN_MENU__
+    </nav>
+    <nav aria-label="Yardım">
+      <h3>Yardım</h3>
+      <a href="/iletisim/">İletişim</a>
+      <a href="/gizlilik/">Gizlilik Politikası</a>
+      <a href="/kullanim-kosullari/">Kullanım Koşulları</a>
+      <a href="/kvkk/">KVKK Aydınlatma Metni</a>
+    </nav>
+  </div>
+  <div class="kap alt-cizgi">
+    <span>© __YIL__ Hafızada İngilizce</span>
+    <span>Ücretsiz · Reklamsız · Telefonda ve bilgisayarda</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Telefon menusu
+  var dugme = document.querySelector('.menu-dugme');
+  var menu = document.getElementById('mobil-menu');
+  if (dugme && menu) {
+    dugme.addEventListener('click', function () {
+      var acik = menu.classList.toggle('acik');
+      dugme.setAttribute('aria-expanded', acik ? 'true' : 'false');
+    });
+  }
+
+  /*
+    GIRISLI MI. Site ile uygulama ayni adreste (hafizada.com/ingilizce/),
+    yani uygulamanin oturum anahtari burada da okunabiliyor. Girisli
+    kullaniciya "Giris yap" yerine "Uygulamaya don" gosteriliyor; girdigi
+    halde tekrar giris formuna gitmesin.
+  */
+  try {
+    var anahtar = null;
+    for (var i = 0; i < localStorage.length; i++) {
+      var k = localStorage.key(i);
+      if (/^sb-.+-auth-token$/.test(k)) { anahtar = k; break; }
+    }
+    if (!anahtar) return;
+    var oturum = JSON.parse(localStorage.getItem(anahtar));
+    var m = (oturum && oturum.user && oturum.user.user_metadata) || {};
+    var ad = String(m.ad || m.full_name || m.name || '').split(' ')[0];
+    document.querySelectorAll('[data-giris]').forEach(function (a) {
+      a.href = '/ingilizce/';
+      a.textContent = ad ? 'Uygulamaya dön · ' + ad : 'Uygulamaya dön';
+    });
+    document.querySelectorAll('[data-basla]').forEach(function (a) {
+      a.textContent = 'Devam et';
+    });
+  } catch (e) {}
+})();
+</script>
+__SCRIPT__
+</body>
+</html>

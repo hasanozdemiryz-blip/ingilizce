@@ -69,7 +69,7 @@ No text, no letters, no numbers, no logos anywhere in the image.
 | Spor/nesne adını tarif et | "football" → Amerikan futbolu topu; "round soccer ball with black pentagon patches" → doğru |
 | Gölgeyi ayrıca yasakla | "NO drop shadow" yetmiyor, "NO ground shadow, NO ambient occlusion" da gerekiyor |
 | "%75 yükseklik" yetmiyor | Merdiven kenarlara dayandı; "WIDE empty margin on all four sides, nothing comes near the edge" ayrıca yazılınca düzeldi |
-| Bant zeminini görselden al | Kırpmak özneyi kesiyordu; görselin köşe pikselinden ton alınıp bant zemini yapılınca `contain` ile hiçbir şey kesilmiyor (bkz. `tools/anasayfa.mjs` `zeminTonu`) |
+| Bant zeminini görselden al | Kırpmak özneyi kesiyordu; görselin köşe pikselinden ton alınıp bant zemini yapılınca `contain` ile hiçbir şey kesilmiyor (bkz. `tools/site.mjs` `zeminTonu`) |
 | İnsan sahnelerinde arka planı tek tek yasakla | "otobüste" deyince otobüs içi, pencere, diğer yolcular geliyor; "no other passengers, no windows, no bus interior" gerekti |
 | Koyu sahne isteme | "karanlıkta yanan mum" arka plan kuralını bozuyor; sahneyi aydınlık kur |
 

@@ -1,0 +1,88 @@
+<script type="application/json" id="kanca-havuz">__KANCA_HAVUZ__</script>
+
+<script>
+(function () {
+  // --- Kahraman slider: kullanim anlari ---
+  var ray = document.getElementById('ray');
+  var noktalar = document.getElementById('noktalar');
+  if (ray) {
+    var adet = ray.children.length;
+    var i = 0;
+    var otomatik;
+
+    for (var n = 0; n < adet; n++) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', (n + 1) + '. görsel');
+      b.addEventListener('click', (function (k) { return function () { git(k); dur(); }; })(n));
+      noktalar.appendChild(b);
+    }
+
+    var ciz = function () {
+      ray.style.transform = 'translateX(' + (-i * 100) + '%)';
+      var d = noktalar.children;
+      for (var k = 0; k < d.length; k++) {
+        d[k].setAttribute('aria-current', k === i ? 'true' : 'false');
+      }
+    };
+    var git = function (k) { i = (k + adet) % adet; ciz(); };
+    var dur = function () { clearInterval(otomatik); };
+
+    document.getElementById('ileri').addEventListener('click', function () { git(i + 1); dur(); });
+    document.getElementById('geri').addEventListener('click', function () { git(i - 1); dur(); });
+
+    var x0 = null;
+    ray.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; dur(); }, { passive: true });
+    ray.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var fark = e.changedTouches[0].clientX - x0;
+      if (Math.abs(fark) > 40) git(i + (fark < 0 ? 1 : -1));
+      x0 = null;
+    }, { passive: true });
+
+    ciz();
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      otomatik = setInterval(function () { git(i + 1); }, 4600);
+    }
+  }
+
+  // --- Kanca ornekleri: ucu ekranda, havuzdan donerek ---
+  var izgara = document.getElementById('kanca-izgara');
+  var ham = document.getElementById('kanca-havuz');
+  if (!izgara || !ham) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var havuz;
+  try { havuz = JSON.parse(ham.textContent); } catch (e) { return; }
+  if (!havuz || havuz.length <= izgara.children.length) return;
+
+  var gorunen = izgara.children.length;
+  var sira = gorunen;   // havuzda siradaki kart
+  var hedef = 0;        // degisecek kutu
+
+  function doldur(kutu, k) {
+    kutu.querySelector('img').src = k.img;
+    kutu.querySelector('img').alt = k.sentence;
+    kutu.querySelector('.en').textContent = k.en;
+    kutu.querySelector('.tr').textContent = k.tr;
+    kutu.querySelector('.kanca-rozet').textContent = '≈ ' + k.hook;
+    kutu.querySelector('.cumle').textContent = '"' + k.sentence + '"';
+  }
+
+  /*
+    Ayni anda ucu birden degistirmek goz icin sicrama oluyor; sirayla tek
+    kart degisince bolum canli duruyor ama okumayi bolmuyor.
+  */
+  setInterval(function () {
+    var kutu = izgara.children[hedef];
+    var kart = havuz[sira % havuz.length];
+    kutu.classList.add('soluk');
+    setTimeout(function () {
+      doldur(kutu, kart);
+      kutu.classList.remove('soluk');
+    }, 350);
+    sira++;
+    hedef = (hedef + 1) % gorunen;
+  }, 2600);
+})();
+</script>

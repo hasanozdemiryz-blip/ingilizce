@@ -1,0 +1,16 @@
+<form class="form" data-iletisim novalidate>
+  <label>Adın
+    <input name="ad" autocomplete="name" maxlength="80" required>
+  </label>
+  <label>E-posta adresin
+    <input name="eposta" type="email" autocomplete="email" maxlength="160" required>
+  </label>
+  <label>Mesajın
+    <textarea name="mesaj" maxlength="4000" required></textarea>
+  </label>
+  <label class="bal" aria-hidden="true">Bu alanı boş bırak
+    <input name="web" tabindex="-1" autocomplete="off">
+  </label>
+  <button class="btn btn-sari" type="submit">Gönder</button>
+  <p class="durum" role="status" aria-live="polite"></p>
+</form>

@@ -1,154 +1,20 @@
 <!doctype html>
+<!--
+  TASINDI. Yasal metinler artik sitenin kendi sayfalarinda (site/yasal/,
+  tools/site.mjs); burada menusuz ayri bir sayfa olarak duruyorlardi.
+  Bu adres Play Console'a gizlilik adresi olarak verildigi icin SILINMIYOR,
+  yeni sayfaya yonlendiriyor.
+-->
 <html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gizlilik Politikası · Hafızada İngilizce</title>
-    <meta name="description" content="Hafızada İngilizce uygulamasının gizlilik politikası." />
-    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png" />
-    <link rel="stylesheet" href="yasal.css" />
+    <link rel="canonical" href="https://hafizada.com/gizlilik/" />
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="refresh" content="0; url=https://hafizada.com/gizlilik/" />
   </head>
   <body>
-    <main>
-      <h1>Gizlilik Politikası</h1>
-      <p class="ustbilgi">Hafızada İngilizce · Yürürlük tarihi: 22 Eylül 2026</p>
-
-      <div class="vurgu">
-        <p>
-          <strong>Kısaca:</strong> Öğrenme ilerlemen, profil adın ve seçtiğin fotoğraf
-          <mark>yalnızca kendi cihazında</mark> durur; bize hiç ulaşmaz. Uygulamayı
-          <strong>üye olmadan</strong> kullanabilirsin.
-          <strong>Üye olursan</strong> e-posta adresin ile verdiğin ad, seviye ve hedef
-          bilgisi sunucumuzda tutulur. Ayrıca uygulamanın nasıl kullanıldığını gösteren
-          <strong>anonim</strong> istatistikler toplanır ve bunu
-          <strong>Ayarlar'dan kapatabilirsin</strong>.
-        </p>
-      </div>
-
-      <h2>1. Kim olduğumuz</h2>
-      <p>
-        Bu politika, Hafızada İngilizce mobil ve web uygulaması için geçerlidir.
-        Veri sorumlusu ve iletişim bilgileri için
-        <a href="kvkk-aydinlatma.html">KVKK Aydınlatma Metni</a>'ne bakabilirsin.
-      </p>
-
-      <h2>2. Cihazında kalan veriler</h2>
-      <p>
-        Aşağıdakiler cihazının kendi deposunda (IndexedDB) tutulur. Sunucumuza
-        gönderilmez, tarafımızdan görülemez, erişilemez:
-      </p>
-      <ul>
-        <li>Öğrendiğin kelimeler, tekrar zamanlaman ve cevap geçmişin</li>
-        <li>Profil adın ve avatarın</li>
-        <li>Kendin yüklediysen profil fotoğrafın</li>
-        <li>Günlük hedefin, serin, hatırlatma saatin ve diğer ayarların</li>
-      </ul>
-      <p>
-        Bu verileri <strong>Ayarlar → Yedek al</strong> ile bir dosyaya çıkarabilir,
-        <strong>Sıfırla</strong> ile tamamen silebilirsin. Uygulamayı kaldırmak da
-        hepsini siler. Yedek dosyası senin cihazında oluşur; bize gönderilmez.
-      </p>
-
-      <h2>3. Topladığımız veriler: anonim kullanım istatistikleri</h2>
-      <p>
-        Uygulamanın nerede işe yaradığını, nerede takıldığını anlayabilmek için
-        <strong>kendi sunucumuzda</strong> (Supabase altyapısı) tuttuğumuz bir tabloya
-        anonim kullanım olayları yazıyoruz. Üçüncü taraf bir analitik hizmeti, reklam
-        ağı veya izleyici (tracker) kullanılmaz.
-      </p>
-
-      <h3>Gönderilen olaylar</h3>
-      <p>
-        Uygulamanın açılması, dersin başlaması ve bitmesi (kaç kelime çalışıldı, kaç
-        doğru, yüzde kaç), egzersiz başlatma, bir kelimeye “bunu biliyorum” denmesi ve
-        bunun geri alınması, setin tamamlanması, karşılama akışının bitmesi, profil ve
-        hatırlatma ayarının değişmesi, yedek alma ve yükleme.
-      </p>
-
-      <h3>Her olayla birlikte gidenler</h3>
-      <p>
-        Uygulama sürümü, platform (web veya Android) ve olayın gerçekleştiği zaman.
-        Başka hiçbir teknik veri toplanmaz: cihaz modeli, reklam kimliği ve konum
-        <strong>gönderilmez</strong>.
-      </p>
-
-      <h3>Gönderilmeyenler</h3>
-      <ul>
-        <li>Adın veya profil adın</li>
-        <li>Profil fotoğrafın</li>
-        <li>Yazdığın cevaplar ve hangi kelimeleri bildiğin</li>
-        <li>Telefon, adres gibi iletişim bilgileri (e-posta yalnızca üye olursan, aşağıya bakınız)</li>
-        <li>Tam konum</li>
-      </ul>
-      <p>
-        Olaylara eklenen tek kimlik, uygulamanın cihazda ürettiği
-        <strong>rastgele bir numaradır</strong>. Bu numara seni uygulama dışında hiçbir
-        şeye bağlamaz, kimliğini göstermez ve başka kaynaklarla eşleştirilmez.
-      </p>
-
-      <h3>Kapatmak</h3>
-      <p>
-        <strong>Ayarlar → Kullanım istatistikleri</strong> anahtarını kapattığında o
-        andan itibaren hiçbir olay gönderilmez.
-      </p>
-
-      <h2>4. Barındırma ve yurt dışına aktarım</h2>
-      <p>
-        Kullanım olayları, altyapı sağlayıcımız <strong>Supabase</strong> üzerinde
-        barındırılan kendi veritabanımızda saklanır. Sunucular yurt dışında bulunduğu
-        için bu bir yurt dışına aktarımdır; ayrıntılar
-        <a href="kvkk-aydinlatma.html">KVKK Aydınlatma Metni</a>'nde. Verilere yalnızca
-        biz erişebiliriz; Supabase yalnızca barındırma hizmeti verir, veriyi kendi
-        amaçları için kullanmaz.
-      </p>
-
-      <h2>5. Saklama süresi</h2>
-      <p>
-        Cihazındaki veriler, sen silene ya da uygulamayı kaldırana kadar cihazında kalır.
-        Kullanım olayları en fazla <strong>24 ay</strong> saklanır ve sonrasında silinir.
-      </p>
-
-      <h2>6. Reklam yok, satış yok</h2>
-      <p>
-        Uygulamada reklam gösterilmez. Hiçbir veri satılmaz, kiralanmaz veya pazarlama
-        amacıyla üçüncü taraflarla paylaşılmaz. Analitik dışında üçüncü taraf izleyici
-        (tracker) kullanılmaz.
-      </p>
-
-      <h2>7. Çerezler</h2>
-      <p>
-        Web sürümünde takip amaçlı çerez kullanılmaz. Uygulamanın çalışması için
-        tarayıcının yerel depolama alanları (IndexedDB, Cache Storage) kullanılır; bunlar
-        cihazından çıkmaz.
-      </p>
-
-      <h2>8. Çocuklar</h2>
-      <p>
-        Uygulama özellikle çocuklara yönelik değildir ve çocuklardan bilerek kişisel veri
-        toplamaz. Çocuğunuzun veri gönderdiğini düşünüyorsanız bize yazın; ilgili kayıtları
-        sileriz.
-      </p>
-
-      <h2>9. Haklarınız</h2>
-      <p>
-        KVKK ve GDPR kapsamındaki haklarını kullanmak için bize yazabilirsin. Cihazındaki
-        verilerin tamamını istediğin an <strong>Ayarlar → Sıfırla</strong> ile kendin
-        silebilirsin. Ayrıntılı liste ve başvuru yolu
-        <a href="kvkk-aydinlatma.html">KVKK Aydınlatma Metni</a>'nde.
-      </p>
-
-      <h2>10. Değişiklikler</h2>
-      <p>
-        Bu metin değişirse yukarıdaki yürürlük tarihi güncellenir. Toplanan veri
-        türlerini genişleten önemli bir değişiklik olursa uygulama içinde bilgilendirilirsin.
-      </p>
-
-      <nav class="baglar">
-        <a href="./">Uygulama</a>
-        <a href="kullanim-kosullari.html">Kullanım Koşulları</a>
-        <a href="kvkk-aydinlatma.html">KVKK Aydınlatma Metni</a>
-      </nav>
-      <footer>Hafızada İngilizce</footer>
-    </main>
+    <p>Bu sayfa taşındı: <a href="https://hafizada.com/gizlilik/">Gizlilik Politikası</a></p>
   </body>
 </html>
