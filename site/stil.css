@@ -247,3 +247,45 @@ footer a:hover { color: #fff; }
 .metin table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .93rem; background: var(--beyaz); border: 2px solid var(--lacivert); border-radius: 12px; overflow: hidden; display: block; overflow-x: auto; }
 .metin th, .metin td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--ince); vertical-align: top; }
 .metin th { background: var(--krem-2); font-weight: 800; }
+
+/* ---------- KELİME SAYFASI ---------- */
+.kelime { padding-block: 40px 30px; }
+.kelime .kap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: start; }
+.kelime .gorsel { border: 2px solid var(--lacivert); border-radius: 16px; overflow: hidden; box-shadow: var(--sert); background: var(--krem-2); }
+.kelime .gorsel img { width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; }
+.kelime .anlam { font-family: var(--d); font-size: 1.05rem; font-weight: 800; color: var(--soft); margin: 0; }
+.kelime .anlam b { display: block; font-size: 2.2rem; color: var(--lacivert); line-height: 1.15; }
+.kanca-kutu { margin-top: 18px; background: var(--beyaz); border: 2px solid var(--lacivert); border-radius: 16px; box-shadow: var(--sert-k); padding: 16px 18px; }
+.kanca-kutu .kanca-rozet { font-size: 1.05rem; }
+.kanca-kutu .cumle { margin: 10px 0 0; font-size: 1.08rem; font-style: italic; }
+.dinle { margin-top: 16px; display: inline-flex; align-items: center; gap: 8px; }
+.dinle svg { width: 20px; height: 20px; }
+.kelime .aciklama p { color: #2b3954; }
+.kelime .aciklama h2 { font-size: 1.2rem; font-weight: 800; margin: 26px 0 6px; }
+.cagri { margin-top: 26px; background: var(--sari); border: 2px solid var(--lacivert); border-radius: 16px; box-shadow: var(--sert-k); padding: 18px 20px; }
+.cagri p { margin: 0 0 12px; font-weight: 700; }
+.benzerler { padding-block: 10px 60px; }
+.benzerler h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 14px; }
+.kelime-izgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+.kelime-izgara a { display: flex; flex-direction: column; background: var(--beyaz); border: 2px solid var(--lacivert); border-radius: 12px; box-shadow: var(--sert-k); padding: 10px 14px; transition: transform .08s; }
+.kelime-izgara a:hover { transform: translateY(-2px); }
+.kelime-izgara .en { font-family: var(--d); font-weight: 800; font-size: 1.1rem; }
+.kelime-izgara .tr { color: var(--soft); font-size: .9rem; font-weight: 700; }
+.harf-grup { margin-top: 26px; }
+.harf-grup h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 10px; }
+.harfler { display: flex; flex-wrap: wrap; gap: 6px; margin: 22px 0 6px; }
+.harfler a { font-family: var(--d); font-weight: 800; border: 2px solid var(--lacivert); border-radius: 10px; padding: 4px 11px; background: var(--beyaz); }
+
+/* ---------- BLOG ---------- */
+.blog-liste { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; padding-block: 40px 70px; }
+.blog-kart { display: flex; flex-direction: column; background: var(--beyaz); border: 2px solid var(--lacivert); border-radius: 16px; box-shadow: var(--sert-k); padding: 20px 22px; transition: transform .08s; }
+.blog-kart:hover { transform: translateY(-2px); }
+.blog-kart h2 { font-size: 1.22rem; font-weight: 800; line-height: 1.25; }
+.blog-kart p { color: var(--soft); margin: 10px 0 14px; font-size: .97rem; }
+.blog-kart .devam { margin-top: auto; font-weight: 800; color: #2f6fd0; }
+.metin .giris { font-size: 1.12rem; color: var(--lacivert); }
+.yazi-alt { margin-top: 2.4rem; }
+
+@media (max-width: 860px) {
+  .kelime .kap { grid-template-columns: 1fr; gap: 24px; }
+}

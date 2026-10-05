@@ -37,15 +37,18 @@ const esc = (s) =>
 /** Ust menu — masaustunde yatay, telefonda acilir liste. */
 const MENU = [
   ['/#yontem', 'Nasıl çalışıyor?'],
-  ['/#kancalar', 'Örnekler'],
+  ['/kelimeler/', 'Kelimeler'],
+  ['/blog/', 'Blog'],
   ['/#sss', 'SSS'],
   ['/iletisim/', 'İletişim'],
 ];
 
-/** Footer'daki "Ogren" sutunu. Blog ve kelime sayfalari gelince buraya eklenir. */
+/** Footer'daki "Ogren" sutunu. */
 const OGREN = [
-  ['/#kancalar', 'Kanca örnekleri'],
-  ['/#neden', 'Yöntem neden işe yarıyor?'],
+  ['/kelimeler/', 'Kelime listesi'],
+  ['/blog/', 'Blog'],
+  ['/blog/turkceye-benzeyen-ingilizce-kelimeler/', 'Türkçeye benzeyen kelimeler'],
+  ['/blog/ses-kancasi-yontemi/', 'Ses kancası yöntemi'],
   ['/#sss', 'Sık sorulan sorular'],
 ];
 
@@ -170,6 +173,64 @@ const kirinti = (sayfalar) => ({
 
 const menuHtml = (liste, girinti) =>
   liste.map(([href, ad]) => `${girinti}<a href="${href}">${ad}</a>`).join('\n');
+
+const buyukHarf = (s) => s.charAt(0).toLocaleUpperCase('tr') + s.slice(1);
+const enBuyuk = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+
+/**
+ * Blog yazilari: site/blog/<kisa-ad>.html. Ilk satirdaki HTML yorumu
+ * yazinin kunyesi (JSON): baslik, aciklama, tarih, ozet.
+ */
+function blogYazilari() {
+  const klasor = path.join(SITE, 'blog');
+  return fs
+    .readdirSync(klasor)
+    .filter((f) => f.endsWith('.html'))
+    .map((f) => {
+      const ham = fs.readFileSync(path.join(klasor, f), 'utf8');
+      const m = ham.match(/^<!--(\{.*?\})-->\n/s);
+      if (!m) throw new Error(`${f}: kunye yorumu yok`);
+      return { kisa: f.replace(/\.html$/, ''), ...JSON.parse(m[1]), govde: ham.slice(m[0].length) };
+    })
+    // `sira` kunyede elle veriliyor: ayni gun yazilan yazilarin okunma sirasi.
+    .sort((a, b) => (a.tarih < b.tarih ? 1 : a.tarih > b.tarih ? -1 : (a.sira ?? 99) - (b.sira ?? 99)));
+}
+
+/** "Dinle": tarayicinin kendi Ingilizce sesi. Desteklenmiyorsa dugme gizleniyor. */
+const DINLE_JS = `<script>
+(function () {
+  var b = document.querySelector('[data-dinle]');
+  if (!b) return;
+  if (!('speechSynthesis' in window)) { b.hidden = true; return; }
+  b.addEventListener('click', function () {
+    var u = new SpeechSynthesisUtterance(b.getAttribute('data-dinle'));
+    u.lang = 'en-US';
+    u.rate = 0.85;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(u);
+  });
+})();
+</script>`;
+
+const HOPARLOR =
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+
+/**
+ * Kelime sayfasinin aciklama metni. Kanca kelimenin kendisiyse (basket,
+ * bitter) "dilimize gecmis" anlatimi; degilse ses benzerligi + sahne.
+ */
+function kelimeAciklama(k) {
+  const En = enBuyuk(k.en);
+  const ayni = k.hook.toLocaleLowerCase('tr') === k.en.toLowerCase();
+  const bag = ayni
+    ? `<p><b>${k.en}</b> kelimesi Türkçede de kullanılıyor; tanıdık geldiyse sebebi bu. Akılda tutmak için sahneyi hatırla: <i>“${esc(k.sentence)}”</i></p>`
+    : `<p><b>${k.en}</b> kulağa Türkçedeki <b>${esc(k.hook)}</b> gibi geliyor. Bu benzerliği anlamla birleştiren sahneyi gözünün önüne getir: <i>“${esc(k.sentence)}”</i> ${En} sesini bir dahaki duyuşunda aklına önce ${esc(k.hook)}, hemen ardından <b>${esc(k.tr)}</b> gelecek.</p>`;
+  return `<div class="aciklama">
+      <h2>${En} nasıl akılda kalır?</h2>
+      ${bag}
+      <p>Benzer sesli bir Türkçe kelimeyle kurulan bu bağa <a href="/blog/ses-kancasi-yontemi/">ses kancası</a> diyoruz. Kanca anlamı hatırlatır; doğru okunuş için <b>Dinle</b> düğmesine bas.</p>
+    </div>`;
+}
 
 // --- Uretim ------------------------------------------------------------------
 
@@ -300,6 +361,182 @@ async function derle(hedef) {
   for (const [k, d] of Object.entries(anaYerine)) anaGovde = anaGovde.split(`__${k}__`).join(d);
   const anaJs = oku('sayfalar/anasayfa.js.html').replace('__KANCA_HAVUZ__', JSON.stringify(havuz));
 
+  // --- Kelimeler: gorseli olan kartlar (uygulamadaki set) ---
+  const kelimeler = tumKartlar.filter((k) =>
+    fs.existsSync(path.join(KOK, 'src/assets/cards', `${k.id}.webp`)),
+  );
+  for (const k of kelimeler) {
+    k.sayfaResmi = await webpYaz(
+      hedef,
+      `varliklar/kelimeler/${k.id}.webp`,
+      path.join(KOK, 'src/assets/cards', `${k.id}.webp`),
+      800,
+      600,
+    );
+  }
+  const kelimeKart = (k) =>
+    `<a href="/kelime/${k.id}/"><span class="en">${k.en}</span><span class="tr">${esc(k.tr)}</span></a>`;
+
+  const kelimeSayfalari = kelimeler.map((k, i) => {
+    const En = enBuyuk(k.en);
+    const benzer = [1, 2, 3, 4, 5, 6].map((d) => kelimeler[(i + d) % kelimeler.length]);
+    const yol = `/kelime/${k.id}/`;
+    return {
+      yol,
+      baslik: `${En} ne demek? Türkçe anlamı “${k.tr}” — Hafızada İngilizce`,
+      aciklama: `${En} Türkçede “${k.tr}” demek. ${k.en} ≈ ${k.hook} kancasıyla akılda kalır: “${k.sentence}” Görselli ve sesli öğren.`,
+      ogTur: 'article',
+      icerik:
+        altBaslik(`${En} ne demek?`, `${En}, Türkçede <b>${esc(k.tr)}</b> demek.`, [
+          ['Kelimeler', '/kelimeler/'],
+          [k.en, yol],
+        ]) +
+        `<section class="kelime">
+  <div class="kap">
+    <div class="gorsel"><img src="${k.sayfaResmi}" alt="${esc(k.sentence)}" width="800" height="600"></div>
+    <div>
+      <p class="anlam">${k.en} — anlamı<b>${esc(k.tr)}</b></p>
+      <div class="kanca-kutu">
+        <span class="kanca-rozet">${k.en} ≈ ${esc(k.hook)}</span>
+        <p class="cumle">“${esc(k.sentence)}”</p>
+      </div>
+      <button class="btn btn-beyaz dinle" type="button" data-dinle="${k.en}">${HOPARLOR} Dinle</button>
+      ${kelimeAciklama(k)}
+      <div class="cagri">
+        <p>${k.en} ve ${kelimeler.length - 1} kelime daha uygulamada kancası ve görseliyle seni bekliyor.</p>
+        <a class="btn btn-lacivert" href="/ingilizce/" data-basla>Hemen başla</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="benzerler">
+  <div class="kap">
+    <h2>Diğer kelimeler</h2>
+    <div class="kelime-izgara">${benzer.map(kelimeKart).join('')}</div>
+    <p style="margin-top:16px"><a href="/kelimeler/"><b>Bütün kelimeler →</b></a></p>
+  </div>
+</section>`,
+      script: DINLE_JS,
+      ld: jsonld(
+        kirinti([['Ana sayfa', '/'], ['Kelimeler', '/kelimeler/'], [k.en, yol]]),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'DefinedTerm',
+          name: k.en,
+          description: `${k.tr} — ${k.en} ≈ ${k.hook}: ${k.sentence}`,
+          url: `${ALAN}${yol}`,
+          inLanguage: 'en',
+          image: `${ALAN}${k.sayfaResmi}`,
+          inDefinedTermSet: {
+            '@type': 'DefinedTermSet',
+            name: 'Hafızada İngilizce kelime listesi',
+            url: `${ALAN}/kelimeler/`,
+          },
+        },
+      ),
+      resim: `${ALAN}${k.sayfaResmi}`,
+    };
+  });
+
+  // A'dan Z'ye
+  const harfGruplari = new Map();
+  for (const k of [...kelimeler].sort((a, b) => a.en.localeCompare(b.en, 'en'))) {
+    const h = k.en.charAt(0).toUpperCase();
+    if (!harfGruplari.has(h)) harfGruplari.set(h, []);
+    harfGruplari.get(h).push(k);
+  }
+  const kelimeListesi = {
+    yol: '/kelimeler/',
+    baslik: `İngilizce kelimeler ve Türkçe anlamları — ${kelimeler.length} kelime, ses kancalarıyla`,
+    aciklama: `Hafızada İngilizce'deki ${kelimeler.length} kelime: her birinin Türkçe anlamı, benzer sesli Türkçe kancası ve akılda kalan sahnesi.`,
+    ogTur: 'website',
+    icerik:
+      altBaslik(
+        'Kelimeler',
+        `${kelimeler.length} İngilizce kelime, her biri Türkçe anlamı ve ses kancasıyla. Bir kelimeye dokun, sahnesini gör.`,
+        [['Kelimeler', '/kelimeler/']],
+      ) +
+      `<section class="benzerler">
+  <div class="kap">
+    <nav class="harfler" aria-label="Harfler">${[...harfGruplari.keys()].map((h) => `<a href="#harf-${h}">${h}</a>`).join('')}</nav>
+${[...harfGruplari]
+  .map(
+    ([h, liste]) => `    <div class="harf-grup" id="harf-${h}">
+      <h2>${h}</h2>
+      <div class="kelime-izgara">${liste.map(kelimeKart).join('')}</div>
+    </div>`,
+  )
+  .join('\n')}
+  </div>
+</section>`,
+    script: '',
+    ld: jsonld(kirinti([['Ana sayfa', '/'], ['Kelimeler', '/kelimeler/']])),
+  };
+
+  // --- Blog ---
+  const yazilar = blogYazilari();
+  const blogSayfalari = yazilar.map((y) => {
+    const yol = `/blog/${y.kisa}/`;
+    const digerleri = yazilar.filter((x) => x !== y).slice(0, 3);
+    return {
+      yol,
+      baslik: `${y.baslik} — Hafızada İngilizce`,
+      aciklama: y.aciklama,
+      ogTur: 'article',
+      icerik:
+        altBaslik(y.baslik, null, [['Blog', '/blog/'], [y.baslik, yol]]) +
+        `<div class="kap"><article class="metin">
+<p class="ustbilgi">${new Date(y.tarih).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' })} · Hafızada İngilizce</p>
+${y.govde}
+<div class="cagri yazi-alt">
+  <p>Kancaları ve görselleriyle ilk kelimelerini şimdi öğren — ücretsiz.</p>
+  <a class="btn btn-lacivert" href="/ingilizce/" data-basla>Hemen başla</a>
+</div>
+<nav class="ilgili" aria-label="Diğer yazılar">
+${digerleri.map((d) => `  <a href="/blog/${d.kisa}/">${d.baslik}</a>`).join('\n')}
+</nav>
+</article></div>`,
+      script: '',
+      ld: jsonld(kirinti([['Ana sayfa', '/'], ['Blog', '/blog/'], [y.baslik, yol]]), {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: y.baslik,
+        description: y.aciklama,
+        datePublished: y.tarih,
+        dateModified: y.tarih,
+        inLanguage: 'tr',
+        mainEntityOfPage: `${ALAN}${yol}`,
+        image: OG,
+        author: { '@type': 'Organization', name: 'Hafızada İngilizce', url: `${ALAN}/` },
+        publisher: KURULUS,
+      }),
+    };
+  });
+  const blogListesi = {
+    yol: '/blog/',
+    baslik: 'Blog — İngilizce kelime öğrenme yazıları | Hafızada İngilizce',
+    aciklama:
+      'İngilizce kelimeyi ezberlemeden öğrenmek: ses kancası, aralıklı tekrar, telaffuz ve günlük çalışma üzerine yazılar.',
+    ogTur: 'website',
+    icerik:
+      altBaslik('Blog', 'Kelimeyi ezberlemeden öğrenmek üzerine kısa ve uygulanabilir yazılar.', [
+        ['Blog', '/blog/'],
+      ]) +
+      `<div class="kap"><div class="blog-liste">
+${yazilar
+  .map(
+    (y) => `  <a class="blog-kart" href="/blog/${y.kisa}/">
+    <h2>${y.baslik}</h2>
+    <p>${y.ozet}</p>
+    <span class="devam">Oku →</span>
+  </a>`,
+  )
+  .join('\n')}
+</div></div>`,
+    script: '',
+    ld: jsonld(kirinti([['Ana sayfa', '/'], ['Blog', '/blog/']])),
+  };
+
   // --- Sayfa listesi ---
   const sayfalar = [
     {
@@ -362,6 +599,10 @@ async function derle(hedef) {
       script: '',
       ld: jsonld(kirinti([['Ana sayfa', '/'], [y.baslik, `/${y.dosya}/`]])),
     })),
+    kelimeListesi,
+    ...kelimeSayfalari,
+    blogListesi,
+    ...blogSayfalari,
   ];
 
   for (const s of sayfalar) {
@@ -371,7 +612,7 @@ async function derle(hedef) {
       ACIKLAMA: esc(s.aciklama),
       KANONIK: `${ALAN}${s.yol}`,
       OG_TUR: s.ogTur,
-      OG_RESIM: OG,
+      OG_RESIM: s.resim ?? OG,
       SURUM: surum,
       JSONLD: s.ld,
       MENU: menuHtml(MENU, '      '),
@@ -433,7 +674,7 @@ Sitemap: ${ALAN}/sitemap.xml
   );
 
   console.log(
-    `${hedef} — ${sayfalar.length} sayfa + 404, iletişim formu ${ILETISIM_HAZIR ? 'AÇIK' : 'kapalı (e-posta bağlantısı)'}`,
+    `${hedef} — ${sayfalar.length} sayfa (${kelimeSayfalari.length} kelime, ${blogSayfalari.length} yazı) + 404, iletişim formu ${ILETISIM_HAZIR ? 'AÇIK' : 'kapalı (e-posta bağlantısı)'}`,
   );
 }
 
