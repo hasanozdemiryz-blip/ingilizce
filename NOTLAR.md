@@ -2059,6 +2059,14 @@ Kullanıcı canlıda gezip bir liste getirdi. Sebepler:
 | Gizli sekmede ilerleme "kendiliğinden" geldi | Oturumsuz okuma **mümkün değil** (anon anahtarla `ilerleme` sorgusu boş döndü, RLS doğru). Gizli sekmede Google hesap sormadan aynı e-postayla girmiş; Supabase aynı e-postayı tek hesap sayıyor | Hesap seçimi artık soruluyor |
 | Gece yarısı hedef dolmamış göründü | Kartlar **görüldükleri anın** tarihiyle yazılıyordu; 00:00'ı geçen ders iki güne bölünüyordu | Ders başladığı güne yazılıyor (`dersBasi`) |
 
+**Canlı testte ikinci sebep çıktı — yarış.** Damga tek başına yetmedi:
+profil ekranı kapanır kapanmaz senkron başlıyor, yeni avatar ondan **sonra**
+kaydediliyordu. Ölçüm: 100 ms'de `tilki`, 300 ms'de senkron eski `kedi`yi
+geri yazmış. `yereleYaz` artık yazmadan önce cihazı **aynı işlemin içinde**
+yeniden okuyup birleştiriyor; ağ beklenirken yazılan hiçbir şey
+(profil, ayar, cevap) ezilmiyor. Profil de kapatmadan önce yazılıyor.
+Canlıda gerçek hesapla doğrulandı: yerel ve sunucu ikisi de yeni avatarda.
+
 > Genel ders: senkronda "hangi paket daha taze" tek soru değil. Ders
 > ilerlemesi ve tercihler ayrı zamanlarda, ayrı cihazlarda değişiyor —
 > her birinin kendi damgası olmalı.
