@@ -211,18 +211,30 @@ export async function yereliOku(): Promise<Paket> {
  * Birlesmis paketi cihaza yazar.
  *
  * `importProgress` kullanilmiyor: o GERI YUKLEME, her seyi silip yerine
- * koyuyor. Burada paket zaten birlestirilmis olarak geliyor; yine de tek
- * islemde yaziliyor ki yarim kalmis bir senkron karma bir durum
- * birakmasin.
+ * koyuyor. Tek islemde yaziliyor ki yarim kalmis bir senkron karma bir
+ * durum birakmasin.
+ *
+ * YAZMADAN ONCE CIHAZ YENIDEN OKUNUYOR — ayni islemin icinde. Paket,
+ * senkronun BASINDA okunan cihaz verisinden uretildi; arada sunucuya
+ * gidip gelindi. O arada yazilan her sey (profil, ayar, cevap) paketi
+ * dogrudan yazmak ezerdi. Canlida boyle yakalandi: profil ekrani kapanir
+ * kapanmaz senkron basliyor, yeni avatar 100 ms sonra kaydediliyor ve
+ * 300 ms sonra senkron eski avatari geri yaziyordu. Telefonda "avatar
+ * degismiyor" sikayetinin sebebi buydu.
+ *
+ * Simdiki cihaz verisiyle bir kez daha birlestirmek bunu kapatiyor:
+ * `birlestir` her olcekte "yeni olan kazanir" kuralini uyguladigi icin
+ * arada yazilan degisiklik korunuyor.
  */
 export async function yereleYaz(p: Paket): Promise<void> {
-  const progress = p.progress.map(normalizeProgress);
   await db.transaction('rw', db.progress, db.meta, db.answers, async () => {
+    const son = birlestir(await yereliOku(), p);
+    const progress = son.progress.map(normalizeProgress);
     await db.progress.clear();
     await db.progress.bulkPut(progress);
     await db.answers.clear();
-    if (p.answers.length > 0) await db.answers.bulkAdd(p.answers.map(({ id: _yok, ...c }) => c));
-    await db.meta.put({ key: APP_KEY, value: p.state });
+    if (son.answers.length > 0) await db.answers.bulkAdd(son.answers.map(({ id: _yok, ...c }) => c));
+    await db.meta.put({ key: APP_KEY, value: son.state });
   });
 }
 

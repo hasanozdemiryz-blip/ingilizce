@@ -341,10 +341,11 @@ export default function App() {
         kazanim={kazanim}
         onKapat={kapat}
         onKaydet={(profil) => {
-          void tercihKaydet({ profil });
           // Adin kendisi GONDERILMIYOR — yalnizca neyin degistigi.
           olay('profil_degisti', { avatar: profil.avatar.tip, cerceve: profil.cerceve });
-          kapat();
+          // Once yaz, SONRA kapat: `kapat` senkronu baslatiyor ve yazilmamis
+          // profili goremezdi (bkz. senkron.ts `yereleYaz`).
+          void tercihKaydet({ profil }).then(kapat);
         }}
       />
     );
