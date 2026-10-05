@@ -2240,26 +2240,34 @@ paylaşımı (`renderCardPost`) — Instagram içeriği için.
 
 ### Başka bilgisayarda devam etmek
 
+İki depo var, ikisi de **aynı klasörde yan yana** olmalı:
+
 ```
 git clone https://github.com/hasanozdemiryz-blip/ingilizce
-npm install
-npm run dev
+git clone https://github.com/hasanozdemiryz-blip/hasanozdemiryz-blip.github.io
+cd ingilizce && npm install && npm run dev
 ```
 
-`.env.local` **gerekmiyor**: ölçüm ve üyelik için Supabase bilgileri
-Actions secret'larında duruyor ve yalnızca üretim derlemesine giriyor.
-Yerelde üyelik kapalı çalışır — arayüz üyeliksiz hâliyle açılır, hiçbir
-şey bozulmaz. Üyeliği yerelde denemek istersen `.env.local` içine
-`VITE_SUPABASE_URL` ve `VITE_SUPABASE_ANON_KEY` koy.
+| | |
+|---|---|
+| `ingilizce` | Uygulama (`hafizada.com/ingilizce/`). `main`'e push = otomatik yayın |
+| `hasanozdemiryz-blip.github.io` | Site (`hafizada.com`). **Elle düzenlenmez**: `npm run site -- ../hasanozdemiryz-blip.github.io` ile üretilir, sonra orada commit + push |
 
-Tanıtım sayfası ayrı depoda ama **kaynağı burada**:
+**Depoda olmayanlar (yeni makinede elle):**
+- `.env.local` — `.env.example`'a bak. `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`
+  (Supabase → Settings → API), `VITE_GOOGLE_GIRIS=1`. Yoksa uygulama
+  üyeliksiz çalışır, bir şey bozulmaz.
+- Supabase CLI girişi gerekirse gerçek bir Terminal'de `npx supabase login`
+  (TTY'siz ortamda tarayıcı akışı çalışmıyor). 5 Ekim kurulumu panelden yapıldı.
 
-```
-node tools/anasayfa.mjs ../hasanozdemiryz-blip.github.io/index.html
-```
-
-`anasayfa/sablon.html` düzenlenir, betik görselleri gömüp tek dosya
-üretir, portal deposuna commit edilir. Portal deposunda derleme adımı yok.
+**Dış hizmetler (durum 5 Ekim):**
+- Supabase: `ilerleme`, `olaylar`, `iletisim` tabloları; `hesap-sil` ve
+  `iletisim` işlevleri (ikisinde de Verify JWT kapalı).
+- İletişim mesajları e-postayla gelmiyor (kullanıcı kararı) → Supabase →
+  Table Editor → `iletisim`.
+- Google Search Console: alan adı mülkü doğrulandı (Cloudflare TXT kaydı
+  silinmemeli), `https://hafizada.com/sitemap.xml` gönderildi.
+- ~15 Kasım: Search Console verisine bakıp kelime sayfalarını (şu an en sık
+  20) genişletme kararı.
 
 Yayın adımlarının tamamı `YAYIN.md`'de.
-
