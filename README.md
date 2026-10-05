@@ -717,7 +717,7 @@ footer) `tools/site.mjs` ile üretilip portal deposuna yazılıyor:
 
 ```bash
 npm run site -- ../hasanozdemiryz-blip.github.io
-ILETISIM_HAZIR=1 npm run site -- ../hasanozdemiryz-blip.github.io   # form açık
+ILETISIM_HAZIR=0 npm run site -- ../hasanozdemiryz-blip.github.io   # form kapalı, yerine e-posta bağlantısı
 ```
 
 `public/gizlilik.html` ve diğer ikisi artık **yönlendirme**: Play

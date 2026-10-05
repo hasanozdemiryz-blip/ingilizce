@@ -2134,9 +2134,12 @@ anahtar, `t()` dışında kalan Türkçe metin, Türkçe harfi olmayan ama
 > Sayfa `lang="en"` iken CSS `uppercase` "İngilizce"yi "İNGILIZCE"
 > yapıyor; marka kilidi `lang="tr"` taşıyor.
 
-**İletişim formu bekliyor.** `iletisim` tablosu + edge function yazıldı;
-Supabase CLI bu makinede girişli değil, kurulum kullanıcıyla en sona kaldı.
-O zamana kadar formun yerinde e-posta bağlantısı var (`ILETISIM_HAZIR`).
+**İletişim formu açık.** CLI girişi bu makinede çalışmadı (TTY'siz ortam
+tarayıcı akışına izin vermiyor), kurulum panelden yapıldı: SQL editörde
+migration, Edge Functions → editörden `iletisim`, **Verify JWT kapalı**.
+Alıcı/gönderen/tuz varsayılanları kodda; tek sır `RESEND_API_KEY`. Anahtar
+yokken mesaj yine kaydediliyor (`eposta_gitti = false`). Gönderen
+`iletisim@hafizada.com` — giriş postaları da Resend'de aynı alan adından.
 
 ## Sırada
 

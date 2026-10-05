@@ -10,12 +10,14 @@
 // NEDEN `npm:`. `jsr:` ile yazilan hesap-sil Edge Runtime'da hic
 // baslamamisti (bkz. NOTLAR, 4 Ekim).
 //
-// Gereken sirlar (Supabase → Edge Functions → Secrets):
-//   RESEND_API_KEY      — Resend anahtari
+// Gereken TEK sir (Supabase → Edge Functions → Secrets):
+//   RESEND_API_KEY      — Resend anahtari. Yoksa mesaj yine KAYDEDILIYOR,
+//                         yalnizca e-posta gitmiyor (`eposta_gitti` false).
+// Istege bagli, varsayilani asagida:
 //   ILETISIM_ALICI      — mesajlarin gidecegi adres
-//   ILETISIM_GONDEREN   — Resend'de dogrulanmis alan adindan bir gonderen,
-//                         or. "Hafızada <iletisim@hafizada.com>"
-//   ILETISIM_TUZ        — kaynak ozeti icin rastgele bir metin
+//   ILETISIM_GONDEREN   — Resend'de dogrulanmis alan adindan gonderen
+//                         (giris postalari giris@hafizada.com'dan gidiyor)
+//   ILETISIM_TUZ        — kaynak ozeti tuzu; yoksa service_role anahtari
 
 import { createClient } from 'npm:@supabase/supabase-js@2';
 
@@ -72,7 +74,9 @@ Deno.serve(async (istek) => {
     });
 
     const ip = (istek.headers.get('x-forwarded-for') ?? '').split(',')[0].trim() || 'bilinmiyor';
-    const kaynak = await ozet(`${Deno.env.get('ILETISIM_TUZ') ?? ''}|${ip}`);
+    // Tuz ayri bir sir olarak verilmediyse sunucuda zaten duran gizli
+    // anahtardan turetiliyor — IP ozeti tuzsuz kalmasin.
+    const kaynak = await ozet(`${Deno.env.get('ILETISIM_TUZ') ?? anahtar}|${ip}`);
 
     const birSaatOnce = new Date(Date.now() - 3600_000).toISOString();
     const { count } = await db
@@ -90,8 +94,8 @@ Deno.serve(async (istek) => {
     if (error) return yanit({ hata: 'kayit' }, 500);
 
     const resend = Deno.env.get('RESEND_API_KEY');
-    const alici = Deno.env.get('ILETISIM_ALICI');
-    const gonderen = Deno.env.get('ILETISIM_GONDEREN');
+    const alici = Deno.env.get('ILETISIM_ALICI') ?? 'hasanozdemiryz@gmail.com';
+    const gonderen = Deno.env.get('ILETISIM_GONDEREN') ?? 'Hafızada İletişim <iletisim@hafizada.com>';
     if (resend && alici && gonderen) {
       const r = await fetch('https://api.resend.com/emails', {
         method: 'POST',

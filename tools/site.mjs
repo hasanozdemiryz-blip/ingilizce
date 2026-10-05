@@ -24,11 +24,11 @@ const ALAN = 'https://hafizada.com';
 const SUPABASE = 'https://safbupshatjmfxdviwvp.supabase.co';
 
 /**
- * Iletisim formu sunucu tarafi kurulu mu (bkz. supabase/functions/iletisim).
- * Kurulana kadar formun yerinde e-posta baglantisi duruyor: calismayan bir
- * form gostermektense hic gostermemek.
+ * Iletisim formu acik mi. Sunucu tarafi 5 Ekim'de kuruldu (tablo + islev);
+ * acil bir durumda `ILETISIM_HAZIR=0` ile formun yerine e-posta baglantisi
+ * konabiliyor.
  */
-const ILETISIM_HAZIR = process.env.ILETISIM_HAZIR === '1';
+const ILETISIM_HAZIR = process.env.ILETISIM_HAZIR !== '0';
 
 const oku = (p) => fs.readFileSync(path.join(SITE, p), 'utf8');
 const esc = (s) =>
