@@ -99,7 +99,7 @@ async function cerceveKutusu(yol) {
 
 const kartlar = JSON.parse(
   await import('node:fs/promises').then((fs) => fs.readFile(join(ROOT, 'content/cards.json'), 'utf8')),
-).filter((c) => c.klass === 'tutan');
+);  // sinif degil gorsel belirliyor (bkz. src/content.ts)
 
 const idler = new Map(kartlar.map((c) => [c.id, c]));
 

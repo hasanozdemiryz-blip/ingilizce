@@ -52,6 +52,14 @@ async function fontuHazirla() {
 export const PANO_MAX = 104;
 
 /**
+ * Panoda gercekten CIZILECEK kancalar — baslik ve paylasim metni de bu
+ * listenin uzunlugunu yaziyor. Set 200'e cikinca (6 Ekim) tam set tek panoya
+ * sigmiyor; o zaman ilk PANO_MAX kanca ciziliyor ve sayi yine dogru.
+ * Coklu pano (bolme) ileride; bkz. NOTLAR.
+ */
+export const panoKancalari = <T,>(pairs: T[]): T[] => pairs.slice(0, PANO_MAX);
+
+/**
  * Kanca sayisina gore sutun ve punto.
  * 1350 piksel yukseklikte 26 satir 33 puntoyla rahat duruyor; uzeri
  * sikisiyor, o yuzden sutun sayisi artiyor ve yazi kuculuyor.
@@ -75,7 +83,7 @@ function duzen(adet: number) {
 export async function renderHookBoard(pairs: { en: string; hook: string }[]): Promise<Blob> {
   await fontuHazirla();
 
-  const goster = pairs.slice(0, PANO_MAX);
+  const goster = panoKancalari(pairs);
   const canvas = document.createElement('canvas');
   canvas.width = W;
   canvas.height = H;
@@ -148,7 +156,7 @@ export async function renderHookBoard(pairs: { en: string; hook: string }[]): Pr
 }
 
 export async function shareHookBoard(pairs: { en: string; hook: string }[]): Promise<void> {
-  const sayi = Math.min(pairs.length, PANO_MAX);
+  const sayi = panoKancalari(pairs).length;
   await dosyayiVer(await renderHookBoard(pairs), 'kanca-panosu.png', `${sayi} kelime, ${sayi} kanca`);
 }
 

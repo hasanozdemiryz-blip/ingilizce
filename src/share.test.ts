@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { PANO_MAX } from './share';
+import { PANO_MAX, panoKancalari } from './share';
 import { CARDS } from './content';
 
 /**
@@ -16,8 +16,14 @@ import { CARDS } from './content';
  * mu, ona bakmak. Cizemiyorsa pano bolunmeli.
  */
 describe('kanca panosu', () => {
-  it('tam seti tek panoya sigdirabiliyor', () => {
-    expect(PANO_MAX).toBeGreaterThanOrEqual(CARDS.length);
+  /*
+    Eskiden "tam set tek panoya sigiyor" diye tutuluyordu; set 200'e cikinca
+    (6 Ekim) bu artik mumkun degil. Korunan kural asil olan: pano tasarsa
+    bile YAZDIGI sayi CIZDIGI sayiyla ayni.
+  */
+  it('pano tasinca cizilen ve yazilan sayi ayni kaliyor', () => {
+    const tumu = CARDS.map((c) => ({ en: c.en, hook: c.hook }));
+    expect(panoKancalari(tumu).length).toBe(Math.min(tumu.length, PANO_MAX));
   });
 
   it('sinir duzenin cizebildigi en buyuk panoyu asmiyor', () => {

@@ -105,7 +105,13 @@ const KISILER = [
  * asagi cekebilir. Yirmi vitrin kelime; Search Console verisi gelince
  * genisletme karari verilecek (bkz. NOTLAR, 5 Ekim).
  */
-const VITRIN = 20;
+/*
+  ACIK LISTE, hesaplanmiyor: once "setin en sik 20'si" diye hesaplaniyordu;
+  set buyudukce (6 Ekim: 100 → 200) liste kayabilir ve Google'a bildirilmis
+  /kelime/<id>/ adresleri 404 verirdi. Adresler sabit kalmali.
+*/
+const VITRIN = ['far', 'sell', 'door', 'salt', 'dust', 'sick', 'bad', 'car', 'eye', 'fish',
+  'dark', 'deep', 'cup', 'coat', 'boat', 'box', 'brother', 'foot', 'full', 'safe'];
 
 /**
  * Kanca bolumunun havuzu: kancasi en net anlasilan dokuz kart — YALNIZCA
@@ -386,7 +392,11 @@ async function derle(hedef) {
   const setKartlari = tumKartlar
     .filter((k) => fs.existsSync(path.join(KOK, 'src/assets/cards', `${k.id}.webp`)))
     .sort((a, b) => a.order - b.order);
-  const kelimeler = setKartlari.slice(0, VITRIN);
+  const kelimeler = VITRIN.map((id) => {
+    const k = setKartlari.find((x) => x.id === id);
+    if (!k) throw new Error(`vitrin kelimesinin gorseli yok: ${id}`);
+    return k;
+  });
   const yayinda = new Set(kelimeler.map((k) => k.id));
   const disarida = HAVUZ.filter((id) => !yayinda.has(id));
   if (disarida.length) throw new Error(`kanca havuzunda vitrin disi kelime: ${disarida.join(', ')}`);

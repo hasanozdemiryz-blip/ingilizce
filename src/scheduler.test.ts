@@ -50,10 +50,9 @@ describe('icerik', () => {
    * anlatmadigi icin sete hic girmez. Kural bu — sayi degil; gorsel
    * eklendikce set kendiliginden buyur.
    */
-  it('setteki her kartin gorseli var ve hepsi "Tutan"', () => {
+  it('setteki her kartin gorseli var', () => {
     expect(CARDS.length).toBeGreaterThan(0);
     expect(CARDS.filter((c) => !c.image)).toEqual([]);
-    expect(CARDS.every((c) => c.klass === 'tutan')).toBe(true);
   });
 
   it('siklik sirasi 1..N, bosluksuz', () => {

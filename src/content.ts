@@ -72,9 +72,14 @@ const GORSELLER = new Map(
   ]),
 );
 
-const frekansSirasi = (raw as Card[])
-  .filter((c) => c.klass === 'tutan')
-  .sort((a, b) => a.order - b.order);
+/*
+  Sinif ("tutan" / "kurtarilabilir") artik sete girmeyi belirlemiyor; GORSEL
+  belirliyor. 6 Ekim incelemesinde kurtarilabilir siniftaki kartlarin cogu
+  "kalsin" cikti (key ≈ keyif, arm ≈ armut); gorseli uretilen kart sete
+  girer. Kancasi zayif kartin gorseli zaten uretilmiyor (bkz.
+  tools/kart-inceleme.mjs, gorsel sirasi).
+*/
+const frekansSirasi = (raw as Card[]).slice().sort((a, b) => a.order - b.order);
 
 /**
  * v1 seti: GORSELI HAZIR olan kartlar — su an 100.

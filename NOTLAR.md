@@ -2144,6 +2144,30 @@ uğraş"); anahtar eklenmedi, mesajlar Table Editor → `iletisim`te okunuyor
 İleride bildirim istenirse yalnızca sır eklemek yetiyor, kod hazır. Gönderen
 `iletisim@hafizada.com` — giriş postaları da Resend'de aynı alan adından.
 
+## 2026-10-06 — Kart incelemesi ve 100 yeni görsel (set 200)
+
+**İnceleme** (`kart-inceleme.xlsx`, kaynak `tools/kart-inceleme.json`): 300
+kartın her biri tür (G gerçek ses kancası 134 / O tanıdık-ödünç 132 / Y
+yalnızca okunuş 34), kalite, kategori, sözcük türü ve önerilen kararla.
+38 kart "düzelt"; çoğuna yeni kanca önerisi var (chew ≈ çiğ, brake ≈
+bırak, shake ≈ şeyh, sugar ≈ şu gar…). Kullanıcı hatalılara sonra bakacak.
+
+**Üretim:** 100 görsel (+4 yeniden), ~7.800 kredi. Seçim: görselsiz,
+düzeltme gerektirmeyen, kalite ≥2 kartlar (`tools/gorsel-sirasi.json`).
+Düzeltilecek kartların görseli kanca netleşince — yoksa eski kancayı
+resmeder. Dersler reçetede.
+
+**Sete girme kuralı değişti:** sınıf ("tutan"/"kurtarılabilir") değil
+**görsel** belirliyor. 32 kurtarılabilir kart incelemede "kalsın" çıktı
+(key ≈ keyif, arm ≈ armut) ve görselleriyle sete girdi.
+
+**Kanca panosu** en fazla 104 kanca çiziyor; set 200 olunca tamamı
+sığmıyor. Başlık/paylaşım metni çizilen sayıyı yazıyor (yalan yok). Çoklu
+pano ileride.
+
+**Site:** vitrin 20 kelime artık açık liste — set büyüdükçe kayıp
+Google'daki adresleri kırmasın.
+
 ## Sırada
 
 ### Nerede duruyoruz (4 Ekim 2026)

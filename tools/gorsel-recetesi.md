@@ -8,6 +8,7 @@ Tutarlılığın tek kaynağı bu dosya. Üç kaldıraç birden gerekir; biri de
 | Model | `imagen-nano-banana-2` (Google Nano Banana Pro) |
 | Seed | `20260918` — **değiştirme** |
 | Oran | `4:3` (1024×768) |
+| Sahneler | `tools/gorsel-sahneleri.json` (6 Ekim partisi, 100 kart) |
 | Stil referansı | ilk `snake` kartı, creation `VXEgEPIMMU` |
 | Maliyet | 75 kredi/görsel |
 
@@ -72,6 +73,11 @@ No text, no letters, no numbers, no logos anywhere in the image.
 | Bant zeminini görselden al | Kırpmak özneyi kesiyordu; görselin köşe pikselinden ton alınıp bant zemini yapılınca `contain` ile hiçbir şey kesilmiyor (bkz. `tools/site.mjs` `zeminTonu`) |
 | İnsan sahnelerinde arka planı tek tek yasakla | "otobüste" deyince otobüs içi, pencere, diğer yolcular geliyor; "no other passengers, no windows, no bus interior" gerekti |
 | Koyu sahne isteme | "karanlıkta yanan mum" arka plan kuralını bozuyor; sahneyi aydınlık kur |
+| Özne %65, insan "ayaklar dahil, altında boşluk" | 6 Ekim partisi: %75'te ayak alttan kesiliyordu (dirt); %65 + bu cümleyle 99/100 temiz |
+| "NO shadow under feet or objects" ayrıca yaz | "NO ground shadow" varken bile ayak altına hafif gölge koyuyordu |
+| Nesne sahnelerinde "only the drawing style, NOT its subject" | `plain` (plan çizimi) istenince model referans snake'i aynen kopyaladı |
+| İnsana yüzü açıkça iste | "Inanimate objects have NO faces" kuralı smokinli adamın yüzünü de sildi |
+| "rapper" isteği reddedildi | "hip-hop singer" ile geçti; reddedilen istek kredi düşmüyor |
 
 ## Boru hattı
 
