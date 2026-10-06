@@ -2240,6 +2240,94 @@ Her madde **ayrı commit** — beğenilmeyen tek tek `git revert <commit>`:
 
 ## Sırada
 
+### YARIN İLK İŞ (8 Ekim 2026, başka bilgisayarda)
+
+Kullanıcı "hepsini yarın yaptıracağım" dedi. İki iş var; ikisi de bu bölümde
+tam anlatıldı çünkü `instagram/` klasörü **depoda yok** (gitignore), yeni
+makinede plan dosyası olmayacak.
+
+#### 1. Kanca cümlelerini güçlendirmek (bütün kartlar, yalnızca Instagram değil)
+
+**Kural:** kanca ile anlam AYNI SAHNEDE ve birbirine bir şey YAPIYOR, mümkünse
+saçma/abartılı. "gibi" benzetmesi ve "=" kalıbı yok. (Kanca yönteminin bilinen
+kuralı: etkileşen, tuhaf imge akılda kalıyor.) Kullanıcının örneği:
+"Pilav gibi kabarık yastık" → **"Biri yastığın üstüne pilav dökmüş."**
+
+Durum (görselli 266 kart): **104 cümle "=" kalıbında** (89'u O/tanıdık,
+10'u G, 5'i Y: "Bot = tekne", "Kap = fincan" — sahne yok), **21 cümle "gibi"
+benzetmesi** (17'si G). Örnek öneriler (onaylanmadı):
+
+| Kelime | Şu an | Öneri |
+|---|---|---|
+| pillow ≈ pilav | Pilav gibi kabarık yastık | Biri yastığın üstüne pilav dökmüş |
+| ball ≈ bal | Bal damlası top gibi | Topa bal sürmüşler, eller yapış yapış |
+| eye ≈ ay | Gözü ay gibi parlıyor | Ay gökten düşüp gözüne kaçtı |
+| wing ≈ vinç | Vinç kolu kanat gibi | Vinç, kuşu kanadından kaldırıyor |
+| moon ≈ mum | Ay mum gibi ışık verir | Aya kocaman bir mum dikmişler |
+| pinch ≈ pençe | Pençe gibi çimdikler | Kedi pençesiyle kolumu çimdikledi |
+| cup ≈ kap | Kap = fincan | Fincan kabın içine düşmüş |
+
+**Adımlar:**
+1. 266 cümleyi kurala göre puanla, zayıflara yeni cümle yaz → tek tablo
+   (xlsx, `kart-inceleme.xlsx` gibi) → **kullanıcı onaylar**. Ücretsiz.
+2. Onaylanan cümleler `kart-havuzu-300.xlsx` → `node tools/import-xlsx.mjs`
+   → `content/cards.json`.
+3. Cümlesi değişen kartın görseli sahneyle uyuşmaz → yeniden üretim.
+   **Görsel üretimi kilitli: kullanıcı ayrıca onay vermeden üretilmez.**
+   ~30 kredi/görsel (6 Ekim: 166 görsel ≈ 5.100 kredi); 100 kart ≈ 3.000.
+   Bakiye 146.052. Akış `tools/gorsel-recetesi.md`'de.
+4. Sıra: önce ilk derslerde çıkan kartlar ve "=" kalıbındaki gerçek kancalar
+   (cup, road…), sonra "gibi"ler, en son tanıdık (O) kelimeler.
+
+#### 2. Instagram
+
+**Profil** (kullanıcı kendisi değiştirecek; Instagram'a erişimimiz yok):
+- Fotoğraf `brand/instagram-profil.png` (krem zeminli beyin). Yazılı
+  sürümler 110 pikselde okunmuyor; `instagram-profil-lacivert.png` bozuk
+  (beynin lacivert yarısı zeminde kayboluyor).
+- İsim alanı: `Hafızada | İngilizce Kelime` (aramada taranıyor)
+- Bağlantı: `hafizada.com` (ana sayfada mini ders var)
+- Biyografi:
+  ```
+  İngilizce kelimeyi ezberleme, bağla 🧠
+  sell ≈ sel: "Sel gelmeden evini sattı"
+  Ücretsiz, 15 saniyede dene 👇
+  ```
+- Eski 18 gönderi kalıyor; yalnızca "Okunuşu" sütunlu 3'ü arşivlenir.
+
+**Paylaşım mantığı — haftada 5:** 3 normal (işe yarar liste: yanlış
+söylenenler, kalıplar, kısa cevaplar; beğeni/erişim), 1 köprü (liste + her
+kelimenin kancası; kaydettirir), 1 kanca Reels (tek kart, 9 sn; siteye
+götürür). Kullanıcı normalleri artırmak istedi. Ölçüt beğeni değil
+**kaydetme ve paylaşma**. Reels müziksiz üretiliyor, müzik telefonda
+Instagram'ın içinden eklenir.
+
+**Üretici (depoda, sabit şablon):** `tools/instagram.mjs` + içerik
+`tools/instagram-icerik.json`. `node tools/instagram.mjs` → çıktı
+`instagram/cikti/<id>/` (01.png… 1080×1350, reels.mp4 1080×1920,
+aciklama.txt). Yeni makinede gerekenler: Chrome
+(`C:/Program Files/Google/Chrome/...`, değilse `CHROME=` ortam değişkeni),
+ffmpeg, Windows'un İngilizce sesi (Zira; kanca Reels'i için). Çıktı
+klasörü depoda yok — yeni makinede bu komutla aynısı yeniden üretilir.
+
+**Hafta 1 (hazır, içerik dosyasında):** Pzt "Bunu yanlış söylüyorsun"
+(7 hata, kaydırmalı + Reels) · Salı "Kafede 6 cümle" · Çarş "8 kısa cevap"
+(+ Reels) · Perş köprü "Evdeki 5 eşya, 5 kanca" (box, bucket, pillow,
+towel, curtain) · Cmt kanca Reels "sell ≈ sel".
+
+**Açık sorular / sıradaki:**
+- Normal gönderiler yalnızca yazı; kullanıcı "daha görselli tutmaz mı"
+  dedi. Seçenek: listedeki kelime setteyse kart görseli; değilse kapak
+  çizimi = yeni görsel üretimi (onay gerekir).
+- Kanca cümleleri güçlenince (1. iş) o saçma sahneler Instagram için de
+  birebir içerik ("Yastığa pilav dökülürse" Reels'i).
+- Dosyaları telefona aktarmak için Google Drive klasörü önerildi, cevap yok.
+- Köprü için hazır gruplar (görselli, kalite 3): Ev: box, bucket, pillow,
+  towel, curtain, dust, hole, dirt · Mutfak: bowl, taste, dish, jam ·
+  Vücut: eye, chin, leg, itch, sick.
+- Meta Pixel yok; reklama başlanınca kurulur (çerez onay bandı + gizlilik/
+  KVKK metni güncellemesi şart, gizlilik şu an "izleyici yok" diyor).
+
 ### Nerede duruyoruz (6 Ekim 2026)
 
 **Hepsi yayında**, iki depo da temiz ve push'lu. 266 test, tip denetimi ve
@@ -2409,7 +2497,7 @@ depoda (`src/assets/cards/*.webp`).
 `tools/gorsel-sirasi.json`'u yeniden üretir. Excel'e elle yazılan "SENİN
 KARARIN" sütunu bu komutla **silinir** — önce kararları işle.
 
-**Claude'a ilk mesaj önerisi:** "NOTLAR.md'nin Sırada bölümünü ve
+**Claude'a ilk mesaj önerisi:** "NOTLAR.md'nin Sırada bölümündeki YARIN İLK İŞ kısmını ve
 tools/gorsel-recetesi.md'yi oku, kaldığımız yerden devam edelim."
 
 Yayın adımlarının tamamı `YAYIN.md`'de.
