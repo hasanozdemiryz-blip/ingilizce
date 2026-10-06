@@ -15,6 +15,7 @@ import { useTelaffuz } from '../speech';
 import { HEDEFLER, SEVIYELER, etiket, hesabiSil, useUyelik, uyelikVarMi } from '../uyelik';
 import { Giris } from '../components/Giris';
 import { CikisOnayi } from '../components/Cikis';
+import { ayriliyorIsaretle } from '../senkron';
 import { DilSecici } from '../components/DilSecici';
 import { GirisRozeti } from '../components/HesapMenusu';
 import { DevPanel } from './DevPanel';
@@ -94,6 +95,7 @@ export function Settings({
       return;
     }
     // Hesap gitti; cihazdaki kopya da gitmeli.
+    ayriliyorIsaretle();
     await resetAll();
     anaSayfayaDon();
   }

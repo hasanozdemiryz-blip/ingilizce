@@ -179,16 +179,28 @@ export function Runner({
 
   return (
     <>
-      <div className="flex-1 flex flex-col justify-center py-6">
+      {/*
+        Yazili sorularda icerik USTE hizali: ortadayken klavye acilip
+        kapaninca ekran kisalip uzuyor ve kart asagi yukari kayiyordu.
+      */}
+      <div
+        className={`flex-1 flex flex-col ${yaziliMi ? 'justify-start pt-3 pb-6' : 'justify-center py-6'}`}
+      >
         {soru}
         {/*
           Yazma kutusu KARTIN HEMEN ALTINDA. Ekranin en altindaydi: goz
           soruyla kutu arasinda gidip geliyordu, telefonda klavye acilinca
           kart da kutu da ekrandan tasiyordu.
         */}
-        {!verdict && yaziliMi && (
+        {yaziliMi && (
           <div className="mt-4">
-            <TypeAnswer key={card.id} onSubmit={yaziliCevap} disabled={busy} />
+            <TypeAnswer
+              soruAnahtari={`${i}-${card.id}`}
+              onSubmit={yaziliCevap}
+              disabled={busy}
+              kilitli={Boolean(verdict)}
+              onDevam={ilerle}
+            />
           </div>
         )}
         {verdict && (
@@ -247,9 +259,15 @@ export function Runner({
         )}
 
         {verdict && (
+          /*
+            Dokunus odagi CALMASIN: odak yazma kutusundan dugmeye gecince
+            telefonda klavye kapaniyor, siradaki soruda yeniden aciliyordu.
+          */
+          <div onMouseDown={(e) => yaziliMi && e.preventDefault()}>
           <Button variant="brand" onClick={ilerle}>
             {t('Devam')}
           </Button>
+          </div>
         )}
       </div>
     </>

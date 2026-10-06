@@ -148,6 +148,12 @@ export type Uye = {
   saglayici: string | null;
   /** Saglayicinin verdigi ad (Google). Bilgi adimi atlandiysa gosterilen ad. */
   saglayiciAdi: string | null;
+  /**
+   * "Kendini tanit" bir kez soruldu mu — doldurulsun ya da gecilsin.
+   * Hesapta (`user_metadata.tanitim`) duruyor ki baska cihazdan girince
+   * ayni soru tekrar gelmesin (bkz. GirisYapildi).
+   */
+  tanitimGoruldu: boolean;
 };
 
 /**
@@ -212,6 +218,7 @@ function uyeden(k: HamKullanici | null | undefined): Uye | null {
     eposta: k.email ?? null,
     saglayici: k.app_metadata?.provider ?? null,
     saglayiciAdi: sAdi ?? null,
+    tanitimGoruldu: Boolean(ham?.tanitim) || Boolean(ham?.seviye || ham?.hedef),
     // `tamam` yoksa bilgi girilmemis demektir; yarim metadata'yi bilgi sayma.
     bilgi: ham?.tamam && ham.ad ? (ham as UyeBilgi) : null,
   };
@@ -518,6 +525,21 @@ export async function bilgiKaydet(bilgi: Omit<UyeBilgi, 'tamam'>): Promise<Sonuc
     haberVer();
   }
   return { oldu: true };
+}
+
+/**
+ * "Kendini tanit" goruldu: bir daha sorulmayacak. Hata yutuluyor — en kotu
+ * ihtimalle soru bir sonraki giriste bir kez daha gelir.
+ */
+export async function tanitimGorulduIsaretle(): Promise<void> {
+  if (!uye || uye.tanitimGoruldu) return;
+  const c = await istemciyiKur();
+  if (!c) return;
+  const { error } = await c.auth.updateUser({ data: { tanitim: true } });
+  if (!error && uye) {
+    uye = { ...uye, tanitimGoruldu: true };
+    haberVer();
+  }
 }
 
 /** Yeni sifre belirler — sifirlama donusunde ya da Ayarlar'dan. */

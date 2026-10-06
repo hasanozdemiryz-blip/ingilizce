@@ -317,9 +317,22 @@ export function senkronla(): Promise<SenkronSonuc> {
  */
 export type CikisSonuc = 'yapildi' | 'senkronOlmadi';
 
+/*
+  AYRILIYOR. Cikista ve hesap silmede cihaz temizlenip tanitim sayfasina
+  gidiliyor; temizlikle sayfa degisimi arasinda uygulama bir an "karsilama
+  yapilmamis" durumu goruyor ve snake karsilamasi yanip sonuyordu. Bayrak
+  kalkikken App yalnizca sade bir bekleme ekrani ciziyor.
+*/
+let ayriliyor = false;
+export const ayriliyorMu = (): boolean => ayriliyor;
+export const ayriliyorIsaretle = (): void => {
+  ayriliyor = true;
+};
+
 export async function cikisVeTemizle(zorla = false): Promise<CikisSonuc> {
   const sonuc = await senkronla();
   if (sonuc === 'hata' && !zorla) return 'senkronOlmadi';
+  ayriliyor = true;
   await cikisYap();
   await resetAll();
   return 'yapildi';

@@ -43,6 +43,19 @@ export function Ikon({
  *
  * `full` — kilidin tamami. Yalnizca yer olan yerde (karsilama) ve buyuk.
  */
+/**
+ * Sade bekleme zemini: yalnizca isaret. Cikista ve giris penceresinin
+ * arkasinda — oralarda karsilama (snake) ya da bir kart gorunmemeli.
+ */
+export function SadeZemin({ children }: { children?: ReactNode }) {
+  return (
+    <div className="grid h-dvh place-items-center bg-paper">
+      <Logo className="h-16 opacity-80" />
+      {children}
+    </div>
+  );
+}
+
 export function Logo({
   variant = 'mark',
   className,

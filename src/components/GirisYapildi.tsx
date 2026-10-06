@@ -9,6 +9,7 @@ import {
   HEDEFLER,
   SEVIYELER,
   bilgiKaydet,
+  tanitimGorulduIsaretle,
   uyeAdi,
   type Hedef,
   type Seviye,
@@ -56,8 +57,20 @@ export function GirisYapildi({
     seviye !== (uye.bilgi?.seviye ?? null) ||
     hedef !== (uye.bilgi?.hedef ?? null);
 
+  /*
+    Daha once tanitilmis (ya da soru bir kez gosterilip gecilmis) hesapta
+    form HIC cikmiyor: yalnizca "Giris yapildi". Kullanici her giriste ayni
+    soruyla karsilasmak istemedi.
+  */
+  const soralim = !uye.tanitimGoruldu;
+
   async function devam() {
     olay('giris_yapildi', { yol: uye.saglayici ?? 'bilinmiyor', bilgi: degisti });
+    if (!soralim) {
+      onKapat();
+      return;
+    }
+    void tanitimGorulduIsaretle();
     const temizAd = ad.trim() || ilkAd;
     if (degisti) {
       setKaydediliyor(true);
@@ -103,6 +116,7 @@ export function GirisYapildi({
           </p>
         </div>
 
+        {soralim && (
         <div className="mt-5 border-t border-line pt-4">
           <p className="text-sm font-bold text-ink">
             {t('İstersen kendini tanıt')}{' '}<span className="font-semibold text-ink-faint">{t('· isteğe bağlı')}</span>
@@ -126,6 +140,7 @@ export function GirisYapildi({
           />
           <Secenekler baslik={t('Niçin öğreniyorsun?')} secenekler={HEDEFLER} secili={hedef} sec={setHedef} />
         </div>
+        )}
 
         {hata && <p className="mt-3 text-sm text-[#c2417f]">{hata}</p>}
         <div className="mt-5">

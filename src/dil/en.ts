@@ -406,4 +406,5 @@ export const EN: Record<string, string> = {
   "ornek@eposta.com": "you@example.com",
   "Geri": "Back",
   "Kelime, anlam veya kanca ara…": "Search words, meanings or hooks…",
+  "Bitti": "Done",
 };

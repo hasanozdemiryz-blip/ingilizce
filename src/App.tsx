@@ -39,11 +39,11 @@ import {
   uyelikVarMi,
   yeniGirisGoruldu,
 } from './uyelik';
-import { senkronla } from './senkron';
+import { ayriliyorMu, senkronla } from './senkron';
 import { gecerliCerceve, type Kazanim } from './cerceveler';
 import { uygulamadanCik, useGeri } from './geri';
 // `Card` adi types.ts'teki KART tipiyle cakisiyor; arayuz bileseni takma adla.
-import { Button, Card as Kutu } from './components/ui';
+import { Button, Card as Kutu, SadeZemin } from './components/ui';
 import { profilDuzelt } from './profil';
 import { Splash } from './screens/Splash';
 import { useToday } from './today';
@@ -311,6 +311,9 @@ export default function App() {
       <GirisYapildi uye={uye} profil={state.profil} onKapat={yeniGirisGoruldu} />
     ) : null;
 
+  // Cikis / hesap silme: temizlik ile sayfa degisimi arasi (bkz. senkron.ts)
+  if (ayriliyorMu()) return <SadeZemin />;
+
   if (!state.onboarded) {
     /*
       GIRIS YAPMIS KULLANICI DENEMEYI GORMUYOR. Yontemi taniyor, hesabini
@@ -325,6 +328,19 @@ export default function App() {
     const oturumBekleniyor = !uyelikHazir && oturumVarGibi();
     const senkronBekleniyor = Boolean(uye) && ilkSenkron !== uye?.id;
     if (oturumBekleniyor || senkronBekleniyor) return <Splash />;
+    /*
+      SNAKE KARSILAMASI YALNIZCA "HEMEN BASLA" ILE GELENE. Giris penceresi
+      aciksa (tanitim sayfasindaki "Giris yap") arkasi sade zemin: once
+      karsilama orada duruyordu ve giris yapmak isteyen snake'i goruyordu.
+    */
+    if (girisKip && !uye) {
+      return (
+        <>
+          <SadeZemin />
+          {girisPenceresi}
+        </>
+      );
+    }
     return (
       <>
         <Welcome
@@ -370,11 +386,10 @@ export default function App() {
         kazanim={kazanim}
         onKapat={kapat}
         onKaydet={(profil) => {
+          // Her secimde ANINDA (bkz. ProfilDuzenle); ekran acik kaliyor.
           // Adin kendisi GONDERILMIYOR — yalnizca neyin degistigi.
           olay('profil_degisti', { avatar: profil.avatar.tip, cerceve: profil.cerceve });
-          // Once yaz, SONRA kapat: `kapat` senkronu baslatiyor ve yazilmamis
-          // profili goremezdi (bkz. senkron.ts `yereleYaz`).
-          void tercihKaydet({ profil }).then(kapat);
+          void tercihKaydet({ profil });
         }}
       />
     );

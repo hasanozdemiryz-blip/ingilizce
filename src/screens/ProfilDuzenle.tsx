@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Avatar } from '../components/Avatar';
 import { BackButton, Button, Card, Screen, TopBar } from '../components/ui';
 import {
@@ -83,6 +83,44 @@ export function ProfilDuzenle({
   const { uye } = useUyelik();
   const [sekme, setSekme] = useState<Sekme>(profil.avatar.tip);
   const [hata, setHata] = useState<string | null>(null);
+
+  /*
+    ANINDA KAYIT. Degisiklik once yalnizca alttaki "Tamam"la kaydediliyordu;
+    geri tusuyla cikan kullanicinin sectigi avatar sessizce kayboluyordu
+    ("degistirdim ama olmadi"). Artik her secim hemen yaziliyor; ad yazmayi
+    birakinca. Bos ad yazilirken kaydedilmiyor — yoksa silip yeniden yazan
+    kullaniciya arada rastgele bir ad atanirdi.
+  */
+  const ilk = useRef(true);
+  const sonKayit = useRef<string>(JSON.stringify({ ad: profil.ad, avatar: profil.avatar, cerceve: profil.cerceve }));
+  const kaydet = (adDegeri: string) => {
+    const temiz = adDegeri.trim() ? adDegeri.trim() : profil.ad;
+    const yeni = { ...profil, ad: temiz, avatar, cerceve };
+    const imza = JSON.stringify({ ad: yeni.ad, avatar: yeni.avatar, cerceve: yeni.cerceve });
+    if (imza === sonKayit.current) return;
+    sonKayit.current = imza;
+    onKaydet(yeni);
+  };
+  useEffect(() => {
+    if (ilk.current) {
+      ilk.current = false;
+      return;
+    }
+    kaydet(ad);
+    // `ad` burada bilerek yok: ad kendi gecikmeli efektiyle kaydediliyor.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [avatar, cerceve]);
+  useEffect(() => {
+    const zamanlayici = setTimeout(() => kaydet(ad), 600);
+    return () => clearTimeout(zamanlayici);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ad]);
+
+  /** Kapanirken bekleyen ad da yazilsin; bos birakildiysa eglenceli bir ad. */
+  const kapat = () => {
+    kaydet(ad.trim() ? ad : adDuzelt(ad));
+    onKapat();
+  };
   const dosyaGirisi = useRef<HTMLInputElement>(null);
 
   async function dosyaSecildi(dosya: File | undefined) {
@@ -97,7 +135,7 @@ export function ProfilDuzenle({
 
   return (
     <Screen yanMenusuz>
-      <TopBar left={<BackButton onClick={onKapat} />} />
+      <TopBar left={<BackButton onClick={kapat} />} />
 
       <div className="flex-1 flex flex-col gap-4 pb-6">
         {/* --- Onizleme: degistirdigin sey hemen burada --- */}
@@ -250,11 +288,9 @@ export function ProfilDuzenle({
       </div>
 
       <div className="shrink-0">
-        <Button
-          variant="brand"
-          onClick={() => onKaydet({ ...profil, ad: adDuzelt(ad), avatar, cerceve })}
-        >
-          {t('Tamam')}
+        {/* Kaydetmek icin degil, kapatmak icin: degisiklikler zaten yazildi */}
+        <Button variant="brand" onClick={kapat}>
+          {t('Bitti')}
         </Button>
       </div>
     </Screen>
