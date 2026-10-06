@@ -2163,11 +2163,12 @@ uğraş"); anahtar eklenmedi, mesajlar Table Editor → `iletisim`te okunuyor
 
 ### Yapılacaklar
 
-#### 1. Sızmış şifre koruması (2 dakika)
+#### 1. Sızmış şifre koruması — ücretsiz planda YOK
 
-Supabase panel → **Authentication → Policies** → *Leaked password
-protection* → aç. Bunsuz kullanıcılar `123456789` gibi sızmış şifrelerle
-kayıt olabiliyor; güvenlik taraması uyarıyor.
+6 Ekim'de bakıldı: Supabase'de "Prevent use of leaked passwords" yalnızca
+Pro planda. Güvenlik taraması bunu uyarı olarak göstermeye devam edecek;
+bilinçli kabul. Ücretsiz karşılığı: sunucudaki en kısa şifre 6, uygulama 8
+istiyor — sunucuyu da 8 yapmak önerildi, kullanıcı onayı bekleniyor.
 
 #### 2. Google ile giriş — ✅ YAPILDI (4 Ekim)
 
