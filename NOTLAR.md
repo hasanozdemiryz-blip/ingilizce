@@ -2232,10 +2232,11 @@ Her madde **ayrı commit** — beğenilmeyen tek tek `git revert <commit>`:
   dokunulmadı.
 - İlerleme'ye takvim: ısı haritası daha önce bilinçli kaldırılmıştı
   (bkz. `Progress.tsx` başı); yerine set çubuğu.
-- **Web'de hatırlatma bildirimi (Web Push) — kullanıcıyla yapılacak.**
-  Gerekenler: VAPID anahtar çifti (gizli anahtar Supabase sırrı olarak),
-  `bildirim_abonelik` tablosu, gönderen bir işlev ve zamanlayıcı
-  (pg_cron). Sırrı panele kullanıcı girmeli.
+- **Web'de hatırlatma bildirimi (Web Push) — kullanıcı kararıyla YOK**
+  (7 Ekim: "gerek yok"). Yapılmak istenirse gerekenler: VAPID anahtar
+  çifti (gizli anahtar Supabase sırrı), `bildirim_abonelik` tablosu,
+  gönderen işlev ve zamanlayıcı (pg_cron). Android uygulamasındaki
+  yerel hatırlatma duruyor.
 
 ## Sırada
 
