@@ -40,6 +40,7 @@ import {
   yeniGirisGoruldu,
 } from './uyelik';
 import { ayriliyorMu, senkronla } from './senkron';
+import { karsilamaIzniniSil, karsilamaIzniOku, tanitimaYolla } from './karsilama';
 import { gecerliCerceve, type Kazanim } from './cerceveler';
 import { uygulamadanCik, useGeri } from './geri';
 // `Card` adi types.ts'teki KART tipiyle cakisiyor; arayuz bileseni takma adla.
@@ -133,6 +134,9 @@ export default function App() {
     dusuruyordu.
   */
   const { uye, hazir: uyelikHazir, yeniGiris } = useUyelik();
+
+  /* Snake karsilamasi yalnizca "Hemen basla" ile gelene (bkz. karsilama.ts) */
+  const [karsilamaIzni] = useState(karsilamaIzniOku);
 
   /*
     ILERLEME SENKRONU. Oturum hazir olur olmaz bir kez: sunucudaki paket
@@ -297,7 +301,7 @@ export default function App() {
         // kapaninca kullaniciyi uygulamadan atmasin.
         disaridanGiris.current = false;
         if (disaridan && !girisYapildi && !uyeOku()) {
-          window.location.href = '/';
+          window.location.replace('/');
           return;
         }
         setGirisKip(null);
@@ -341,6 +345,12 @@ export default function App() {
         </>
       );
     }
+    /*
+      Baslamamis, girissiz ve "Hemen basla"dan gelmemis: geri tusuyla ya da
+      cikistan sonra buraya dusen biri. Karsilama yerine tanitim sayfasi;
+      `replace` — yoksa oradaki geri tusu yine buraya getirir.
+    */
+    if (!uye && !karsilamaIzni && tanitimaYolla()) return <SadeZemin />;
     return (
       <>
         <Welcome
@@ -353,6 +363,7 @@ export default function App() {
             uyarisiydi. Artik ana ekrana dusuyor; ilk ders orada kendi
             karti olarak bekliyor (bkz. Home, `ilkDers`), baslatan o.
           */
+          karsilamaIzniniSil();
           setTab('ogren');
         }}
         />

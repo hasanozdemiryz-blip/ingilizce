@@ -108,11 +108,16 @@ export const sifirlamaDonusuMu = (): boolean => sifirlamaDonusu;
  * SDK adresi temizledikten sonra sorulursa cevap kaybolur.
  *
  * Sifirlama donusu sayilmiyor: orada once yeni sifre belirleniyor.
+ *
+ * Depoda ZATEN oturum varsa yeni giris degil. Tarayicinin geri tusu
+ * kullaniciyi Google'in sayfasina, oradan da yeni bir `code=` ile
+ * uygulamaya geri atiyordu; ekran her geri basista yeniden cikiyordu.
  */
 let yeniGiris =
   typeof location !== 'undefined' &&
   !sifirlamaDonusu &&
-  (location.hash.includes('access_token=') || location.search.includes('code='));
+  (location.hash.includes('access_token=') || location.search.includes('code=')) &&
+  !depodaOturumVar();
 
 /** Ekran gosterildi; bir daha cikmasin. */
 export function yeniGirisGoruldu(): void {

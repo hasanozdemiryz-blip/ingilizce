@@ -11,6 +11,7 @@ import { ADIM, bloklaraBol, secenekler, shuffle, type Gorev } from '../exercise'
 import type { Step } from '../types';
 import { seslendir, seslendirmeyiDurdur, useTelaffuz } from '../speech';
 import { t } from '../dil';
+import { useKlavyeDaraltsin } from '../klavye';
 
 
 const GERI_BILDIRIM: Record<Judgement, { baslik: string; tone: string }> = {
@@ -63,6 +64,8 @@ export function Runner({
   const [secilen, setSecilen] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const sesVar = useTelaffuz();
+  // Yazma sorularinda klavye acilinca soru + kutu ustte sigsin (bkz. klavye.ts)
+  useKlavyeDaraltsin();
 
   const blok = bloklar[i];
   const tekliGorev = blok?.tip === 'tekli' ? blok.gorev : null;

@@ -19,6 +19,16 @@ import { uyelikHazirla } from './uyelik';
 void navigator.storage?.persist?.().catch(() => {});
 
 /**
+ * "Hafizada Ingilizce'yi yukle" bildirimi CIKMASIN.
+ *
+ * Manifest uygulamayi yuklenebilir kiliyor; Android Chrome da bunu gorunce
+ * kendiliginden alttan bir yukleme seridi aciyordu. Kullanici istemedi:
+ * sebebi belirsiz, araya giren bir bildirim. Olayi durdurmak seridi
+ * kapatiyor; tarayici menusundeki "Ana ekrana ekle" yine calisiyor.
+ */
+window.addEventListener('beforeinstallprompt', (e) => e.preventDefault());
+
+/**
  * Native kabukta (APK) tarayicinin ses sentezi YOK; cihazin TTS motoru
  * kopru uzerinden aranir. Web'de hemen doner, hicbir sey geciktirmez.
  * Bkz. speech.ts — motor bulununca arayuz kendiliginden acilir.

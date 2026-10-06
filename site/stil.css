@@ -44,6 +44,17 @@ h1,h2,h3,h4 { font-family: var(--d); margin: 0; letter-spacing: -.01em; line-hei
 .serit { background: var(--sari); color: var(--lacivert); font-family: var(--d); font-weight: 800; font-size: .82rem; }
 .serit .kap { display: flex; justify-content: flex-end; align-items: center; gap: 16px; padding-block: 8px; }
 .serit a { border: 2px solid var(--lacivert); border-radius: 10px; padding: 4px 16px; background: var(--krem); }
+/*
+ * Dil secici: seridin solunda, iki parcali tek kutu. Bayrak yok — dil bir
+ * ulke degil. Etiketler kisaltma (TR/EN), tam adi `title`da.
+ */
+.serit .dil { margin-right: auto; display: inline-flex; align-items: center; gap: 8px; }
+.serit .dil svg { width: 17px; height: 17px; flex: none; }
+.serit .dil-kutu { display: inline-flex; border: 2px solid var(--lacivert); border-radius: 10px; overflow: hidden; background: var(--krem); }
+.serit .dil-kutu a { border: 0; border-radius: 0; background: none; padding: 3px 11px; letter-spacing: .08em; line-height: 1.5; }
+.serit .dil-kutu a + a { border-left: 2px solid var(--lacivert); }
+.serit .dil-kutu a[aria-current="true"] { background: var(--lacivert); color: var(--sari); }
+.serit .dil-kutu a:not([aria-current="true"]):hover { background: var(--krem-2); }
 
 header { background: var(--lacivert); position: sticky; top: 0; z-index: 40; }
 header .kap { display: flex; align-items: center; gap: 18px; padding-block: 12px; }

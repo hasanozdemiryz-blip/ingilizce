@@ -4,7 +4,7 @@ import { Avatar } from '../components/Avatar';
 import { Button, Card, Ikon, Screen } from '../components/ui';
 import { CARDS, LIMIT_CHOICES } from '../content';
 import { olay, olcumHazirla, olcumVarMi, olcumuKapat } from '../analitik';
-import { exportProgress, importProgress, resetAll, tercihKaydet } from '../db';
+import { exportProgress, importProgress, resetAll, setState, tercihKaydet } from '../db';
 import {
   HATIRLATMA_VARSAYILAN,
   hatirlatmayiKapat,
@@ -22,6 +22,7 @@ import { DevPanel } from './DevPanel';
 import type { AppState } from '../types';
 import { dosyayiVer, paylasilabilir, telefonaKaydet, yedekAdi, yol } from '../dosya';
 import { t } from '../dil';
+import { karsilamaIzniniSil } from '../karsilama';
 
 /**
  * AYARLAR.
@@ -82,7 +83,9 @@ export function Settings({
     esdeger oluyor, bir sey bozulmuyor.
   */
   const anaSayfayaDon = () => {
-    window.location.href = '/';
+    karsilamaIzniniSil();
+    // `replace`: geri tusu bosaltilmis uygulamaya (karsilamaya) donmesin
+    window.location.replace('/');
   };
 
   async function hesabiKaldir() {
@@ -525,7 +528,7 @@ export function Settings({
       {bilgiAcik && <Giris baslangicKip="bilgi" onKapat={() => setBilgiAcik(false)} />}
 
       {silmeDurum !== 'kapali' && (
-        <div className="fixed inset-0 z-30 flex items-end justify-center bg-ink/45 px-5 pb-8 backdrop-blur-sm sm:items-center sm:pb-0">
+        <div className="fixed inset-0 z-30 flex items-start justify-center overflow-y-auto bg-ink/45 px-5 pt-[max(1.5rem,env(safe-area-inset-top))] pb-8 backdrop-blur-sm sm:items-center sm:pt-0 sm:pb-0">
           <Card className="rise w-full max-w-md p-6">
             <p className="word text-xl font-extrabold text-[#c2417f]">
               {t('Hesabını kalıcı olarak sil')}
@@ -596,7 +599,13 @@ export function Settings({
                 variant="ghost"
                 onClick={() => {
                   setSifirlaSoruluyor(false);
-                  void resetAll();
+                  /*
+                    Ilerleme sifirlaniyor, kullanici UYGULAMADA kaliyor:
+                    karsilama (snake) yalnizca "Hemen basla"ya ait (bkz.
+                    karsilama.ts). Ilk ders ana ekranda bekliyor.
+                  */
+                  const { dailyLimit } = state;
+                  void resetAll().then(() => setState({ onboarded: true, dailyLimit }));
                 }}
               >
                 {t('Evet, sıfırla')}

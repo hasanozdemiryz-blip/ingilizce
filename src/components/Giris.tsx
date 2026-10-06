@@ -220,9 +220,14 @@ export function Giris({
   const sifreVar = kip === 'giris' || kip === 'kayit' || kip === 'yeniSifre';
   const epostaVar = kip === 'giris' || kip === 'kayit' || kip === 'unuttum';
 
+  /*
+    Telefonda pencere USTTE duruyor, altta degil. Alttayken klavye acilinca
+    tarayici kutuyu gostermek icin sayfayi yukari kaydiriyordu; ustte kutular
+    klavyenin zaten ustunde kaliyor, hicbir sey yer degistirmiyor.
+  */
   return (
     <div
-      className="fixed inset-0 z-30 flex items-end justify-center bg-ink/45 px-5 pb-8 backdrop-blur-sm sm:items-center sm:pb-0"
+      className="fixed inset-0 z-30 flex items-start justify-center overflow-y-auto bg-ink/45 px-5 pt-[max(1.5rem,env(safe-area-inset-top))] pb-8 backdrop-blur-sm sm:items-center sm:pt-0 sm:pb-0"
       /*
         Disariya tiklayinca kapanir — ama YALNIZCA zemine. Kartin icinde
         baslayan bir secim hareketi disarida biterse pencere kapanmasin diye

@@ -12,6 +12,7 @@
  * Uretilenler:
  *   public/icon-192.png, icon-512.png, icon-512-maskable.png,
  *   public/apple-touch-icon.png          -> PWA / cihaz simgeleri
+ *   public/favicon.ico, favicon-96x96.png -> tarayici sekmesi, Google sonucu
  *   brand/logo-isaret.png                -> seffaf isaret (filigran, sunum)
  *   brand/instagram-profil*.png          -> profil fotografi (daire guvenli)
  *   src/assets/brand/isaret.webp         -> uygulama ici (acilis ekrani)
@@ -20,7 +21,7 @@
  * Kullanim: npm run icons
  */
 import sharp from 'sharp';
-import { mkdir, readFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -129,4 +130,58 @@ const isler = [
   kare(1080, { zemin: LACI, oran: ORAN.daire, cikti: 'brand/instagram-profil-lacivert.png' }),
 ];
 
-for (const c of await Promise.all([...isler, ...ANDROID])) console.log('✓', c);
+/**
+ * FAVICON. Sekmede 16-32 piksel: isaret tuvali neredeyse dolduruyor (0.9),
+ * yoksa krem zeminde kucuk bir leke kaliyor. Zemin krem — seffaf olsa koyu
+ * temali sekmede isaretin lacivert yarisi kayboluyordu.
+ *
+ * `.ico` icinde 16/32/48 PNG. Google arama sonucundaki simge 48'in kati
+ * istiyor: 96'lik ayrica.
+ */
+const FAVICON_ORAN = 0.9;
+
+async function favicon(boyut) {
+  const ic = await sharp(isaret)
+    .resize(Math.round(boyut * FAVICON_ORAN), Math.round(boyut * FAVICON_ORAN), {
+      fit: 'contain',
+      background: SEFFAF,
+    })
+    .toBuffer();
+  return sharp({ create: { width: boyut, height: boyut, channels: 4, background: KREM } })
+    .composite([{ input: ic, gravity: 'centre' }])
+    .png()
+    .toBuffer();
+}
+
+/** PNG'leri tek .ico'ya sarar (Vista'dan beri .ico icinde PNG gecerli). */
+function ico(parcalar) {
+  const bas = Buffer.alloc(6 + 16 * parcalar.length);
+  bas.writeUInt16LE(0, 0);
+  bas.writeUInt16LE(1, 2);
+  bas.writeUInt16LE(parcalar.length, 4);
+  let konum = bas.length;
+  parcalar.forEach(({ boyut, veri }, i) => {
+    const o = 6 + 16 * i;
+    bas.writeUInt8(boyut >= 256 ? 0 : boyut, o);
+    bas.writeUInt8(boyut >= 256 ? 0 : boyut, o + 1);
+    bas.writeUInt8(0, o + 2);
+    bas.writeUInt8(0, o + 3);
+    bas.writeUInt16LE(1, o + 4);
+    bas.writeUInt16LE(32, o + 6);
+    bas.writeUInt32LE(veri.length, o + 8);
+    bas.writeUInt32LE(konum, o + 12);
+    konum += veri.length;
+  });
+  return Buffer.concat([bas, ...parcalar.map((p) => p.veri)]);
+}
+
+const FAVICON = (async () => {
+  const parcalar = await Promise.all(
+    [16, 32, 48].map(async (boyut) => ({ boyut, veri: await favicon(boyut) })),
+  );
+  await writeFile(y('public/favicon.ico'), ico(parcalar));
+  await writeFile(y('public/favicon-96x96.png'), await favicon(96));
+  return 'public/favicon.ico, public/favicon-96x96.png';
+})();
+
+for (const c of await Promise.all([...isler, ...ANDROID, FAVICON])) console.log('✓', c);

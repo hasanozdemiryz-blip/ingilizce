@@ -53,6 +53,96 @@ const OGREN = [
 ];
 
 /**
+ * INGILIZCE ANA SAYFA (/en/). Yalnizca ana sayfanin Ingilizcesi var: blog,
+ * kelime sayfalari ve yasal metinler Turkce kitle icin. Ingilizce menu bu
+ * yuzden sayfa ici bolumlere gidiyor; Turkce sayfalara giden baglantilar
+ * "(Turkish)" diye isaretli — tiklayan neyle karsilasacagini bilsin.
+ */
+const MENU_EN = [
+  ['/en/#yontem', 'How it works'],
+  ['/en/#neden', 'Why it works'],
+  ['/en/#sss', 'FAQ'],
+  ['/en/#iletisim', 'Contact'],
+];
+const OGREN_EN = [
+  ['/en/#kancalar', 'Hook examples'],
+  ['/en/#sss', 'FAQ'],
+  ['/kelimeler/', 'Word list (Turkish)'],
+  ['/blog/', 'Blog (Turkish)'],
+];
+
+/** Kabugun (ust serit, menu, footer) metinleri — `__K_<AD>__`. */
+const KABUK = {
+  tr: {
+    UCRETSIZ: 'Ücretsiz',
+    GIRIS: 'Giriş yap',
+    ANA: '/',
+    ANA_ARIA: 'Hafızada İngilizce ana sayfa',
+    ANA_MENU: 'Ana menü',
+    BASLA: 'Hemen başla',
+    MENU: 'Menü',
+    ALT_TANIM:
+      'İngilizce kelimeleri benzer sesli Türkçe kelimelere bağlayarak öğren. Ezber yok, reklam yok, ücretsiz.',
+    UYGULAMA: 'Uygulama',
+    NASIL: 'Nasıl çalışıyor?',
+    NEDEN: 'Neden işe yarıyor?',
+    OGREN: 'Öğren',
+    YARDIM: 'Yardım',
+    ILETISIM_YOL: '/iletisim/',
+    ILETISIM: 'İletişim',
+    GIZLILIK: 'Gizlilik Politikası',
+    KOSULLAR: 'Kullanım Koşulları',
+    KVKK: 'KVKK Aydınlatma Metni',
+    ALT_SLOGAN: 'Ücretsiz · Reklamsız · Telefonda ve bilgisayarda',
+  },
+  en: {
+    UCRETSIZ: 'Free',
+    GIRIS: 'Log in',
+    ANA: '/en/',
+    ANA_ARIA: 'Hafızada İngilizce home',
+    ANA_MENU: 'Main menu',
+    BASLA: 'Get started',
+    MENU: 'Menu',
+    ALT_TANIM:
+      'Learn English words by linking them to similar-sounding Turkish words. No rote learning, no ads, free.',
+    UYGULAMA: 'App',
+    NASIL: 'How it works',
+    NEDEN: 'Why it works',
+    OGREN: 'Learn',
+    YARDIM: 'Help',
+    ILETISIM_YOL: '/en/#iletisim',
+    ILETISIM: 'Contact',
+    GIZLILIK: 'Privacy Policy (Turkish)',
+    KOSULLAR: 'Terms of Use (Turkish)',
+    KVKK: 'KVKK Notice (Turkish)',
+    ALT_SLOGAN: 'Free · No ads · On your phone and computer',
+  },
+};
+
+const DUNYA =
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19"/><path d="M12 2.5c2.6 2.7 3.9 5.9 3.9 9.5s-1.3 6.8-3.9 9.5c-2.6-2.7-3.9-5.9-3.9-9.5s1.3-6.8 3.9-9.5z"/></svg>';
+
+/**
+ * Dil secici (ust serit). Ingilizcesi olmayan Turkce sayfada EN, Ingilizce
+ * ana sayfaya gidiyor. Tiklaninca secim uygulamaya da yaziliyor (kabuk.html).
+ */
+function dilSecici(dil, trYol, enYol) {
+  const bag = (kod, yol, ad, baslik) =>
+    `<a href="${yol}" hreflang="${kod}" lang="${kod}" title="${baslik}" data-dil="${kod}"${dil === kod ? ' aria-current="true"' : ''}>${ad}</a>`;
+  return `    <div class="dil" role="group" aria-label="Dil / Language">
+      ${DUNYA}
+      <span class="dil-kutu">${bag('tr', trYol, 'TR', 'Türkçe')}${bag('en', enYol, 'EN', 'English')}</span>
+    </div>`;
+}
+
+/** Ana sayfanin iki dili birbirini gosteriyor; Google dogru olani sunsun. */
+const HREFLANG = [
+  `<link rel="alternate" hreflang="tr" href="${ALAN}/">`,
+  `<link rel="alternate" hreflang="en" href="${ALAN}/en/">`,
+  `<link rel="alternate" hreflang="x-default" href="${ALAN}/">`,
+].join('\n');
+
+/**
  * Sik sorulan sorular. Ana sayfada acilir liste, ayni metin Google'a
  * FAQPage yapisal verisi olarak da gidiyor — iki kopya ayrismasin diye tek yer.
  */
@@ -87,12 +177,45 @@ const SSS = [
   ],
 ];
 
+/** SSS'nin Ingilizcesi — sira ve kapsam ayni. */
+const SSS_EN = [
+  [
+    'What is Hafızada İngilizce?',
+    'A free app that teaches English words by linking each one to a similar-sounding Turkish word and a single image. You don’t memorize the word; you attach it to a sound and a scene.',
+  ],
+  [
+    'What is a sound hook?',
+    'A Turkish word that sounds like the English word. For example, sell ≈ sel (flood): “He sold his house before the flood came.” Remember the scene and the meaning comes with it.',
+  ],
+  ['Is it paid?', 'No. Hafızada İngilizce is free and has no ads.'],
+  [
+    'Do I need an account?',
+    'No, you can start right away without one. With an account your progress is saved, so you can start on your phone and continue on your computer.',
+  ],
+  [
+    'Can I learn pronunciation too?',
+    'Yes. The hook reminds you of the meaning, not the pronunciation, so you hear the correct sound of every word — and in the last step you recognize the word by sound alone.',
+  ],
+  [
+    'How much time should I spend a day?',
+    'Choose 5, 10 or 15 new words a day. A lesson takes a few minutes, and the app brings each review back just before you’d forget it.',
+  ],
+  [
+    'Which devices does it work on?',
+    'It runs in the browser on your phone and computer. Add it to your home screen to use it like an app; it opens even without internet.',
+  ],
+];
+
 /** Kahraman slider: urun degil INSAN (bkz. NOTLAR). */
 const KISILER = [
-  { dosya: 'otobus', an: 'Otobüste dört dakika', sure: 'Bir durak arası beş kelime' },
-  { dosya: 'kahve', an: 'Kahve molasında', sure: 'Ezber yok — bağlıyorsun, kalıyor' },
-  { dosya: 'ogrenci', an: 'Sırada beklerken', sure: 'Telefon açık, kanca hazır' },
-  { dosya: 'kanepe', an: 'Akşam kanepede', sure: 'Günlük hedef dolunca gün kapanıyor' },
+  { dosya: 'otobus', an: 'Otobüste dört dakika', sure: 'Bir durak arası beş kelime',
+    en: { an: 'Four minutes on the bus', sure: 'Five words between two stops' } },
+  { dosya: 'kahve', an: 'Kahve molasında', sure: 'Ezber yok — bağlıyorsun, kalıyor',
+    en: { an: 'On a coffee break', sure: 'No memorizing — you link it, it stays' } },
+  { dosya: 'ogrenci', an: 'Sırada beklerken', sure: 'Telefon açık, kanca hazır',
+    en: { an: 'Waiting in line', sure: 'Phone out, hook ready' } },
+  { dosya: 'kanepe', an: 'Akşam kanepede', sure: 'Günlük hedef dolunca gün kapanıyor',
+    en: { an: 'On the couch at night', sure: 'Hit your daily goal and the day is done' } },
 ];
 
 /**
@@ -143,6 +266,67 @@ const YASAL = [
     aciklama: '6698 sayılı KVKK kapsamında Hafızada İngilizce aydınlatma metni.',
   },
 ];
+
+/**
+ * Iletisim bolumu, form ve ana sayfa betiginin Ingilizcesi. Bu parcalar
+ * kucuk ve iki dilde ayni yapida; ayri dosya yerine metin degistirme.
+ * Eslesmeyen bir metin derlemeyi durduruyor (bkz. `enParcaDenetle`) —
+ * Turkce dosyada metin degisirse burasi da guncellensin, sessizce Turkce
+ * kalmasin.
+ */
+const EN_PARCA = [
+  [
+    'Bir öneri, bir hata ya da aklına takılan bir kelime… Mesajın doğrudan bize ulaşır, en kısa sürede dönüş yaparız.',
+    'A suggestion, a bug or a word on your mind… Your message comes straight to us, and we’ll get back to you soon.',
+  ],
+  ["Instagram'dan da yazabilirsin:", 'You can also reach us on Instagram:'],
+  ['<label>Adın', '<label>Your name'],
+  ['<label>E-posta adresin', '<label>Your email'],
+  ['<label>Mesajın', '<label>Your message'],
+  ['Bu alanı boş bırak', 'Leave this field empty'],
+  ['type="submit">Gönder</button>', 'type="submit">Send</button>'],
+  ["'Adını ve mesajını yazman gerekiyor.'", "'Please enter your name and message.'"],
+  ["'E-posta adresin geçerli görünmüyor.'", "'Your email address doesn’t look valid.'"],
+  ["'Gönderiliyor…'", "'Sending…'"],
+  [
+    "'Teşekkürler, mesajın bize ulaştı. En kısa sürede dönüş yapacağız.'",
+    "'Thanks, we got your message. We’ll get back to you soon.'",
+  ],
+  [
+    "'Kısa sürede çok mesaj gönderildi. Biraz sonra tekrar dene.'",
+    "'Too many messages in a short time. Please try again shortly.'",
+  ],
+  [
+    "'Mesaj gönderilemedi. Biraz sonra tekrar dene ya da Instagram\\'dan yaz.'",
+    "'Your message couldn’t be sent. Try again shortly or message us on Instagram.'",
+  ],
+  ["dugme.textContent = 'Gönder';", "dugme.textContent = 'Send';"],
+  ["(n + 1) + '. görsel'", "'Slide ' + (n + 1)"],
+  ['<h2>Sık sorulan sorular</h2>', '<h2>Frequently asked questions</h2>'],
+];
+/** Yalnizca e-posta yedegi acikken (ILETISIM_HAZIR=0) gecen parcalar. */
+const EN_PARCA_YEDEK = [
+  [
+    'Mesajını e-postayla gönderebilirsin; doğrudan bize ulaşır.',
+    'You can send your message by email; it comes straight to us.',
+  ],
+  ['>E-posta gönder</a>', '>Send an email</a>'],
+];
+
+function ingilizceye(metin) {
+  let s = metin;
+  for (const [tr, en] of [...EN_PARCA, ...EN_PARCA_YEDEK]) s = s.split(tr).join(en);
+  return s;
+}
+
+/** Her Ingilizce parca kaynakta bulundu mu — bulunmadiysa Turkce metin degismis. */
+function enParcaDenetle(kaynaklar) {
+  const birlesik = kaynaklar.join('\n');
+  const eksik = EN_PARCA.filter(([tr]) => !birlesik.includes(tr)).map(([tr]) => tr);
+  if (eksik.length) {
+    throw new Error(`Ingilizceye cevrilemeyen parca (Turkce metin degismis): ${eksik.join(' | ')}`);
+  }
+}
 
 // --- Yardimcilar ------------------------------------------------------------
 
@@ -258,7 +442,7 @@ function kelimeAciklama(k) {
 // --- Uretim ------------------------------------------------------------------
 
 /** Uretilen klasorler — her derlemede bastan yaziliyor, eskisi kalmasin. */
-const URETILEN = ['varliklar', 'kelime', 'kelimeler', 'blog', 'iletisim', 'gizlilik', 'kullanim-kosullari', 'kvkk'];
+const URETILEN = ['varliklar', 'kelime', 'kelimeler', 'blog', 'iletisim', 'gizlilik', 'kullanim-kosullari', 'kvkk', 'en'];
 
 async function derle(hedef) {
   for (const k of URETILEN) fs.rmSync(path.join(hedef, k), { recursive: true, force: true });
@@ -279,6 +463,13 @@ async function derle(hedef) {
     path.join(hedef, 'varliklar/apple-touch-icon.png'),
   );
   await sharp(path.join(KOK, 'public/icon-512.png')).toFile(path.join(hedef, 'varliklar/logo-512.png'));
+  // Favicon (bkz. make-icons.mjs). `.ico` KOKTE: tarayicilar ve Google
+  // etiket olmasa da `/favicon.ico`yu soruyor.
+  fs.copyFileSync(path.join(KOK, 'public/favicon.ico'), path.join(hedef, 'favicon.ico'));
+  fs.copyFileSync(
+    path.join(KOK, 'public/favicon-96x96.png'),
+    path.join(hedef, 'varliklar/favicon-96x96.png'),
+  );
 
   /*
     Paylasim gorseli (1200x630): kilit + snake karti. Yazi SVG ile
@@ -329,26 +520,30 @@ async function derle(hedef) {
               <p class="cumle">"${esc(k.sentence)}"</p>
             </div>`;
 
-  const kisiler = await Promise.all(
-    KISILER.map(async (p, i) => {
-      const img = await webpYaz(
+  const kisiResimleri = await Promise.all(
+    KISILER.map((p) =>
+      webpYaz(
         hedef,
         `varliklar/kisiler/${p.dosya}.webp`,
         path.join(KOK, 'brand/anasayfa/kisiler', `${p.dosya}.png`),
         960,
         540,
-      );
+      ),
+    ),
+  );
+  const kisiler = (dil) =>
+    KISILER.map((p, i) => {
+      const { an, sure } = dil === 'en' ? p.en : p;
       // Ilk sahne hemen gorunuyor: tembel yukleme onu geciktirirdi.
       return `
           <article class="slayt">
-            <div class="resim"><img src="${img}" alt="${p.an}" width="960" height="540"${i ? ' loading="lazy"' : ''}></div>
+            <div class="resim"><img src="${kisiResimleri[i]}" alt="${an}" width="960" height="540"${i ? ' loading="lazy"' : ''}></div>
             <div class="bilgi">
-              <p class="an">${p.an}</p>
-              <p class="sure">${p.sure}</p>
+              <p class="an">${an}</p>
+              <p class="sure">${sure}</p>
             </div>
           </article>`;
-    }),
-  );
+    });
 
   const formHtml = ILETISIM_HAZIR ? oku('sayfalar/form.html') : oku('sayfalar/form-yerine.html');
   const formJs = ILETISIM_HAZIR
@@ -359,34 +554,50 @@ async function derle(hedef) {
       .replace('__ILETISIM_BASLIK__', baslik)
       .replace('__FORM__', formHtml);
 
-  const sssHtml = oku('sayfalar/sss.html').replace(
-    '__SSS_MADDELER__',
-    SSS.map(
-      ([s, c]) => `      <details>
+  const sssHtml = (sorular) =>
+    oku('sayfalar/sss.html').replace(
+      '__SSS_MADDELER__',
+      sorular
+        .map(
+          ([s, c]) => `      <details>
         <summary>${s}</summary>
         <p>${c}</p>
       </details>`,
-    ).join('\n'),
-  );
+        )
+        .join('\n'),
+    );
 
-  const anaYerine = {
-    KISILER: kisiler.join(''),
-    KANCA_KARTLARI: havuz
-      .slice(0, GORUNEN)
-      .map((k) => `<article class="kanca-kart">${kartGovde(k)}</article>`)
-      .join(''),
-    SSS: sssHtml,
-    ILETISIM: iletisimBolum('Bize yaz'),
-  };
+  const cizimler = {};
   for (const [ad, anahtar] of Object.entries(CIZIMLER)) {
     const dosya = path.join(KOK, 'brand/anasayfa', `${ad}.png`);
-    anaYerine[anahtar] = await webpYaz(hedef, `varliklar/cizimler/${ad}.webp`, dosya, 360, 360);
-    anaYerine[`ZEMIN_${anahtar.replace('IK_', '')}`] = await zeminTonu(dosya);
+    cizimler[anahtar] = await webpYaz(hedef, `varliklar/cizimler/${ad}.webp`, dosya, 360, 360);
+    cizimler[`ZEMIN_${anahtar.replace('IK_', '')}`] = await zeminTonu(dosya);
   }
 
-  let anaGovde = oku('sayfalar/anasayfa.html');
-  for (const [k, d] of Object.entries(anaYerine)) anaGovde = anaGovde.split(`__${k}__`).join(d);
+  /** Ana sayfa govdesi; Ingilizcesi ayni parcalardan, kendi dosyasiyla. */
+  const anaSayfa = (dil) => {
+    const en = dil === 'en';
+    const yerine = {
+      KISILER: kisiler(dil).join(''),
+      KANCA_KARTLARI: havuz
+        .slice(0, GORUNEN)
+        .map((k) => `<article class="kanca-kart">${kartGovde(k)}</article>`)
+        .join(''),
+      SSS: en ? ingilizceye(sssHtml(SSS_EN)) : sssHtml(SSS),
+      ILETISIM: en ? ingilizceye(iletisimBolum('Write to us')) : iletisimBolum('Bize yaz'),
+      ...cizimler,
+    };
+    // Kaynaktaki bas yorum (bakim notu) ciktiya gitmesin.
+    let govde = oku(en ? 'sayfalar/anasayfa.en.html' : 'sayfalar/anasayfa.html').replace(/^<!--[\s\S]*?-->\n/, '');
+    for (const [k, d] of Object.entries(yerine)) govde = govde.split(`__${k}__`).join(d);
+    return govde;
+  };
+  const anaGovde = anaSayfa('tr');
   const anaJs = oku('sayfalar/anasayfa.js.html').replace('__KANCA_HAVUZ__', JSON.stringify(havuz));
+  // E-posta yedegi acikken form metinleri yok; denetim yalnizca formla.
+  if (ILETISIM_HAZIR) {
+    enParcaDenetle([oku('sayfalar/iletisim-bolum.html'), formHtml, formJs, anaJs, oku('sayfalar/sss.html')]);
+  }
 
   // --- Kelimeler: gorseli olan kartlar (uygulamadaki set) ---
   const setKartlari = tumKartlar
@@ -439,7 +650,7 @@ async function derle(hedef) {
       ${kelimeAciklama(k)}
       <div class="cagri">
         <p>${k.en} ve ${setKartlari.length - 1} kelime daha uygulamada kancası ve görseliyle seni bekliyor.</p>
-        <a class="btn btn-lacivert" href="/ingilizce/" data-basla>Hemen başla</a>
+        <a class="btn btn-lacivert" href="/ingilizce/?basla=1" data-basla>Hemen başla</a>
       </div>
     </div>
   </div>
@@ -535,7 +746,7 @@ ${[...harfGruplari]
 ${y.govde}
 <div class="cagri yazi-alt">
   <p>Kancaları ve görselleriyle ilk kelimelerini şimdi öğren — ücretsiz.</p>
-  <a class="btn btn-lacivert" href="/ingilizce/" data-basla>Hemen başla</a>
+  <a class="btn btn-lacivert" href="/ingilizce/?basla=1" data-basla>Hemen başla</a>
 </div>
 <nav class="ilgili" aria-label="Diğer yazılar">
 ${digerleri.map((d) => `  <a href="/blog/${d.kisa}/">${d.baslik}</a>`).join('\n')}
@@ -623,6 +834,34 @@ ${yazilar
       ),
     },
     {
+      yol: '/en/',
+      dil: 'en',
+      baslik: 'Hafızada İngilizce — Learn English words without memorizing',
+      aciklama:
+        'Link every English word to a similar-sounding Turkish word and a single image. No rote learning, no ads, free.',
+      ogTur: 'website',
+      icerik: anaSayfa('en'),
+      script: ingilizceye(anaJs + formJs),
+      ld: jsonld(
+        {
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'Hafızada İngilizce',
+          url: `${ALAN}/en/`,
+          inLanguage: 'en',
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: SSS_EN.map(([s, c]) => ({
+            '@type': 'Question',
+            name: s,
+            acceptedAnswer: { '@type': 'Answer', text: c },
+          })),
+        },
+      ),
+    },
+    {
       yol: '/iletisim/',
       baslik: 'İletişim — Hafızada İngilizce',
       aciklama: 'Öneri, hata bildirimi ya da soru: Hafızada İngilizce ekibine yaz.',
@@ -650,6 +889,27 @@ ${yazilar
     ...blogSayfalari,
   ];
 
+  /**
+   * Kabugun dile bagli yerleri. Ingilizcesi yalnizca ana sayfada var: diger
+   * Turkce sayfalarda EN, Ingilizce ana sayfaya gidiyor ve hreflang yok
+   * (karsiligi olmayan sayfaya alternatif bildirmek Google'i yaniltir).
+   */
+  const dilYerleri = (dil, yol) => {
+    const en = dil === 'en';
+    const anaMi = yol === '/' || yol === '/en/';
+    const yerine = {
+      DIL: dil,
+      OG_LOCALE: en ? 'en_US' : 'tr_TR',
+      HREFLANG: anaMi ? HREFLANG : '',
+      DIL_SECICI: dilSecici(dil, en ? '/' : yol, '/en/'),
+      MENU: menuHtml(en ? MENU_EN : MENU, '      '),
+      OGREN_MENU: menuHtml(en ? OGREN_EN : OGREN, '      '),
+      YIL: String(new Date().getFullYear()),
+    };
+    for (const [k, d] of Object.entries(KABUK[dil])) yerine[`K_${k}`] = d;
+    return yerine;
+  };
+
   for (const s of sayfalar) {
     let html = kabuk;
     const yerine = {
@@ -660,11 +920,9 @@ ${yazilar
       OG_RESIM: s.resim ?? OG,
       SURUM: surum,
       JSONLD: s.ld,
-      MENU: menuHtml(MENU, '      '),
-      OGREN_MENU: menuHtml(OGREN, '      '),
       ICERIK: s.icerik,
       SCRIPT: s.script,
-      YIL: String(new Date().getFullYear()),
+      ...dilYerleri(s.dil ?? 'tr', s.yol),
     };
     for (const [k, d] of Object.entries(yerine)) html = html.split(`__${k}__`).join(d);
     const kalan = html.match(/__[A-Z_]+__/g);
@@ -682,11 +940,12 @@ ${yazilar
     OG_RESIM: OG,
     SURUM: surum,
     JSONLD: '<meta name="robots" content="noindex">',
-    MENU: menuHtml(MENU, '      '),
-    OGREN_MENU: menuHtml(OGREN, '      '),
+    ...dilYerleri('tr', '/'),
+    // 404'te dil secici ana sayfalara gitsin, hreflang olmasin.
+    HREFLANG: '',
     ICERIK:
       altBaslik('Sayfa bulunamadı', 'Aradığın sayfa taşınmış ya da hiç olmamış olabilir.', []) +
-      '<div class="kap"><div class="metin"><p><a href="/">Ana sayfaya dön</a> ya da <a href="/ingilizce/">hemen öğrenmeye başla</a>.</p></div></div>',
+      '<div class="kap"><div class="metin"><p><a href="/">Ana sayfaya dön</a> ya da <a href="/ingilizce/?basla=1">hemen öğrenmeye başla</a>.</p></div></div>',
     SCRIPT: '',
     YIL: String(new Date().getFullYear()),
   };

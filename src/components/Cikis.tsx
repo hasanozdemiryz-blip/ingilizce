@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { olay } from '../analitik';
 import { cikisVeTemizle } from '../senkron';
+import { karsilamaIzniniSil } from '../karsilama';
 import { Button, Card } from './ui';
 import { t } from '../dil';
 
@@ -30,7 +31,9 @@ export function CikisOnayi({ onKapat }: { onKapat: () => void }) {
       return;
     }
     olay('cikis_yapildi');
-    window.location.href = '/';
+    karsilamaIzniniSil();
+    // `replace`: tanitim sayfasindaki geri tusu bos uygulamaya donmesin
+    window.location.replace('/');
   }
 
   return (

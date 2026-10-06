@@ -92,7 +92,7 @@ export function GirisYapildi({
 
   return (
     <div
-      className="fixed inset-0 z-30 flex items-end justify-center bg-ink/45 px-5 pb-8 backdrop-blur-sm sm:items-center sm:pb-0"
+      className="fixed inset-0 z-30 flex items-start justify-center overflow-y-auto bg-ink/45 px-5 pt-[max(1.5rem,env(safe-area-inset-top))] pb-8 backdrop-blur-sm sm:items-center sm:pt-0 sm:pb-0"
       role="dialog"
       aria-modal="true"
       aria-label={t('Giriş yapıldı')}

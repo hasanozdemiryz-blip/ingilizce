@@ -2178,6 +2178,30 @@ pano ileride.
 **Site:** vitrin 20 kelime artık açık liste — set büyüdükçe kayıp
 Google'daki adresleri kırmasın.
 
+## 2026-10-07 — Telefon düzeltmeleri, favicon, İngilizce ana sayfa
+
+- **Snake karşılaması yalnızca "Hemen başla"ya** (`/ingilizce/?basla=1`,
+  `src/karsilama.ts`). Başka yoldan gelen başlamamış, girişsiz kullanıcı
+  tanıtım sayfasına `replace` ile gidiyor; çıkış/hesap silme de `replace`.
+  Geri/ileri gezintisi asla karşılama açmıyor. APK, ana ekran uygulaması
+  ve geliştirmede karşılama her zaman açık (tanıtım sayfası yok). Döngü
+  emniyeti: 5 sn içinde ikinci yönlendirme yapılmıyor. Ayarlar → Sıfırla
+  artık kullanıcıyı uygulamada tutuyor.
+- **Klavye:** `interactive-widget=resizes-content` artık global değil;
+  yalnızca `Runner` (ders/egzersiz) açıkken (`src/klavye.ts`). Yazı alanlı
+  pencereler (giriş, giriş yapıldı, hesap silme) telefonda üstte duruyor —
+  altta olunca klavye sayfayı yukarı itiyordu.
+- **"Giriş yapıldı" geri tuşunda tekrar çıkıyordu:** Google dönüşünde
+  depoda zaten oturum varsa yeni giriş sayılmıyor.
+- **Yükleme bildirimi kapalı** (`beforeinstallprompt` → `preventDefault`).
+- **Favicon seti:** `npm run icons` → `public/favicon.ico` (16/32/48) ve
+  `favicon-96x96.png`; site kökünde de `/favicon.ico`.
+- **İngilizce ana sayfa** `/en/` (`site/sayfalar/anasayfa.en.html`), üst
+  şeritte TR | EN seçici, ana sayfalarda `hreflang`. Kabuk metinleri
+  `KABUK` sözlüğünde, küçük parçalar `EN_PARCA`da (eşleşmezse derleme
+  durur). Seçici `hafizada-dil`i yazıyor — uygulama da o dilde açılıyor.
+  Diğer sayfalar yalnızca Türkçe. **Ana sayfa metni değişirse iki dosya.**
+
 ## Sırada
 
 ### Nerede duruyoruz (6 Ekim 2026)
