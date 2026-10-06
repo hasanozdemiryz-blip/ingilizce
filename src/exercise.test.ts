@@ -10,6 +10,7 @@ import {
   bolgelereBol,
   clampStep,
   harfKarolari,
+  kademeliKaristir,
   olculebilir,
   secenekler,
   shuffle,
@@ -227,5 +228,22 @@ describe('sirali blok dizilimi', () => {
     const b = bloklaraBol(gorevler);
     const sayi = b.reduce((n, x) => n + (x.tip === 'eslestirme' ? x.kartlar.length : 1), 0);
     expect(sayi).toBe(30);
+  });
+});
+
+describe('kademeliKaristir', () => {
+  const kart = (id: string) => ({ id }) as Card;
+  const gorevler = ['a', 'b', 'c'].flatMap((id) => [3, 4].map((step) => ({ card: kart(id), step: step as 3 | 4 })));
+  const sira = (liste: { card: Card; step: number }[]) => liste.map((g) => `${g.card.id}${g.step}`);
+
+  it('ayni gorevleri, kelime basina alt basamak once, turleri karistirarak dizer', () => {
+    const sonuc = kademeliKaristir(gorevler);
+    expect(sira(sonuc)).toEqual(['a3', 'b3', 'a4', 'c3', 'b4', 'c4']);
+  });
+
+  it('gorev sayisini degistirmez', () => {
+    const blok = ['a', 'b', 'c', 'd', 'e'].map((id) => ({ card: kart(id), step: 2 as const }));
+    expect(kademeliKaristir(blok)).toHaveLength(5);
+    expect(sira(kademeliKaristir(blok))).toEqual(sira(blok));
   });
 });
