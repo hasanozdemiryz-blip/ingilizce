@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { TAB_SPACE } from '../components/TabBar';
 import { Avatar } from '../components/Avatar';
-import { Button, Card, Ikon, Screen } from '../components/ui';
+import { Button, Card, Screen } from '../components/ui';
 import { CARDS, LIMIT_CHOICES } from '../content';
 import { olay, olcumHazirla, olcumVarMi, olcumuKapat } from '../analitik';
 import { exportProgress, importProgress, resetAll, setState, tercihKaydet } from '../db';
@@ -197,7 +197,7 @@ export function Settings({
               <>
                 <GirisRozeti uye={uye} />
                 <p className="text-sm text-ink-soft mt-1 mb-1">
-                  <b className="break-all">{uye.eposta}</b>{' '}{t('· İlerlemen hesabında saklanıyor.')}
+                  <b className="break-all">{uye.eposta}</b><br />{t('İlerlemen hesabında saklanıyor.')}
                 </p>
                 <div className="mb-3">
                   <Satir ad={t('Ad')} deger={uye.bilgi?.ad ?? '—'} />
@@ -239,7 +239,7 @@ export function Settings({
         <Card className="rise delay-1">
           <h2 className="text-sm font-bold text-ink-soft mb-1">{t('Günlük hedef')}</h2>
           <p className="text-sm text-ink-soft mb-3">
-            {t('Günde kaç yeni kelime öğrenmek istersin? Yeni kelimeler her gece 00:00\'da gelir.')}
+            {t('Yeni kelimeler her gün gece yarısı gelir.')}
           </p>
           <div className="flex gap-2">
             {LIMIT_CHOICES.map((n) => {
@@ -268,8 +268,7 @@ export function Settings({
               <div>
                 <p className="font-bold">{t('Telaffuz sesi')}</p>
                 <p className="text-sm text-ink-soft mt-0.5">
-                  {t('Cevap açılınca kendiliğinden çalsın. Kapalıyken')}{' '}
-                  <Ikon ad="ses" className="inline-block h-4 w-4 align-text-bottom" />{' '}{t('ile dinleyebilirsin.')}
+                  {t('Kelimeler kendiliğinden okunsun.')}
                 </p>
               </div>
               <button
@@ -590,7 +589,7 @@ export function Settings({
           <div className="rise w-full max-w-md rounded-card bg-white p-6 shadow-[var(--shadow-lift)]">
             <p className="word text-xl font-extrabold">{t('Her şey silinecek')}</p>
             <p className="text-sm text-ink-soft mt-2">
-              {t('Öğrendiğin {n} kelime, serin ve tüm geçmişin silinir. Bu geri alınamaz — önce yedek almak istersen şimdi iyi bir an.', { n: progress.length })}
+              {t('Öğrendiğin {n} kelime, serin ve tüm geçmişin silinir. Bu geri alınamaz. Yedek almak istersen önce onu yap.', { n: progress.length })}
             </p>
             <div className="mt-5 flex flex-col gap-2.5">
               <Button variant="brand" onClick={() => setSifirlaSoruluyor(false)}>

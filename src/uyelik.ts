@@ -367,7 +367,7 @@ function cevir(mesaj: string): string {
     return t('Çok fazla deneme oldu. Birkaç dakika sonra tekrar dene.');
   }
   if (m.includes('invalid login credentials')) {
-    return t('E-posta ya da şifre hatalı. Daha önce e-posta bağlantısıyla girdiysen şifren yok — "Şifremi unuttum" ile bir tane oluştur.');
+    return t('E-posta ya da şifre hatalı. Daha önce e-posta bağlantısıyla girdiysen şifren yok. "Şifremi unuttum" ile bir tane oluştur.');
   }
   if (m.includes('already registered') || m.includes('already exists')) {
     return t('Bu adres zaten kayıtlı. Giriş yapmayı dene.');

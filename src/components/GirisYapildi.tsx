@@ -119,7 +119,7 @@ export function GirisYapildi({
         {soralim && (
         <div className="mt-5 border-t border-line pt-4">
           <p className="text-sm font-bold text-ink">
-            {t('İstersen kendini tanıt')}{' '}<span className="font-semibold text-ink-faint">{t('· isteğe bağlı')}</span>
+            {t('İstersen kendini tanıt')}{' '}<span className="font-semibold text-ink-faint">{t('(isteğe bağlı)')}</span>
           </p>
           <label className="mt-3 block">
             <span className="text-xs font-bold uppercase tracking-wide text-ink-faint">{t('Adın')}</span>

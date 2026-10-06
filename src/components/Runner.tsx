@@ -259,7 +259,7 @@ export function Runner({
             */}
             {verdict.judgement === 'dogru' && hookRevealed && (
               <span className="text-sm text-ink-faint">
-                {t('kancayla bildin · bir dahakine kancasız dene')}
+                {t('Kancayla bildin. Bir dahakine kancasız dene.')}
               </span>
             )}
           </div>

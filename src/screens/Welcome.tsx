@@ -148,8 +148,8 @@ export function Welcome({
               </h1>
               <p className="text-ink-soft mt-3 leading-relaxed max-w-[28ch] mx-auto">
                 {dogru
-                  ? t('Kanca tuttu: {en} ≈ {hook}. Yöntem bu kadar.', { en: card.en, hook: card.hook })
-                  : t('Kanca birkaç tekrarda oturuyor: {en} ≈ {hook}. Acelesi yok.', { en: card.en, hook: card.hook })}
+                  ? t('Yöntem bu kadar.')
+                  : t('Kanca birkaç tekrarda oturur. Acelesi yok.')}
               </p>
               <div className="mt-6 inline-flex">
                 <HookChip big>

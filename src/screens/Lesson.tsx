@@ -401,7 +401,7 @@ export function Lesson({
       <div className="rise w-full max-w-md rounded-card bg-white p-6 shadow-[var(--shadow-lift)]">
         <p className="word text-xl font-extrabold">{t('Ders yarıda kalacak')}</p>
         <p className="text-sm text-ink-soft mt-2">
-          {t('Bu dersin {n} yeni kelimesi henüz kaydedilmedi. Şimdi çıkarsan hiçbiri öğrenilmiş sayılmaz ve ders bir dahakine baştan başlar.', { n: dersKartlari.length })}
+          {t('Çıkarsan bu dersin {n} yeni kelimesi kaydedilmez ve ders bir dahakine baştan başlar.', { n: dersKartlari.length })}
         </p>
         <div className="mt-5 flex flex-col gap-2.5">
           <Button variant="brand" onClick={() => setCikisSoruluyor(false)}>
