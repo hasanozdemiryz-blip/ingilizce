@@ -2202,6 +2202,41 @@ Google'daki adresleri kırmasın.
   durur). Seçici `hafizada-dil`i yazıyor — uygulama da o dilde açılıyor.
   Diğer sayfalar yalnızca Türkçe. **Ana sayfa metni değişirse iki dosya.**
 
+## 2026-10-07 (akşam) — UX incelemesi ve geliştirme turu
+
+Uygulama telefon boyutunda ilk açılıştan 2. güne denendi, rakipler
+incelendi; plan: https://claude.ai/artifact/KLeXfAaCkf2sZRUbSbiPTR.
+**Karar: ders içeriği kısaltılmıyor** (altı basamak, soru sayısı aynı);
+yalnızca gereksiz dokunuş ve ekranlar azaltıldı.
+
+Her madde **ayrı commit** — beğenilmeyen tek tek `git revert <commit>`:
+
+| Commit | Ne |
+|---|---|
+| `d525928` | Tanışma kartında kelime okunuyor + dinleme düğmesi |
+| `360b6ff` | Doğru cevapta 1,6 sn sonra kendiliğinden geçiş; yanlışta duruyor |
+| `db9f020` | Dersteki ara ekranlar (`Gecis`) ve "BÖLÜM 1/2" etiketi kalktı; tek ilerleme çubuğu |
+| `1612cdc` | Ana ekran: üyelik şeridi yok, ders kartında anlam yok, tekrarlı başlıklar düzeldi |
+| `3673588` | Üyelik davetleri tek metin (`DAVET_METNI`, ders sonu + Ayarlar) |
+| `64ee3cb` | Metin temizliği: "·" ve "—", uzun açıklamalar |
+| `123d9a8` | Öğrenme testinde soru türleri karışık sıra (`kademeliKaristir`) |
+| `dbca61b`, `e8619f1` | Ders sonu ekranı öğrenilen kelimeleri kancalarıyla gösteriyor |
+| `f5eb450` | Egzersiz: "Hızlı pratik" + 3 hazır seçenek, ayrıntı "Kendin seç" altında |
+| `5b1b607` | İlerleme: set çubuğu (X / 266), tek doğruluk satırı, sağlam kelimeler |
+| `cffa160` | Ayarlar: sık kullanılanlar üstte, yedek/ölçüm/sürüm "Gelişmiş" altında |
+| `7cf1e57` | Site: kahramanda mini ders, sarı şerit kalktı, tek slogan, "—" ayıklandı |
+
+**Bilerek yapılmayanlar:**
+- İlk derslere "en güçlü kancalar": `kart-inceleme.json`'a göre ilk 10
+  kelimenin 9'u zaten kalite 3 (yalnızca `salt` 2). İçerik sırasına
+  dokunulmadı.
+- İlerleme'ye takvim: ısı haritası daha önce bilinçli kaldırılmıştı
+  (bkz. `Progress.tsx` başı); yerine set çubuğu.
+- **Web'de hatırlatma bildirimi (Web Push) — kullanıcıyla yapılacak.**
+  Gerekenler: VAPID anahtar çifti (gizli anahtar Supabase sırrı olarak),
+  `bildirim_abonelik` tablosu, gönderen bir işlev ve zamanlayıcı
+  (pg_cron). Sırrı panele kullanıcı girmeli.
+
 ## Sırada
 
 ### Nerede duruyoruz (6 Ekim 2026)
