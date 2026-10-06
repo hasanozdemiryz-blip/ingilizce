@@ -12,13 +12,25 @@ import { t } from '../dil';
  * sorulmaz, not verilmez. Kancanin tutup tutmadigi hemen ardindaki
  * ogrenme testinde OLCULUR (bkz. scheduler.ts `learningCheck`) — once
  * kullaniciya soruluyordu ve bu bir beyandi.
+ *
+ * KELIME ILK GORULDUGU ANDA OKUNUYOR. Kanca bir ses benzerligi; onu kulakta
+ * kurmanin en iyi ani ilk tanisma. Once bu kart sessizdi ve telaffuz ancak
+ * cevaptan sonra duyuluyordu. `sesli` Ayarlar'daki "Telaffuz sesi" —
+ * kapaliyken yalnizca dugme var.
  */
-export function LearnFace({ card }: { card: Card }) {
+export function LearnFace({ card, sesli = false }: { card: Card; sesli?: boolean }) {
+  useEffect(() => {
+    if (sesli) seslendir(card.en);
+  }, [card.en, sesli]);
+
   return (
     <CardShell className="w-full">
       <CardVisual card={card} />
       <div className="flex flex-col items-center gap-3 pt-5">
-        <p className="word text-[2.75rem] leading-none font-extrabold">{card.en}</p>
+        <div className="flex items-center gap-3">
+          <p className="word text-[2.75rem] leading-none font-extrabold">{card.en}</p>
+          <SpeakButton word={card.en} size="small" />
+        </div>
         <p className="word text-xl leading-none font-semibold text-ink-soft">{card.tr}</p>
         <HookChip big>
           {card.en} ≈ {card.hook}

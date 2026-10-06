@@ -536,7 +536,7 @@ export function Lesson({
         </p>
 
         <div key={card.id} className="rise flex-1 flex flex-col justify-center py-6">
-          <LearnFace card={card} />
+          <LearnFace card={card} sesli={sound} />
         </div>
 
         {/*
