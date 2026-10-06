@@ -278,7 +278,7 @@ export const EN: Record<string, string> = {
   "Öğrendiğin {n} kelime, serin ve tüm geçmişin silinir. Bu geri alınamaz. Yedek almak istersen önce onu yap.": "Your {n} learned words, your streak and your whole history will be deleted. This can't be undone. If you want a backup, make one first.",
   "Evet, sıfırla": "Yes, reset",
   "Hafızada İngilizce yedeği": "Hafızada İngilizce backup",
-  "Ezberlemeyeceksin.": "No memorising.",
+  "Ezberleme. Bağla.": "Don't memorize. Connect.",
   "Her İngilizce kelimeyi benzer sesli bir Türkçe kelimeye bağlayacaksın.": "You'll link every English word to a similar-sounding Turkish word.",
   "Kart kayboldu. Sende ne kaldı?": "The card is gone. What stuck?",
   "ne demekti?": "what did it mean?",

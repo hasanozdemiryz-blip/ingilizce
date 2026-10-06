@@ -2,7 +2,77 @@
 
 <script>
 (function () {
-  // --- Kahraman slider: kullanim anlari ---
+  // --- Mini ders: uc kart, sonra ilk kartin sorusu (bkz. tools/site.mjs) ---
+  var deneme = document.getElementById('deneme');
+  var ic = document.getElementById('deneme-ic');
+  if (deneme && ic) {
+    var v;
+    try { v = JSON.parse(deneme.getAttribute('data-veri')); } catch (e) { v = null; }
+    if (v) {
+      var m = v.m;
+      var yaz = function (s, d) {
+        return s.replace(/\{(\w+)\}/g, function (_, k) { return d[k] == null ? '' : d[k]; });
+      };
+      var kac = function (s) {
+        return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      };
+      var noktaHtml = function (n) {
+        var h = '';
+        for (var i = 0; i <= v.kartlar.length; i++) h += '<span' + (i <= n ? ' class="dolu"' : '') + '></span>';
+        return '<div class="adim-nokta">' + h + '</div>';
+      };
+      var kart = function (i) {
+        var k = v.kartlar[i];
+        var son = i === v.kartlar.length - 1;
+        ic.innerHTML =
+          '<div class="resim"><img src="' + k.img + '" alt="' + kac(k.sentence) + '" width="520" height="390"></div>' +
+          '<div class="govde"><div class="satir"><span class="en">' + kac(k.en) + '</span><span class="tr">' + kac(k.tr) +
+          '</span><span class="kanca-rozet">' + kac(k.en) + ' ≈ ' + kac(k.hook) + '</span></div>' +
+          '<p class="cumle">“' + kac(k.sentence) + '”</p>' +
+          '<div class="alt-satir">' + noktaHtml(i) + '<button class="btn btn-sari" type="button" data-ileri>' +
+          (son ? m.simdiSen : m.sonraki) + '</button></div></div>';
+        ic.querySelector('[data-ileri]').addEventListener('click', function () {
+          if (son) soru(); else kart(i + 1);
+        });
+      };
+      var soru = function () {
+        var k = v.kartlar[0];
+        var html = '<div class="soru"><p>' + kac(m.kayboldu) + '</p><h3>' + kac(yaz(m.soru, k)) + '</h3><div class="secenekler">';
+        v.secenekler.forEach(function (s) {
+          html += '<button class="secenek" type="button">' + kac(s) + '</button>';
+        });
+        html += '</div><div class="sonuc gizli"></div></div>';
+        ic.innerHTML = html;
+        var dugmeler = ic.querySelectorAll('.secenek');
+        dugmeler.forEach(function (b) {
+          b.addEventListener('click', function () {
+            var dogruMu = b.textContent === v.dogru;
+            dugmeler.forEach(function (x) {
+              x.disabled = true;
+              if (x.textContent === v.dogru) x.classList.add('dogru');
+            });
+            if (!dogruMu) b.classList.add('yanlis');
+            var sonuc = ic.querySelector('.sonuc');
+            sonuc.innerHTML =
+              '<b>' + kac(dogruMu ? m.dogruBaslik : yaz(m.yanlisBaslik, k)) + '</b>' +
+              '<span>' + kac(dogruMu ? m.dogruMetin : yaz(m.yanlisMetin, k)) + '</span><br>' +
+              '<a class="btn btn-lacivert" href="/ingilizce/?basla=1" data-basla>' + kac(m.devam) + '</a>';
+            sonuc.classList.remove('gizli');
+            // Ingilizce sayfadan gelen uygulamayi Ingilizce acsin (bkz. kabuk.html)
+            if (document.documentElement.lang === 'en') {
+              sonuc.querySelector('[data-basla]').addEventListener('click', function () {
+                try { localStorage.setItem('hafizada-dil', 'en'); } catch (e) {}
+              });
+            }
+          });
+        });
+      };
+      var ilk = ic.querySelector('[data-ileri]');
+      if (ilk) ilk.addEventListener('click', function () { kart(1); });
+    }
+  }
+
+  // --- Slider: gunun anlari ---
   var ray = document.getElementById('ray');
   var noktalar = document.getElementById('noktalar');
   if (ray) {

@@ -73,7 +73,7 @@ export function Welcome({
         <Atla onClick={atla} />
         <div className="flex-1 flex flex-col justify-center gap-6 py-6">
           <div className="rise text-center">
-            <h1 className="word text-3xl font-extrabold leading-tight">{t('Ezberlemeyeceksin.')}</h1>
+            <h1 className="word text-3xl font-extrabold leading-tight">{t('Ezberleme. Bağla.')}</h1>
             <p className="text-ink-soft mt-2 leading-relaxed max-w-[30ch] mx-auto">
               {t('Her İngilizce kelimeyi benzer sesli bir Türkçe kelimeye bağlayacaksın.')}
             </p>

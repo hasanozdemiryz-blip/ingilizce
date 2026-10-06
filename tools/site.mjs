@@ -71,10 +71,9 @@ const OGREN_EN = [
   ['/blog/', 'Blog (Turkish)'],
 ];
 
-/** Kabugun (ust serit, menu, footer) metinleri — `__K_<AD>__`. */
+/** Kabugun (ust menu, footer) metinleri — `__K_<AD>__`. */
 const KABUK = {
   tr: {
-    UCRETSIZ: 'Ücretsiz',
     GIRIS: 'Giriş yap',
     ANA: '/',
     ANA_ARIA: 'Hafızada İngilizce ana sayfa',
@@ -96,7 +95,6 @@ const KABUK = {
     ALT_SLOGAN: 'Ücretsiz · Reklamsız · Telefonda ve bilgisayarda',
   },
   en: {
-    UCRETSIZ: 'Free',
     GIRIS: 'Log in',
     ANA: '/en/',
     ANA_ARIA: 'Hafızada İngilizce home',
@@ -123,7 +121,7 @@ const DUNYA =
   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19"/><path d="M12 2.5c2.6 2.7 3.9 5.9 3.9 9.5s-1.3 6.8-3.9 9.5c-2.6-2.7-3.9-5.9-3.9-9.5s1.3-6.8 3.9-9.5z"/></svg>';
 
 /**
- * Dil secici (ust serit). Ingilizcesi olmayan Turkce sayfada EN, Ingilizce
+ * Dil secici (lacivert menu; telefonda acilir menude). Ingilizcesi olmayan Turkce sayfada EN, Ingilizce
  * ana sayfaya gidiyor. Tiklaninca secim uygulamaya da yaziliyor (kabuk.html).
  */
 function dilSecici(dil, trYol, enYol) {
@@ -194,7 +192,7 @@ const SSS_EN = [
   ],
   [
     'Can I learn pronunciation too?',
-    'Yes. The hook reminds you of the meaning, not the pronunciation, so you hear the correct sound of every word — and in the last step you recognize the word by sound alone.',
+    'Yes. The hook reminds you of the meaning, not the pronunciation, so you hear the correct sound of every word, and in the last step you recognize the word by sound alone.',
   ],
   [
     'How much time should I spend a day?',
@@ -210,8 +208,8 @@ const SSS_EN = [
 const KISILER = [
   { dosya: 'otobus', an: 'Otobüste dört dakika', sure: 'Bir durak arası beş kelime',
     en: { an: 'Four minutes on the bus', sure: 'Five words between two stops' } },
-  { dosya: 'kahve', an: 'Kahve molasında', sure: 'Ezber yok — bağlıyorsun, kalıyor',
-    en: { an: 'On a coffee break', sure: 'No memorizing — you link it, it stays' } },
+  { dosya: 'kahve', an: 'Kahve molasında', sure: 'Ezber yok. Bağlıyorsun, kalıyor.',
+    en: { an: 'On a coffee break', sure: 'No memorizing. You link it, it stays.' } },
   { dosya: 'ogrenci', an: 'Sırada beklerken', sure: 'Telefon açık, kanca hazır',
     en: { an: 'Waiting in line', sure: 'Phone out, hook ready' } },
   { dosya: 'kanepe', an: 'Akşam kanepede', sure: 'Günlük hedef dolunca gün kapanıyor',
@@ -243,6 +241,35 @@ const VITRIN = ['far', 'sell', 'door', 'salt', 'dust', 'sick', 'bad', 'car', 'ey
  * derleme bu durumda durur (bkz. `derle`).
  */
 const HAVUZ = ['sell', 'door', 'bad', 'car', 'dust', 'dark', 'salt', 'sick', 'fish'];
+
+/** Ana sayfadaki mini ders: uc kart, sonra ILKININ sorusu. Havuzdan. */
+const DENEME = ['sell', 'car', 'fish'];
+const DENEME_METIN = {
+  tr: {
+    etiket: 'Kendin dene',
+    sonraki: 'Sonraki',
+    simdiSen: 'Şimdi sen',
+    kayboldu: 'Kart kayboldu.',
+    soru: '{en} ne demekti?',
+    dogruBaslik: 'Hatırladın.',
+    dogruMetin: 'Ezberlemedin, bağladın. Uygulamada her gün yeni kelimeler böyle geliyor.',
+    yanlisBaslik: 'Doğrusu: {tr}',
+    yanlisMetin: 'Kanca: {en} ≈ {hook}. Birkaç tekrarda oturuyor.',
+    devam: 'Devam et',
+  },
+  en: {
+    etiket: 'Try it',
+    sonraki: 'Next',
+    simdiSen: 'Your turn',
+    kayboldu: 'The card is gone.',
+    soru: 'What did {en} mean?',
+    dogruBaslik: 'You remembered.',
+    dogruMetin: 'No memorizing, just a link. The app brings new words like this every day.',
+    yanlisBaslik: 'It means: {tr}',
+    yanlisMetin: 'Hook: {en} ≈ {hook}. It settles in after a few reviews.',
+    devam: 'Keep going',
+  },
+};
 const GORUNEN = 3;
 
 /** Bolum cizimleri: brand/anasayfa/<ad>.png */
@@ -589,9 +616,47 @@ async function derle(hedef) {
   );
 
   /** Ana sayfa govdesi; Ingilizcesi ayni parcalardan, kendi dosyasiyla. */
+  /**
+   * MINI DERS — kahramanda, sitenin icinde. Ana sayfada uygulamanin tek bir
+   * ekrani yoktu; ziyaretci yontemi okuyordu ama yasamiyordu. Uc kart,
+   * ardindan ilk kartin sorusu: "haa, hatirladim" ani sitede yasaniyor.
+   * Ilk kart sunucuda cizili (sayfa betik olmadan da tam); gerisini
+   * anasayfa.js.html suruyor.
+   */
+  const denemeKartlari = DENEME.map((id) => {
+    const k = havuz.find((x) => x.en === id);
+    if (!k) throw new Error(`mini ders kelimesi kanca havuzunda yok: ${id}`);
+    return k;
+  });
+  const deneme = (dil) => {
+    const m = DENEME_METIN[dil];
+    const [ilk, ikinci, ucuncu] = denemeKartlari;
+    const veri = {
+      kartlar: denemeKartlari,
+      secenekler: [ikinci.tr, ilk.tr, ilk.hook, ucuncu.tr],
+      dogru: ilk.tr,
+      m,
+    };
+    const noktalar = denemeKartlari
+      .map((_, i) => `<span${i === 0 ? ' class="dolu"' : ''}></span>`)
+      .join('') + '<span></span>';
+    return `<div class="deneme" id="deneme" data-veri="${esc(JSON.stringify(veri))}">
+      <span class="etiket">${m.etiket}</span>
+      <div class="cerceve" id="deneme-ic">
+        <div class="resim"><img src="${ilk.img}" alt="${esc(ilk.sentence)}" width="520" height="390"></div>
+        <div class="govde">
+          <div class="satir"><span class="en">${ilk.en}</span><span class="tr">${esc(ilk.tr)}</span><span class="kanca-rozet">${ilk.en} ≈ ${esc(ilk.hook)}</span></div>
+          <p class="cumle">“${esc(ilk.sentence)}”</p>
+          <div class="alt-satir"><div class="adim-nokta">${noktalar}</div><button class="btn btn-sari" type="button" data-ileri>${m.sonraki}</button></div>
+        </div>
+      </div>
+    </div>`;
+  };
+
   const anaSayfa = (dil) => {
     const en = dil === 'en';
     const yerine = {
+      DENEME: deneme(dil),
       KISILER: kisiler(dil).join(''),
       KANCA_KARTLARI: havuz
         .slice(0, GORUNEN)
@@ -759,7 +824,7 @@ ${[...harfGruplari]
 <p class="ustbilgi">${new Date(y.tarih).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' })} · Hafızada İngilizce</p>
 ${y.govde}
 <div class="cagri yazi-alt">
-  <p>Kancaları ve görselleriyle ilk kelimelerini şimdi öğren — ücretsiz.</p>
+  <p>Kancaları ve görselleriyle ilk kelimelerini şimdi öğren. Ücretsiz.</p>
   <a class="btn btn-lacivert" href="/ingilizce/?basla=1" data-basla>Hemen başla</a>
 </div>
 <nav class="ilgili" aria-label="Diğer yazılar">

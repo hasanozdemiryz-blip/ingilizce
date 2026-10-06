@@ -41,20 +41,23 @@ h1,h2,h3,h4 { font-family: var(--d); margin: 0; letter-spacing: -.01em; line-hei
 .kap { width: 100%; max-width: 1140px; margin: 0 auto; padding-inline: 20px; }
 
 /* ---------- ÜST ---------- */
-.serit { background: var(--sari); color: var(--lacivert); font-family: var(--d); font-weight: 800; font-size: .82rem; }
-.serit .kap { display: flex; justify-content: flex-end; align-items: center; gap: 16px; padding-block: 8px; }
-.serit a { border: 2px solid var(--lacivert); border-radius: 10px; padding: 4px 16px; background: var(--krem); }
 /*
- * Dil secici: seridin solunda, iki parcali tek kutu. Bayrak yok — dil bir
- * ulke degil. Etiketler kisaltma (TR/EN), tam adi `title`da.
+ * Dil secici ve giris LACIVERT MENUDE. Once ustte sari bir serit vardi:
+ * yalnizca dil, "Ucretsiz" yazisi ve giris; iki serit ekranin ustunden
+ * 100 piksel aliyordu. Telefonda ikisi de acilir menude.
  */
-.serit .dil { margin-right: auto; display: inline-flex; align-items: center; gap: 8px; }
-.serit .dil svg { width: 17px; height: 17px; flex: none; }
-.serit .dil-kutu { display: inline-flex; border: 2px solid var(--lacivert); border-radius: 10px; overflow: hidden; background: var(--krem); }
-.serit .dil-kutu a { border: 0; border-radius: 0; background: none; padding: 3px 11px; letter-spacing: .08em; line-height: 1.5; }
-.serit .dil-kutu a + a { border-left: 2px solid var(--lacivert); }
-.serit .dil-kutu a[aria-current="true"] { background: var(--lacivert); color: var(--sari); }
-.serit .dil-kutu a:not([aria-current="true"]):hover { background: var(--krem-2); }
+.dil { display: inline-flex; align-items: center; gap: 8px; color: #cbd5e5; }
+.dil svg { width: 17px; height: 17px; flex: none; }
+.dil-kutu { display: inline-flex; border: 2px solid #3a4b68; border-radius: 10px; overflow: hidden; font-family: var(--d); font-weight: 800; font-size: .8rem; }
+.dil-kutu a { padding: 3px 10px; letter-spacing: .08em; line-height: 1.5; color: #cbd5e5; }
+.dil-kutu a + a { border-left: 2px solid #3a4b68; }
+.dil-kutu a[aria-current="true"] { background: var(--sari); color: var(--lacivert); }
+.dil-kutu a:not([aria-current="true"]):hover { color: #fff; }
+.ust-sag { margin-left: auto; display: flex; align-items: center; gap: 16px; }
+.ust-giris { font-family: var(--d); font-weight: 800; font-size: .94rem; color: #cbd5e5; }
+.ust-giris:hover { color: #fff; }
+.mobil-menu .dil { padding: 14px 20px; }
+.mobil-menu .dil-kutu a { display: inline-block; padding: 3px 12px; border-bottom: 0; }
 
 header { background: var(--lacivert); position: sticky; top: 0; z-index: 40; }
 header .kap { display: flex; align-items: center; gap: 18px; padding-block: 12px; }
@@ -64,7 +67,6 @@ header .kap { display: flex; align-items: center; gap: 18px; padding-block: 12px
 .marka .alt { display: block; font-size: .6rem; font-weight: 800; letter-spacing: .34em; color: #8795ae; text-transform: uppercase; margin-top: -2px; line-height: 1; }
 nav.baglar { display: flex; gap: 22px; margin-left: 14px; font-weight: 700; font-size: .94rem; color: #cbd5e5; }
 nav.baglar a:hover { color: #fff; }
-.ust-cta { margin-left: auto; }
 
 .btn { display: inline-block; font-family: var(--d); font-weight: 800; border-radius: 14px; border: 2px solid var(--lacivert); box-shadow: var(--sert-k); padding: 12px 26px; font-size: .98rem; transition: transform .08s, box-shadow .08s; cursor: pointer; }
 .btn:active { transform: translate(3px,3px); box-shadow: 0 0 0 var(--lacivert); }
@@ -87,7 +89,40 @@ nav.baglar a:hover { color: #fff; }
 .kanitlar span { display: flex; align-items: center; gap: 7px; }
 .kanitlar b { font-family: var(--d); color: var(--lacivert); }
 
-/* ---------- SLIDER ---------- */
+/* ---------- MINI DERS (kahramanda) ---------- */
+.deneme { position: relative; min-width: 0; }
+.deneme .cerceve { border: 2px solid var(--lacivert); border-radius: 16px; background: var(--beyaz); box-shadow: var(--sert); overflow: hidden; }
+.deneme .etiket { position: absolute; top: -16px; left: 16px; background: var(--lacivert); color: var(--sari); font-family: var(--d); font-weight: 800; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; padding: 7px 16px; border-radius: 999px; z-index: 2; }
+.deneme .resim { aspect-ratio: 4/3; overflow: hidden; background: var(--krem-2); }
+.deneme .resim img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.deneme .govde { border-top: 2px solid var(--lacivert); padding: 14px 18px 16px; }
+.deneme .satir { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.deneme .en { font-family: var(--d); font-weight: 800; font-size: 1.7rem; line-height: 1.1; }
+.deneme .tr { color: var(--soft); font-weight: 700; }
+.deneme .cumle { margin: 6px 0 0; font-size: .92rem; color: var(--soft); font-style: italic; }
+.deneme .alt-satir { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 14px; }
+.deneme .adim-nokta { display: flex; gap: 7px; }
+.deneme .adim-nokta span { width: 9px; height: 9px; border-radius: 50%; border: 2px solid var(--lacivert); background: var(--beyaz); }
+.deneme .adim-nokta span.dolu { background: var(--sari); }
+.deneme .btn { padding: 10px 20px; }
+.deneme .soru { padding: 26px 18px 18px; }
+.deneme .soru p { margin: 0; color: var(--soft); font-weight: 700; }
+.deneme .soru h3 { font-size: 1.9rem; font-weight: 800; margin-top: 6px; }
+.deneme .secenekler { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+.deneme .secenek { font: 800 1rem var(--d); color: var(--lacivert); background: var(--krem); border: 2px solid var(--lacivert); border-radius: 12px; padding: 13px 10px; cursor: pointer; box-shadow: var(--sert-k); }
+.deneme .secenek:disabled { cursor: default; }
+.deneme .secenek.dogru { background: var(--nane); color: var(--beyaz); }
+.deneme .secenek.yanlis { background: #f4c3d9; }
+.deneme .sonuc { margin-top: 16px; }
+.deneme .sonuc b { font-family: var(--d); font-size: 1.2rem; display: block; }
+.deneme .sonuc .btn { margin-top: 12px; }
+.deneme .gizli { display: none; }
+
+/* ---------- SLIDER (gunun anlari) ---------- */
+.anlar { padding-block: 56px 10px; }
+.anlar h2 { font-size: clamp(1.8rem,4.4vw,2.7rem); font-weight: 700; text-align: center; }
+.anlar .ust { text-align: center; color: var(--soft); margin: 10px auto 0; max-width: 54ch; }
+.anlar .gosteri { max-width: 720px; margin: 32px auto 0; }
 .gosteri { position: relative; min-width: 0; }
 .gosteri .cerceve { border: 2px solid var(--lacivert); border-radius: 16px; background: var(--beyaz); box-shadow: var(--sert); overflow: hidden; }
 .ray { display: flex; transition: transform .45s cubic-bezier(.4,0,.2,1); }
@@ -234,6 +269,8 @@ footer a:hover { color: #fff; }
 
 @media (max-width: 860px) {
   .menu-dugme { display: inline-block; }
+  .ust-sag .dil, .ust-sag .ust-giris { display: none; }
+  .ust-sag { gap: 10px; }
   header .kap { gap: 10px; }
   .ust-cta .btn { padding: 8px 14px; font-size: .9rem; }
   .alt-izgara { grid-template-columns: 1fr 1fr; }
