@@ -2144,7 +2144,7 @@ uğraş"); anahtar eklenmedi, mesajlar Table Editor → `iletisim`te okunuyor
 İleride bildirim istenirse yalnızca sır eklemek yetiyor, kod hazır. Gönderen
 `iletisim@hafizada.com` — giriş postaları da Resend'de aynı alan adından.
 
-## 2026-10-06 — Kart incelemesi ve 100 yeni görsel (set 200)
+## 2026-10-06 — Kart incelemesi ve 166 yeni görsel (set 266)
 
 **İnceleme** (`kart-inceleme.xlsx`, kaynak `tools/kart-inceleme.json`): 300
 kartın her biri tür (G gerçek ses kancası 134 / O tanıdık-ödünç 132 / Y
@@ -2161,13 +2161,17 @@ resmeder. Dersler reçetede.
 **görsel** belirliyor. 32 kurtarılabilir kart incelemede "kalsın" çıktı
 (key ≈ keyif, arm ≈ armut) ve görselleriyle sete girdi.
 
-**Ikinci parti (ayni gun):** kalan 66 hazir kart da uretildi (+2 yeniden:
-net ustten kesik, week cok kucuk), ~5.100 kredi. Set **266**. Gorseli
-olmayan 34 kartin hepsi "duzelt" ya da kalite 1 — kanca netlesince.
-Zayif kalanlar: `draft` (taslak yerine renkli ev cizdi), `valve` (boru
-kenardan kenara). Istenirse yenilenir.
+**İkinci parti (aynı gün):** kalan 66 hazır kart da üretildi (+2 yeniden:
+`net` üstten kesik, `week` çok küçük), 5.100 kredi (bakiye 5.460 düştü;
+360'ın kaynağı bilinmiyor). Set **266**. Görseli olmayan 34 kartın hepsi
+"düzelt" ya da kalite 1 — kanca netleşince. Zayıf kalanlar: `draft`
+(taslak yerine renkli ev çizdi), `valve` (boru kenardan kenara); istenirse
+yenilenir (150 kredi). Magnific bakiyesi 6 Ekim sonunda 146.052.
 
-**Kanca panosu** en fazla 104 kanca çiziyor; set 200 olunca tamamı
+İndirme ve inceleme ızgarası artık depoda: `tools/gorsel-indir.sh`,
+`tools/gorsel-izgara.mjs`; adım adım akış `tools/gorsel-recetesi.md`'de.
+
+**Kanca panosu** en fazla 104 kanca çiziyor; set 104'ü geçince tamamı
 sığmıyor. Başlık/paylaşım metni çizilen sayıyı yazıyor (yalan yok). Çoklu
 pano ileride.
 
@@ -2176,7 +2180,39 @@ Google'daki adresleri kırmasın.
 
 ## Sırada
 
-### Nerede duruyoruz (4 Ekim 2026)
+### Nerede duruyoruz (6 Ekim 2026)
+
+**Hepsi yayında**, iki depo da temiz ve push'lu. 266 test, tip denetimi ve
+derleme temiz.
+
+| | |
+|---|---|
+| Kart seti | ✅ **266 / 300** görselli kart (6 Ekim'de 100 → 266) |
+| Kart incelemesi | ✅ `kart-inceleme.xlsx` — 300 kartın türü, kalitesi, kategorisi, önerilen kararı |
+| Site | ✅ `hafizada.com`: SSS, blog (6 yazı), 20 kelime sayfası, yasal sayfalar, iletişim formu |
+| Arayüz dili | ✅ Türkçe / İngilizce |
+| Üyelik | ✅ e-posta + Google, senkron, profil anında kaydediliyor |
+| Search Console | ✅ doğrulandı, site haritası gönderildi |
+
+**Sıradaki iş — kelime havuzu:**
+
+1. **Kullanıcı `kart-inceleme.xlsx`'e bakacak:** 38 "Düzelt" kartı (sarı)
+   ve yeni kanca önerileri; "SENİN KARARIN" sütunu. Onaylananlar
+   `kart-havuzu-300.xlsx`'e işlenir (`node tools/import-xlsx.mjs` →
+   `content/cards.json`),
+   sonra o kartların görselleri üretilir → set 300.
+2. **Kategoriler:** incelemede her kartın kategorisi var (18 kategori,
+   `tools/kart-inceleme.mjs` → `KATEGORI`). Uygulamada nasıl kullanılacağı
+   konuşulmadı (konuya göre ders? filtre? rozet?).
+3. **Havuzu 300'ün üstüne çıkarmak:** iki parçalı / iki kelimelik kancalar,
+   "kolay katman" (tanıdık/ödünç kelimeler ayrı bir seviye), aday üretim
+   hattı (aşağıda 6).
+4. **Kanca panosu 104'te kesiliyor** — set 266; çoklu pano ya da sayfalama.
+5. Zayıf iki görsel: `draft`, `valve` (isteğe bağlı).
+6. Sunucuda en kısa şifre 6 → 8 önerisi, **kullanıcı cevabı bekleniyor**.
+7. ~15 Kasım: Search Console verisine bakıp kelime sayfası kararı.
+
+### Nerede duruyorduk (4 Ekim 2026)
 
 **Web yayında.** `https://hafizada.com` ve `https://hafizada.com/ingilizce/`
 — HTTPS açık ve zorunlu. 257 test, tip denetimi ve derleme temiz.
@@ -2256,7 +2292,7 @@ Test adresi bende yok, Resend'in gönderdiği postayı göremiyorum.
 6. **Kanca aday üretim hattı** — havuzu ~600'e çıkaran tek kaldıraç.
    CMU fonetik sözlüğü + Türkçe kelime listesi + fonem mesafesi → sıralı
    aday listesi. "Haa testi" insanda kalır; moat orası.
-7. Kalan 200 kartın görseli.
+7. ~~Kalan 200 kartın görseli.~~ 6 Ekim: 266'sı tamam, kalan 34 kanca kararına bağlı.
 8. **Drive'a yedek — ikinci aşama.** Aşama 1 (paylaş menüsü) yapıldı.
    Senkron geldiği için aciliyeti düştü; yedek yine de duruyor ve
    öneriliyor (senkron hesaba bağlı, yedek değil).
@@ -2300,5 +2336,20 @@ cd ingilizce && npm install && npm run dev
   silinmemeli), `https://hafizada.com/sitemap.xml` gönderildi.
 - ~15 Kasım: Search Console verisine bakıp kelime sayfalarını (şu an en sık
   20) genişletme kararı.
+
+**Kart görseli üretmek (yeni makinede):** Claude'da Magnific bağlayıcısı
+açık olmalı (claude.ai hesabına bağlı, makineye değil). Reçete, seed, stil
+referansı ve adım adım akış `tools/gorsel-recetesi.md`'de; sahneler
+`tools/gorsel-sahneleri.json`'da. `gorseller/` klasörü depoda yok — yeni
+makinede boş başlar, yalnızca yeni kartlar için gerekir. Mevcut 266 görsel
+depoda (`src/assets/cards/*.webp`).
+
+**Kart incelemesi:** kaynak `tools/kart-inceleme.json` (kart → `tür|kalite|kategori|karar|not`);
+`node tools/kart-inceleme.mjs` hem `kart-inceleme.xlsx`'i hem
+`tools/gorsel-sirasi.json`'u yeniden üretir. Excel'e elle yazılan "SENİN
+KARARIN" sütunu bu komutla **silinir** — önce kararları işle.
+
+**Claude'a ilk mesaj önerisi:** "NOTLAR.md'nin Sırada bölümünü ve
+tools/gorsel-recetesi.md'yi oku, kaldığımız yerden devam edelim."
 
 Yayın adımlarının tamamı `YAYIN.md`'de.

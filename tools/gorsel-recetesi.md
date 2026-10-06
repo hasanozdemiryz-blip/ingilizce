@@ -8,7 +8,7 @@ Tutarlılığın tek kaynağı bu dosya. Üç kaldıraç birden gerekir; biri de
 | Model | `imagen-nano-banana-2` (Google Nano Banana Pro) |
 | Seed | `20260918` — **değiştirme** |
 | Oran | `4:3` (1024×768) |
-| Sahneler | `tools/gorsel-sahneleri.json` (6 Ekim partisi, 100 kart) |
+| Sahneler | `tools/gorsel-sahneleri.json` — kart → [sahne, zemin tonu] (6 Ekim: 166 kart) |
 | Stil referansı | ilk `snake` kartı, creation `VXEgEPIMMU` |
 | Maliyet | 75 kredi/görsel |
 
@@ -22,32 +22,35 @@ Her kart yalnızca **ilk satırı** ve **arka plan tonunu** değiştirir. Gerisi
 kelimesi kelimesine aynı kalır.
 
 ```
-<SAHNE — tek cümle>
+<SAHNE — tek cümle; insan varsa yüzünü ve "full body including both feet
+with empty space below them" yaz>
 
-Copy the reference image's drawing style exactly.
+Copy only the drawing style of the reference image (line weight, flat colours), NOT its subject.
 
-COMPOSITION: the subject occupies about 75% of the frame height, fully visible,
-with an even margin of empty background on all four sides — nothing touches or
-crosses the frame edge. Seen straight on, flat, not in perspective. Centred.
+COMPOSITION: the subject occupies about 65% of the frame height, fully visible, with a WIDE even margin of empty background on all four sides — nothing touches or comes near the frame edge. Seen straight on, flat, not in perspective. Centred.
 
-NO white outline around the subject. NO sticker border, NO die-cut edge, NO
-cut-out effect. The artwork sits directly on the flat background.
+NO white outline around the subject. NO sticker border, NO die-cut edge, NO cut-out effect. The artwork sits directly on the flat background.
 
-ABSOLUTELY FLAT colour fills. NO gloss, NO shine, NO metallic sheen, NO specular
-highlights, NO reflections, NO gradients, NO soft shading, NO texture, NO drop
-shadow, NO ground shadow, NO ambient occlusion, NO 3D depth. Each object is a
-base colour plus at most one slightly lighter flat tone.
+ABSOLUTELY FLAT colour fills. NO gloss, NO shine, NO metallic sheen, NO specular highlights, NO reflections, NO gradients, NO soft shading, NO texture, NO drop shadow, NO ground shadow, NO shadow under feet or objects, NO ambient occlusion, NO 3D depth. Each object is a base colour plus at most one slightly lighter flat tone.
 
-Every shape outlined with a confident medium-thick, evenly rounded stroke in a
-darker tone of its own fill colour, the same weight as the reference.
+Every shape outlined with a confident medium-thick, evenly rounded stroke in a darker tone of its own fill colour, the same weight as the reference.
 
-BACKGROUND: one single very pale washed-out <TON> tint, extremely light, close
-to white. Completely empty — no scene, no props, no horizon, no pattern.
+BACKGROUND: one single very pale washed-out <TON> tint, extremely light, close to white. Completely empty — no scene, no props, no horizon, no pattern.
 
 Inanimate objects have NO faces, NO eyes, NO mouths, NO limbs.
 
 No text, no letters, no numbers, no logos anywhere in the image.
 ```
+
+Tonlar: `cream`, `mint`, `green`, `sky-blue`, `lavender`, `pink`, `peach`,
+`yellow`. İnsan sahnesinde "Inanimate objects…" satırı çıkarılır (yüzü de
+siliyor). Etiketli nesnede (kitap, torba, takvim) sona `The … is blank.`
+eklenir; sayı çıkabilecekse `no digits` da.
+
+> 6 Ekim öncesi iskelette özne %75'ti ve "Copy the reference image's drawing
+> style exactly" yazıyordu. İlki ayakları kesti, ikincisi nesne sahnelerinde
+> referanstaki yılanı kopyaladı. Eski 100 kart o iskeletle; fark gözle
+> görülmüyor.
 
 ### Duruma göre eklenen bloklar
 
@@ -92,3 +95,28 @@ gerekmez, dosyayı koyman yeter. Kart kendiliğinden sete girer.
 > exFAT tuzağı: `gorseller/` içine kopyalarken macOS `._*` gölgeleri bırakıyor,
 > importer bunları "tanınmayan kart id'si" diye uyarıyor.
 > `find . -name '._*' -delete`
+
+## İş akışı (bir parti)
+
+Üretim Claude'un Magnific bağlantısıyla yapılıyor (claude.ai → Ayarlar →
+Bağlayıcılar → Magnific). Her parti **kullanıcı onayıyla**, adet ve kredi
+söylenerek.
+
+1. `node tools/kart-inceleme.mjs` → `tools/gorsel-sirasi.json`: görseli
+   olmayan, düzeltme gerektirmeyen, kalite ≥2 kartlar.
+2. Her kart için sahne + ton `tools/gorsel-sahneleri.json`'a yazılır.
+3. `images_generate` (model, seed, referans yukarıda) — 10-12'lik partiler,
+   ardından `creations_wait` (8'erli).
+4. `sh tools/gorsel-indir.sh kart URL …` → `gorseller/<kart>.png`
+   (klasör depoda değil).
+5. `node tools/gorsel-izgara.mjs izgara.jpg kart …` → tek bakışta kontrol;
+   kusurlu olanlar seed `20260919` ve düzeltilmiş sahneyle yeniden.
+6. `npm run import:images` → `src/assets/cards/<kart>.webp` (800×600).
+   Görseli olan kart **kendiliğinden sete girer**.
+7. `npm test && npm run build`, sonra site: `npm run site -- ../hasanozdemiryz-blip.github.io`
+   (sayfadaki kelime sayısı değişir), iki depoda commit + push.
+
+**Depodaki tek kaynak webp'ler.** Ham PNG'ler yalnızca bu makinede
+(`gorseller/`) ve Magnific'te (Personal proje) duruyor. Yeni makinede
+yeniden üretmek gerekmez; yalnızca yeni kartlar için `gorseller/` boş
+başlar.
