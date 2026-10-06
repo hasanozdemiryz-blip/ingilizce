@@ -145,7 +145,8 @@ nav.baglar a:hover { color: #fff; }
 .fayda .ikon-telaffuz { background: #e9f6fe; }
 .fayda .ikon-merdiven { background: #f6fded; }
 .fayda .ikon-kart { background: var(--krem-2); }
-.fayda .ikon-kart img { object-fit: cover; }
+/* Kart gorseli de cizimler gibi ortada ve boslukla dursun; zemin gorselin kendi tonu (site.mjs ZEMIN_KANCA) */
+.fayda .ikon-kart img { padding: 14px 0; }
 .fayda .govde { padding: 20px 22px 24px; }
 .fayda h3 { font-size: 1.2rem; font-weight: 700; }
 .fayda p { color: var(--soft); margin: 7px 0 0; font-size: .97rem; }

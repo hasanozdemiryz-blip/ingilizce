@@ -578,6 +578,8 @@ async function derle(hedef) {
     cizimler[anahtar] = await webpYaz(hedef, `varliklar/cizimler/${ad}.webp`, dosya, 360, 360);
     cizimler[`ZEMIN_${anahtar.replace('IK_', '')}`] = await zeminTonu(dosya);
   }
+  // Gorsel kutuyu kaplamiyor (cizimler gibi ortada); kalan yer onun zemini.
+  cizimler.ZEMIN_KANCA = await zeminTonu(path.join(KOK, 'src/assets/cards', `${NEDEN_KART}.webp`));
   cizimler.IK_KANCA = await webpYaz(
     hedef,
     `varliklar/cizimler/kanca.webp`,
