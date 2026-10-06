@@ -62,8 +62,6 @@ export const ADIM: Record<Step, AdimBilgisi> = {
 export type Bolge = {
   adimlar: Step[];
   ad: string;
-  /** Bolge bitince ne geliyor — bir sonraki bolgenin ne istedigi */
-  sonraki: string;
   ikon: IkonAd;
   /**
    * Renk TOKENININ adi — sinif degil.
@@ -77,21 +75,18 @@ export const BOLGELER: Bolge[] = [
   {
     adimlar: [1, 2],
     ad: t('Tanıdın'),
-    sonraki: t('Şimdi kanca ekrandan kalkıyor'),
     ikon: 'secmeli',
     renk: 'brand',
   },
   {
     adimlar: [3, 4],
     ad: t('Hatırladın'),
-    sonraki: t('Şimdi kelimeyi baştan sen yazacaksın'),
     ikon: 'harf',
     renk: 'spark',
   },
   {
     adimlar: [5, 6],
     ad: t('Ürettin'),
-    sonraki: t('Merdivenin tepesi'),
     ikon: 'yazma',
     renk: 'grow',
   },

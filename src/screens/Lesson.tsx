@@ -4,7 +4,6 @@ import { useGeri } from '../geri';
 import { LearnFace } from '../components/CardFace';
 import { Runner } from '../components/Runner';
 import { ADIMLAR, bolgelereBol, type Gorev } from '../exercise';
-import { Gecis } from '../components/Gecis';
 import { BackButton, Button, Progressbar, Screen, TopBar } from '../components/ui';
 import { CARD_BY_ID } from '../content';
 import { db, logAnswer, logSession } from '../db';
@@ -13,9 +12,6 @@ import type { Card, Progress, Step } from '../types';
 import { t } from '../dil';
 
 type Bolum = 'yeni' | 'ogrenme' | 'tekrar';
-
-/** Ekranda duran gecis ani: ne gosterilecegi + "Devam" basilinca ne olacagi. */
-type GecisAni = Omit<Parameters<typeof Gecis>[0], 'onDevam'> & { devam: () => void };
 
 /**
  * DERS — gunun tek akisi.
@@ -103,11 +99,12 @@ export function Lesson({
 
   const [bolgeIndex, setBolgeIndex] = useState(0);
 
-  /** Ekranda bir gecis ani duruyorsa bolum yerine o cizilir. */
-  const [gecis, setGecis] = useState<GecisAni | null>(null);
-
-  /** Yalnizca ICINDE bulunulan bolgenin sayaci — gecis aninda gosterilir. */
-  const bolgeSayac = useRef({ dogru: 0, toplam: 0 });
+  /**
+   * Cevaplanan soru sayisi — dersin TEK ilerleme cubugu bundan besleniyor.
+   * Once tanismada "1 / 5", bir cubuk ve "BOLUM 1/2" etiketi vardi; testte
+   * ise hicbiri yoktu ve kac soru kaldigi bilinmiyordu.
+   */
+  const [cevaplanan, setCevaplanan] = useState(0);
 
   /**
    * Yeni kartlar once BELLEKTE tutulur, veritabanina ogrenme testi
@@ -230,11 +227,8 @@ export function Lesson({
   const ogrenmeSonucu = useCallback(
     async (cardId: string, ok: boolean, hookRevealed: boolean, step: Step) => {
       sayac.current.toplam++;
-      bolgeSayac.current.toplam++;
-      if (ok) {
-        sayac.current.dogru++;
-        bolgeSayac.current.dogru++;
-      }
+      if (ok) sayac.current.dogru++;
+      setCevaplanan((n) => n + 1);
       void logAnswer({ cardId, ok, step, ipucu: hookRevealed, kaynak: 'ders' });
 
       if (step === 2) tanimaGecti.current.set(cardId, ok && !hookRevealed);
@@ -265,6 +259,7 @@ export function Lesson({
     async (cardId: string, ok: boolean, hookRevealed: boolean, step: Step) => {
       sayac.current.toplam++;
       if (ok) sayac.current.dogru++;
+      setCevaplanan((n) => n + 1);
       void logAnswer({ cardId, ok, step, ipucu: hookRevealed, kaynak: 'ders' });
 
       const p = await db.progress.get(cardId);
@@ -333,87 +328,31 @@ export function Lesson({
   }
 
   /**
-   * Bolum kapanisinin gecis ani.
-   *
-   * `ogrenme` icin null: onun kapanisini SON BOLGE zaten gosterdi, ust
-   * uste iki ekran cikmasin.
-   */
-  function bolumGecisi(simdiki: Bolum): Omit<GecisAni, 'devam'> | null {
-    if (simdiki === 'yeni') {
-      const n = dersKartlari.length;
-      return {
-        ikon: 'ogren',
-        renk: 'brand',
-        baslik: t('{n} kelimeyle tanıştın', { n }),
-        sonraki: t('Şimdi kancalar tuttu mu bakalım'),
-      };
-    }
-    if (simdiki === 'tekrar') {
-      return {
-        ikon: 'bekleyen',
-        renk: 'grow',
-        baslik: t('Tekrarlar bitti'),
-        sonraki: t('Şimdi bugünün yeni kelimeleri'),
-      };
-    }
-    return null;
-  }
-
-  /**
    * Siradaki bolume gecer; sira bittiyse (ya da bolum listede yoksa) dersi
-   * kapatir. Son bolumun ardindan gecis ani GOSTERILMEZ — orada `SessionDone`
-   * var ve asil kutlama o.
+   * kapatir.
    *
-   * `ani` verilmezse bolumun varsayilani kullanilir; `null` verilirse hic
-   * gecis cikmaz (bos bolum atlanirken oldugu gibi).
+   * ARA EKRAN YOK. Bolumler ve bolgeler arasinda "5 kelimeyle tanistin /
+   * Simdi kancalar tuttu mu bakalim" gibi ekranlar vardi; ekranin cogu bos,
+   * her biri bir fazladan dokunus. Gecisi artik soru yonergesi ("Eslesenleri
+   * bul", "Ingilizcesi ne?") ve tek ilerleme cubugu anlatiyor.
    */
-  function gec(simdiki: Bolum, ani?: Omit<GecisAni, 'devam'> | null) {
+  function gec(simdiki: Bolum) {
     const yer = bolumler.indexOf(simdiki);
     const sonraki = yer >= 0 ? bolumler[yer + 1] : undefined;
     if (!sonraki) {
       void bitir();
       return;
     }
-    const gosterilecek = ani === undefined ? bolumGecisi(simdiki) : ani;
-    if (gosterilecek) setGecis({ ...gosterilecek, devam: () => setBolum(sonraki) });
-    else setBolum(sonraki);
+    setBolum(sonraki);
   }
 
-  /**
-   * Bir bolge bitti.
-   *
-   * Ara bolgelerde gecis ani bir sonraki bolgeyi aciyor; SON bolgede
-   * once yeni kartlar yaziliyor, sonra bolum gecisi olarak ayni ekran
-   * kullaniliyor (bkz. `bolumGecisi` — `ogrenme` orada null doner).
-   */
+  /** Bir bolge bitti: siradakine gec; sonuncuysa yeni kartlari yaz. */
   function bolgeBitti() {
-    const simdiki = ogrenmeBolgeleri[bolgeIndex];
-    if (!simdiki) return;
-
-    const { dogru, toplam } = bolgeSayac.current;
-    const ani = {
-      ikon: simdiki.bolge.ikon,
-      renk: simdiki.bolge.renk,
-      baslik: simdiki.bolge.ad,
-      sayi: toplam > 0 ? t('{dogru} / {toplam} doğru', { dogru, toplam }) : undefined,
-      sonraki: simdiki.bolge.sonraki,
-    };
-    const sonBolge = bolgeIndex + 1 >= ogrenmeBolgeleri.length;
-
-    if (!sonBolge) {
-      setGecis({
-        ...ani,
-        devam: () => {
-          bolgeSayac.current = { dogru: 0, toplam: 0 };
-          setBolgeIndex(bolgeIndex + 1);
-        },
-      });
+    if (bolgeIndex + 1 < ogrenmeBolgeleri.length) {
+      setBolgeIndex(bolgeIndex + 1);
       return;
     }
-
-    void yeniKartlariYaz().then(() =>
-      gec('ogrenme', { ...ani, sonraki: t('Sırada bekleyen tekrarların') }),
-    );
+    void yeniKartlariYaz().then(() => gec('ogrenme'));
   }
 
   async function bitir() {
@@ -439,20 +378,14 @@ export function Lesson({
     });
   }
 
-  const basilik: Record<Bolum, string> = {
-    yeni: t('Yeni kelimeler'),
-    ogrenme: t('Öğrenme testi'),
-    tekrar: t('Tekrar'),
-  };
-
   /*
-    Bolum sayisi ekranda: tekrar dersin ICINDE oldugu gorunsun. Tek bolumlu
-    derste sayi yazmak gurultu — o zaman yalnizca bolumun adi kaliyor.
+    Dersin tamami tek cubukta: tanisma kartlari + ogrenme testi sorulari +
+    tekrar sorulari. Tanisma bolumu gecildiyse kartlarin hepsi sayilir.
   */
-  const bolumEtiketi =
-    bolumler.length > 1
-      ? t('Bölüm {no}/{toplam} · {ad}', { no: bolumler.indexOf(bolum) + 1, toplam: bolumler.length, ad: basilik[bolum] })
-      : basilik[bolum];
+  const tanismaBitti = bolumler.indexOf('yeni') >= 0 && bolumler.indexOf(bolum) > bolumler.indexOf('yeni');
+  const ilerlemeToplam = dersKartlari.length + ogrenmeGorevleri.length + tekrarGorevleri.length;
+  const ilerlemeYapilan = (bolum === 'yeni' ? i : tanismaBitti ? dersKartlari.length : 0) + cevaplanan;
+  const cubuk = <Progressbar done={ilerlemeYapilan} total={ilerlemeToplam} />;
 
   /**
    * Cikis, yeni kelimeler daha kalici degilken CIDDI bir kayip.
@@ -482,28 +415,6 @@ export function Lesson({
     </div>
   ) : null;
 
-  /*
-    Gecis ani bolumlerin ONUNDE ciziliyor: o an ekranda ne soru var ne
-    kart, yalnizca kapanan ve acilan sey. Cikis dugmesi de yok — sinirda
-    kazara cikmak, yeni kelimeler henuz yazilmamisken en pahali hata.
-  */
-  if (gecis) {
-    return (
-      <Gecis
-        ikon={gecis.ikon}
-        renk={gecis.renk}
-        baslik={gecis.baslik}
-        sayi={gecis.sayi}
-        sonraki={gecis.sonraki}
-        onDevam={() => {
-          const devam = gecis.devam;
-          setGecis(null);
-          devam();
-        }}
-      />
-    );
-  }
-
   // --- Bolum 1: yeni kartlar ---
   if (bolum === 'yeni') {
     const card = dersKartlari[i];
@@ -517,23 +428,15 @@ export function Lesson({
         <TopBar
           left={<BackButton onClick={cikmakIstiyor} />}
           right={
-            <span className="flex items-center gap-3">
-              <button
-                onClick={() => biliyorum(card)}
-                className="rounded-full bg-white/70 px-3 py-1.5 text-xs font-bold text-ink-soft shadow-[var(--shadow-soft)] transition-all active:scale-95 hover:bg-white"
-              >
-                {t('Bunu biliyorum')}
-              </button>
-              <span className="tabular-nums">
-                {i + 1} / {dersKartlari.length}
-              </span>
-            </span>
+            <button
+              onClick={() => biliyorum(card)}
+              className="rounded-full bg-white/70 px-3 py-1.5 text-xs font-bold text-ink-soft shadow-[var(--shadow-soft)] transition-all active:scale-95 hover:bg-white"
+            >
+              {t('Bunu biliyorum')}
+            </button>
           }
         />
-        <Progressbar done={i} total={dersKartlari.length} />
-        <p className="text-center text-sm font-extrabold uppercase tracking-[0.12em] text-ink-soft mt-2">
-          {bolumEtiketi}
-        </p>
+        {cubuk}
 
         <div key={card.id} className="rise flex-1 flex flex-col justify-center py-6">
           <LearnFace card={card} sesli={sound} />
@@ -576,18 +479,15 @@ export function Lesson({
 
   if (gorevler.length === 0) {
     // Bos bolum/bolge atlanirken gecis ani cikmaz: kapanan bir sey yok.
-    if (ogrenmede) void yeniKartlariYaz().then(() => gec('ogrenme', null));
-    else gec(bolum, null);
+    if (ogrenmede) void yeniKartlariYaz().then(() => gec('ogrenme'));
+    else gec(bolum);
     return null;
   }
 
   return (
     <Screen yanMenusuz>
       <TopBar left={<BackButton onClick={cikmakIstiyor} />} />
-      {/* `mt-2` diger yoldaki etiketle ayni: serit ile etiket birlesik durmasin */}
-      <p className="text-center text-sm font-extrabold uppercase tracking-[0.12em] text-ink-soft mt-2">
-        {bolumEtiketi}
-      </p>
+      {cubuk}
       <Runner
         /* Bolge degisince motor bastan kurulsun — sorular karismasin */
         key={ogrenmede ? `ogrenme-${bolgeIndex}` : bolum}
