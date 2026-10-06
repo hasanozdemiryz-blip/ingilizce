@@ -43,6 +43,7 @@ export function Settings({
 }) {
   const fileRef = useRef<HTMLInputElement>(null);
   const [sifirlaSoruluyor, setSifirlaSoruluyor] = useState(false);
+  const [gelismis, setGelismis] = useState(false);
   const [hata, setHata] = useState<string | null>(null);
   const [bilgi, setBilgi] = useState<string | null>(null);
   const [girisAcik, setGirisAcik] = useState(false);
@@ -184,58 +185,6 @@ export function Settings({
           </button>
         )}
 
-        {/*
-          HESAP. Uyelik yapilandirmasi yoksa satir hic acilmiyor — telaffuz
-          ve hatirlatmadaki kural: calismayan bir anahtar gostermektense hic
-          gostermemek. Giris KAPIDA degil; buradan ya da ilk ders sonrasindan
-          yapiliyor.
-        */}
-        {uyelikVarMi() && (
-          <Card className="rise">
-            <h2 className="text-sm font-bold text-ink-soft mb-1">{t('Hesap')}</h2>
-            {uye ? (
-              <>
-                <GirisRozeti uye={uye} />
-                <p className="text-sm text-ink-soft mt-1 mb-1">
-                  <b className="break-all">{uye.eposta}</b><br />{t('İlerlemen hesabında saklanıyor.')}
-                </p>
-                <div className="mb-3">
-                  <Satir ad={t('Ad')} deger={uye.bilgi?.ad ?? '—'} />
-                  <Satir ad={t('Seviye')} deger={etiket(SEVIYELER, uye.bilgi?.seviye) ?? '—'} />
-                  <Satir ad={t('Hedef')} deger={etiket(HEDEFLER, uye.bilgi?.hedef) ?? '—'} />
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  <Kucuk onClick={() => setBilgiAcik(true)}>{t('Bilgilerimi düzenle')}</Kucuk>
-                  {/* Google ile girenin sifresi yok; dugme kafa karistiriyordu */}
-                  {uye.saglayici !== 'google' && (
-                    <Kucuk onClick={() => setSifreAcik(true)}>{t('Şifre değiştir')}</Kucuk>
-                  )}
-                  {/*
-                    CIKIS BURADA, hesabin yaninda. Once sayfanin dibinde,
-                    "Hesabi sil"in yaninda ve kirmiziydi; kullanici "cikis cok
-                    zor" dedi. Ayni is ust menude de var (avatar).
-                  */}
-                  <Kucuk onClick={() => setCikisAcik(true)}>{t('Çıkış yap')}</Kucuk>
-                </div>
-              </>
-            ) : (
-              <>
-                <p className="text-sm text-ink-soft mb-3">
-                  {DAVET_METNI}
-                </p>
-                <Kucuk onClick={() => setGirisAcik(true)}>{t('Giriş yap')}</Kucuk>
-              </>
-            )}
-          </Card>
-        )}
-
-        <Card className="rise delay-1">
-          <div className="flex items-center justify-between gap-3">
-            <h2 className="text-sm font-bold text-ink-soft">Dil · Language</h2>
-            <DilSecici />
-          </div>
-        </Card>
-
         <Card className="rise delay-1">
           <h2 className="text-sm font-bold text-ink-soft mb-1">{t('Günlük hedef')}</h2>
           <p className="text-sm text-ink-soft mb-3">
@@ -354,6 +303,77 @@ export function Settings({
           </Card>
         )}
 
+        <Card className="rise delay-1">
+          <div className="flex items-center justify-between gap-3">
+            <h2 className="text-sm font-bold text-ink-soft">Dil / Language</h2>
+            <DilSecici />
+          </div>
+        </Card>
+
+        {/*
+          HESAP. Uyelik yapilandirmasi yoksa satir hic acilmiyor — telaffuz
+          ve hatirlatmadaki kural: calismayan bir anahtar gostermektense hic
+          gostermemek. Giris KAPIDA degil; buradan ya da ilk ders sonrasindan
+          yapiliyor.
+        */}
+        {uyelikVarMi() && (
+          <Card className="rise">
+            <h2 className="text-sm font-bold text-ink-soft mb-1">{t('Hesap')}</h2>
+            {uye ? (
+              <>
+                <GirisRozeti uye={uye} />
+                <p className="text-sm text-ink-soft mt-1 mb-1">
+                  <b className="break-all">{uye.eposta}</b><br />{t('İlerlemen hesabında saklanıyor.')}
+                </p>
+                <div className="mb-3">
+                  <Satir ad={t('Ad')} deger={uye.bilgi?.ad ?? '—'} />
+                  <Satir ad={t('Seviye')} deger={etiket(SEVIYELER, uye.bilgi?.seviye) ?? '—'} />
+                  <Satir ad={t('Hedef')} deger={etiket(HEDEFLER, uye.bilgi?.hedef) ?? '—'} />
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <Kucuk onClick={() => setBilgiAcik(true)}>{t('Bilgilerimi düzenle')}</Kucuk>
+                  {/* Google ile girenin sifresi yok; dugme kafa karistiriyordu */}
+                  {uye.saglayici !== 'google' && (
+                    <Kucuk onClick={() => setSifreAcik(true)}>{t('Şifre değiştir')}</Kucuk>
+                  )}
+                  {/*
+                    CIKIS BURADA, hesabin yaninda. Once sayfanin dibinde,
+                    "Hesabi sil"in yaninda ve kirmiziydi; kullanici "cikis cok
+                    zor" dedi. Ayni is ust menude de var (avatar).
+                  */}
+                  <Kucuk onClick={() => setCikisAcik(true)}>{t('Çıkış yap')}</Kucuk>
+                </div>
+              </>
+            ) : (
+              <>
+                <p className="text-sm text-ink-soft mb-3">
+                  {DAVET_METNI}
+                </p>
+                <Kucuk onClick={() => setGirisAcik(true)}>{t('Giriş yap')}</Kucuk>
+              </>
+            )}
+          </Card>
+        )}
+
+        {/*
+          GELISMIS — katlanmis. Yedekleme, olcum anahtari ve surum bilgisi
+          ekranin ortasinda, gunluk hedefle ayni agirlikta duruyordu; cogu
+          kisi bunlari hic acmiyor. Sik kullanilanlar (hedef, ses,
+          hatirlatma, dil, hesap) ustte.
+        */}
+        <button
+          onClick={() => setGelismis(!gelismis)}
+          aria-expanded={gelismis}
+          className="mt-1 flex items-center justify-between rounded-2xl px-1 py-2 text-sm font-bold text-ink-soft"
+        >
+          <span>{t('Gelişmiş')}</span>
+          <span aria-hidden className={`transition-transform ${gelismis ? 'rotate-90' : ''}`}>
+            ›
+          </span>
+        </button>
+
+        {gelismis && (
+          <>
         {/*
           OLCUM ANAHTARI — yalnizca yapilandirilmissa gorunur.
           Yapilandirma yoksa (gelistirme, depoyu klonlayan) hicbir sey
@@ -366,7 +386,7 @@ export function Settings({
               <div>
                 <p className="font-bold">{t('Kullanım istatistikleri')}</p>
                 <p className="text-sm text-ink-soft mt-0.5">
-                  {t('Hangi ekranların kullanıldığını anonim olarak ölçeriz. Adın, fotoğrafın ve cevapların')}{' '}<b>{t('gönderilmez')}</b>.
+                  {t('Anonim ölçüm. Adın ve cevapların gönderilmez.')}
                 </p>
               </div>
               <button
@@ -409,9 +429,7 @@ export function Settings({
           <Card className="rise delay-2">
             <h2 className="text-sm font-bold text-ink-soft mb-1">{t('Verilerim')}</h2>
             <p className="text-sm text-ink-soft mb-3">
-              {t('İlerleme, profilin ve fotoğrafın yalnızca bu cihazda tutuluyor. Taşımak veya korumak için yedekle.')}
-              {paylasSecenegi &&
-                ` ${t("Açılan menüden Drive'a, e-postaya ya da istediğin yere gönderebilirsin.")}`}
+              {t('İlerlemen bu cihazda. Yedekleyip başka cihaza taşıyabilirsin.')}
             </p>
             <div className="flex flex-wrap gap-2">
               {telefonSecenegi && (
@@ -419,7 +437,7 @@ export function Settings({
                   onClick={() => {
                     setHata(null);
                     void telefonaYedekle(state.profil?.ad)
-                      .then((nereye) => setBilgi(`Kaydedildi: ${nereye}`))
+                      .then((nereye) => setBilgi(t('Kaydedildi: {nereye}', { nereye })))
                       .catch(() => setHata(t('Telefona kaydedilemedi.')));
                   }}
                 >
@@ -455,19 +473,15 @@ export function Settings({
           </Card>
         )}
 
-        {/*
-          OTURUM ISLEMLERI EN ALTTA ve kirmizi.
-
-          Ikisi de geri donusu olan islemler degil: cikis cihazi temizler,
-          silme hesabi bitirir. Ayarlarin ortasinda, gunluk hedefin yaninda
-          durmalari yanlisti — yanlislikla basilabilecek yerde olmamalilar.
-        */}
         <Card className="rise delay-3">
           <h2 className="text-sm font-bold text-ink-soft mb-2">{t('Hakkında')}</h2>
           <Satir ad={t('Toplam kelime')} deger={String(CARDS.length)} />
           <Satir ad={t('Öğrendiğin')} deger={String(progress.length)} />
           <Satir ad={t('Sürüm')} deger={__APP_VERSION__} />
         </Card>
+
+          </>
+        )}
 
         {/*
           YASAL — en altta, cunku aranan bir sey degil ama BULUNABILIR

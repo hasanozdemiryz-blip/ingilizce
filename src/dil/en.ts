@@ -433,4 +433,8 @@ export const EN: Record<string, string> = {
   "Ders tekrarı": "Lesson review",
   "{n} kelimeyi sağlam biliyorsun": "You know {n} words solidly",
   "Doğruluk": "Accuracy",
+  "Gelişmiş": "Advanced",
+  "Anonim ölçüm. Adın ve cevapların gönderilmez.": "Anonymous usage stats. Your name and answers are never sent.",
+  "İlerlemen bu cihazda. Yedekleyip başka cihaza taşıyabilirsin.": "Your progress lives on this device. Back it up to move it to another one.",
+  "Kaydedildi: {nereye}": "Saved: {nereye}",
 };
