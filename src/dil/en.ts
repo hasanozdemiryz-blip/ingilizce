@@ -407,4 +407,9 @@ export const EN: Record<string, string> = {
   "Geri": "Back",
   "Kelime, anlam veya kanca ara…": "Search words, meanings or hooks…",
   "Bitti": "Done",
+  "{n} yeni kelime": "{n} new words",
+  "{n} tekrar": "{n} reviews",
+  "Yeni kelimeler yarın gelir.": "New words arrive tomorrow.",
+  "{a} / {b} kelime": "{a} / {b} words",
+  "İlk ders": "First lesson",
 };

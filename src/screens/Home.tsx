@@ -2,7 +2,6 @@ import { Avatar } from '../components/Avatar';
 import { Button, Card, Ikon, Screen, Streak } from '../components/ui';
 import { SetFinale } from '../components/SetFinale';
 import { TAB_SPACE } from '../components/TabBar';
-import { UyelikSerit } from '../components/UyelikSerit';
 import { uyelikVarMi, type Uye } from '../uyelik';
 import { CARD_BY_ID, CARDS, ogrenilenKancalar, setBittiMi } from '../content';
 import { relativeDue } from '../dates';
@@ -32,7 +31,7 @@ type Props = {
   onReviewFirst: () => void;
   onQuickReview: () => void;
   onPractice: () => void;
-  /** Uyelik seridi buna basinca giris penceresini aciyor (bkz. App). */
+  /** Ustteki "Giris yap" giris penceresini aciyor (bkz. App). */
   onUyelik: () => void;
   /**
    * Ustteki avatar + ad: girisliyse hesap menusu, degilse Ayarlar
@@ -96,9 +95,12 @@ export function Home({
   const yeniGun = !ilkDers && state.lastSessionDate !== bugun;
 
   /** Gunun paketi: tek satirda ne bekliyor. */
-  const paket = [newCards.length > 0 && `${newCards.length} yeni`, tekrar > 0 && `${tekrar} tekrar`]
+  const paket = [
+    newCards.length > 0 && t('{n} yeni kelime', { n: newCards.length }),
+    tekrar > 0 && t('{n} tekrar', { n: tekrar }),
+  ]
     .filter(Boolean)
-    .join(' · ');
+    .join(', ');
 
   const siradaki = progress
     .filter((p) => p.introduced)
@@ -206,8 +208,12 @@ export function Home({
           Cubugun zemini de `sunken`: beyaz kartin uzerinde `white/70`
           kayboluyor.
         */}
-        <UyelikSerit ogrenilen={ogrenilen} onAc={onUyelik} />
-
+        {/*
+          Uyelik seridi KALDIRILDI. Yeni gelen kisi daha hicbir sey
+          ogrenmeden hem sagdaki "Giris yap"i hem bu seridi goruyordu;
+          ders sonrasi serit uyari emojisiyle "yalnizca bu cihazda" diyordu.
+          Davet artik yalnizca ders sonunda (bkz. davet.ts) ve Ayarlar'da.
+        */}
         <Card className="rise !py-4">
           <div className="flex items-baseline justify-between mb-2.5">
             <span className="text-sm font-bold text-ink-soft">
@@ -216,7 +222,7 @@ export function Home({
             <span className="word text-sm font-extrabold tabular-nums">
               {setBitti
                 ? `${CARDS.length} / ${CARDS.length}`
-                : `${todayCount} / ${state.dailyLimit}`}
+                : t('{a} / {b} kelime', { a: todayCount, b: state.dailyLimit })}
             </span>
           </div>
           <div className="h-3 w-full rounded-full bg-sunken overflow-hidden">
@@ -244,7 +250,7 @@ export function Home({
               {todaysCount > 0
                 ? t('Bugünün {todaysCount} kelimesini istediğin kadar çalış.', { todaysCount })
                 : t('Bekleyen tekrarlarını çalışabilirsin.')}{' '}
-              Yeni kelimeler gece 00:00'da gelir.
+              {t('Yeni kelimeler yarın gelir.')}
             </p>
             {/*
               Onizleme burada da var: "Bugunun 10 kelimesi" demek neyin
@@ -309,38 +315,29 @@ export function Home({
           </Card>
         ) : (
           <div className="rise rounded-card p-6 bg-spark text-ink shadow-[0_14px_30px_-16px_rgba(240,184,0,0.9)]">
+            {/*
+              Ust etiket + baslik, ayni seyi iki kez soylemiyor ("Hazir / Ilk
+              dersin hazir", "Yeni gun / Yeni gune basla" vardi). Etiket NE
+              oldugunu, baslik ICINDE ne oldugunu soyluyor.
+            */}
             <p className="text-sm font-bold text-ink/55">
-              {ilkDers ? t('Hazır') : yeniGun ? t('Yeni gün') : t('Bugünün dersi')}
+              {ilkDers ? t('İlk ders') : yeniGun ? t('Yeni gün') : t('Bugünün dersi')}
             </p>
-            <p className="word text-3xl font-extrabold mt-0.5 mb-1">
-              {ilkDers ? t('İlk dersin hazır') : yeniGun ? t('Yeni güne başla') : paket}
-            </p>
-            <p className="text-sm text-ink/65 mb-4">
-              {ilkDers
-                ? t('{n} yeni kelime seni bekliyor.', { n: newCards.length })
-                : yeniGun
-                  ? paket
-                  : newCards.length > 0
-                    ? t('Önce kelimeler, sonra öğrenme testi.')
-                    : t('Bugün gelen kelimeler seni bekliyor.')}
-            </p>
+            <p className="word text-3xl font-extrabold mt-0.5 mb-4">{paket}</p>
             {/*
               DERS ONIZLEMESI. Kart yalnizca "5 kelime" diyordu ve ekranin
               yarisi bos duruyordu; kullanici neye basacagini bilmeden
               basiyordu. Kelimeler goruldugunde ders somut bir sey oluyor.
 
-              KANCA GOSTERILMIYOR — bilerek. Kanca dersin kendi ani; burada
-              gosterilirse ilk karsilasmanin etkisi onizlemede harcanir.
+              KANCA DA ANLAM DA GOSTERILMIYOR — bilerek. Ikisi de dersin kendi
+              ani; anlam burada okunursa kancayla ilk karsilasmadan once
+              cevap verilmis olur. Yalnizca Ingilizce kelimeler.
             */}
             {newCards.length > 0 && (
-              <ul className="mb-4 flex flex-col gap-1.5">
+              <ul className="mb-4 flex flex-wrap gap-1.5">
                 {newCards.slice(0, 5).map((c) => (
-                  <li
-                    key={c.id}
-                    className="flex items-baseline gap-2 rounded-xl bg-white/55 px-3 py-2"
-                  >
-                    <span className="word font-extrabold text-ink">{c.en}</span>
-                    <span className="text-sm text-ink/60">{c.tr}</span>
+                  <li key={c.id} className="word rounded-full bg-white/55 px-3.5 py-1.5 font-extrabold text-ink">
+                    {c.en}
                   </li>
                 ))}
               </ul>
