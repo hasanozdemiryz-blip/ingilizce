@@ -73,7 +73,7 @@ export function SessionDone({
 
   return (
     <Screen yanMenusuz>
-      <div className="flex-1 flex flex-col justify-center items-center gap-4 text-center py-4">
+      <div className="flex-1 flex flex-col justify-center items-center gap-3 text-center py-2">
         {/*
           Seti bitiren ders: seans yuzdesi geri cekiliyor. O an "%80 aldin"
           degil "bitirdin" ani; iki basligi yan yana koymak ikisini de
@@ -85,7 +85,7 @@ export function SessionDone({
           </div>
         ) : (
           <>
-            <Ikon ad="ogren" className="pop h-14 w-14 mx-auto" />
+            <Ikon ad="ogren" className="pop h-11 w-11 mx-auto" />
 
             <div className="rise delay-1">
               <h1 className="word text-3xl font-bold">{t('Ders bitti')}</h1>
@@ -97,13 +97,13 @@ export function SessionDone({
             </div>
 
             {yeniKelimeler.length > 0 && (
-              <ul className="rise delay-2 w-full max-w-sm flex flex-col gap-2 text-left">
+              <ul className="rise delay-2 w-full max-w-sm flex flex-col gap-1.5 text-left">
                 {yeniKelimeler.map((c) => (
-                  <li key={c.id} className="flex items-center gap-3 rounded-2xl bg-surface p-2 pr-4 shadow-[var(--shadow-soft)]">
+                  <li key={c.id} className="flex items-center gap-3 rounded-2xl bg-surface p-1.5 pr-3.5 shadow-[var(--shadow-soft)]">
                     {c.image ? (
-                      <img src={c.image} alt="" className="h-12 w-12 shrink-0 rounded-xl object-cover bg-sunken" />
+                      <img src={c.image} alt="" className="h-10 w-10 shrink-0 rounded-xl object-cover bg-sunken" />
                     ) : (
-                      <span className="h-12 w-12 shrink-0 rounded-xl bg-sunken" />
+                      <span className="h-10 w-10 shrink-0 rounded-xl bg-sunken" />
                     )}
                     <span className="min-w-0 flex-1">
                       <span className="word block font-extrabold leading-tight">{c.en}</span>
@@ -138,11 +138,11 @@ export function SessionDone({
         )}
 
         {streak > 0 && (
-          <div className="rise delay-3">
+          <div className="rise delay-3 flex items-center gap-2">
             <Streak count={streak} />
-            <p className="text-sm text-ink-faint mt-2">
+            <span className="text-sm text-ink-faint">
               {streak === 1 ? t('İlk günün') : t('{streak} gündür aralıksız', { streak })}
-            </p>
+            </span>
           </div>
         )}
       </div>
