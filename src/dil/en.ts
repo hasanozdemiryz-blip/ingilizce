@@ -431,4 +431,6 @@ export const EN: Record<string, string> = {
   "Tamam ({n} kelime)": "Done ({n} words)",
   "{size} kelime seçili": "{size} words selected",
   "Ders tekrarı": "Lesson review",
+  "{n} kelimeyi sağlam biliyorsun": "You know {n} words solidly",
+  "Doğruluk": "Accuracy",
 };

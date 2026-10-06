@@ -4,16 +4,16 @@ import { Card, Ikon, Screen, Streak } from '../components/ui';
 import { getAnswers } from '../db';
 import { TAB_SPACE } from '../components/TabBar';
 import { FREEZE_MAX } from '../dates';
-import {
-  PENCERELER,
-  abilities,
-  activeDays,
-  masteryRate,
-  successRate,
-  type Pencere,
-} from '../score';
+import { CARDS } from '../content';
+import { PENCERELER, abilities, activeDays, successRate, type Pencere } from '../score';
 import type { AppState, Cevap, Progress as ProgressRow } from '../types';
 import { t } from '../dil';
+
+/**
+ * Saglam sayilan basamak: 5 ve ustu, yani kelimeyi BASTAN YAZABILIYOR
+ * (bkz. exercise.ts, uretim bolgesi).
+ */
+const SAGLAM_ADIM = 5;
 
 /**
  * ILERLEME — profil.
@@ -23,9 +23,12 @@ import { t } from '../dil';
  *   · "Seri: odul var, ceza yok" ilkesine aykiriydi — bos kareler bir
  *     kacirilan gunler defteriydi, yeni baslayan biri hiclik duvari goruyordu
  *   · Telefon genisligine sigmiyor, kenarlari kirpiliyordu
- *   · Ve en onemlisi: CALISTIGINI gosteriyordu, NE KADAR IYI calistigini degil
  *
- * Duzenlilik bilgisi Basari panelinde tek satira indi.
+ * 7 Ekim: ayni sayi uc kez yaziyordu ("%87", "30 alistirmanin 26'si",
+ * "5 kelime · 30 cevap · 4 yanlis"), ilk gun "%20 kalicilik" gibi moral
+ * bozan bir yuzde ve aciklama dipnotlari vardi. Artik ekran uc soruya
+ * cevap veriyor: setin ne kadari bende, ne kadar dogru yapiyorum, neyi
+ * yapabiliyorum.
  */
 export function ProgressScreen({
   state,
@@ -45,14 +48,12 @@ export function ProgressScreen({
   const cevaplar = useLiveQuery(getAnswers, [], [] as Cevap[]);
 
   const ogrenilen = progress.filter((p) => p.introduced).length;
-  const toplamTekrar = Object.values(state.days).reduce((a, d) => a + d.r, 0);
+  const saglam = progress.filter((p) => p.introduced && p.step >= SAGLAM_ADIM).length;
+  const setPct = CARDS.length > 0 ? Math.round((ogrenilen / CARDS.length) * 100) : 0;
 
   const basari = successRate(cevaplar, pencere);
   const duzen = activeDays(state.days, pencere);
-  const ustalik = masteryRate(progress);
   const yetenek = abilities(progress, cevaplar);
-
-
 
   return (
     <Screen>
@@ -62,6 +63,7 @@ export function ProgressScreen({
       </header>
 
       <div className={`flex-1 flex flex-col gap-3 ${TAB_SPACE}`}>
+        {/* --- Setin ne kadari: tek buyuk sayi --- */}
         <button
           onClick={onWords}
           className="rise rounded-card bg-gradient-to-br from-ink to-[#2c3d5c] p-5 text-left text-white shadow-[var(--shadow-lift)] transition-all active:scale-[0.98]"
@@ -69,18 +71,28 @@ export function ProgressScreen({
           <div className="flex items-center gap-4">
             <Ikon ad="kartlar" ters className="h-8 w-8 shrink-0" />
             <span className="min-w-0 flex-1">
-              <span className="word block text-xl font-extrabold">{t('Kelimeler')}</span>
+              <span className="word block text-2xl font-extrabold tabular-nums">
+                {t('{a} / {b} kelime', { a: ogrenilen, b: CARDS.length })}
+              </span>
               <span className="block text-sm text-white/70 mt-0.5">
-                {t('Öğrendiğin kelimeler ve kancaları')}
+                {saglam > 0
+                  ? t('{n} kelimeyi sağlam biliyorsun', { n: saglam })
+                  : t('Öğrendiğin kelimeler ve kancaları')}
               </span>
             </span>
             <span className="text-xl text-white/60">›</span>
           </div>
+          <div className="h-2.5 w-full rounded-full bg-white/15 overflow-hidden mt-4">
+            <div
+              className="h-full rounded-full bg-spark transition-[width] duration-700"
+              style={{ width: `${setPct}%` }}
+            />
+          </div>
         </button>
 
-        {/* --- Basari: donemsel yuzde --- */}
+        {/* --- Dogruluk: donemsel, tek satir --- */}
         <Card className="rise delay-1">
-          <h2 className="text-sm font-bold text-ink-soft mb-2.5">{t('Başarı')}</h2>
+          <h2 className="text-sm font-bold text-ink-soft mb-2.5">{t('Doğruluk')}</h2>
           {/* Dort pencere tek satira sigmiyordu; grid esit boler */}
           <div className="grid grid-cols-4 gap-1 rounded-full bg-sunken p-1 mb-4">
             {PENCERELER.map((p) => (
@@ -98,16 +110,8 @@ export function ProgressScreen({
 
           {basari ? (
             <>
-              <p className="word text-center text-5xl font-extrabold tabular-nums leading-none">
-                %{basari.percent}
-              </p>
-              {/*
-                Birim `kelime x basamak`: ayni kelimenin eslestirmesi ile
-                dinlemesi ayri hucreler (bkz. score.ts). Ham hacim hemen
-                altinda duruyor — yoksa "%100" tek alistirmayla da yazilabilir.
-              */}
-              <p className="text-center text-sm text-ink-soft mt-2">
-                {t('{toplam} alıştırmanın {dogru} tanesi doğru', { toplam: basari.toplam, dogru: basari.dogru })}
+              <p className="word text-center text-3xl font-extrabold tabular-nums leading-none">
+                {t('{dogru} / {toplam} doğru', { dogru: basari.dogru, toplam: basari.toplam })}
               </p>
               <div className="h-2.5 w-full rounded-full bg-sunken overflow-hidden mt-4">
                 <div
@@ -115,18 +119,12 @@ export function ProgressScreen({
                   style={{ width: `${basari.percent}%` }}
                 />
               </div>
-              <p className="text-center text-xs text-ink-faint mt-2.5">
-                {t('{kelime} kelime · {cevap} cevap · {yanlis} yanlış', { kelime: basari.kelime, cevap: basari.cevap, yanlis: basari.yanlisCevap })}
-              </p>
             </>
           ) : (
-            <p className="text-center text-sm text-ink-faint py-6">
-              {t('Bu dönemde henüz cevap yok.')}
-            </p>
+            <p className="text-center text-sm text-ink-faint py-4">{t('Bu dönemde henüz cevap yok.')}</p>
           )}
 
-          {/* Duzenlilik — takvimin yerine tek satir */}
-          <p className="text-center text-xs text-ink-faint mt-4">
+          <p className="text-center text-xs text-ink-faint mt-3">
             {pencere === 'gun'
               ? duzen.calisilan > 0
                 ? t('Bugün çalıştın.')
@@ -137,66 +135,24 @@ export function ProgressScreen({
           </p>
         </Card>
 
-        {/* --- Sayilar: ortalanmis --- */}
-        {/*
-          Dort kutu da beyazdi ve ayirt edilmiyordu. Her sayinin kendi rengi
-          var; renkler uygulamanin geri kalaniyla ayni anlamda kullaniliyor
-          (mavi birincil, sari kanca/ustalik, pembe seri, nane toplam).
-        */}
-        <div className="grid grid-cols-2 gap-3">
-          <Kutu buyuk={String(ogrenilen)} kucuk={t('kelime öğrendin')} renk="bg-brand-soft" />
-          {/* "ustalık" kimseye bir sey soylemiyordu — ne oldugu soruldu */}
-          <Kutu
-            buyuk={ustalik === null ? '—' : `%${ustalik}`}
-            kucuk={t('kalıcılık')}
-            renk="bg-spark-soft"
-          />
-          <Kutu buyuk={String(state.streakCount)} kucuk={t('günlük seri')} renk="bg-blush-soft" />
-          <Kutu buyuk={String(toplamTekrar)} kucuk={t('toplam çalışma')} renk="bg-grow-soft" />
-        </div>
-
-        {/*
-          Kalicilik tek basina anlasilmiyordu ("ustalık neydi?"). Kutunun
-          icine sigmayan tanim hemen altinda, tek satirda.
-        */}
-        <p className="-mt-1 px-2 text-center text-xs text-ink-faint leading-relaxed">
-          <b className="font-bold text-ink-soft">{t('Kalıcılık')}</b>{t(': kelimeleri ne kadar sağlam bildiğin. Tekrar ettikçe yükselir.')}
-        </p>
-
         {/* --- Neler yapabiliyorsun: BIRIKIMLI --- */}
         {yetenek.toplam > 0 && (
           <Card className="rise delay-2">
             <h2 className="text-sm font-bold text-ink-soft mb-3">{t('Neler yapabildin')}</h2>
+            {/*
+              Panel MERDIVEN konumunu degil YAPILANI sayiyor (bkz. score.ts
+              `abilities`); kancaya bakmadan yapilanlar.
+            */}
             <div className="flex flex-col gap-3">
-              <Yetenek
-                ad={t('Tanıştım')}
-                sayi={yetenek.taniyor}
-                toplam={yetenek.toplam}
-                renk="bg-brand"
-              />
+              <Yetenek ad={t('Tanıştım')} sayi={yetenek.taniyor} toplam={yetenek.toplam} renk="bg-brand" />
               <Yetenek
                 ad={t('Türkçesinden seçtim')}
                 sayi={yetenek.seciyor}
                 toplam={yetenek.toplam}
                 renk="bg-spark"
               />
-              <Yetenek
-                ad={t('Baştan yazdım')}
-                sayi={yetenek.yaziyor}
-                toplam={yetenek.toplam}
-                renk="bg-grow"
-              />
+              <Yetenek ad={t('Baştan yazdım')} sayi={yetenek.yaziyor} toplam={yetenek.toplam} renk="bg-grow" />
             </div>
-            {/*
-              Panel artik MERDIVEN konumunu degil YAPILANI sayiyor (bkz.
-              score.ts `abilities`): derste ters secmeli/yazma dogru
-              yapildiginda ayni gun doluyor. Sayimin ne oldugu yaziyor,
-              cunku "bir kez yaptim" ile "hala biliyorum" ayri seyler ve
-              ikincisi hemen ustteki kalicilik yuzdesi.
-            */}
-            <p className="text-xs text-ink-faint mt-4 leading-relaxed">
-              {t('Kancaya bakmadan doğru yaptıkların sayılır.')}
-            </p>
           </Card>
         )}
 
@@ -219,7 +175,6 @@ export function ProgressScreen({
             </div>
           </div>
         </Card>
-
       </div>
     </Screen>
   );
@@ -251,22 +206,8 @@ function Yetenek({
         </span>
       </div>
       <div className="h-2.5 w-full rounded-full bg-sunken overflow-hidden">
-        <div
-          className={`h-full rounded-full ${renk} transition-[width] duration-500`}
-          style={{ width: `${pct}%` }}
-        />
+        <div className={`h-full rounded-full ${renk} transition-[width] duration-500`} style={{ width: `${pct}%` }} />
       </div>
     </div>
   );
 }
-
-/** Sayilar ORTALI — once sola yaslidilar ve kutular dengesiz duruyordu. */
-function Kutu({ buyuk, kucuk, renk }: { buyuk: string; kucuk: string; renk: string }) {
-  return (
-    <div className={`rise rounded-card ${renk} p-4 text-center shadow-[var(--shadow-soft)]`}>
-      <p className="word text-3xl font-extrabold tabular-nums leading-none">{buyuk}</p>
-      <p className="text-xs text-ink-soft mt-1.5">{kucuk}</p>
-    </div>
-  );
-}
-
