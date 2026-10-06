@@ -144,6 +144,8 @@ nav.baglar a:hover { color: #fff; }
 .fayda .ikon img { width: 100%; height: 100%; object-fit: contain; }
 .fayda .ikon-telaffuz { background: #e9f6fe; }
 .fayda .ikon-merdiven { background: #f6fded; }
+.fayda .ikon-kart { background: var(--krem-2); }
+.fayda .ikon-kart img { object-fit: cover; }
 .fayda .govde { padding: 20px 22px 24px; }
 .fayda h3 { font-size: 1.2rem; font-weight: 700; }
 .fayda p { color: var(--soft); margin: 7px 0 0; font-size: .97rem; }

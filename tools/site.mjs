@@ -246,7 +246,12 @@ const HAVUZ = ['sell', 'door', 'bad', 'car', 'dust', 'dark', 'salt', 'sick', 'fi
 const GORUNEN = 3;
 
 /** Bolum cizimleri: brand/anasayfa/<ad>.png */
-const CIZIMLER = { telaffuz: 'IK_TELAFFUZ', merdiven: 'IK_MERDIVEN', cihaz: 'IK_CIHAZ' };
+const CIZIMLER = { telaffuz: 'IK_TELAFFUZ', merdiven: 'IK_MERDIVEN' };
+/**
+ * "Neden ise yariyor"un ilk karti: yontemin kendisi, snake karti. Cizim
+ * degil kart gorseli — "baglanti" fikrini en iyi bu sahne anlatiyor.
+ */
+const NEDEN_KART = 'snake';
 
 /** Yasal sayfalar: kaynak site/yasal/, eski adres uygulama deposunda yonlendirme. */
 const YASAL = [
@@ -573,6 +578,13 @@ async function derle(hedef) {
     cizimler[anahtar] = await webpYaz(hedef, `varliklar/cizimler/${ad}.webp`, dosya, 360, 360);
     cizimler[`ZEMIN_${anahtar.replace('IK_', '')}`] = await zeminTonu(dosya);
   }
+  cizimler.IK_KANCA = await webpYaz(
+    hedef,
+    `varliklar/cizimler/kanca.webp`,
+    path.join(KOK, 'src/assets/cards', `${NEDEN_KART}.webp`),
+    520,
+    390,
+  );
 
   /** Ana sayfa govdesi; Ingilizcesi ayni parcalardan, kendi dosyasiyla. */
   const anaSayfa = (dil) => {
