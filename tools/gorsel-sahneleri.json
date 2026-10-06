@@ -1,103 +1,667 @@
 {
- "_aciklama": "6 Ekim partisi: kart -> [sahne, zemin tonu]. Iskelet: tools/gorsel-recetesi.md (ozne %65, ayak/nesne alti golge yasak).",
- "happy": ["A cheerful smiling young woman in a yellow t-shirt and blue jeans, full body, standing and proudly holding one big white-and-orange capsule pill above her head with both hands.", "peach"],
- "curtain": ["A window with heavy closed red curtains drawn shut, and a lifebuoy ring hanging on the curtain rod as if the curtain has rescued the room from prying eyes.", "lavender"],
- "valley": ["A small green valley between two rounded hills with a little river, and a governor in a dark navy suit with a red ceremonial sash across his chest, full body, standing proudly in the middle of the valley.", "sky-blue"],
- "hole": ["A long striped hallway runner rug with one big round hole in its centre, and a small coat stand beside it.", "cream"],
- "leg": ["A girl in rolled-up blue trousers and a pink shirt, full body, standing with both legs in a big round metal washbasin full of water.", "sky-blue"],
- "much": ["A soccer goal whose net is overflowing with many round soccer balls with black pentagon patches.", "mint"],
- "push": ["A father in a green sweater and jeans, full body, pushing a baby stroller with a hood.", "peach"],
- "bin": ["A dustbin overflowing with a huge pile of tiny torn paper pieces, many pieces heaped around it.", "lavender"],
- "dirt": ["A worried boy in a white t-shirt covered with big brown mud stains, full body, looking down at the dirt on his shirt.", "yellow"],
- "dish": ["A round white plate with one big cartoon tooth sitting in the middle of it.", "pink"],
- "jam": ["A clear glass jar full of red strawberry jam with a red-and-white checked cloth lid, two strawberries beside it.", "cream"],
- "peel": ["A yellow banana half peeled, and inside the peel there is a cylindrical battery instead of the fruit.", "mint"],
- "itch": ["A boy in a striped t-shirt and shorts, full body, scratching his tummy with both hands, little itch marks around him.", "peach"],
- "slap": ["Two cheerful friends, full body, one in a blue hoodie and one in an orange dress, giving each other a loud high-five with small motion lines at their hands.", "sky-blue"],
- "pinch": ["A friendly red crab pinching the corner of a white towel with one big claw.", "sky-blue"],
- "ash": ["A cooking pot of hot soup on a small campfire whose logs have turned to grey ash.", "cream"],
- "smoke": ["A man in a black tuxedo with a bow tie, full body, standing in the middle of soft grey puffy smoke clouds.", "lavender"],
- "grip": ["A boy with the flu wrapped in a blanket with a thermometer in his mouth, full body, sitting and firmly gripping a big mug of hot tea with both hands.", "mint"],
- "toss": ["A white goat headbutting a red ball and tossing it high into the air.", "green"],
- "pat": ["A girl in a green dress, full body, gently patting a happy dog on the head, small motion lines at her hand.", "yellow"],
- "tax": ["A yellow taxi car with a taxi meter on its dashboard and a small stack of gold coins on its roof.", "sky-blue"],
- "bridge": ["Four playing cards fanned out lying on top of a small arched stone bridge over a little stream.", "mint"],
- "sock": ["A striped sock with yellow electric sparks and a lightning bolt zig-zag around it, as if it got an electric shock.", "lavender"],
- "pocket": ["A pair of blue jeans with a small wrapped gift package sticking out of the front pocket.", "peach"],
- "gear": ["A car gear stick with a round black knob, and an arrow sign pointing into an open garage door beside it.", "cream"],
- "pipe": ["A long bent grey metal water pipe with a classic brown smoking pipe resting on top of it.", "sky-blue"],
- "dam": ["A small house with a flat roof, and behind the roof a tall concrete dam wall holding back blue water.", "sky-blue"],
- "key": ["A smiling man in a yellow sweater relaxing in a hammock, full body, happily holding up a big golden key.", "mint"],
- "arm": ["A woman in a purple top and long skirt, full body, carrying a wicker basket full of green pears on her arm.", "peach"],
- "corn": ["A big corn cob next to an old-fashioned car horn with a red rubber bulb.", "yellow"],
- "cheese": ["A wedge of yellow cheese with a pencil drawing lines on its surface.", "cream"],
- "hill": ["A round green hill with a boy in a red cap, full body, standing on top and sneakily hiding a playing card behind his back.", "sky-blue"],
- "gun": ["An orange-and-blue toy water pistol in front of a big bright rising sun.", "yellow"],
- "sand": ["A pair of brown sandals standing on a small mound of golden sand.", "cream"],
- "wing": ["A tall yellow construction crane whose arm is shaped like a big bird wing with feathers.", "sky-blue"],
- "year": ["A small globe of the Earth with a ring of blank calendar pages wrapped around it.", "mint"],
- "bag": ["A brown leather handbag tied closed with a big red ribbon bow.", "pink"],
- "bite": ["A red apple with a big bite taken out of it, sitting next to a tiny green computer microchip.", "cream"],
- "bone": ["A juicy steak on a plate with a white bone sticking out of it.", "peach"],
- "cheap": ["A small green computer microchip with a red discount price tag with a down arrow hanging from it.", "mint"],
- "desk": ["A wooden study desk with a shiny round CD disc lying on top.", "cream"],
- "eat": ["A scruffy brown dog happily eating from a full food bowl.", "yellow"],
- "garden": ["A prison guard in a blue uniform and cap, full body, watering flowers in a small garden bed.", "green"],
- "hair": ["A girl with very long curly hair, full body, her hair spreading out everywhere around her like a big cloud.", "pink"],
- "head": ["A boy in a green shirt and jeans, full body, wearing a round red-and-white dartboard target on his head like a hat.", "sky-blue"],
- "hope": ["A child in a red jumper, full body, jumping up high with joy toward a small rainbow.", "sky-blue"],
- "listen": ["A girl wearing big headphones, full body, listening carefully, with speech bubbles containing small simple flag shapes floating around her.", "lavender"],
- "red": ["A big red card next to a large red X mark, like a rejection.", "pink"],
- "soon": ["A presenter in a suit, full body, standing next to an empty presentation easel board with a round clock drawn on it.", "cream"],
- "buy": ["A gentleman with a bowler hat and moustache in a brown suit, full body, carrying several shopping bags.", "peach"],
- "moon": ["A crescent moon and a lit white candle side by side, the candle flame glowing softly.", "lavender"],
- "sad": ["A sad boy in a plain grey t-shirt and plain trousers, full body, sitting on a simple plain stool and frowning.", "sky-blue"],
- "tap": ["A kitchen water tap with a big cork stopper popping out of its spout and water flowing.", "sky-blue"],
- "rust": ["A boy in a cap, full body, looking surprised as he comes across an old rusty orange bicycle.", "cream"],
- "bake": ["A baker in a white apron and chef hat, full body, looking into an open oven where a loaf of bread is baking.", "peach"],
- "fry": ["A frying pan full of golden French fries on top of a small oven.", "yellow"],
- "feed": ["A fit sporty woman in a pink tracksuit, full body, feeding grain to a hen.", "green"],
- "palm": ["An open hand palm facing up with a small palm tree growing in the middle of it.", "mint"],
- "thorn": ["A rose stem with big sharp thorns next to a metal lathe cutting bit.", "pink"],
- "bend": ["A small wooden weir across a stream, and a metal pipe beside it bent into a U-shape.", "sky-blue"],
- "wrap": ["A rapper in a cap, hoodie and baggy jeans, full body, wrapping a big gift box with ribbon.", "lavender"],
- "paste": ["A birthday cake with a sheet of paper being glued onto its side, a glue tube beside it.", "pink"],
- "type": ["An old typewriter with a blank sheet of paper, little sound marks above its keys.", "cream"],
- "pal": ["A clown in a colourful costume and a boy in a blue t-shirt, full body, standing arm in arm as best friends, smiling.", "yellow"],
- "miner": ["A miner in a yellow helmet with a head lamp, full body, carefully stepping around a round grey landmine on the ground.", "cream"],
- "keen": ["An eager girl in a school uniform, full body, raising her hand very high, eyes bright and keen.", "mint"],
- "plain": ["A plain simple house drawn with white lines on a blue blueprint plan sheet.", "sky-blue"],
- "fee": ["A paper price tag on a string next to a small stack of coins.", "cream"],
- "file": ["A mesh string shopping bag holding a stack of colourful office file folders.", "mint"],
- "silk": ["A woman in a green dress, full body, shaking out a long shiny flowing silk scarf in the air.", "pink"],
- "patch": ["A worn pair of trousers with a colourful square patch sewn on the knee, and an old rag beside it.", "peach"],
- "zip": ["A jacket with its zipper being pulled up quickly, motion lines beside the zipper.", "sky-blue"],
- "gem": ["An open jewellery box with a big sparkling red gemstone ring inside.", "lavender"],
- "steel": ["A stylish man in sunglasses and a leather jacket, full body, carrying a grey steel beam on his shoulder.", "cream"],
- "tin": ["A tin can next to a bottle of paint thinner and a paintbrush.", "mint"],
- "tank": ["A big round water storage tank on legs next to a small green army tank toy.", "green"],
- "mill": ["A windmill with four sails and a visible central axle shaft.", "sky-blue"],
- "stable": ["A red wooden horse stable with a horse looking out of its open door.", "yellow"],
- "window": ["An open window with four panes and a blue sky with a cloud visible through it.", "sky-blue"],
- "show": ["A magician in a top hat and cape, full body, showing a white rabbit coming out of the hat.", "lavender"],
- "tight": ["A woman in tight black leggings and a sporty top, full body, doing a stretch.", "pink"],
- "lamp": ["A table lamp with a cream lampshade, switched on.", "yellow"],
- "vase": ["A blue ceramic vase with three tulips.", "pink"],
- "sauce": ["A bowl of red tomato sauce with a ladle, a tomato beside it.", "cream"],
- "grill": ["A barbecue grill with sausages and peppers on it.", "peach"],
- "clay": ["A lump of brown clay on a potter's wheel being shaped into a pot.", "cream"],
- "harvest": ["A wheelbarrow full of harvested wheat bundles and pumpkins.", "yellow"],
- "fur": ["A fluffy brown fur coat on a wooden coat hanger.", "lavender"],
- "web": ["A spider web with a small friendly spider in the middle.", "mint"],
- "lift": ["A weightlifter in a red singlet, full body, lifting a barbell above his head.", "peach"],
- "march": ["A marching band drummer in a red uniform, full body, marching with a drum.", "cream"],
- "blend": ["A blender jug full of mixing fruit smoothie with strawberries and bananas.", "pink"],
- "pump": ["A bicycle pump connected to a bicycle tyre, inflating it.", "sky-blue"],
- "print": ["A printer printing out a sheet with a simple picture of a flower.", "mint"],
- "chef": ["A chef in a white uniform and tall chef hat, full body, holding a steaming pot.", "cream"],
- "pilot": ["A pilot in a navy uniform and cap, full body, standing in front of a small airplane.", "sky-blue"],
- "coach": ["A sports coach with a whistle and clipboard, full body, and a ram with curly horns standing next to him.", "green"],
- "fan": ["A football fan in a striped scarf, full body, cheering while holding a small electric fan that blows his scarf.", "yellow"],
- "rival": ["Two runners side by side racing, full body, one in a red kit and one in a blue kit, both determined.", "peach"],
- "fair": ["Two football players, full body, one in a red kit and one in a blue kit, shaking hands, with a balanced scale icon above them.", "mint"]
+ "_aciklama": "Gorsel sahneleri: kart -> [sahne, zemin tonu]. 6 Ekim: 100 + 66 kart. Iskelet: tools/gorsel-recetesi.md.",
+ "happy": [
+  "A cheerful smiling young woman in a yellow t-shirt and blue jeans, full body, standing and proudly holding one big white-and-orange capsule pill above her head with both hands.",
+  "peach"
+ ],
+ "curtain": [
+  "A window with heavy closed red curtains drawn shut, and a lifebuoy ring hanging on the curtain rod as if the curtain has rescued the room from prying eyes.",
+  "lavender"
+ ],
+ "valley": [
+  "A small green valley between two rounded hills with a little river, and a governor in a dark navy suit with a red ceremonial sash across his chest, full body, standing proudly in the middle of the valley.",
+  "sky-blue"
+ ],
+ "hole": [
+  "A long striped hallway runner rug with one big round hole in its centre, and a small coat stand beside it.",
+  "cream"
+ ],
+ "leg": [
+  "A girl in rolled-up blue trousers and a pink shirt, full body, standing with both legs in a big round metal washbasin full of water.",
+  "sky-blue"
+ ],
+ "much": [
+  "A soccer goal whose net is overflowing with many round soccer balls with black pentagon patches.",
+  "mint"
+ ],
+ "push": [
+  "A father in a green sweater and jeans, full body, pushing a baby stroller with a hood.",
+  "peach"
+ ],
+ "bin": [
+  "A dustbin overflowing with a huge pile of tiny torn paper pieces, many pieces heaped around it.",
+  "lavender"
+ ],
+ "dirt": [
+  "A worried boy in a white t-shirt covered with big brown mud stains, full body, looking down at the dirt on his shirt.",
+  "yellow"
+ ],
+ "dish": [
+  "A round white plate with one big cartoon tooth sitting in the middle of it.",
+  "pink"
+ ],
+ "jam": [
+  "A clear glass jar full of red strawberry jam with a red-and-white checked cloth lid, two strawberries beside it.",
+  "cream"
+ ],
+ "peel": [
+  "A yellow banana half peeled, and inside the peel there is a cylindrical battery instead of the fruit.",
+  "mint"
+ ],
+ "itch": [
+  "A boy in a striped t-shirt and shorts, full body, scratching his tummy with both hands, little itch marks around him.",
+  "peach"
+ ],
+ "slap": [
+  "Two cheerful friends, full body, one in a blue hoodie and one in an orange dress, giving each other a loud high-five with small motion lines at their hands.",
+  "sky-blue"
+ ],
+ "pinch": [
+  "A friendly red crab pinching the corner of a white towel with one big claw.",
+  "sky-blue"
+ ],
+ "ash": [
+  "A cooking pot of hot soup on a small campfire whose logs have turned to grey ash.",
+  "cream"
+ ],
+ "smoke": [
+  "A man in a black tuxedo with a bow tie, full body, standing in the middle of soft grey puffy smoke clouds.",
+  "lavender"
+ ],
+ "grip": [
+  "A boy with the flu wrapped in a blanket with a thermometer in his mouth, full body, sitting and firmly gripping a big mug of hot tea with both hands.",
+  "mint"
+ ],
+ "toss": [
+  "A white goat headbutting a red ball and tossing it high into the air.",
+  "green"
+ ],
+ "pat": [
+  "A girl in a green dress, full body, gently patting a happy dog on the head, small motion lines at her hand.",
+  "yellow"
+ ],
+ "tax": [
+  "A yellow taxi car with a taxi meter on its dashboard and a small stack of gold coins on its roof.",
+  "sky-blue"
+ ],
+ "bridge": [
+  "Four playing cards fanned out lying on top of a small arched stone bridge over a little stream.",
+  "mint"
+ ],
+ "sock": [
+  "A striped sock with yellow electric sparks and a lightning bolt zig-zag around it, as if it got an electric shock.",
+  "lavender"
+ ],
+ "pocket": [
+  "A pair of blue jeans with a small wrapped gift package sticking out of the front pocket.",
+  "peach"
+ ],
+ "gear": [
+  "A car gear stick with a round black knob, and an arrow sign pointing into an open garage door beside it.",
+  "cream"
+ ],
+ "pipe": [
+  "A long bent grey metal water pipe with a classic brown smoking pipe resting on top of it.",
+  "sky-blue"
+ ],
+ "dam": [
+  "A small house with a flat roof, and behind the roof a tall concrete dam wall holding back blue water.",
+  "sky-blue"
+ ],
+ "key": [
+  "A smiling man in a yellow sweater relaxing in a hammock, full body, happily holding up a big golden key.",
+  "mint"
+ ],
+ "arm": [
+  "A woman in a purple top and long skirt, full body, carrying a wicker basket full of green pears on her arm.",
+  "peach"
+ ],
+ "corn": [
+  "A big corn cob next to an old-fashioned car horn with a red rubber bulb.",
+  "yellow"
+ ],
+ "cheese": [
+  "A wedge of yellow cheese with a pencil drawing lines on its surface.",
+  "cream"
+ ],
+ "hill": [
+  "A round green hill with a boy in a red cap, full body, standing on top and sneakily hiding a playing card behind his back.",
+  "sky-blue"
+ ],
+ "gun": [
+  "An orange-and-blue toy water pistol in front of a big bright rising sun.",
+  "yellow"
+ ],
+ "sand": [
+  "A pair of brown sandals standing on a small mound of golden sand.",
+  "cream"
+ ],
+ "wing": [
+  "A tall yellow construction crane whose arm is shaped like a big bird wing with feathers.",
+  "sky-blue"
+ ],
+ "year": [
+  "A small globe of the Earth with a ring of blank calendar pages wrapped around it.",
+  "mint"
+ ],
+ "bag": [
+  "A brown leather handbag tied closed with a big red ribbon bow.",
+  "pink"
+ ],
+ "bite": [
+  "A red apple with a big bite taken out of it, sitting next to a tiny green computer microchip.",
+  "cream"
+ ],
+ "bone": [
+  "A juicy steak on a plate with a white bone sticking out of it.",
+  "peach"
+ ],
+ "cheap": [
+  "A small green computer microchip with a red discount price tag with a down arrow hanging from it.",
+  "mint"
+ ],
+ "desk": [
+  "A wooden study desk with a shiny round CD disc lying on top.",
+  "cream"
+ ],
+ "eat": [
+  "A scruffy brown dog happily eating from a full food bowl.",
+  "yellow"
+ ],
+ "garden": [
+  "A prison guard in a blue uniform and cap, full body, watering flowers in a small garden bed.",
+  "green"
+ ],
+ "hair": [
+  "A girl with very long curly hair, full body, her hair spreading out everywhere around her like a big cloud.",
+  "pink"
+ ],
+ "head": [
+  "A boy in a green shirt and jeans, full body, wearing a round red-and-white dartboard target on his head like a hat.",
+  "sky-blue"
+ ],
+ "hope": [
+  "A child in a red jumper, full body, jumping up high with joy toward a small rainbow.",
+  "sky-blue"
+ ],
+ "listen": [
+  "A girl wearing big headphones, full body, listening carefully, with speech bubbles containing small simple flag shapes floating around her.",
+  "lavender"
+ ],
+ "red": [
+  "A big red card next to a large red X mark, like a rejection.",
+  "pink"
+ ],
+ "soon": [
+  "A presenter in a suit, full body, standing next to an empty presentation easel board with a round clock drawn on it.",
+  "cream"
+ ],
+ "buy": [
+  "A gentleman with a bowler hat and moustache in a brown suit, full body, carrying several shopping bags.",
+  "peach"
+ ],
+ "moon": [
+  "A crescent moon and a lit white candle side by side, the candle flame glowing softly.",
+  "lavender"
+ ],
+ "sad": [
+  "A sad boy in a plain grey t-shirt and plain trousers, full body, sitting on a simple plain stool and frowning.",
+  "sky-blue"
+ ],
+ "tap": [
+  "A kitchen water tap with a big cork stopper popping out of its spout and water flowing.",
+  "sky-blue"
+ ],
+ "rust": [
+  "A boy in a cap, full body, looking surprised as he comes across an old rusty orange bicycle.",
+  "cream"
+ ],
+ "bake": [
+  "A baker in a white apron and chef hat, full body, looking into an open oven where a loaf of bread is baking.",
+  "peach"
+ ],
+ "fry": [
+  "A frying pan full of golden French fries on top of a small oven.",
+  "yellow"
+ ],
+ "feed": [
+  "A fit sporty woman in a pink tracksuit, full body, feeding grain to a hen.",
+  "green"
+ ],
+ "palm": [
+  "An open hand palm facing up with a small palm tree growing in the middle of it.",
+  "mint"
+ ],
+ "thorn": [
+  "A rose stem with big sharp thorns next to a metal lathe cutting bit.",
+  "pink"
+ ],
+ "bend": [
+  "A small wooden weir across a stream, and a metal pipe beside it bent into a U-shape.",
+  "sky-blue"
+ ],
+ "wrap": [
+  "A rapper in a cap, hoodie and baggy jeans, full body, wrapping a big gift box with ribbon.",
+  "lavender"
+ ],
+ "paste": [
+  "A birthday cake with a sheet of paper being glued onto its side, a glue tube beside it.",
+  "pink"
+ ],
+ "type": [
+  "An old typewriter with a blank sheet of paper, little sound marks above its keys.",
+  "cream"
+ ],
+ "pal": [
+  "A clown in a colourful costume and a boy in a blue t-shirt, full body, standing arm in arm as best friends, smiling.",
+  "yellow"
+ ],
+ "miner": [
+  "A miner in a yellow helmet with a head lamp, full body, carefully stepping around a round grey landmine on the ground.",
+  "cream"
+ ],
+ "keen": [
+  "An eager girl in a school uniform, full body, raising her hand very high, eyes bright and keen.",
+  "mint"
+ ],
+ "plain": [
+  "A plain simple house drawn with white lines on a blue blueprint plan sheet.",
+  "sky-blue"
+ ],
+ "fee": [
+  "A paper price tag on a string next to a small stack of coins.",
+  "cream"
+ ],
+ "file": [
+  "A mesh string shopping bag holding a stack of colourful office file folders.",
+  "mint"
+ ],
+ "silk": [
+  "A woman in a green dress, full body, shaking out a long shiny flowing silk scarf in the air.",
+  "pink"
+ ],
+ "patch": [
+  "A worn pair of trousers with a colourful square patch sewn on the knee, and an old rag beside it.",
+  "peach"
+ ],
+ "zip": [
+  "A jacket with its zipper being pulled up quickly, motion lines beside the zipper.",
+  "sky-blue"
+ ],
+ "gem": [
+  "An open jewellery box with a big sparkling red gemstone ring inside.",
+  "lavender"
+ ],
+ "steel": [
+  "A stylish man in sunglasses and a leather jacket, full body, carrying a grey steel beam on his shoulder.",
+  "cream"
+ ],
+ "tin": [
+  "A tin can next to a bottle of paint thinner and a paintbrush.",
+  "mint"
+ ],
+ "tank": [
+  "A big round water storage tank on legs next to a small green army tank toy.",
+  "green"
+ ],
+ "mill": [
+  "A windmill with four sails and a visible central axle shaft.",
+  "sky-blue"
+ ],
+ "stable": [
+  "A red wooden horse stable with a horse looking out of its open door.",
+  "yellow"
+ ],
+ "window": [
+  "An open window with four panes and a blue sky with a cloud visible through it.",
+  "sky-blue"
+ ],
+ "show": [
+  "A magician in a top hat and cape, full body, showing a white rabbit coming out of the hat.",
+  "lavender"
+ ],
+ "tight": [
+  "A woman in tight black leggings and a sporty top, full body, doing a stretch.",
+  "pink"
+ ],
+ "lamp": [
+  "A table lamp with a cream lampshade, switched on.",
+  "yellow"
+ ],
+ "vase": [
+  "A blue ceramic vase with three tulips.",
+  "pink"
+ ],
+ "sauce": [
+  "A bowl of red tomato sauce with a ladle, a tomato beside it.",
+  "cream"
+ ],
+ "grill": [
+  "A barbecue grill with sausages and peppers on it.",
+  "peach"
+ ],
+ "clay": [
+  "A lump of brown clay on a potter's wheel being shaped into a pot.",
+  "cream"
+ ],
+ "harvest": [
+  "A wheelbarrow full of harvested wheat bundles and pumpkins.",
+  "yellow"
+ ],
+ "fur": [
+  "A fluffy brown fur coat on a wooden coat hanger.",
+  "lavender"
+ ],
+ "web": [
+  "A spider web with a small friendly spider in the middle.",
+  "mint"
+ ],
+ "lift": [
+  "A weightlifter in a red singlet, full body, lifting a barbell above his head.",
+  "peach"
+ ],
+ "march": [
+  "A marching band drummer in a red uniform, full body, marching with a drum.",
+  "cream"
+ ],
+ "blend": [
+  "A blender jug full of mixing fruit smoothie with strawberries and bananas.",
+  "pink"
+ ],
+ "pump": [
+  "A bicycle pump connected to a bicycle tyre, inflating it.",
+  "sky-blue"
+ ],
+ "print": [
+  "A printer printing out a sheet with a simple picture of a flower.",
+  "mint"
+ ],
+ "chef": [
+  "A chef in a white uniform and tall chef hat, full body, holding a steaming pot.",
+  "cream"
+ ],
+ "pilot": [
+  "A pilot in a navy uniform and cap, full body, standing in front of a small airplane.",
+  "sky-blue"
+ ],
+ "coach": [
+  "A sports coach with a whistle and clipboard, full body, and a ram with curly horns standing next to him.",
+  "green"
+ ],
+ "fan": [
+  "A football fan in a striped scarf, full body, cheering while holding a small electric fan that blows his scarf.",
+  "yellow"
+ ],
+ "rival": [
+  "Two runners side by side racing, full body, one in a red kit and one in a blue kit, both determined.",
+  "peach"
+ ],
+ "fair": [
+  "Two football players, full body, one in a red kit and one in a blue kit, shaking hands, with a balanced scale icon above them.",
+  "mint"
+ ],
+ "firm": [
+  "A sturdy solid brick office building on a strong stone foundation.",
+  "cream"
+ ],
+ "fund": [
+  "A piggy bank with gold coins being poured into it from a big glass jar.",
+  "mint"
+ ],
+ "budget": [
+  "An open wallet with neatly sorted banknotes and a small stack of coins beside it.",
+  "green"
+ ],
+ "stock": [
+  "Warehouse shelves full of neatly stacked cardboard boxes.",
+  "cream"
+ ],
+ "cream": [
+  "A slice of cake topped with a big swirl of whipped cream.",
+  "pink"
+ ],
+ "cargo": [
+  "A cargo ship loaded with colourful shipping containers.",
+  "sky-blue"
+ ],
+ "tunnel": [
+  "A railway tunnel entrance in a rounded green hill with train tracks going in.",
+  "mint"
+ ],
+ "ramp": [
+  "A wooden ramp with a small red ball rolling down it.",
+  "peach"
+ ],
+ "mark": [
+  "A sheet of paper with a big red tick mark and a red circle drawn on it.",
+  "cream"
+ ],
+ "quiz": [
+  "A short quiz sheet with rows of small answer circles, some filled in, and a pencil beside it.",
+  "yellow"
+ ],
+ "class": [
+  "A small classroom: a teacher's desk, a green chalkboard with simple shapes drawn on it, and three small student desks.",
+  "mint"
+ ],
+ "note": [
+  "An open notebook with a pen, and a yellow sticky note stuck on the page.",
+  "yellow"
+ ],
+ "list": [
+  "A long paper checklist with tick boxes, some ticked, curling at the bottom.",
+  "lavender"
+ ],
+ "scarf": [
+  "A long striped woollen scarf hanging loosely.",
+  "pink"
+ ],
+ "jacket": [
+  "A brown suede jacket on a wooden hanger.",
+  "peach"
+ ],
+ "cotton": [
+  "A cotton plant branch with fluffy white cotton bolls next to a folded white t-shirt.",
+  "mint"
+ ],
+ "brick": [
+  "A small neat stack of red bricks.",
+  "cream"
+ ],
+ "cement": [
+  "A bag of cement next to a trowel and a small pile of grey cement mix.",
+  "sky-blue"
+ ],
+ "tube": [
+  "A toothpaste tube and a glass test tube side by side.",
+  "mint"
+ ],
+ "net": [
+  "A fishing net full of small silver fish.",
+  "sky-blue"
+ ],
+ "goal": [
+  "A soccer ball with black pentagon patches flying into the net of a goal.",
+  "green"
+ ],
+ "score": [
+  "A scoreboard with two coloured panels showing tally marks instead of numbers.",
+  "lavender"
+ ],
+ "medal": [
+  "A gold medal on a red ribbon.",
+  "yellow"
+ ],
+ "trophy": [
+  "A golden trophy cup with two handles on a small base.",
+  "cream"
+ ],
+ "serve": [
+  "A tennis player in white sportswear, full body including both feet with empty space below them, serving a tennis ball tossed high in the air.",
+  "green"
+ ],
+ "shoot": [
+  "A footballer in a green kit, full body including both feet with empty space below them, kicking a powerful shot at a soccer ball with motion lines.",
+  "mint"
+ ],
+ "dress": [
+  "A blue summer dress with white polka dots on a hanger.",
+  "pink"
+ ],
+ "heavy": [
+  "A strong man in a striped vest, full body including both feet with empty space below them, struggling to lift a huge heavy iron kettlebell.",
+  "peach"
+ ],
+ "kick": [
+  "A child in a white karate uniform with a belt, full body including both feet with empty space below them, doing a high kick.",
+  "yellow"
+ ],
+ "make": [
+  "A child in a red t-shirt, full body including both feet with empty space below them, building a tall tower of colourful toy blocks.",
+  "peach"
+ ],
+ "night": [
+  "A small round night-sky vignette with a crescent moon and stars above a little house with lit windows.",
+  "lavender"
+ ],
+ "study": [
+  "A student in a green sweater, full body including both feet with empty space below them, sitting at a desk studying with open books and a desk lamp.",
+  "cream"
+ ],
+ "talk": [
+  "Two friends, full body including both feet with empty space below them, one in a yellow top and one in a blue top, talking with empty speech bubbles above them.",
+  "sky-blue"
+ ],
+ "week": [
+  "A row of seven small blank calendar pages, the last two coloured green.",
+  "mint"
+ ],
+ "rock": [
+  "A big grey boulder with an electric guitar leaning against it.",
+  "lavender"
+ ],
+ "tape": [
+  "A roll of clear sticky tape next to an old cassette tape.",
+  "cream"
+ ],
+ "stretch": [
+  "An orange cat stretching its body long on a small mat.",
+  "peach"
+ ],
+ "drain": [
+  "A round metal sink drain with water swirling into it.",
+  "sky-blue"
+ ],
+ "polish": [
+  "A shiny polished brown shoe with a polishing cloth and a small round tin of polish.",
+  "cream"
+ ],
+ "slice": [
+  "A round pizza with one slice being pulled out, cheese stretching.",
+  "yellow"
+ ],
+ "steam": [
+  "A kettle on a small stove with puffs of white steam coming out of its spout.",
+  "sky-blue"
+ ],
+ "crack": [
+  "A white egg with a big zigzag crack across its shell.",
+  "yellow"
+ ],
+ "grain": [
+  "A small sack spilling wheat grains, with a golden wheat stalk beside it.",
+  "cream"
+ ],
+ "log": [
+  "A thick wooden log with visible growth rings on its cut end.",
+  "green"
+ ],
+ "frost": [
+  "A green leaf covered with white frost crystals.",
+  "sky-blue"
+ ],
+ "breeze": [
+  "A small tree with leaves gently blowing in a soft breeze, curved wind lines around it.",
+  "mint"
+ ],
+ "dim": [
+  "A table lamp glowing very faintly with a dimmer knob turned low beside it.",
+  "lavender"
+ ],
+ "crash": [
+  "Two toy cars crashed bumper to bumper with small star-burst marks.",
+  "peach"
+ ],
+ "sharp": [
+  "A sharp kitchen knife next to a freshly sharpened pencil.",
+  "cream"
+ ],
+ "drop": [
+  "A big blue water drop falling from a tap into a small puddle.",
+  "sky-blue"
+ ],
+ "swing": [
+  "A child in a pink dress, full body including both feet with empty space below them, sitting on a playground swing.",
+  "yellow"
+ ],
+ "stick": [
+  "A glue stick next to two sheets of paper stuck together.",
+  "pink"
+ ],
+ "drill": [
+  "A yellow electric drill making a hole in a wooden plank.",
+  "cream"
+ ],
+ "bold": [
+  "A brave little knight in shiny armour, full body including both feet with empty space below them, holding a shield and standing proudly.",
+  "peach"
+ ],
+ "shift": [
+  "A factory worker in blue overalls, full body including both feet with empty space below them, punching a time card at a wall clock machine.",
+  "cream"
+ ],
+ "pit": [
+  "A deep round hole dug in the ground with a shovel stuck in the dirt pile beside it.",
+  "green"
+ ],
+ "board": [
+  "A surfboard standing upright next to a wooden chalkboard.",
+  "sky-blue"
+ ],
+ "term": [
+  "A round school-year calendar wheel divided into coloured segments with a graduation cap on top.",
+  "lavender"
+ ],
+ "folder": [
+  "A yellow paper folder with documents peeking out.",
+  "mint"
+ ],
+ "draft": [
+  "A rough pencil sketch of a house on a sheet of paper with eraser crumbs and a pencil.",
+  "cream"
+ ],
+ "plaster": [
+  "A trowel spreading smooth plaster on a small wall panel, and a sticking plaster bandage beside it.",
+  "peach"
+ ],
+ "lever": [
+  "A red crowbar used as a lever lifting a heavy stone block.",
+  "cream"
+ ],
+ "valve": [
+  "A red round valve wheel on a grey pipe.",
+  "sky-blue"
+ ],
+ "track": [
+  "A red running track oval with white lane lines.",
+  "green"
+ ],
+ "gym": [
+  "A dumbbell, a kettlebell and a gym bench grouped together.",
+  "lavender"
+ ],
+ "skate": [
+  "A pair of white roller skates next to a skateboard.",
+  "pink"
+ ]
 }

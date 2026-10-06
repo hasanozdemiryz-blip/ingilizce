@@ -2161,6 +2161,12 @@ resmeder. Dersler reçetede.
 **görsel** belirliyor. 32 kurtarılabilir kart incelemede "kalsın" çıktı
 (key ≈ keyif, arm ≈ armut) ve görselleriyle sete girdi.
 
+**Ikinci parti (ayni gun):** kalan 66 hazir kart da uretildi (+2 yeniden:
+net ustten kesik, week cok kucuk), ~5.100 kredi. Set **266**. Gorseli
+olmayan 34 kartin hepsi "duzelt" ya da kalite 1 — kanca netlesince.
+Zayif kalanlar: `draft` (taslak yerine renkli ev cizdi), `valve` (boru
+kenardan kenara). Istenirse yenilenir.
+
 **Kanca panosu** en fazla 104 kanca çiziyor; set 200 olunca tamamı
 sığmıyor. Başlık/paylaşım metni çizilen sayıyı yazıyor (yalan yok). Çoklu
 pano ileride.
