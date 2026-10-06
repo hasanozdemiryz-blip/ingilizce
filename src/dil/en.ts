@@ -412,4 +412,5 @@ export const EN: Record<string, string> = {
   "Yeni kelimeler yarın gelir.": "New words arrive tomorrow.",
   "{a} / {b} kelime": "{a} / {b} words",
   "İlk ders": "First lesson",
+  "Hesap aç, kelimelerin her cihazda seninle olsun.": "Create an account and keep your words on every device.",
 };

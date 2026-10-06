@@ -23,6 +23,7 @@ import type { AppState } from '../types';
 import { dosyayiVer, paylasilabilir, telefonaKaydet, yedekAdi, yol } from '../dosya';
 import { t } from '../dil';
 import { karsilamaIzniniSil } from '../karsilama';
+import { DAVET_METNI } from '../davet';
 
 /**
  * AYARLAR.
@@ -220,7 +221,7 @@ export function Settings({
             ) : (
               <>
                 <p className="text-sm text-ink-soft mb-3">
-                  {t('İlerlemen şu an')}{' '}<b>{t('yalnızca bu cihazda')}</b>{t('. Giriş yaparsan kaybolmaz.')}
+                  {DAVET_METNI}
                 </p>
                 <Kucuk onClick={() => setGirisAcik(true)}>{t('Giriş yap')}</Kucuk>
               </>

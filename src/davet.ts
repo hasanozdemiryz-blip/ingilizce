@@ -26,6 +26,13 @@ export type Davet = {
 type Esik = Davet & { kosul: (k: Kazanim) => boolean };
 
 /**
+ * TEK METIN. Her esigin kendi govde cumlesi vardi ("Alisanlik olusuyor...",
+ * "Onu da kancasiyla ogrendin..."); Ayarlar'dakiyle birlikte yedi farkli
+ * uyelik cumlesi oluyordu. Basliklar ani kutluyor, govde hep ayni.
+ */
+export const DAVET_METNI = t('Hesap aç, kelimelerin her cihazda seninle olsun.');
+
+/**
  * Sira onemli: ustteki once denenir, yani en TAZE kilometre tasi kazanir.
  * Ayni derste hem 10. kelime hem 3. gun dolduysa kullanici bir tane davet
  * gorur, iki tane degil.
@@ -35,25 +42,25 @@ const ESIKLER: Esik[] = [
     id: 'set',
     kosul: (k) => k.setBitti,
     baslik: t('Seti bitirdin'),
-    metin: t('Bu kadar emeğin tek bir cihazda durmasın. Üye ol, nereden açarsan aç yanında olsun.'),
+    metin: DAVET_METNI,
   },
   {
     id: 'seri3',
     kosul: (k) => k.seri >= 3,
     baslik: t('{p0} gündür aralıksız', { p0: 3 }),
-    metin: t('Alışkanlık oluşuyor. Üye olursan bu seri tarayıcını temizlesen de bozulmaz.'),
+    metin: DAVET_METNI,
   },
   {
     id: 'kelime10',
     kosul: (k) => k.ogrenilen >= 10,
     baslik: t('10 kelime oldu'),
-    metin: t('Onu da kancasıyla öğrendin. Üye ol ki bu liste bu cihaza bağlı kalmasın.'),
+    metin: DAVET_METNI,
   },
   {
     id: 'ilk',
     kosul: (k) => k.ogrenilen >= 1,
     baslik: t('İlk kelimelerin hazır'),
-    metin: t('İlerlemen şu an yalnızca bu cihazda. Hesap açarsan kaybolmaz.'),
+    metin: DAVET_METNI,
   },
 ];
 
