@@ -71,6 +71,8 @@ type Flow =
       toplam: number;
       ilerleyen: number;
       yeni: number;
+      /** Bu derste tanisilan kelimeler — bitis ekrani bunlari kancalariyla gosteriyor */
+      yeniIdler: string[];
     }
   | { name: 'kelimeler' }
   | { name: 'profil' }
@@ -414,6 +416,7 @@ export default function App() {
         dogru={flow.dogru}
         toplam={flow.toplam}
         ilerleyen={flow.ilerleyen}
+        yeniIdler={flow.yeniIdler}
         /*
           Final YALNIZCA seti bitiren derste. Yeni kelime getirmeyen bir
           tekrar dersi de "set bitmis" durumda biter; her seferinde kutlarsa

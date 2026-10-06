@@ -70,6 +70,7 @@ export function Lesson({
     ilerleyen: number;
     /** Bu derste TANISILAN kelime sayisi — set sonu ani buradan anlasiliyor */
     yeni: number;
+    yeniIdler: string[];
   }) => void;
 }) {
   const [bolum, setBolum] = useState<Bolum>(() =>
@@ -379,6 +380,7 @@ export function Lesson({
       toplam: cevap,
       ilerleyen,
       yeni: dersKartlari.length,
+      yeniIdler: dersKartlari.map((c) => c.id),
     });
   }
 

@@ -413,4 +413,7 @@ export const EN: Record<string, string> = {
   "{a} / {b} kelime": "{a} / {b} words",
   "İlk ders": "First lesson",
   "Hesap aç, kelimelerin her cihazda seninle olsun.": "Create an account and keep your words on every device.",
+  "{n} yeni kelime öğrendin": "You learned {n} new words",
+  "{n} kelime tekrar ettin": "You reviewed {n} words",
+  "{n} kelime daha sağlam": "{n} words got stronger",
 };

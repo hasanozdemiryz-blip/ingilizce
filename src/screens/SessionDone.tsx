@@ -4,20 +4,20 @@ import { Giris } from '../components/Giris';
 import { Button, Ikon, Screen, Streak } from '../components/ui';
 import { useUyelik, uyelikVarMi } from '../uyelik';
 import { siradakiDavet } from '../davet';
+import { CARD_BY_ID } from '../content';
 import type { Kazanim } from '../cerceveler';
 import { t } from '../dil';
 
 /**
  * Ders bitisi.
  *
- * Iki sayi gosterir ve ikincisi daha onemli:
- *   yuzde     — bu seans nasil gecti
- *   ilerleyen — bu seans ne KAZANDIRDI
+ * ONE CIKAN SEY OGRENILEN KELIMELER. Once ekranin ortasinda buyuk bir
+ * "%87" ve "26 dogru · 4 yanlis" duruyordu; sinav kagidi gibiydi ve
+ * kullanicinin eline ne gectigini gostermiyordu. Artik yeni kelimeler
+ * gorselleri ve kancalariyla listeleniyor; dogru sayisi tek satir.
  *
- * Dogru cevap vermek ilerlemek demek degil: merdivende yukari cikmak icin
- * YARDIMSIZ dogru gerekiyor (bkz. scheduler.ts). Kanca ipucuna basip dogru
- * bilen kullanici %100 alir ama hicbir kelime ilerlemez — bunu gormesi
- * lazim, yoksa yuzde yaniltir.
+ * `ilerleyen` hala gosteriliyor ama sade dille ("daha saglam"): yardimsiz
+ * dogru gerekiyor (bkz. scheduler.ts), kancaya basip dogru bilen ilerlemez.
  */
 export function SessionDone({
   count,
@@ -25,6 +25,7 @@ export function SessionDone({
   dogru,
   toplam,
   ilerleyen,
+  yeniIdler,
   setBitti,
   kancalar,
   kazanim,
@@ -38,6 +39,8 @@ export function SessionDone({
   toplam: number;
   /** Bu seansta bir basamak yukari cikan kelime sayisi */
   ilerleyen: number;
+  /** Bu derste tanisilan kelimeler */
+  yeniIdler: readonly string[];
   /** Bu ders setin SON kelimelerini getirdiyse true — bir kez yasanan an */
   setBitti: boolean;
   kancalar: { en: string; hook: string }[];
@@ -48,7 +51,7 @@ export function SessionDone({
   onDavetKapandi: (id: string) => void;
   onHome: () => void;
 }) {
-  const yuzde = toplam > 0 ? Math.round((dogru / toplam) * 100) : null;
+  const yeniKelimeler = yeniIdler.map((id) => CARD_BY_ID.get(id)).filter((c) => c !== undefined);
 
   /*
     Uyelik daveti BURADA, kapida degil. Kayit ekrani ilk acilista cikarsa
@@ -70,7 +73,7 @@ export function SessionDone({
 
   return (
     <Screen yanMenusuz>
-      <div className="flex-1 flex flex-col justify-center items-center gap-5 text-center">
+      <div className="flex-1 flex flex-col justify-center items-center gap-4 text-center py-4">
         {/*
           Seti bitiren ders: seans yuzdesi geri cekiliyor. O an "%80 aldin"
           degil "bitirdin" ani; iki basligi yan yana koymak ikisini de
@@ -82,39 +85,56 @@ export function SessionDone({
           </div>
         ) : (
           <>
-            <Ikon ad="ogren" className="pop h-16 w-16 mx-auto" />
+            <Ikon ad="ogren" className="pop h-14 w-14 mx-auto" />
 
             <div className="rise delay-1">
               <h1 className="word text-3xl font-bold">{t('Ders bitti')}</h1>
-              <p className="text-ink-soft mt-2">{t('{n} kelime çalıştın.', { n: count })}</p>
+              <p className="text-ink-soft mt-1.5 tabular-nums">
+                {yeniKelimeler.length > 0
+                  ? t('{n} yeni kelime öğrendin', { n: yeniKelimeler.length })
+                  : t('{n} kelime tekrar ettin', { n: count })}
+              </p>
             </div>
+
+            {yeniKelimeler.length > 0 && (
+              <ul className="rise delay-2 w-full max-w-sm flex flex-col gap-2 text-left">
+                {yeniKelimeler.map((c) => (
+                  <li key={c.id} className="flex items-center gap-3 rounded-2xl bg-surface p-2 pr-4 shadow-[var(--shadow-soft)]">
+                    {c.image ? (
+                      <img src={c.image} alt="" className="h-12 w-12 shrink-0 rounded-xl object-cover bg-sunken" />
+                    ) : (
+                      <span className="h-12 w-12 shrink-0 rounded-xl bg-sunken" />
+                    )}
+                    <span className="min-w-0 flex-1">
+                      <span className="word block font-extrabold leading-tight">{c.en}</span>
+                      <span className="block text-sm text-ink-soft truncate">{c.tr}</span>
+                    </span>
+                    <span className="shrink-0 rounded-full bg-spark-soft px-2.5 py-1 text-sm font-bold">
+                      {`≈ ${c.hook}`}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {toplam > 0 && (
+              <p className="rise delay-3 text-sm text-ink-soft tabular-nums">
+                {t('{dogru} / {toplam} doğru', { dogru, toplam })}
+                {/*
+                  Sifirsa gosterilmiyor: yeni kelimelerden olusan derste
+                  merdiven oynamaz, "0 kelime" yazmak yaniltici olurdu.
+                */}
+                {ilerleyen > 0 && (
+                  <>
+                    <br />
+                    <span className="font-bold text-[#128a5f]">
+                      {t('{n} kelime daha sağlam', { n: ilerleyen })}
+                    </span>
+                  </>
+                )}
+              </p>
+            )}
           </>
-        )}
-
-        {!setBitti && yuzde !== null && (
-          <div className="rise delay-2 w-full max-w-[16rem]">
-            <p className="word text-5xl font-extrabold tabular-nums leading-none">%{yuzde}</p>
-            <p className="text-sm text-ink-soft mt-2">
-              {t('{dogru} doğru · {yanlis} yanlış', { dogru, yanlis: toplam - dogru })}
-            </p>
-            <div className="h-2.5 w-full rounded-full bg-white/70 overflow-hidden mt-3">
-              <div
-                className="h-full rounded-full bg-spark transition-[width] duration-700"
-                style={{ width: `${yuzde}%` }}
-              />
-            </div>
-          </div>
-        )}
-
-        {/*
-          Sifirsa hic gosterilmiyor: yeni kelimelerden olusan bir derste
-          ogrenme testi merdiveni oynatmaz, "0 kelime ilerledi" yazmak
-          dogru ama yaniltici olurdu.
-        */}
-        {ilerleyen > 0 && (
-          <p className="rise delay-3 text-sm font-bold text-[#128a5f] bg-grow-soft rounded-full px-4 py-2">
-            {t('{n} kelime bir basamak ilerledi', { n: ilerleyen })}
-          </p>
         )}
 
         {streak > 0 && (
