@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { AnswerFace, ListenFace, WriteFace } from './CardFace';
 import { Choice } from './Choice';
 import { Match } from './Match';
@@ -13,6 +13,17 @@ import { seslendir, seslendirmeyiDurdur, useTelaffuz } from '../speech';
 import { t } from '../dil';
 import { useKlavyeDaraltsin } from '../klavye';
 
+
+/**
+ * DOGRU CEVAPTA KENDILIGINDEN GECIS.
+ *
+ * Her dogru cevaptan sonra "Devam"a basmak gerekiyordu; 30 soruluk bir
+ * derste bu 30 fazladan dokunus. Dogruda kart kisa bir sure acik kalip
+ * (telaffuz bitsin, kanca bir kez daha gorulsun) kendiliginden geciyor.
+ * Yanlis ve "neredeyse"de DURUYOR: orada okunacak bir sey var.
+ * "Devam" duruyor — bekleyemeyen basip gecer.
+ */
+const OTOMATIK_GECIS_MS = 1600;
 
 const GERI_BILDIRIM: Record<Judgement, { baslik: string; tone: string }> = {
   dogru: { baslik: t('Doğru'), tone: 'bg-grow text-white' },
@@ -87,6 +98,14 @@ export function Runner({
     if (!blok) onDone();
   }, [blok, onDone]);
 
+  // `ilerle` asagida, erken donusten sonra tanimli; zamanlayici ref'ten cagiriyor.
+  const ilerleRef = useRef<() => void>(() => {});
+  useEffect(() => {
+    if (verdict?.judgement !== 'dogru') return;
+    const zamanlayici = setTimeout(() => ilerleRef.current(), OTOMATIK_GECIS_MS);
+    return () => clearTimeout(zamanlayici);
+  }, [verdict]);
+
   if (!blok) return null;
 
   function ilerle() {
@@ -97,6 +116,7 @@ export function Runner({
     setBusy(false);
     setI((n) => n + 1);
   }
+  ilerleRef.current = ilerle;
 
   // --- Eslestirme blogu ---
   if (blok.tip === 'eslestirme') {
