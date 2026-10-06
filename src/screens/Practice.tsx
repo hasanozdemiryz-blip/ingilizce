@@ -58,7 +58,7 @@ const KAPSAMLAR = [
     id: 'bekleyen',
     ad: t('Bekleyen tekrarlar'),
     ikon: 'bekleyen',
-    alt: t('vadesi gelmiş {PARTI}', { PARTI }),
+    alt: t('tekrar zamanı gelenler'),
     secili: 'bg-grow text-white shadow-[0_8px_18px_-8px_rgba(43,196,138,0.85)]',
     zemin: 'bg-grow-soft',
   },
@@ -66,7 +66,7 @@ const KAPSAMLAR = [
     id: 'zor',
     ad: t('Zorlandıklarım'),
     ikon: 'zor',
-    alt: t('en çok düştüğüm {PARTI}', { PARTI }),
+    alt: t('en çok yanıldıkların'),
     secili: 'bg-blush text-white shadow-[0_8px_18px_-8px_rgba(247,154,201,0.95)]',
     zemin: 'bg-blush-soft',
   },
@@ -74,7 +74,7 @@ const KAPSAMLAR = [
     id: 'eski',
     ad: t('Eski kelimeler'),
     ikon: 'eski',
-    alt: t('{ESKI_GUN}+ günlük, rastgele {PARTI}', { ESKI_GUN, PARTI }),
+    alt: t('{ESKI_GUN} günden eski', { ESKI_GUN }),
     secili: 'bg-brand-deep text-white shadow-[0_8px_18px_-8px_rgba(47,111,208,0.9)]',
     zemin: 'bg-brand-soft',
   },
@@ -95,9 +95,10 @@ const ADIM_RENK: Record<Step, string> = {
 };
 
 /** Elle secim otomatik kapsamlarla ayni eksende degil; kendi satirinda. */
-const SEC = { id: 'sec', ad: t('Seç'), ikon: 'sec', alt: t('kendin işaretle, sınır yok') } as const;
+const SEC = { id: 'sec', ad: t('Seç'), ikon: 'sec', alt: t('listeden işaretle') } as const;
 
-type Kapsam = typeof SON_DERS.id | (typeof KAPSAMLAR)[number]['id'] | typeof SEC.id;
+/** Hizli pratik: uygulamanin sectigi karisim (bkz. `hizliSecim`). */
+type Kapsam = 'hizli' | typeof SON_DERS.id | (typeof KAPSAMLAR)[number]['id'] | typeof SEC.id;
 
 const norm = (s: string) => s.toLocaleLowerCase('tr');
 
@@ -112,6 +113,8 @@ export function Practice({
   onRunning: (calisiyor: boolean) => void;
 }) {
   const [kapsam, setKapsam] = useState<Kapsam>('son');
+  /** "Kendin sec" bolumu acik mi — varsayilan kapali, ekran tek karar. */
+  const [ayrinti, setAyrinti] = useState(false);
   const [adim, setAdim] = useState<Step | 'kart' | 'karisik' | 'ders'>('karisik');
   /** Ders tekrari iki fazli: once kartlar, sonra alti basamak sirayla. */
   const [dersFazi, setDersFazi] = useState<'kart' | 'gorev'>('kart');
@@ -163,6 +166,8 @@ export function Practice({
   const durdur = () => {
     setCalisiyor(false);
     if (adim === 'ders') setAdim('karisik');
+    // Hizli pratik de secimde iz birakmasin: "Kendin sec" son dersle acilsin
+    if (kapsam === 'hizli') setKapsam('son');
   };
 
   /**
@@ -192,6 +197,29 @@ export function Practice({
    */
   const bugunDersKartlari = useMemo(() => todaysCards(ogrenilenler), [ogrenilenler]);
 
+  /**
+   * HIZLI PRATIK — tek dokunusla, uygulama secer.
+   *
+   * Egzersiz ekrani 6 kelime grubu x 8 egzersiz turunden olusan bir ayar
+   * paneliydi; yeni kullanicida gruplarin cogu bostu. Cogu kisinin istedigi
+   * sey "biraz calisayim". Oncelik sirasi: tekrar zamani gelenler,
+   * zorlandiklari, son ders, eskiler. Her kelime kendi basamaginda sorulur.
+   */
+  const hizliSecim = useMemo(() => {
+    const secim = new Map<string, Progress>();
+    const adaylar = [
+      ...dueQueue(ogrenilenler),
+      ...hardest(ogrenilenler, PARTI),
+      ...latestLessonCards(ogrenilenler),
+      ...randomOld(ogrenilenler, PARTI),
+    ];
+    for (const p of adaylar) {
+      if (secim.size >= PARTI) break;
+      if (!secim.has(p.cardId)) secim.set(p.cardId, p);
+    }
+    return [...secim.values()];
+  }, [ogrenilenler]);
+
   const secilenler = useMemo(() => {
     /*
       Ders tekrari kapsam SECIMINE bakmaz. Bir egzersiz tipi degil, kendi
@@ -202,6 +230,8 @@ export function Practice({
     if (adim === 'ders') return bugunDersKartlari;
 
     switch (kapsam) {
+      case 'hizli':
+        return hizliSecim;
       case 'son':
         return latestLessonCards(ogrenilenler);
       case 'onceki':
@@ -215,7 +245,7 @@ export function Practice({
       case 'sec':
         return ogrenilenler.filter((p) => secilenIdler.has(p.cardId));
     }
-  }, [ogrenilenler, kapsam, secilenIdler, adim, bugunDersKartlari]);
+  }, [ogrenilenler, kapsam, secilenIdler, adim, bugunDersKartlari, hizliSecim]);
 
   const kartlar = useMemo(
     () =>
@@ -337,7 +367,7 @@ export function Practice({
           <div className="fixed inset-x-0 bottom-0 px-5 pb-[max(1rem,env(safe-area-inset-bottom))]">
             <div className="mx-auto max-w-md">
               <Button variant="brand" onClick={() => setSecimEkrani(false)}>
-                {t('{n} kelime seçildi · Tamam', { n: secilenIdler.size })}
+                {t('Tamam ({n} kelime)', { n: secilenIdler.size })}
               </Button>
             </div>
           </div>
@@ -365,7 +395,7 @@ export function Practice({
           }
         />
         <p className="text-center text-xs font-bold uppercase tracking-[0.14em] text-ink-faint">
-          {adim === 'ders' ? t('Ders tekrarı · kartlar') : t('Kartları gözden geçir')}
+          {adim === 'ders' ? t('Ders tekrarı') : t('Kartlara göz at')}
         </p>
         <div key={card.id} className="rise flex-1 flex flex-col justify-center py-6">
           <LearnFace card={card} sesli={sound} />
@@ -392,7 +422,7 @@ export function Practice({
       <Screen yanMenusuz>
         <TopBar left={<BackButton onClick={() => durdur()} />} />
         <p className="text-center text-xs font-bold uppercase tracking-[0.14em] text-ink-faint">
-          {adim === 'ders' ? t('Ders tekrarı · alıştırma') : t('Egzersiz')}
+          {adim === 'ders' ? t('Ders tekrarı') : t('Egzersiz')}
         </p>
         <Runner
           /*
@@ -420,12 +450,31 @@ export function Practice({
   }
 
   const sayilar: Record<Kapsam, number> = {
+    hizli: hizliSecim.length,
     son: latestLessonCards(ogrenilenler).length,
     onceki: previousLessonCards(ogrenilenler).length,
     bekleyen: Math.min(PARTI, dueQueue(ogrenilenler).length),
     zor: hardest(ogrenilenler, PARTI).length,
     eski: randomOld(ogrenilenler, PARTI).length,
     sec: secilenIdler.size,
+  };
+
+  /** Hazir secenekler tek dokunusla baslar: kapsam + tur + kosu. */
+  const basla = (k: Kapsam, a: typeof adim) => {
+    setKapsam(k);
+    setAdim(a);
+    setKartIndex(0);
+    setDersFazi('kart');
+    olay('egzersiz_basladi', { tip: String(a), kapsam: k, kelime: sayilar[k] });
+    setCalisiyor(true);
+  };
+
+  const dersTekrari = () => {
+    setAdim('ders');
+    setKartIndex(0);
+    setDersFazi('kart');
+    olay('egzersiz_basladi', { tip: 'ders', kelime: bugunDersKartlari.length });
+    setCalisiyor(true);
   };
 
   return (
@@ -437,27 +486,20 @@ export function Practice({
 
       <div className={`flex-1 flex flex-col gap-3 ${TAB_SPACE}`}>
         {/*
-          Biten egzersizin ozeti. Yalnizca YUZDE var: buradaki cevaplar
-          merdiveni oynatmadigi icin "ilerledi" satiri yaniltici olurdu.
+          Biten egzersizin ozeti. Buradaki cevaplar merdiveni oynatmadigi
+          icin "ilerledi" satiri yok; yalnizca dogru sayisi.
         */}
         {ozet && ozet.toplam > 0 && (
-          <Card className="rise text-center">
-            <p className="text-sm text-ink-soft">{t('Egzersiz bitti')}</p>
-            <p className="word text-4xl font-extrabold tabular-nums leading-none mt-1">
-              %{Math.round((ozet.dogru / ozet.toplam) * 100)}
-            </p>
-            <p className="text-sm text-ink-soft mt-1.5">
-              {t('{dogru} doğru · {yanlis} yanlış', { dogru: ozet.dogru, yanlis: ozet.toplam - ozet.dogru })}
-            </p>
-            <div className="h-2.5 w-full rounded-full bg-sunken overflow-hidden mt-3">
-              <div
-                className="h-full rounded-full bg-gradient-to-r from-grow to-[#5fe0ad] transition-[width] duration-700"
-                style={{ width: `${Math.round((ozet.dogru / ozet.toplam) * 100)}%` }}
-              />
-            </div>
+          <Card className="rise flex items-center justify-between gap-3 !py-4">
+            <span>
+              <span className="block text-sm text-ink-soft">{t('Egzersiz bitti')}</span>
+              <span className="word block text-xl font-extrabold tabular-nums">
+                {t('{dogru} / {toplam} doğru', { dogru: ozet.dogru, toplam: ozet.toplam })}
+              </span>
+            </span>
             <button
               onClick={() => setOzet(null)}
-              className="mt-3 rounded-full bg-sunken px-4 py-2 text-sm font-bold text-ink transition-all active:scale-95"
+              className="rounded-full bg-sunken px-4 py-2 text-sm font-bold text-ink transition-all active:scale-95"
             >
               {t('Kapat')}
             </button>
@@ -474,216 +516,238 @@ export function Practice({
           </Card>
         ) : (
           <>
-            {/*
-              DERSI TEKRAR ET — kendi basina bir eylem, bir egzersiz tipi
-              degil. Onceden "Hangi egzersiz" izgarasinin bir kutusuydu ve
-              secili kapsamla birlestiriliyordu; "zorlandiklarimi ders gibi
-              tekrar et" anlamli bir sey degil, cunku ders bir GUNUN paketi.
-              O yuzden en ustte, kendi bolumunde ve tek dokunusla basliyor:
-              kapsam ya da "Başla" secmeye gerek yok.
-            */}
-            <section className="mb-1">
-              <button
-                onClick={() => {
-                  setAdim('ders');
-                  setKartIndex(0);
-                  setDersFazi('kart');
-                  olay('egzersiz_basladi', { tip: 'ders', kelime: bugunDersKartlari.length });
-                  setCalisiyor(true);
-                }}
-                disabled={bugunDersKartlari.length === 0}
-                className="w-full rounded-card px-5 py-4 text-left transition-all active:scale-[0.98] bg-ink text-white shadow-[var(--shadow-lift)] disabled:bg-white disabled:text-ink disabled:shadow-[var(--shadow-soft)] disabled:active:scale-100"
-              >
-                <div className="flex items-center gap-3.5">
-                  <span
-                    className={`grid h-12 w-12 shrink-0 place-items-center rounded-xl ${
-                      bugunDersKartlari.length > 0 ? 'bg-white/15' : 'bg-sunken'
+            {/* Tek buyuk karar: uygulama secsin */}
+            <button
+              onClick={() => basla('hizli', 'karisik')}
+              className="rise w-full rounded-card px-5 py-5 text-left transition-all active:scale-[0.98] bg-ink text-white shadow-[var(--shadow-lift)]"
+            >
+              <div className="flex items-center gap-3.5">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-white/15">
+                  <Ikon ad="karisik" ters className="h-7 w-7" />
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="word block text-xl font-extrabold leading-tight">{t('Hızlı pratik')}</span>
+                  <span className="block text-sm mt-1 text-white/70">
+                    {t('{n} kelime, uygulama seçer', { n: hizliSecim.length })}
+                  </span>
+                </span>
+                <span className="text-xl text-white/50 shrink-0">›</span>
+              </div>
+            </button>
+
+            <div className="grid grid-cols-3 gap-2">
+              <HazirSecenek
+                ikon="ders"
+                ad={t('Dersi tekrar et')}
+                bos={bugunDersKartlari.length === 0}
+                onClick={dersTekrari}
+              />
+              <HazirSecenek
+                ikon="zor"
+                ad={t('Zorlandıklarım')}
+                bos={sayilar.zor === 0}
+                onClick={() => basla('zor', 'karisik')}
+              />
+              <HazirSecenek
+                ikon="kartlar"
+                ad={t('Kartlara göz at')}
+                bos={sayilar.son === 0}
+                onClick={() => basla('son', 'kart')}
+              />
+            </div>
+
+            <button
+              onClick={() => setAyrinti(!ayrinti)}
+              aria-expanded={ayrinti}
+              className="mt-1 flex items-center justify-between rounded-2xl px-1 py-2 text-sm font-bold text-ink-soft"
+            >
+              <span>{t('Kendin seç')}</span>
+              <span aria-hidden className={`transition-transform ${ayrinti ? 'rotate-90' : ''}`}>
+                ›
+              </span>
+            </button>
+
+            {ayrinti && (
+              <>
+                <section>
+                  <h2 className="text-sm font-semibold text-ink-soft mb-2">{t('Hangi kelimeler')}</h2>
+
+                  {/* En son ders tam satir: gunluk dersin pekistirmesi en sik istenen sey */}
+                  <button
+                    onClick={() => setKapsam('son')}
+                    disabled={sayilar.son === 0}
+                    className={`w-full mb-2 rounded-2xl px-4 py-3.5 text-left transition-all active:scale-[0.98] disabled:opacity-45 disabled:active:scale-100 ${
+                      kapsam === 'son'
+                        ? 'bg-brand text-white shadow-[0_8px_18px_-8px_rgba(79,146,246,0.85)]'
+                        : 'bg-white text-ink shadow-[var(--shadow-soft)]'
                     }`}
                   >
-                    <Ikon ad="ders" ters={bugunDersKartlari.length > 0} className="h-7 w-7" />
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="word block text-lg font-extrabold leading-tight">
-                      {t('Dersi tekrar et')}
-                    </span>
-                    <span
-                      className={`block text-xs mt-1 ${
-                        bugunDersKartlari.length > 0 ? 'text-white/70' : 'text-ink-faint'
-                      }`}
-                    >
-                      {bugunDersKartlari.length > 0
-                        ? t('bugünün {n} kelimesi', { n: bugunDersKartlari.length })
-                        : t('bugün henüz ders yapmadın')}
-                    </span>
-                  </span>
-                  {bugunDersKartlari.length > 0 && (
-                    <span className="text-xl text-white/50 shrink-0">›</span>
-                  )}
-                </div>
-              </button>
-            </section>
+                    <div className="flex items-center gap-3">
+                      <span
+                        className={`grid h-9 w-9 shrink-0 place-items-center rounded-xl ${
+                          kapsam === 'son' ? 'bg-white/20' : 'bg-brand-soft'
+                        }`}
+                      >
+                        <Ikon ad={SON_DERS.ikon} ters={kapsam === 'son'} className="h-5 w-5" />
+                      </span>
+                      <span className="min-w-0 flex-1 block text-sm font-bold">
+                        {bugunDers ? t('Bugün') : t('Son ders')}
+                      </span>
+                      <span className="text-sm font-bold tabular-nums shrink-0">{sayilar.son}</span>
+                    </div>
+                  </button>
 
-            <section>
-              <h2 className="text-sm font-semibold text-ink-soft mb-2">{t('Hangi kelimeler')}</h2>
-
-              {/* En son ders tam satir: gunluk dersin pekistirmesi en sik istenen sey */}
-              <button
-                onClick={() => setKapsam('son')}
-                disabled={sayilar.son === 0}
-                className={`w-full mb-2 rounded-2xl px-4 py-3.5 text-left transition-all active:scale-[0.98] disabled:opacity-45 disabled:active:scale-100 ${
-                  kapsam === 'son'
-                    ? 'bg-brand text-white shadow-[0_8px_18px_-8px_rgba(79,146,246,0.85)]'
-                    : 'bg-white text-ink shadow-[var(--shadow-soft)]'
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <span
-                    className={`grid h-9 w-9 shrink-0 place-items-center rounded-xl ${
-                      kapsam === 'son' ? 'bg-white/20' : 'bg-brand-soft'
-                    }`}
-                  >
-                    <Ikon ad={SON_DERS.ikon} ters={kapsam === 'son'} className="h-5 w-5" />
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block text-sm font-bold">
-                      {bugunDers ? t('Bugün') : t('Son ders')}
-                    </span>
-                    <span
-                      className={`block text-[11px] mt-0.5 ${kapsam === 'son' ? 'text-white/75' : 'text-ink-faint'}`}
-                    >
-                      {bugunDers ? t('bugün öğrendiklerim') : 'en son dersin kelimeleri'}
-                    </span>
-                  </span>
-                  <span className="text-sm font-bold tabular-nums shrink-0">{sayilar.son}</span>
-                </div>
-              </button>
-
-              <div className="grid grid-cols-2 gap-2">
-                {KAPSAMLAR.map((k) => {
-                  const secili = kapsam === k.id;
-                  const bos = sayilar[k.id] === 0;
-                  return (
-                    <button
-                      key={k.id}
-                      onClick={() => setKapsam(k.id)}
-                      /* Bos kapsam basilabiliyordu ve hicbir sey olmuyordu */
-                      disabled={bos}
-                      className={`rounded-2xl px-3.5 py-3 text-left transition-all active:scale-[0.97] disabled:opacity-45 disabled:active:scale-100 ${
-                        secili ? k.secili : 'bg-white text-ink shadow-[var(--shadow-soft)]'
-                      }`}
-                    >
-                      <span className="flex items-center justify-between">
-                        <span
-                          className={`grid h-8 w-8 place-items-center rounded-lg ${
-                            secili ? 'bg-white/20' : k.zemin
+                  <div className="grid grid-cols-2 gap-2">
+                    {KAPSAMLAR.map((k) => {
+                      const secili = kapsam === k.id;
+                      const bos = sayilar[k.id] === 0;
+                      return (
+                        <button
+                          key={k.id}
+                          onClick={() => setKapsam(k.id)}
+                          /* Bos kapsam basilabiliyordu ve hicbir sey olmuyordu */
+                          disabled={bos}
+                          className={`rounded-2xl px-3.5 py-3 text-left transition-all active:scale-[0.97] disabled:opacity-45 disabled:active:scale-100 ${
+                            secili ? k.secili : 'bg-white text-ink shadow-[var(--shadow-soft)]'
                           }`}
                         >
-                          <Ikon ad={k.ikon} ters={secili} className="h-5 w-5" />
-                        </span>
-                        <span className="text-sm font-bold tabular-nums">{sayilar[k.id]}</span>
-                      </span>
-                      <span className="block text-sm font-bold leading-tight mt-1.5">{k.ad}</span>
-                      <span
-                        className={`block text-[11px] mt-0.5 ${secili ? 'text-white/75' : 'text-ink-faint'}`}
-                      >
-                        {k.alt}
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
+                          <span className="flex items-center justify-between">
+                            <span
+                              className={`grid h-8 w-8 place-items-center rounded-lg ${
+                                secili ? 'bg-white/20' : k.zemin
+                              }`}
+                            >
+                              <Ikon ad={k.ikon} ters={secili} className="h-5 w-5" />
+                            </span>
+                            <span className="text-sm font-bold tabular-nums">{sayilar[k.id]}</span>
+                          </span>
+                          <span className="block text-sm font-bold leading-tight mt-1.5">{k.ad}</span>
+                          <span
+                            className={`block text-[11px] mt-0.5 ${secili ? 'text-white/75' : 'text-ink-faint'}`}
+                          >
+                            {k.alt}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
 
-              {/* Elle secim kendi satirinda: otomatik kapsamlarla ayni eksende degil */}
-              <button
-                onClick={() => {
-                  setKapsam('sec');
-                  setSecimEkrani(true);
-                }}
-                className={`w-full mt-2 rounded-2xl px-4 py-3 text-left transition-all active:scale-[0.98] ${
-                  kapsam === 'sec'
-                    ? 'bg-ink text-white shadow-[var(--shadow-lift)]'
-                    : 'bg-white text-ink shadow-[var(--shadow-soft)]'
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <span
-                    className={`grid h-8 w-8 shrink-0 place-items-center rounded-lg ${
-                      kapsam === 'sec' ? 'bg-white/20' : 'bg-sunken'
+                  {/* Elle secim kendi satirinda: otomatik kapsamlarla ayni eksende degil */}
+                  <button
+                    onClick={() => {
+                      setKapsam('sec');
+                      setSecimEkrani(true);
+                    }}
+                    className={`w-full mt-2 rounded-2xl px-4 py-3 text-left transition-all active:scale-[0.98] ${
+                      kapsam === 'sec'
+                        ? 'bg-ink text-white shadow-[var(--shadow-lift)]'
+                        : 'bg-white text-ink shadow-[var(--shadow-soft)]'
                     }`}
                   >
-                    <Ikon ad={SEC.ikon} ters={kapsam === 'sec'} className="h-5 w-5" />
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block text-sm font-bold">{SEC.ad}</span>
-                    <span
-                      className={`block text-[11px] mt-0.5 ${kapsam === 'sec' ? 'text-white/75' : 'text-ink-faint'}`}
-                    >
-                      {kapsam === 'sec' && secilenIdler.size > 0
-                        ? t('{size} kelime seçili · değiştir', { size: secilenIdler.size })
-                        : SEC.alt}
-                    </span>
-                  </span>
-                </div>
-              </button>
-            </section>
+                    <div className="flex items-center gap-3">
+                      <span
+                        className={`grid h-8 w-8 shrink-0 place-items-center rounded-lg ${
+                          kapsam === 'sec' ? 'bg-white/20' : 'bg-sunken'
+                        }`}
+                      >
+                        <Ikon ad={SEC.ikon} ters={kapsam === 'sec'} className="h-5 w-5" />
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block text-sm font-bold">{SEC.ad}</span>
+                        <span
+                          className={`block text-[11px] mt-0.5 ${kapsam === 'sec' ? 'text-white/75' : 'text-ink-faint'}`}
+                        >
+                          {kapsam === 'sec' && secilenIdler.size > 0
+                            ? t('{size} kelime seçili', { size: secilenIdler.size })
+                            : SEC.alt}
+                        </span>
+                      </span>
+                    </div>
+                  </button>
+                </section>
 
-            <section className="mt-1">
-              <h2 className="text-sm font-semibold text-ink-soft mb-2">{t('Hangi egzersiz')}</h2>
+                <section className="mt-1">
+                  <h2 className="text-sm font-semibold text-ink-soft mb-2">{t('Hangi egzersiz')}</h2>
 
-              <div className="grid grid-cols-2 gap-2">
-                <EgzersizKare
-                  ikon="karisik"
-                  ad={t('Karışık')}
-                  alt={t('her kelime kendi basamağında')}
-                  zemin="bg-sunken"
-                  secili={adim === 'karisik'}
-                  onClick={() => setAdim('karisik')}
-                />
-                <EgzersizKare
-                  ikon="kartlar"
-                  ad="Kartlar"
-                  alt={t('görsel + kanca + cümle')}
-                  zemin="bg-sunken"
-                  secili={adim === 'kart'}
-                  onClick={() => {
-                    setAdim('kart');
-                    setKartIndex(0);
-                  }}
-                />
-                {ADIMLAR.map((n) => (
-                  <EgzersizKare
-                    key={n}
-                    ikon={ADIM[n].ikon}
-                    ad={ADIM[n].ad}
-                    alt={ADIM[n].alt}
-                    zemin={ADIM_RENK[n]}
-                    secili={adim === n}
-                    onClick={() => setAdim(n)}
-                  />
-                ))}
-              </div>
-            </section>
+                  <div className="grid grid-cols-2 gap-2">
+                    <EgzersizKare
+                      ikon="karisik"
+                      ad={t('Karışık')}
+                      alt={t('uygulama seçsin')}
+                      zemin="bg-sunken"
+                      secili={adim === 'karisik'}
+                      onClick={() => setAdim('karisik')}
+                    />
+                    <EgzersizKare
+                      ikon="kartlar"
+                      ad={t('Kartlar')}
+                      alt={t('görsel, kanca, cümle')}
+                      zemin="bg-sunken"
+                      secili={adim === 'kart'}
+                      onClick={() => {
+                        setAdim('kart');
+                        setKartIndex(0);
+                      }}
+                    />
+                    {ADIMLAR.map((n) => (
+                      <EgzersizKare
+                        key={n}
+                        ikon={ADIM[n].ikon}
+                        ad={ADIM[n].ad}
+                        alt={ADIM[n].alt}
+                        zemin={ADIM_RENK[n]}
+                        secili={adim === n}
+                        onClick={() => setAdim(n)}
+                      />
+                    ))}
+                  </div>
+                </section>
 
-            <Button
-              variant="brand"
-              disabled={partiSayisi === 0}
-              onClick={() => {
-                setKartIndex(0);
-                setDersFazi('kart');
-                olay('egzersiz_basladi', { tip: String(adim), kapsam, kelime: partiSayisi });
-                setCalisiyor(true);
-              }}
-            >
-              {partiSayisi > 0
-                ? t('Başla ({partiSayisi} kelime)', { partiSayisi })
-                : kapsam === 'sec'
-                  ? t('Önce kelime seç')
-                  : t('Bu seçimde kelime yok')}
-            </Button>
+                <Button
+                  variant="brand"
+                  disabled={partiSayisi === 0 || kapsam === 'hizli'}
+                  onClick={() => basla(kapsam, adim)}
+                >
+                  {kapsam === 'hizli'
+                    ? t('Önce kelime grubu seç')
+                    : partiSayisi > 0
+                      ? t('Başla ({partiSayisi} kelime)', { partiSayisi })
+                      : kapsam === 'sec'
+                        ? t('Önce kelime seç')
+                        : t('Bu seçimde kelime yok')}
+                </Button>
+              </>
+            )}
           </>
         )}
       </div>
     </Screen>
+  );
+}
+
+/** Hazir secenek: tek dokunusla baslar. */
+function HazirSecenek({
+  ikon,
+  ad,
+  bos,
+  onClick,
+}: {
+  ikon: IkonAd;
+  ad: string;
+  bos: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      disabled={bos}
+      className="flex flex-col items-center gap-2 rounded-2xl bg-white px-2 py-4 text-center shadow-[var(--shadow-soft)] transition-all active:scale-[0.97] disabled:opacity-45 disabled:active:scale-100"
+    >
+      <span className="grid h-10 w-10 place-items-center rounded-xl bg-sunken">
+        <Ikon ad={ikon} className="h-6 w-6" />
+      </span>
+      <span className="text-sm font-bold leading-tight">{ad}</span>
+    </button>
   );
 }
 
