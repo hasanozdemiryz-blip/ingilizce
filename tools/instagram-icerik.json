@@ -1,0 +1,92 @@
+{
+  "_aciklama": "Instagram paylasimlari. Uretim: node tools/instagram.mjs [id]. Cikti instagram/cikti/<id>/. Sayfa tipleri: kapak, hata, ifade, kanca (kart id), son. reels: 'sayfalar' (sayfalardan dikey video) ya da 'kanca' (tek kartin kanca videosu, 'kart' alani).",
+  "etiketler": ["#ingilizce", "#ingilizceöğren", "#ingilizcekelime", "#ingilizcekelimeler", "#ingilizceöğreniyorum", "#ingilizcepratik", "#kelimeezberleme"],
+  "gonderiler": [
+    {
+      "id": "h1-1-yanlis",
+      "hafta": 1,
+      "gun": "Pazartesi",
+      "tur": "normal",
+      "format": "kaydırmalı + Reels",
+      "reels": "sayfalar",
+      "sayfalar": [
+        { "tip": "kapak", "ust": "Kaydet", "baslik": "Bunu <span class=\"vurgu\">yanlış</span> söylüyorsun", "alt": "Türkçe düşününce en sık yapılan 7 İngilizce hata" },
+        { "tip": "hata", "yanlis": "I am agree.", "dogru": "I agree.", "not": "agree zaten fiil, yanına am gelmez." },
+        { "tip": "hata", "yanlis": "I am boring.", "dogru": "I am bored.", "not": "boring: sıkıcı. bored: sıkılmış. İlki kendini kötülemek olur." },
+        { "tip": "hata", "yanlis": "Explain me.", "dogru": "Explain it to me.", "not": "explain'den sonra kişi doğrudan gelmez, to ile gelir." },
+        { "tip": "hata", "yanlis": "I am waiting you.", "dogru": "I am waiting for you.", "not": "wait birini beklerken for ister." },
+        { "tip": "hata", "yanlis": "I will go to home.", "dogru": "I will go home.", "not": "home ile to kullanılmaz: go home, come home." },
+        { "tip": "hata", "yanlis": "Open the light.", "dogru": "Turn on the light.", "not": "Işık açılmaz, yakılır: turn on / turn off." },
+        { "tip": "hata", "yanlis": "He is married with her.", "dogru": "He is married to her.", "not": "married to: biriyle evli." },
+        { "tip": "son", "baslik": "Kaydet, sonra lazım olacak.", "alt": "Kelimeleri unutmamanın yolu kanca. 15 saniyede dene.", "cta": "hafizada.com" }
+      ],
+      "aciklama": "Bunların en az birini söylemişsindir 😅\n\nTürkçe düşünüp İngilizce konuşunca en sık yapılan 7 hata. Kaydet, konuşurken aklına gelsin.\n\nHangisini yapıyordun? Yoruma yaz 👇\n\nKelimeleri ezberlemeden öğrenmek için profildeki linkten 15 saniyede dene."
+    },
+    {
+      "id": "h1-2-kafe",
+      "hafta": 1,
+      "gun": "Salı",
+      "tur": "normal",
+      "format": "kaydırmalı",
+      "sayfalar": [
+        { "tip": "kapak", "ust": "Kaydet", "baslik": "Kafede lazım olan <span class=\"vurgu\">6 cümle</span>", "alt": "Yurt dışında kahve almak artık stres değil" },
+        { "tip": "ifade", "en": "Can I get a latte, please?", "tr": "Bir latte alabilir miyim?", "ornek": "I'd like… da olur, Can I get… daha doğal." },
+        { "tip": "ifade", "en": "For here or to go?", "tr": "Burada mı, götürmek için mi?", "ornek": "Cevap: For here, please. / To go, please." },
+        { "tip": "ifade", "en": "Is this seat taken?", "tr": "Bu sandalye dolu mu?", "ornek": "Boş bir yere oturmadan önce sorulur." },
+        { "tip": "ifade", "en": "Can I pay by card?", "tr": "Kartla ödeyebilir miyim?", "ornek": "Nakit: Can I pay in cash?" },
+        { "tip": "ifade", "en": "What's the Wi-Fi password?", "tr": "Wi-Fi şifresi ne?", "ornek": "Kafede en çok sorulan soru bu olabilir." },
+        { "tip": "ifade", "en": "Could we get the bill, please?", "tr": "Hesabı alabilir miyiz?", "ornek": "Amerika'da: Could we get the check?" },
+        { "tip": "son", "baslik": "Bir sonraki kahvende dene.", "alt": "Kelimeleri kancayla öğren, ezberleme.", "cta": "hafizada.com" }
+      ],
+      "aciklama": "Yurt dışında kafeye girdin, sıra sende. Ne diyeceksin? ☕\n\nEn çok lazım olan 6 cümle, Türkçesiyle. Kaydet, gitmeden önce bir kez bak.\n\nTatile gidecek birini etiketle 👇"
+    },
+    {
+      "id": "h1-3-kisa-cevap",
+      "hafta": 1,
+      "gun": "Çarşamba",
+      "tur": "normal",
+      "format": "kaydırmalı + Reels",
+      "reels": "sayfalar",
+      "sayfalar": [
+        { "tip": "kapak", "ust": "Kaydet", "baslik": "Yerliler gibi konuş: <span class=\"vurgu\">8 kısa cevap</span>", "alt": "Hep \"yes\" ve \"OK\" demeyi bırak" },
+        { "tip": "ifade", "en": "Sure!", "tr": "Tabii!", "ornek": "Can you help me? / Sure!" },
+        { "tip": "ifade", "en": "No worries.", "tr": "Dert etme, sorun değil.", "ornek": "Sorry I'm late. / No worries." },
+        { "tip": "ifade", "en": "Fair enough.", "tr": "Mantıklı, haklısın.", "ornek": "Karşındakinin dediğini kabul ederken." },
+        { "tip": "ifade", "en": "Same here.", "tr": "Bende de öyle.", "ornek": "I'm so tired. / Same here." },
+        { "tip": "ifade", "en": "Never mind.", "tr": "Boş ver.", "ornek": "Söylediğini geri alırken ya da önemsizken." },
+        { "tip": "ifade", "en": "Got it.", "tr": "Anladım.", "ornek": "OK'den daha doğal." },
+        { "tip": "ifade", "en": "No way!", "tr": "Olamaz! Yok artık!", "ornek": "Şaşırınca: I won the lottery! / No way!" },
+        { "tip": "ifade", "en": "Good point.", "tr": "Haklısın, iyi dedin.", "ornek": "Tartışmada karşı tarafın fikrine." },
+        { "tip": "son", "baslik": "Bugün birini kullan.", "alt": "Kelime ezberlemek yerine bağla.", "cta": "hafizada.com" }
+      ],
+      "aciklama": "Her şeye \"yes\" ve \"OK\" diyorsan bunlar tam sana göre 🙌\n\nGünlük konuşmada en çok duyacağın 8 kısa cevap. Kaydet, bugün en az birini kullan.\n\nSen en çok hangisini kullanıyorsun? 👇"
+    },
+    {
+      "id": "h1-4-ev-kanca",
+      "hafta": 1,
+      "gun": "Perşembe",
+      "tur": "köprü",
+      "format": "kaydırmalı",
+      "sayfalar": [
+        { "tip": "kapak", "ust": "Ezberleme", "baslik": "Evdeki 5 eşya, <span class=\"vurgu\">5 kanca</span>", "alt": "Her kelimeyi bildiğin bir Türkçe kelimeye bağla, bir daha unutma" },
+        { "tip": "kanca", "kart": "box" },
+        { "tip": "kanca", "kart": "bucket" },
+        { "tip": "kanca", "kart": "pillow" },
+        { "tip": "kanca", "kart": "towel" },
+        { "tip": "kanca", "kart": "curtain" },
+        { "tip": "son", "baslik": "Kapat gözünü: pillow ne demekti?", "alt": "Hatırladıysan kanca tuttu. 266 kelime daha var.", "cta": "hafizada.com" }
+      ],
+      "aciklama": "Ezberleme, bağla 🧠\n\nHer İngilizce kelimeyi sesi benzeyen bir Türkçe kelimeye bağlıyoruz. Sahneyi bir kez gör, kelime yerine oturuyor.\n\nbox ≈ boks, bucket ≈ buket, pillow ≈ pilav, towel ≈ tavla, curtain ≈ kurtar\n\nYarın bu postu açmadan pillow'un ne demek olduğunu hatırlarsan yöntem işe yaradı demektir. Kaydet, yarın test et 👇\n\n266 kelime daha ücretsiz: profildeki link."
+    },
+    {
+      "id": "h1-5-sell",
+      "hafta": 1,
+      "gun": "Cumartesi",
+      "tur": "kanca",
+      "format": "Reels",
+      "reels": "kanca",
+      "kart": "sell",
+      "aciklama": "sell ≈ sel 🌊 \"Sel gelmeden evini sattı.\"\n\nsell = satmak. Bir daha unutmayacaksın.\n\nBunun gibi 266 kelime, her biri bir kanca ve bir sahneyle. Ücretsiz: profildeki link."
+    }
+  ]
+}
