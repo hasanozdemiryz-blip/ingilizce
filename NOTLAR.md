@@ -2238,7 +2238,29 @@ Her madde **ayrı commit** — beğenilmeyen tek tek `git revert <commit>`:
   gönderen işlev ve zamanlayıcı (pg_cron). Android uygulamasındaki
   yerel hatırlatma duruyor.
 
+## 2026-10-07 (öğleden sonra) — Ders akışı üç küçük değişiklik
+
+Kullanıcı istedi, onayladı:
+- **Tekrar seçimi:** öğrenme testi bitince sırada tekrar varsa ders kendiliğinden
+  tekrara geçmiyor; "Yeni kelimeler tamam! N kelime tekrar bekliyor" ekranı
+  çıkıyor → [Tekrarı yap] / [Şimdilik bitir]. Bitir derse sayılan kelimeye
+  tekrarları katmıyor; tekrarlar ana ekranda bekliyor. Olaylar:
+  `tekrara_gecildi`, `tekrar_atlandi`. "Tekrar önce" derste değişiklik yok.
+- **Soru türleri yine sıralı:** `123d9a8` (karışık sıra, `kademeliKaristir`)
+  geri alındı.
+- **Harf dizme kutuları büyük:** boyut kelime uzunluğuna göre (≤4 harf 64×72,
+  5 harf 56×64, 6 harf 48×56, 7 harf 40×56); 360px telefona sığıyor.
+- **Kelime üretme kuralları depoda:** `tools/kanca-kurallari.md` (CLAUDE.md'den
+  bağlı) — başka makinede de aynı mantıkla üretilsin.
+
+Yerelde geçici önizleme sayfasıyla denendi (1 kelimelik ders + 3 tekrar):
+harf kutuları ve seçim ekranı doğru, "Şimdilik bitir" sayımı doğru.
+
 ## Sırada
+
+### Konuşulacak: kanca satırı anlam sanılmasın
+Kartta "door ≈ dur" satırı var; kullanıcı "dur" kelimenin anlamı sanılabilir
+diye kaygılı. Ne gösterilir, nasıl ayrılır — konuşulup planlanacak.
 
 ### YARIN İLK İŞ (8 Ekim 2026, başka bilgisayarda)
 
@@ -2282,8 +2304,19 @@ Kancanın İngilizce başka kelimeye benzediği yerde dikkat: bot ayakkabı → 
 "Kedi lazeri kaybetti"). 137 cümle + 43 kanca `kart-havuzu-300.xlsx`e işlendi,
 `content/cards.json` yeniden üretildi. 69 görsel üretildi (+4 yeniden: floor,
 torch kenara taştı; rinse prenses gibi; chalk gövdesiz el), 73 × 75 = 5.475
-kredi. **Set 300/300.** Sahneler `tools/gorsel-sahneleri.json`'da. Yayın
-(iki depo push) kullanıcı onayı bekliyor.
+kredi. **Set 300/300.** Sahneler `tools/gorsel-sahneleri.json`'da. Yayında
+(7 Ekim, iki depo push'landı).
+
+**Yeni kelimeler (sıradaki):** 100 aday `yeni-kelimeler.xlsx` (veri
+`tools/yeni-kelimeler.json`, tablo `node tools/yeni-kelimeler.mjs`; setle ve kendi
+içinde çakışma denetliyor: bir kartın kancası başka kartın anlamı olamaz). 72
+güçlü, 27 orta ses benzerliği. Kullanıcı hepsini onayladı (rob: "rob" yerine
+"robot" → "Robot bankayı soydu"). Havuza 301-400 olarak eklendi (zorluk
+çoğu Kolay; sınıf ses 3 → Tutan, 2 → Kurtarılabilir), sahneler
+`tools/gorsel-sahneleri.json`'da. 100 görsel + 9 yeniden (book bükülmemiş, cow
+kavun bal gibi, hat palet, tooth ×2 dişle basmıyor, tower/tie kenara taştı, doll
+ürkütücü, rob "BANK" yazısı) = 109 × 75 = 8.175 kredi. **Set 400/400.**
+Yayın kullanıcı onayı bekliyor. Sonra Instagram (2. iş).
 
 **Adımlar:**
 1. 266 cümleyi kurala göre puanla, zayıflara yeni cümle yaz → tek tablo
