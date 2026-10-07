@@ -40,6 +40,20 @@ export function Scramble({
     setHataSayisi(0);
   }, [card.id]);
 
+  /*
+    KARO BOYUTU KELIME UZUNLUGUNA GORE. Karolar 40x48'di, harfler kucuktu
+    (7 Ekim: kullanici buyutulsun dedi). Setin yarisindan fazlasi 3-4
+    harf; onlarda en buyuk. Cevap satiri TEK satir kaldigi icin 6-7 harfte 360px
+    telefona sigacak kadar daraliyor (7 x 40px + bosluklar ~ 316px).
+  */
+  const boyut =
+    karolar.length <= 4
+      ? 'h-[4.5rem] w-16 text-4xl'
+      : karolar.length === 5
+        ? 'h-16 w-14 text-3xl'
+        : karolar.length === 6
+          ? 'h-14 w-12 text-2xl'
+          : 'h-14 w-10 text-2xl';
   const kullanildi = new Set(secili);
   const siradakiHarf = card.en[secili.length];
 
@@ -76,11 +90,11 @@ export function Scramble({
       </CardShell>
 
       {/* Yazilan: bos kutucuklar kac harf oldugunu da soyler */}
-      <div className="flex justify-center gap-1.5 min-h-[3.25rem]">
+      <div className="flex justify-center gap-1.5 min-h-[4.5rem]">
         {karolar.map((_, i) => (
           <span
             key={i}
-            className={`word grid h-12 w-10 place-items-center rounded-xl text-xl font-extrabold transition-all ${
+            className={`word grid ${boyut} place-items-center rounded-xl font-extrabold transition-all ${
               i < secili.length
                 ? 'bg-grow-soft text-[#128a5f] shadow-[var(--shadow-soft)]'
                 : 'bg-white/45 text-transparent'
@@ -91,12 +105,12 @@ export function Scramble({
         ))}
       </div>
 
-      <div className="flex flex-wrap justify-center gap-1.5">
+      <div className="flex flex-wrap justify-center gap-2">
         {karolar.map((h, i) => (
           <button
             key={i}
             onClick={() => karoyaDokun(i)}
-            className={`word grid h-12 w-10 place-items-center rounded-xl text-xl font-extrabold transition-all active:scale-90 ${
+            className={`word grid ${boyut} place-items-center rounded-xl font-extrabold transition-all active:scale-90 ${
               kullanildi.has(i)
                 ? 'bg-sunken text-transparent'
                 : hata === i
