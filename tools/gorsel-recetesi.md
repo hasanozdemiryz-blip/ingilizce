@@ -81,6 +81,9 @@ eklenir; sayı çıkabilecekse `no digits` da.
 | Nesne sahnelerinde "only the drawing style, NOT its subject" | `plain` (plan çizimi) istenince model referans snake'i aynen kopyaladı |
 | İnsana yüzü açıkça iste | "Inanimate objects have NO faces" kuralı smokinli adamın yüzünü de sildi |
 | "rapper" isteği reddedildi | "hip-hop singer" ile geçti; reddedilen istek kredi düşmüyor |
+| Zemin/ışık huzmesi isteme, ya da boyunu sınırla | 7 Ekim: `floor`'da tahta zemin, `torch`'ta el feneri huzmesi kenara taştı; "small patch … does NOT reach the edges" ile düzeldi |
+| Prens/kral → "short hair, beard, clearly a man" | `rinse`'te uzun saçlı prens prenses gibi okundu |
+| Nesneyi "kendi kendine" hareket ettir | `chalk`'ta "swirled" deyince kenardan gövdesiz el girdi; "by itself, no hands" ile düzeldi |
 
 ## Boru hattı
 

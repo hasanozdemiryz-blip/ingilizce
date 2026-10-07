@@ -1,5 +1,5 @@
 {
- "_aciklama": "Gorsel sahneleri: kart -> [sahne, zemin tonu]. 6 Ekim: 100 + 66 kart. Iskelet: tools/gorsel-recetesi.md.",
+ "_aciklama": "Gorsel sahneleri: kart -> [sahne, zemin tonu]. 6 Ekim: 100 + 66 kart. Iskelet: tools/gorsel-recetesi.md. 7 Ekim: kanca cümlesi turu, 69 kart (35 yeniden + 34 yeni).",
  "happy": [
   "A cheerful smiling young woman in a yellow t-shirt and blue jeans, full body, standing and proudly holding one big white-and-orange capsule pill above her head with both hands.",
   "peach"
@@ -53,7 +53,7 @@
   "peach"
  ],
  "slap": [
-  "Two cheerful friends, full body, one in a blue hoodie and one in an orange dress, giving each other a loud high-five with small motion lines at their hands.",
+  "Two people, full body including both feet with empty space below them: a boy in a blue hoodie gives a playful pat-slap on the back of a girl in an orange dress, and she answers by turning and slapping his cheek, small motion lines and a cartoon impact star.",
   "sky-blue"
  ],
  "pinch": [
@@ -101,7 +101,7 @@
   "cream"
  ],
  "pipe": [
-  "A long bent grey metal water pipe with a classic brown smoking pipe resting on top of it.",
+  "A classic brown smoking pipe with its stem plugged into the open end of a short grey metal water pipe, a small puff of smoke coming out of the other end of the water pipe.",
   "sky-blue"
  ],
  "dam": [
@@ -137,7 +137,7 @@
   "cream"
  ],
  "wing": [
-  "A tall yellow construction crane whose arm is shaped like a big bird wing with feathers.",
+  "A tall yellow construction crane lifting a surprised white bird into the air by holding one of its wings with the crane hook.",
   "sky-blue"
  ],
  "year": [
@@ -201,7 +201,7 @@
   "peach"
  ],
  "moon": [
-  "A crescent moon and a lit white candle side by side, the candle flame glowing softly.",
+  "A big pale yellow crescent moon with a tall white lit candle standing upright on its upper tip.",
   "lavender"
  ],
  "sad": [
@@ -289,7 +289,7 @@
   "sky-blue"
  ],
  "gem": [
-  "An open jewellery box with a big sparkling red gemstone ring inside.",
+  "A man in a yellow t-shirt and jeans, full body including both feet with empty space below them, swallowing a big sparkling red gemstone, cheeks puffed, an open empty jewellery box in his other hand.",
   "lavender"
  ],
  "steel": [
@@ -353,7 +353,7 @@
   "lavender"
  ],
  "web": [
-  "A spider web with a small friendly spider in the middle.",
+  "A friendly small spider sitting at a tiny laptop and uploading its spider web: a spider web drawn on the laptop screen, with a matching real spider web hanging beside the laptop.",
   "mint"
  ],
  "lift": [
@@ -377,7 +377,7 @@
   "mint"
  ],
  "chef": [
-  "A chef in a white uniform and tall chef hat, full body, holding a steaming pot.",
+  "Two cooks, full body including both feet with empty space below them: a head chef in a tall white chef hat shouting at a young cook in a white apron who is holding a pot, small shouting lines from the chef's mouth.",
   "cream"
  ],
  "pilot": [
@@ -453,7 +453,7 @@
   "lavender"
  ],
  "scarf": [
-  "A long striped woollen scarf hanging loosely.",
+  "A thin silk patterned headscarf tied in a knot to a long thick striped woollen winter scarf, the two hanging together.",
   "pink"
  ],
  "jacket": [
@@ -505,7 +505,7 @@
   "mint"
  ],
  "dress": [
-  "A blue summer dress with white polka dots on a hanger.",
+  "A footballer in a striped football jersey, shorts and football boots, full body including both feet with empty space below them, wearing a pink polka-dot summer dress pulled on over his jersey, looking pleased.",
   "pink"
  ],
  "heavy": [
@@ -581,7 +581,7 @@
   "sky-blue"
  ],
  "breeze": [
-  "A small tree with leaves gently blowing in a soft breeze, curved wind lines around it.",
+  "A small sailboat on a patch of blue water with its white sail puffed out by a gentle breeze, soft curved wind lines blowing into the sail.",
   "mint"
  ],
  "dim": [
@@ -621,11 +621,11 @@
   "cream"
  ],
  "pit": [
-  "A deep round hole dug in the ground with a shovel stuck in the dirt pile beside it.",
+  "A racing car in a pit lane with its front wheels fallen into a round hole in the ground, a mechanic in red overalls, full body including both feet with empty space below them, holding his head beside it.",
   "green"
  ],
  "board": [
-  "A surfboard standing upright next to a wooden chalkboard.",
+  "A man in swim shorts, full body including both feet with empty space below them, patching a crack in his surfboard by nailing a wooden plank onto it with a hammer.",
   "sky-blue"
  ],
  "term": [
@@ -649,7 +649,7 @@
   "cream"
  ],
  "valve": [
-  "A red round valve wheel on a grey pipe.",
+  "A plumber in blue overalls, full body including both feet with empty space below them, turning a red round valve wheel on a short grey pipe while a small whistling puff of steam shoots out of a valve, small sound lines.",
   "sky-blue"
  ],
  "track": [
@@ -663,5 +663,229 @@
  "skate": [
   "A pair of white roller skates next to a skateboard.",
   "pink"
+ ],
+ "cup": [
+  "A young man in a green t-shirt and jeans, full body including both feet with empty space below them, leaning forward and catching a falling white coffee cup in mid-air with one hand, small motion lines above the cup.",
+  "cream"
+ ],
+ "boat": [
+  "A small orange inflatable rubber dinghy with a paddle inside bumping its round nose into the side of a bigger wooden boat, both floating on a small patch of blue water, small star-shaped bump marks where they touch.",
+  "sky-blue"
+ ],
+ "brother": [
+  "Two brothers, full body including both feet with empty space below them: an older brother in a blue t-shirt and jeans carrying his laughing younger brother in a red t-shirt and shorts piggyback on his back.",
+  "peach"
+ ],
+ "ball": [
+  "A round soccer ball with black pentagon patches with thick golden honey dripping down over its top, a wooden honey dipper lying beside it.",
+  "yellow"
+ ],
+ "sugar": [
+  "A small old-fashioned railway station platform with a little vendor cart piled high with big white sugar cubes, a smiling vendor in a brown vest and flat cap, full body including both feet with empty space below them, standing behind the cart. No other people, no train.",
+  "cream"
+ ],
+ "candle": [
+  "A small traditional clay oil lamp with a little flame, tilted so that its flame touches and lights the wick of a tall white candle standing beside it.",
+  "cream"
+ ],
+ "cap": [
+  "A smiling man in a black graduation gown, full body including both feet with empty space below them, wearing a brown fedora hat with a black square graduation cap balanced on top of the fedora.",
+  "lavender"
+ ],
+ "button": [
+  "A surprised young woman in a white button-up shirt and jeans, full body including both feet with empty space below them, pressing a big round red push button on a small box she holds in one hand, while one button pops off her shirt and flies through the air with small motion lines.",
+  "peach"
+ ],
+ "cash": [
+  "Two people, full body including both feet with empty space below them: a customer in a blue jacket handing green paper banknotes to a smiling cheese seller in a white apron, who hands back a small cloth sack full of round white dried cheese balls.",
+  "mint"
+ ],
+ "truck": [
+  "A long red semi-trailer truck overtaking a small yellow pickup truck on a short straight piece of grey road, motion lines behind the semi-truck.",
+  "sky-blue"
+ ],
+ "team": [
+  "A tug-of-war: three people in matching green uniforms, full body including both feet with empty space below them, pulling a thick rope and winning, while three people in red uniforms at the other end of the rope tumble over.",
+  "green"
+ ],
+ "rule": [
+  "A long unrolled paper scroll hanging down from its roll, covered with neat rows of short grey wavy lines standing for written rules, a big red tick mark at the top. The scroll has no letters.",
+  "cream"
+ ],
+ "shake": [
+  "A smiling sheikh in a long white robe and a red-and-white checkered headscarf, full body including both feet with empty space below them, waving his hand hello, small motion lines around the waving hand.",
+  "peach"
+ ],
+ "anchor": [
+  "A red and gold mythical phoenix bird with long flame-like tail feathers flying upward while gripping a heavy grey ship anchor in its talons.",
+  "peach"
+ ],
+ "plate": [
+  "A gold award plaque lying on a round white dinner plate as if it were food, a fork and knife on either side of the plate.",
+  "cream"
+ ],
+ "pillow": [
+  "A fluffy white pillow with a big heap of white rice pilaf spilled all over its top, and an overturned cooking pot beside it.",
+  "lavender"
+ ],
+ "shore": [
+  "A man in bright orange shorts and a white t-shirt, full body including both feet with empty space below them, walking barefoot along a small strip of sandy shore where gentle blue waves lap at the sand.",
+  "sky-blue"
+ ],
+ "hook": [
+  "A boxer in red shorts and red boxing gloves, full body including both feet with empty space below them, throwing a hook punch at a heavy punching bag that hangs from a big curved metal hook on a small wooden frame.",
+  "mint"
+ ],
+ "gate": [
+  "A brown deer with large antlers, full body, walking through an open iron garden gate.",
+  "green"
+ ],
+ "castle": [
+  "A proud man in a blue tunic and a red cape, full body including both feet with empty space below them, puffing out his chest and strutting with his nose in the air in front of a small stone castle with two towers.",
+  "lavender"
+ ],
+ "brain": [
+  "A pink cartoon human brain wearing a knitted red woolly beanie hat with a pompom, small shivering lines around it.",
+  "sky-blue"
+ ],
+ "chew": [
+  "A man in a grey t-shirt and jeans, full body including both feet with empty space below them, sitting on a stool and chewing a big piece of raw red meat held on a fork, cheeks puffed, small chewing motion lines.",
+  "peach"
+ ],
+ "early": [
+  "A young soldier in a green army uniform and cap, full body including both feet with empty space below them, stretching and yawning as he gets up early, a small rising sun behind him and a small alarm clock on the ground beside him. The clock has no digits.",
+  "cream"
+ ],
+ "floor": [
+  "A young flirting couple dancing, full body including both feet with empty space below them: the man in a blue shirt slips and falls onto a shiny wooden floor with small motion lines, the woman in a red dress reaching out to him.",
+  "peach"
+ ],
+ "lose": [
+  "An orange cat sitting and looking around confused, searching for a small red laser dot that has vanished, a small laser pointer lying on the ground beside it.",
+  "yellow"
+ ],
+ "room": [
+  "A cutaway view of a small bedroom box with a bed, a rug and a window, and a cheerful older woman in a blue dress and white apron, full body including both feet with empty space below them, bursting in through its open door carrying a tray of cookies.",
+  "lavender"
+ ],
+ "sponge": [
+  "A woman in a yellow t-shirt and apron, full body including both feet with empty space below them, washing a big bunch of green spinach leaves with a yellow kitchen sponge over a small round washbasin.",
+  "mint"
+ ],
+ "switch": [
+  "A boy in a red t-shirt and shorts, full body including both feet with empty space below them, pressing the button of a small water dispenser with one hand while drinking water from a cup in his other hand.",
+  "sky-blue"
+ ],
+ "torch": [
+  "A brown cloth sack bag glowing from inside, a bright yellow flashlight beam shining out of its open top.",
+  "cream"
+ ],
+ "mop": [
+  "A man in a helmet and blue overalls, full body including both feet with empty space below them, riding a small red moped with a mop attached to its back, mopping the ground behind it and leaving a wet shiny trail.",
+  "mint"
+ ],
+ "wipe": [
+  "A surprised woman in a green shirt and jeans, full body including both feet with empty space below them, quickly wiping a spilled drink off a small table with a cloth, small motion lines and splash drops.",
+  "peach"
+ ],
+ "carrot": [
+  "A karate fighter in a white karate uniform with a black belt, full body including both feet with empty space below them, chopping a big orange carrot in half with a karate chop, the two halves flying apart.",
+  "peach"
+ ],
+ "mug": [
+  "A caveman in a brown fur tunic, full body including both feet with empty space below them, standing at the entrance of a small rocky cave and drinking water from a big white mug.",
+  "cream"
+ ],
+ "spice": [
+  "A woman wrapped in a white towel lying face down on a spa massage table while a masseur in a white uniform, full body including both feet with empty space below them, rubs colourful red and yellow spice powder on her back, small spice jars beside the table.",
+  "peach"
+ ],
+ "nerve": [
+  "A furious man in a blue shirt and jeans, full body including both feet with empty space below them, red-faced with steam puffing from his ears, his head spinning round with circular motion lines and little red zigzag nerve lines around it.",
+  "pink"
+ ],
+ "blink": [
+  "A man in a blue shirt and jeans, full body including both feet with empty space below them, sitting up on the ground after fainting, coming round and blinking one eye open, small stars circling above his head.",
+  "sky-blue"
+ ],
+ "crop": [
+  "A farmer in a straw hat and blue overalls, full body including both feet with empty space below them, cutting golden wheat crops with a curved sickle, a small bundle of cut wheat beside him.",
+  "green"
+ ],
+ "mist": [
+  "A boy in a yellow raincoat, full body including both feet with empty space below them, bending down searching for a lost glass marble in soft white mist swirling around his legs, one shiny marble just visible near his foot.",
+  "sky-blue"
+ ],
+ "rinse": [
+  "A prince with a golden crown and a blue royal outfit, full body including both feet with empty space below them, kneeling beside a small basin and rinsing his long hair with water poured from a jug.",
+  "lavender"
+ ],
+ "shave": [
+  "A man in a white t-shirt and jeans, full body including both feet with empty space below them, eagerly and happily shaving his foamy face with a razor in front of a small hand mirror, small sparkle lines of enthusiasm.",
+  "cream"
+ ],
+ "drag": [
+  "A strong man in a red t-shirt and jeans, full body including both feet with empty space below them, dragging a heavy wooden pole along the ground with a rope over his shoulder, small dust clouds behind it.",
+  "cream"
+ ],
+ "scratch": [
+  "A small child in yellow dungarees, full body including both feet with empty space below them, in a nursery scratching lines into a small free-standing wall panel with a toy, building blocks scattered on the floor.",
+  "peach"
+ ],
+ "scan": [
+  "A man in a suit, full body including both feet with empty space below them, scanning secret documents from a red folder on a flatbed scanner on a small table, a bright green scanning light line. The papers are blank.",
+  "lavender"
+ ],
+ "mob": [
+  "An angry crowd of four people in casual clothes, full body including both feet with empty space below them, carrying off furniture: an armchair, a floor lamp and a small table, with motion lines.",
+  "cream"
+ ],
+ "troop": [
+  "Four soldiers in green uniforms, full body including both feet with empty space below them, pulling huge white radishes out of a small field patch together.",
+  "green"
+ ],
+ "spare": [
+  "A man in a green jacket, full body including both feet with empty space below them, kneeling beside a small camping stove and opening a spare bottle of blue spirit fuel, an empty fuel bottle lying beside the stove. The bottles have no labels.",
+  "mint"
+ ],
+ "brand": [
+  "A worker in blue overalls, full body including both feet with empty space below them, painting a big simple red star logo onto a large green tarpaulin canvas sheet lying on the ground.",
+  "cream"
+ ],
+ "profit": [
+  "A smiling man in a suit, full body including both feet with empty space below them, pouring gold coins from a money bag into a big bowl of profiteroles covered in chocolate sauce.",
+  "peach"
+ ],
+ "curve": [
+  "A small red car slowing down at a sharp blind bend of a short grey road that curves behind a big rock, a yellow diamond warning sign with a curved arrow beside the road.",
+  "sky-blue"
+ ],
+ "brake": [
+  "A woman in a red racing suit and helmet, sitting in a small go-kart, braking hard, the kart skidding with small tyre marks and motion lines.",
+  "yellow"
+ ],
+ "deck": [
+  "A sailor in a white uniform, full body including both feet with empty space below them, slipping on a wet shiny wooden ship deck, a yellow wet-floor warning cone beside him.",
+  "sky-blue"
+ ],
+ "dock": [
+  "A small white boat gently touching a short wooden dock pier, a rope looped around a wooden post on the dock.",
+  "mint"
+ ],
+ "chalk": [
+  "A stick of white chalk being swirled in a clear glass of water, the water turning cloudy white, small motion lines around the glass.",
+  "cream"
+ ],
+ "blade": [
+  "A man in a leather apron, full body including both feet with empty space below them, sharpening the blade of a big knife on a round grinding stone wheel, small sparks flying.",
+  "cream"
+ ],
+ "race": [
+  "A sea captain with a white beard and a captain's cap, full body including both feet with empty space below them, winning a running race, breaking the finish tape with his chest, arms raised.",
+  "peach"
+ ],
+ "referee": [
+  "A football referee in a black kit with a whistle, full body including both feet with empty space below them, walking calmly while a police officer in a blue uniform escorts him at his side.",
+  "yellow"
  ]
 }

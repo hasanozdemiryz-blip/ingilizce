@@ -2267,6 +2267,24 @@ benzetmesi** (17'si G). Örnek öneriler (onaylanmadı):
 | pinch ≈ pençe | Pençe gibi çimdikler | Kedi pençesiyle kolumu çimdikledi |
 | cup ≈ kap | Kap = fincan | Fincan kabın içine düşmüş |
 
+**Durum (7 Ekim, Mac):** 1. adım yapıldı → `kanca-cumleleri.xlsx` (puanlar ve
+öneriler `tools/kanca-cumleleri.json`, tablo `node tools/kanca-cumleleri.mjs`;
+elle yazılan kararlar yeniden üretimde taşınır). İlk turda 204 öneri vardı;
+kullanıcı "çok dağıttın" dedi ("Şort kısa" zaten iyi, fazladan öğe ekleme).
+İkinci tur az dokunuşla yapıldı. Üçüncü turda "X bir Y" tanım cümleleri sahneye
+çevrildi (kullanıcı: "Bot küçük bir tekne" zayıf → "Botla tekneye çarptık";
+görsel maliyeti ölçüt değil). Görselsiz 34 kart da aynı mantıkla tabloya
+eklendi (öncelik 0, en üstte; çoğuna yeni gerçek-kelime kanca). Son hal: 300 kart,
+137 öneri (35 yeniden + 34 ilk kez çizilecek görsel).
+Öneriler kısa: kanca + anlam + tek fiil, birbirine bir şey yapıyorlar.
+Kancanın İngilizce başka kelimeye benzediği yerde dikkat: bot ayakkabı → "boot".
+**1. iş BİTTİ (7 Ekim):** kullanıcı hepsini onayladı (lose: luzer → lazer,
+"Kedi lazeri kaybetti"). 137 cümle + 43 kanca `kart-havuzu-300.xlsx`e işlendi,
+`content/cards.json` yeniden üretildi. 69 görsel üretildi (+4 yeniden: floor,
+torch kenara taştı; rinse prenses gibi; chalk gövdesiz el), 73 × 75 = 5.475
+kredi. **Set 300/300.** Sahneler `tools/gorsel-sahneleri.json`'da. Yayın
+(iki depo push) kullanıcı onayı bekliyor.
+
 **Adımlar:**
 1. 266 cümleyi kurala göre puanla, zayıflara yeni cümle yaz → tek tablo
    (xlsx, `kart-inceleme.xlsx` gibi) → **kullanıcı onaylar**. Ücretsiz.
@@ -2274,7 +2292,7 @@ benzetmesi** (17'si G). Örnek öneriler (onaylanmadı):
    → `content/cards.json`.
 3. Cümlesi değişen kartın görseli sahneyle uyuşmaz → yeniden üretim.
    **Görsel üretimi kilitli: kullanıcı ayrıca onay vermeden üretilmez.**
-   ~30 kredi/görsel (6 Ekim: 166 görsel ≈ 5.100 kredi); 100 kart ≈ 3.000.
+   75 kredi/görsel (simulate_cost kesin; eski "~30" notu hesap hatasıydı: 5.100 kredi 66 görseldi).
    Bakiye 146.052. Akış `tools/gorsel-recetesi.md`'de.
 4. Sıra: önce ilk derslerde çıkan kartlar ve "=" kalıbındaki gerçek kancalar
    (cup, road…), sonra "gibi"ler, en son tanıdık (O) kelimeler.
