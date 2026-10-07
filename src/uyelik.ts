@@ -81,7 +81,19 @@ function baglantidanDonuldu(): boolean {
  * dolmussa SDK sonradan oturumu kapatiyor ve arayuz kendiliginden
  * "girisli degil" haline doner.
  */
-export const oturumVarGibi = (): boolean => depodaOturumVar();
+export const oturumVarGibi = (): boolean => depodaOturumVar() || acilistaDonus;
+
+/**
+ * Acilista giris baglantisindan (Google, e-posta) mi donuldu — MODUL
+ * YUKLENIRKEN okunuyor; SDK kodu isleyince adresi temizliyor.
+ *
+ * 7 Ekim hatasi: Google'dan `/ingilizce/?code=...` ile donen kullanici, SDK
+ * kodu oturuma cevirene kadar "girissiz" gorunuyordu; karsilama kurali
+ * (bkz. karsilama.ts) onu o arada tanitim sayfasina yolluyor, kod yarim
+ * kaliyor ve giris hic tamamlanmiyordu. Bu bayrak `oturumVarGibi`ye
+ * katildigi icin App, SDK hazir olana kadar bekleme ekraninda kaliyor.
+ */
+const acilistaDonus = baglantidanDonuldu();
 
 /**
  * Sifre sifirlama baglantisindan mi donuldu.

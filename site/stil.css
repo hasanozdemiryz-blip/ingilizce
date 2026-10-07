@@ -133,6 +133,9 @@ nav.baglar a:hover { color: #fff; }
 .slayt .an { font-family: var(--d); font-weight: 800; font-size: 1.05rem; color: var(--lacivert); margin: 0; }
 .slayt .sure { font-size: .88rem; color: var(--soft); margin: 2px 0 0; }
 .kanca-rozet { background: var(--sari); border: 2px solid var(--lacivert); border-radius: 999px; padding: 3px 12px; font-family: var(--d); font-weight: 800; font-size: .92rem; }
+/* 7 Ekim: kanca anlam sanilmasin — rozet ne oldugunu soyluyor (uygulamadaki "CAGRISIM" basligi) */
+.kanca-rozet::before { content: 'çağrışım'; font-size: .62em; letter-spacing: .1em; text-transform: uppercase; opacity: .65; margin-right: 7px; vertical-align: 1px; }
+html[lang="en"] .kanca-rozet::before { content: 'memory hook'; }
 
 .gosteri .etiket { position: absolute; top: -16px; left: 16px; background: var(--lacivert); color: var(--sari); font-family: var(--d); font-weight: 800; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; padding: 7px 16px; border-radius: 999px; z-index: 2; }
 .noktalar { display: flex; justify-content: center; gap: 9px; margin-top: 18px; }
@@ -269,7 +272,9 @@ footer a:hover { color: #fff; }
 
 @media (max-width: 860px) {
   .menu-dugme { display: inline-block; }
-  .ust-sag .dil, .ust-sag .ust-giris { display: none; }
+  /* Telefonda ustte "Giris yap" (7 Ekim): "Hemen basla" zaten sayfada asagida */
+  .ust-sag .dil, .ust-sag .ust-cta { display: none; }
+  .ust-sag .ust-giris { color: #fff; border: 2px solid #cbd5e5; border-radius: 999px; padding: 6px 14px; font-size: .9rem; }
   .ust-sag { gap: 10px; }
   header .kap { gap: 10px; }
   .ust-cta .btn { padding: 8px 14px; font-size: .9rem; }

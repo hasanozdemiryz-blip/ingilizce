@@ -285,11 +285,12 @@ export function SpeakButton({
   size = 'normal',
 }: {
   word: string;
-  size?: 'normal' | 'small';
+  size?: 'normal' | 'small' | 'mini';
 }) {
   const sesVar = useTelaffuz();
   if (!sesVar) return null;
   const kucuk = size === 'small';
+  const mini = size === 'mini';
   return (
     <button
       type="button"
@@ -299,10 +300,10 @@ export function SpeakButton({
         seslendir(word);
       }}
       className={`shrink-0 inline-flex items-center justify-center rounded-full bg-sunken transition-all active:scale-90 hover:bg-brand-soft ${
-        kucuk ? 'h-11 w-11' : 'h-14 w-14'
+        mini ? 'h-8 w-8' : kucuk ? 'h-11 w-11' : 'h-14 w-14'
       }`}
     >
-      <Ikon ad="ses" className={kucuk ? 'h-6 w-6' : 'h-8 w-8'} />
+      <Ikon ad="ses" className={mini ? 'h-4 w-4' : kucuk ? 'h-6 w-6' : 'h-8 w-8'} />
     </button>
   );
 }

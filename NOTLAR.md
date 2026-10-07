@@ -2326,6 +2326,24 @@ Bugün yapılanlar (sırayla, commit'leriyle):
 - Soru/cevap ekranında görsel artık kırpılmıyor (16:9 + cover yerine
   %75 genişlikte 4:3; yükseklik aynı)
 
+- Akşam son tur (kullanıcı istedi):
+  - **Google ile giriş hatası düzeltildi:** tanıtım sayfasından "Giriş yap" →
+    Google → `/ingilizce/?code=...` dönüşünde uygulama SDK kodu oturuma
+    çevirmeden kullanıcıyı "girişsiz" sanıp karşılama kuralıyla
+    (`karsilama.ts`, sabah eklenen) tanıtım sayfasına yolluyordu; giriş
+    hiç tamamlanmıyordu. `uyelik.ts` `acilistaDonus` bayrağı artık
+    `oturumVarGibi`ye katılıyor → SDK hazır olana kadar bekleme ekranı.
+    **Canlıda bir kez dene** (gizli pencerede hafizada.com → Giriş yap →
+    Google). Hâlâ siteye atarsa ikinci şüpheli: Supabase → Auth → URL
+    Configuration'da `https://hafizada.com/ingilizce/` izinli dönüş
+    adreslerinde yoksa Supabase Site URL'ye (kök) atar.
+  - Kartta kelime + küçük hoparlör + anlam tek satırda ("friend 🔊 arkadaş"),
+    tanışma ve cevap kartında (`CardFace.tsx` `KelimeSatiri`).
+  - Egzersiz "Kendin seç": tam genişlik beyaz kart, belirgin ▾ ok.
+  - Site: telefonda üst menüde "Hemen başla" yerine "Giriş yap" (çerçeveli);
+    sarı kanca rozetinin başında "ÇAĞRIŞIM" (EN: "MEMORY HOOK") — mini ders,
+    "Kanca nasıl bir şey?" kartları ve kelime sayfalarında (`site/stil.css`).
+
 **Kayıtlı hesap (7 Ekim):** 4 (biri kullanıcının kendisi; dışarıdan 3,
 hepsi Google, kayıttan sonra tekrar girmemiş). Girişsiz kullananlar sayılmıyor.
 

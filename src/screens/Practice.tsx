@@ -559,11 +559,18 @@ export function Practice({
             <button
               onClick={() => setAyrinti(!ayrinti)}
               aria-expanded={ayrinti}
-              className="mt-1 flex items-center justify-between rounded-2xl px-1 py-2 text-sm font-bold text-ink-soft"
+              /*
+                7 Ekim: kucuk gri yazi + "›" acilir menu oldugunu belli
+                etmiyordu. Simdi tam genislikte beyaz kart, belirgin ok.
+              */
+              className="mt-1 flex w-full items-center justify-between rounded-2xl bg-white px-4 py-4 text-base font-extrabold text-ink shadow-[var(--shadow-soft)] transition-all active:scale-[0.99]"
             >
               <span>{t('Kendin seç')}</span>
-              <span aria-hidden className={`transition-transform ${ayrinti ? 'rotate-90' : ''}`}>
-                ›
+              <span
+                aria-hidden
+                className={`grid h-8 w-8 place-items-center rounded-full bg-sunken text-lg leading-none transition-transform ${ayrinti ? 'rotate-180' : ''}`}
+              >
+                ▾
               </span>
             </button>
 

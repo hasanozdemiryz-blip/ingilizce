@@ -27,11 +27,7 @@ export function LearnFace({ card, sesli = false }: { card: Card; sesli?: boolean
     <CardShell className="w-full">
       <CardVisual card={card} />
       <div className="flex flex-col items-center gap-3 pt-5">
-        <div className="flex items-center gap-3">
-          <p className="word text-[2.75rem] leading-none font-extrabold">{card.en}</p>
-          <SpeakButton word={card.en} size="small" />
-        </div>
-        <p className="word text-xl leading-none font-semibold text-ink-soft">{card.tr}</p>
+        <KelimeSatiri card={card} />
         <HookChip big>
           {card.en} ≈ {card.hook}
         </HookChip>
@@ -108,16 +104,27 @@ export function AnswerFace({ card }: { card: Card }) {
         <CardVisual card={card} size="compact" />
       </div>
       <div className="flex flex-col items-center gap-3 pt-5">
-        <div className="flex items-center gap-2.5">
-          <p className="word text-xl leading-none font-semibold text-ink-faint">{card.en}</p>
-          <SpeakButton word={card.en} size="small" />
-        </div>
-        <p className="word text-[2.5rem] leading-none font-extrabold text-center">{card.tr}</p>
+        <KelimeSatiri card={card} />
         <HookChip>
           {card.en} ≈ {card.hook}
         </HookChip>
         <p className="text-center text-ink-soft leading-relaxed max-w-[30ch]">“{card.sentence}”</p>
       </div>
     </CardShell>
+  );
+}
+
+/**
+ * Kelime + anlam TEK SATIRDA, aralarinda kucuk hoparlor: "door 🔊 kapi".
+ * 7 Ekim (kullanici istegi): anlam ayri satirda ve gri durunca kancanin
+ * (sari "door ≈ dur") altinda kayboluyordu. Uzun anlamlarda satir kirilir.
+ */
+function KelimeSatiri({ card }: { card: Card }) {
+  return (
+    <div className="flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 px-2 text-center">
+      <p className="word text-[2.25rem] leading-none font-extrabold">{card.en}</p>
+      <SpeakButton word={card.en} size="mini" />
+      <p className="word text-[1.9rem] leading-none font-extrabold text-ink-soft">{card.tr}</p>
+    </div>
   );
 }
