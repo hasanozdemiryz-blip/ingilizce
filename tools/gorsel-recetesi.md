@@ -84,6 +84,10 @@ eklenir; sayı çıkabilecekse `no digits` da.
 | Zemin/ışık huzmesi isteme, ya da boyunu sınırla | 7 Ekim: `floor`'da tahta zemin, `torch`'ta el feneri huzmesi kenara taştı; "small patch … does NOT reach the edges" ile düzeldi |
 | Prens/kral → "short hair, beard, clearly a man" | `rinse`'te uzun saçlı prens prenses gibi okundu |
 | Nesneyi "kendi kendine" hareket ettir | `chalk`'ta "swirled" deyince kenardan gövdesiz el girdi; "by itself, no hands" ile düzeldi |
+| Eylemi vücut bölümüne zorla | `tooth`'ta "dişiyle tuşa bas" iki kez elle yazdı; "hands tied behind his back" ile düzeldi. `book`'ta "bending" tutmaya döndü; "visibly bent into a deep U shape" gerekti |
+| Bina/tabela isteme ya da "NO sign" yaz | `rob`'da banka binasına "BANK" yazdı |
+| Meyveyi tanımla | `cow`'da "yellow melon" bal peteğine benzedi; "striped rind, orange flesh, seeds" ile düzeldi |
+| Ağaç/direk kısa olsun | `tie`'da ağaç üst kenara dayandı; "small sapling, fully visible" ile düzeldi |
 
 ## Boru hattı
 

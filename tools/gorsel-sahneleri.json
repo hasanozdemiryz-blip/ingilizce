@@ -887,5 +887,405 @@
  "referee": [
   "A football referee in a black kit with a whistle, full body including both feet with empty space below them, walking calmly while a police officer in a blue uniform escorts him at his side.",
   "yellow"
+ ],
+ "dog": [
+  "A happy brown dog, full body, climbing up the slope of a small rocky mountain peak.",
+  "green"
+ ],
+ "money": [
+  "A folk poet in a waistcoat and flat cap, full body including both feet with empty space below them, reciting a poem with one hand raised while green paper banknotes are tossed to him and flutter down around his feet.",
+  "peach"
+ ],
+ "friend": [
+  "Two friends, full body including both feet with empty space below them: a boy in a green t-shirt handing his smiling friend in a blue t-shirt a small bowl of shiny redcurrant berries.",
+  "mint"
+ ],
+ "face": [
+  "A surprised man in a white shirt and jeans, full body including both feet with empty space below them, a red fez with a black tassel dropping from above and landing over his face.",
+  "peach"
+ ],
+ "hand": [
+  "A man in a striped shirt and jeans climbing out of a shallow ditch dug in the ground, shown in cut-away so his full body is visible, reaching one hand up over the edge of the ditch.",
+  "cream"
+ ],
+ "name": [
+  "A girl in a yellow sweater, full body including both feet with empty space below them, drawing loopy squiggle lines with her finger in the condensation on a small misty window pane. The squiggles are not real letters.",
+  "sky-blue"
+ ],
+ "book": [
+  "A strong man in a red t-shirt and jeans, full body including both feet with empty space below them, bending a thick hardcover book in half with both hands.",
+  "cream"
+ ],
+ "bed": [
+  "A bed with a big red gift bow on it, and three people in pyjamas, full body, happily jumping onto the bed all at once.",
+  "lavender"
+ ],
+ "chair": [
+  "A wooden chair with a tipped-over tulip-shaped glass of red Turkish tea spilling onto its seat, a small saucer beside it.",
+  "cream"
+ ],
+ "wall": [
+  "A boy in sports clothes, full body including both feet with empty space below them, playing volleyball alone by hitting a white volleyball against a short free-standing brick wall.",
+  "mint"
+ ],
+ "girl": [
+  "A girl in a yellow dress, full body including both feet with empty space below them, smelling a big red rose with her eyes closed.",
+  "pink"
+ ],
+ "bus": [
+  "A small red car speeding to catch up with a green city bus on a short piece of grey road, motion lines behind the car.",
+  "yellow"
+ ],
+ "town": [
+  "A cut-away view of a small room box with a tiny miniature town of little colourful houses hanging upside down from its ceiling, and a surprised man in pyjamas, full body, looking up at it.",
+  "lavender"
+ ],
+ "rain": [
+  "A reindeer with big antlers, full body, standing soaked in the rain, raindrops falling from a small grey cloud above it.",
+  "sky-blue"
+ ],
+ "fire": [
+  "A small campfire burning on a square patch of white ceramic floor tiles, the tiles cracking from the heat with small crack lines.",
+  "peach"
+ ],
+ "ice": [
+  "A metal bucket of water frozen solid into ice, icy wind lines blowing around it and small snowflakes.",
+  "sky-blue"
+ ],
+ "shop": [
+  "A clumsy goofy shopkeeper in an apron, full body including both feet with empty space below them, tripping over and knocking over his small fruit stall, apples and boxes tumbling.",
+  "cream"
+ ],
+ "job": [
+  "A nervous job applicant in a suit and tie, full body including both feet with empty space below them, arriving at a job interview holding a black police baton instead of a briefcase.",
+  "lavender"
+ ],
+ "boss": [
+  "An empty big black leather executive office chair behind a wooden desk, a steaming coffee mug left on the desk.",
+  "cream"
+ ],
+ "pay": [
+  "Three friends, full body including both feet with empty space below them, standing around a small table with a round pizza, each dropping coins into a jar to pay for his own slice.",
+  "mint"
+ ],
+ "take": [
+  "A boy in a red t-shirt, full body including both feet with empty space below them, taking a single slice from a whole round cake on a small table.",
+  "yellow"
+ ],
+ "send": [
+  "A man in a suit, full body including both feet with empty space below them, posting an envelope with a document sticking out of it into a red post box. The document is blank.",
+  "cream"
+ ],
+ "help": [
+  "Two people, full body including both feet with empty space below them: a woman stirring a big pot of halva with a wooden spoon and a man helping her by holding the pot steady.",
+  "peach"
+ ],
+ "find": [
+  "A happy squirrel, full body, finding a lost hazelnut under a leaf and holding it up proudly.",
+  "green"
+ ],
+ "clean": [
+  "A woman in an apron, full body including both feet with empty space below them, cleaning a colourful patterned kilim rug with a big brush, small dust puffs.",
+  "peach"
+ ],
+ "sleep": [
+  "A man in boxer shorts and a white vest, full body, fast asleep on a sofa, small round sleep bubbles above him.",
+  "lavender"
+ ],
+ "catch": [
+  "A man in a blue shirt and jeans, full body including both feet with empty space below them, running away while a big friendly dog chases him trying to catch him, motion lines.",
+  "green"
+ ],
+ "fall": [
+  "A fortune teller in a headscarf and long skirt, full body, reading coffee grounds in a small cup and falling backwards off her stool in surprise, motion lines.",
+  "lavender"
+ ],
+ "count": [
+  "A nobleman count in a dark cape with a ruffled collar, full body including both feet with empty space below them, sitting at a small table counting a pile of gold coins.",
+  "cream"
+ ],
+ "wish": [
+  "A girl in a pink dress, full body including both feet with empty space below them, holding a bowl of dark red sour cherries, eyes closed making a wish, a small sparkle above her.",
+  "pink"
+ ],
+ "hungry": [
+  "A hungry pilot in a uniform and cap, full body including both feet with empty space below them, holding his stomach and searching for food inside a small arched aircraft hangar.",
+  "sky-blue"
+ ],
+ "busy": [
+  "Two busy office workers, full body including both feet with empty space below them, typing and talking on the phone at a desk piled with papers, one holding up a palm as if saying do not disturb. The papers are blank.",
+  "lavender"
+ ],
+ "young": [
+  "A young firefighter in a yellow helmet and uniform, full body including both feet with empty space below them, spraying water from a hose onto a small burning house.",
+  "peach"
+ ],
+ "kind": [
+  "A smiling older woman in a floral dress and headscarf, full body including both feet with empty space below them, kindly offering a plate of cookies to a surprised young bride in a white dress.",
+  "pink"
+ ],
+ "lazy": [
+  "A lazy fat cat lying on a cushion, too lazy to get up, a delicious fish on a plate just out of its reach.",
+  "yellow"
+ ],
+ "wet": [
+  "A veterinarian in a white coat, full body including both feet with empty space below them, drying a soaking wet dog with a towel, water drops flying.",
+  "sky-blue"
+ ],
+ "loud": [
+  "A man in a waistcoat, full body including both feet with empty space below them, playing a long-necked lute so loudly that big curved sound lines blast out of it.",
+  "cream"
+ ],
+ "sour": [
+  "A man in a green shirt and jeans, full body including both feet with empty space below them, making a sour face and flinging a lemon away after tasting it, motion lines.",
+  "yellow"
+ ],
+ "fast": [
+  "Two Turkish folk musicians, full body including both feet with empty space below them, playing a saz and a darbuka drum very fast, motion lines around their hands.",
+  "peach"
+ ],
+ "apple": [
+  "A puzzled boy with a blank open-mouthed stare, full body including both feet with empty space below them, staring at a big red apple floating in front of him.",
+  "green"
+ ],
+ "egg": [
+  "A man in an apron, full body including both feet with empty space below them, filing a white egg with a metal hand file, small eggshell dust.",
+  "cream"
+ ],
+ "rice": [
+  "A small cloth sack of white rice spilling its grains onto a short stretch of railway track.",
+  "cream"
+ ],
+ "soup": [
+  "A cook in an apron, full body including both feet with empty space below them, stirring a big pot of soup with a broom instead of a spoon.",
+  "peach"
+ ],
+ "oil": [
+  "A man in a blue shirt, full body including both feet with empty space below them, dropping a bottle of yellow cooking oil into a clear ballot box. The bottle has no label.",
+  "mint"
+ ],
+ "knife": [
+  "A craftsman in a vest, full body including both feet with empty space below them, carving a long reed flute with a small knife, wood shavings falling.",
+  "cream"
+ ],
+ "cow": [
+  "A black and white cow, full body, happily eating a big yellow melon, juice dripping.",
+  "green"
+ ],
+ "horse": [
+  "A proud rooster riding on the back of a brown horse, both full body.",
+  "green"
+ ],
+ "sheep": [
+  "A photographer in a vest, full body including both feet with empty space below them, taking a quick photo of a fluffy white sheep, an instant photo popping out of the camera.",
+  "mint"
+ ],
+ "ant": [
+  "Five small ants standing in a circle with their front legs raised and touching in the middle, as if swearing an oath together.",
+  "green"
+ ],
+ "owl": [
+  "A brown owl landing in a small square stone-paved courtyard with a little fountain.",
+  "lavender"
+ ],
+ "tooth": [
+  "A smiling man in a sweater, full body including both feet with empty space below them, bending over and pressing a big keyboard key with his front teeth.",
+  "sky-blue"
+ ],
+ "cheek": [
+  "A girl in a blue dress, full body including both feet with empty space below them, holding a chocolate bar, a big smear of chocolate on her cheek.",
+  "peach"
+ ],
+ "body": [
+  "A short stocky man in a gym tank top and shorts, full body including both feet with empty space below them, proudly flexing big muscles while holding dumbbells.",
+  "yellow"
+ ],
+ "roof": [
+  "A friendly white cartoon ghost floating over the roof of a small house.",
+  "lavender"
+ ],
+ "lake": [
+  "A small round blue lake with a big black ink stain spreading on its surface, an ink bottle tipped over on the shore.",
+  "sky-blue"
+ ],
+ "hat": [
+  "A calligrapher in a traditional robe, full body including both feet with empty space below them, painting swirling decorative patterns on his own brimmed hat with a reed pen. The patterns are not letters.",
+  "cream"
+ ],
+ "ring": [
+  "A boxer in red gloves and shorts, full body, kneeling inside a small boxing ring and searching for a gold ring he dropped on the canvas.",
+  "mint"
+ ],
+ "boot": [
+  "A woman in a red dress, full body including both feet with empty space below them, pulling a tall brown leather boot all the way up to her thigh.",
+  "peach"
+ ],
+ "toy": [
+  "A clumsy little boy in dungarees, full body including both feet with empty space below them, accidentally breaking his toy car, a wheel falling off.",
+  "yellow"
+ ],
+ "doll": [
+  "A toy doll with button eyes sitting at a tiny table, eating stuffed grape leaves from a small plate with a fork.",
+  "pink"
+ ],
+ "mirror": [
+  "An old grandfather, full body including both feet with empty space below them, handing an antique framed mirror to his grandson as an inheritance.",
+  "lavender"
+ ],
+ "soap": [
+  "A man in a t-shirt and jeans, full body including both feet with empty space below them, hitting a bar of soap with a wooden stick, soap bubbles flying.",
+  "sky-blue"
+ ],
+ "tent": [
+  "A small camping tent with a striped awning stretched over its top.",
+  "green"
+ ],
+ "tower": [
+  "A tall stone tower with a big black frying pan placed on its top.",
+  "cream"
+ ],
+ "lock": [
+  "A big padlock with a small round fried dough ball stuck in its keyhole.",
+  "cream"
+ ],
+ "hammer": [
+  "A baker in an apron and white hat, full body including both feet with empty space below them, pounding a lump of dough with a hammer.",
+  "peach"
+ ],
+ "cage": [
+  "A birdcage covered with a thick red felt cloth, a small yellow bird peeking out from under it.",
+  "pink"
+ ],
+ "tail": [
+  "A tailor in a waistcoat, full body including both feet with empty space below them, sewing big loose basting stitches along the tail of a patient sitting cat with needle and thread.",
+  "lavender"
+ ],
+ "hide": [
+  "A girl in a yellow dress, full body including both feet with empty space below them, looking for a cat that is hiding behind a curtain, only the cat's tail and eyes peeking out.",
+  "peach"
+ ],
+ "tie": [
+  "A boy in a red t-shirt, full body including both feet with empty space below them, tying a young foal to a small tree with a rope.",
+  "green"
+ ],
+ "dig": [
+  "A man in overalls, full body including both feet with empty space below them, digging a deep vertical hole with a shovel, a pile of soil beside it.",
+  "cream"
+ ],
+ "melt": [
+  "An ice cream cone melting in a gentle breeze, curved wind lines blowing across it and drips falling.",
+  "mint"
+ ],
+ "cook": [
+  "A grey cuckoo bird wearing a small white chef hat cooking in a little pot on a small stove.",
+  "yellow"
+ ],
+ "middle": [
+  "A big mussel cut exactly in half down the middle, the two halves lying on a plate.",
+  "sky-blue"
+ ],
+ "shell": [
+  "A small waterfall pouring down over rocks, with seashells tumbling down in the falling water.",
+  "sky-blue"
+ ],
+ "hunt": [
+  "A clumsy heavy hunter in a green jacket and hat, full body including both feet with empty space below them, tripping over his own feet while a rabbit escapes.",
+  "green"
+ ],
+ "dinner": [
+  "A man in a suit, full body including both feet with empty space below them, sitting at a dinner table and paying with old gold coins.",
+  "cream"
+ ],
+ "prize": [
+  "A gold trophy cup with an electric cord plugged into a power socket on a small free-standing panel, the trophy glowing.",
+  "yellow"
+ ],
+ "wallet": [
+  "A shocked man in a shirt and jeans, full body including both feet with empty space below them, opening his completely empty wallet, a small moth flying out of it.",
+  "cream"
+ ],
+ "fog": [
+  "A grey seal poking its head out of a thick white fog bank.",
+  "sky-blue"
+ ],
+ "port": [
+  "A small cargo boat loaded with oranges docking at a short harbour pier.",
+  "peach"
+ ],
+ "sailor": [
+  "A street vendor with a small cart of sesame bagels, full body including both feet with empty space below them, selling a bagel to a sailor in a white uniform.",
+  "sky-blue"
+ ],
+ "ghost": [
+  "A boy in a striped t-shirt, full body including both feet with empty space below them, pointing at a friendly white ghost floating beside him.",
+  "lavender"
+ ],
+ "luck": [
+  "Two women chatting, full body including both feet with empty space below them, with empty speech bubbles, not noticing a green four-leaf clover blowing away behind them.",
+  "green"
+ ],
+ "trap": [
+  "A farmer in overalls, full body including both feet with empty space below them, cutting the rope of a net trap with a long scythe, a rabbit escaping from the trap.",
+  "green"
+ ],
+ "cliff": [
+  "A rocky cliff covered with a giant blue fabric cover pulled over its top like a slipcover.",
+  "cream"
+ ],
+ "hay": [
+  "A farmer in a straw hat, full body including both feet with empty space below them, shouting with hands around his mouth at a haystack whose top has caught fire, a little smoke.",
+  "yellow"
+ ],
+ "bubble": [
+  "A father in a sweater, full body including both feet with empty space below them, blowing big soap bubbles with a wand for his small child.",
+  "sky-blue"
+ ],
+ "climb": [
+  "A man in sportswear, full body, climbing up an air conditioner unit mounted on a small free-standing wall panel, like a rock climber.",
+  "mint"
+ ],
+ "pray": [
+  "A man in a shirt and trousers, full body, kneeling and praying with open palms raised, while a tiny flea bites his ankle, small itch lines.",
+  "lavender"
+ ],
+ "beg": [
+  "A rich gentleman in a top hat and suit, full body, on his knees begging his butler, who stands holding a silver tray.",
+  "cream"
+ ],
+ "rob": [
+  "A friendly grey robot, full body, running out of the door of a small bank building holding a money bag.",
+  "sky-blue"
+ ],
+ "rough": [
+  "A rough splintery wooden shelf with a wool sweater snagged on its splinters.",
+  "cream"
+ ],
+ "deaf": [
+  "An old man with a hearing aid, full body including both feet with empty space below them, happily playing a tambourine, small sound lines.",
+  "peach"
+ ],
+ "crowd": [
+  "A crowd of five people in casual clothes, full body including both feet with empty space below them, all wearing neckties.",
+  "mint"
+ ],
+ "page": [
+  "An open book with a thin white lace veil laid over one of its pages. The pages are blank.",
+  "pink"
+ ],
+ "cherry": [
+  "A janissary soldier in a tall white Ottoman janissary hat and red uniform, full body including both feet with empty space below them, eating cherries from a bowl.",
+  "peach"
+ ],
+ "bird": [
+  "A small blue bird flying away with a piece of flaky pastry in its beak.",
+  "sky-blue"
+ ],
+ "smile": [
+  "A man in a yellow shirt and jeans, full body including both feet with empty space below them, smiling a huge happy smile and waving.",
+  "yellow"
+ ],
+ "candy": [
+  "A greedy boy in a striped t-shirt, full body including both feet with empty space below them, eating all the candies from a bowl alone, cheeks stuffed, wrappers around him.",
+  "pink"
  ]
 }

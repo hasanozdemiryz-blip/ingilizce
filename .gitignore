@@ -34,3 +34,6 @@ android-imza.properties
 # Rakip arastirmasi ve icerik plani — depo herkese acik, buraya girmesin.
 # Makineler arasi kopya: Claude artifact sayfasi (bkz. instagram/rakip-arastirmasi.md)
 instagram/
+
+# Excel/Numbers acik dosya kilidi
+~$*
