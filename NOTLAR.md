@@ -2256,22 +2256,7 @@ Kullanıcı istedi, onayladı:
 Yerelde geçici önizleme sayfasıyla denendi (1 kelimelik ders + 3 tekrar):
 harf kutuları ve seçim ekranı doğru, "Şimdilik bitir" sayımı doğru.
 
-## Sırada
-
-### Kanca satırı anlam sanılmasın (7 Ekim, yapıldı)
-Kullanıcı kancanın aynen kalmasını, yalnızca çağrışım olduğunun yazılmasını
-istedi: `HookChip`'in üstünde küçük "ÇAĞRIŞIM" başlığı (her yerde: tanışma,
-sorular, cevap kartı, karşılama). Konuşulan ama YAPILMAYAN seçenekler:
-anlamı büyütmek, "≈" yerine "sesi:" yazmak, cümlede yeşil/sarı renk kodu,
-ilk kartta tek seferlik açıklama — gerekirse sonra.
-
-### YARIN İLK İŞ (8 Ekim 2026, başka bilgisayarda)
-
-Kullanıcı "hepsini yarın yaptıracağım" dedi. İki iş var; ikisi de bu bölümde
-tam anlatıldı çünkü `instagram/` klasörü **depoda yok** (gitignore), yeni
-makinede plan dosyası olmayacak.
-
-#### 1. Kanca cümlelerini güçlendirmek (bütün kartlar, yalnızca Instagram değil)
+## 2026-10-07 — Kanca cümlesi turu ve 100 yeni kelime
 
 **Kural:** kanca ile anlam AYNI SAHNEDE ve birbirine bir şey YAPIYOR, mümkünse
 saçma/abartılı. "gibi" benzetmesi ve "=" kalıbı yok. (Kanca yönteminin bilinen
@@ -2319,21 +2304,50 @@ güçlü, 27 orta ses benzerliği. Kullanıcı hepsini onayladı (rob: "rob" yer
 `tools/gorsel-sahneleri.json`'da. 100 görsel + 9 yeniden (book bükülmemiş, cow
 kavun bal gibi, hat palet, tooth ×2 dişle basmıyor, tower/tie kenara taştı, doll
 ürkütücü, rob "BANK" yazısı) = 109 × 75 = 8.175 kredi. **Set 400/400.**
-Yayın kullanıcı onayı bekliyor. Sonra Instagram (2. iş).
+Yayında (7 Ekim).
 
-**Adımlar:**
-1. 266 cümleyi kurala göre puanla, zayıflara yeni cümle yaz → tek tablo
-   (xlsx, `kart-inceleme.xlsx` gibi) → **kullanıcı onaylar**. Ücretsiz.
-2. Onaylanan cümleler `kart-havuzu-300.xlsx` → `node tools/import-xlsx.mjs`
-   → `content/cards.json`.
-3. Cümlesi değişen kartın görseli sahneyle uyuşmaz → yeniden üretim.
-   **Görsel üretimi kilitli: kullanıcı ayrıca onay vermeden üretilmez.**
-   75 kredi/görsel (simulate_cost kesin; eski "~30" notu hesap hatasıydı: 5.100 kredi 66 görseldi).
-   Bakiye 146.052. Akış `tools/gorsel-recetesi.md`'de.
-4. Sıra: önce ilk derslerde çıkan kartlar ve "=" kalıbındaki gerçek kancalar
-   (cup, road…), sonra "gibi"ler, en son tanıdık (O) kelimeler.
 
-#### 2. Instagram
+## Sırada
+
+### Nerede duruyoruz (7 Ekim 2026 akşam, Mac)
+
+**Hepsi yayında**, iki depo temiz ve push'lu. **Set 400/400** görselli kart.
+266 test, tip denetimi ve derleme temiz. Magnific bakiyesi **130.152**
+(bugün 73 + 109 = 182 görsel, 13.650 kredi).
+
+Bugün yapılanlar (sırayla, commit'leriyle):
+- Kanca cümlesi turu: 137 cümle + 43 kanca, 69 görsel — `b624630`
+- Soru türleri yine sıralı (karışık sıra geri alındı) — `67cd1e6`
+- 100 yeni kelime (301-400), 109 görsel — `aa5dc6b`
+- Ders sonunda tekrar soruluyor ("Tekrarı yap" / "Şimdilik bitir") — `596c7b9`
+- Harf dizme kutuları büyük — `8876e8f`
+- Kanca kuralları depoda: `tools/kanca-kurallari.md` — `6d40a53`
+- Kanca etiketinin üstünde "ÇAĞRIŞIM" başlığı — `07c884c`
+- Soru/cevap ekranında görsel artık kırpılmıyor (16:9 + cover yerine
+  %75 genişlikte 4:3; yükseklik aynı)
+
+**Kayıtlı hesap (7 Ekim):** 4 (biri kullanıcının kendisi; dışarıdan 3,
+hepsi Google, kayıttan sonra tekrar girmemiş). Girişsiz kullananlar sayılmıyor.
+
+**Yeni kelime / kanca / cümle yazarken:** `tools/kanca-kurallari.md`.
+Görsel: `tools/gorsel-recetesi.md` (75 kredi/görsel, kullanıcı onayıyla).
+
+**Açık seçenekler (konuşuldu, yapılmadı):** kanca etiketi için anlamı
+büyütmek, "≈" yerine "sesi:", cümlede yeşil (anlam) / sarı (kanca) renk
+kodu, ilk kartta tek seferlik açıklama. Tekrar bölümünde soru sırası hâlâ
+karışık (bilerek); kullanıcı istemedi.
+
+### SIRADAKİ İŞ: Instagram
+
+Plan aşağıda tam (`instagram/` klasörü depoda yok, gitignore). **Mac'te
+çalıştırmak için:** `tools/instagram.mjs` Windows'a göre yazılmış —
+`CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"`
+verilmeli ve Reels okunuşu PowerShell/Zira yerine macOS `say` ile
+üretilecek şekilde uyarlanmalı. ffmpeg Mac'te var. Kanca cümleleri artık
+güçlü (ör. "Botla tekneye çarptık", "Mopetle paspas yaptı") — Reels ve
+köprü gönderileri için hazır içerik.
+
+#### Instagram planı
 
 **Profil** (kullanıcı kendisi değiştirecek; Instagram'a erişimimiz yok):
 - Fotoğraf `brand/instagram-profil.png` (krem zeminli beyin). Yazılı
@@ -2551,7 +2565,7 @@ depoda (`src/assets/cards/*.webp`).
 `tools/gorsel-sirasi.json`'u yeniden üretir. Excel'e elle yazılan "SENİN
 KARARIN" sütunu bu komutla **silinir** — önce kararları işle.
 
-**Claude'a ilk mesaj önerisi:** "NOTLAR.md'nin Sırada bölümündeki YARIN İLK İŞ kısmını ve
+**Claude'a ilk mesaj önerisi:** "NOTLAR.md'nin Sırada bölümündeki SIRADAKİ İŞ kısmını ve
 tools/gorsel-recetesi.md'yi oku, kaldığımız yerden devam edelim."
 
 Yayın adımlarının tamamı `YAYIN.md`'de.

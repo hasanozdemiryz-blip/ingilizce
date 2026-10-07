@@ -25,17 +25,23 @@ function zeminOf(id: string) {
 }
 
 export function CardVisual({ card, size = 'full' }: { card: Card; size?: 'full' | 'compact' }) {
-  const ratio = size === 'full' ? 'aspect-[4/3]' : 'aspect-[16/9]';
+  /*
+    Kompakt (soru ve cevap ekranlari): once 16:9 kutu + object-cover idi;
+    gorseller 4:3 oldugu icin ustten-alttan ~%12 kirpiliyordu (door'da DUR
+    levhasinin tepesi). Simdi 4:3 ama %75 genislik: yukseklik ayni
+    (0,75 x 3/4 = 9/16), ekran duzeni degismiyor, hicbir sey kirpilmiyor.
+  */
+  const ratio = size === 'full' ? 'w-full aspect-[4/3]' : 'block w-3/4 mx-auto aspect-[4/3]';
 
   if (card.image) {
     return (
-      <img src={card.image} alt="" className={`w-full ${ratio} rounded-[1.4rem] object-cover`} />
+      <img src={card.image} alt="" className={`${ratio} rounded-[1.4rem] object-cover`} />
     );
   }
 
   return (
     <div
-      className={`w-full ${ratio} rounded-[1.4rem] bg-gradient-to-br ${zeminOf(card.id)} px-6 flex flex-col items-center justify-center text-center gap-2 overflow-hidden`}
+      className={`${ratio} rounded-[1.4rem] bg-gradient-to-br ${zeminOf(card.id)} px-6 flex flex-col items-center justify-center text-center gap-2 overflow-hidden`}
     >
       <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-ink/35">
         {t('görsel gelecek')}
