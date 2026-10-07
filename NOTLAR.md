@@ -2258,9 +2258,12 @@ harf kutuları ve seçim ekranı doğru, "Şimdilik bitir" sayımı doğru.
 
 ## Sırada
 
-### Konuşulacak: kanca satırı anlam sanılmasın
-Kartta "door ≈ dur" satırı var; kullanıcı "dur" kelimenin anlamı sanılabilir
-diye kaygılı. Ne gösterilir, nasıl ayrılır — konuşulup planlanacak.
+### Kanca satırı anlam sanılmasın (7 Ekim, yapıldı)
+Kullanıcı kancanın aynen kalmasını, yalnızca çağrışım olduğunun yazılmasını
+istedi: `HookChip`'in üstünde küçük "ÇAĞRIŞIM" başlığı (her yerde: tanışma,
+sorular, cevap kartı, karşılama). Konuşulan ama YAPILMAYAN seçenekler:
+anlamı büyütmek, "≈" yerine "sesi:" yazmak, cümlede yeşil/sarı renk kodu,
+ilk kartta tek seferlik açıklama — gerekirse sonra.
 
 ### YARIN İLK İŞ (8 Ekim 2026, başka bilgisayarda)
 

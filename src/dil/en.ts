@@ -96,6 +96,7 @@ export const EN: Record<string, string> = {
   "yazdığın:": "you typed:",
   "Kancayla bildin. Bir dahakine kancasız dene.": "You got it with the hook. Try without it next time.",
   "Kancayı göster": "Show the hook",
+  "çağrışım": "memory hook",
   "Harfleri sıraya diz": "Put the letters in order",
   "Setteki {n} kelimenin hepsini tanıdın.": "You've met all {n} words in the set.",
   "Hazırlanıyor…": "Preparing…",

@@ -257,13 +257,18 @@ export function Yonerge({ children }: { children: ReactNode }) {
 /**
  * Ses kancasi — urunun imzasi.
  * Fosforlu kalem izi: kanca zaten "isaretlenmis" seydir.
+ *
+ * Ustunde kucuk "cagrisim" basligi var (7 Ekim, kullanici istegi):
+ * "door ≈ dur" kelimenin ANLAMI sanilmasin; dur bir hatirlatici, anlam
+ * "kapi". Kanca kendisi aynen duruyor, yalnizca ne oldugu yaziyor.
  */
 export function HookChip({ children, big = false }: { children: ReactNode; big?: boolean }) {
   return (
-    <span
-      className={`marker word font-bold text-ink ${big ? 'text-xl' : 'text-base'}`}
-    >
-      {children}
+    <span className="inline-flex flex-col items-center gap-1">
+      <span className="text-xs font-bold uppercase tracking-[0.12em] text-ink-soft">
+        {t('çağrışım')}
+      </span>
+      <span className={`marker word font-bold text-ink ${big ? 'text-xl' : 'text-base'}`}>{children}</span>
     </span>
   );
 }
