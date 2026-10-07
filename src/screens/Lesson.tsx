@@ -3,7 +3,7 @@ import { olay } from '../analitik';
 import { useGeri } from '../geri';
 import { LearnFace } from '../components/CardFace';
 import { Runner } from '../components/Runner';
-import { ADIMLAR, bolgelereBol, kademeliKaristir, type Gorev } from '../exercise';
+import { ADIMLAR, bolgelereBol, type Gorev } from '../exercise';
 import { BackButton, Button, Progressbar, Screen, TopBar } from '../components/ui';
 import { CARD_BY_ID } from '../content';
 import { db, logAnswer, logSession } from '../db';
@@ -213,11 +213,7 @@ export function Lesson({
   );
 
   /** Ogrenme testinin bolgeleri — bos bolge duser, gecisi de acilmaz. */
-  const ogrenmeBolgeleri = useMemo(
-    // Bolge icinde soru turleri karisik siralaniyor (bkz. kademeliKaristir)
-    () => bolgelereBol(ogrenmeGorevleri).map((b) => ({ ...b, gorevler: kademeliKaristir(b.gorevler) })),
-    [ogrenmeGorevleri],
-  );
+  const ogrenmeBolgeleri = useMemo(() => bolgelereBol(ogrenmeGorevleri), [ogrenmeGorevleri]);
 
   const bolumler = useMemo<Bolum[]>(() => {
     const liste: Bolum[] = [];

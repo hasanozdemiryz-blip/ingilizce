@@ -202,36 +202,3 @@ export function bloklaraBol(gorevler: readonly Gorev[], grup = 5): Blok[] {
   for (const g of tekliler) bloklar.push({ tip: 'tekli', gorev: g });
   return bloklar;
 }
-
-/**
- * Soru turlerini KARISTIRIR, icerik ayni kalir.
- *
- * Ogrenme testinde bir bolgenin iki basamagi blok halinde kosuyordu: once
- * bes ters secmeli, sonra bes harf dizme. Ayni tur bes kez art arda gelince
- * ritim tekduze oluyordu. Artik kelimeler bir adim kaydirilarak siraya
- * giriyor: 1. kelimenin alt basamagi, 2. kelimenin alt basamagi, 1.
- * kelimenin ust basamagi, 3. kelimenin alt basamagi... Her kelimede alt
- * basamak yine ustten ONCE geliyor; soru sayisi ve basamaklar degismiyor.
- */
-export function kademeliKaristir(gorevler: readonly Gorev[]): Gorev[] {
-  const kartSirasi: string[] = [];
-  const kartGorevleri = new Map<string, Gorev[]>();
-  for (const g of gorevler) {
-    if (!kartGorevleri.has(g.card.id)) {
-      kartGorevleri.set(g.card.id, []);
-      kartSirasi.push(g.card.id);
-    }
-    kartGorevleri.get(g.card.id)!.push(g);
-  }
-  const kuyruklar = kartSirasi.map((id) => [...kartGorevleri.get(id)!].sort((a, b) => a.step - b.step));
-  const enUzun = Math.max(0, ...kuyruklar.map((k) => k.length));
-  const sonuc: Gorev[] = [];
-  // Capraz tarama: `tur` adiminda k. kelimenin (tur - k). gorevi.
-  for (let tur = 0; tur < kuyruklar.length + enUzun; tur++) {
-    for (let k = Math.min(tur, kuyruklar.length - 1); k >= 0; k--) {
-      const g = kuyruklar[k][tur - k];
-      if (g) sonuc.push(g);
-    }
-  }
-  return sonuc;
-}
