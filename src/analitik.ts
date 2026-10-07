@@ -55,6 +55,8 @@ export type Olay =
   | 'cikis_yapildi'
   | 'ders_basladi'
   | 'ders_bitti'
+  | 'tekrara_gecildi'
+  | 'tekrar_atlandi'
   | 'biliyorum_dendi'
   | 'bilinen_geri_alindi'
   | 'egzersiz_basladi'

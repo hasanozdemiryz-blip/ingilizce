@@ -158,6 +158,16 @@ export function Lesson({
 
   const toplam = yeniKartlar.length + new Set(tekrarKuyrugu.map((p) => p.cardId)).size;
 
+  /**
+   * TEKRAR SECIMI. Ogrenme testi bitip sirada tekrar varsa ders kendiliginden
+   * tekrara GECMIYOR; kullaniciya soruluyor (7 Ekim, kullanici istegi).
+   * "Simdilik bitir" dersi kapatir; tekrarlar ana ekranda kendi kartinda
+   * beklemeye devam eder, hicbiri kaybolmaz. Yeni kelimeler bu noktada
+   * zaten yazilmis oluyor.
+   */
+  const [tekrarSorusu, setTekrarSorusu] = useState(false);
+  const tekrarAtlandi = useRef(false);
+
   /*
     Donanim geri tusu derste ozel: dogrudan cikmak dersi yarida birakir,
     o yuzden ekrandaki geri dugmesiyle AYNI uyariyi acar. Oncelik 20 —
@@ -344,6 +354,10 @@ export function Lesson({
       void bitir();
       return;
     }
+    if (simdiki === 'ogrenme' && sonraki === 'tekrar') {
+      setTekrarSorusu(true);
+      return;
+    }
     setBolum(sonraki);
   }
 
@@ -360,9 +374,12 @@ export function Lesson({
     if (bitiyor.current) return;
     bitiyor.current = true;
     const { dogru, toplam: cevap, ilerleyen } = sayac.current;
-    const state = await logSession(toplam, dogru, cevap - dogru, dersBasi);
+    // Tekrar atlandiysa o kelimeler bu dersin sayisina girmiyor
+    const sayilan = tekrarAtlandi.current ? yeniKartlar.length : toplam;
+    const state = await logSession(sayilan, dogru, cevap - dogru, dersBasi);
     olay('ders_bitti', {
-      kelime: toplam,
+      kelime: sayilan,
+      tekrar_atlandi: tekrarAtlandi.current,
       dogru,
       cevap,
       ilerleyen,
@@ -370,7 +387,7 @@ export function Lesson({
       yuzde: cevap > 0 ? Math.round((dogru / cevap) * 100) : 0,
     });
     onFinish({
-      count: toplam,
+      count: sayilan,
       streak: state.streakCount,
       dogru,
       toplam: cevap,
@@ -396,7 +413,14 @@ export function Lesson({
    * sistem diyalogu hem cirkin hem de akisi donduruyor.
    */
   const yeniKaybolacak = bolum === 'yeni' || bolum === 'ogrenme';
-  const cikmakIstiyor = () => (yeniKaybolacak ? setCikisSoruluyor(true) : onExit());
+  function tekrariAtla() {
+    tekrarAtlandi.current = true;
+    olay('tekrar_atlandi', { tekrar: tekrarKuyrugu.length });
+    void bitir();
+  }
+  // Secim ekranindayken yeni kelimeler yazilmis: cikmak dersi bitirmek demek
+  const cikmakIstiyor = () =>
+    tekrarSorusu ? tekrariAtla() : yeniKaybolacak ? setCikisSoruluyor(true) : onExit();
 
   const uyari = cikisSoruluyor ? (
     <div className="fixed inset-0 z-20 flex items-end justify-center bg-ink/40 px-5 pb-8 backdrop-blur-sm">
@@ -416,6 +440,38 @@ export function Lesson({
       </div>
     </div>
   ) : null;
+
+  // --- Ogrenme bitti, sirada tekrar var: once sor ---
+  if (tekrarSorusu) {
+    return (
+      <Screen yanMenusuz>
+        <TopBar left={<BackButton onClick={cikmakIstiyor} />} />
+        {cubuk}
+        <div className="rise flex-1 flex flex-col items-center justify-center gap-3 py-6 text-center">
+          <p className="word text-3xl font-extrabold">{t('Yeni kelimeler tamam!')}</p>
+          <p className="text-ink-soft max-w-[30ch]">
+            {t('{n} kelime tekrar bekliyor. Şimdi yapmak ister misin?', { n: tekrarKuyrugu.length })}
+          </p>
+        </div>
+        <div className="shrink-0 flex flex-col gap-2.5">
+          <Button
+            variant="brand"
+            onClick={() => {
+              olay('tekrara_gecildi', { tekrar: tekrarKuyrugu.length });
+              setTekrarSorusu(false);
+              setBolum('tekrar');
+            }}
+          >
+            {t('Tekrarı yap')}
+          </Button>
+          <Button variant="ghost" onClick={tekrariAtla}>
+            {t('Şimdilik bitir')}
+          </Button>
+          <p className="text-center text-xs text-ink-faint">{t('Tekrarlar ana ekranda seni bekler.')}</p>
+        </div>
+      </Screen>
+    );
+  }
 
   // --- Bolum 1: yeni kartlar ---
   if (bolum === 'yeni') {
