@@ -2379,13 +2379,19 @@ Sayfa: https://claude.ai/artifact/W6uRjKZeTmAYNRbJXyZHpH (yerel kopya
   satır başına pastel), **Reels olarak** yüklenir (takip etmeyenlere gider;
   takipçilerin çoğu gerçek değil). Bir satırda "???" yorum tuzağı (referansta
   152 yorum, diğerleri <10). Reels'te alt 420 / sağ 140 px boş.
-- Yeni sayfa tipleri: liste, izgara (kart görseli + kanca, imza format),
-  soru-cevap, bosluk, sema; + rehberden quiz / harf sırala Reels ve 4 karelik
-  günlük Story. Hepsi kredisiz.
+- **Kanca kuralı (kullanıcı, 8 Ekim):** çok kelimeli paylaşımlarda kanca
+  ve kart görseli YOK (kart görseli kancanın sahnesi, kancasız anlamsız).
+  Kanca yalnızca tek kelimelik kanca Reels'inde. Eski "köprü" gönderisi
+  (Evdeki 5 eşya, 5 kanca) bu yüzden çıktı.
+- **Tek haftalık plan** (eski 3 normal + 1 köprü + 1 kanca'nın yerine),
+  hepsi Reels: Pzt liste posteri · Sal simgeli kelime ızgarası · Çarş boşluk
+  doldurma / soru-cevap · Perş tek kural şeması · Cuma kanca Reels'i ·
+  her gün 4 karelik Story. Hafta 1-2 başlıkları sayfada.
 - Rehberdeki "Her gün 15 kelime, 30 günde 450" vaadi uygulamaya uymuyor.
-- Hafta 1 içerikleri postere dönüşecek (ilk iki hafta listesi sayfada).
-- **Kullanıcıdan cevap bekleniyor:** hafta 1 postere dönsün mü, posterler
-  Reels mi, önce hangi şablon (öneri: liste + kanca ızgarası).
+- **İlk iş (onaylandı: posterler Reels):** 1) rehber stilinde poster şablonu
+  (`poster.png` 1080×1350 + `reels.mp4` 1080×1920, alt 420/sağ 140 px boş),
+  2) Hafta 1 Pzt "Türklerin en sık yaptığı 12 hata" — kullanıcı beğenene
+  kadar yalnız bu, 3) sonra haftanın kalan posterleri.
 
 #### Instagram planı
 
