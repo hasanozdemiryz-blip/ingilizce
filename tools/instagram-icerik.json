@@ -1,92 +1,188 @@
 {
-  "_aciklama": "Instagram paylasimlari. Uretim: node tools/instagram.mjs [id]. Cikti instagram/cikti/<id>/. Sayfa tipleri: kapak, hata, ifade, kanca (kart id), son. reels: 'sayfalar' (sayfalardan dikey video) ya da 'kanca' (tek kartin kanca videosu, 'kart' alani).",
+  "_aciklama": "Instagram paylasimlari (marka rehberi stili). Uretim: node tools/instagram.mjs [id ...]. Cikti instagram/cikti/<id>/. bicim: poster (sablon: do-does-did | hatalar | bosluk), kaydir (tanitim), reels (tur: kanca | bes-kelime | quiz | tekrar | motivasyon), story, kapaklar. Metinde *yildizli* kisim sari kutuya girer. Kanca yalnizca tek kelimelik paylasimda. Cizimler brand/instagram/.",
   "etiketler": ["#ingilizce", "#ingilizceöğren", "#ingilizcekelime", "#ingilizcekelimeler", "#ingilizceöğreniyorum", "#ingilizcepratik", "#kelimeezberleme"],
-  "gonderiler": [
+  "paylasimlar": [
     {
-      "id": "h1-1-yanlis",
-      "hafta": 1,
-      "gun": "Pazartesi",
-      "tur": "normal",
-      "format": "kaydırmalı + Reels",
-      "reels": "sayfalar",
+      "id": "00-tanitim",
+      "gun": "Cuma 9 Ekim (profilde sabitle)",
+      "bicim": "kaydir",
       "sayfalar": [
-        { "tip": "kapak", "ust": "Kaydet", "baslik": "Bunu <span class=\"vurgu\">yanlış</span> söylüyorsun", "alt": "Türkçe düşününce en sık yapılan 7 İngilizce hata" },
-        { "tip": "hata", "yanlis": "I am agree.", "dogru": "I agree.", "not": "agree zaten fiil, yanına am gelmez." },
-        { "tip": "hata", "yanlis": "I am boring.", "dogru": "I am bored.", "not": "boring: sıkıcı. bored: sıkılmış. İlki kendini kötülemek olur." },
-        { "tip": "hata", "yanlis": "Explain me.", "dogru": "Explain it to me.", "not": "explain'den sonra kişi doğrudan gelmez, to ile gelir." },
-        { "tip": "hata", "yanlis": "I am waiting you.", "dogru": "I am waiting for you.", "not": "wait birini beklerken for ister." },
-        { "tip": "hata", "yanlis": "I will go to home.", "dogru": "I will go home.", "not": "home ile to kullanılmaz: go home, come home." },
-        { "tip": "hata", "yanlis": "Open the light.", "dogru": "Turn on the light.", "not": "Işık açılmaz, yakılır: turn on / turn off." },
-        { "tip": "hata", "yanlis": "He is married with her.", "dogru": "He is married to her.", "not": "married to: biriyle evli." },
-        { "tip": "son", "baslik": "Kaydet, sonra lazım olacak.", "alt": "Kelimeleri unutmamanın yolu kanca. 15 saniyede dene.", "cta": "hafizada.com" }
+        { "baslik": "Bir kelimeyi sadece okumak *öğrenmek değildir.*", "alt": "Hafızada İngilizce'de her kelime 6 adımda kalıcı olur.", "gorsel": "kapak", "not": "Kaydır, nasıl olduğunu gör 👉" },
+        { "adim": 1, "baslik": "Gör ve *anla*", "alt": "Her kelimenin bir çizimi ve Türkçe bir kancası var.", "gorsel": "kart" },
+        { "adim": 2, "baslik": "*Eşleştir*", "alt": "Kelimeyi anlamıyla eşle.", "gorsel": "eslestir" },
+        { "adim": 3, "baslik": "Tahmin *et*", "alt": "Türkçesi hangisi?", "gorsel": "tahmin" },
+        { "adim": 4, "baslik": "Harfleri *sırala*", "alt": "Kelimeyi harf harf kur.", "gorsel": "harf" },
+        { "adim": 5, "baslik": "Kendin *yaz*", "alt": "İpucu yok, baştan yaz.", "gorsel": "yaz" },
+        { "adim": 6, "baslik": "Dinle ve *yaz*", "alt": "Yazı yok, sadece ses.", "gorsel": "dinle" },
+        { "baslik": "Düzenli *tekrar*", "alt": "Unutmaya başladığın an kelime yeniden karşına çıkar.", "gorsel": "tekrar" },
+        { "baslik": "Ezberleme, *bağla.*", "gorsel": "son", "maddeler": ["Görsel çağrışım", "6 egzersiz", "Akıllı tekrar", "Ücretsiz"] }
       ],
-      "aciklama": "Bunların en az birini söylemişsindir 😅\n\nTürkçe düşünüp İngilizce konuşunca en sık yapılan 7 hata. Kaydet, konuşurken aklına gelsin.\n\nHangisini yapıyordun? Yoruma yaz 👇\n\nKelimeleri ezberlemeden öğrenmek için profildeki linkten 15 saniyede dene."
+      "aciklama": "Kelimeyi okuyup geçmek öğrenmek değil 🧠\n\nHafızada İngilizce'de her kelime önce bir çizim ve Türkçe bir kancayla aklına yerleşir, sonra 6 farklı egzersizle pekişir. Unutmaya başladığın an tekrar karşına çıkar.\n\nÜcretsiz, profildeki linkten dene 👆"
     },
     {
-      "id": "h1-2-kafe",
-      "hafta": 1,
-      "gun": "Salı",
-      "tur": "normal",
-      "format": "kaydırmalı",
-      "sayfalar": [
-        { "tip": "kapak", "ust": "Kaydet", "baslik": "Kafede lazım olan <span class=\"vurgu\">6 cümle</span>", "alt": "Yurt dışında kahve almak artık stres değil" },
-        { "tip": "ifade", "en": "Can I get a latte, please?", "tr": "Bir latte alabilir miyim?", "ornek": "I'd like… da olur, Can I get… daha doğal." },
-        { "tip": "ifade", "en": "For here or to go?", "tr": "Burada mı, götürmek için mi?", "ornek": "Cevap: For here, please. / To go, please." },
-        { "tip": "ifade", "en": "Is this seat taken?", "tr": "Bu sandalye dolu mu?", "ornek": "Boş bir yere oturmadan önce sorulur." },
-        { "tip": "ifade", "en": "Can I pay by card?", "tr": "Kartla ödeyebilir miyim?", "ornek": "Nakit: Can I pay in cash?" },
-        { "tip": "ifade", "en": "What's the Wi-Fi password?", "tr": "Wi-Fi şifresi ne?", "ornek": "Kafede en çok sorulan soru bu olabilir." },
-        { "tip": "ifade", "en": "Could we get the bill, please?", "tr": "Hesabı alabilir miyiz?", "ornek": "Amerika'da: Could we get the check?" },
-        { "tip": "son", "baslik": "Bir sonraki kahvende dene.", "alt": "Kelimeleri kancayla öğren, ezberleme.", "cta": "hafizada.com" }
+      "id": "01-cuma-do-does-did",
+      "gun": "Cuma 9 Ekim",
+      "bicim": "poster",
+      "sablon": "do-does-did",
+      "baslik": "do · does · *did*",
+      "alt": "Hangisini ne zaman kullanırsın?",
+      "satirlar": [
+        { "ozneler": ["I", "You", "We", "They"], "zaman": "Şimdiki / geniş zaman", "kelime": "DO", "ornek": "Do you like tea?", "tr": "Çay sever misin?", "ciz": "cocuk-do" },
+        { "ozneler": ["He", "She", "It"], "zaman": "Şimdiki / geniş zaman", "kelime": "DOES", "ornek": "Does she work here?", "tr": "O burada mı çalışıyor?", "ciz": "kiz-does" },
+        { "ozneler": ["I", "You", "We", "They", "He", "She", "It"], "zaman": "Geçmiş zaman · herkes", "kelime": "DID", "ornek": "Did they call?", "tr": "Aradılar mı?", "ciz": "cocuk-did" }
       ],
-      "aciklama": "Yurt dışında kafeye girdin, sıra sende. Ne diyeceksin? ☕\n\nEn çok lazım olan 6 cümle, Türkçesiyle. Kaydet, gitmeden önce bir kez bak.\n\nTatile gidecek birini etiketle 👇"
+      "ipucu": "*does* ve *did*’den sonra fiil yalın gelir. · Does she work? ✓    Does she works? ✗",
+      "aciklama": "do mu, does mu, did mi? 🤔\n\nTek görselde hepsi. Kaydet 📌 bir daha karıştırma.\n\nSen en çok hangisinde takılıyorsun? Yoruma yaz 👇\n\nKelimeleri ezberlemeden öğrenmek için profildeki linke bak."
     },
     {
-      "id": "h1-3-kisa-cevap",
-      "hafta": 1,
-      "gun": "Çarşamba",
-      "tur": "normal",
-      "format": "kaydırmalı + Reels",
-      "reels": "sayfalar",
-      "sayfalar": [
-        { "tip": "kapak", "ust": "Kaydet", "baslik": "Yerliler gibi konuş: <span class=\"vurgu\">8 kısa cevap</span>", "alt": "Hep \"yes\" ve \"OK\" demeyi bırak" },
-        { "tip": "ifade", "en": "Sure!", "tr": "Tabii!", "ornek": "Can you help me? / Sure!" },
-        { "tip": "ifade", "en": "No worries.", "tr": "Dert etme, sorun değil.", "ornek": "Sorry I'm late. / No worries." },
-        { "tip": "ifade", "en": "Fair enough.", "tr": "Mantıklı, haklısın.", "ornek": "Karşındakinin dediğini kabul ederken." },
-        { "tip": "ifade", "en": "Same here.", "tr": "Bende de öyle.", "ornek": "I'm so tired. / Same here." },
-        { "tip": "ifade", "en": "Never mind.", "tr": "Boş ver.", "ornek": "Söylediğini geri alırken ya da önemsizken." },
-        { "tip": "ifade", "en": "Got it.", "tr": "Anladım.", "ornek": "OK'den daha doğal." },
-        { "tip": "ifade", "en": "No way!", "tr": "Olamaz! Yok artık!", "ornek": "Şaşırınca: I won the lottery! / No way!" },
-        { "tip": "ifade", "en": "Good point.", "tr": "Haklısın, iyi dedin.", "ornek": "Tartışmada karşı tarafın fikrine." },
-        { "tip": "son", "baslik": "Bugün birini kullan.", "alt": "Kelime ezberlemek yerine bağla.", "cta": "hafizada.com" }
-      ],
-      "aciklama": "Her şeye \"yes\" ve \"OK\" diyorsan bunlar tam sana göre 🙌\n\nGünlük konuşmada en çok duyacağın 8 kısa cevap. Kaydet, bugün en az birini kullan.\n\nSen en çok hangisini kullanıyorsun? 👇"
-    },
-    {
-      "id": "h1-4-ev-kanca",
-      "hafta": 1,
-      "gun": "Perşembe",
-      "tur": "köprü",
-      "format": "kaydırmalı",
-      "sayfalar": [
-        { "tip": "kapak", "ust": "Ezberleme", "baslik": "Evdeki 5 eşya, <span class=\"vurgu\">5 kanca</span>", "alt": "Her kelimeyi bildiğin bir Türkçe kelimeye bağla, bir daha unutma" },
-        { "tip": "kanca", "kart": "box" },
-        { "tip": "kanca", "kart": "bucket" },
-        { "tip": "kanca", "kart": "pillow" },
-        { "tip": "kanca", "kart": "towel" },
-        { "tip": "kanca", "kart": "curtain" },
-        { "tip": "son", "baslik": "Kapat gözünü: pillow ne demekti?", "alt": "Hatırladıysan kanca tuttu. 266 kelime daha var.", "cta": "hafizada.com" }
-      ],
-      "aciklama": "Ezberleme, bağla 🧠\n\nHer İngilizce kelimeyi sesi benzeyen bir Türkçe kelimeye bağlıyoruz. Sahneyi bir kez gör, kelime yerine oturuyor.\n\nbox ≈ boks, bucket ≈ buket, pillow ≈ pilav, towel ≈ tavla, curtain ≈ kurtar\n\nYarın bu postu açmadan pillow'un ne demek olduğunu hatırlarsan yöntem işe yaradı demektir. Kaydet, yarın test et 👇\n\n266 kelime daha ücretsiz: profildeki link."
-    },
-    {
-      "id": "h1-5-sell",
-      "hafta": 1,
-      "gun": "Cumartesi",
+      "id": "02-cmt-sell-kanca",
+      "gun": "Cumartesi 10 Ekim",
+      "bicim": "reels",
       "tur": "kanca",
-      "format": "Reels",
-      "reels": "kanca",
-      "kart": "sell",
-      "aciklama": "sell ≈ sel 🌊 \"Sel gelmeden evini sattı.\"\n\nsell = satmak. Bir daha unutmayacaksın.\n\nBunun gibi 266 kelime, her biri bir kanca ve bir sahneyle. Ücretsiz: profildeki link."
+      "soru": "SATMAK'ın İngilizcesini *biliyor musun?*",
+      "kart": "kart-sell",
+      "en": "sell",
+      "tr": "satmak",
+      "kanca": "sel",
+      "cumle": "Sel gelmeden evini sattı",
+      "son": "Her kelime *bir kancayla.*",
+      "aciklama": "sell = satmak 🏠🌊\n\nsell ≈ sel: \"Sel gelmeden evini sattı.\" Bir kere duyunca unutmuyorsun, değil mi?\n\n400 kelimenin hepsi böyle bir kancayla. Profildeki linkten ücretsiz dene 👆"
+    },
+    {
+      "id": "03-paz-tekrar",
+      "gun": "Pazar 11 Ekim",
+      "bicim": "reels",
+      "tur": "tekrar",
+      "baslik": "Haftanın *tekrar testi*",
+      "alt": "3 soru · kaç tanesini bileceksin?",
+      "harf": { "tr": "satmak", "en": "sell", "karisik": ["l", "e", "l", "s"] },
+      "dinle": "towel",
+      "bosluk": { "cumle": "she work here?", "tr": "O burada mı çalışıyor?", "secenekler": ["Do", "Does", "Did"], "dogru": 1 },
+      "son": "Kaç tanesini bildin? *Yoruma yaz* 👇",
+      "aciklama": "Haftanın tekrarı 🧠 3 soru, 15 saniye.\n\nKaç tanesini bildin? Yoruma yaz 👇\n\nUnutmadan tekrar etmek için profildeki linke bak."
+    },
+    {
+      "id": "04-pzt-12-hata",
+      "gun": "Pazartesi 12 Ekim",
+      "bicim": "poster",
+      "sablon": "hatalar",
+      "ust": "Kaydet, konuşurken aklına gelsin",
+      "baslik": "Türklerin en sık yaptığı *12 hata*",
+      "ciz": "sikilmis",
+      "hatalar": [
+        { "yanlis": "I am boring.", "dogru": "I am bored.", "ciz": "sikilmis" },
+        { "yanlis": "I am agree.", "dogru": "I agree.", "ciz": "katiliyor" },
+        { "yanlis": "I have 25 years old.", "dogru": "I am 25 years old.", "ciz": "pasta" },
+        { "yanlis": "Open the light.", "dogru": "Turn on the light.", "ciz": "ampul" },
+        { "yanlis": "I'm going to home.", "dogru": "I'm going home.", "ciz": "ev" },
+        { "yanlis": "He said me.", "dogru": "He told me.", "ciz": "fisilti" },
+        { "yanlis": "Make a photo.", "dogru": "Take a photo.", "ciz": "kamera" },
+        { "yanlis": "I'm waiting you.", "dogru": "I'm waiting ??? you.", "ciz": "kum-saati" },
+        { "yanlis": "Close the TV.", "dogru": "Turn off the TV.", "ciz": "tv" },
+        { "yanlis": "How is it called?", "dogru": "What is it called?", "ciz": "buyutec" },
+        { "yanlis": "I'm in the bus.", "dogru": "I'm on the bus.", "ciz": "otobus" },
+        { "yanlis": "Can you borrow me money?", "dogru": "Can you lend me money?", "ciz": "cuzdan" }
+      ],
+      "soru": "8. cümlede *???* yerine ne gelir? Yoruma yaz 👇",
+      "aciklama": "Bunların en az birini söylemişsindir 😅\n\nTürkçe düşünüp İngilizce konuşunca en sık yapılan 12 hata. Kaydet 📌 konuşurken aklına gelsin.\n\n8. cümlede ??? yerine ne gelir? Cevabı yoruma yaz 👇"
+    },
+    {
+      "id": "05-sal-5-kelime",
+      "gun": "Salı 13 Ekim",
+      "bicim": "reels",
+      "tur": "bes-kelime",
+      "baslik": "Evdeki 5 eşya, *15 saniyede*",
+      "kelimeler": [
+        { "en": "pillow", "tr": "yastık", "ciz": "yastik" },
+        { "en": "towel", "tr": "havlu", "ciz": "havlu" },
+        { "en": "curtain", "tr": "perde", "ciz": "perde" },
+        { "en": "box", "tr": "kutu", "ciz": "kutu" },
+        { "en": "bucket", "tr": "kova", "ciz": "kart-bucket" }
+      ],
+      "son": "Her gün 5 kelime, *unutmadan.*",
+      "aciklama": "Evdeki 5 eşyanın İngilizcesi 🏠 15 saniyede.\n\npillow · towel · curtain · box · bucket\n\nKaydet 📌 sesli tekrar et. Hangisini bilmiyordun? Yoruma yaz 👇"
+    },
+    {
+      "id": "06-car-in-on-at",
+      "gun": "Çarşamba 14 Ekim",
+      "bicim": "poster",
+      "sablon": "bosluk",
+      "baslik": "in · on · *at*",
+      "alt": "15 cümle, biri sende 👇",
+      "kutular": [
+        { "kelime": "IN", "kural": "içinde · şehir, ay, yıl", "ciz": "in" },
+        { "kelime": "ON", "kural": "üstünde · gün, tarih", "ciz": "on" },
+        { "kelime": "AT", "kural": "bir noktada · saat, adres", "ciz": "at" }
+      ],
+      "cumleler": [
+        { "en": "The keys are ___ the bag.", "cevap": "in", "tr": "Anahtarlar çantada." },
+        { "en": "The book is ___ the table.", "cevap": "on", "tr": "Kitap masada." },
+        { "en": "I'm ___ home.", "cevap": "at", "tr": "Evdeyim." },
+        { "en": "She lives ___ London.", "cevap": "in", "tr": "Londra'da yaşıyor." },
+        { "en": "See you ___ Monday.", "cevap": "on", "tr": "Pazartesi görüşürüz." },
+        { "en": "The film starts ___ 8 o'clock.", "cevap": "at", "tr": "Film 8'de başlıyor." },
+        { "en": "I was born ___ 1998.", "cevap": "in", "tr": "1998'de doğdum." },
+        { "en": "The picture is ___ the wall.", "cevap": "on", "soru": true, "tr": "Resim duvarda." },
+        { "en": "He's ___ the bus stop.", "cevap": "at", "tr": "Durakta." },
+        { "en": "We met ___ summer.", "cevap": "in", "tr": "Yazın tanıştık." },
+        { "en": "My birthday is ___ 5 May.", "cevap": "on", "tr": "Doğum günüm 5 Mayıs'ta." },
+        { "en": "I'll call you ___ noon.", "cevap": "at", "tr": "Öğlen ararım." },
+        { "en": "The cat is ___ the box.", "cevap": "in", "tr": "Kedi kutunun içinde." },
+        { "en": "There's a fly ___ your nose.", "cevap": "on", "tr": "Burnunda sinek var." },
+        { "en": "She works ___ a bank.", "cevap": "at", "tr": "Bir bankada çalışıyor." }
+      ],
+      "soru": "8. cümle: *in, on, at?* Yoruma yaz 👇",
+      "aciklama": "in mi, on mu, at mı? 🤯\n\n15 cümle, kurallarıyla birlikte. Kaydet 📌\n\n8. cümlede ??? yerine hangisi gelir? Cevabını yoruma yaz 👇"
+    },
+    {
+      "id": "07-per-quiz-towel",
+      "gun": "Perşembe 15 Ekim",
+      "bicim": "reels",
+      "tur": "quiz",
+      "baslik": "Bunun İngilizcesi *hangisi?*",
+      "ciz": "havlu",
+      "tr": "havlu",
+      "secenekler": ["tower", "towel", "tool"],
+      "dogru": 1,
+      "kart": "kart-towel",
+      "kanca": "tavla",
+      "cumle": "Havlunun üstünde tavla",
+      "son": "Her kelime *bir kancayla.*",
+      "aciklama": "havlu = ? 🤔 A) tower B) towel C) tool\n\n3 saniyen var! Bildin mi? Yoruma yaz 👇\n\nUnutmamanın yolu kanca: towel ≈ tavla. Profildeki linkten dene 👆"
+    },
+    {
+      "id": "08-story-ornek",
+      "gun": "Her gün (örnek: pillow)",
+      "bicim": "story",
+      "en": "pillow",
+      "ciz": "yastik",
+      "secenekler": ["yastık", "yorgan", "battaniye"],
+      "dogru": 0
+    },
+    {
+      "id": "09-motivasyon",
+      "gun": "Ayda bir",
+      "bicim": "reels",
+      "tur": "motivasyon",
+      "k1": "Her gün *5 kelime* öğrenirsen 80 günde ne olur?",
+      "sayi": "400",
+      "k2": "kelime.",
+      "k3": "Ve hepsini *hatırlarsın.*",
+      "k3alt": "Çünkü her kelimenin bir kancası var.",
+      "son": "Bugün *başla.*",
+      "aciklama": "Her gün 5 kelime × 80 gün = 400 kelime 📅\n\nAma asıl mesele öğrenmek değil, unutmamak. Her kelimenin bir kancası olunca unutmuyorsun 🧠\n\nÜcretsiz, profildeki linkten başla 👆"
+    },
+    {
+      "id": "10-one-cikanlar",
+      "gun": "Profil",
+      "bicim": "kapaklar",
+      "kapaklar": [
+        { "ad": "1-dene", "ciz": "telefon" },
+        { "ad": "2-kancalar", "ciz": "kanca" },
+        { "ad": "3-quiz", "ciz": "soru" },
+        { "ad": "4-kaliplar", "ciz": "kitaplar" },
+        { "ad": "5-sizden", "ciz": "kalp" }
+      ]
     }
   ]
 }

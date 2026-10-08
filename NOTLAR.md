@@ -2365,37 +2365,40 @@ verilmeli ve Reels okunuşu PowerShell/Zira yerine macOS `say` ile
 güçlü (ör. "Botla tekneye çarptık", "Mopetle paspas yaptı") — Reels ve
 köprü gönderileri için hazır içerik.
 
-#### Instagram gelişim planı (8 Ekim) — ÖNCE BU
+#### Instagram — GÜNCEL (9 Ekim) — ÖNCE BU
 
-Sayfa: https://claude.ai/artifact/W6uRjKZeTmAYNRbJXyZHpH (yerel kopya
-`instagram/gelistirme-plani.html`, gitignore). Kaynak: `instagram/referans/`
-— marka rehberi PNG'si + english.grammar.vocab'dan 22 ekran görüntüsü.
+Sayfa (plan + haftanın tüm içeriği, videolar dahil):
+https://claude.ai/artifact/W6uRjKZeTmAYNRbJXyZHpH — sayfa `instagram/sayfa.mjs`
++ `instagram/sayfa-sablon.html` ile üretiliyor (gitignore; önizlemeler
+`instagram/onizleme/`).
 
-- **Görsel dil = marka rehberi** (kullanıcı kararı): #FFF8E9 / #FFE082 /
-  #4DA3FF / #2B3A59, Poppins (yalnızca Instagram; site/uygulama Nunito),
-  sarı kutulu başlık vurgusu, rozet/buton seti, kart görselleri.
-  Hafta 1'in sade şablonu bırakılıyor.
-- **Format = referans sayfa:** tek yoğun poster (15–40 madde, numaralı,
-  satır başına pastel), **Reels olarak** yüklenir (takip etmeyenlere gider;
-  takipçilerin çoğu gerçek değil). Bir satırda "???" yorum tuzağı (referansta
-  152 yorum, diğerleri <10). Reels'te alt 420 / sağ 140 px boş.
-- **Kanca kuralı (kullanıcı, 8 Ekim):** çok kelimeli paylaşımlarda kanca
-  ve kart görseli YOK (kart görseli kancanın sahnesi, kancasız anlamsız).
-  Kanca yalnızca tek kelimelik kanca Reels'inde. Eski "köprü" gönderisi
-  (Evdeki 5 eşya, 5 kanca) bu yüzden çıktı.
-- **Tek haftalık plan, her gün bir paylaşım, hepsi Reels:** Pzt liste
-  posteri · Sal rehber "5 kelime hızlı öğren" · Çarş boşluk/soru-cevap
-  posteri · Perş rehber quiz · Cuma şema/simgeli ızgara posteri · Cmt kanca
-  Reels'i (tek kelime + egzersiz) · Paz tekrar testi (harf sırala/dinle-yaz)
-  · her gün 4 karelik Story · bir kez 8 sayfalık uygulama tanıtımı (sabitle)
-  · ayda bir motivasyon Reels'i. Rehberdeki formatların HEPSİ planda
-  (kullanıcı istedi). Hafta 1-2 başlıkları sayfada.
-- Rehberdeki "Her gün 15 kelime, 30 günde 450" vaadi uygulamaya uymuyor.
-- **İlk iş (onaylandı: posterler Reels):** 1) rehber stilinde poster şablonu
-  (`poster.png` 1080×1350 + `reels.mp4` 1080×1920, alt 420/sağ 140 px boş),
-  2) Hafta 1 Pzt "Türklerin en sık yaptığı 12 hata" — kullanıcı beğenene
-  kadar yalnız bu, 3) rehber Reels şablonu (önce 5 kelime + quiz),
-  4) hafta 1'in kalanı.
+**9–15 Ekim haftası üretildi, kullanıcı değerlendirecek:** tanıtım (9 sayfa,
+sabitlenecek) · Cuma do/does/did posteri · Cmt sell kanca Reels'i · Paz tekrar
+testi · Pzt 12 hata posteri · Sal 5 kelime Reels'i · Çarş in/on/at posteri ·
+Perş towel quiz'i · Story örneği · motivasyon Reels'i · 5 öne çıkan kapağı.
+Değerlendirmeye göre şablon sabitlenir ya da değişir.
+
+- **Kurallar (kullanıcı):** görsel dil = marka rehberi (rehberle "neredeyse
+  birebir", bol görsel) · çok kelimeli paylaşımda kanca ve kart görseli yok,
+  kanca yalnızca tek kelimelikte · her şey Reels (poster de) · Magnific'te
+  güzel gösterecek her şey üretilebilir, çok yüksek harcama hariç.
+- **Haftalık düzen:** Pzt liste posteri · Sal 5 kelime · Çarş boşluk/soru-cevap
+  posteri · Perş quiz · Cuma kural şeması/ızgara · Cmt kanca Reels'i · Paz
+  tekrar testi · her gün 4 karelik Story · tanıtım bir kez · motivasyon ayda bir.
+- **Sıradaki posterler:** referans sayfanın 21 örneği bizim stilimizde
+  (liste sayfada), poster günlerine sırayla.
+- **Profil (önerildi, kullanıcı uygulayacak):** isim `Hafızada | İngilizce
+  Öğren`; biyografi sayfada; fotoğraf yalnızca beyin işareti; öne çıkanlar
+  Dene · Kancalar · Quiz · Kalıplar · Sizden.
+- **Üretici:** `node tools/instagram.mjs [id]` → `instagram/cikti/<id>/`.
+  İçerik `tools/instagram-icerik.json` (`*yıldız*` = sarı kutu). Çizimler
+  `brand/instagram/*.webp` (34, şeffaf; Magnific kart reçetesi, zemin
+  `node tools/ig-kes.mjs` ile siliniyor; ham PNG'ler `instagram/gorseller/`,
+  yalnız bu makinede). Poppins `brand/fonts/`. Dikey karelerde içerik boş
+  alana göre otomatik büyütülüyor. Mac: CHROME= ve `say` uyarlaması gerekli.
+- 9 Ekim: 31 çizim, ~2.300 kredi. Bakiye ~113.700.
+- Uygulama sabit aralık değil FSRS kullanıyor; tanıtımda "1., 3., 7. gün"
+  gibi vaat yazılmamalı. Rehberdeki "30 günde 450 kelime" de uymuyor.
 
 #### Instagram planı
 
