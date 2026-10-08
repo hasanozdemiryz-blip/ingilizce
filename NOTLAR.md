@@ -2355,99 +2355,15 @@ büyütmek, "≈" yerine "sesi:", cümlede yeşil (anlam) / sarı (kanca) renk
 kodu, ilk kartta tek seferlik açıklama. Tekrar bölümünde soru sırası hâlâ
 karışık (bilerek); kullanıcı istemedi.
 
-### SIRADAKİ İŞ: Instagram
+### Instagram — AYRI KLASÖR (9 Ekim)
 
-Plan aşağıda tam (`instagram/` klasörü depoda yok, gitignore). **Mac'te
-çalıştırmak için:** `tools/instagram.mjs` Windows'a göre yazılmış —
-`CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"`
-verilmeli ve Reels okunuşu PowerShell/Zira yerine macOS `say` ile
-üretilecek şekilde uyarlanmalı. ffmpeg Mac'te var. Kanca cümleleri artık
-güçlü (ör. "Botla tekneye çarptık", "Mopetle paspas yaptı") — Reels ve
-köprü gönderileri için hazır içerik.
+Instagram'ın her şeyi artık bu depoda değil, kendi başına çalışan
+`instagram/` klasöründe (Hasan uygulama klasöründen ayrı bir yere taşıyacak).
+İçinde `README.md` (bağlantılar, kurulum, komutlar), `NOTLAR.md` (durum ve
+sıradaki iş), `CLAUDE.md`, üretici ve çizimler var. Instagram işine o
+klasörün `NOTLAR.md`'sinden devam edilir.
 
-#### Instagram — GÜNCEL (9 Ekim) — ÖNCE BU
-
-Sayfa (plan + haftanın tüm içeriği, videolar dahil):
-https://claude.ai/artifact/W6uRjKZeTmAYNRbJXyZHpH — sayfa `instagram/sayfa.mjs`
-+ `instagram/sayfa-sablon.html` ile üretiliyor (gitignore; önizlemeler
-`instagram/onizleme/`).
-
-**9–15 Ekim haftası üretildi, kullanıcı değerlendirecek:** tanıtım (9 sayfa,
-sabitlenecek) · Cuma do/does/did posteri · Cmt sell kanca Reels'i · Paz tekrar
-testi · Pzt 12 hata posteri · Sal 5 kelime Reels'i · Çarş in/on/at posteri ·
-Perş towel quiz'i · Story örneği · motivasyon Reels'i · 5 öne çıkan kapağı.
-Değerlendirmeye göre şablon sabitlenir ya da değişir.
-
-- **Kurallar (kullanıcı):** görsel dil = marka rehberi (rehberle "neredeyse
-  birebir", bol görsel) · çok kelimeli paylaşımda kanca ve kart görseli yok,
-  kanca yalnızca tek kelimelikte · her şey Reels (poster de) · Magnific'te
-  güzel gösterecek her şey üretilebilir, çok yüksek harcama hariç.
-- **Haftalık düzen:** Pzt liste posteri · Sal 5 kelime · Çarş boşluk/soru-cevap
-  posteri · Perş quiz · Cuma kural şeması/ızgara · Cmt kanca Reels'i · Paz
-  tekrar testi · her gün 4 karelik Story · tanıtım bir kez · motivasyon ayda bir.
-- **Sıradaki posterler:** referans sayfanın 21 örneği bizim stilimizde
-  (liste sayfada), poster günlerine sırayla.
-- **Profil (önerildi, kullanıcı uygulayacak):** isim `Hafızada | İngilizce
-  Öğren`; biyografi sayfada; fotoğraf yalnızca beyin işareti; öne çıkanlar
-  Dene · Kancalar · Quiz · Kalıplar · Sizden.
-- **Üretici:** `node tools/instagram.mjs [id]` → `instagram/cikti/<id>/`.
-  İçerik `tools/instagram-icerik.json` (`*yıldız*` = sarı kutu). Çizimler
-  `brand/instagram/*.webp` (34, şeffaf; Magnific kart reçetesi, zemin
-  `node tools/ig-kes.mjs` ile siliniyor; ham PNG'ler `instagram/gorseller/`,
-  yalnız bu makinede). Poppins `brand/fonts/`. Dikey karelerde içerik boş
-  alana göre otomatik büyütülüyor. Mac: CHROME= ve `say` uyarlaması gerekli.
-- 9 Ekim: 31 çizim, ~2.300 kredi. Bakiye ~113.700.
-- Uygulama sabit aralık değil FSRS kullanıyor; tanıtımda "1., 3., 7. gün"
-  gibi vaat yazılmamalı. Rehberdeki "30 günde 450 kelime" de uymuyor.
-
-#### Instagram planı
-
-**Profil** (kullanıcı kendisi değiştirecek; Instagram'a erişimimiz yok):
-- Fotoğraf `brand/instagram-profil.png` (krem zeminli beyin). Yazılı
-  sürümler 110 pikselde okunmuyor; `instagram-profil-lacivert.png` bozuk
-  (beynin lacivert yarısı zeminde kayboluyor).
-- İsim alanı: `Hafızada | İngilizce Kelime` (aramada taranıyor)
-- Bağlantı: `hafizada.com` (ana sayfada mini ders var)
-- Biyografi:
-  ```
-  İngilizce kelimeyi ezberleme, bağla 🧠
-  sell ≈ sel: "Sel gelmeden evini sattı"
-  Ücretsiz, 15 saniyede dene 👇
-  ```
-- Eski 18 gönderi kalıyor; yalnızca "Okunuşu" sütunlu 3'ü arşivlenir.
-
-**Paylaşım mantığı — haftada 5:** 3 normal (işe yarar liste: yanlış
-söylenenler, kalıplar, kısa cevaplar; beğeni/erişim), 1 köprü (liste + her
-kelimenin kancası; kaydettirir), 1 kanca Reels (tek kart, 9 sn; siteye
-götürür). Kullanıcı normalleri artırmak istedi. Ölçüt beğeni değil
-**kaydetme ve paylaşma**. Reels müziksiz üretiliyor, müzik telefonda
-Instagram'ın içinden eklenir.
-
-**Üretici (depoda, sabit şablon):** `tools/instagram.mjs` + içerik
-`tools/instagram-icerik.json`. `node tools/instagram.mjs` → çıktı
-`instagram/cikti/<id>/` (01.png… 1080×1350, reels.mp4 1080×1920,
-aciklama.txt). Yeni makinede gerekenler: Chrome
-(`C:/Program Files/Google/Chrome/...`, değilse `CHROME=` ortam değişkeni),
-ffmpeg, Windows'un İngilizce sesi (Zira; kanca Reels'i için). Çıktı
-klasörü depoda yok — yeni makinede bu komutla aynısı yeniden üretilir.
-
-**Hafta 1 (hazır, içerik dosyasında):** Pzt "Bunu yanlış söylüyorsun"
-(7 hata, kaydırmalı + Reels) · Salı "Kafede 6 cümle" · Çarş "8 kısa cevap"
-(+ Reels) · Perş köprü "Evdeki 5 eşya, 5 kanca" (box, bucket, pillow,
-towel, curtain) · Cmt kanca Reels "sell ≈ sel".
-
-**Açık sorular / sıradaki:**
-- Normal gönderiler yalnızca yazı; kullanıcı "daha görselli tutmaz mı"
-  dedi. Seçenek: listedeki kelime setteyse kart görseli; değilse kapak
-  çizimi = yeni görsel üretimi (onay gerekir).
-- Kanca cümleleri güçlenince (1. iş) o saçma sahneler Instagram için de
-  birebir içerik ("Yastığa pilav dökülürse" Reels'i).
-- Dosyaları telefona aktarmak için Google Drive klasörü önerildi, cevap yok.
-- Köprü için hazır gruplar (görselli, kalite 3): Ev: box, bucket, pillow,
-  towel, curtain, dust, hole, dirt · Mutfak: bowl, taste, dish, jam ·
-  Vücut: eye, chin, leg, itch, sick.
-- Meta Pixel yok; reklama başlanınca kurulur (çerez onay bandı + gizlilik/
-  KVKK metni güncellemesi şart, gizlilik şu an "izleyici yok" diyor).
+Plan sayfası: https://claude.ai/artifact/W6uRjKZeTmAYNRbJXyZHpH
 
 ### Nerede duruyoruz (6 Ekim 2026)
 
