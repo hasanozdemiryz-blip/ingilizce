@@ -2383,15 +2383,19 @@ Sayfa: https://claude.ai/artifact/W6uRjKZeTmAYNRbJXyZHpH (yerel kopya
   ve kart görseli YOK (kart görseli kancanın sahnesi, kancasız anlamsız).
   Kanca yalnızca tek kelimelik kanca Reels'inde. Eski "köprü" gönderisi
   (Evdeki 5 eşya, 5 kanca) bu yüzden çıktı.
-- **Tek haftalık plan** (eski 3 normal + 1 köprü + 1 kanca'nın yerine),
-  hepsi Reels: Pzt liste posteri · Sal simgeli kelime ızgarası · Çarş boşluk
-  doldurma / soru-cevap · Perş tek kural şeması · Cuma kanca Reels'i ·
-  her gün 4 karelik Story. Hafta 1-2 başlıkları sayfada.
+- **Tek haftalık plan, her gün bir paylaşım, hepsi Reels:** Pzt liste
+  posteri · Sal rehber "5 kelime hızlı öğren" · Çarş boşluk/soru-cevap
+  posteri · Perş rehber quiz · Cuma şema/simgeli ızgara posteri · Cmt kanca
+  Reels'i (tek kelime + egzersiz) · Paz tekrar testi (harf sırala/dinle-yaz)
+  · her gün 4 karelik Story · bir kez 8 sayfalık uygulama tanıtımı (sabitle)
+  · ayda bir motivasyon Reels'i. Rehberdeki formatların HEPSİ planda
+  (kullanıcı istedi). Hafta 1-2 başlıkları sayfada.
 - Rehberdeki "Her gün 15 kelime, 30 günde 450" vaadi uygulamaya uymuyor.
 - **İlk iş (onaylandı: posterler Reels):** 1) rehber stilinde poster şablonu
   (`poster.png` 1080×1350 + `reels.mp4` 1080×1920, alt 420/sağ 140 px boş),
   2) Hafta 1 Pzt "Türklerin en sık yaptığı 12 hata" — kullanıcı beğenene
-  kadar yalnız bu, 3) sonra haftanın kalan posterleri.
+  kadar yalnız bu, 3) rehber Reels şablonu (önce 5 kelime + quiz),
+  4) hafta 1'in kalanı.
 
 #### Instagram planı
 
