@@ -2365,6 +2365,28 @@ verilmeli ve Reels okunuşu PowerShell/Zira yerine macOS `say` ile
 güçlü (ör. "Botla tekneye çarptık", "Mopetle paspas yaptı") — Reels ve
 köprü gönderileri için hazır içerik.
 
+#### Instagram gelişim planı (8 Ekim) — ÖNCE BU
+
+Sayfa: https://claude.ai/artifact/W6uRjKZeTmAYNRbJXyZHpH (yerel kopya
+`instagram/gelistirme-plani.html`, gitignore). Kaynak: `instagram/referans/`
+— marka rehberi PNG'si + english.grammar.vocab'dan 22 ekran görüntüsü.
+
+- **Görsel dil = marka rehberi** (kullanıcı kararı): #FFF8E9 / #FFE082 /
+  #4DA3FF / #2B3A59, Poppins (yalnızca Instagram; site/uygulama Nunito),
+  sarı kutulu başlık vurgusu, rozet/buton seti, kart görselleri.
+  Hafta 1'in sade şablonu bırakılıyor.
+- **Format = referans sayfa:** tek yoğun poster (15–40 madde, numaralı,
+  satır başına pastel), **Reels olarak** yüklenir (takip etmeyenlere gider;
+  takipçilerin çoğu gerçek değil). Bir satırda "???" yorum tuzağı (referansta
+  152 yorum, diğerleri <10). Reels'te alt 420 / sağ 140 px boş.
+- Yeni sayfa tipleri: liste, izgara (kart görseli + kanca, imza format),
+  soru-cevap, bosluk, sema; + rehberden quiz / harf sırala Reels ve 4 karelik
+  günlük Story. Hepsi kredisiz.
+- Rehberdeki "Her gün 15 kelime, 30 günde 450" vaadi uygulamaya uymuyor.
+- Hafta 1 içerikleri postere dönüşecek (ilk iki hafta listesi sayfada).
+- **Kullanıcıdan cevap bekleniyor:** hafta 1 postere dönsün mü, posterler
+  Reels mi, önce hangi şablon (öneri: liste + kanca ızgarası).
+
 #### Instagram planı
 
 **Profil** (kullanıcı kendisi değiştirecek; Instagram'a erişimimiz yok):
