@@ -2469,86 +2469,103 @@ kitapta; kelimeleri konu ile temaya bağlanır).
 
 ## Sırada
 
-### SIRADAKİ İŞ — YOL HARİTASI (18 Ekim, kullanıcı: "sana bırakıyorum, sen yapacaksın")
+### SIRADAKİ İŞ — YOL HARİTASI (18 Ekim gece; kullanıcı: "sana bırakıyorum, sen yapacaksın")
 
-Ayrıntılar yukarıda ("Üç bölüm planı", "Müfredat kelimeleri çıkarıldı").
-**Sıra: önce İngilizce + LGS, sonra Kids, en son test.** Her faz bitince
-burada ✅, iki depo push. **Kural:** kredi harcayan her adım (Magnific, ses)
-önce adet + kredi söylenip onayla; ucuz yol önce (2×2 ızgara), deneme küçük.
+Ayrıntılar yukarıda ("Üç bölüm planı", "Müfredat kelimeleri çıkarıldı"). Bu
+liste onları **geçersiz kılar** (adlar ve sıra değişti).
 
-**Faz 0 — Temizlik (küçük)**
-- [ ] `8 MEB.pdf` uygulama deposunun kökünde (200 MB, takipsiz) → depo dışına.
-- [ ] Güvenlik kuralını `kanca-kurallari.md` + `gorsel-recetesi.md`'ye yaz
-      (görsel prompt'una çocuğa uygunluk satırı).
-- [ ] 7 sorunlu kartın cümlesine yeni öneri: gun, night, shake, slap, rob, eat,
-      referee (kullanıcı onayıyla).
-- [ ] Yasal sayfalara `noindex` (gizlilik, kullanım koşulları, KVKK).
+**Kararlar**
+- Üç sekme: **Genel · LGS · Çocuk** (adres `/`, `/lgs/`, `/cocuk/`). Tek uygulama.
+- **Kancalar kalıyor**; kullanıcıya hep **çağrışım** diye gösteriliyor.
+  Yöntemin adı: **görselleştirilmiş hafıza tekniği**. İki kart türü: **ses
+  çağrışımı** (trust ≈ tıraş) ve **görsel çağrışım** (ses benzerliği yok, sahne).
+  Kodda ve notlarda "kanca" kalır; blog adresi `ses-kancasi-yontemi` değişmez.
+- Seçim **yalnız Genel'de**: "Ses çağrışımlı kelimeler" / "Bütün kelimeler".
+  LGS ve Çocuk hep bütün kelimeler (LGS'de ses çağrışımı ~%2). Genel'de ayrıca
+  seviye ayrımı (Hiç bilmiyorum / Biraz / Orta → başlangıç + 2 dk tarama).
+- Süsler her sekmede (Genel hafif), **Magnific'te** üretilir.
+- Ses: kelimeler **tek kadın sesi**, önceden üretilmiş dosya (tarayıcı sesi
+  cihaza göre değişiyor); yavaş oynatma 0,75×. Diyalog: **kadın + erkek**.
+  **Türkçe seslendirme yok** (istisna ileride: Çocuk 2. sınıf yönergeleri).
+- LGS: "Hangi yıl LGS'ye gireceksin?" (2027 → 10 ünite, 2028 → tema),
+  "Okulda hangi ünitedesin?", üniteler **kilitsiz**. Ünite = kelimeler +
+  kalıplar + sesli diyaloglar + ünite testi. Gramer anlatımı ve ayrı sesli ders yok.
+- Kullanıcıya yalnız kredi harcayan ve geri dönüşü zor işlerde sorulur.
 
-**Faz 1 — Kelime verisi ve etiketleme (İngilizce + LGS)**
-- [~] LGS 8. sınıf ilk tur etiket: `tools/mufredat/lgs8-etiket.txt` — 418
-      kelime: **K 10, T 62, R 239, I 76, V 31** (V = zaten kartta). Doğal ses
-      kancası çok az (%2); LGS çoğunlukla resim kartı + kalıp + tanıdık.
-- [ ] **Kanca zorlama turu** (R → K): iki parçalı / iki kelimelik kancalar,
-      `kanca-kurallari.md`'ye göre; tablo + "SENİN KARARIN" sütunu, kullanıcı onayı.
-- [ ] Mevcut 400 kart (genel İngilizce) için seviye (1–3) + konu + bölüm etiketi.
-- [ ] Her LGS kelimesine sahne cümlesi (K: kanca cümlesi, R: anlam sahnesi),
-      güvenlik kuralıyla. Türkçe anlam eksikleri tamamlanır.
-- [ ] **Kalıplar:** ünite başına 8–12 işlev kalıbı ("Would you like to…?",
-      "Sorry, I can't…") — özgün, kitaptan kopya yok.
-- [ ] **Sesli diyalog metinleri:** ünite başına 3–4 kısa, özgün diyalog.
-- [ ] **Ünite testleri:** ünite başına 10 LGS tarzı soru (diyalog tamamla,
-      cümlede anlam).
-- [ ] Kart verisine alanlar: `bolumler`, `seviye`, `konu`, `lgsUnite`
-      (2027), `maarifTema` (2028), `tur` (kanca/resim/kalip/tanidik).
-- [ ] (İsteğe bağlı) 8. sınıf kitap metninden ünite başına tam liste.
+**Kaç kart üreteceğiz** (tahmin; etiketleme bitince kesinleşir)
 
-**Faz 2 — Uygulama**
-- [ ] Bölüm seçimi (profilde) + üstte sekme şeridi: İngilizce · LGS · Kids.
-- [ ] Üyelikteki seviye cevabı başlangıca bağlanır + 2 dk "biliyorum/bilmiyorum"
-      taraması.
-- [ ] Girişte "Sadece kancalılar / Hepsi" seçimi (LGS'de varsayılan Hepsi).
-- [ ] Resim kartı akışı (kanca basamağı yerine sahne) + kalıp kartı.
-- [ ] LGS: "Hangi yıl LGS'ye gireceksin?" (2027 → 10 ünite, 2028 → tema),
-      "Okulda hangi ünitedesin?", 10 ünitelik yol, **kilitsiz**; aralıklı
-      tekrar üniteler arası sürer.
-- [ ] Ünite içeriği: kelimeler → kalıplar → sesli diyaloglar → ünite testi.
-- [ ] **Cümle içinde 4 şıklı soru** (merdivene son basamak; önce LGS, sonra herkes).
-- [ ] Sesli diyaloglar: iki ses (ElevenLabs; ses seçimi ve maliyet onayla).
-- **Yapılmayacak:** gramer/konu anlatımı, ayrı sesli ders, lig/sıralama/sosyal.
+| Sekme | Hedef kelime | Bugün var | Yeni kart | Not |
+|---|---:|---:|---:|---|
+| Genel | 1.000 | 400 | 600 | ~300'ü Çocuk/LGS kartlarıyla ortak, ~300'ü yalnız Genel (sık kelimeler, ses çağrışımlılar önce) |
+| LGS (2027, 8. sınıf) | 418 | 31 | 387 | ilk tur: 10 ses çağrışımı, 62 tanıdık, 76 kalıp, 239 görsel çağrışım |
+| Çocuk (2–6. sınıf) | 1.277 | 168 | ~1.000 | LGS ile ~100 ortak |
+| **Farklı yeni kart** | | | **~1.700** | ortak kelimenin kartı tek |
 
-**Faz 3 — Site ve SEO**
-- [ ] Sekme şeridi + bölüme özel menü + bölüm süsleri (kendi SVG çizimimiz).
-- [ ] `/lgs/`: geri sayım + "günde kaç kelime" hesaplayıcı + 10 ünite kutusu +
-      veli bölümü + SSS.
-- [ ] 10 LGS ünite sayfası: önemli 20 kelime (kanca/görsel/ses) + tam liste +
-      üyeliksiz mini test + yazdırılabilir PDF + "uygulamada çalış".
-- [ ] "LGS'de en çok çıkan kelimeler" (2018–2026 çıkmış sorulardan).
-- [ ] Kelime sayfaları 20 → hepsi; zenginleştir: Türkçe harfle okunuş,
-      İngilizce örnek cümle + çeviri, ünite/konu bağı, mini test.
-- [ ] Görsel site haritası; ağaç şeklinde iç bağlantı (bölüm → ünite → kelime).
-- [ ] Search Console'a haftalık bakış.
+**Kredi** (bakiye 18 Ekim: 81.465)
 
-**Faz 4 — Görseller (Magnific, kredi dikkatli)**
-- [ ] ~300 kredilik deneme: Nano Banana Pro 2K **2×2 ızgara** (~19 kredi/kart)
-      + Z-Image / Flux.2 Klein karşılaştırma → yöntem seçimi, onayla.
-- [ ] Mevcut 400 görselin güvenlik incelemesi (ızgarayla, bedava).
-- [ ] LGS görselleri (~390 yeni kart) — partiler halinde, her parti onayla.
+| İş | Hesap | Kredi |
+|---|---|---:|
+| Görsel denemesi | 2×2 ızgara + ucuz modeller | ~300 |
+| Kart görselleri | ~1.700 × ~28 (2K 2×2 ızgara ~19 + yeniden deneme) | ~48.000 |
+| Süsler | 3 sekme, Magnific (SVG 375 / görsel 75) | ≤2.000 |
+| Kelime sesleri | ~2.100 kelime × 2 kredi (kadın sesi) | ~4.200 |
+| LGS diyalogları | 40 diyalog × ~400 harf × 0,2 | ~3.200 |
+| **Toplam** | | **~58.000** → ~23.000 kalır |
 
-**Faz 5 — Kids** (yapı Faz 2–3'te hazır olur; burada yalnız içerik)
-- [ ] 2–6. sınıf 1.277 kelimenin etiketi (aynı akış), Maarif temalarıyla.
-- [ ] Sitede `/kids/` içeriği: veli sayfası, sınıf sayfaları, konu sayfaları,
-      yazdırılabilir kartlar. Uygulamada yıldız/rozet, veli özeti, veli hesabı (KVKK).
-- [ ] Kids görselleri (~900) — onaylı partiler.
+Eski yöntemle (75 kredi/görsel, ~127/kart) görseller tek başına ~216.000 —
+ızgara denemesi tutmazsa plan bakiyeye sığmaz, önce o.
 
-**Faz 6 — Test (Claude yapacak)**
+**Faz 0 — Temizlik**
+- [ ] Güvenlik kuralını `kanca-kurallari.md` ve `gorsel-recetesi.md`'ye yaz.
+- [ ] 7 sorunlu kartın cümlesi (gun, night, shake, slap, rob, eat, referee) — onayla.
+- [ ] Yasal sayfalara `noindex`.
+
+**Faz 1 — Site (ilk iş)**
+- [ ] Sekme şeridi Genel · LGS · Çocuk, sekmeye özel menü.
+- [ ] Sitede "kanca" yerine "çağrışım" / "görselleştirilmiş hafıza tekniği".
+- [ ] `/lgs/` ve `/cocuk/` sayfalarının iskeleti (ünite/sınıf kutuları, veli bölümü, SSS).
+- [ ] Kelime sayfaları 20 → 400; zenginleştir: Türkçe harfle okunuş, İngilizce
+      örnek cümle + çeviri, mini test.
+- [ ] Görsel site haritası, iç bağlantı ağacı.
+- Süsler Faz 4'te üretilince eklenir; LGS ünite sayfaları Faz 2 ve 4'le dolar.
+
+**Faz 2 — Kelime verisi (Genel + LGS)**
+- [ ] LGS etiketleri: ilk tur yapıldı (`tools/mufredat/lgs8-etiket.txt`).
+      Ses çağrışımı zorlama turu (iki parçalı, iki kelimelik) → onay tablosu.
+- [ ] Genel: 400 karta seviye + konu + bölüm; ~300 yeni Genel kelimesi seç
+      (sık kullanılan, ses çağrışımlı önce) → onay tablosu.
+- [ ] Her yeni karta sahne cümlesi (güvenlik kuralıyla) ve Türkçe anlam.
+- [ ] LGS: ünite başına 8–12 kalıp, 3–4 diyalog, 10 test sorusu (özgün).
+- [ ] Kart alanları: `bolumler`, `seviye`, `konu`, `lgsUnite`, `maarifTema`, `tur`.
+
+**Faz 3 — Uygulama**
+- [ ] Sekme şeridi, bölüm seçimi (profilde).
+- [ ] Genel: "Ses çağrışımlı / Bütün kelimeler" + seviye başlangıcı + tarama.
+- [ ] Görsel çağrışım kartı akışı, kalıp kartı, çağrışım adlandırması.
+- [ ] LGS: yıl ve ünite sorusu, 10 ünitelik kilitsiz yol, ünite testi.
+- [ ] Cümle içinde 4 şıklı soru (merdivene son basamak).
+- [ ] Kelime ve diyalog sesi dosyadan (kadın; diyalogda kadın + erkek), 0,75×.
+- Yapılmayacak: gramer anlatımı, ayrı sesli ders, lig/sıralama/sosyal.
+
+**Faz 4 — Üretim: Genel + LGS (Magnific, kredi dikkatli)**
+- [ ] ~300 kredilik deneme → yöntem seçimi (onay).
+- [ ] Mevcut 400 görselin güvenlik incelemesi (bedava).
+- [ ] Görseller: LGS 387 + Genel ~300 → partiler, her parti onayla.
+- [ ] Süsler, kelime sesleri, LGS diyalog sesleri.
+
+**Faz 5 — Çocuk** (yapı hazır; yalnız içerik)
+- [ ] 1.277 kelimenin etiketi (Maarif temaları), cümleler.
+- [ ] `/cocuk/` içeriği: veli sayfası, sınıf ve konu sayfaları, yazdırılabilir kartlar.
+- [ ] Uygulamada yıldız/rozet, veli özeti, veli hesabı (KVKK).
+- [ ] ~1.000 görsel + sesler → onaylı partiler.
+
+**Faz 6 — Test (Claude)**
 - [ ] Hiçbir şey bilmeyen biri gibi her senaryoyu dene: ilk giriş, üyelik,
-      seviye, bölüm değiştirme, LGS yılı/ünite seçimi, ders, tekrar, test,
-      çıkış/giriş, telefon boyutu, site → uygulama geçişleri. Takıldığın,
-      zorlandığın, hata veren her şeyi listele, düzelt, yeniden dene.
+      seviye, sekme değiştirme, LGS yılı/ünite, ders, tekrar, test, çıkış/giriş,
+      telefon boyutu, site → uygulama. Takılınan ve hata veren her şeyi bul,
+      düzelt, yeniden dene.
 
-**Açık kararlar (kullanıcı):** Kids adresi `/kids/` mı `/cocuk/` mu; İngilizce
-sekmesinde süs olsun mu; SVG mi emoji mi (öneri SVG); "Sadece kancalılar /
-Hepsi" adı; diyalog sesi; sunucu şifre 6 → 8 (eski açık).
+**Açık:** sunucu şifre 6 → 8 (eski, cevap bekliyor).
 
 ### Nerede duruyoruz (7 Ekim 2026 akşam, Mac)
 
