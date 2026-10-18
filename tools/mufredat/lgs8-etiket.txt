@@ -1,0 +1,422 @@
+# LGS 2027 — 8. sinif (eski program) kelimeleri, ilk tur etiket (18 Ekim 2026, Claude onerisi, kullanici onayi YOK)
+# unite|ingilizce|turkce|tur|kanca|ses|not
+# tur: K = ses kancasi (kanca-kurallari.md), T = tanidik (Turkcede ayni/cok benzer), R = resim karti (iyi kanca yok),
+#      I = kalip ifade, V = mevcut 400 kartta var. ses: 3 guclu / 2 orta benzerlik. not: G = Kids/LGS guvenlik dikkati.
+1|accept|kabul etmek|K|ek sepet|2|iki parcali kanca
+1|advice|tavsiye|R|||
+1|attend|katılmak|R|||
+1|awesome|harika|R|||
+1|back up|desteklemek|I|||
+1|best friend|en iyi arkadaş|I|||
+1|book fair|kitap fuarı|I|||fair ≈ fuar
+1|bowling alley|bovling salonu|I|||
+1|buddy|kanka|R|||
+1|busy|meşgul|V|||
+1|chit-chat|sohbet|R|||
+1|come over|uğramak|I|||
+1|concert|konser|T|||
+1|cool|harika|T|||
+1|count on|güvenmek|I|||
+1|eat out|dışarıda yemek|I|||
+1|event|etkinlik|R|||
+1|excuse|bahane|R|||
+1|exhibition|sergi|R|||
+1|faultless|kusursuz|R|||
+1|friendship|arkadaşlık|R|||
+1|full|tok|V|||
+1|get on well with|iyi geçinmek|I|||
+1|go for a walk|yürüyüşe çıkmak|I|||
+1|instrument|enstrüman|T|||
+1|invite|davet etmek|R|||
+1|laid-back|rahat|R|||
+1|loyalty|sadakat|R|||
+1|mate|arkadaş|R|||G: kanca adayı "meyit" — kullanılmaz
+1|mutual|karşılıklı|R|||
+1|patience|sabır|K|peşin|3|
+1|phobia|fobi|T|||kitapta "Phobie"
+1|plant|bitki|R|||"plan" İngilizce de kelime (kural 3)
+1|priceless|paha biçilmez|R|||
+1|promise|söz vermek|R|||
+1|receiver|alıcı|R|||
+1|refuse|reddetmek|R|||
+1|regularly|düzenli olarak|R|||
+1|response|yanıt|R|||
+1|science fiction|bilim kurgu|I|||
+1|secret|sır|R|||
+1|sender|gönderen|R|||
+1|serious|ciddi|R|||
+1|share|paylaşmak|R|||şeker başka kartta (kural 2/4)
+1|stuffed|tıka basa doymuş|R|||
+1|support|desteklemek|R|||
+1|survive|hayatta kalmak|R|||
+1|text|mesaj atmak|T|||
+1|thriller|gerilim filmi|T|||
+1|thrilling|heyecan verici|R|||
+1|tournament|turnuva|T|||
+1|treasure|hazine|R|||
+1|trust|güvenmek|K|tıraş|3|
+1|unconditional|koşulsuz|R|||
+2|archery|okçuluk|R|||
+2|argue|tartışmak|K|argo|3|
+2|backpack|sırt çantası|R|||
+2|board game|kutu oyunu|I|||
+2|branch|dal|V|||
+2|campfire|kamp ateşi|I|||camp ≈ kamp
+2|casual|günlük (giyim)|R|||
+2|compass|pusula|R|||"kampüs" İngilizce campus'u çağırır (kural 3)
+2|crunch|çatırdamak|R|||
+2|equipment|ekipman|T|||
+2|fashion|moda|R|||
+2|fizzy|gazlı|R|||
+2|folk|halk|R|||fok başka kartta (kural 4)
+2|fond of|-e düşkün|I|||
+2|gain|kazanmak|R|||
+2|hang out|takılmak|I|||
+2|harmonic|ahenkli|T|||
+2|honest|dürüst|R|||
+2|impressive|etkileyici|R|||
+2|loud|yüksek sesli|V|||
+2|map|harita|R|||
+2|pitch|saha|R|||G: kanca adayı argo — kullanılmaz
+2|prefer|tercih etmek|R|||
+2|push-up|şınav|R|||
+2|recommend|tavsiye etmek|R|||
+2|relationship|ilişki|R|||
+2|relaxing|rahatlatıcı|T|||relaks
+2|reward|ödül|R|||
+2|ridiculous|gülünç|R|||
+2|rope|ip|R|||
+2|self-disciplined|öz disiplinli|R|||
+2|sleeping bag|uyku tulumu|I|||
+2|snob|züppe|T|||
+2|squad|ekip|R|||
+2|teenager|ergen|R|||
+2|tent|çadır|V|||
+2|terrific|harika|R|||
+2|torch|el feneri|V|||
+2|training|antrenman|T|||
+2|trekking|doğa yürüyüşü|T|||
+2|trendy|modaya uygun|T|||
+2|types of music|müzik türleri|I|||
+2|unbearable|dayanılmaz|R|||
+2|youth|gençlik|R|||
+3|bake|fırında pişirmek|V|||
+3|bitter|acı|V|||
+3|boil|kaynatmak|R|||
+3|bowl|kâse|V|||
+3|chop|doğramak|K|çöp|3|
+3|crack|kırmak|V|||
+3|cuisine|mutfak (yemek kültürü)|R|||
+3|cut|kesmek|V|||
+3|delicious|lezzetli|R|||
+3|dessert|tatlı|R|||
+3|dice|küp küp doğramak|K|dayı|2|
+3|dough|hamur|R|||
+3|flour|un|R|||
+3|fork|çatal|V|||
+3|fry|kızartmak|V|||
+3|grater|rende|R|||
+3|grill|ızgara|V|||
+3|ingredient|malzeme|R|||
+3|kitchen tool|mutfak aleti|I|||
+3|knife|bıçak|V|||
+3|mash|ezmek|K|meşe|2|
+3|meal|öğün|R|||
+3|mix|karıştırmak|T|||mikser
+3|oil|yağ|V|||
+3|oven|fırın|R|||
+3|pan|tava|R|||
+3|peel|soymak|V|||
+3|plate|tabak|V|||
+3|pour|dökmek|R|||
+3|preparation|hazırlık|R|||
+3|recipe|tarif|R|||
+3|roast|kızartmak (fırında)|T|||rosto
+3|roll|yuvarlamak|V|||
+3|salty|tuzlu|R|||salt kartı var
+3|saucepan|tencere|R|||
+3|season|baharat eklemek|V|||kartta "mevsim" anlamıyla
+3|slice|dilimlemek|V|||
+3|sour|ekşi|V|||
+3|spicy|baharatlı|R|||
+3|spoon|kaşık|R|||
+3|spread|sürmek|R|||
+3|sprinkle|serpmek|R|||
+3|steam|buhar|V|||
+3|tasty|lezzetli|R|||
+3|whisk|çırpmak|R|||G: kanca adayı içki — kullanılmaz
+4|addiction|bağımlılık|R|||
+4|appointment|randevu|R|||
+4|available|müsait|R|||
+4|bad line|hat kötü|I|||
+4|break into|zorla girmek|I|||G: suç; LGS'de var, Kids'e girmez
+4|burglary|hırsızlık|R|||G: suç; LGS'de var, Kids'e girmez
+4|call|aramak|R|||kol başka kartın anlamı (kural 2)
+4|clarification|açıklama|R|||
+4|concentration|konsantrasyon|T|||
+4|connect|bağlanmak|R|||
+4|cons|eksiler|R|||
+4|contact|iletişim kurmak|T|||kontak
+4|conversation|sohbet|R|||
+4|customer service|müşteri hizmetleri|I|||
+4|dial|numara çevirmek|R|||
+4|disturb|rahatsız etmek|R|||
+4|doorbell|kapı zili|I|||door kartı var
+4|engaged|meşgul (hat)|R|||
+4|evolve|gelişmek|R|||
+4|extension|dahili hat|R|||
+4|get back|geri dönmek|I|||
+4|get in touch|iletişime geçmek|I|||keep in touch dahil
+4|hang on|beklemek (telefonda)|I|||
+4|hang up|telefonu kapatmak|I|||
+4|hold|hatta beklemek|R|||
+4|incident|olay|R|||
+4|line|hat|R|||
+4|memo|not|T|||
+4|message|mesaj|T|||
+4|misunderstanding|yanlış anlama|R|||
+4|municipality|belediye|R|||
+4|notice|fark etmek|R|||
+4|pick up|telefonu açmak|I|||
+4|polite|kibar|R|||
+4|pros|artılar|R|||
+4|put someone through|telefonu bağlamak|I|||
+4|quickness|çabukluk|R|||
+4|reservation|rezervasyon|T|||
+4|ring|çalmak (telefon)|V|||kartta "yüzük" anlamıyla
+4|security|güvenlik|T|||
+4|staff|personel|R|||
+5|access|erişim|R|||
+5|account|hesap|R|||
+5|aim|amaç|R|||
+5|attachment|ek (dosya)|R|||
+5|browse|gezinmek|R|||
+5|browser|tarayıcı|R|||
+5|click|tıklamak|T|||
+5|comment|yorum|R|||
+5|communication|iletişim|T|||komünikasyon
+5|confirm|onaylamak|R|||
+5|connection|bağlantı|R|||
+5|delete|silmek|R|||
+5|develop|geliştirmek|R|||
+5|device|cihaz|R|||
+5|download|indirmek|T|||
+5|habit|alışkanlık|R|||
+5|ignore|görmezden gelmek|T|||
+5|instant|anlık|R|||
+5|log in|giriş yapmak|I|||log on / off dahil
+5|notification|bildirim|R|||
+5|online|çevrim içi|T|||
+5|password|şifre|R|||
+5|post|gönderi|T|||
+5|properly|düzgünce|R|||
+5|recent|son, yeni|R|||
+5|register|kaydolmak|R|||
+5|reply|yanıtlamak|R|||
+5|research|araştırma|R|||
+5|screen|ekran|R|||
+5|search engine|arama motoru|I|||
+5|sign up|kaydolmak|I|||sign in dahil
+5|social networking site|sosyal ağ sitesi|I|||
+5|subscriber|abone|R|||
+5|update|güncellemek|T|||
+5|upload|yüklemek|T|||
+5|usage|kullanım|R|||
+5|vary from|-den -e değişmek|I|||
+5|vlogger|vlogger|T|||
+5|website|web sitesi|T|||
+6|adventurous|maceracı|R|||
+6|aerobatic|akrobatik|T|||
+6|ambitious|hırslı|R|||
+6|amusing|eğlenceli|R|||
+6|bungee jumping|bungee jumping|T|||
+6|canoeing|kano|T|||
+6|caving|mağaracılık|R|||
+6|challenging|zorlu|R|||
+6|courage|cesaret|R|||
+6|demonstration|gösteri|R|||
+6|disappointing|hayal kırıklığı yaratan|R|||
+6|dry suit|kuru dalış giysisi|I|||
+6|entertaining|eğlendirici|R|||
+6|exciting|heyecan verici|R|||
+6|extreme|aşırı, uç|T|||ekstrem
+6|extreme sports|ekstrem sporlar|I|||
+6|fascinating|büyüleyici|R|||
+6|gear|ekipman|V|||
+6|glove|eldiven|R|||
+6|hang-gliding|kanatla uçuş|R|||
+6|helmet|kask|R|||
+6|individually|bireysel olarak|R|||
+6|instructor|eğitmen|R|||
+6|kayaking|kano sporu|R|||"kayak" Türkçede kar kayağı — karışır
+6|life vest|can yeleği|I|||
+6|magnificent|muhteşem|R|||
+6|motor racing|motor yarışı|I|||
+6|mysterious|gizemli|R|||
+6|paddle|kürek|R|||"pedal" İngilizce de kelime (kural 3)
+6|paragliding|yamaç paraşütü|T|||
+6|rafting|rafting|T|||
+6|risky|riskli|T|||
+6|skateboarding|kaykay|R|||
+6|skyscraper|gökdelen|R|||
+6|steering|direksiyon|R|||
+6|take risks|risk almak|I|||
+6|wet suit|dalış giysisi|I|||
+6|wing|kanat|V|||
+6|wrist guards|bilek koruyucu|I|||
+7|accommodation|konaklama|R|||
+7|all-inclusive|her şey dahil|I|||
+7|ancient|antik|R|||
+7|architecture|mimari|T|||
+7|attraction|turistik yer|R|||
+7|authentic|otantik|T|||
+7|bamboo bungalow|bambu bungalov|I|||
+7|bed and breakfast|oda kahvaltı|I|||
+7|boutique hotel|butik otel|I|||
+7|bridge|köprü|V|||
+7|budget|bütçe|V|||
+7|capital|başkent|R|||
+7|caravansary|kervansaray|T|||
+7|ceremony|tören|T|||seremoni
+7|countryside|kırsal|R|||
+7|cultural|kültürel|T|||
+7|culture|kültür|T|||
+7|delight|zevk|R|||
+7|destination|varış yeri|T|||destinasyon
+7|fountain|çeşme|R|||
+7|historic site|tarihi alan|I|||
+7|incredible|inanılmaz|R|||
+7|journey|yolculuk|R|||
+7|landmark|simge yapı|R|||
+7|monument|anıt|R|||
+7|mosque|cami|R|||G: dini yapı; görsel sade mimari, Kids'e girmez
+7|preserve|korumak|R|||
+7|prophet|peygamber|R|||G: din; görsel yok, yalnız metin
+7|province|il|R|||
+7|refresh|tazelemek|R|||
+7|region|bölge|R|||
+7|resort|tatil köyü|R|||
+7|rural|kırsal|R|||
+7|settlement|yerleşim yeri|R|||
+7|shrine|türbe|R|||G: din; görsel yok, yalnız metin
+7|souvenir|hediyelik eşya|T|||suvenir
+7|square|meydan|R|||
+7|tomb|mezar|R|||G: ölüm; görsel yok, yalnız metin
+7|trip|gezi|R|||
+7|urban|kentsel|R|||
+8|arrive on time|zamanında varmak|I|||
+8|clean up|temizlemek|I|||
+8|do the laundry|çamaşır yıkamak|I|||
+8|do chores|ev işi yapmak|I|||
+8|dust the shelves|rafların tozunu almak|I|||dust kartı var
+8|duty|görev|R|||
+8|feature|özellik|R|||
+8|feed|beslemek|V|||
+8|festival|festival|T|||
+8|household|hane|R|||
+8|iron|ütülemek|K|ayran|3|
+8|janitor|hademe|R|||
+8|keep promises|sözünü tutmak|I|||break promises dahil
+8|keep quiet|sessiz olmak|I|||
+8|laundry|çamaşır|R|||
+8|load the dishwasher|bulaşık makinesini doldurmak|I|||empty dahil
+8|make the bed|yatağı toplamak|I|||
+8|mop|paspaslamak|V|||
+8|moral|ahlaki|R|||"moral" Türkçede başka anlam — karışır
+8|neat|düzenli|R|||
+8|obey the rules|kurallara uymak|I|||
+8|obligation|zorunluluk|R|||
+8|pay the bill|faturayı ödemek|I|||
+8|periodically|periyodik olarak|T|||
+8|prepare|hazırlamak|R|||
+8|respect|saygı|R|||
+8|responsibility|sorumluluk|R|||
+8|return books|kitapları iade etmek|I|||
+8|set the table|sofrayı kurmak|I|||
+8|slipper|terlik|R|||
+8|sweep|süpürmek|T|||süpür — ses ve anlam aynı
+8|take out the garbage|çöpü çıkarmak|I|||
+8|tidy up|toparlamak|I|||
+8|to-do list|yapılacaklar listesi|I|||
+8|tradition|gelenek|R|||
+8|wash the dishes|bulaşık yıkamak|I|||dry dahil
+8|water the plants|bitkileri sulamak|I|||
+9|achievement|başarı|R|||
+9|biochemist|biyokimyacı|T|||
+9|catgut|katgüt|R|||
+9|cell|hücre|R|||"sel" sell kartının kancası (kural 4)
+9|conduct|yürütmek (deney)|R|||
+9|cure|tedavi, çare|T|||kür
+9|diagnose|teşhis koymak|T|||diyagnoz
+9|discover|keşfetmek|R|||
+9|disease|hastalık|R|||
+9|do an experiment|deney yapmak|I|||
+9|evaluate|değerlendirmek|R|||
+9|examine|incelemek|R|||
+9|explode|patlamak|R|||
+9|explore|keşfetmek|R|||
+9|find out|öğrenmek, bulmak|I|||
+9|genius|dâhi|R|||
+9|gravity|yer çekimi|R|||
+9|high-tech|ileri teknoloji|I|||
+9|invent|icat etmek|R|||
+9|lab|laboratuvar|T|||
+9|observe|gözlemlemek|R|||
+9|paraplegic|felçli|R|||G: engel; saygılı anlatım, alay yok
+9|planet|gezegen|T|||
+9|portable|taşınabilir|T|||portatif
+9|process|süreç|T|||proses
+9|rabies vaccine|kuduz aşısı|I|||
+9|researcher|araştırmacı|R|||
+9|result|sonuç|R|||
+9|safety|güvenlik|R|||
+9|scientific|bilimsel|R|||
+9|search|aramak|R|||
+9|smallpox vaccine|çiçek aşısı|I|||
+9|solar panel|güneş paneli|I|||
+9|speciality|uzmanlık|R|||
+9|succeed|başarmak|R|||
+9|test tube|deney tüpü|I|||
+9|tyre|lastik|R|||
+9|vaccination|aşılama|R|||
+9|well-equipped|donanımlı|I|||
+10|avalanche|çığ|R|||
+10|cause|sebep olmak|K|koz|3|
+10|decrease|azalmak|R|||
+10|destroy|yok etmek|R|||
+10|destructive|yıkıcı|R|||
+10|disappear|kaybolmak|R|||
+10|disaster|felaket|R|||G: afet; görsel korkutucu olmasın
+10|drought|kuraklık|R|||
+10|earthquake|deprem|R|||G: afet; görsel korkutucu olmasın
+10|eco-friendly|çevre dostu|I|||
+10|erosion|erozyon|T|||
+10|extinct|nesli tükenmiş|R|||
+10|flood|sel|R|||
+10|glacier|buzul|R|||
+10|global warming|küresel ısınma|I|||
+10|heat up|ısınmak|I|||
+10|heat-trapping gases|ısı tutan gazlar|I|||
+10|hurricane|kasırga|R|||
+10|landslide|heyelan|R|||
+10|melt|erimek|V|||
+10|pollute|kirletmek|R|||
+10|precaution|önlem|R|||
+10|produce|üretmek|R|||
+10|protect|korumak|R|||
+10|provide|sağlamak|R|||
+10|rainforest|yağmur ormanı|I|||
+10|rechargeable|şarj edilebilir|R|||
+10|recycle|geri dönüştürmek|R|||
+10|renewable|yenilenebilir|R|||
+10|rescue|kurtarmak|R|||
+10|source|kaynak|R|||sos başka kartta (kural 4)
+10|suffer|acı çekmek|K|safir|2|
+10|survivor|hayatta kalan|R|||
+10|temperature|sıcaklık|T|||temperatür
+10|tornado|hortum|T|||
+10|treatment|tedavi|R|||
+10|tsunami|tsunami|T|||
+10|volcano|yanardağ|T|||volkan
+10|waste|atık|R|||
+10|water shortage|su kıtlığı|I|||

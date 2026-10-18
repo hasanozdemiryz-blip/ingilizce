@@ -2469,19 +2469,86 @@ kitapta; kelimeleri konu ile temaya bağlanır).
 
 ## Sırada
 
-### SIRADAKİ İŞ (18 Ekim) — üç bölüm: kelime listeleri
+### SIRADAKİ İŞ — YOL HARİTASI (18 Ekim, kullanıcı: "sana bırakıyorum, sen yapacaksın")
 
-Plan yukarıda ("2026-10-18 — Üç bölüm planı"), sonuçlar "Müfredat kelimeleri
-çıkarıldı" başlığında.
+Ayrıntılar yukarıda ("Üç bölüm planı", "Müfredat kelimeleri çıkarıldı").
+**Sıra: önce İngilizce + LGS, sonra Kids, en son test.** Her faz bitince
+burada ✅, iki depo push. **Kural:** kredi harcayan her adım (Magnific, ses)
+önce adet + kredi söylenip onayla; ucuz yol önce (2×2 ızgara), deneme küçük.
 
-1. ✅ Ders kitapları indirildi, sözlükler çıkarıldı (`tools/mufredat/`).
-   Kalan: 8. sınıf ünite metinlerinden tam liste; her kelimeye seviye ve tür
-   (kancalı / tanıdık / soyut / kalıp) — Excel'deki "Tür" sütunu boş.
-2. **Açık kararlar:** Kids adresi (`/kids/` mı `/cocuk/` mu); İngilizce
-   sekmesinde süs olsun mu; SVG mi emoji mi; mod adı; LGS başlangıç sorusu
-   (seviye mi ünite mi); yasal sayfalara `noindex`.
-3. Sonra kod (öneri sırası): kart veri alanları → bölüm şeridi + süsler → LGS
-   ünite sayfaları → cümle içinde soru → Kids. Görsel denemesi ve üretimi en son.
+**Faz 0 — Temizlik (küçük)**
+- [ ] `8 MEB.pdf` uygulama deposunun kökünde (200 MB, takipsiz) → depo dışına.
+- [ ] Güvenlik kuralını `kanca-kurallari.md` + `gorsel-recetesi.md`'ye yaz
+      (görsel prompt'una çocuğa uygunluk satırı).
+- [ ] 7 sorunlu kartın cümlesine yeni öneri: gun, night, shake, slap, rob, eat,
+      referee (kullanıcı onayıyla).
+- [ ] Yasal sayfalara `noindex` (gizlilik, kullanım koşulları, KVKK).
+
+**Faz 1 — Kelime verisi ve etiketleme (İngilizce + LGS)**
+- [~] LGS 8. sınıf ilk tur etiket: `tools/mufredat/lgs8-etiket.txt` — 418
+      kelime: **K 10, T 62, R 239, I 76, V 31** (V = zaten kartta). Doğal ses
+      kancası çok az (%2); LGS çoğunlukla resim kartı + kalıp + tanıdık.
+- [ ] **Kanca zorlama turu** (R → K): iki parçalı / iki kelimelik kancalar,
+      `kanca-kurallari.md`'ye göre; tablo + "SENİN KARARIN" sütunu, kullanıcı onayı.
+- [ ] Mevcut 400 kart (genel İngilizce) için seviye (1–3) + konu + bölüm etiketi.
+- [ ] Her LGS kelimesine sahne cümlesi (K: kanca cümlesi, R: anlam sahnesi),
+      güvenlik kuralıyla. Türkçe anlam eksikleri tamamlanır.
+- [ ] **Kalıplar:** ünite başına 8–12 işlev kalıbı ("Would you like to…?",
+      "Sorry, I can't…") — özgün, kitaptan kopya yok.
+- [ ] **Sesli diyalog metinleri:** ünite başına 3–4 kısa, özgün diyalog.
+- [ ] **Ünite testleri:** ünite başına 10 LGS tarzı soru (diyalog tamamla,
+      cümlede anlam).
+- [ ] Kart verisine alanlar: `bolumler`, `seviye`, `konu`, `lgsUnite`
+      (2027), `maarifTema` (2028), `tur` (kanca/resim/kalip/tanidik).
+- [ ] (İsteğe bağlı) 8. sınıf kitap metninden ünite başına tam liste.
+
+**Faz 2 — Uygulama**
+- [ ] Bölüm seçimi (profilde) + üstte sekme şeridi: İngilizce · LGS · Kids.
+- [ ] Üyelikteki seviye cevabı başlangıca bağlanır + 2 dk "biliyorum/bilmiyorum"
+      taraması.
+- [ ] Girişte "Sadece kancalılar / Hepsi" seçimi (LGS'de varsayılan Hepsi).
+- [ ] Resim kartı akışı (kanca basamağı yerine sahne) + kalıp kartı.
+- [ ] LGS: "Hangi yıl LGS'ye gireceksin?" (2027 → 10 ünite, 2028 → tema),
+      "Okulda hangi ünitedesin?", 10 ünitelik yol, **kilitsiz**; aralıklı
+      tekrar üniteler arası sürer.
+- [ ] Ünite içeriği: kelimeler → kalıplar → sesli diyaloglar → ünite testi.
+- [ ] **Cümle içinde 4 şıklı soru** (merdivene son basamak; önce LGS, sonra herkes).
+- [ ] Sesli diyaloglar: iki ses (ElevenLabs; ses seçimi ve maliyet onayla).
+- **Yapılmayacak:** gramer/konu anlatımı, ayrı sesli ders, lig/sıralama/sosyal.
+
+**Faz 3 — Site ve SEO**
+- [ ] Sekme şeridi + bölüme özel menü + bölüm süsleri (kendi SVG çizimimiz).
+- [ ] `/lgs/`: geri sayım + "günde kaç kelime" hesaplayıcı + 10 ünite kutusu +
+      veli bölümü + SSS.
+- [ ] 10 LGS ünite sayfası: önemli 20 kelime (kanca/görsel/ses) + tam liste +
+      üyeliksiz mini test + yazdırılabilir PDF + "uygulamada çalış".
+- [ ] "LGS'de en çok çıkan kelimeler" (2018–2026 çıkmış sorulardan).
+- [ ] Kelime sayfaları 20 → hepsi; zenginleştir: Türkçe harfle okunuş,
+      İngilizce örnek cümle + çeviri, ünite/konu bağı, mini test.
+- [ ] Görsel site haritası; ağaç şeklinde iç bağlantı (bölüm → ünite → kelime).
+- [ ] Search Console'a haftalık bakış.
+
+**Faz 4 — Görseller (Magnific, kredi dikkatli)**
+- [ ] ~300 kredilik deneme: Nano Banana Pro 2K **2×2 ızgara** (~19 kredi/kart)
+      + Z-Image / Flux.2 Klein karşılaştırma → yöntem seçimi, onayla.
+- [ ] Mevcut 400 görselin güvenlik incelemesi (ızgarayla, bedava).
+- [ ] LGS görselleri (~390 yeni kart) — partiler halinde, her parti onayla.
+
+**Faz 5 — Kids** (yapı Faz 2–3'te hazır olur; burada yalnız içerik)
+- [ ] 2–6. sınıf 1.277 kelimenin etiketi (aynı akış), Maarif temalarıyla.
+- [ ] Sitede `/kids/` içeriği: veli sayfası, sınıf sayfaları, konu sayfaları,
+      yazdırılabilir kartlar. Uygulamada yıldız/rozet, veli özeti, veli hesabı (KVKK).
+- [ ] Kids görselleri (~900) — onaylı partiler.
+
+**Faz 6 — Test (Claude yapacak)**
+- [ ] Hiçbir şey bilmeyen biri gibi her senaryoyu dene: ilk giriş, üyelik,
+      seviye, bölüm değiştirme, LGS yılı/ünite seçimi, ders, tekrar, test,
+      çıkış/giriş, telefon boyutu, site → uygulama geçişleri. Takıldığın,
+      zorlandığın, hata veren her şeyi listele, düzelt, yeniden dene.
+
+**Açık kararlar (kullanıcı):** Kids adresi `/kids/` mı `/cocuk/` mu; İngilizce
+sekmesinde süs olsun mu; SVG mi emoji mi (öneri SVG); "Sadece kancalılar /
+Hepsi" adı; diyalog sesi; sunucu şifre 6 → 8 (eski açık).
 
 ### Nerede duruyoruz (7 Ekim 2026 akşam, Mac)
 
