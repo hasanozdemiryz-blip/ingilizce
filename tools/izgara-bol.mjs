@@ -45,7 +45,11 @@ function bosluk(uzunluk, digerUzunluk, beyazMi) {
       bas = -1;
     }
   }
-  if (!enIyi) throw new Error('beyaz bosluk bulunamadi — izgara degil mi?');
+  // Model bazen kareleri bosluksuz, yan yana ciziyor: o zaman tam ortadan bol.
+  if (!enIyi) {
+    const orta = Math.round(uzunluk / 2);
+    return [orta, orta - 1];
+  }
   return enIyi;
 }
 
@@ -61,6 +65,10 @@ const kareler = [
 fs.mkdirSync(klasor, { recursive: true });
 for (const [i, id] of ids.entries()) {
   if (id === '-') continue;
-  await sharp(dosya).extract(kareler[i]).png().toFile(path.join(klasor, `${id}.png`));
+  // Model bazen karelerin etrafina beyaz cerceve koyuyor: saf beyaz kenari kirp
+  // (soluk zemin tonlari 255'e esit olmadigi icin korunuyor).
+  const kare = await sharp(dosya).extract(kareler[i]).png().toBuffer();
+  const kirpik = await sharp(kare).trim({ background: '#ffffff', threshold: 6 }).toBuffer().catch(() => kare);
+  await sharp(kirpik).png().toFile(path.join(klasor, `${id}.png`));
   console.log(`${id}.png  ${kareler[i].width}x${kareler[i].height}`);
 }
