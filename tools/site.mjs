@@ -61,7 +61,8 @@ const baslaYol = (bolum) => (bolum && bolum !== 'genel' ? `/ingilizce/?basla=1&a
 
 const MENU_LGS = [
   ['/lgs/#uniteler', 'Üniteler'],
-  ['/lgs/en-cok-cikan-kelimeler/', 'En çok çıkanlar'],
+  ['/lgs/en-onemli-25-kelime/', 'En önemli 25'],
+  ['/lgs/cikmis-sorulardaki-kelimeler/', 'Çıkmış sorular'],
   ['/lgs/#yontem', 'Nasıl çalışıyor?'],
   ['/lgs/#veli', 'Veliler için'],
   ['/lgs/#sss', 'SSS'],

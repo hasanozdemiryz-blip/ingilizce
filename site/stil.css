@@ -518,3 +518,7 @@ a.bilgi-rozet.lgs { background: #e6f6ff; }
   .tablo-kap { border: 1px solid #999; box-shadow: none; overflow: visible; }
   .kelime-tablo td.en a { color: #000; text-decoration: none; }
 }
+
+/* LGS en onemli 25 */
+.onemli .sira-no { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--lacivert); color: var(--vurgu); font-family: var(--d); font-weight: 900; font-size: .85rem; }
+.onemli .yol-rozet a { text-decoration: underline; }

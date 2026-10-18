@@ -2610,8 +2610,13 @@ Toplam kredi ~32.400 (bakiye ~81.220). Planda olmayan: Çocuk'un tamamı, ödeme
 
 - [x] Faz 0, Faz 1'in ilk hali, deneme (yöntem seçildi), 7 güvenlik görselinden 6'sı
       + draft (rob bekliyor), logo düzeltmesi, başlık A, 50 kelime, platform dili.
-- [ ] **Aşama 1 — sıradaki adım:** LGS çağrışım vitrini (2–3) → 25 kelime sayfası →
-      çıkmış sayfası adı → tıklama testi → site yayını.
+- [x] **Aşama 1 (19 Ekim):** LGS vitrini en fazla 3 (`site-bolumler.mjs` `VITRIN`),
+      `/lgs/en-onemli-25-kelime/` (T hariç), `/lgs/cikmis-sorulardaki-kelimeler/`,
+      LGS platforma gelene kadar "platformda" yerine "ekleniyor/hazırlanıyor"
+      (`LGS_UYGULAMADA`). Test: 79 sayfa, 3.625 bağlantı + #bölüm hedefleri 0 sorun;
+      telefon menüsü, logo, aktif sekme, "Hemen başla" (`?bolum=lgs`, platform yalnız
+      `basla`'yı okuyor) tıklandı. **Site yayında** (site deposu `13e60c8`).
+- [ ] **Aşama 2 — sıradaki adım:** LGS kelime verisi (PLAN'daki Aşama 2).
 - LGS deneme görselleri `gorseller/lgs/` (survive, delicious, refuse — onaylı
   kalitede; device yeniden). `gorseller/` depoda değil; başka cihazda yoksa
   yeniden üretilecek (Magnific Personal projesinde de duruyorlar: 19 Ekim).
