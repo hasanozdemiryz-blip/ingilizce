@@ -2545,6 +2545,36 @@ liste onları **geçersiz kılar**.
 Eski yöntemle (~127/kart) görseller tek başına ~216.000 — ızgara denemesi
 tutmazsa plan bakiyeye sığmaz, önce o.
 
+**19 Ekim kararları (aşağıdaki fazları günceller)**
+- **Mobil uygulama YOK; "online eğitim platformu"yuz.** `/ingilizce/` web
+  platformu ürünün kendisi. Android/Play, mağaza işleri rafta; belki ileride.
+  Site metinlerinde "uygulama" yerine "platform" dili.
+- Ana sayfa başlığı **A**: "Hafıza teknikleriyle İngilizce kelime öğren." +
+  "Her kelime bir Türkçe çağrışıma ve tek bir resme bağlanıyor: snake → sinek.
+  Ezber yok, akılda kalıyor." LGS: "LGS İngilizce kelimeleri, hafıza teknikleriyle."
+- **Her şeyi verme:** Genel'de yalnız **50 kelime sayfası** = yayındaki 20 +
+  far…safe dışı 30: put, bowl, branch, lead, short, table, cut, gate, jam, feed,
+  crack, pass, wash, meet, belt, rule, pillow, thunder, storm, hook, bag, fork,
+  cap, season, freeze, towel, spin, arm, lamp, torch (seçim: sıklık + müfredat +
+  Google önerisi, `tools/arama-sinyal.json`; Ads hesabı yok, gerçek hacim yok).
+  LGS ünite sayfalarında **liste + Türkçe + mini test açık**, çağrışım kartı
+  ünite başına yalnız 2–3 (vitrin). Yeni sayfa: **"LGS'de en çok çıkan ve
+  mutlaka öğrenilmesi gereken 25 kelime"** (çıkmış sınav sıklığı, tanıdık T
+  kelimeler hariç). "En çok çıkanlar" → "LGS İngilizce çıkmış sorulardaki kelimeler".
+  Sonra Çocuk konu sayfaları (hayvanlar, renkler, sayılar…), gerçek PDF.
+- **Yayın planı (onaylı):** Yayın 1 = yukarıdakiler bitince; Yayın 2 = Çocuk konu
+  sayfaları + PDF; Yayın 3 = platforma LGS gelince "yakında" notları kalkar.
+  Görsel üretimi kullanıcı 1–2 gün içinde başlatacak (önce 7 güvenlik görseli +
+  ~300 kredilik deneme).
+- **Para/reklam (konuşuldu, karar notu):** şimdi her şey ücretsiz; reklam 0 TL
+  (SEO, Instagram organik, öğretmenler). Ödeme sistemi hazır olunca Şubat'ta
+  2–3 bin TL test (Google arama + Instagram veliye), LGS döneminde yalnız kârlı
+  kanal. Satış örneği: 249 TL paket → KDV ve komisyon sonrası ~198 TL. Para almaya
+  başlayınca: şahıs şirketi, muhasebe ≥3.593 TL/ay, Supabase Pro 25 $/ay.
+  Ücretli içerik pakete gömülmemeli (sunucudan, girişli).
+- **GitHub gizlilik:** iki depo da herkese açık (Pages ücretsiz planda böyle).
+  "İyi giderse" GitHub Pro (4 $/ay) ile gizliye alınacak; şimdi değil.
+
 **Faz 0 — Temizlik** ✅ (18-19 Ekim, dal `uc-bolum`)
 - [x] Kurallar: `kanca-kurallari.md` (yazılış çağrışımı, zorla/sadeleştir, 14
       örnek, güvenlik), `gorsel-recetesi.md` (çağrışım açıkça görünür, güvenlik satırı).
