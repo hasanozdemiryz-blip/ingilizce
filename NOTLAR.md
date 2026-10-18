@@ -2307,7 +2307,124 @@ kavun bal gibi, hat palet, tooth ×2 dişle basmıyor, tower/tie kenara taştı,
 Yayında (7 Ekim).
 
 
+## 2026-10-18 — Üç bölüm planı: İngilizce · LGS · Kids (konuşuldu, kod yok)
+
+Bu gün yalnızca konuşuldu; kod, görsel, kredi yok. Kararlar ve açık sorular
+aşağıda. Site deposu bu makinede (Windows) 3 commit gerideydi, çekildi.
+Magnific bakiyesi **81.465** (7 Ekim notu 130.152 diyordu; ~48.700 kayıt dışı,
+büyük ihtimalle Instagram — kontrol et).
+
+### Bölümler ve site
+
+- **Sekme şeridi** (örnek: tidalcolors.com üst şeridi): her sekmede küçük
+  "HAFIZADA" + büyük bölüm adı, seçili sekme beyaz ve sayfayla birleşik. Sıra
+  **İngilizce · LGS · Kids**. Sitede ve uygulamada aynı şerit.
+- Adresler: `/` = İngilizce (mevcut ana sayfa; Google'daki adresler bozulmasın),
+  `/lgs/`, Kids için `/kids/` ya da `/cocuk/` (**açık**). Her sekmenin kendi menüsü.
+- **Uygulama tek kalır** (`/ingilizce/`, kurulu PWA bozulmasın); bölüm profilde
+  tutulur, "Hemen başla" bulunduğun sekmenin bölümüyle açar.
+- **Renkler değişmeyebilir; her bölümün kendi temalı süsü var** (mevsim değil,
+  bölüm): menü altında bayrak dizisi, logodan sarkan bir şey, şeritte silik desen.
+  Kids: balon, yıldız, pastel boya, ABC küpü, uçurtma. LGS: kalem, cetvel,
+  kronometre, optik form Ⓐ Ⓑ Ⓒ Ⓓ, "LGS'ye X gün" rozeti. İngilizce: sade (**açık**).
+  Önerilen: kendi SVG çizimimiz, emoji değil (22 Eylül "Emoji marka değildir")
+  — **onay açık**. Mevsim süsü (23 Nisan vb.) ileride aynı yapıya eklenebilir.
+- **Kids = okuma yazma bilen çocuklar (2–6. sınıf).** Harf dizme ve yazılı kart
+  kalır; cümle kısa, sahne çocuğa uygun, sıra konuya göre. 13 yaş altı: hesap
+  veliden, ölçüm velinin onayıyla (KVKK; Play'e dönülürse Families politikası).
+
+### Müfredat (araştırıldı)
+
+MEB İngilizce programı Maarif Modeli'ne kademeli geçiyor (TTKB, 13 Ağustos 2025).
+2026-27'de 8. sınıf **eski programda**; 7. sınıf yeni modelde.
+
+| | Program | Gruplama |
+|---|---|---|
+| **LGS Haziran 2027** | eski | 10 ünite: Friendship, Teen Life, In the Kitchen, On the Phone, The Internet, Adventures, Tourism, Chores, Science, Natural Forces |
+| **LGS 2028+** | Maarif | 8 tema: School Life & Education, Classroom Life & Learning, Personal Life & Well-Being, Family Life & Home, Neighbourhood & City & Social Life, World & Culture, Nature & Global Problems, Universe & Future |
+| Kids 2–4 (Maarif) | yeni | 6 tema: School, Classroom, Personal, Family, Homes & Neighbourhood, City & World (5. sınıfta +Nature, +Universe) |
+
+Kararlar: LGS bir **kelime havuzu**; her kelime hem eski ünite hem yeni temayla
+etiketlenir (2027'de ünite görünümü, 2028'de tema). 8. sınıf tahmini **~1.000
+kelime** (ingilizceciyiz'de yalnız 1. ünite ~149). LGS'de çok **kalıp ifade**
+(hang up, do the laundry) ve çok tanıdık kelime (internet, download) var.
+Kaynak: **MEB ders kitaplarının sözlükleri** (EBA PDF) — siteler yalnız ünite adı veriyor.
+
+### Kart türleri, seviye
+
+- **Kanca kartı** (ses benzerliği + sahne) ve **Resim kartı** (kanca yok;
+  anlamı canlandıran sahne + kısa cümle). Önce kanca zorlanır
+  (`kanca-kurallari.md`), çıkmazsa resim kartı. Girişte seçim: "Sadece
+  kancalılar" / "Hepsi (kancalı + resimli)" — **isim açık**. LGS'de varsayılan
+  "Hepsi" (sınav bütün kelimeleri ister).
+- **Seviye 1–3** (A1/A2/B1 + sıklık). Üyelikte sorulan seviye
+  (`uyelik.ts` `SEVIYELER`) **kaydediliyor ama hiçbir yerde kullanılmıyor**;
+  başlangıç noktası olacak: Hiç bilmiyorum → S1 baştan; Biraz → S1, bilinenler
+  hızlı geçilir; Orta → S2 + 2 dk tarama ("Bunu biliyorum" üstüne). LGS'de
+  "Hangi ünitedesin?" sorusu daha işe yarar olabilir (**açık**).
+- Kartta yeni alanlar: bölümler, seviye, konu (`kart-inceleme`'deki 18 kategori),
+  LGS ünite/tema, tür (kanca/resim/ifade). Ortak kelimenin kartı ve görseli tek.
+
+### Güvenlik kuralı — Kids ve LGS (kullanıcı, 18 Ekim)
+
+Kanca, cümle ve görselde kötü çağrışım yok: silah/şiddet/suç, alkol/sigara/gece
+hayatı, din/siyaset, korku/ölüm/kan, engel-beden-görünüşle alay, romantik ima,
+taklit edilebilir tehlike. Kural `kanca-kurallari.md` ve `gorsel-recetesi.md`'ye
+yazılacak; görsel prompt'una çocuğa uygunluk satırı. Mevcut 400 kartta cümle
+taramasında çıkanlar: `gun` (silah sesi), `night` (nayt klup), `shake` (şeyh),
+`slap` (tokat), `rob` (banka soygunu), `eat` ("it"), `referee` (polis, sınırda).
+Görseller ızgarayla gözden geçirilecek (bedava). Ortak kelimede yalnız cümle
+sorunluysa bölüme özel cümle; görsel de sorunluysa yeniden üretim. Bazı kelimeler
+Kids'e hiç girmez (`gun`).
+
+### Öğrenme sistemi
+
+Üç ayrı sistem yok; çekirdek (merdiven, aralıklı tekrar, ölçüm) tek, bölüm
+kelimeyi ve birkaç ayarı belirler. Yalnız içeriğin zorladıkları: resim kartı
+akışı (kanca basamağı yerine sahne), kalıp ifade kartı (LGS), seviye + tarama,
+ünite/konu seçimi, **cümle içinde 4 şıklı soru** (LGS'nin ölçtüğü şey; en
+değerli tek ekleme, görsel kredisi istemez), Kids'e yıldız/rozet + veli özeti.
+Bilerek yok: lig, sıralama, sosyal (4 kayıtlı kullanıcı; önce ölç).
+
+### Görsel maliyeti (fiyatlar `simulate_cost` ile, 18 Ekim)
+
+Nano Banana Pro 1K da 2K da **75**, 4K 150; `images_split_grid` **bedava**.
+2K'da **2×2 ızgara** → 4 kart × 1024×768 → **~19 kredi/kart** (aynı model, seed,
+referans). Ucuz modeller (stil kayabilir): Flux.2 Klein 30, Seedream 5 Flash 35,
+Nano Banana 50, NB2 Lite 60, Z-Image 5. Tahmin: açılış ~550 görsel ≈ 17.000,
+hedeflerin tamamı ~1.300 görsel ≈ 40.000 (eski yöntemle ~165.000 — bakiyeye
+sığmaz). **Üretim en sona**; önce ~300 kredilik deneme (Pro 2×2 ×2, Z-Image ve
+Klein 4'er kart), kullanıcı onayıyla.
+
+### SEO (Google'da "hafizada.com")
+
+- İkon görünmüyordu: dosyalar doğru, **Google'ın favicon servisi ikonu zaten
+  döndürüyor** (beyin); favicon 7 Ekim'de geldi, arama sonucu yeniden taramayla
+  güncellenir. Search Console → URL denetimi → ana sayfa → dizine eklenmesini iste.
+- Sonuç altında Gizlilik / İletişim / Kullanım koşulları çıkıyor: güçlü başka
+  sayfa yok. Öneri: yasal sayfalara `noindex`; asıl çözüm içerik.
+- İçerik: kelime sayfaları 20 → 400 (15 Kasım kararı öne alınabilir), LGS 10
+  ünite sayfası (önemli 20 kelime + tam liste + üyeliksiz mini test + PDF +
+  "uygulamada çalış"), "LGS'de en çok çıkan kelimeler" (çıkmış sorulardan,
+  rakiplerde yok), Kids sınıf ve konu sayfaları + yazdırılabilir kartlar,
+  görsel site haritası, ağaç şeklinde iç bağlantı, öğretmenler dağıtım kanalı.
+  Hepsi aynı kelime verisinden `tools/site.mjs` ile üretilir.
+
 ## Sırada
+
+### SIRADAKİ İŞ (18 Ekim) — üç bölüm: kelime listeleri
+
+Plan yukarıda ("2026-10-18 — Üç bölüm planı").
+
+1. **MEB ders kitaplarını indir** (2–8. sınıf, eski ve yeni program; EBA PDF),
+   sözlüklerini çıkar → Excel: kelime, sınıf, ünite/tema, seviye, tür
+   (kancalı / tanıdık / soyut / kalıp ifade), mevcut 400'le kesişim. Depoya
+   girmez, kredi yok. Kesin kelime sayısı ve kredi hesabı buradan.
+2. **Açık kararlar:** Kids adresi (`/kids/` mı `/cocuk/` mu); İngilizce
+   sekmesinde süs olsun mu; SVG mi emoji mi; mod adı; LGS başlangıç sorusu
+   (seviye mi ünite mi); yasal sayfalara `noindex`.
+3. Sonra kod (öneri sırası): kart veri alanları → bölüm şeridi + süsler → LGS
+   ünite sayfaları → cümle içinde soru → Kids. Görsel denemesi ve üretimi en son.
 
 ### Nerede duruyoruz (7 Ekim 2026 akşam, Mac)
 
