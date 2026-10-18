@@ -16,6 +16,30 @@ Tutarlılığın tek kaynağı bu dosya. Üç kaldıraç birden gerekir; biri de
 > Magnific'teki eski creation'ların prompt'undan geri çıkarıldı. Bir daha
 > kaybolmasın diye burada.
 
+## Izgara yöntemi (19 Ekim 2026 — VARSAYILAN)
+
+Nano Banana Pro **2K'da da 75 kredi**. Tek 2K görsele **2×2 ızgara** (dört ayrı
+kart) çizdirip `node tools/izgara-bol.mjs <izgara.png> <id1> <id2> <id3> <id4>`
+ile bölünce kart başına **~19 kredi** (yeniden denemeyle ~25). Kare 1187×883,
+4:3; `import:images` 800×600 yapar. Aynı model, seed, referans → stil birebir.
+
+İskelet aynı; yalnız başı ve kompozisyon satırı değişir:
+`A 2x2 grid of FOUR separate, independent card illustrations arranged in two
+rows and two columns, separated by thin plain white gutters. Each panel is its
+own complete picture with its own very pale background.` + `Panel 1 (top-left),
+very pale <TON> background: <SAHNE>` ×4 + "COMPOSITION in EVERY panel…",
+"BACKGROUND of each panel…". Kusurlu kare `-` ile atlanır, sonraki ızgarada
+başka kartlarla yeniden çizilir.
+
+Deneme (19 Ekim, 245 kredi): 3 ızgara, 12 karenin 10'u temiz. **Z-Image (5 kredi)
+elendi**: beyaz çıkartma kenarı, ince çizgi, stil tutmuyor. Dersler:
+- Masa/direk gibi aşağı uzanan nesne alt kenara değebiliyor (`rob`): "the
+  table is small and fully visible, its legs end well above the panel edge".
+- "Dev" gibi ölçek gerektiren çağrışımda ölçek nesnesi şart: dev yanında
+  küçük bir ev ya da normal boy insan (`device` ilk denemede sıradan adam çıktı).
+- Füze → oyuncak uzay roketi (güvenlik); sur → surlar + kırık kuşatma
+  merdiveni + güvende aile: çağrışım tek bakışta okunuyor.
+
 ## İskelet
 
 Her kart yalnızca **ilk satırı** ve **arka plan tonunu** değiştirir. Gerisi

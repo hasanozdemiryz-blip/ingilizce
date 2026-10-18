@@ -584,7 +584,7 @@ function bosluklu(cumle, en) {
  * silahli siluet); yeniden uretilene kadar sitede sayfalari yok. Gorsel
  * gelince listeden cikar.
  */
-const GORSEL_YENILENECEK = ['gun', 'night', 'shake', 'slap', 'rob', 'eat', 'referee'];
+const GORSEL_YENILENECEK = ['rob'];
 
 /** Uretilen klasorler — her derlemede bastan yaziliyor, eskisi kalmasin. */
 const URETILEN = ['varliklar', 'kelime', 'kelimeler', 'blog', 'iletisim', 'gizlilik', 'kullanim-kosullari', 'kvkk', 'en', 'lgs', 'cocuk'];
