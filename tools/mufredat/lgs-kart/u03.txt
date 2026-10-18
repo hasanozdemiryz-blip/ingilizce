@@ -1,0 +1,29 @@
+# 3. ünite In the Kitchen — en|tr|tur|kanca|yol|cumle|sahne|ton|genel
+boil|kaynatmak|G|||Tenceredeki suyu kaynattı|A pot of water boils on a stove with big bubbles and steam rising.|cream|E
+chop|doğramak|K|çöp|ses|Soğanı doğradı, kabuklarını çöpe attı|A smiling cook chops an onion on a cutting board and tosses the onion skins into a small kitchen bin beside her.|mint|E
+cuisine|mutfak (yemek kültürü)|G|||Dünya mutfağından yemekler tattık|A table with pizza, sushi, tacos and kebab plates from different countries.|peach|E
+delicious|lezzetli|K|deli|yazılış|Deli aşçının yemeği lezzetli çıktı|A goofy cheerful chef with wild messy hair under a tall white hat proudly holds out a steaming plate of tasty food.|peach|E
+dessert|tatlı|K|sert|yazılış|Tatlı taş gibi sert çıktı|A surprised boy bites a slice of cake that is rock hard; a tiny crack shows on the cake and his fork is bent.|pink|E
+dice|küp küp doğramak|K|dayı|ses|Dayım havucu küp küp doğradı|A smiling uncle with a moustache dices a carrot into small cubes on a cutting board.|mint|E
+dough|hamur|G|||Hamuru elleriyle yoğurdu|Two hands knead a soft ball of dough on a floury table.|cream|E
+flour|un|G|||Kek için una ihtiyacımız var|An open paper bag of white flour with a scoop, a little flour spilling into a bowl.|cream|E
+grater|rende|G|||Peyniri rendeyle rendeledi|A girl grates cheese with a metal grater into a bowl.|yellow|E
+ingredient|malzeme|G|||Keki yapmak için malzemeleri hazırladık|Eggs, flour, milk, sugar and butter laid out on a kitchen table next to a mixing bowl.|cream|E
+kitchen tool|mutfak aleti|I|||Mutfak aletleri duvarda asılı|A wooden spoon, a whisk, a ladle and a spatula hang on hooks on a kitchen wall.|mint|E
+mash|ezmek|K|meşe|ses|Meşe tokmağıyla patatesi ezdi|A man mashes boiled potatoes in a bowl with a wooden masher carved with an oak leaf and an acorn.|cream|E
+meal|öğün|G|||Akşam öğününde hep birlikte yedik|A family sits around a table sharing a meal of soup, salad and bread.|peach|E
+mix|karıştırmak|T|mikser|ses|Mikserle kek hamurunu karıştırdı|A girl mixes cake batter in a bowl with an electric mixer, a little batter splashing.|yellow|E
+oven|fırın|G|||Kek fırında kabardı|A golden cake rises inside an oven with the light on, seen through the glass door.|peach|E
+pan|tava|G|||Tavada iki yumurta pişti|Two fried eggs sizzle in a black frying pan on a stove.|yellow|E
+pour|dökmek|G|||Sütü bardağa döktü|A boy carefully pours milk from a jug into a glass.|sky-blue|E
+preparation|hazırlık|G|||Piknik hazırlığı için sandviç yaptık|Two kids prepare sandwiches on a kitchen counter with a picnic basket nearby.|green|E
+recipe|tarif|K|reçete|ses|Doktor reçeteye kek tarifi yazdı|A smiling doctor in a white coat hands a girl a prescription pad that shows a little drawing of a cake.|mint|E
+roast|kızartmak (fırında)|T|rosto|ses|Fırında rosto tavuk kızardı|A golden roast chicken with potatoes sits on an oven tray.|peach|E
+salty|tuzlu|G|||Çorba çok tuzlu olmuş|A boy makes a funny face after tasting soup, a salt shaker tipped over beside the bowl.|cream|E
+saucepan|tencere|G|||Tencerede makarna pişiyor|Pasta cooks in a saucepan with a long handle on a stove.|cream|E
+spicy|baharatlı|G|||Acı biber çok baharatlıydı|A boy eats a red chilli pepper and little cartoon flames puff from his mouth while he fans his face.|peach|E
+spoon|kaşık|G|||Çorbayı kaşıkla içti|A girl eats soup from a bowl with a big spoon.|mint|E
+spread|sürmek|G|||Ekmeğe tereyağı sürdü|A knife spreads butter on a slice of toast.|yellow|E
+sprinkle|serpmek|G|||Kekin üstüne renkli şeker serpti|A girl sprinkles colourful sugar sprinkles over a cupcake.|pink|E
+tasty|lezzetli|K|tas|yazılış|Tastaki çorba çok lezzetli|A happy girl eats steaming soup from a shiny metal bowl and licks her lips.|peach|E
+whisk|çırpmak|G|||Yumurtaları çırptı|A boy whisks eggs in a glass bowl with a metal whisk.|cream|E

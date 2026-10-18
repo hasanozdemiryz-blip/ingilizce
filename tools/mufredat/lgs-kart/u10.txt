@@ -1,0 +1,40 @@
+# 10. ünite Natural Forces — en|tr|tur|kanca|yol|cumle|sahne|ton|genel
+avalanche|çığ|K|avaz|ses|Avaz avaz bağırdı, çığ düştü|A man on a snowy mountain shouts with his hands around his mouth while far away a small soft snow slide rolls down the slope.|sky-blue|E
+cause|sebep olmak|K|koz|ses|Son kozunu oynadı, herkesin gülmesine sebep oldu|A boy slaps down his winning card in a card game and his friends burst out laughing.|yellow|E
+decrease|azalmak|G|||Dondurma eridikçe azaldı|An ice cream cone getting smaller in three steps as it melts.|pink|E
+destroy|yok etmek|G|||Dalga kumdan kaleyi yok etti|A wave washes away a sandcastle while a girl watches with her hands on her cheeks.|sky-blue|E
+destructive|yıkıcı|G|||Yıkıcı rüzgâr şemsiyeleri uçurdu|Strong wind blows beach umbrellas into the air while people hold their hats.|sky-blue|E
+disappear|kaybolmak|G|||Kedi kutunun içinde kayboldu|Only the tail of a cat sticks out of a cardboard box.|peach|E
+disaster|felaket|G|||Mutfakta tam bir felaket oldu|A messy kitchen with flour everywhere and a burnt cake while a boy laughs.|cream|E
+drought|kuraklık|G|||Kuraklıkta toprak çatladı|Dry cracked ground with a single wilted plant under a bright sun.|yellow|E
+earthquake|deprem|G|||Deprem tatbikatında sıraların altına girdik|Calm students take shelter under their desks during an earthquake drill.|cream|E
+eco-friendly|çevre dostu|I|||Çevre dostu bisikletle okula gitti|A girl rides a bicycle past recycling bins and green trees.|green|E
+erosion|erozyon|T|erozyon|ses|Yağmur erozyonla toprağı taşıdı|A bare hillside with soil washing down a little stream after rain.|cream|E
+extinct|nesli tükenmiş|G|||Müzede nesli tükenmiş dinozorun iskeleti var|Children look up at a big dinosaur skeleton in a museum.|cream|E
+flood|sel|G|||Selde kurtarma botu aileyi taşıdı|A rescue boat carries a smiling family along a flooded street.|sky-blue|E
+glacier|buzul|G|||Buzul dağın yamacından indi|A huge white and blue glacier flows between mountains.|sky-blue|E
+global warming|küresel ısınma|I|||Küresel ısınmayla buzlar eriyor|The Earth wearing a thermometer, with a melting ice cube beside it.|sky-blue|E
+heat up|ısınmak|I|||Çorbayı ocakta ısıttı|A pot of soup heats on a stove with steam rising.|peach|E
+heat-trapping gases|ısı tutan gazlar|I|||Isı tutan gazlar dünyayı ısıtıyor|The Earth under a hazy grey layer with the sun's rays bouncing back down.|yellow|E
+hurricane|kasırga|G|||Kasırga yaprakları döndürdü|A spiral of wind spins leaves through the air.|sky-blue|E
+landslide|heyelan|G|||Heyelan yolu kapattı|Mud and rocks slide down a hill onto a road with an orange cone.|cream|E
+pollute|kirletmek|G|||Fabrika dumanı havayı kirletti|A factory chimney puffs grey smoke into the sky.|cream|E
+precaution|önlem|G|||Önlem olarak kask taktı|A boy puts on a helmet before riding his bike.|mint|E
+produce|üretmek|G|||Fabrika oyuncak üretiyor|A toy factory conveyor belt carries teddy bears.|yellow|E
+protect|korumak|G|||Fidanı elleriyle korudu|Two hands gently protect a small green sprout in the soil.|green|E
+provide|sağlamak|G|||Çiftçi pazara sebze sağladı|A farmer hands a crate of fresh vegetables to a shopkeeper.|green|E
+rainforest|yağmur ormanı|I|||Yağmur ormanında papağanlar var|A lush green rainforest with a colourful parrot and a waterfall.|green|E
+rechargeable|şarj edilebilir|G|||Şarj edilebilir pil prize takıldı|A battery charging in a charger with a lightning icon.|yellow|E
+recycle|geri dönüştürmek|G|||Şişeleri geri dönüşüm kutusuna attı|A girl drops plastic bottles into a recycling bin with arrows.|green|E
+renewable|yenilenebilir|G|||Rüzgâr türbinleri yenilenebilir enerji üretiyor|White wind turbines turn on a green hill.|sky-blue|E
+rescue|kurtarmak|G|||İtfaiyeci kediyi ağaçtan kurtardı|A firefighter on a ladder rescues a kitten from a tree.|green|E
+source|kaynak|G|||Dağdaki kaynaktan su içtik|Clear water flows from a spring between rocks.|sky-blue|E
+suffer|acı çekmek|K|safir|ses|Safir yüzüğünü kaybedince çok acı çekti|A sad woman looks at her empty finger, a blue sapphire ring lying lost in the grass behind her.|lavender|E
+survivor|hayatta kalan|G|||Küçük adadaki hayatta kalan yardım bekledi|A castaway on a tiny island with one palm tree waves at a passing ship.|sky-blue|E
+temperature|sıcaklık|T|temperatür|ses|Termometre yüksek sıcaklığı gösterdi|A big thermometer with the red line high up and a sun beside it.|yellow|E
+tornado|hortum|T|tornado|ses|Uzakta bir hortum döndü|A grey tornado spins far away over empty fields.|sky-blue|E
+treatment|tedavi|G|||Hemşire dizindeki yarayı tedavi etti|A nurse puts a plaster on a boy's knee.|mint|E
+tsunami|tsunami|T|tsunami|ses|Tsunami uyarısı yapıldı|A big wave rises far out at sea while people walk calmly to higher ground.|sky-blue|H
+volcano|yanardağ|T|volkan|ses|Volkan duman çıkardı|A volcano puffs a little smoke on a sunny island.|peach|E
+waste|atık|G|||Atıkları ayrı kutulara ayırdı|A boy sorts waste into three coloured bins.|green|E
+water shortage|su kıtlığı|I|||Su kıtlığında musluktan tek damla çıktı|A single drop falls from an almost dry tap.|sky-blue|E

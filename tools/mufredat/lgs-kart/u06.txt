@@ -1,0 +1,38 @@
+# 6. ünite Adventures — en|tr|tur|kanca|yol|cumle|sahne|ton|genel
+adventurous|maceracı|G|||Maceracı kız dürbünle ormanı izledi|A girl explorer in a safari hat looks through binoculars at a jungle.|green|E
+aerobatic|akrobatik|T|akrobatik|ses|Uçak gökyüzünde akrobatik bir takla attı|A small red stunt plane does a loop in the sky leaving a white smoke trail.|sky-blue|E
+ambitious|hırslı|G|||Hırslı dağcı zirveye tırmandı|A determined girl climbs toward a trophy on the top of a small mountain.|sky-blue|E
+amusing|eğlenceli|G|||Kukla gösterisi çok eğlenceliydi|Children laugh at a funny puppet show in a small red theatre box.|yellow|E
+bungee jumping|bungee jumping|T|bungee|ses|Köprüden bungee jumping yaptı|A person on a bungee cord bounces safely below a bridge, arms spread wide.|sky-blue|E
+canoeing|kano|T|kano|ses|Gölde kanoya bindik|Two children paddle a red canoe on a calm lake.|sky-blue|E
+caving|mağaracılık|G|||Mağaracılar kasklarıyla mağarayı gezdi|Two explorers with helmet lamps walk into a bright cave entrance.|cream|E
+challenging|zorlu|G|||Zorlu kayalığa tırmandı|A climber in a harness climbs a steep rock wall.|sky-blue|E
+courage|cesaret|G|||Cesaretini toplayıp tramplenden atladı|A girl bravely jumps off a diving board into a pool.|sky-blue|E
+demonstration|gösteri|G|||Öğretmen yanardağ deneyini gösterdi|A teacher demonstrates a model volcano that bubbles over with foam while students watch.|mint|E
+disappointing|hayal kırıklığı yaratan|G|||Yağmur pikniği berbat etti|A sad girl sits by a picnic basket under an umbrella as rain falls.|lavender|E
+dry suit|kuru dalış giysisi|I|||Dalgıç kuru dalış giysisini giydi|A diver in a thick dry suit stands at the edge of a boat.|sky-blue|E
+entertaining|eğlendirici|G|||Sihirbaz şapkasından tavşan çıkardı|A friendly magician pulls a white rabbit out of a top hat while children clap.|lavender|E
+exciting|heyecan verici|G|||Su kaydırağı çok heyecan vericiydi|Children slide down a twisting water slide splashing and cheering.|sky-blue|E
+extreme|aşırı, uç|T|ekstrem|ses|Kardan adam aşırı büyüktü|A snowman as tall as a house stands next to tiny children who look up amazed.|sky-blue|E
+extreme sports|ekstrem sporlar|I|||Ekstrem sporları seviyor|A snowboarder jumps high off a snowy ramp.|sky-blue|E
+fascinating|büyüleyici|G|||Akvaryumdaki denizanaları büyüleyiciydi|A girl presses her hands on an aquarium glass watching glowing jellyfish.|lavender|E
+glove|eldiven|G|||Kışın kalın eldiven giyer|A pair of warm red woollen gloves.|cream|E
+hang-gliding|kanatla uçuş|G|||Yamaçtan kanatla uçuş yaptı|A hang glider flies over green hills.|sky-blue|E
+helmet|kask|G|||Bisiklete binmeden önce kaskını taktı|A boy puts on a bike helmet next to his bicycle.|mint|E
+individually|bireysel olarak|G|||Öğrenciler bulmacayı bireysel olarak çözdü|Three students each work alone on their own puzzle at separate desks.|cream|E
+instructor|eğitmen|G|||Kayak eğitmeni çocuğa öğretti|A ski instructor helps a small child on skis on a gentle snowy slope.|sky-blue|E
+kayaking|kano sporu|G|||Nehirde kano sporu yaptı|A kayaker paddles a yellow kayak down a river.|sky-blue|E
+life vest|can yeleği|I|||Teknede can yeleği giydi|A child in an orange life vest sits safely in a small boat.|sky-blue|E
+magnificent|muhteşem|G|||Tepedeki kale muhteşemdi|A magnificent castle with flags stands on a green hill.|sky-blue|E
+motor racing|motor yarışı|I|||Motor yarışında arabalar hızla geçti|Two colourful race cars zoom around a track.|yellow|E
+mysterious|gizemli|K|Mısır|ses|Mısır piramidinde gizemli bir kapı bulduk|Two young explorers find a mysterious glowing door at the base of an Egyptian pyramid.|yellow|E
+paddle|kürek|G|||Küreği suya daldırdı|A wooden paddle dips into blue water.|sky-blue|E
+paragliding|yamaç paraşütü|T|paraşüt|ses|Yamaç paraşütüyle denizin üstünde uçtu|A paraglider with a colourful wing flies over a turquoise sea and cliffs.|sky-blue|E
+rafting|rafting|T|rafting|ses|Rafting yaparken hepimiz ıslandık|A team in helmets paddles an inflatable raft through white water.|sky-blue|E
+risky|riskli|T|riskli|ses|Kütüğün üstünden geçmek riskliydi|A boy carefully balances on a log over a small stream with arms out.|green|E
+skateboarding|kaykay|G|||Parkta kaykay yaptı|A girl rides a skateboard in a skate park.|yellow|E
+skyscraper|gökdelen|G|||Gökdelen bulutlara değiyordu|A very tall glass skyscraper reaches up into small clouds.|sky-blue|E
+steering|direksiyon|G|||Direksiyonu sıkıca tuttu|A girl holds the steering wheel of a toy car with both hands.|yellow|E
+take risks|risk almak|I|||İp cambazı risk aldı ama altında ağ vardı|A tightrope walker balances on a rope high up with a safety net below.|lavender|E
+wet suit|dalış giysisi|I|||Sörfçü dalış giysisini giydi|A surfer in a black wet suit carries a surfboard on a beach.|sky-blue|E
+wrist guards|bilek koruyucu|I|||Kaykaydan önce bilek koruyucularını taktı|A child straps on wrist guards before skateboarding.|mint|E

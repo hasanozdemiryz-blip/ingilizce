@@ -2616,7 +2616,21 @@ Toplam kredi ~32.400 (bakiye ~81.220). Planda olmayan: Çocuk'un tamamı, ödeme
       (`LGS_UYGULAMADA`). Test: 79 sayfa, 3.625 bağlantı + #bölüm hedefleri 0 sorun;
       telefon menüsü, logo, aktif sekme, "Hemen başla" (`?bolum=lgs`, platform yalnız
       `basla`'yı okuyor) tıklandı. **Site yayında** (site deposu `13e60c8`).
-- [ ] **Aşama 2 — sıradaki adım:** LGS kelime verisi (PLAN'daki Aşama 2).
+- [~] **Aşama 2 — LGS kelime verisi (19 Ekim gece):**
+  - [x] Seviye: `tools/mufredat/seviye.mjs` (Oxford 5000 CSV: github.com/winterdl/
+        oxford-5000-vocabulary-audio-definition `data/oxford_5000.csv`, depoda değil)
+        → `seviye.json`. Mevcut 400: 225 başlangıç / 175 orta; LGS 418: 149 / 269.
+  - [x] Kart metinleri: `tools/mufredat/lgs-kart/u01..u10.txt`
+        (en|tr|tur|kanca|yol|cumle|sahne|ton|genel) → `node tools/mufredat/lgs-kart.mjs`
+        → `lgs-kart.json` (denetim: eksik/tekrar/kanca çakışması). **387 kart: K 36,
+        T 64, G 211, I 76; görselli 384** (peygamber, türbe, mezar görselsiz);
+        Genel'e 375 (12'si okula özgü/hassas → yalnız LGS). Kanca istisnaları:
+        attend ≈ at (onaylı), mysterious ≈ Mısır. Zorlamaya rağmen K oranı %9:
+        soyut/benzemeyen kelimeler görsel çağrışıma döndü (kural: çok alakasızsa sadeleştir).
+  - [ ] Ünite içeriği: her ünite 8–12 kalıp, 3–4 diyalog, 10 test sorusu (özgün).
+  - [ ] Kartları `cards.json`'a ekleme (yeni alanlar: bolumler, lgsUnite, seviye, tur).
+- Sıra notu: görseller yalnız kart metnine bağlı → **Aşama 3 (görseller) şimdi
+  başlayabilir**; ünite içeriği ve cards.json entegrasyonu paralel yapılır.
 - LGS deneme görselleri `gorseller/lgs/` (survive, delicious, refuse — onaylı
   kalitede; device yeniden). `gorseller/` depoda değil; başka cihazda yoksa
   yeniden üretilecek (Magnific Personal projesinde de duruyorlar: 19 Ekim).

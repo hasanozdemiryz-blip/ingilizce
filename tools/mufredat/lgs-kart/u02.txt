@@ -1,0 +1,41 @@
+# 2. ünite Teen Life — en|tr|tur|kanca|yol|cumle|sahne|ton|genel
+archery|okçuluk|G|||Okçulukta oku tam ortaya isabet ettirdi|A smiling girl in a sports outfit shoots an arrow with a bow and hits the centre of a round target.|green|E
+argue|tartışmak|K|argo|ses|Argo konuşunca tartıştılar|Two teenage boys argue with frowning faces and empty jagged speech bubbles while a girl between them covers her ears.|peach|E
+backpack|sırt çantası|G|||Sırt çantasıyla dağa çıktı|A boy with a big blue backpack walks up a hill trail, a water bottle in the side pocket.|green|E
+board game|kutu oyunu|I|||Aile akşamı kutu oyunu oynadık|A family of four laughs around a colourful board game with dice and pieces on a table.|yellow|E
+campfire|kamp ateşi|T|kamp|ses|Kamp ateşinin başında şarkı söyledik|Three scouts sit on logs around a small campfire, toasting marshmallows on sticks and singing.|peach|E
+casual|günlük (giyim)|G|||Hafta sonu günlük kıyafetler giyer|A relaxed teenager in a hoodie, jeans and sneakers stands with hands in pockets.|sky-blue|E
+compass|pusula|G|||Pusula kuzeyi gösterdi|A hiker holds an old brass compass whose needle points north, a mountain behind.|green|E
+crunch|çatırdamak|G|||Havuç ağzında çatırdadı|A boy bites a big crunchy carrot with little crunch lines flying around his mouth.|peach|E
+equipment|ekipman|T|ekipman|ses|Kamp ekipmanını çantaya yerleştirdi|Camping equipment is laid out neatly on the grass: tent, sleeping bag, lamp, rope and a backpack.|green|E
+fashion|moda|G|||Moda defilesinde renkli kıyafetler vardı|A smiling teenage model walks on a small runway in a colourful outfit while friends clap.|pink|E
+fizzy|gazlı|G|||Gazlı içecek bardakta köpürdü|A glass of fizzy orange drink bubbles over the rim, tiny bubbles jumping out.|yellow|E
+folk|halk|G|||Halk dansçıları el ele oynadı|Folk dancers in colourful traditional costumes hold hands and dance in a line.|peach|E
+fond of|-e düşkün|I|||Büyükannem kedilerine çok düşkün|A grandmother in an armchair cuddles two purring cats on her lap, smiling.|pink|E
+gain|kazanmak|G|||Kumbarasında para biriktirip kazandı|A girl drops a shiny coin into a full pink piggy bank and smiles.|yellow|E
+hang out|takılmak|I|||Arkadaşlarla parkta takıldık|Three teenagers sit on a park bench laughing and sharing a bag of popcorn.|green|E
+harmonic|ahenkli|T|armoni|ses|Koro armoniyle ahenkli söyledi|A small school choir sings together in harmony with mouths open, musical notes above them.|lavender|E
+honest|dürüst|G|||Bulduğu cüzdanı sahibine geri verdi|An honest boy hands a lost brown wallet back to a smiling woman on the street.|cream|E
+impressive|etkileyici|G|||Kurduğu kule çok etkileyiciydi|A proud boy stands beside a very tall tower of colourful building blocks.|yellow|E
+map|harita|G|||Haritaya bakarak yolu bulduk|Two children hold a big paper map with a red dotted path and an X mark, pointing ahead.|cream|E
+pitch|saha|G|||Sahada maç başladı|Children kick a ball on a green football pitch with white lines and a small goal.|green|E
+prefer|tercih etmek|G|||Vanilya yerine çilekli dondurmayı tercih etti|A girl points happily at a strawberry ice cream cone and pushes away a vanilla one.|pink|E
+push-up|şınav|I|||Her sabah on şınav çeker|A boy in a sports t-shirt does push-ups on a mat with a determined face.|mint|E
+recommend|tavsiye etmek|G|||Kütüphaneci bana bir kitap tavsiye etti|A smiling librarian hands a colourful book to a boy across the library desk.|cream|E
+relationship|ilişki|G|||Dedemle babaannemin ilişkisi çok güzel|An elderly couple hold hands and smile at each other on a park bench.|peach|E
+relaxing|rahatlatıcı|T|relaks|ses|Müzik dinlemek çok rahatlatıcı|A girl lies on a big beanbag with headphones on, eyes closed, music notes floating.|lavender|E
+reward|ödül|G|||Köpek oturunca ödül aldı|A boy gives a bone-shaped treat to a sitting puppy as a reward.|yellow|E
+ridiculous|gülünç|G|||Tavuk şeklindeki şapkası çok gülünçtü|A man wears a ridiculous big hat shaped like a chicken while two kids laugh.|yellow|E
+rope|ip|G|||Halat çekmede ipi sıkıca tuttular|Two teams of children pull a thick rope in a tug of war on the grass.|green|E
+self-disciplined|öz disiplinli|T|disiplin|ses|Disiplinli öğrenci her gün planına uydu|A focused girl studies at a tidy desk with a weekly planner and a clock on the wall.|cream|E
+sleeping bag|uyku tulumu|I|||Uyku tulumunun içinde uyudu|A boy sleeps snugly inside a green sleeping bag in a small tent.|lavender|E
+snob|züppe|T|snob|ses|Züppe adam burnunu havaya kaldırdı|A man in a fancy suit lifts his nose in the air, holding a teacup with his little finger out.|lavender|E
+squad|ekip|G|||Ekip maçtan önce poz verdi|A school sports squad in matching red shirts poses together with a ball.|sky-blue|E
+teenager|ergen|G|||Ergen kulaklığıyla müzik dinliyor|A teenager with headphones and a phone nods to music, wearing a hoodie.|mint|E
+terrific|harika|K|ter|yazılış|Terledik ama maç harikaydı|Two sweaty, grinning kids in football kits high-five after a match, drops of sweat flying.|green|E
+training|antrenman|T|antrenman|ses|Antrenmanda dubaların arasından koştu|A boy runs between orange training cones on a field while a coach blows a whistle.|green|E
+trekking|doğa yürüyüşü|T|trekking|ses|Doğa yürüyüşünde şelaleye ulaştık|Two hikers with walking poles follow a forest trail toward a small waterfall.|green|E
+trendy|modaya uygun|T|trend|ses|Yeni ceketi çok trend|A teenager poses in a trendy colourful jacket and sneakers, making a peace sign.|pink|E
+types of music|müzik türleri|I|||Farklı müzik türlerini dinledik|A guitar, a violin, a drum kit and a microphone stand side by side with different coloured music notes.|lavender|E
+unbearable|dayanılmaz|K|un|yazılış|Un çuvalı dayanılmaz derecede ağırdı|A man struggles to carry a huge sack of flour on his back, knees bending, sweating.|cream|E
+youth|gençlik|G|||Gençlik festivalinde herkes dans etti|A group of young people dance together happily at a sunny youth festival.|yellow|E
