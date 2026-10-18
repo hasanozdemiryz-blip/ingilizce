@@ -1,0 +1,403 @@
+# Kelime sayfalari icin ek bilgi (18 Ekim 2026). Kaynak: Claude; kullanici yol haritasini onayladi.
+# id|Turkce harflerle yaklasik okunus|Ingilizce ornek cumle (A1-A2, cocuga uygun)|Turkce cevirisi
+# Okunus yaklasik: "ı" = vurgusuz e/a, "ö" = bird'deki ses, "th" Turkcede yok (t/d ile yazildi). Dogrusu icin Dinle.
+far|far|The school is not far from my house.|Okul evime uzak değil.
+sell|sel|They sell fresh bread every morning.|Her sabah taze ekmek satıyorlar.
+door|dor|Please close the door.|Lütfen kapıyı kapat.
+salt|solt|Can you pass me the salt?|Tuzu uzatır mısın?
+dust|dast|There is dust on the old books.|Eski kitapların üstünde toz var.
+sick|sik|She is sick today, so she is at home.|Bugün hasta, o yüzden evde.
+bad|bed|The weather is bad today.|Bugün hava kötü.
+car|kar|My father washes the car on Sundays.|Babam pazar günleri arabayı yıkar.
+eye|ay|Close one eye and look at the star.|Bir gözünü kapat ve yıldıza bak.
+fish|fiş|The fish swims in the clear water.|Balık berrak suda yüzüyor.
+dark|dark|It gets dark early in winter.|Kışın hava erken kararır.
+deep|diip|This lake is very deep.|Bu göl çok derin.
+cup|kap|I drink a cup of tea every morning.|Her sabah bir fincan çay içerim.
+coat|kout|Wear your coat, it is cold outside.|Ceketini giy, dışarısı soğuk.
+boat|bout|We crossed the river by boat.|Nehri tekneyle geçtik.
+box|boks|The toys are in the box.|Oyuncaklar kutunun içinde.
+brother|bradır|My brother is two years older than me.|Erkek kardeşim benden iki yaş büyük.
+foot|fut|He hurt his foot while playing.|Oynarken ayağını incitti.
+full|ful|The glass is full of water.|Bardak suyla dolu.
+safe|seyf|The children are safe at home.|Çocuklar evde güvende.
+short|şort|The movie was short but funny.|Film kısaydı ama komikti.
+laugh|laf|We laugh at his jokes.|Onun şakalarına güleriz.
+large|larc|They live in a large house.|Büyük bir evde yaşıyorlar.
+sit|sit|Please sit next to me.|Lütfen yanıma otur.
+sun|san|The sun is very bright today.|Bugün güneş çok parlak.
+road|roud|Look both ways before you cross the road.|Yolu geçmeden önce iki tarafa da bak.
+leaf|liif|A yellow leaf fell from the tree.|Ağaçtan sarı bir yaprak düştü.
+ball|bol|Kick the ball to me!|Topu bana at!
+pull|pul|Pull the door to open it.|Açmak için kapıyı çek.
+put|put|Put your books on the desk.|Kitaplarını sıranın üstüne koy.
+pass|pes|Can you pass me the water, please?|Suyu uzatır mısın lütfen?
+tell|tel|Tell me a story, please.|Bana bir hikâye anlat lütfen.
+table|teybıl|Dinner is on the table.|Akşam yemeği masada.
+touch|taç|Don't touch the hot plate.|Sıcak tabağa dokunma.
+turn|törn|Turn left at the next street.|Bir sonraki sokaktan sola dön.
+wash|voş|Wash your hands before lunch.|Öğle yemeğinden önce ellerini yıka.
+bucket|bakıt|She filled the bucket with water.|Kovayı suyla doldurdu.
+meet|miit|Let's meet in front of the school.|Okulun önünde buluşalım.
+stand|stend|Please stand in line.|Lütfen sırada dur.
+cut|kat|Cut the paper into two pieces.|Kâğıdı iki parçaya kes.
+sugar|şugır|I don't put sugar in my tea.|Çayıma şeker koymam.
+feel|fiil|I feel happy today.|Bugün kendimi mutlu hissediyorum.
+cold|kould|The water is too cold to swim.|Su yüzmek için çok soğuk.
+bath|baat|The baby is having a bath.|Bebek banyo yapıyor.
+kitchen|kiçın|Mom is cooking in the kitchen.|Annem mutfakta yemek yapıyor.
+candle|kendıl|Blow out the candles on the cake!|Pastadaki mumları üfle!
+basket|baskıt|Put the apples in the basket.|Elmaları sepete koy.
+bitter|bitır|This coffee tastes bitter.|Bu kahvenin tadı acı.
+butter|batır|I like bread with butter and honey.|Tereyağlı ve ballı ekmeği severim.
+fork|fork|Eat your salad with a fork.|Salatanı çatalla ye.
+bowl|boul|He ate a bowl of soup.|Bir kâse çorba içti.
+branch|brenç|A bird is sitting on the branch.|Dalda bir kuş oturuyor.
+fence|fens|The dog jumped over the fence.|Köpek çitin üstünden atladı.
+corner|kornır|The shop is on the corner.|Dükkân köşede.
+path|paat|We walked along the forest path.|Orman patikası boyunca yürüdük.
+belt|belt|These trousers need a belt.|Bu pantolona kemer lazım.
+cap|kep|He always wears a red cap.|Hep kırmızı bir şapka takar.
+button|batın|Press the green button to start.|Başlamak için yeşil düğmeye bas.
+collar|kalır|The dog has a blue collar.|Köpeğin mavi bir tasması var.
+lead|liid|The teacher will lead the group.|Grubu öğretmen yönetecek.
+cash|keş|Can I pay in cash?|Nakit ödeyebilir miyim?
+season|siizın|Spring is my favourite season.|İlkbahar en sevdiğim mevsim.
+truck|trak|A big truck stopped in front of the shop.|Dükkânın önünde büyük bir kamyon durdu.
+team|tiim|Our team won the match.|Takımımız maçı kazandı.
+guard|gard|A dog guards the house.|Evi bir köpek koruyor.
+court|kort|They play tennis on a grass court.|Çim kortta tenis oynuyorlar.
+rule|ruul|Every game has rules.|Her oyunun kuralları vardır.
+press|pres|Press the button and wait.|Düğmeye bas ve bekle.
+freeze|friiz|Water freezes at zero degrees.|Su sıfır derecede donar.
+burn|börn|Be careful, the oven can burn you.|Dikkat et, fırın seni yakabilir.
+shake|şeyk|Shake the bottle before you open it.|Açmadan önce şişeyi salla.
+slide|slayd|The children slide down the hill on the snow.|Çocuklar karda tepeden aşağı kayıyor.
+peak|piik|We reached the peak of the mountain.|Dağın zirvesine ulaştık.
+speed|spiid|The train moves at a high speed.|Tren yüksek hızla gidiyor.
+anchor|enkır|The sailors dropped the anchor.|Denizciler çapayı attı.
+rent|rent|They pay the rent every month.|Kirayı her ay ödüyorlar.
+plate|pleyt|Put the cake on a plate.|Pastayı bir tabağa koy.
+pillow|pilou|I sleep with two pillows.|İki yastıkla uyurum.
+towel|tavıl|Take a towel to the beach.|Plaja bir havlu götür.
+chin|çin|He has a small cut on his chin.|Çenesinde küçük bir kesik var.
+snake|sneyk|The snake is hiding under the rock.|Yılan kayanın altında saklanıyor.
+fox|foks|The fox has a long red tail.|Tilkinin uzun kırmızı bir kuyruğu var.
+thunder|tandır|The thunder was very loud last night.|Dün gece gök gürültüsü çok yüksekti.
+storm|storm|A big storm is coming.|Büyük bir fırtına geliyor.
+shore|şor|We walked along the shore.|Kıyı boyunca yürüdük.
+mud|mad|His shoes are covered in mud.|Ayakkabıları çamur içinde.
+calm|kaam|The sea is calm this morning.|Deniz bu sabah sakin.
+dawn|don|The birds sing at dawn.|Kuşlar şafakta öter.
+hook|huk|Hang your coat on the hook.|Ceketini askıya as.
+gate|geyt|Close the garden gate, please.|Bahçe kapısını kapat lütfen.
+castle|kasıl|The king lives in a castle.|Kral bir kalede yaşıyor.
+brain|breyn|The brain controls the body.|Beyin vücudu yönetir.
+crawl|krol|The baby can crawl now.|Bebek artık emekleyebiliyor.
+spin|spin|Watch the top spin on the floor.|Topacın yerde dönüşünü izle.
+roll|roul|Roll the ball to the baby.|Topu bebeğe yuvarla.
+chew|çuu|Chew your food slowly.|Yemeğini yavaş çiğne.
+taste|teyst|This soup has a nice taste.|Bu çorbanın tadı güzel.
+coin|koyn|I found a coin on the street.|Sokakta bir madeni para buldum.
+brave|breyv|The brave girl helped the cat.|Cesur kız kediye yardım etti.
+pencil|pensıl|Can I borrow your pencil?|Kurşun kalemini ödünç alabilir miyim?
+key|kii|I lost the key to my room.|Odamın anahtarını kaybettim.
+arm|arm|She broke her arm last year.|Geçen yıl kolunu kırdı.
+corn|korn|We ate grilled corn at the beach.|Plajda közde mısır yedik.
+cheese|çiiz|I have cheese and olives for breakfast.|Kahvaltıda peynir ve zeytin yerim.
+hill|hil|Our house is on a hill.|Evimiz bir tepenin üstünde.
+gun|gan|The kids played with a water gun.|Çocuklar su tabancasıyla oynadı.
+sand|send|The children built a castle in the sand.|Çocuklar kumdan bir kale yaptı.
+wing|wing|The bird hurt its wing.|Kuş kanadını incitti.
+year|yiır|There are twelve months in a year.|Bir yılda on iki ay vardır.
+bag|beg|My bag is full of books.|Çantam kitaplarla dolu.
+bite|bayt|Take a bite of this apple.|Bu elmadan bir ısırık al.
+bone|boun|The dog is eating a bone.|Köpek bir kemik yiyor.
+cheap|çiip|This T-shirt is cheap.|Bu tişört ucuz.
+desk|desk|My desk is next to the window.|Çalışma masam pencerenin yanında.
+dress|dres|She is wearing a blue dress.|Mavi bir elbise giyiyor.
+early|örli|I get up early on school days.|Okul günleri erken kalkarım.
+eat|iit|We eat dinner at seven.|Akşam yemeğini yedide yeriz.
+floor|flor|The book fell on the floor.|Kitap yere düştü.
+garden|gardın|There are roses in our garden.|Bahçemizde güller var.
+hair|heır|She has long brown hair.|Uzun kahverengi saçları var.
+happy|hepi|The children look happy.|Çocuklar mutlu görünüyor.
+head|hed|Put a hat on your head.|Başına bir şapka tak.
+heavy|hevi|This box is too heavy for me.|Bu kutu benim için çok ağır.
+hole|houl|There is a hole in my sock.|Çorabımda bir delik var.
+hope|houp|I hope you feel better soon.|Umarım yakında iyileşirsin.
+kick|kik|He kicked the ball into the goal.|Topu kaleye tekmeledi.
+leg|leg|The table has four legs.|Masanın dört ayağı var.
+listen|lisın|Listen to the teacher carefully.|Öğretmeni dikkatle dinle.
+lose|luuz|Don't lose your ticket.|Biletini kaybetme.
+make|meyk|Let's make a cake together.|Birlikte pasta yapalım.
+much|maç|How much is this book?|Bu kitap ne kadar?
+night|nayt|I read a book every night.|Her gece bir kitap okurum.
+push|puş|Push the door to go out.|Dışarı çıkmak için kapıyı it.
+red|red|She has a red bike.|Kırmızı bir bisikleti var.
+room|ruum|My room is small but nice.|Odam küçük ama güzel.
+soon|suun|The bus will come soon.|Otobüs yakında gelecek.
+study|stadi|I study English every day.|Her gün İngilizce çalışırım.
+talk|tok|We talk on the phone every evening.|Her akşam telefonda konuşuruz.
+week|wiik|We have English three times a week.|Haftada üç kez İngilizce dersimiz var.
+window|windou|Open the window, it is hot.|Pencereyi aç, hava sıcak.
+buy|bay|I want to buy a new bag.|Yeni bir çanta almak istiyorum.
+moon|muun|The moon is full tonight.|Bu gece ay dolunay.
+rock|rok|He sat on a big rock.|Büyük bir kayanın üstüne oturdu.
+sad|sed|Why are you sad today?|Bugün neden üzgünsün?
+show|şou|Show me your new shoes.|Bana yeni ayakkabılarını göster.
+tape|teyp|Fix the paper with tape.|Kâğıdı bantla tuttur.
+sponge|spanc|Wash the dishes with a sponge.|Bulaşıkları süngerle yıka.
+stretch|streç|Stretch your arms before you run.|Koşmadan önce kollarını gerin.
+tight|tayt|These shoes are too tight.|Bu ayakkabılar çok sıkı.
+curtain|körtın|Close the curtains at night.|Geceleri perdeleri kapat.
+lamp|lemp|Turn on the lamp, please.|Lambayı aç lütfen.
+vase|veyz|There are flowers in the vase.|Vazoda çiçekler var.
+switch|swiç|The light switch is next to the door.|Işık düğmesi kapının yanında.
+torch|torç|Take a torch, it is dark outside.|El feneri al, dışarısı karanlık.
+tap|tep|Turn off the tap when you brush your teeth.|Dişlerini fırçalarken musluğu kapat.
+drain|dreyn|The kitchen drain is blocked.|Mutfak gideri tıkanmış.
+bin|bin|Put the rubbish in the bin.|Çöpü çöp kutusuna at.
+mop|mop|He cleaned the floor with a mop.|Yeri paspasla temizledi.
+rust|rast|There is rust on the old bike.|Eski bisikletin üstünde pas var.
+dirt|dört|Clean the dirt off your shoes.|Ayakkabılarındaki kiri temizle.
+polish|poliş|Dad polishes his shoes every week.|Babam her hafta ayakkabılarını cilalar.
+wipe|vayp|Wipe the table after dinner.|Akşam yemeğinden sonra masayı sil.
+carrot|kerıt|Rabbits love carrots.|Tavşanlar havucu çok sever.
+sauce|sos|I like pasta with tomato sauce.|Domates soslu makarnayı severim.
+dish|diş|This dish is from Italy.|Bu yemek İtalya'dan.
+bake|beyk|We bake cookies on Saturdays.|Cumartesileri kurabiye pişiririz.
+fry|fray|Fry the eggs in a little oil.|Yumurtaları biraz yağda kızart.
+grill|gril|We grill fish in summer.|Yazın balık ızgara yaparız.
+jam|cem|I put strawberry jam on my bread.|Ekmeğime çilek reçeli sürerim.
+mug|mag|He drinks hot milk from a big mug.|Büyük bir kupadan sıcak süt içiyor.
+slice|slays|Can I have a slice of cake?|Bir dilim pasta alabilir miyim?
+peel|piil|Peel the orange before you eat it.|Yemeden önce portakalı soy.
+steam|stiim|Steam is coming out of the kettle.|Çaydanlıktan buhar çıkıyor.
+spice|spays|This soup needs more spice.|Bu çorbaya biraz daha baharat lazım.
+feed|fiid|Don't forget to feed the cat.|Kediyi beslemeyi unutma.
+palm|paam|She held a coin in her palm.|Avucunda bir madeni para tutuyordu.
+nerve|nörv|Nerves carry messages to the brain.|Sinirler beyne mesaj taşır.
+itch|iç|A mosquito bite can itch a lot.|Sivrisinek ısırığı çok kaşınabilir.
+blink|blink|The baby blinked at the bright light.|Bebek parlak ışığa gözlerini kırpıştırdı.
+slap|slep|The wave slapped against the rock.|Dalga kayaya şaplak diye çarptı.
+pinch|pinç|Add a pinch of salt to the soup.|Çorbaya bir tutam tuz ekle.
+ash|eş|There is ash in the old fireplace.|Eski şöminede kül var.
+smoke|smouk|Smoke came out of the chimney.|Bacadan duman çıktı.
+crack|krek|There is a crack in the glass.|Bardakta bir çatlak var.
+valley|veli|A river runs through the valley.|Vadinin içinden bir nehir akıyor.
+clay|kley|The children made pots from clay.|Çocuklar kilden çömlek yaptı.
+grain|greyn|Birds eat grain from the field.|Kuşlar tarladan tahıl yer.
+crop|krop|Rain is good for the crops.|Yağmur ekinler için iyidir.
+harvest|harvıst|The farmers are busy at harvest time.|Çiftçiler hasat zamanı çok meşgul.
+thorn|torn|Be careful, roses have thorns.|Dikkat et, güllerin dikeni vardır.
+log|log|We sat on a log by the fire.|Ateşin yanında bir kütüğün üstüne oturduk.
+fur|för|The cat has soft white fur.|Kedinin yumuşak beyaz tüyleri var.
+web|web|A spider made a web in the corner.|Bir örümcek köşede ağ ördü.
+mist|mist|There was mist over the lake.|Gölün üstünde sis vardı.
+frost|frost|There was frost on the car this morning.|Bu sabah arabanın üstünde kırağı vardı.
+breeze|briiz|A cool breeze came from the sea.|Denizden serin bir esinti geldi.
+dim|dim|The light in the room is dim.|Odadaki ışık loş.
+bend|bend|Bend your knees when you lift a box.|Kutu kaldırırken dizlerini bük.
+crash|kreş|Two cars crashed on the icy road.|Buzlu yolda iki araba çarpıştı.
+rinse|rins|Rinse the vegetables with cold water.|Sebzeleri soğuk suyla durula.
+shave|şeyv|My father shaves every morning.|Babam her sabah tıraş olur.
+sharp|şarp|This knife is very sharp.|Bu bıçak çok keskin.
+drag|dreg|He dragged the heavy bag to the door.|Ağır çantayı kapıya kadar sürükledi.
+drop|drop|A drop of rain fell on my nose.|Burnuma bir yağmur damlası düştü.
+lift|lift|Can you help me lift this box?|Bu kutuyu kaldırmama yardım eder misin?
+swing|swing|The kids swing in the park.|Çocuklar parkta sallanıyor.
+march|març|The band marched down the street.|Bando caddede yürüdü.
+grip|grip|Grip the rope with both hands.|İpi iki elinle kavra.
+toss|tos|Toss the ball to your friend.|Topu arkadaşına at.
+pat|pet|She patted the dog on the head.|Köpeğin başını hafifçe okşadı.
+scratch|skreç|The cat scratched the sofa.|Kedi kanepeyi tırmaladı.
+wrap|rep|We wrapped the gift in blue paper.|Hediyeyi mavi kâğıda sardık.
+stick|stik|Stick the photo on the wall.|Fotoğrafı duvara yapıştır.
+blend|blend|Blend the fruit to make a smoothie.|Meyveli içecek yapmak için meyveleri karıştır.
+pump|pamp|Pump air into the bike tyres.|Bisiklet lastiklerine hava pompala.
+drill|dril|He drilled a hole in the wall.|Duvara bir delik deldi.
+paste|peyst|Paste the picture into your notebook.|Resmi defterine yapıştır.
+print|print|Can you print this page for me?|Bu sayfayı benim için basabilir misin?
+scan|sken|Scan the code with your phone.|Kodu telefonunla tara.
+type|tayp|She can type very fast.|Çok hızlı yazı yazabiliyor.
+pal|pel|He is my old pal from school.|O, okuldan eski ahbabım.
+chef|şef|The chef made a delicious soup.|Aşçı lezzetli bir çorba yaptı.
+miner|maynır|The miner works under the ground.|Madenci yerin altında çalışır.
+pilot|paylıt|The pilot flies the plane.|Pilot uçağı uçurur.
+coach|kouç|Our coach is very kind.|Antrenörümüz çok nazik.
+fan|fen|I am a big fan of this team.|Bu takımın büyük bir hayranıyım.
+rival|rayvıl|The two teams are old rivals.|İki takım eski rakipler.
+mob|mob|A mob of fans waited for the singer.|Bir taraftar kalabalığı şarkıcıyı bekledi.
+troop|truup|A troop of scouts walked into the forest.|Bir izci birliği ormana yürüdü.
+keen|kiin|She is keen to learn English.|İngilizce öğrenmeye çok istekli.
+bold|bould|Write the title in bold letters.|Başlığı kalın harflerle yaz.
+fair|feır|The game was fair for everyone.|Oyun herkes için adildi.
+firm|förm|The bed is firm and comfortable.|Yatak sağlam ve rahat.
+plain|pleyn|I like plain yogurt.|Sade yoğurdu severim.
+spare|speır|Do you have a spare pencil?|Yedek bir kurşun kalemin var mı?
+fee|fii|The museum fee is five liras.|Müze ücreti beş lira.
+tax|teks|Everyone pays tax.|Herkes vergi öder.
+fund|fand|The school has a fund for books.|Okulun kitaplar için bir fonu var.
+budget|bacıt|We have a small budget for the trip.|Gezi için küçük bir bütçemiz var.
+stock|stok|This shoe is not in stock.|Bu ayakkabı stokta yok.
+brand|brend|What brand is your phone?|Telefonun hangi marka?
+profit|profit|The shop made a big profit this year.|Dükkân bu yıl büyük kâr etti.
+shift|şift|Nurses work in shifts.|Hemşireler vardiyalı çalışır.
+curve|körv|Drive slowly on the curve.|Virajda yavaş sür.
+brake|breyk|Press the brake to stop the bike.|Bisikleti durdurmak için frene bas.
+cream|kriim|I like strawberries with cream.|Çileği kremayla severim.
+cargo|kargou|The ship carries cargo.|Gemi yük taşır.
+deck|dek|We stood on the deck of the ship.|Geminin güvertesinde durduk.
+dock|dok|The boat is at the dock.|Tekne rıhtımda.
+tunnel|tanıl|The train went through a long tunnel.|Tren uzun bir tünelden geçti.
+bridge|bric|We walked across the bridge.|Köprünün üstünden yürüdük.
+pit|pit|They dug a pit in the sand.|Kumda bir çukur kazdılar.
+ramp|remp|There is a ramp for wheelchairs.|Tekerlekli sandalyeler için bir rampa var.
+chalk|çok|The teacher writes with chalk.|Öğretmen tebeşirle yazar.
+board|bord|Look at the board, please.|Tahtaya bakın lütfen.
+mark|mark|Put a mark next to the right answer.|Doğru cevabın yanına bir işaret koy.
+quiz|kwiz|We have a short quiz on Friday.|Cuma günü kısa bir sınavımız var.
+class|klas|There are 25 students in my class.|Sınıfımda 25 öğrenci var.
+term|törm|The new term starts in September.|Yeni dönem eylülde başlıyor.
+note|nout|I left a note on the fridge.|Buzdolabına bir not bıraktım.
+list|list|Make a list of things to buy.|Alınacakların bir listesini yap.
+file|fayl|Save the file on your computer.|Dosyayı bilgisayarına kaydet.
+folder|fouldır|Put the papers in the red folder.|Kâğıtları kırmızı klasöre koy.
+draft|draft|This is only the first draft of my story.|Bu, hikâyemin sadece ilk taslağı.
+sock|sok|I can't find my other sock.|Diğer çorabımı bulamıyorum.
+scarf|skarf|Wear a scarf, it is windy.|Atkını tak, hava rüzgârlı.
+jacket|cekıt|Take your jacket with you.|Ceketini yanına al.
+pocket|pokıt|The key is in my pocket.|Anahtar cebimde.
+cotton|kotın|This shirt is made of cotton.|Bu gömlek pamuktan yapılmış.
+silk|silk|She has a silk scarf.|İpek bir eşarbı var.
+patch|peç|Mom sewed a patch on my jeans.|Annem kotuma bir yama dikti.
+zip|zip|The zip on my bag is broken.|Çantamın fermuarı bozuk.
+gem|cem|The crown is full of gems.|Taç mücevherlerle dolu.
+steel|stiil|The bridge is made of steel.|Köprü çelikten yapılmış.
+tin|tin|There is a tin of tomatoes in the kitchen.|Mutfakta bir teneke domates konservesi var.
+brick|brik|The old house is made of red brick.|Eski ev kırmızı tuğladan yapılmış.
+cement|siment|The workers mixed sand and cement.|İşçiler kum ve çimentoyu karıştırdı.
+plaster|plastır|The plaster on the wall is white.|Duvardaki sıva beyaz.
+blade|bleyd|The blade of the knife is sharp.|Bıçağın ağzı keskin.
+lever|liivır|Pull the lever to open the gate.|Kapıyı açmak için kolu çek.
+gear|giır|Change gear when you go up the hill.|Tepeye çıkarken vites değiştir.
+valve|velv|Close the water valve before you go.|Gitmeden önce su vanasını kapat.
+pipe|payp|Water runs through the pipe.|Su borunun içinden akar.
+tube|tyuub|Squeeze the paint out of the tube.|Boyayı tüpten sık.
+tank|tenk|The car's tank is almost empty.|Arabanın deposu neredeyse boş.
+dam|dem|The dam holds the river water.|Baraj nehrin suyunu tutar.
+mill|mil|The old mill is by the river.|Eski değirmen nehrin kenarında.
+stable|steybıl|The horses sleep in the stable.|Atlar ahırda uyur.
+net|net|The fish got caught in the net.|Balık ağa takıldı.
+goal|goul|He scored a great goal.|Harika bir gol attı.
+score|skor|What is the score now?|Şu an skor kaç?
+race|reys|She won the race.|Yarışı o kazandı.
+medal|medıl|He won a gold medal.|Altın madalya kazandı.
+trophy|troufi|Our team lifted the trophy.|Takımımız kupayı kaldırdı.
+referee|refıri|The referee blew the whistle.|Hakem düdüğü çaldı.
+track|trek|The runners are on the track.|Koşucular pistte.
+gym|cim|I go to the gym after school.|Okuldan sonra spor salonuna giderim.
+serve|sörv|It's your turn to serve.|Servis sırası sende.
+shoot|şuut|He shot the ball at the goal.|Topu kaleye şut çekti.
+skate|skeyt|We skate on the ice in winter.|Kışın buzda paten kayarız.
+dog|dog|Our dog loves to play in the park.|Köpeğimiz parkta oynamayı çok sever.
+money|mani|I keep my money in a small box.|Paramı küçük bir kutuda saklarım.
+friend|frend|She is my best friend.|O benim en iyi arkadaşım.
+face|feys|Wash your face in the morning.|Sabahları yüzünü yıka.
+hand|hend|Raise your hand if you know the answer.|Cevabı biliyorsan elini kaldır.
+name|neym|What is your name?|Adın ne?
+book|buk|I am reading a funny book.|Komik bir kitap okuyorum.
+bed|bed|It's late, go to bed.|Geç oldu, yatağa git.
+chair|çeır|Sit on this chair.|Bu sandalyeye otur.
+wall|wol|There is a clock on the wall.|Duvarda bir saat var.
+girl|görl|The girl is riding a bike.|Kız bisiklet sürüyor.
+bus|bas|I go to school by bus.|Okula otobüsle giderim.
+town|tavn|They live in a small town.|Küçük bir kasabada yaşıyorlar.
+rain|reyn|Take an umbrella, it may rain.|Şemsiye al, yağmur yağabilir.
+fire|fayır|We sat around the fire.|Ateşin etrafında oturduk.
+ice|ays|There is ice on the lake.|Gölün üstünde buz var.
+shop|şop|The shop opens at nine.|Dükkân dokuzda açılır.
+job|cob|My uncle has a new job.|Amcamın yeni bir işi var.
+boss|bos|The boss is in a meeting.|Patron toplantıda.
+pay|pey|I will pay for the tickets.|Biletlerin parasını ben ödeyeceğim.
+take|teyk|Take your umbrella with you.|Şemsiyeni yanına al.
+send|send|Send me a message when you arrive.|Varınca bana mesaj gönder.
+help|help|Can you help me with my homework?|Ödevime yardım eder misin?
+find|faynd|I can't find my glasses.|Gözlüğümü bulamıyorum.
+clean|kliin|Let's clean the classroom together.|Sınıfı birlikte temizleyelim.
+sleep|sliip|Babies sleep a lot.|Bebekler çok uyur.
+catch|keç|Catch the ball!|Topu yakala!
+fall|fol|Be careful, don't fall!|Dikkat et, düşme!
+count|kaunt|Can you count to ten in English?|İngilizce ona kadar sayabilir misin?
+wish|wiş|Make a wish and blow out the candles.|Bir dilek tut ve mumları üfle.
+hungry|hangri|I am hungry, let's eat.|Acıktım, hadi yiyelim.
+busy|bizi|I am busy right now.|Şu an meşgulüm.
+young|yang|My grandmother looks young.|Büyükannem genç görünüyor.
+kind|kaynd|Be kind to animals.|Hayvanlara nazik davran.
+lazy|leyzi|The lazy cat sleeps all day.|Tembel kedi bütün gün uyuyor.
+wet|wet|My shoes are wet from the rain.|Ayakkabılarım yağmurdan ıslak.
+loud|laud|The music is too loud.|Müzik çok yüksek sesli.
+sour|savır|Lemons are sour.|Limonlar ekşidir.
+fast|fast|Cheetahs run very fast.|Çitalar çok hızlı koşar.
+apple|epıl|An apple a day is good for you.|Günde bir elma sağlığa iyi gelir.
+egg|eg|I have a boiled egg for breakfast.|Kahvaltıda haşlanmış yumurta yerim.
+rice|rays|We eat rice with chicken.|Pilavı tavukla yeriz.
+soup|suup|This tomato soup is hot.|Bu domates çorbası sıcak.
+oil|oyl|Put some oil in the pan.|Tavaya biraz yağ koy.
+knife|nayf|Cut the bread with a knife.|Ekmeği bıçakla kes.
+cow|kav|The cow gives us milk.|İnek bize süt verir.
+horse|hors|She rides a white horse.|Beyaz bir ata biniyor.
+sheep|şiip|The sheep are in the field.|Koyunlar tarlada.
+ant|ent|An ant can carry heavy things.|Bir karınca ağır şeyler taşıyabilir.
+owl|avl|The owl wakes up at night.|Baykuş geceleri uyanır.
+tooth|tuut|My little brother lost a tooth.|Küçük kardeşimin dişi düştü.
+cheek|çiik|The baby has round cheeks.|Bebeğin tombul yanakları var.
+body|badi|Exercise is good for your body.|Egzersiz vücudun için iyidir.
+roof|ruuf|A cat is sitting on the roof.|Çatıda bir kedi oturuyor.
+lake|leyk|We swam in the lake.|Gölde yüzdük.
+hat|het|He wears a hat in the sun.|Güneşte şapka takar.
+ring|ring|She has a gold ring.|Altın bir yüzüğü var.
+boot|buut|Wear your boots, it is snowing.|Çizmelerini giy, kar yağıyor.
+toy|toy|The baby's favourite toy is a duck.|Bebeğin en sevdiği oyuncak bir ördek.
+doll|dol|My sister plays with her doll.|Kız kardeşim bebeğiyle oynuyor.
+mirror|mirır|Look in the mirror.|Aynaya bak.
+soap|soup|Wash your hands with soap.|Ellerini sabunla yıka.
+bird|börd|A little bird is singing.|Küçük bir kuş şarkı söylüyor.
+smile|smayl|She has a lovely smile.|Çok tatlı bir gülümsemesi var.
+tent|tent|We slept in a tent.|Çadırda uyuduk.
+tower|tavır|The tower is very tall.|Kule çok yüksek.
+lock|lok|Lock the door when you leave.|Çıkarken kapıyı kilitle.
+hammer|hemır|Hit the nail with a hammer.|Çiviye çekiçle vur.
+cage|keyc|The bird is in a cage.|Kuş kafeste.
+tail|teyl|The dog is wagging its tail.|Köpek kuyruğunu sallıyor.
+hide|hayd|The cat likes to hide under the bed.|Kedi yatağın altına saklanmayı sever.
+tie|tay|Tie your shoes before you run.|Koşmadan önce ayakkabılarını bağla.
+dig|dig|The dog is digging in the garden.|Köpek bahçeyi kazıyor.
+melt|melt|Ice melts in the sun.|Buz güneşte erir.
+candy|kendi|Too much candy is bad for your teeth.|Çok fazla şeker dişlerine zararlı.
+cook|kuk|My dad likes to cook on weekends.|Babam hafta sonları yemek yapmayı sever.
+middle|midıl|Stand in the middle of the room.|Odanın ortasında dur.
+shell|şel|I found a pretty shell on the beach.|Plajda güzel bir deniz kabuğu buldum.
+hunt|hant|Owls hunt at night.|Baykuşlar geceleri avlanır.
+dinner|dinır|What's for dinner tonight?|Bu akşam yemekte ne var?
+prize|prayz|She won first prize.|Birincilik ödülünü kazandı.
+wallet|walıt|I left my wallet at home.|Cüzdanımı evde unuttum.
+fog|fog|The fog is very thick today.|Bugün sis çok yoğun.
+port|port|The ship is in the port.|Gemi limanda.
+sailor|seylır|The sailor works on a ship.|Denizci bir gemide çalışır.
+ghost|goust|He wore a ghost costume to the party.|Partiye hayalet kostümüyle geldi.
+luck|lak|Good luck with your exam!|Sınavında bol şans!
+trap|trep|The mouse walked into the trap.|Fare tuzağa girdi.
+cliff|klif|Don't go near the edge of the cliff.|Uçurumun kenarına yaklaşma.
+hay|hey|The horse is eating hay.|At saman yiyor.
+bubble|babıl|The kids are blowing bubbles.|Çocuklar baloncuk üflüyor.
+climb|klaym|Can you climb this tree?|Bu ağaca tırmanabilir misin?
+pray|prey|Some people pray before they eat.|Bazı insanlar yemekten önce dua eder.
+beg|beg|The puppy begged for food.|Yavru köpek yemek için yalvardı.
+rob|rob|The robot robbed the cookie jar.|Robot kurabiye kavanozunu soydu.
+rough|raf|The road is rough and full of stones.|Yol pürüzlü ve taşlarla dolu.
+deaf|def|My grandfather is a little deaf.|Dedemin kulakları biraz ağır işitir.
+crowd|kravd|A big crowd watched the match.|Büyük bir kalabalık maçı izledi.
+page|peyc|Open your books to page ten.|Kitaplarınızı onuncu sayfada açın.
+cherry|çeri|I love eating cherries in summer.|Yazın kiraz yemeyi çok severim.

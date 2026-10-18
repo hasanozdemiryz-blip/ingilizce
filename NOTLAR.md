@@ -2545,23 +2545,41 @@ liste onları **geçersiz kılar**.
 Eski yöntemle (~127/kart) görseller tek başına ~216.000 — ızgara denemesi
 tutmazsa plan bakiyeye sığmaz, önce o.
 
-**Faz 0 — Temizlik**
-- [ ] Kurallara yaz: `kanca-kurallari.md` ← yazılış çağrışımı, zorla/sadeleştir,
-      onaylı 14 örnek, güvenlik; `gorsel-recetesi.md` ← çağrışım açıkça görünür,
-      çocuğa uygunluk satırı.
-- [ ] 7 sorunlu kartın cümlesi (gun, night, shake, slap, rob, eat, referee) — onayla.
-- [ ] Yasal sayfalara `noindex`.
+**Faz 0 — Temizlik** ✅ (18-19 Ekim, dal `uc-bolum`)
+- [x] Kurallar: `kanca-kurallari.md` (yazılış çağrışımı, zorla/sadeleştir, 14
+      örnek, güvenlik), `gorsel-recetesi.md` (çağrışım açıkça görünür, güvenlik satırı).
+- [x] 7 kart: gun → su tabancası, night ≈ naylon, shake ≈ şah, slap → dalga,
+      rob → robot kurabiye kavanozu, eat ≈ it (itmek), referee → kaptan
+      (`tools/guvenlik-cumleleri.mjs` → `kart-havuzu-300.xlsx` → `cards.json`).
+      **Görselleri ESKİ** (gun hâlâ silahlı siluet): sitede sayfaları yok
+      (`site.mjs` `GORSEL_YENILENECEK`); uygulamada `main`'e geçince eski görselle
+      çıkar → **yayından önce bu 7 görsel üretilmeli** (Faz 4, ~2 ızgara ≈ 150 kredi).
+- [x] Yasal sayfalara `noindex, follow`; site haritasından çıktılar.
 
-**Faz 1 — Site (ilk iş)** — yeni tasarım dili serbest
-- [ ] Tasarım dili: renk/tip/bileşen sistemi, üç sekmeye uyan; her sayfa ona göre.
-- [ ] Sekme şeridi Genel · LGS · Çocuk + sekmeye özel menü.
-- [ ] Metinlerde "kanca" → "çağrışım" / "görselleştirilmiş hafıza tekniği";
-      ses + yazılış çağrışımı anlatımı.
-- [ ] `/lgs/` ve `/cocuk/` iskeleti (ünite/sınıf kutuları, veli bölümü, SSS).
-- [ ] Kelime sayfaları 20 → 400; Türkçe harfle okunuş, İngilizce örnek cümle +
-      çeviri, mini test.
-- [ ] Görsel site haritası, iç bağlantı ağacı.
-- Süsler Faz 4'te eklenir; LGS ünite sayfaları Faz 2 ve 4'le dolar.
+**Faz 1 — Site** ✅ yayına hazır, **kullanıcı onayı bekliyor** (onay 3)
+- [x] Tasarım dili: `body[data-bolum]` ile bölüm vurgusu (Genel sarı, LGS
+      `#5ec8ff`, Çocuk `#ff9a4d`); üstte sekme şeridi (Tidal tarzı), bölüme
+      özel menü ve marka alt yazısı; yeni bileşenler `stil.css` sonunda.
+- [x] "Kanca" → "çağrışım" (site, SSS, blog, kullanım koşulları); yöntem yazısına
+      "yazılış çağrışımı" bölümü. Adresler değişmedi.
+- [x] `/lgs/` (geri sayım: 12 Haziran 2027 TAHMİNİ, `site-bolumler.mjs`
+      `LGS_TARIH`; günlük kelime hesabı, 10 ünite, örnekler, veli, SSS), 10 ünite
+      sayfası (hafıza teknikli kartlar, tam liste + tür + LGS'de çıkma, 10 soruluk
+      mini test, yazdır/PDF), `/lgs/en-cok-cikan-kelimeler/` (2018–2025, 8 sınav,
+      107 kelime; `tools/mufredat/cikmis-say.mjs`).
+- [x] `/cocuk/`: veli sayfası, sınıf kutuları (2–6), güvenlik, SSS; "hazırlanıyor"
+      notu (`COCUK_UYGULAMADA`).
+- [x] Kelime sayfaları 20 → 393 (7'si görsel bekliyor): okunuş, örnek cümle +
+      çeviri (`tools/kelime-ek.txt`), konu (`tools/konu-ek.json` 301–400), LGS
+      ünite rozeti, 2 soruluk mini test, aynı konudan 6 kelime.
+- [x] Görsel site haritası (400 görsel), ana sayfada "Kimin için?" (3 sekme).
+- Denetim: 420 sayfa, 21.082 iç bağlantı, kırık 0; 375 px'te yatay kayma yok;
+  konsol temiz. Önizleme: `node tools/site.mjs <klasör>` + statik sunucu.
+- Uygulamada LGS/Çocuk yok (Faz 3): sayfalarda dürüst "yakında" notu
+  (`LGS_UYGULAMADA`, `COCUK_UYGULAMADA`); "Hemen başla" `?bolum=lgs` ekliyor.
+- **Yayın:** site `npm run site -- ../hasanozdemiryz-blip.github.io` + orada
+  commit/push (dal `uc-bolum`'dan üretmek yeter; uygulama `main`'e geçmeden de
+  olur). Uygulama dalı `main`'e ancak 7 görsel yenilenince.
 
 **Faz 2 — Kelime verisi (Genel + LGS)**
 - [ ] LGS zorlama turu: 225 kelimeye ses/yazılış çağrışımı, olmazsa görsel
