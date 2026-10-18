@@ -40,7 +40,20 @@ BACKGROUND: one single very pale washed-out <TON> tint, extremely light, close t
 Inanimate objects have NO faces, NO eyes, NO mouths, NO limbs.
 
 No text, no letters, no numbers, no logos anywhere in the image.
+
+Child-friendly and wholesome: nothing scary, violent, dangerous, religious, romantic or rude.
 ```
+
+**Çağrışım sahnede açıkça görünür (18 Ekim).** Sahne cümlesindeki çağrışım
+öğesi tek bakışta tanınmalı: "Surların arkasında hayatta kaldılar" → taş
+surlar, kuşatma işareti ve surların arkasında güvende duran insanlar; "Deli
+aşçının yemeği lezzetli çıktı" → çılgınca saçlı, yüzü mutlu bir aşçı ve
+dumanı tüten tabak. Anlam (tekne) yine öne çıkar; çağrışım (sur, deli)
+yanında net ama ikincil. Yazılış çağrışımında görselde yazı YOK — vurgu
+uygulamada kelimenin üstünde yapılır (**deli**cious).
+
+**Güvenlik satırı** ("Child-friendly…") her prompt'un sonunda; ayrıntı
+`kanca-kurallari.md` → Güvenlik.
 
 Tonlar: `cream`, `mint`, `green`, `sky-blue`, `lavender`, `pink`, `peach`,
 `yellow`. İnsan sahnesinde "Inanimate objects…" satırı çıkarılır (yüzü de
