@@ -127,7 +127,7 @@ const KABUK = {
     MENU: 'Menü',
     ALT_TANIM:
       'Görselleştirilmiş hafıza tekniğiyle İngilizce: her kelimeyi sesiyle ya da yazılışıyla bir Türkçe kelimeye bağla. Ezber yok, reklam yok, ücretsiz.',
-    UYGULAMA: 'Uygulama',
+    UYGULAMA: 'Platform',
     NASIL: 'Nasıl çalışıyor?',
     NEDEN: 'Neden işe yarıyor?',
     OGREN: 'Öğren',
@@ -148,7 +148,7 @@ const KABUK = {
     MENU: 'Menu',
     ALT_TANIM:
       'Learn English words by linking them to similar-sounding Turkish words. No rote learning, no ads, free.',
-    UYGULAMA: 'App',
+    UYGULAMA: 'Platform',
     NASIL: 'How it works',
     NEDEN: 'Why it works',
     OGREN: 'Learn',
@@ -192,7 +192,7 @@ const HREFLANG = [
 const SSS = [
   [
     'Hafızada İngilizce nedir?',
-    'Görselleştirilmiş hafıza tekniğiyle İngilizce kelime öğreten ücretsiz bir uygulama. Her kelimeyi sesiyle ya da yazılışıyla bir Türkçe kelimeye ve tek bir sahneye bağlıyorsun; ezberlemiyorsun.',
+    'Görselleştirilmiş hafıza tekniğiyle İngilizce kelime öğreten ücretsiz bir online eğitim platformu. Her kelimeyi sesiyle ya da yazılışıyla bir Türkçe kelimeye ve tek bir sahneye bağlıyorsun; ezberlemiyorsun.',
   ],
   [
     'Çağrışım ne demek?',
@@ -212,7 +212,7 @@ const SSS = [
   ],
   [
     'Günde ne kadar zaman ayırmalıyım?',
-    'Günde 5, 10 ya da 15 yeni kelime seçebilirsin. Bir ders birkaç dakika sürer; uygulama tekrarları tam unutacakken karşına getirir.',
+    'Günde 5, 10 ya da 15 yeni kelime seçebilirsin. Bir ders birkaç dakika sürer; platform tekrarları tam unutacakken karşına getirir.',
   ],
   [
     'Hangi cihazlarda çalışıyor?',
@@ -280,7 +280,18 @@ const KISILER = [
  * hepsini acmayi onayladi; ince olmasin diye her sayfaya okunus, Ingilizce
  * ornek cumle + ceviri, konu, LGS unitesi ve mini test eklendi
  * (tools/kelime-ek.txt). Eski 20 adres degismedi.
+ *
+ * 19 Ekim: "her seyi verme" — yalniz 50 sayfa. Yayindaki 20 (Search
+ * Console'da gosterim aliyorlar) + siklik, mufredat ve Google onerisiyle
+ * secilen 30 (tools/arama-sinyal.json). Gerisi platformda.
  */
+const SAYFA_KELIMELERI = [
+  'far', 'sell', 'door', 'salt', 'dust', 'sick', 'bad', 'car', 'eye', 'fish',
+  'dark', 'deep', 'cup', 'coat', 'boat', 'box', 'brother', 'foot', 'full', 'safe',
+  'put', 'bowl', 'branch', 'lead', 'short', 'table', 'cut', 'gate', 'jam', 'feed',
+  'crack', 'pass', 'wash', 'meet', 'belt', 'rule', 'pillow', 'thunder', 'storm', 'hook',
+  'bag', 'fork', 'cap', 'season', 'freeze', 'towel', 'spin', 'arm', 'lamp', 'torch',
+];
 
 /**
  * Kanca bolumunun havuzu: kancasi en net anlasilan dokuz kart — YALNIZCA
@@ -300,7 +311,7 @@ const DENEME_METIN = {
     kayboldu: 'Kart kayboldu.',
     soru: '{en} ne demekti?',
     dogruBaslik: 'Hatırladın.',
-    dogruMetin: 'Ezberlemedin, bağladın. Uygulamada her gün yeni kelimeler böyle geliyor.',
+    dogruMetin: 'Ezberlemedin, bağladın. Platformda her gün yeni kelimeler böyle geliyor.',
     yanlisBaslik: 'Doğrusu: {tr}',
     yanlisMetin: 'Çağrışım: {en} ≈ {hook}. Birkaç tekrarda oturuyor.',
     devam: 'Devam et',
@@ -338,7 +349,7 @@ const YASAL = [
   {
     dosya: 'kullanim-kosullari',
     baslik: 'Kullanım Koşulları',
-    aciklama: 'Hafızada İngilizce uygulamasının kullanım koşulları.',
+    aciklama: 'Hafızada İngilizce platformunun kullanım koşulları.',
   },
   {
     dosya: 'kvkk',
@@ -536,7 +547,7 @@ const TEST_JS = `<script>
       kutu.innerHTML = '';
       if (i >= sorular.length) {
         var s = document.createElement('p'); s.className = 'test-sonuc';
-        s.innerHTML = '<b>' + dogru + ' / ' + sorular.length + '</b> doğru. ' + (dogru === sorular.length ? 'Harika!' : 'Kaçırdıklarını uygulamada tekrar edebilirsin.');
+        s.innerHTML = '<b>' + dogru + ' / ' + sorular.length + '</b> doğru. ' + (dogru === sorular.length ? 'Harika!' : 'Kaçırdıklarını platformda tekrar edebilirsin.');
         var t = document.createElement('button'); t.type = 'button'; t.className = 'btn btn-beyaz'; t.textContent = 'Tekrar çöz';
         t.onclick = function () { i = 0; dogru = 0; goster(); };
         kutu.appendChild(s); kutu.appendChild(t); return;
@@ -816,7 +827,10 @@ async function derle(hedef) {
     .filter((k) => fs.existsSync(path.join(KOK, 'src/assets/cards', `${k.id}.webp`)))
     .filter((k) => !GORSEL_YENILENECEK.includes(k.id))
     .sort((a, b) => a.order - b.order);
-  const kelimeler = setKartlari;
+  const kelimeler = setKartlari.filter((k) => SAYFA_KELIMELERI.includes(k.id));
+  if (kelimeler.length !== SAYFA_KELIMELERI.length) {
+    throw new Error(`sayfa kelimesi sette yok: ${SAYFA_KELIMELERI.filter((id) => !kelimeler.some((k) => k.id === id)).join(', ')}`);
+  }
   const yayinda = new Set(kelimeler.map((k) => k.id));
   const disarida = HAVUZ.filter((id) => !yayinda.has(id));
   if (disarida.length) throw new Error(`kanca havuzunda yayinda olmayan kelime: ${disarida.join(', ')}`);
@@ -907,7 +921,7 @@ async function derle(hedef) {
         <div class="mini-test" data-test="${esc(JSON.stringify(kelimeTesti(k, benzer)))}"><p>Mini test için JavaScript gerekiyor.</p></div>
       </div>
       <div class="cagri">
-        <p>${k.en} ve ${setKartlari.length - 1} kelime daha uygulamada çağrışımı ve görseliyle seni bekliyor.</p>
+        <p>${k.en} ve ${setKartlari.length - 1} kelime daha platformda çağrışımı ve görseliyle seni bekliyor.</p>
         <a class="btn btn-lacivert" href="${baslaYol('genel')}" data-basla>Hemen başla</a>
       </div>
     </div>
@@ -952,13 +966,13 @@ async function derle(hedef) {
   }
   const kelimeListesi = {
     yol: '/kelimeler/',
-    baslik: `${kelimeler.length} İngilizce kelime: Türkçe anlamları, okunuşları ve hafıza teknikleri — Hafızada`,
+    baslik: `Sık kullanılan ${kelimeler.length} İngilizce kelime: Türkçe anlamları, okunuşları ve hafıza teknikleri — Hafızada`,
     aciklama: `${kelimeler.length} İngilizce kelime: her birinin Türkçe anlamı, okunuşu, örnek cümlesi, Türkçe çağrışımı ve akılda kalan sahnesi.`,
     ogTur: 'website',
     icerik:
       altBaslik(
         'Kelimeler',
-        `${kelimeler.length} İngilizce kelime; Türkçe anlamı, okunuşu, örnek cümlesi ve çağrışımıyla. LGS kelimeleri için <a href="/lgs/" style="color:#fff;text-decoration:underline">LGS sekmesine</a> bak.`,
+        `Sık kullanılan ${kelimeler.length} İngilizce kelime; Türkçe anlamı, okunuşu, örnek cümlesi ve çağrışımıyla. Platformda ${setKartlari.length} kelimenin hepsi var. LGS kelimeleri için <a href="/lgs/" style="color:#fff;text-decoration:underline">LGS sekmesine</a> bak.`,
         [['Kelimeler', '/kelimeler/']],
       ) +
       `<section class="benzerler">
@@ -1063,9 +1077,9 @@ ${yazilar
   const sayfalar = [
     {
       yol: '/',
-      baslik: 'Hafızada İngilizce — Ezberlemeden İngilizce kelime öğren',
+      baslik: 'Hafızada — Hafıza Teknikleriyle İngilizce Kelime Öğren',
       aciklama:
-        'Her İngilizce kelimeyi benzer sesli bir Türkçe kelimeye ve tek bir görsele bağla. Ezber yok, reklam yok, ücretsiz.',
+        'Görselleştirilmiş hafıza teknikleriyle İngilizce kelime öğren: her kelime bir Türkçe çağrışıma ve tek bir resme bağlanıyor. Genel İngilizce, LGS ve çocuklar için. Ücretsiz, reklamsız.',
       ogTur: 'website',
       icerik: anaGovde,
       script: anaJs + formJs,
@@ -1176,6 +1190,8 @@ ${yazilar
       BOLUM: bolum,
       BOLUM_SERIDI: bolumSeridi(bolum, dil),
       MARKA_ALT: BOLUMLER[bolum].marka,
+      // Logo bulundugu sekmenin ana sayfasina gider (LGS'de /lgs/, Ingilizce'de /en/).
+      MARKA_YOL: bolum === 'genel' ? (en ? '/en/' : '/') : BOLUMLER[bolum].ana,
       BASLA_YOL: baslaYol(bolum),
       ROBOTS: '',
       MENU: menuHtml(menu, '      '),

@@ -63,7 +63,7 @@ export function lgsSayfalari(c) {
 
   const yakinda = LGS_UYGULAMADA
     ? ''
-    : `<p class="yakinda"><b>Yakında uygulamada:</b> LGS ünite yolu, kalıplar, sesli diyaloglar ve ünite testleri ekleniyor. Bu arada ünite listelerini ve mini testleri buradan çalışabilir, uygulamada genel kelimelerle başlayabilirsin.</p>`;
+    : `<p class="yakinda"><b>Yakında platformda:</b> LGS ünite yolu, kalıplar, sesli diyaloglar ve ünite testleri ekleniyor. Bu arada ünite listelerini ve mini testleri buradan çalışabilir, platformda genel kelimelerle başlayabilirsin.</p>`;
 
   /** Hafiza teknikli kart: onayli ya da onerili cagrisim + mevcut kart gorseli. */
   const hafizaKart = (k) => {
@@ -205,7 +205,7 @@ ${cikanlar
   <div class="kap">
     <div>
       <span class="ust-etiket">LGS 2027 · 8. sınıf İngilizce</span>
-      <h1>LGS kelimeleri<br><span class="vurgu-kalem">ezberlenmez, bağlanır.</span></h1>
+      <h1>LGS İngilizce kelimeleri,<br><span class="vurgu-kalem">hafıza teknikleriyle.</span></h1>
       <p class="giris">10 ünitenin ${toplam} kelimesi ve kalıbı, Türkçe anlamları ve görselleştirilmiş hafıza teknikleriyle. <b>succeed</b> ≈ <b>saksı</b>, <b><u>deli</u>cious</b> ≈ <b>deli</b>.</p>
       <div class="dugmeler">
         <a class="btn btn-sari btn-buyuk" href="#uniteler">Ünitelere bak</a>
@@ -242,7 +242,7 @@ ${DALGA_UST}
     <div class="adimlar">
       <div class="adim"><span class="no">Sesten</span><h3>succeed ≈ saksı</h3><p>Kulağa saksı gibi geliyor. “Saksıdaki çiçeği büyütmeyi başardı.” Başarmak aklına saksıyla geliyor.</p></div>
       <div class="adim"><span class="no">Yazılıştan</span><h3><u>deli</u>cious ≈ deli</h3><p>Kelimenin içinde “deli” yazıyor. “Deli aşçının yemeği lezzetli çıktı.” Bu teknik bize özgü.</p></div>
-      <div class="adim"><span class="no">Tekrar</span><h3>Tam unutacakken</h3><p>Uygulama her kelimeyi unutmana yakın tekrar soruyor. Sınava kadar ünite ünite kalıcı.</p></div>
+      <div class="adim"><span class="no">Tekrar</span><h3>Tam unutacakken</h3><p>Platform her kelimeyi unutmana yakın tekrar soruyor. Sınava kadar ünite ünite kalıcı.</p></div>
     </div>
   </div>
 </section>
@@ -266,7 +266,7 @@ ${DALGA_SARI}
 <section class="kapanis">
   <div class="kap kutu">
     <h2>Bugün ilk üniteyle başla.</h2>
-    <p>Ünite listelerine bak, mini testi çöz, uygulamada çalış.</p>
+    <p>Ünite listelerine bak, mini testi çöz, platformda çalış.</p>
     <a class="btn btn-lacivert btn-buyuk" href="${c.baslaYol('lgs')}" data-basla>Hemen başla</a>
   </div>
 </section>`,
@@ -308,12 +308,12 @@ export function cocukSayfalari(c) {
   };
   const yakinda = COCUK_UYGULAMADA
     ? ''
-    : `<p class="yakinda"><b>Hazırlanıyor:</b> Çocuk bölümü okul müfredatıyla birlikte uygulamaya ekleniyor. Şimdilik genel kelimelerle başlayabilirsiniz; hepsi çocuğa uygun.</p>`;
+    : `<p class="yakinda"><b>Hazırlanıyor:</b> Çocuk bölümü okul müfredatıyla birlikte platforma ekleniyor. Şimdilik genel kelimelerle başlayabilirsiniz; hepsi çocuğa uygun.</p>`;
   const SSS_COCUK = [
     ['Kaç yaş için uygun?', 'Okuma yazma bilen çocuklar için: 2. sınıftan 6. sınıfa kadar. Kelimeler okulda işlenen temalara göre sıralanıyor.'],
     ['İçerik çocuğa uygun mu?', 'Evet. Şiddet, korku, uygunsuz ya da kötü çağrışım yapan hiçbir kelime, cümle ve görsel kullanmıyoruz; her kart bu kurala göre hazırlanıyor.'],
     ['Reklam var mı, ücretli mi?', 'Reklam yok. Şu an tamamen ücretsiz.'],
-    ['Verilerimiz ne oluyor?', 'Üyelik zorunlu değil. Çocuk hesabı veli tarafından açılır; veriler satılmaz, istediğinizde silinir. Ayrıntılar KVKK metninde.'],
+    ['Verilerimiz ne oluyor?', 'Üyelik zorunlu değil; üye olmadan da kullanılabilir. Üyelik açılacaksa bunu velinin yapmasını öneriyoruz. Veriler satılmaz, istediğinizde silinir. Ayrıntılar KVKK metninde.'],
   ];
   return [
     {
@@ -356,7 +356,7 @@ ${DALGA_UST}
     <div class="adimlar">
       <div class="adim"><span class="no">Gör</span><h3>Resim ve hikâye</h3><p>Her kelime çocuğun tanıdığı bir şeye bağlanıyor: snake ≈ sinek, “Yılan sineği yutuyor.”</p></div>
       <div class="adim"><span class="no">Dinle</span><h3>Doğru ses</h3><p>Her kelimenin İngilizce okunuşu sesli. Yavaş dinleme seçeneği var.</p></div>
-      <div class="adim"><span class="no">Hatırla</span><h3>Tam unutacakken</h3><p>Uygulama kelimeyi unutmaya yakın tekrar soruyor; öğrenilen kalıcı oluyor.</p></div>
+      <div class="adim"><span class="no">Hatırla</span><h3>Tam unutacakken</h3><p>Platform kelimeyi unutmaya yakın tekrar soruyor; öğrenilen kalıcı oluyor.</p></div>
     </div>
   </div>
 </section>

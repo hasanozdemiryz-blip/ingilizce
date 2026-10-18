@@ -2469,7 +2469,156 @@ kitapta; kelimeleri konu ile temaya bağlanır).
 
 ## Sırada
 
-### SIRADAKİ İŞ — YOL HARİTASI (18 Ekim gece, son hali; kullanıcı: "sana bırakıyorum, sen yapacaksın")
+### >>> BAŞKA CİHAZDA BURADAN DEVAM (19 Ekim 2026 gece) <<<
+
+- **Aktif dal `uc-bolum`** (main'e geçmedi; main = eski yayın). Başka cihazda:
+  `git fetch && git checkout uc-bolum && git pull` (site deposunda `git pull`).
+- **Önce aşağıdaki KARARLAR'ı oku.** Bir şey önermeden önce onlara bak; çelişen
+  öneri yapma. Yeni istekte önce tek cümleyle "anladığım şu" yaz.
+- **Şu anki adım:** "NEREDE KALDIK" (bu bölümün sonunda) — her aşama bitince güncellenir.
+- Magnific bakiyesi ~81.220 kredi (19 Ekim, deneme 245 kredi harcandı).
+- Site önizleme: `node tools/site.mjs <boş klasör>` sonra o klasörde herhangi bir
+  statik sunucu (`npx serve <klasör>`); ya da `npm run site -- ../hasanozdemiryz-blip.github.io` = yayın.
+
+#### KARARLAR (kullanıcının söyledikleri; tek kaynak)
+
+1. **Online eğitim platformuyuz; mobil uygulama YOK** (belki ileride). Metinlerde
+   "uygulama" değil **"platform"**. `/ingilizce/` web platformu ürünün kendisi.
+2. **Sekmeler: Genel · LGS · Çocuk** (`/`, `/lgs/`, `/cocuk/`). Tidal tarzı şerit,
+   sekmeye özel menü, logo bulunduğu sekmenin ana sayfasına gider.
+   **Çocuk bu süreçte tamamlanmayacak** (tanıtım sayfası duruyor).
+3. **Kancalar kalıyor**, kullanıcıya hep **"çağrışım"**. Yöntem: **görselleştirilmiş
+   hafıza tekniği**. Çağrışım **ses** (succeed ≈ saksı) ya da **yazılış**
+   (**deli**cious, **dev**ice, re**fuse** ≈ füze) — yazılış bizim farkımız.
+   **Zorla; çok alakasız kalırsa sadeleştir** → görsel çağrışım (yalnız sahne).
+   Ölçü: kullanıcının "hepsi tutar" dediği 14 örnek (`tools/mufredat/lgs8-etiket.txt`,
+   "ONAYLI 18 Ekim"). Kurallar: `tools/kanca-kurallari.md`.
+4. **Genel'de "Hafıza Teknikli / Bütün" seçimi YOK** — Genel'in hepsi hafıza
+   teknikli üretilir. (LGS/Çocuk'ta da seçim yok; LGS hep bütün kelimeler.)
+5. **Seviye (yalnız Genel; LGS seviyeye ayrılmaz, orada üniteler belli):**
+   2 seviye **Başlangıç / Orta**. Seviye kelimenin **kendi zorluğu**na göre,
+   kaynağına göre değil: **Oxford 3000/5000 CEFR** — A1–A2 → Başlangıç, B1+ → Orta;
+   listede yoksa ilk geçtiği sınıf (2–6 Başlangıç, 7–8 Orta). LGS kelimelerinin
+   çoğu Başlangıç'a düşer (bake, share, invite…) — "LGS = Orta" YANLIŞ.
+   Üyelik sorusu 3 seçenekli kalır: Hiç bilmiyorum → Başlangıç baştan; Biraz →
+   Başlangıç + 2 dk "biliyorum/bilmiyorum" taraması; Orta → Orta + Başlangıç taraması.
+   Seviye yalnız SIRAYI belirler; kart ve hafıza tekniği aynı.
+6. **Genel'in büyümesi:** önce **LGS kartları** üretilir ve Genel'e eklenir
+   (okula özgü olanlar hariç: caravansary, catgut, headmistress…). Sonra Genel'in
+   kalanı: müfredattaki kullanılabilir her kelime (~770, 2–6. sınıf), çocuksu
+   olmayanlar. Genel hedef ~1.400 kelime.
+7. **LGS:** 2027 = 8. sınıf eski program, 10 ünite. Platformda "Hangi yıl LGS'ye
+   gireceksin?" (2027 → 10 ünite; 2028 → Maarif teması, kitap çıkınca),
+   "Okulda hangi ünitedesin?", üniteler **kilitsiz**. Ünite = **kelimeler →
+   kalıplar (8–12) → sesli diyaloglar (3–4) → ünite testi (10 soru)**, hepsi özgün
+   (kitaptan kopya yok). Gramer anlatımı ve ayrı "sesli ders" yok.
+8. **Görsel:** Nano Banana Pro (`imagen-nano-banana-2`), 2K, **2×2 ızgara**,
+   seed 20260918, stil ref `VXEgEPIMMU` → `node tools/izgara-bol.mjs` (~19–25
+   kredi/kart). Z-Image elendi. Çağrışım sahnede açıkça görünür (sur → surlar +
+   kuşatma + güvende insanlar). Güvenlik kuralı (silah/şiddet/din/korku… yok;
+   füze → oyuncak roket). Reçete: `tools/gorsel-recetesi.md`.
+9. **Ses:** kelimeler **tek kadın sesi**, önceden üretilmiş dosya (Magnific
+   `audio_tts`, ~2 kredi/kelime); dosya yoksa cihaz sesi yedek; yavaş 0,75×.
+   Diyaloglar **kadın + erkek**. Türkçe seslendirme yok. Sesleri Claude seçer.
+   Site örnek cümleleri cihaz sesinde kalır.
+10. **Site: her şeyi verme.** Genel'de yalnız **50 kelime sayfası** (`tools/site.mjs`
+    `SAYFA_KELIMELERI`: yayındaki 20 + 30). LGS ünite sayfasında **liste + Türkçe +
+    mini test açık**, çağrışım kartı ünite başına **2–3 (vitrin)**. Yeni sayfa:
+    **"LGS'de en çok çıkan ve mutlaka öğrenilmesi gereken 25 kelime"** (çıkmış
+    sınav sıklığı; tanıdık T kelimeler hariç). "En çok çıkanlar" → **"LGS İngilizce
+    çıkmış sorulardaki kelimeler"**. Ana sayfa başlığı **A**: "Hafıza teknikleriyle
+    İngilizce kelime öğren." Sekme süsleri Magnific'te (sonra).
+11. **Para:** şimdi her şey ücretsiz, reklam 0 TL. Ödeme sistemi + küçük reklam testi
+    Şubat (öneri, karar yok). GitHub depoları açık; "iyi giderse" GitHub Pro (4 $/ay).
+12. **Çalışma biçimi (19 Ekim):** kullanıcı **onay beklemeden sonuna kadar
+    ilerlenmesini** istedi. Yalnız şunlarda durulur: kredi tahmini %20+ aşılırsa,
+    mevcut kullanıcı verisi riske girerse, yalnız kullanıcının verebileceği bir
+    karar çıkarsa. Her değişiklikten sonra **sıradan kullanıcı gibi her düğme,
+    logo, menü tıklanarak** ve 375 px'te test (logo hatası bu yüzden kaçmıştı).
+    Her aşama sonunda NOTLAR "NEREDE KALDIK" güncellenir, dal push'lanır.
+
+#### PLAN (onaylı 19 Ekim) — neden / ne / bitti
+
+Mantık: her adım sonrakinin girdisi. LGS kartları önce: aynı kart LGS'yi ve
+Genel'i (seviyesine göre) dolduruyor; LGS sezonu şimdi.
+
+**Aşama 1 — Site son düzeltmeler + Yayın 1** (kredi yok)
+- Neden: Google sıralaması haftalar sürüyor; LGS sezonu şimdi.
+- Yapıldı: başlık A, 50 kelime sayfası, "platform" dili, logo → sekme ana sayfası,
+  gizlilik "Çocuklar" paragrafı, yasal `noindex`, 7 güvenlik görseli (rob hariç).
+- Kalan: LGS ünite sayfasında çağrışım vitrini 2–3 (`tools/site-bolumler.mjs`
+  `hafiza` listesi kısalt + "bütün çağrışımlar platformda" notu); 25 kelime
+  sayfası (`/lgs/en-onemli-25-kelime/`, `cikmis.json` + `lgs8-etiket.txt`, T hariç);
+  çıkmış sayfası adı + adres `/lgs/cikmis-sorulardaki-kelimeler/` + menü; tıklama
+  testi (her sekmede logo/menü/alt bilgi/düğmeler, 375 px, konsol, kırık bağlantı);
+  `npm run site -- ../hasanozdemiryz-blip.github.io`, orada commit + push.
+- Bitti: site yayında, kontroller temiz.
+
+**Aşama 2 — LGS kelime verisi** (kredi yok)
+- Neden: görsel ve ses bu metinlerden üretiliyor.
+- 418 kelime (`lgs8-etiket.txt`): R/T/I/K hepsine çağrışım zorla (ses → yazılış →
+  görsel çağrışım), sahne cümlesi, Türkçe anlam, güvenlik; okula özgüleri işaretle
+  (Genel'e gitmez). Görsel sahnesi (İngilizce tek cümle + ton) →
+  `tools/gorsel-sahneleri.json` biçiminde.
+- Seviye: Oxford 3000/5000 CEFR listesini indir, LGS + mevcut 400'e Başlangıç/Orta.
+- Ünite içeriği: her ünite 8–12 kalıp, 3–4 diyalog (4–6 satır, kadın/erkek), 10 test
+  sorusu → yeni veri dosyası (ör. `content/lgs.json`).
+- Kart verisi: yeni kartlar `cards.json`'a (kaynak Excel akışı: `kart-havuzu-300.xlsx`
+  → `npm run import:cards`; gerekirse yeni sütunlar: bolumler, lgsUnite, seviye, tur).
+- Bitti: her LGS kelimesinin çağrışımı, cümlesi, sahnesi, seviyesi var.
+
+**Aşama 3 — LGS görselleri** (~8.500 kredi)
+- ~390 kart ≈ 100 ızgara (+ `rob`, LGS `device` yeniden: dev'in yanında küçük ev).
+- 12 ızgaralık partiler; her parti `izgara-bol.mjs` → kontrol ızgarası → kusurlu
+  kare sonraki ızgarada; `npm run import:images`; test.
+- Bitti: kartların görselleri temiz ve platformda.
+
+**Aşama 4 — Platform** (`src/`)
+- Sekmeler (Genel · LGS; Çocuk "yakında"), bölüm profilde; `?bolum=` okunur.
+- LGS: yıl sorusu, ünite sorusu, 10 ünite yolu (kilitsiz); ünite içi kelimeler →
+  kalıplar → diyaloglar (satır satır, çeviri dokununca) → ünite testi.
+- Genel: seviye etiketiyle sıra; üyelikteki cevap başlangıç; tarama.
+- Kart: "çağrışım" dili, yazılış vurgusu, görsel çağrışım kartı (kancasız).
+- Merdivene son basamak: cümle içinde 4 şıklı soru.
+- Mevcut kullanıcıların ilerlemesi korunur (yerel + Supabase senkron).
+- Bitti: yeni/mevcut kullanıcı akışları çalışıyor; `npm test`, `npm run build`.
+
+**Aşama 5 — Sesler** (~4.900 kredi)
+- Kelimeler (~820) tek kadın sesi; diyaloglar (40) kadın + erkek. Dosyalar
+  `public/`… altında, isteğe bağlı inme; `src/speech.ts` dosya → yedek cihaz sesi.
+- Bitti: her kelime/diyalog sesli, 0,75× çalışıyor.
+
+**Aşama 6 — Platform + site yayını**
+- `uc-bolum` → `main` (otomatik yayın); sitede `LGS_UYGULAMADA = true`, ünite
+  sayfasından platformdaki üniteye doğrudan bağlantı; site yayını.
+- Bitti: ikisi yayında, canlıda tıklama testi.
+
+**Aşama 7 — Genel'in kalanı** (~19.000 kredi)
+- Başlangıç'a 2–6. sınıftan ~770 kelime: çağrışım, cümle, sahne, görsel, ses
+  (Aşama 2–3–5 yöntemi). Yayın.
+
+**Aşama 8 — Baştan sona test**
+- İlk giriş (üyeliksiz; üç seviye cevabı; tarama), üyelik/giriş/çıkış/Google,
+  başka cihazda devam, Genel ↔ LGS, LGS yılı/ünite, ders, tekrar, ünite testi,
+  cümle içi soru, sesler + yavaş, 375 px + masaüstü, internetsiz, eski kullanıcı
+  ilerlemesi, site → platform, her sekmede logo/menü/alt bilgi, kırık bağlantı,
+  konsol. Bulunanı düzelt, yeniden dene.
+
+Toplam kredi ~32.400 (bakiye ~81.220). Planda olmayan: Çocuk'un tamamı, ödeme, reklam.
+
+#### NEREDE KALDIK
+
+- [x] Faz 0, Faz 1'in ilk hali, deneme (yöntem seçildi), 7 güvenlik görselinden 6'sı
+      + draft (rob bekliyor), logo düzeltmesi, başlık A, 50 kelime, platform dili.
+- [ ] **Aşama 1 — sıradaki adım:** LGS çağrışım vitrini (2–3) → 25 kelime sayfası →
+      çıkmış sayfası adı → tıklama testi → site yayını.
+- LGS deneme görselleri `gorseller/lgs/` (survive, delicious, refuse — onaylı
+  kalitede; device yeniden). `gorseller/` depoda değil; başka cihazda yoksa
+  yeniden üretilecek (Magnific Personal projesinde de duruyorlar: 19 Ekim).
+
+
+
+### (ESKİ, yukarıdaki PLAN geçerli) YOL HARİTASI (18 Ekim gece; kullanıcı: "sana bırakıyorum, sen yapacaksın")
 
 Ayrıntılar yukarıda ("Üç bölüm planı", "Müfredat kelimeleri çıkarıldı"). Bu
 liste onları **geçersiz kılar**.
