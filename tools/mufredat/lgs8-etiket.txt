@@ -1,10 +1,10 @@
 # LGS 2027 — 8. sinif (eski program) kelimeleri, ilk tur etiket (18 Ekim 2026, Claude onerisi, kullanici onayi YOK)
 # unite|ingilizce|turkce|tur|kanca|ses|not
-# tur: K = ses kancasi (kanca-kurallari.md), T = tanidik (Turkcede ayni/cok benzer), R = resim karti (iyi kanca yok),
+# tur: K = hafiza teknikli (ses ve/veya yazilis cagrisimi; kanca-kurallari.md), T = tanidik (Turkcede ayni/cok benzer), R = gorsel cagrisim (sahne),
 #      I = kalip ifade, V = mevcut 400 kartta var. ses: 3 guclu / 2 orta benzerlik. not: G = Kids/LGS guvenlik dikkati.
 1|accept|kabul etmek|K|ek sepet|2|iki parcali kanca
 1|advice|tavsiye|R|||
-1|attend|katılmak|R|||
+1|attend|katılmak|K|at|3|yazılış · ONAYLI 18 Ekim · Törene atıyla katıldı
 1|awesome|harika|R|||
 1|back up|desteklemek|I|||
 1|best friend|en iyi arkadaş|I|||
@@ -27,7 +27,7 @@
 1|get on well with|iyi geçinmek|I|||
 1|go for a walk|yürüyüşe çıkmak|I|||
 1|instrument|enstrüman|T|||
-1|invite|davet etmek|R|||
+1|invite|davet etmek|K|in|3|yazılış · ONAYLI 18 Ekim · Ayı bizi inine davet etti
 1|laid-back|rahat|R|||
 1|loyalty|sadakat|R|||
 1|mate|arkadaş|R|||G: kanca adayı "meyit" — kullanılmaz
@@ -38,7 +38,7 @@
 1|priceless|paha biçilmez|R|||
 1|promise|söz vermek|R|||
 1|receiver|alıcı|R|||
-1|refuse|reddetmek|R|||
+1|refuse|reddetmek|K|füze|3|yazılış · ONAYLI 18 Ekim · Kral füzeyi hediye olarak reddetti
 1|regularly|düzenli olarak|R|||
 1|response|yanıt|R|||
 1|science fiction|bilim kurgu|I|||
@@ -48,7 +48,7 @@
 1|share|paylaşmak|R|||şeker başka kartta (kural 2/4)
 1|stuffed|tıka basa doymuş|R|||
 1|support|desteklemek|R|||
-1|survive|hayatta kalmak|R|||
+1|survive|hayatta kalmak|K|sur|3|ses+yazılış · ONAYLI 18 Ekim · Surların arkasında hayatta kaldılar
 1|text|mesaj atmak|T|||
 1|thriller|gerilim filmi|T|||
 1|thrilling|heyecan verici|R|||
@@ -108,8 +108,8 @@
 3|crack|kırmak|V|||
 3|cuisine|mutfak (yemek kültürü)|R|||
 3|cut|kesmek|V|||
-3|delicious|lezzetli|R|||
-3|dessert|tatlı|R|||
+3|delicious|lezzetli|K|deli|3|yazılış · ONAYLI 18 Ekim · Deli aşçının yemeği lezzetli çıktı
+3|dessert|tatlı|K|sert|3|yazılış · ONAYLI 18 Ekim · Tatlı taş gibi sert çıktı
 3|dice|küp küp doğramak|K|dayı|2|
 3|dough|hamur|R|||
 3|flour|un|R|||
@@ -143,7 +143,7 @@
 3|spread|sürmek|R|||
 3|sprinkle|serpmek|R|||
 3|steam|buhar|V|||
-3|tasty|lezzetli|R|||
+3|tasty|lezzetli|K|tas|3|yazılış · ONAYLI 18 Ekim · Tastaki çorba çok lezzetli
 3|whisk|çırpmak|R|||G: kanca adayı içki — kullanılmaz
 4|addiction|bağımlılık|R|||
 4|appointment|randevu|R|||
@@ -199,7 +199,7 @@
 5|connection|bağlantı|R|||
 5|delete|silmek|R|||
 5|develop|geliştirmek|R|||
-5|device|cihaz|R|||
+5|device|cihaz|K|dev|3|yazılış · ONAYLI 18 Ekim · Dev, cihazı tek eliyle kaldırdı
 5|download|indirmek|T|||
 5|habit|alışkanlık|R|||
 5|ignore|görmezden gelmek|T|||
@@ -266,7 +266,7 @@
 6|wrist guards|bilek koruyucu|I|||
 7|accommodation|konaklama|R|||
 7|all-inclusive|her şey dahil|I|||
-7|ancient|antik|R|||
+7|ancient|antik|K|enişte|3|ses · ONAYLI 18 Ekim · Enişte antik vazoyu kırdı
 7|architecture|mimari|T|||
 7|attraction|turistik yer|R|||
 7|authentic|otantik|T|||
@@ -285,7 +285,7 @@
 7|destination|varış yeri|T|||destinasyon
 7|fountain|çeşme|R|||
 7|historic site|tarihi alan|I|||
-7|incredible|inanılmaz|R|||
+7|incredible|inanılmaz|K|kredi|3|yazılış · ONAYLI 18 Ekim · Kredi kartına inanılmaz bir borç geldi
 7|journey|yolculuk|R|||
 7|landmark|simge yapı|R|||
 7|monument|anıt|R|||
@@ -309,7 +309,7 @@
 8|do the laundry|çamaşır yıkamak|I|||
 8|do chores|ev işi yapmak|I|||
 8|dust the shelves|rafların tozunu almak|I|||dust kartı var
-8|duty|görev|R|||
+8|duty|görev|K|düdük|3|ses · ONAYLI 18 Ekim · Görevli düdüğü öttürdü
 8|feature|özellik|R|||
 8|feed|beslemek|V|||
 8|festival|festival|T|||
@@ -356,7 +356,7 @@
 9|explode|patlamak|R|||
 9|explore|keşfetmek|R|||
 9|find out|öğrenmek, bulmak|I|||
-9|genius|dâhi|R|||
+9|genius|dâhi|K|cin|3|ses · ONAYLI 18 Ekim · Cin, dâhi çocuğa bulmaca sordu
 9|gravity|yer çekimi|R|||
 9|high-tech|ileri teknoloji|I|||
 9|invent|icat etmek|R|||
@@ -375,12 +375,12 @@
 9|smallpox vaccine|çiçek aşısı|I|||
 9|solar panel|güneş paneli|I|||
 9|speciality|uzmanlık|R|||
-9|succeed|başarmak|R|||
+9|succeed|başarmak|K|saksı|3|ses · ONAYLI 18 Ekim · Saksıdaki çiçeği büyütmeyi başardı
 9|test tube|deney tüpü|I|||
 9|tyre|lastik|R|||
 9|vaccination|aşılama|R|||
 9|well-equipped|donanımlı|I|||
-10|avalanche|çığ|R|||
+10|avalanche|çığ|K|avaz|3|ses · ONAYLI 18 Ekim · Avaz avaz bağırdı, çığ düştü
 10|cause|sebep olmak|K|koz|3|
 10|decrease|azalmak|R|||
 10|destroy|yok etmek|R|||
