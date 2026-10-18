@@ -1,5 +1,6 @@
 // Ders kitabi sozluklerini (pdftotext -layout) sutunlara ayirip kelime listesine cevirir.
 // Kullanim: node sozluk-ayikla.mjs <sozluk_l klasoru> <cikti.json>
+// sozluk_l: her kitabin sozluk sayfalari, `pdftotext -layout -enc UTF-8 -f <ilk> -l <son>` ile (bkz. NOTLAR.md).
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -13,6 +14,7 @@ const KITAPLAR = [
   { dosya: 's6.txt', sinif: 6, program: 'maarif', bicim: 'anlamli' },
   { dosya: 's7.txt', sinif: 7, program: 'maarif', bicim: 'anlamli' },
   { dosya: 's8.txt', sinif: 8, program: 'eski', bicim: 'yalin' },
+  { dosya: 's8m.txt', sinif: 8, program: 'eski', bicim: 'numarali' }, // MEB Mastermind, unite basina 40
 ];
 
 const BASLIK = /^(THEME|UNIT)\s+(\d+)\b\s*(.*)$/i;
@@ -51,11 +53,21 @@ for (const k of KITAPLAR) {
   let bitti = false;
   for (const sayfa of ham.split('\f')) {
     if (bitti) break;
+    // Numarali sozlukte her sayfa tek unite; baslik cift sayfalarda sagda, once oku.
+    const sayfaUnite = k.bicim === 'numarali' && sayfa.match(/UNIT\s+(\d+)/);
+    if (sayfaUnite) unite = Number(sayfaUnite[1]);
     for (const sutun of sutunlar(sayfa)) {
       for (let metin of sutun) {
         metin = metin.trim();
         if (!metin || /^\d{1,3}$/.test(metin) || /^(GLOSSARY|Glossary|WORD LIST)$/.test(metin)) continue;
         if (DUR.test(metin)) { bitti = true; break; }
+        if (k.bicim === 'numarali') {
+          const u = metin.match(/UNIT\s+(\d+)/);
+          if (u) continue;
+          const n = metin.match(/^\d{1,2} (.+)$/);
+          if (n && unite != null) sonuc.push({ sinif: k.sinif, program: k.program, unite, uniteAdi: unAd, en: n[1].trim(), tr: '' });
+          continue;
+        }
         const b = metin.match(BASLIK);
         if (b) { unite = Number(b[2]); unAd = b[3] || ''; continue; }
         if (unite == null) continue;

@@ -2440,20 +2440,21 @@ bağlantıları (OGM Materyal yalnız lise; EBA'da doğrudan bağlantı bulunama
 | 6 | MEB | Maarif | s.160, `(n)` etiketli | `1xVr89kpZBFda8d6VABk4bHfYJliyXZp0` |
 | 7 | Bilim ve Kültür (2026-27 onaylı) | Maarif | s.189, `kelime - anlam` | `17Ckfx2kDGQT3t3sKdgGbQZ03Jzn7Jgf3` |
 | 8 | Bilim ve Kültür | eski | s.169, yalnız kelime, 10 ünite | `1SXdk_3FU-GUOz5XcWV3f6z64F3vuCp1e` |
+| 8 | MEB Mastermind | eski | s.142–151, ünite başına numaralı 40 | Mediafire `51k3o67mbio5ccs` (tarayıcıdan elle) |
 
 İndirme: `https://drive.usercontent.google.com/download?id=<id>&export=download&confirm=t`;
 metin `pdftotext -layout -enc UTF-8 -f <sayfa> -l <son>`. Mediafire bağlantıları
 (MEB 7 ve 8 eski) komut satırından inmiyor.
 
-**Sayılar:** 1.581 benzersiz kelime/ifade (1.309 tek kelime, 272 kalıp ifade).
-Kids (2–6) 1.277; LGS çekirdeği (7–8) 386; 8. sınıf eski program 191 (10 ünite,
-ünite başına 15–32). **Mevcut 400 kartın 181'i müfredatta** (168'i Kids);
-219'u hiçbir sözlükte yok (genel İngilizce). Yeni kart gereken tek kelime
-Kids + LGS: **~1.128**. Sınıf başına ilk kez geçen: 2→238, 3→298, 4→85, 5→318,
-6→338, 7→153, 8→151.
+**Sayılar (iki 8. sınıf kitabıyla):** 1.762 benzersiz kelime/ifade (1.453 tek
+kelime, 309 kalıp ifade). Kids (2–6) 1.277; LGS çekirdeği (7–8) 604; **8. sınıf
+eski program 429** (10 ünite, ünite başına 55–72). **Mevcut 400 kartın 191'i
+müfredatta** (168'i Kids, 43'ü LGS); 209'u hiçbir sözlükte yok (genel
+İngilizce). Yeni kart gereken tek kelime Kids + LGS: **~1.262**. Sınıf başına
+ilk kez geçen: 2→238, 3→298, 4→85, 5→318, 6→338, 7→153, 8→332.
 
-**Dikkat:** sözlükler yalnız o yılın **anahtar** kelimeleri. 8. sınıf ünite
-başına ~20 kelime veriyor; ingilizceciyiz'in 1. ünite listesi 149 (kitaptaki
+**Dikkat:** sözlükler yalnız o yılın **anahtar** kelimeleri. 8. sınıfta Bilim ve
+Kültür ünite başına ~20, MEB 40 kelime veriyor; ingilizceciyiz'in 1. ünite listesi 149 (kitaptaki
 bütün kelimeler). LGS ünite sayfaları için 8. sınıf kitabının metninden ünite
 ünite tam kelime çıkarmak gerekecek (temel kelimeleri alt sınıf listeleriyle
 eleyerek). Ünite/tema eşlemesi 6. ve 7. sınıfta yaklaşık: sayfa iki sütun ×

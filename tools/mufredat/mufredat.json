@@ -2388,11 +2388,12 @@
   "en": "doorbell",
   "tr": "kapı zili",
   "siniflar": [
-   2
+   2,
+   8
   ],
-  "yerler": "2.T5",
+  "yerler": "2.T5 8.U4",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -3157,7 +3158,7 @@
    3,
    8
   ],
-  "yerler": "3.T1 3.T3 8.U1",
+  "yerler": "3.T1 3.T3 8.U1 8.U1",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -3506,11 +3507,12 @@
   "en": "prepare",
   "tr": "hazırlamak",
   "siniflar": [
-   3
+   3,
+   8
   ],
-  "yerler": "3.T1 3.T4",
+  "yerler": "3.T1 3.T4 8.U8",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -3776,11 +3778,12 @@
   "en": "device",
   "tr": "cihaz",
   "siniflar": [
-   3
+   3,
+   8
   ],
-  "yerler": "3.T2",
+  "yerler": "3.T2 8.U5",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -3985,11 +3988,12 @@
   "en": "map",
   "tr": "harita",
   "siniflar": [
-   3
+   3,
+   8
   ],
-  "yerler": "3.T2",
+  "yerler": "3.T2 8.U2",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -4210,11 +4214,12 @@
   "tr": "mevsim",
   "siniflar": [
    3,
-   5
+   5,
+   8
   ],
-  "yerler": "3.T2 5.T8",
+  "yerler": "3.T2 5.T8 8.U3",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": "season"
  },
@@ -5521,7 +5526,7 @@
    3,
    8
   ],
-  "yerler": "3.T4 8.U8",
+  "yerler": "3.T4 8.U8 8.U8",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -5873,7 +5878,7 @@
    3,
    8
   ],
-  "yerler": "3.T5 8.U3",
+  "yerler": "3.T5 8.U3 8.U3",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -6018,11 +6023,12 @@
   "en": "feed",
   "tr": "beslemek",
   "siniflar": [
-   3
+   3,
+   8
   ],
-  "yerler": "3.T5",
+  "yerler": "3.T5 8.U8",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": "feed"
  },
@@ -6142,11 +6148,12 @@
   "siniflar": [
    3,
    4,
-   6
+   6,
+   8
   ],
-  "yerler": "3.T5 3.T5 4.U6 6.T7",
+  "yerler": "3.T5 3.T5 4.U6 6.T7 8.U1",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -6441,7 +6448,7 @@
    3,
    8
   ],
-  "yerler": "3.T6 8.U3",
+  "yerler": "3.T6 8.U3 8.U3",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -7261,7 +7268,7 @@
    4,
    8
   ],
-  "yerler": "4.U6 8.U10",
+  "yerler": "4.U6 8.U10 8.U10",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -7274,7 +7281,7 @@
    4,
    8
   ],
-  "yerler": "4.U6 8.U3",
+  "yerler": "4.U6 8.U3 8.U3",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -7503,11 +7510,12 @@
   "en": "glove",
   "tr": "",
   "siniflar": [
-   4
+   4,
+   8
   ],
-  "yerler": "4.U8",
+  "yerler": "4.U8 8.U6",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -7752,7 +7760,7 @@
    5,
    8
   ],
-  "yerler": "5.T1 5.T5 8.U7",
+  "yerler": "5.T1 5.T5 8.U7 8.U7",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -8006,11 +8014,12 @@
   "en": "fountain",
   "tr": "çeşme",
   "siniflar": [
-   5
+   5,
+   8
   ],
-  "yerler": "5.T1",
+  "yerler": "5.T1 8.U7",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -8254,9 +8263,10 @@
   "siniflar": [
    5,
    6,
-   7
+   7,
+   8
   ],
-  "yerler": "5.T1 6.T7 7.T9",
+  "yerler": "5.T1 6.T7 7.T9 8.U10",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -8266,11 +8276,12 @@
   "en": "respect",
   "tr": "saygı duymak",
   "siniflar": [
-   5
+   5,
+   8
   ],
-  "yerler": "5.T1",
+  "yerler": "5.T1 8.U8",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -8848,11 +8859,12 @@
   "en": "backpack",
   "tr": "sırt çantası",
   "siniflar": [
-   5
+   5,
+   8
   ],
-  "yerler": "5.T3",
+  "yerler": "5.T3 8.U2",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -9089,11 +9101,12 @@
   "en": "ring",
   "tr": "yüzük",
   "siniflar": [
-   5
+   5,
+   8
   ],
-  "yerler": "5.T3",
+  "yerler": "5.T3 8.U4",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": "ring"
  },
@@ -9176,7 +9189,7 @@
    5,
    8
   ],
-  "yerler": "5.T3 8.U2",
+  "yerler": "5.T3 8.U2 8.U2",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -9246,11 +9259,12 @@
   "en": "board game",
   "tr": "kutu oyunu",
   "siniflar": [
-   5
+   5,
+   8
   ],
-  "yerler": "5.T4",
+  "yerler": "5.T4 8.U2",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": true,
   "kartta": ""
  },
@@ -9439,11 +9453,12 @@
   "en": "tent",
   "tr": "çadır",
   "siniflar": [
-   5
+   5,
+   8
   ],
-  "yerler": "5.T4",
+  "yerler": "5.T4 8.U2",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": "tent"
  },
@@ -9454,7 +9469,7 @@
    5,
    8
   ],
-  "yerler": "5.T4 8.U8",
+  "yerler": "5.T4 8.U8 8.U8",
   "kids": true,
   "lgs": true,
   "ifade": true,
@@ -9684,11 +9699,12 @@
   "en": "fork",
   "tr": "çatal",
   "siniflar": [
-   5
+   5,
+   8
   ],
-  "yerler": "5.T5",
+  "yerler": "5.T5 8.U3",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": "fork"
  },
@@ -9769,11 +9785,12 @@
   "en": "knife",
   "tr": "bıçak",
   "siniflar": [
-   5
+   5,
+   8
   ],
-  "yerler": "5.T5",
+  "yerler": "5.T5 8.U3",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": "knife"
  },
@@ -9867,11 +9884,12 @@
   "en": "plate",
   "tr": "tabak",
   "siniflar": [
-   5
+   5,
+   8
   ],
-  "yerler": "5.T5",
+  "yerler": "5.T5 8.U3",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": "plate"
  },
@@ -9904,11 +9922,12 @@
   "en": "skyscraper",
   "tr": "gökdelen",
   "siniflar": [
-   5
+   5,
+   8
   ],
-  "yerler": "5.T5",
+  "yerler": "5.T5 8.U6",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -9919,7 +9938,7 @@
    5,
    8
   ],
-  "yerler": "5.T5 8.U3",
+  "yerler": "5.T5 8.U3 8.U3",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -9944,7 +9963,7 @@
    5,
    8
   ],
-  "yerler": "5.T5 8.U7",
+  "yerler": "5.T5 8.U7 8.U7",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -10089,7 +10108,7 @@
    5,
    8
   ],
-  "yerler": "5.T6 8.U3",
+  "yerler": "5.T6 8.U3 8.U3",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -10161,11 +10180,12 @@
   "tr": "mutfak (yemek türü)",
   "siniflar": [
    5,
-   6
+   6,
+   8
   ],
-  "yerler": "5.T6 6.T6",
+  "yerler": "5.T6 6.T6 8.U3",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -10199,11 +10219,12 @@
   "en": "dough",
   "tr": "hamur",
   "siniflar": [
-   5
+   5,
+   8
   ],
-  "yerler": "5.T6",
+  "yerler": "5.T6 8.U3",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -10236,11 +10257,12 @@
   "en": "flour",
   "tr": "un",
   "siniflar": [
-   5
+   5,
+   8
   ],
-  "yerler": "5.T6",
+  "yerler": "5.T6 8.U3",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -10301,7 +10323,7 @@
    6,
    8
   ],
-  "yerler": "5.T6 6.T7 8.U3",
+  "yerler": "5.T6 6.T7 8.U3 8.U3",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -10386,7 +10408,7 @@
    5,
    8
   ],
-  "yerler": "5.T6 8.U3",
+  "yerler": "5.T6 8.U3 8.U3",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -10435,7 +10457,7 @@
    5,
    8
   ],
-  "yerler": "5.T6 8.U3",
+  "yerler": "5.T6 8.U3 8.U3",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -10459,11 +10481,12 @@
   "en": "reservation",
   "tr": "rezervasyon",
   "siniflar": [
-   5
+   5,
+   8
   ],
-  "yerler": "5.T6",
+  "yerler": "5.T6 8.U4",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -10582,7 +10605,7 @@
    5,
    8
   ],
-  "yerler": "5.T6 8.U3",
+  "yerler": "5.T6 8.U3 8.U3",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -11102,11 +11125,12 @@
   "en": "wing",
   "tr": "kanat",
   "siniflar": [
-   5
+   5,
+   8
   ],
-  "yerler": "5.T7",
+  "yerler": "5.T7 8.U6",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": "wing"
  },
@@ -11216,7 +11240,7 @@
    5,
    8
   ],
-  "yerler": "5.T8 8.U7",
+  "yerler": "5.T8 8.U7 8.U7",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -11230,7 +11254,7 @@
    7,
    8
   ],
-  "yerler": "5.T8 7.T10 8.U9",
+  "yerler": "5.T8 7.T10 8.U9 8.U9",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -11301,9 +11325,10 @@
   "tr": "davet etmek",
   "siniflar": [
    5,
-   7
+   7,
+   8
   ],
-  "yerler": "5.T8 7.T6",
+  "yerler": "5.T8 7.T6 8.U1",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -11543,9 +11568,10 @@
   "tr": "sıcaklık",
   "siniflar": [
    5,
-   7
+   7,
+   8
   ],
-  "yerler": "5.T8 7.T9",
+  "yerler": "5.T8 7.T9 8.U10",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -11567,11 +11593,12 @@
   "en": "trip",
   "tr": "gezi",
   "siniflar": [
-   5
+   5,
+   8
   ],
-  "yerler": "5.T8",
+  "yerler": "5.T8 8.U7",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -11675,11 +11702,12 @@
   "en": "ceremony",
   "tr": "tören, merasim",
   "siniflar": [
-   6
+   6,
+   8
   ],
-  "yerler": "6.T1",
+  "yerler": "6.T1 8.U7",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -11723,11 +11751,12 @@
   "en": "festival",
   "tr": "festival, şenlik",
   "siniflar": [
-   6
+   6,
+   8
   ],
-  "yerler": "6.T1 6.T5",
+  "yerler": "6.T1 6.T5 8.U8",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -11963,11 +11992,12 @@
   "en": "habit",
   "tr": "alışkanlık",
   "siniflar": [
-   6
+   6,
+   8
   ],
-  "yerler": "6.T2",
+  "yerler": "6.T2 8.U5 8.U8",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -12119,11 +12149,12 @@
   "en": "regularly",
   "tr": "düzenli olarak",
   "siniflar": [
-   6
+   6,
+   8
   ],
-  "yerler": "6.T2",
+  "yerler": "6.T2 8.U1",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -12183,7 +12214,7 @@
    7,
    8
   ],
-  "yerler": "6.T2 7.T1 8.U1",
+  "yerler": "6.T2 7.T1 8.U1 8.U1",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -12326,9 +12357,10 @@
   "tr": "geri dönüştürmek",
   "siniflar": [
    6,
-   7
+   7,
+   8
   ],
-  "yerler": "6.T2 6.T7 7.T9",
+  "yerler": "6.T2 6.T7 7.T9 8.U10",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -12362,11 +12394,12 @@
   "en": "research",
   "tr": "araştırma",
   "siniflar": [
-   6
+   6,
+   8
   ],
-  "yerler": "6.T2",
+  "yerler": "6.T2 8.U5",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -12413,7 +12446,7 @@
    6,
    8
   ],
-  "yerler": "6.T2 8.U9",
+  "yerler": "6.T2 8.U9 8.U9",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -12426,7 +12459,7 @@
    6,
    8
   ],
-  "yerler": "6.T2 8.U1",
+  "yerler": "6.T2 8.U1 8.U1 8.U8",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -12690,11 +12723,12 @@
   "en": "ambitious",
   "tr": "hırslı",
   "siniflar": [
-   6
+   6,
+   8
   ],
-  "yerler": "6.T4",
+  "yerler": "6.T4 8.U6",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -12873,7 +12907,7 @@
    6,
    8
   ],
-  "yerler": "6.T4 8.U4",
+  "yerler": "6.T4 8.U4 8.U4",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -12934,7 +12968,7 @@
    6,
    8
   ],
-  "yerler": "6.T4 8.U1 8.U2",
+  "yerler": "6.T4 8.U1 8.U2 8.U2",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -14111,11 +14145,12 @@
   "en": "bitter",
   "tr": "acı (tat)",
   "siniflar": [
-   6
+   6,
+   8
   ],
-  "yerler": "6.T6",
+  "yerler": "6.T6 8.U3",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": "bitter"
  },
@@ -14123,11 +14158,12 @@
   "en": "capital",
   "tr": "başkent",
   "siniflar": [
-   6
+   6,
+   8
   ],
-  "yerler": "6.T6",
+  "yerler": "6.T6 8.U7",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -14387,11 +14423,12 @@
   "en": "destroy",
   "tr": "yok etmek, mahvetmek",
   "siniflar": [
-   6
+   6,
+   8
   ],
-  "yerler": "6.T7",
+  "yerler": "6.T7 8.U10",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -14462,7 +14499,7 @@
    6,
    8
   ],
-  "yerler": "6.T7 8.U7",
+  "yerler": "6.T7 8.U7 8.U7",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -14619,7 +14656,7 @@
    6,
    8
   ],
-  "yerler": "6.T7 8.U3",
+  "yerler": "6.T7 8.U3 8.U3",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -14644,7 +14681,7 @@
    6,
    8
   ],
-  "yerler": "6.T7 8.U3",
+  "yerler": "6.T7 8.U3 8.U3",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -14702,11 +14739,12 @@
   "en": "tradition",
   "tr": "gelenek",
   "siniflar": [
-   6
+   6,
+   8
   ],
-  "yerler": "6.T7",
+  "yerler": "6.T7 8.U8",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -14871,11 +14909,12 @@
   "en": "obligation",
   "tr": "zorunluluk",
   "siniflar": [
-   6
+   6,
+   8
   ],
-  "yerler": "6.T7",
+  "yerler": "6.T7 8.U8",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -14935,7 +14974,7 @@
    6,
    8
   ],
-  "yerler": "6.T7 8.U6",
+  "yerler": "6.T7 8.U6 8.U6",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -15033,7 +15072,7 @@
    6,
    8
   ],
-  "yerler": "6.T8 8.U10",
+  "yerler": "6.T8 8.U10 8.U10",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -15119,7 +15158,7 @@
    6,
    8
   ],
-  "yerler": "6.T8 8.U10",
+  "yerler": "6.T8 8.U10 8.U10",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -15168,7 +15207,7 @@
    6,
    8
   ],
-  "yerler": "6.T8 8.U10",
+  "yerler": "6.T8 8.U10 8.U10",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -15194,7 +15233,7 @@
    7,
    8
   ],
-  "yerler": "6.T8 7.T3 8.U9",
+  "yerler": "6.T8 7.T3 8.U9 8.U9",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -15276,11 +15315,12 @@
   "en": "responsibility",
   "tr": "sorumluluk",
   "siniflar": [
-   6
+   6,
+   8
   ],
-  "yerler": "6.T8",
+  "yerler": "6.T8 8.U8",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -15556,11 +15596,12 @@
   "en": "source",
   "tr": "kaynak",
   "siniflar": [
-   6
+   6,
+   8
   ],
-  "yerler": "6.T8",
+  "yerler": "6.T8 8.U10",
   "kids": true,
-  "lgs": false,
+  "lgs": true,
   "ifade": false,
   "kartta": ""
  },
@@ -15655,7 +15696,7 @@
    6,
    8
   ],
-  "yerler": "6.T8 8.U10",
+  "yerler": "6.T8 8.U10 8.U10",
   "kids": true,
   "lgs": true,
   "ifade": false,
@@ -15737,9 +15778,10 @@
   "en": "honest",
   "tr": "dürüst",
   "siniflar": [
-   7
+   7,
+   8
   ],
-  "yerler": "7.T1",
+  "yerler": "7.T1 8.U2",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -15869,9 +15911,10 @@
   "en": "equipment",
   "tr": "ekipman, malzeme",
   "siniflar": [
-   7
+   7,
+   8
   ],
-  "yerler": "7.T2",
+  "yerler": "7.T2 8.U2 8.U6",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -16061,9 +16104,10 @@
   "en": "attend",
   "tr": "katılmak; (okula) devam etmek",
   "siniflar": [
-   7
+   7,
+   8
   ],
-  "yerler": "7.T3 7.T6",
+  "yerler": "7.T3 7.T6 8.U1",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -16193,9 +16237,10 @@
   "en": "conduct",
   "tr": "(orkestrayı) yönetmek",
   "siniflar": [
-   7
+   7,
+   8
   ],
-  "yerler": "7.T3",
+  "yerler": "7.T3 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -16313,9 +16358,10 @@
   "en": "gain",
   "tr": "kazanmak, elde etmek",
   "siniflar": [
-   7
+   7,
+   8
   ],
-  "yerler": "7.T3",
+  "yerler": "7.T3 8.U2",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -16601,9 +16647,10 @@
   "en": "extinct",
   "tr": "nesli tükenmiş",
   "siniflar": [
-   7
+   7,
+   8
   ],
-  "yerler": "7.T4",
+  "yerler": "7.T4 8.U10",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -16926,9 +16973,10 @@
   "en": "refuse",
   "tr": "reddetmek",
   "siniflar": [
-   7
+   7,
+   8
   ],
-  "yerler": "7.T6",
+  "yerler": "7.T6 8.U1",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17190,9 +17238,10 @@
   "en": "municipality",
   "tr": "belediye",
   "siniflar": [
-   7
+   7,
+   8
   ],
-  "yerler": "7.T8",
+  "yerler": "7.T8 8.U4",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17238,9 +17287,10 @@
   "en": "eco-friendly",
   "tr": "çevre dostu",
   "siniflar": [
-   7
+   7,
+   8
   ],
-  "yerler": "7.T9",
+  "yerler": "7.T9 8.U10",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17265,7 +17315,7 @@
    7,
    8
   ],
-  "yerler": "7.T9 8.U10",
+  "yerler": "7.T9 8.U10 8.U10",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -17287,9 +17337,10 @@
   "en": "pollute",
   "tr": "kirletmek",
   "siniflar": [
-   7
+   7,
+   8
   ],
-  "yerler": "7.T9",
+  "yerler": "7.T9 8.U10",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17299,9 +17350,10 @@
   "en": "renewable",
   "tr": "yenilenebilir",
   "siniflar": [
-   7
+   7,
+   8
   ],
-  "yerler": "7.T9",
+  "yerler": "7.T9 8.U10",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17359,9 +17411,10 @@
   "en": "waste",
   "tr": "atık",
   "siniflar": [
-   7
+   7,
+   8
   ],
-  "yerler": "7.T9",
+  "yerler": "7.T9 8.U10",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17395,9 +17448,10 @@
   "en": "gravity",
   "tr": "yer çekimi",
   "siniflar": [
-   7
+   7,
+   8
   ],
-  "yerler": "7.T10",
+  "yerler": "7.T10 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17419,9 +17473,10 @@
   "en": "observe",
   "tr": "gözlemlemek",
   "siniflar": [
-   7
+   7,
+   8
   ],
-  "yerler": "7.T10",
+  "yerler": "7.T10 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17431,9 +17486,10 @@
   "en": "planet",
   "tr": "gezegen",
   "siniflar": [
-   7
+   7,
+   8
   ],
-  "yerler": "7.T10",
+  "yerler": "7.T10 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17455,9 +17511,10 @@
   "en": "rescue",
   "tr": "kurtarmak, kurtarma",
   "siniflar": [
-   7
+   7,
+   8
   ],
-  "yerler": "7.T10",
+  "yerler": "7.T10 8.U10",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17553,7 +17610,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U1",
+  "yerler": "8.U1 8.U1",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17565,7 +17622,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U1",
+  "yerler": "8.U1 8.U1",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -17589,7 +17646,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U1",
+  "yerler": "8.U1 8.U1",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17601,7 +17658,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U1",
+  "yerler": "8.U1 8.U1",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17613,7 +17670,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U1",
+  "yerler": "8.U1 8.U1",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -17637,7 +17694,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U1",
+  "yerler": "8.U1 8.U1",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -17661,7 +17718,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U1",
+  "yerler": "8.U1 8.U1",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -17673,7 +17730,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U1",
+  "yerler": "8.U1 8.U1",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -17685,7 +17742,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U1",
+  "yerler": "8.U1 8.U1",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17709,7 +17766,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U1",
+  "yerler": "8.U1 8.U1",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17769,7 +17826,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U1",
+  "yerler": "8.U1 8.U1",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17781,7 +17838,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U1",
+  "yerler": "8.U1 8.U1",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17817,7 +17874,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U1",
+  "yerler": "8.U1 8.U1",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17841,7 +17898,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U2",
+  "yerler": "8.U2 8.U2",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17853,7 +17910,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U2",
+  "yerler": "8.U2 8.U2",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17877,7 +17934,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U2",
+  "yerler": "8.U2 8.U8",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -17889,7 +17946,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U2",
+  "yerler": "8.U2 8.U2",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17925,7 +17982,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U2",
+  "yerler": "8.U2 8.U2",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17949,7 +18006,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U2",
+  "yerler": "8.U2 8.U2",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17961,7 +18018,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U2",
+  "yerler": "8.U2 8.U2",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17973,7 +18030,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U2",
+  "yerler": "8.U2 8.U2",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17985,7 +18042,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U2",
+  "yerler": "8.U2 8.U2",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -17997,7 +18054,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U2",
+  "yerler": "8.U2 8.U2",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18009,7 +18066,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U2",
+  "yerler": "8.U2 8.U2",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -18021,7 +18078,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U3",
+  "yerler": "8.U3 8.U3",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18033,7 +18090,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U3",
+  "yerler": "8.U3 8.U3",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18057,7 +18114,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U3",
+  "yerler": "8.U3 8.U3",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18069,7 +18126,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U3",
+  "yerler": "8.U3 8.U3",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18081,7 +18138,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U3",
+  "yerler": "8.U3 8.U3",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18093,7 +18150,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U3",
+  "yerler": "8.U3 8.U3",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18105,7 +18162,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U3",
+  "yerler": "8.U3 8.U3",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18117,7 +18174,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U3",
+  "yerler": "8.U3 8.U3",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18129,7 +18186,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U3",
+  "yerler": "8.U3 8.U3",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18153,7 +18210,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U3",
+  "yerler": "8.U3 8.U3",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18165,7 +18222,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U3",
+  "yerler": "8.U3 8.U3",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18177,7 +18234,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U4",
+  "yerler": "8.U4 8.U4",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18189,7 +18246,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U4",
+  "yerler": "8.U4 8.U4",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18201,7 +18258,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U4",
+  "yerler": "8.U4 8.U4",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18213,7 +18270,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U4",
+  "yerler": "8.U4 8.U4",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18225,7 +18282,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U4",
+  "yerler": "8.U4 8.U4",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18237,7 +18294,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U4",
+  "yerler": "8.U4 8.U4",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18261,7 +18318,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U4",
+  "yerler": "8.U4 8.U4",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -18285,7 +18342,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U4",
+  "yerler": "8.U4 8.U4",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18297,7 +18354,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U4",
+  "yerler": "8.U4 8.U4",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18309,7 +18366,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U4",
+  "yerler": "8.U4 8.U4",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18321,7 +18378,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U4",
+  "yerler": "8.U4 8.U4",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -18333,7 +18390,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U4",
+  "yerler": "8.U4 8.U4",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -18345,7 +18402,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U5",
+  "yerler": "8.U5 8.U5",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18357,7 +18414,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U5",
+  "yerler": "8.U5 8.U5",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18369,7 +18426,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U5",
+  "yerler": "8.U5 8.U5",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18381,7 +18438,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U5",
+  "yerler": "8.U5 8.U5",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18393,7 +18450,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U5",
+  "yerler": "8.U5 8.U5",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18405,7 +18462,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U5",
+  "yerler": "8.U5 8.U5",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18417,7 +18474,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U5",
+  "yerler": "8.U5 8.U5",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18429,7 +18486,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U5",
+  "yerler": "8.U5 8.U5",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18441,7 +18498,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U5",
+  "yerler": "8.U5 8.U5",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18465,7 +18522,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U5",
+  "yerler": "8.U5 8.U5",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18477,7 +18534,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U5",
+  "yerler": "8.U5 8.U5",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18489,7 +18546,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U5",
+  "yerler": "8.U5 8.U5",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18501,7 +18558,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U5",
+  "yerler": "8.U5 8.U5",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -18525,7 +18582,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U5",
+  "yerler": "8.U5 8.U5",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -18537,7 +18594,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U5",
+  "yerler": "8.U5 8.U5",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18549,7 +18606,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U6",
+  "yerler": "8.U6 8.U6",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18561,7 +18618,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U6",
+  "yerler": "8.U6 8.U6",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18573,7 +18630,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U6",
+  "yerler": "8.U6 8.U6",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18585,7 +18642,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U6",
+  "yerler": "8.U6 8.U6",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18597,7 +18654,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U6",
+  "yerler": "8.U6 8.U6",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18609,7 +18666,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U6",
+  "yerler": "8.U6 8.U6",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18621,7 +18678,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U6",
+  "yerler": "8.U6 8.U6",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18633,7 +18690,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U6",
+  "yerler": "8.U6 8.U6",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18657,7 +18714,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U6",
+  "yerler": "8.U6 8.U6",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -18669,7 +18726,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U6 8.U7",
+  "yerler": "8.U6 8.U7 8.U2 8.U6 8.U7",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18681,7 +18738,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U6",
+  "yerler": "8.U6 8.U6",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18693,7 +18750,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U6",
+  "yerler": "8.U6 8.U6",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18717,7 +18774,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U6",
+  "yerler": "8.U6 8.U6",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18729,7 +18786,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U6",
+  "yerler": "8.U6 8.U6",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18741,7 +18798,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U6",
+  "yerler": "8.U6 8.U6",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -18753,7 +18810,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U7",
+  "yerler": "8.U7 8.U7",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18765,7 +18822,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U7",
+  "yerler": "8.U7 8.U7",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18777,7 +18834,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U7",
+  "yerler": "8.U7 8.U7",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18789,7 +18846,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U7",
+  "yerler": "8.U7 8.U7",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -18813,7 +18870,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U7",
+  "yerler": "8.U7 8.U7",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18837,7 +18894,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U7",
+  "yerler": "8.U7 8.U7",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -18849,7 +18906,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U7",
+  "yerler": "8.U7 8.U7",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18861,7 +18918,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U7",
+  "yerler": "8.U7 8.U7",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18873,7 +18930,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U7",
+  "yerler": "8.U7 8.U7",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -18885,7 +18942,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U8",
+  "yerler": "8.U8 8.U8",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -18897,7 +18954,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U8",
+  "yerler": "8.U8 8.U8",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -18909,7 +18966,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U8",
+  "yerler": "8.U8 8.U8",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -18921,7 +18978,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U8",
+  "yerler": "8.U8 8.U8",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -18933,7 +18990,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U8",
+  "yerler": "8.U8 8.U8",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -18981,7 +19038,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U8",
+  "yerler": "8.U8 8.U8",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -18993,7 +19050,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U8",
+  "yerler": "8.U8 8.U8",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -19005,7 +19062,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U8",
+  "yerler": "8.U8 8.U8",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -19017,7 +19074,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U8",
+  "yerler": "8.U8 8.U8",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -19041,7 +19098,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U8",
+  "yerler": "8.U8 8.U8",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -19065,7 +19122,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U9",
+  "yerler": "8.U9 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19077,7 +19134,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U9",
+  "yerler": "8.U9 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19089,7 +19146,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U9",
+  "yerler": "8.U9 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19101,7 +19158,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U9",
+  "yerler": "8.U9 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -19113,7 +19170,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U9",
+  "yerler": "8.U9 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19125,7 +19182,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U9",
+  "yerler": "8.U9 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19137,7 +19194,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U9",
+  "yerler": "8.U9 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19149,7 +19206,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U9",
+  "yerler": "8.U9 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19161,7 +19218,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U9",
+  "yerler": "8.U9 8.U3 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19173,7 +19230,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U9",
+  "yerler": "8.U9 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19185,7 +19242,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U9",
+  "yerler": "8.U9 8.U5 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19197,7 +19254,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U9",
+  "yerler": "8.U9 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19209,7 +19266,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U9",
+  "yerler": "8.U9 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19221,7 +19278,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U9",
+  "yerler": "8.U9 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": true,
@@ -19233,7 +19290,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U9",
+  "yerler": "8.U9 8.U9",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19245,7 +19302,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U10",
+  "yerler": "8.U10 8.U10",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19257,7 +19314,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U10",
+  "yerler": "8.U10 8.U10",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19269,7 +19326,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U10",
+  "yerler": "8.U10 8.U10",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19293,7 +19350,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U10",
+  "yerler": "8.U10 8.U10",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19305,7 +19362,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U10",
+  "yerler": "8.U10 8.U10",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19317,7 +19374,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U10",
+  "yerler": "8.U10 8.U10",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19329,7 +19386,7 @@
   "siniflar": [
    8
   ],
-  "yerler": "8.U10",
+  "yerler": "8.U10 8.U10",
   "kids": false,
   "lgs": true,
   "ifade": false,
@@ -19341,10 +19398,2182 @@
   "siniflar": [
    8
   ],
+  "yerler": "8.U10 8.U10",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Accept",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Best/ Close/ True friend",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Book fair",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Bowling alley",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Chit-chats",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Eat out",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Event",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Excuse",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Exhibition",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Faultless",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Instrument",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Phobie",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Receiver",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Response",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Science fiction",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Sender",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Text",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Thriller",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Tournament",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U1",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Archery",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Branch",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": "branch"
+ },
+ {
+  "en": "Camp fire",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Casual",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Compass",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2 8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Crunch",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Fizzy",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Folk",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Harmonic",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Pitch",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Push-up",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Reward",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Rope",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Self disciplined",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Sleeping bag",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Squad",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Torch",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2 8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": "torch"
+ },
+ {
+  "en": "Training",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Trekking",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Youth",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U2",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Crack",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U3",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": "crack"
+ },
+ {
+  "en": "Grill",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U3",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": "grill"
+ },
+ {
+  "en": "Kitchen tool",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U3",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Preparation",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U3",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Roast",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U3",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Roll",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U3",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": "roll"
+ },
+ {
+  "en": "Sprinkle",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U3",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Steam",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U3",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": "steam"
+ },
+ {
+  "en": "Whisk",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U3",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Addiction",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Appointment",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Bad line",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Break into",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Burglary",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Call",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Clarification",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Concentration",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Cons",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Conversation",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Customer service",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Disturb",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4 8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Evolve",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Get/ Keep in touch",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Hang on/up",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Incident",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Message",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Misunderstanding",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Notice",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Pros",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Quickness",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Security",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Staff",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U4",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Access",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Aim",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Click",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Communication",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Develop",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Ignore",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Instant",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Log on/in/off",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Notification",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Online",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Password",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Post",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Properly",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Recent",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Sign in/ up",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Subscriber",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Update",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Usage",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Varies from",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Vlogger",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Website",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U5",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Adventurous",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Aerobatic",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Courage",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Demonstration",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Dry-suit",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Gear",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": "gear"
+ },
+ {
+  "en": "Helmet",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Individually",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Instructor",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Life vest",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Magnificent",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Motor-racing",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Mysterious",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Paddle",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Risky",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Steering",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Wet-suit",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Wrist guards",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U6",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Accommodation",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Authentic",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Bamboo bungalow",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Boutique hotel",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Bridge",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": "bridge"
+ },
+ {
+  "en": "Budget",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": "budget"
+ },
+ {
+  "en": "Caravansary",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Country side",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Delight",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Journey",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Landmark",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Monument",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Mosque",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Preserve",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Prophet",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Province",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Refresh",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Region",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Settlement",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Shrine",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Souvenir",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Tomb",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U7",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Dust the shelves",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Duty",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Feature",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Household",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Janitor",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Keep / break promises",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Load / empty the dishwasher",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Mop",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": "mop"
+ },
+ {
+  "en": "Moral",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Neat",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Pay the bill",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Periodically",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Slipper",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Sweep",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Take out the garbage/ trash",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Wash/ dry the dishes",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Water the plant",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U8",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Achievement",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Biochemist",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Catgut",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Diagnose",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Disease",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Evaluate",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Examine",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Find out",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Paraplegic",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Portable",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Rabies vaccine",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Researcher",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Smallpox vaccine",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Solar panel",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Speciality",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Tyre",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Well-equipped",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U9",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Cause",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
   "yerler": "8.U10",
   "kids": false,
   "lgs": true,
   "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Decrease",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U10",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Destructive",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U10",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Disappear",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U10",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Erosion",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U10",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Glacier",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U10",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Heat up",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U10",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Heat-trapping gases",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U10",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Land slide",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U10",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
+  "kartta": ""
+ },
+ {
+  "en": "Produce",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U10",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Provide",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U10",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Rainforest",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U10",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Rechargeable",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U10",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Treatment",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U10",
+  "kids": false,
+  "lgs": true,
+  "ifade": false,
+  "kartta": ""
+ },
+ {
+  "en": "Water shortage",
+  "tr": "",
+  "siniflar": [
+   8
+  ],
+  "yerler": "8.U10",
+  "kids": false,
+  "lgs": true,
+  "ifade": true,
   "kartta": ""
  }
 ]
