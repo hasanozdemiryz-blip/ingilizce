@@ -2409,6 +2409,19 @@ Klein 4'er kart), kullanıcı onayıyla.
   rakiplerde yok), Kids sınıf ve konu sayfaları + yazdırılabilir kartlar,
   görsel site haritası, ağaç şeklinde iç bağlantı, öğretmenler dağıtım kanalı.
   Hepsi aynı kelime verisinden `tools/site.mjs` ile üretilir.
+- **Search Console (18 Ekim, son 3 ay):** dizinde 32 sayfa (5 dışarıda: 3
+  yönlendirme — normal; 2 "keşfedildi"). 410 gösterim, **3 tıklama** (hepsi ana
+  sayfa), ortalama konum 11,6 (2. sayfa başı); %80 mobil. Gösterimin çoğu kelime
+  sayfalarında: `boat` 128 ("boat ne demek" 104), `door` 49, `full` 34, `salt`
+  24; blog "Türkçeye benzeyen kelimeler" 51. Kelime sayfaları **0 tıklama**:
+  "X ne demek" aramasını Google kendi çeviri kutusuyla yanıtlıyor (tıklamasız
+  arama) ve sayfa ince (~100 kelime). Sonuç: kelime sayfaları zenginleşmeli
+  (Türkçe harfle okunuş, İngilizce örnek cümle + çevirisi, ünite/konu bağı, mini
+  test, görsel) ama asıl hedef Google'ın kutuyla cevaplayamadığı aramalar:
+  "8. sınıf 1. ünite kelimeleri", "İngilizce hayvan isimleri resimli",
+  "Türkçeye benzeyen İngilizce kelimeler". Kullanıcı ana sayfa, `/kelimeler/`,
+  `/blog/` için dizine ekleme istedi (18 Ekim). Favicon tüm alan adı için tek;
+  kelime sayfaları da yeniden taranınca gelir.
 
 ## Sırada
 
