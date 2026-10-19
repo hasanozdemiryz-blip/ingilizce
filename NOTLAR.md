@@ -2547,7 +2547,7 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
 - **Çalışma dalı yine `main`** (20 Ekim'de `uc-bolum` birleşti ve yayına çıktı:
   uygulama hafizada.com/ingilizce/, site hafizada.com). Başka cihazda:
   `git checkout main && git pull` (site deposunda `git pull`).
-- **Sıradaki iş (19 Ekim): test turu** (kullanıcı giriş yapar, Claude Chrome'dan test eder; üst menü bozuklukları), sonra **Aşama 7a — LGS havuzunu büyüt** — bkz. NEREDE KALDIK'ın sonu ve "2026-10-19 — LGS havuz analizi".
+- **Sıradaki iş (19 Ekim): test turu** (kullanıcı giriş yapar, Claude Chrome'dan test eder; üst menü bozuklukları), sonra **PLAN v2** (onay bekliyor) — bkz. NEREDE KALDIK'ın sonu ve "2026-10-19 — LGS havuz analizi".
 - **Önce aşağıdaki KARARLAR'ı oku.** Bir şey önermeden önce onlara bak; çelişen
   öneri yapma. Yeni istekte önce tek cümleyle "anladığım şu" yaz.
 - **Şu anki adım:** "NEREDE KALDIK" (bu bölümün sonunda) — her aşama bitince güncellenir.
