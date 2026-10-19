@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css';
 import { olcumHazirla, olay } from './analitik';
+import { kaynakVerisi } from './kaynak';
 import { profilSagla } from './db';
 import { geriHazirla } from './geri';
 import { hatirlatmaHazirla } from './reminder';
@@ -53,7 +54,8 @@ void profilSagla().then((state) => {
     disarida hicbir seye baglamiyor (bkz. analitik.ts).
   */
   olcumHazirla(state.olcum !== false, state.profil?.id);
-  olay('uygulama_acildi');
+  // Nereden geldi (site ilk temasi + bu acilis): bkz. kaynak.ts
+  olay('uygulama_acildi', kaynakVerisi());
 });
 
 // Donanim geri tusu — yalnizca native kabukta (bkz. geri.ts)

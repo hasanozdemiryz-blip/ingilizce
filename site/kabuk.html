@@ -102,6 +102,37 @@ __OGREN_MENU__
 
 <script>
 (function () {
+  /*
+    ILK TEMAS (19 Ekim, PLAN v2 B): kisi siteye ilk nereden geldi — Google,
+    Instagram, reklam (utm). Bir kez yazilir; platform (src/kaynak.ts) acilista
+    olcum olayina ekler. Kisisel veri yok: yalniz sitenin adi ve utm etiketleri.
+    Siniflama src/kaynak.ts kaynakSinifi ile ayni tutulmali.
+  */
+  try {
+    if (!localStorage.getItem('hafizada-kaynak')) {
+      var q = new URLSearchParams(location.search);
+      var rh = '';
+      try { rh = document.referrer ? new URL(document.referrer).hostname.toLowerCase().replace(/^www\./, '') : ''; } catch (e) {}
+      var u = q.get('utm_source');
+      var k = u ? u.toLowerCase().slice(0, 40)
+        : !rh ? 'dogrudan'
+        : /(^|\.)hafizada\.com$/.test(rh) ? 'site'
+        : /google\./.test(rh) ? 'google'
+        : /bing\.|yandex\.|duckduckgo\./.test(rh) ? 'arama'
+        : /instagram\.com$/.test(rh) ? 'instagram'
+        : /facebook\.com$|fb\.me$/.test(rh) ? 'facebook'
+        : /(^|\.)t\.co$|twitter\.com$|x\.com$/.test(rh) ? 'x'
+        : /youtube\.com$|youtu\.be$/.test(rh) ? 'youtube'
+        : /tiktok\.com$/.test(rh) ? 'tiktok'
+        : /whatsapp\./.test(rh) ? 'whatsapp'
+        : rh.slice(0, 60);
+      var ilk = { k: k, s: location.pathname, t: new Date().toISOString().slice(0, 10) };
+      if (q.get('utm_medium')) ilk.m = q.get('utm_medium').slice(0, 40);
+      if (q.get('utm_campaign')) ilk.c = q.get('utm_campaign').slice(0, 60);
+      localStorage.setItem('hafizada-kaynak', JSON.stringify(ilk));
+    }
+  } catch (e) {}
+
   // Telefon menusu
   var dugme = document.querySelector('.menu-dugme');
   var menu = document.getElementById('mobil-menu');
@@ -144,13 +175,25 @@ __OGREN_MENU__
     var en = document.documentElement.lang === 'en';
     var oturum = JSON.parse(localStorage.getItem(anahtar));
     var m = (oturum && oturum.user && oturum.user.user_metadata) || {};
-    var ad = String(m.ad || m.full_name || m.name || '').split(' ')[0];
+    /*
+      Girisliye tek dugme (19 Ekim): eskiden "Derslerime don · Ad" + "Devam et"
+      ikisi de platforma gidiyordu, LGS'nin 6 maddelik menusunu iki satira
+      kiriyordu. Masaustunde ustteki giris baglantisi gizlenir (stil.css .girisli).
+    */
+    document.documentElement.classList.add('girisli');
+    var don = en ? 'Back to lessons' : 'Derslerime dön';
     document.querySelectorAll('[data-giris]').forEach(function (a) {
       a.href = '/ingilizce/';
-      var don = en ? 'Back to lessons' : 'Derslerime dön';
-      a.textContent = ad ? don + ' · ' + ad : don;
+      a.textContent = don;
     });
-    document.querySelectorAll('[data-basla]').forEach(function (a) {
+    // Ustteki giris baglantisi yalniz telefonda gorunuyor; 375 px'te kisa ad sigiyor.
+    document.querySelectorAll('header .ust-giris').forEach(function (a) {
+      a.textContent = en ? 'My lessons' : 'Derslerim';
+    });
+    document.querySelectorAll('header [data-basla]').forEach(function (a) {
+      a.textContent = don;
+    });
+    document.querySelectorAll('[data-basla]:not(header [data-basla])').forEach(function (a) {
       a.textContent = en ? 'Continue' : 'Devam et';
     });
   } catch (e) {}

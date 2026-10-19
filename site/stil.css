@@ -73,6 +73,32 @@ header .kap { display: flex; align-items: center; gap: 18px; padding-block: 12px
 .marka .alt { display: block; font-size: .6rem; font-weight: 800; letter-spacing: .34em; color: #8795ae; text-transform: uppercase; margin-top: -2px; line-height: 1; }
 nav.baglar { display: flex; gap: 22px; margin-left: 14px; font-weight: 700; font-size: .94rem; color: #cbd5e5; }
 nav.baglar a:hover { color: #fff; }
+/* Menu yazisi kirilmasin ("En onemli / 25", "Devam / et" — 19 Ekim). */
+nav.baglar a, .ust-giris, header .btn, .marka .alt { white-space: nowrap; }
+.girisli .ust-sag .ust-giris { display: none; }
+/* LGS menusu 6 madde: 980 px altinda menu dugmesine gec (900'de tasiyordu). */
+@media (max-width: 980px) {
+  nav.baglar { display: none; }
+  .menu-dugme { display: inline-block; }
+}
+/* 320 px telefon: logo, giris ve menu dugmesi sigsin. */
+@media (max-width: 360px) {
+  header .kap { padding-inline: 12px; gap: 8px; }
+  .marka img { width: 30px; height: 30px; }
+  .marka .ad { font-size: 1.02rem; }
+  .marka .alt { letter-spacing: .1em; }
+  .ust-sag { gap: 6px; }
+  .ust-sag .ust-giris, .girisli .ust-sag .ust-giris { padding: 5px 10px; font-size: .82rem; }
+  .menu-dugme { padding: 6px 10px; font-size: .82rem; }
+}
+/* Masaustu ile telefon arasinda sikistir. */
+@media (max-width: 1120px) and (min-width: 981px) {
+  nav.baglar { gap: 14px; margin-left: 4px; font-size: .88rem; }
+  header .kap { gap: 12px; }
+  .ust-sag { gap: 10px; }
+  .ust-sag .dil svg { display: none; }
+  header .ust-cta .btn { padding: 9px 16px; font-size: .9rem; }
+}
 
 .btn { display: inline-block; font-family: var(--d); font-weight: 800; border-radius: 14px; border: 2px solid var(--lacivert); box-shadow: var(--sert-k); padding: 12px 26px; font-size: .98rem; transition: transform .08s, box-shadow .08s; cursor: pointer; }
 .btn:active { transform: translate(3px,3px); box-shadow: 0 0 0 var(--lacivert); }
@@ -280,7 +306,7 @@ footer a:hover { color: #fff; }
   .menu-dugme { display: inline-block; }
   /* Telefonda ustte "Giris yap" (7 Ekim): "Hemen basla" zaten sayfada asagida */
   .ust-sag .dil, .ust-sag .ust-cta { display: none; }
-  .ust-sag .ust-giris { color: #fff; border: 2px solid #cbd5e5; border-radius: 999px; padding: 6px 14px; font-size: .9rem; }
+  .ust-sag .ust-giris, .girisli .ust-sag .ust-giris { display: inline-block; color: #fff; border: 2px solid #cbd5e5; border-radius: 999px; padding: 6px 14px; font-size: .9rem; }
   .ust-sag { gap: 10px; }
   header .kap { gap: 10px; }
   .ust-cta .btn { padding: 8px 14px; font-size: .9rem; }

@@ -2827,6 +2827,29 @@ satış soruları (I).
   Kullanıcı Chrome'da kendi hesabıyla giriş yapar, Claude o oturumdan her şeyi
   tıklayarak test eder (375 px dahil). **Üst menüde bozukluklar var** (kullanıcı
   gördü, ayrıntı testte) → düzelt. Tarama için ayrı deneme hesabı.
+- [x] **A. Test turu (19 Ekim, kullanıcının hesabıyla canlıda + yerelde üyeliksiz):**
+  - Site üst menü: LGS'de 6 madde iki satıra kırılıyordu ("En önemli / 25",
+    "Devam / et"), girişlide "Derslerime dön · Ad" + "Devam et" ikisi de platforma
+    gidiyordu. Düzeltme (`site/stil.css`, `site/kabuk.html`): yazı kırılmaz,
+    1120–981 px sıkışık, ≤980 px menü düğmesi, ≤360 px küçük logo; girişliye tek
+    "Derslerime dön" (telefonda "Derslerim"). Ölçüm: 9 sayfa × 12 genişlik
+    (320–1280) × giriş/girişsiz, başlık ve sayfa taşması 0 (yalnız Çocuk 320 px
+    girişli başlık içinde 7 px → harf aralığı daraltıldı).
+  - Telefon menüsü açılıp kapanıyor, logo bulunduğu sekmeye gidiyor, bağlantılar doğru.
+  - Platform: Genel ↔ LGS, ünite sayfası (Kelimeler/Kalıplar/Diyaloglar/Test),
+    test geri bildirimi, sesler (dosya → 2. basış 0,75×, diyalog dosyası),
+    Egzersiz/İlerleme/Ayarlar, 375 px — sorun yok, konsol temiz. Site →
+    platform `?basla=1&bolum=lgs&unite=1`: karşılama LGS kartıyla, yıl sorusu,
+    ünite 1 seçili, ders akışı (kart, soru, eşleştirme) çalışıyor.
+  - Ünite listesinde öğrenilmemiş kelimenin resim kutusu boş ve bozuk görünüyordu
+    (bilerek gizli) → içine "?" (`Unite.tsx`).
+  - Denenmedi: 7. basamak (aralıklı tekrar ister), tarama (deneme hesabı), başka cihaz senkronu.
+- [x] **B. Ölçüm (19 Ekim):** site ilk teması `hafizada-kaynak` (kabuk.html: utm
+  ya da referrer → google/instagram/…; ilk sayfa), platform `uygulama_acildi`
+  verisinde `simdi`, `ilk`, `ilk_sayfa`, `kampanya`, `ortam`, `dokunmatik`
+  (`src/kaynak.ts`, test `kaynak.test.ts`). Gizlilik ve KVKK metnine eklendi.
+  Reklam bağlantıları `?utm_source=instagram&utm_medium=reklam&utm_campaign=…` ile verilmeli.
+  Sorgu: `select veri->>'ilk', count(distinct kimlik) from olaylar where ad='uygulama_acildi' group by 1`.
 - [ ] PLAN v2 (onaylı 19 Ekim): A test → B ölçüm → C LGS metinleri → D görsel/ses →
   E platform (bölüm kilidi, LGS teması) → F site → G yayın → I satış. (H çıktı.) Araçlar hazır: `tools/mufredat/izgara-*.mjs`, `tools/ses/*`,
   kurallar `tools/kanca-kurallari.md`.

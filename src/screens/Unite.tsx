@@ -130,7 +130,13 @@ function Kelimeler({ no, progress, onCalis }: { no: number; progress: Progress[]
               {c.image && tamam ? (
                 <img src={c.image} alt="" loading="lazy" className="h-10 w-[3.3rem] shrink-0 rounded-lg object-cover" />
               ) : (
-                <span className="h-10 w-[3.3rem] shrink-0 rounded-lg bg-sunken" />
+                // Bos kutu bozuk gorunuyordu (19 Ekim testi): resmin derste acilacagini "?" soyluyor
+                <span
+                  aria-hidden="true"
+                  className="grid h-10 w-[3.3rem] shrink-0 place-items-center rounded-lg bg-sunken text-sm font-extrabold text-ink-faint"
+                >
+                  ?
+                </span>
               )}
               <span className="min-w-0 flex-1">
                 <span className="word block font-extrabold leading-tight">{c.en}</span>
