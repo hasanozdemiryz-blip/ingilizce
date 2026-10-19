@@ -1,0 +1,61 @@
+{
+ "unite": 4,
+ "ad": "On the Phone",
+ "konu": "Telefonda konuşmak: birini istemek, beklemek, mesaj bırakmak, randevu almak",
+ "kaliplar": [
+  { "en": "Hello, can I speak to Mr Yılmaz, please?", "tr": "Merhaba, Bay Yılmaz'la görüşebilir miyim lütfen?", "not": "Birini istemek" },
+  { "en": "Who's calling, please?", "tr": "Kim arıyor acaba?", "not": "Arayanı sormak" },
+  { "en": "This is Elif speaking.", "tr": "Ben Elif.", "not": "Telefonda kendini tanıtmak" },
+  { "en": "Hold on a minute, please. / Hang on, please.", "tr": "Bir dakika bekler misiniz lütfen.", "not": "Beklemesini istemek" },
+  { "en": "I'll put you through.", "tr": "Sizi bağlıyorum.", "not": "Bağlamak" },
+  { "en": "Sorry, he isn't available right now.", "tr": "Üzgünüm, şu anda müsait değil.", "not": "Müsait değil" },
+  { "en": "Can I leave a message?", "tr": "Mesaj bırakabilir miyim?", "not": "Mesaj bırakmak" },
+  { "en": "Can you ask her to call me back?", "tr": "Beni geri aramasını söyler misiniz?", "not": "Geri arama" },
+  { "en": "The line is engaged. / It's a bad line.", "tr": "Hat meşgul. / Hat kötü, ses gelmiyor.", "not": "Hat sorunları" },
+  { "en": "Could you speak up, please? / Could you repeat that?", "tr": "Biraz yüksek sesle konuşur musunuz? / Tekrar eder misiniz?", "not": "Açıklama istemek" },
+  { "en": "I'd like to make an appointment.", "tr": "Randevu almak istiyorum.", "not": "Randevu" },
+  { "en": "Sorry, you have the wrong number.", "tr": "Üzgünüm, yanlış numara.", "not": "Yanlış numara" }
+ ],
+ "diyaloglar": [
+  {
+   "baslik": "Arkadaşı aramak",
+   "satirlar": [
+    { "kim": "Kadın", "cinsiyet": "k", "en": "Hello?", "tr": "Alo?" },
+    { "kim": "Kerem", "cinsiyet": "e", "en": "Hello, this is Kerem. Can I speak to Ayşe, please?", "tr": "Merhaba, ben Kerem. Ayşe'yle konuşabilir miyim lütfen?" },
+    { "kim": "Kadın", "cinsiyet": "k", "en": "Sorry, she isn't at home. Can I take a message?", "tr": "Üzgünüm, evde değil. Mesaj almamı ister misin?" },
+    { "kim": "Kerem", "cinsiyet": "e", "en": "Yes, please. Can you ask her to call me back? It's about our project.", "tr": "Evet lütfen. Beni geri aramasını söyler misiniz? Projemizle ilgili." },
+    { "kim": "Kadın", "cinsiyet": "k", "en": "Of course. I'll tell her.", "tr": "Tabii. Ona söylerim." }
+   ]
+  },
+  {
+   "baslik": "Randevu almak",
+   "satirlar": [
+    { "kim": "Sekreter", "cinsiyet": "k", "en": "Good morning, City Hospital. How can I help you?", "tr": "Günaydın, Şehir Hastanesi. Nasıl yardımcı olabilirim?" },
+    { "kim": "Emir", "cinsiyet": "e", "en": "Good morning. I'd like to make an appointment with Dr Kaya.", "tr": "Günaydın. Dr. Kaya'dan randevu almak istiyorum." },
+    { "kim": "Sekreter", "cinsiyet": "k", "en": "Hold on, please... She is available on Tuesday at two o'clock.", "tr": "Bekleyin lütfen... Salı saat ikide müsait." },
+    { "kim": "Emir", "cinsiyet": "e", "en": "That's fine. Thank you.", "tr": "Uygun. Teşekkürler." }
+   ]
+  },
+  {
+   "baslik": "Kötü hat",
+   "satirlar": [
+    { "kim": "Defne", "cinsiyet": "k", "en": "Hi Can! Are we meeting at five?", "tr": "Selam Can! Beşte mi buluşuyoruz?" },
+    { "kim": "Can", "cinsiyet": "e", "en": "Sorry, it's a bad line. Could you speak up, please?", "tr": "Pardon, hat kötü. Biraz yüksek sesle konuşur musun?" },
+    { "kim": "Defne", "cinsiyet": "k", "en": "ARE WE MEETING AT FIVE?", "tr": "BEŞTE Mİ BULUŞUYORUZ?" },
+    { "kim": "Can", "cinsiyet": "e", "en": "Yes! Five o'clock in front of the library. I'll text you the address.", "tr": "Evet! Saat beşte kütüphanenin önünde. Adresi mesajla atarım." }
+   ]
+  }
+ ],
+ "test": [
+  { "soru": "A: Can I speak to Mrs Demir, please?\nB: ______\nA: This is Ali Kaya.", "secenekler": ["Who's calling, please?", "Can I leave a message?", "She is busy.", "Wrong number."], "dogru": 0, "aciklama": "A kendini tanıtıyor; demek ki önce kimin aradığı soruldu." },
+  { "soru": "Sorry, the line is ______. Please call again later.", "secenekler": ["engaged", "polite", "available", "connected"], "dogru": 0, "aciklama": "Hat meşgul: the line is engaged." },
+  { "soru": "Which one do you say when you want somebody to wait?", "secenekler": ["Hang up, please.", "Hold on, please.", "Call me back.", "Pick up the phone."], "dogru": 1, "aciklama": "Hold on / hang on = beklemek." },
+  { "soru": "Mr Can is in a meeting now. Can I ______?", "secenekler": ["make an appointment", "take a message", "dial a number", "hang up"], "dogru": 1, "aciklama": "Kişi müsait değilse mesaj alınır." },
+  { "soru": "A: Could you put me through to the manager?\nB: ______", "secenekler": ["Sure, one moment please.", "It's a bad line.", "I'd like a reservation.", "Goodbye."], "dogru": 0, "aciklama": "Bağlama isteğine \"Elbette, bir dakika\" diye cevap verilir." },
+  { "soru": "Elif can't hear her friend well. What does she say?", "secenekler": ["Can I leave a message?", "Could you speak up, please?", "Who's calling?", "I'll put you through."], "dogru": 1, "aciklama": "Duyamayan kişi daha yüksek konuşmasını ister." },
+  { "soru": "When you finish a phone call, you ______.", "secenekler": ["pick up", "hang up", "hold on", "get back"], "dogru": 1, "aciklama": "hang up = telefonu kapatmak." },
+  { "soru": "Read the message.\n\"Mum, Aunt Selin called at 3 p.m. She can't come to dinner tonight because she is ill. She will call you back tomorrow. – Zeynep\"\nWhy can't Aunt Selin come?", "secenekler": ["She is busy.", "She is ill.", "She is on holiday.", "She has a meeting."], "dogru": 1, "aciklama": "\"because she is ill\"" },
+  { "soru": "A: Hello, is that Kerem?\nB: No, I'm sorry. You have the ______.", "secenekler": ["wrong number", "bad line", "extension", "reservation"], "dogru": 0, "aciklama": "Yanlış kişiyi arayan yanlış numarayı çevirmiştir." },
+  { "soru": "I'd like to make a ______ for two people at your restaurant for Friday night.", "secenekler": ["reservation", "message", "contact", "burglary"], "dogru": 0, "aciklama": "Restoranda yer ayırtmak: make a reservation." }
+ ]
+}

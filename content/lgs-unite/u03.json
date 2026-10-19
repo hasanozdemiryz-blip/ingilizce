@@ -1,0 +1,59 @@
+{
+ "unite": 3,
+ "ad": "In the Kitchen",
+ "konu": "Bir yemeğin yapılışını sırayla anlatmak, malzeme ve tat bildirmek",
+ "kaliplar": [
+  { "en": "First, chop the onions.", "tr": "Önce soğanları doğra.", "not": "Sıralama: First" },
+  { "en": "Then, add some salt and pepper.", "tr": "Sonra biraz tuz ve biber ekle.", "not": "Sıralama: Then" },
+  { "en": "Next, pour the milk into the bowl.", "tr": "Ardından sütü kâseye dök.", "not": "Sıralama: Next" },
+  { "en": "After that, mix them well.", "tr": "Ondan sonra onları iyice karıştır.", "not": "Sıralama: After that" },
+  { "en": "Finally, bake it for 30 minutes.", "tr": "Son olarak 30 dakika fırınla.", "not": "Sıralama: Finally" },
+  { "en": "You need flour, eggs and sugar for this recipe.", "tr": "Bu tarif için un, yumurta ve şeker gerekir.", "not": "Malzeme söylemek" },
+  { "en": "How do you make pancakes?", "tr": "Pankek nasıl yapılır?", "not": "Tarif sormak" },
+  { "en": "It tastes salty. / It smells delicious.", "tr": "Tadı tuzlu. / Kokusu nefis.", "not": "Tat ve koku" },
+  { "en": "Boil the water and put the pasta in the saucepan.", "tr": "Suyu kaynat ve makarnayı tencereye koy.", "not": "Emir kipi" },
+  { "en": "Turkish cuisine is famous for its kebabs and desserts.", "tr": "Türk mutfağı kebapları ve tatlılarıyla ünlüdür.", "not": "be famous for" }
+ ],
+ "diyaloglar": [
+  {
+   "baslik": "Pankek tarifi",
+   "satirlar": [
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "Dad, how do you make pancakes?", "tr": "Baba, pankek nasıl yapılır?" },
+    { "kim": "Baba", "cinsiyet": "e", "en": "It's easy! First, mix flour, eggs and milk in a bowl.", "tr": "Kolay! Önce bir kâsede un, yumurta ve sütü karıştır." },
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "Then?", "tr": "Sonra?" },
+    { "kim": "Baba", "cinsiyet": "e", "en": "Then, heat a pan and pour a little of the mixture into it. After a minute, turn it over.", "tr": "Sonra bir tava ısıt ve karışımdan biraz dök. Bir dakika sonra çevir." },
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "And finally, I spread some honey on it!", "tr": "Ve son olarak üstüne biraz bal sürerim!" }
+   ]
+  },
+  {
+   "baslik": "Çorbanın tadı",
+   "satirlar": [
+    { "kim": "Emir", "cinsiyet": "e", "en": "Mum, this soup tastes a bit salty.", "tr": "Anne, bu çorbanın tadı biraz tuzlu." },
+    { "kim": "Anne", "cinsiyet": "k", "en": "Oh, sorry. Add some water and boil it again.", "tr": "Ah, pardon. Biraz su ekle ve tekrar kaynat." },
+    { "kim": "Emir", "cinsiyet": "e", "en": "OK. Can I sprinkle some mint on it?", "tr": "Tamam. Üstüne biraz nane serpebilir miyim?" },
+    { "kim": "Anne", "cinsiyet": "k", "en": "Sure. Now it smells delicious!", "tr": "Tabii. Şimdi kokusu nefis!" }
+   ]
+  },
+  {
+   "baslik": "Yemek yarışması",
+   "satirlar": [
+    { "kim": "Ayşe", "cinsiyet": "k", "en": "What are you cooking for the school competition?", "tr": "Okul yarışması için ne pişiriyorsun?" },
+    { "kim": "Kerem", "cinsiyet": "e", "en": "Roast chicken with mashed potatoes. What about you?", "tr": "Patates püreli fırın tavuk. Ya sen?" },
+    { "kim": "Ayşe", "cinsiyet": "k", "en": "A dessert. I need flour, sugar, butter and a whisk.", "tr": "Bir tatlı. Una, şekere, tereyağına ve bir çırpma telini ihtiyacım var." },
+    { "kim": "Kerem", "cinsiyet": "e", "en": "Good luck! I'm sure it will be tasty.", "tr": "Bol şans! Eminim lezzetli olacak." }
+   ]
+  }
+ ],
+ "test": [
+  { "soru": "______, chop the tomatoes. Then, put them in a bowl.", "secenekler": ["Finally", "First", "After that", "Next"], "dogru": 1, "aciklama": "Sıranın başında \"First\" kullanılır." },
+  { "soru": "Put the cake into the ______ and bake it for 40 minutes.", "secenekler": ["oven", "grater", "spoon", "recipe"], "dogru": 0, "aciklama": "Kek fırında (oven) pişirilir." },
+  { "soru": "Which one is NOT a kitchen tool?", "secenekler": ["whisk", "grater", "saucepan", "ingredient"], "dogru": 3, "aciklama": "ingredient = malzeme; bir mutfak aleti değildir." },
+  { "soru": "Can: This curry has a lot of chilli in it.\nAyşe: Yes, it's very ______.", "secenekler": ["sweet", "spicy", "salty", "sour"], "dogru": 1, "aciklama": "Çok acı biber = acılı: spicy." },
+  { "soru": "______ the water until it is very hot, then add the pasta.", "secenekler": ["Boil", "Grate", "Sprinkle", "Spread"], "dogru": 0, "aciklama": "Suyu kaynatmak: boil the water." },
+  { "soru": "Which order is correct for making tea?\n1. Pour the tea into a glass.\n2. Boil the water.\n3. Put the tea leaves in the teapot.", "secenekler": ["1-2-3", "2-3-1", "3-1-2", "2-1-3"], "dogru": 1, "aciklama": "Önce su kaynar, sonra çay demlenir, en son bardağa dökülür." },
+  { "soru": "Zeynep: How do you make a sandwich?\nEmir: ______", "secenekler": ["It's delicious.", "I like sandwiches.", "First, spread butter on the bread.", "I ate it yesterday."], "dogru": 2, "aciklama": "Yapılış sorusuna adım söyleyerek cevap verilir." },
+  { "soru": "Read the recipe.\n\"Ingredients: 2 eggs, a cup of flour, a cup of milk. First, mix the eggs and milk. Next, add the flour. Finally, cook the mixture in a pan.\"\nWhat do you add after mixing the eggs and milk?", "secenekler": ["sugar", "flour", "salt", "water"], "dogru": 1, "aciklama": "\"Next, add the flour.\"" },
+  { "soru": "Turkish ______ has many delicious dishes like kebab and baklava.", "secenekler": ["cuisine", "dough", "pan", "mash"], "dogru": 0, "aciklama": "cuisine = mutfak (bir ülkenin yemek kültürü)." },
+  { "soru": "Kerem: Can you ______ some cheese on the pizza?", "secenekler": ["pour", "grate", "boil", "roast"], "dogru": 1, "aciklama": "Peynir rendelenir: grate cheese." }
+ ]
+}

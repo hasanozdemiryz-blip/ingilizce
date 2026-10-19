@@ -2634,6 +2634,22 @@ Toplam kredi ~32.400 (bakiye ~81.220). Planda olmayan: Çocuk'un tamamı, ödeme
 - LGS deneme görselleri `gorseller/lgs/` (survive, delicious, refuse — onaylı
   kalitede; device yeniden). `gorseller/` depoda değil; başka cihazda yoksa
   yeniden üretilecek (Magnific Personal projesinde de duruyorlar: 19 Ekim).
+- [~] **Aşama 3 — LGS görselleri (19–20 Ekim gece):** plan `izgara-plan.json`
+  (96 ızgara, 382 görsel + rob). Akış: ızgara başına `images_generate`
+  (ayar ve prompt `izgara-plan.mjs`) → `node tools/mufredat/izgara-isle.mjs
+  <no> <creationId> <url> [atla-id]` → `kontrol-sayfasi.mjs` ile göz kontrolü
+  → `lgs-webp.mjs` → `src/assets/cards-lgs/*.webp` (depoda).
+  - [x] 1–95. ızgara üretildi (kayıt: `tools/mufredat/gorsel-log.txt`, creation
+        id'leriyle; başka cihazda Magnific'ten yeniden indirilebilir). rob yeni
+        görseliyle Genel'de (400/400).
+  - [ ] 96. ızgara (waste, water-shortage + 2 yeniden çizim) ve yeniden çizim
+        ızgaraları. **Yeniden çizilecekler** (`gorseller/yeniden.txt`): awesome,
+        best-friend (alttan kesik), flour (pakette yazı), dough, memo,
+        notification, password, all-inclusive (kenara taşıyor).
+  - Dersler: model bazen ince gri çerçeve bırakıyor → `izgara-bol.mjs` her
+    kenardan 8 px tıraşlıyor; CDN yavaşlarsa `izgara-isle.mjs` 5 dk zaman aşımı
+    + 4 deneme. Ambalaj/etiket yazısı için iskelete "packages, labels" eklendi.
+  - Kredi: 95 ızgara × 75 ≈ 7.125 (tahmin 7.200 + yeniden deneme; sınır içinde).
 
 
 

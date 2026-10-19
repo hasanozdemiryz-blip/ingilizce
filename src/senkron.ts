@@ -144,6 +144,9 @@ export function birlestir(a: Paket, b: Paket): Paket {
     reminderHour: t.reminderHour,
     reminderMinute: t.reminderMinute,
     olcum: t.olcum,
+    lgsYil: t.lgsYil,
+    lgsUnite: t.lgsUnite,
+    taramaGoruldu: t.taramaGoruldu,
     tercihDegisti: t.tercihDegisti,
   };
   // Tanimsiz alan karsi tarafin degerini silmesin.

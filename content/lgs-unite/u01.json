@@ -1,0 +1,61 @@
+{
+ "unite": 1,
+ "ad": "Friendship",
+ "konu": "Davet etmek, daveti kabul etmek ve reddetmek, özür dileyip sebep söylemek, arkadaşı tarif etmek",
+ "kaliplar": [
+  { "en": "Would you like to come to my party?", "tr": "Partime gelmek ister misin?", "not": "Davet etmek" },
+  { "en": "Do you want to go for a walk with me?", "tr": "Benimle yürüyüşe çıkmak ister misin?", "not": "Davet etmek" },
+  { "en": "How about going to the book fair on Saturday?", "tr": "Cumartesi kitap fuarına gitmeye ne dersin?", "not": "How about + fiil-ing" },
+  { "en": "Sure, I'd love to!", "tr": "Tabii, çok isterim!", "not": "Kabul etmek" },
+  { "en": "That sounds great. What time?", "tr": "Harika görünüyor. Saat kaçta?", "not": "Kabul etmek" },
+  { "en": "Sorry, I can't. I have to study for my exam.", "tr": "Üzgünüm, gelemem. Sınavıma çalışmam gerekiyor.", "not": "Reddetmek + sebep" },
+  { "en": "I'm afraid I can't make it. I'm visiting my grandparents.", "tr": "Korkarım yetişemem. Büyükannemlere gidiyorum.", "not": "Kibarca reddetmek" },
+  { "en": "Thanks for inviting me, but I'm busy that day.", "tr": "Davet ettiğin için teşekkürler ama o gün meşgulüm.", "not": "Teşekkür + ret" },
+  { "en": "A true friend is someone who keeps your secrets.", "tr": "Gerçek arkadaş sırlarını saklayan kişidir.", "not": "Arkadaşı tanımlamak (someone who)" },
+  { "en": "I can always count on her.", "tr": "Ona her zaman güvenebilirim.", "not": "Güvenmek" },
+  { "en": "We get on well with each other.", "tr": "Birbirimizle iyi anlaşırız.", "not": "İyi anlaşmak" },
+  { "en": "He is honest and supportive, so I trust him.", "tr": "O dürüst ve destekleyicidir, bu yüzden ona güvenirim.", "not": "Sıfatla tarif + so" }
+ ],
+ "diyaloglar": [
+  {
+   "baslik": "Kitap fuarına davet",
+   "satirlar": [
+    { "kim": "Elif", "cinsiyet": "k", "en": "Hi Kerem! There is a book fair at the culture centre this Saturday. Would you like to come with me?", "tr": "Selam Kerem! Bu cumartesi kültür merkezinde kitap fuarı var. Benimle gelmek ister misin?" },
+    { "kim": "Kerem", "cinsiyet": "e", "en": "Sure, I'd love to! I want to buy a science fiction novel.", "tr": "Tabii, çok isterim! Bir bilim kurgu romanı almak istiyorum." },
+    { "kim": "Elif", "cinsiyet": "k", "en": "Great! Let's meet at the bus stop at ten o'clock.", "tr": "Harika! Saat onda otobüs durağında buluşalım." },
+    { "kim": "Kerem", "cinsiyet": "e", "en": "OK. See you on Saturday!", "tr": "Tamam. Cumartesi görüşürüz!" }
+   ]
+  },
+  {
+   "baslik": "Kibarca reddetmek",
+   "satirlar": [
+    { "kim": "Can", "cinsiyet": "e", "en": "Zeynep, we are going bowling after school. Do you want to join us?", "tr": "Zeynep, okuldan sonra bowlinge gidiyoruz. Bize katılmak ister misin?" },
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "Thanks for inviting me, but I'm afraid I can't. I have a piano lesson.", "tr": "Davet ettiğin için teşekkürler ama korkarım gelemem. Piyano dersim var." },
+    { "kim": "Can", "cinsiyet": "e", "en": "No problem. Maybe next time?", "tr": "Sorun değil. Belki bir dahaki sefere?" },
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "Definitely! Have fun.", "tr": "Kesinlikle! İyi eğlenceler." }
+   ]
+  },
+  {
+   "baslik": "En iyi arkadaşım",
+   "satirlar": [
+    { "kim": "Defne", "cinsiyet": "k", "en": "Who is your best friend, Emir?", "tr": "En iyi arkadaşın kim, Emir?" },
+    { "kim": "Emir", "cinsiyet": "e", "en": "It's Mert. We have been friends since primary school.", "tr": "Mert. İlkokuldan beri arkadaşız." },
+    { "kim": "Defne", "cinsiyet": "k", "en": "Why do you like him so much?", "tr": "Onu neden bu kadar seviyorsun?" },
+    { "kim": "Emir", "cinsiyet": "e", "en": "He is honest and loyal. He never tells my secrets, and I can always count on him.", "tr": "Dürüst ve sadık. Sırlarımı asla söylemez ve ona her zaman güvenebilirim." },
+    { "kim": "Defne", "cinsiyet": "k", "en": "You are lucky. A true friend is priceless.", "tr": "Şanslısın. Gerçek bir arkadaş paha biçilmezdir." }
+   ]
+  }
+ ],
+ "test": [
+  { "soru": "Ali: Would you like to come to my birthday party on Sunday?\nAyşe: ______ I have to visit my aunt in Bursa.", "secenekler": ["Sure, I'd love to.", "Sorry, I can't.", "That sounds great.", "Yes, of course."], "dogru": 1, "aciklama": "Ayşe arkasından bir sebep söylüyor (teyzesine gidecek), yani daveti reddediyor." },
+  { "soru": "Which one is an invitation?", "secenekler": ["I'm afraid I can't make it.", "Thanks for inviting me.", "How about going to the concert tonight?", "I have to study for my exam."], "dogru": 2, "aciklama": "\"How about + -ing\" bir öneri/davet kalıbıdır." },
+  { "soru": "A true friend is someone who ______ your secrets.", "secenekler": ["tells", "keeps", "refuses", "shares"], "dogru": 1, "aciklama": "Gerçek arkadaş sırlarını saklar: keep secrets." },
+  { "soru": "Mert: I can always ______ Emir. He never lets me down.", "secenekler": ["count on", "come over", "eat out", "back up"], "dogru": 0, "aciklama": "count on = güvenmek, birine bel bağlamak." },
+  { "soru": "Elif: There is an exhibition at the museum. Do you want to come?\nKerem: ______ What time does it start?", "secenekler": ["I'm busy.", "That sounds great!", "Sorry, I can't.", "No, thanks."], "dogru": 1, "aciklama": "Kerem saati soruyor; demek ki daveti kabul ediyor." },
+  { "soru": "My friend is very ______. She always tells the truth.", "secenekler": ["honest", "serious", "stuffed", "thrilling"], "dogru": 0, "aciklama": "Hep doğruyu söyleyen kişi dürüsttür: honest." },
+  { "soru": "Which sentence gives an excuse?", "secenekler": ["Would you like to join us?", "Let's meet at six.", "I can't come because I have a headache.", "It was a great party."], "dogru": 2, "aciklama": "\"because ...\" ile bir mazeret (excuse) söyleniyor." },
+  { "soru": "Can: We are going to eat out tonight. ______\nZeynep: Thanks, I'd love to!", "secenekler": ["Where were you?", "Do you want to join us?", "What did you eat?", "Are you hungry now?"], "dogru": 1, "aciklama": "Zeynep teşekkür edip kabul ediyor; önce bir davet gelmeli." },
+  { "soru": "Read the text.\n\"Deniz is my best friend. We get on well with each other. We like the same things, so we often hang out together. She is laid-back and never gets angry.\"\nWhich is NOT true about Deniz?", "secenekler": ["She is the writer's best friend.", "She gets angry easily.", "She is laid-back.", "She likes the same things as the writer."], "dogru": 1, "aciklama": "Metinde \"never gets angry\" diyor; kolay sinirlendiği doğru değil." },
+  { "soru": "Friendship needs ______. Friends trust and help each other.", "secenekler": ["mutual support", "a thriller", "a tournament", "a receiver"], "dogru": 0, "aciklama": "Arkadaşlık karşılıklı destek ister: mutual support." }
+ ]
+}

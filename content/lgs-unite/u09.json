@@ -1,0 +1,58 @@
+{
+ "unite": 9,
+ "ad": "Science",
+ "konu": "Bilimsel buluşları ve mucitleri anlatmak (edilgen yapı), deney basamaklarını ve sonuçları söylemek",
+ "kaliplar": [
+  { "en": "The telephone was invented by Alexander Graham Bell.", "tr": "Telefon Alexander Graham Bell tarafından icat edildi.", "not": "Edilgen: was invented by" },
+  { "en": "Penicillin was discovered in 1928.", "tr": "Penisilin 1928'de keşfedildi.", "not": "Edilgen + yıl" },
+  { "en": "Who invented the light bulb?", "tr": "Ampulü kim icat etti?", "not": "Mucit sormak" },
+  { "en": "Scientists do experiments in a lab.", "tr": "Bilim insanları laboratuvarda deney yapar.", "not": "do an experiment" },
+  { "en": "First, we put the liquid into the test tube. Then, we observe the result.", "tr": "Önce sıvıyı deney tüpüne koyarız. Sonra sonucu gözlemleriz.", "not": "Deney basamakları" },
+  { "en": "Aziz Sancar won the Nobel Prize for his research on DNA.", "tr": "Aziz Sancar DNA üzerine araştırmasıyla Nobel Ödülü kazandı.", "not": "Başarı anlatmak" },
+  { "en": "Solar panels are used to produce electricity.", "tr": "Güneş panelleri elektrik üretmek için kullanılır.", "not": "be used to + fiil" },
+  { "en": "You must wear safety goggles in the lab.", "tr": "Laboratuvarda koruyucu gözlük takmalısın.", "not": "Güvenlik kuralı" },
+  { "en": "The vaccine was developed to cure the disease.", "tr": "Aşı hastalığı tedavi etmek için geliştirildi.", "not": "Amaç: to + fiil" },
+  { "en": "What was the result of the experiment?", "tr": "Deneyin sonucu neydi?", "not": "Sonuç sormak" }
+ ],
+ "diyaloglar": [
+  {
+   "baslik": "Bilim fuarı",
+   "satirlar": [
+    { "kim": "Öğretmen", "cinsiyet": "k", "en": "What is your project about, Emir?", "tr": "Projen ne hakkında, Emir?" },
+    { "kim": "Emir", "cinsiyet": "e", "en": "It's about solar panels. They are used to produce clean energy.", "tr": "Güneş panelleri hakkında. Temiz enerji üretmek için kullanılıyorlar." },
+    { "kim": "Öğretmen", "cinsiyet": "k", "en": "Interesting! How did you test it?", "tr": "İlginç! Nasıl test ettin?" },
+    { "kim": "Emir", "cinsiyet": "e", "en": "First, I put a small panel in the sun. Then, I connected it to a lamp. The result was amazing. The lamp worked!", "tr": "Önce küçük bir paneli güneşe koydum. Sonra bir lambaya bağladım. Sonuç harikaydı. Lamba çalıştı!" }
+   ]
+  },
+  {
+   "baslik": "Ünlü bilim insanları",
+   "satirlar": [
+    { "kim": "Ayşe", "cinsiyet": "k", "en": "Do you know who discovered the rabies vaccine?", "tr": "Kuduz aşısını kimin keşfettiğini biliyor musun?" },
+    { "kim": "Kerem", "cinsiyet": "e", "en": "Yes, it was developed by Louis Pasteur in 1885.", "tr": "Evet, 1885'te Louis Pasteur tarafından geliştirildi." },
+    { "kim": "Ayşe", "cinsiyet": "k", "en": "Right. And the smallpox vaccine was developed by Edward Jenner.", "tr": "Doğru. Çiçek aşısı da Edward Jenner tarafından geliştirildi." },
+    { "kim": "Kerem", "cinsiyet": "e", "en": "Scientists are real heroes. They save millions of lives.", "tr": "Bilim insanları gerçek kahramanlar. Milyonlarca hayat kurtarıyorlar." }
+   ]
+  },
+  {
+   "baslik": "Laboratuvar kuralları",
+   "satirlar": [
+    { "kim": "Can", "cinsiyet": "e", "en": "Can I touch the liquid in this test tube?", "tr": "Bu deney tüpündeki sıvıya dokunabilir miyim?" },
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "No! You must wear gloves and goggles first. Safety is important.", "tr": "Hayır! Önce eldiven ve gözlük takmalısın. Güvenlik önemli." },
+    { "kim": "Can", "cinsiyet": "e", "en": "OK. What should I do next?", "tr": "Tamam. Sonra ne yapmalıyım?" },
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "Mix it slowly and observe the colour. Then write the result in your notebook.", "tr": "Yavaşça karıştır ve rengi gözlemle. Sonra sonucu defterine yaz." }
+   ]
+  }
+ ],
+ "test": [
+  { "soru": "The light bulb ______ by Thomas Edison.", "secenekler": ["invented", "was invented", "invents", "is inventing"], "dogru": 1, "aciklama": "Edilgen geçmiş zaman: was + V3 (was invented)." },
+  { "soru": "Aziz Sancar is a famous Turkish ______. He won the Nobel Prize in Chemistry.", "secenekler": ["biochemist", "janitor", "instructor", "vlogger"], "dogru": 0, "aciklama": "Aziz Sancar bir biyokimyacıdır." },
+  { "soru": "Before you do an experiment, you must wear ______.", "secenekler": ["safety goggles", "a life vest", "slippers", "a helmet lamp"], "dogru": 0, "aciklama": "Laboratuvarda koruyucu gözlük takılır." },
+  { "soru": "A: Who discovered penicillin?\nB: ______", "secenekler": ["It was discovered in a lab.", "It was discovered by Alexander Fleming.", "It is a medicine.", "In 1928."], "dogru": 1, "aciklama": "\"Kim?\" sorusuna kişinin adıyla cevap verilir." },
+  { "soru": "A ______ is a place where scientists do experiments.", "secenekler": ["lab", "resort", "square", "kitchen"], "dogru": 0, "aciklama": "Laboratuvar: lab." },
+  { "soru": "The doctor ______ the disease after looking at the test results.", "secenekler": ["diagnosed", "exploded", "uploaded", "invited"], "dogru": 0, "aciklama": "Teşhis koymak: diagnose." },
+  { "soru": "Which order is correct for an experiment?\n1. Write the result.\n2. Prepare the materials.\n3. Observe what happens.", "secenekler": ["1-2-3", "2-3-1", "3-2-1", "2-1-3"], "dogru": 1, "aciklama": "Önce malzeme hazırlanır, sonra gözlemlenir, en son sonuç yazılır." },
+  { "soru": "Read the text.\n\"The first vaccine was developed by Edward Jenner in 1796. It protected people from smallpox. Today, vaccines save millions of lives every year.\"\nWhat did the first vaccine protect people from?", "secenekler": ["rabies", "smallpox", "flu", "cancer"], "dogru": 1, "aciklama": "\"It protected people from smallpox.\"" },
+  { "soru": "This phone is ______. You can carry it everywhere.", "secenekler": ["portable", "extinct", "ancient", "rural"], "dogru": 0, "aciklama": "Her yere taşınabilen: portable." },
+  { "soru": "Einstein was a ______. He was very clever and changed science.", "secenekler": ["genius", "patient", "survivor", "subscriber"], "dogru": 0, "aciklama": "Çok zeki ve bilimi değiştiren kişi: genius (dâhi)." }
+ ]
+}

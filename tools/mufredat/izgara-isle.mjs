@@ -14,9 +14,9 @@ if (!g) throw new Error(`izgara yok: ${noS}`);
 const ham = path.join(KOK, 'gorseller/izgara');
 fs.mkdirSync(ham, { recursive: true });
 const dosya = path.join(ham, `izgara-${String(g.no).padStart(3, '0')}.png`);
-const c = await fetch(url);
-if (!c.ok) throw new Error(`indirilemedi: ${c.status}`);
-fs.writeFileSync(dosya, Buffer.from(await c.arrayBuffer()));
+// CDN yavasladiginda Node fetch'i takiliyor (19 Ekim gecesi 72–86); curl
+// yavas da olsa ilerliyor. 10 dk ust sinir, 3 yeniden deneme.
+execFileSync('curl', ['-sSf', '--max-time', '600', '--retry', '3', '-o', dosya, url], { stdio: 'inherit' });
 
 const ids = [0, 1, 2, 3].map((i) => (g.ids[i] && !atla.includes(g.ids[i]) ? g.ids[i] : '-'));
 // Genel ve LGS ayri klasorlerde: iki gecis.
