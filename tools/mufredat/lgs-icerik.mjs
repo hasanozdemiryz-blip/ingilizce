@@ -29,6 +29,14 @@ const lgsId = (en) => {
   return genelId.has(s) ? `lgs-${s}` : s;
 };
 
+// Gorseli olan kartta sahne tarifi (Ingilizce prompt) uygulamada hic
+// gosterilmiyor; pakete girmesin (~60 KB). Yalniz gorselsiz kartta kalir.
+const gorselli = new Set(
+  fs.existsSync(path.join(KOK, 'src/assets/cards-lgs'))
+    ? fs.readdirSync(path.join(KOK, 'src/assets/cards-lgs')).map((f) => f.replace(/\.webp$/, ''))
+    : [],
+);
+
 const kartlar = lgs.map((k, i) => ({
   id: lgsId(k.en),
   order: i + 1,
@@ -38,7 +46,7 @@ const kartlar = lgs.map((k, i) => ({
   // cagrisim gorselde. Bos kanca ekranda gosterilmez.
   hook: k.kanca,
   sentence: k.cumle,
-  imageNote: k.sahne,
+  imageNote: gorselli.has(lgsId(k.en)) ? '' : k.sahne,
   klass: 'tutan',
   decision: null,
   image: null,
@@ -66,7 +74,7 @@ const mevcut = etiket
 
 const seviyeHarita = Object.fromEntries(Object.entries(seviye.kart).map(([id, s]) => [id, s.seviye]));
 
-fs.writeFileSync(path.join(KOK, 'content/lgs.json'), JSON.stringify({ kartlar, mevcut, seviye: seviyeHarita }, null, 1));
+fs.writeFileSync(path.join(KOK, 'content/lgs.json'), JSON.stringify({ kartlar, mevcut, seviye: seviyeHarita }));
 const uniteSay = Array.from({ length: 10 }, (_, i) => kartlar.filter((k) => k.unite === i + 1).length + mevcut.filter((m) => m.unite === i + 1).length);
 console.log(`content/lgs.json: ${kartlar.length} LGS karti + ${mevcut.length} Genel karti uniteye bagli; unite basina ${uniteSay.join(' ')}`);
 if (eksik.length) {

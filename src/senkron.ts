@@ -85,6 +85,16 @@ const enBuyuk = (a: number | undefined, b: number | undefined): number =>
 
 /** Gun sayaclarini birlestirir: ayni gun iki cihazda calisildiysa en
  *  yuksek sayac kaliyor. Toplamak iki katina cikarirdi. */
+function enIyiTestler(
+  a: AppState['lgsTest'],
+  b: AppState['lgsTest'],
+): AppState['lgsTest'] {
+  if (!a && !b) return undefined;
+  const cikti: Record<string, number> = { ...a };
+  for (const [u, n] of Object.entries(b ?? {})) cikti[u] = Math.max(cikti[u] ?? 0, n);
+  return cikti;
+}
+
 function gunleriBirlestir(a: AppState['days'], b: AppState['days']): AppState['days'] {
   const cikti: AppState['days'] = { ...a };
   for (const [gun, v] of Object.entries(b ?? {})) {
@@ -176,6 +186,8 @@ export function birlestir(a: Paket, b: Paket): Paket {
       freezes: enBuyuk(a.state.freezes, b.state.freezes),
       days: gunleriBirlestir(a.state.days, b.state.days),
       uyelikDavetGorulen: [...davet],
+      // Unite testi: her unitede iki cihazin en iyisi.
+      lgsTest: enIyiTestler(a.state.lgsTest, b.state.lgsTest),
       // Karsilama bir kez gorulur; bir tarafta goruldüyse tekrar cikmasin.
       onboarded: a.state.onboarded || b.state.onboarded,
     },

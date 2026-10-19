@@ -21,6 +21,7 @@ import {
 } from '../scheduler';
 import type { Progress, Step } from '../types';
 import { t } from '../dil';
+import { kancaYazisi } from '../components/Cagrisim';
 
 /**
  * Otomatik kapsamlarda parti boyutu.
@@ -302,7 +303,7 @@ export function Practice({
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder={t('Kelime, anlam veya kanca ara…')}
+              placeholder={t('Kelime, anlam veya çağrışım ara…')}
               className="w-full rounded-full bg-white pl-11 pr-5 py-3.5 text-sm shadow-[var(--shadow-soft)] outline-none placeholder:text-ink-faint focus:ring-2 focus:ring-brand"
             />
           </div>
@@ -348,7 +349,7 @@ export function Practice({
                           secili ? 'bg-white/25' : 'bg-spark/55 text-ink'
                         }`}
                       >
-                        {c.hook}
+                        {kancaYazisi(c)}
                       </span>
                     </span>
                     <span
@@ -688,7 +689,7 @@ export function Practice({
                     <EgzersizKare
                       ikon="kartlar"
                       ad={t('Kartlar')}
-                      alt={t('görsel, kanca, cümle')}
+                      alt={t('görsel, çağrışım, cümle')}
                       zemin="bg-sunken"
                       secili={adim === 'kart'}
                       onClick={() => {

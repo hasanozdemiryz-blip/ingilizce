@@ -39,6 +39,22 @@ export function CardVisual({ card, size = 'full' }: { card: Card; size?: 'full' 
     );
   }
 
+  /*
+    Bilerek gorselsiz kart (LGS'de dini yapilar: prophet, shrine, tomb —
+    cocuk guvenligi kurali geregi cizilmiyor; bkz. gorsel-recetesi.md).
+    Sahne tarifi yok; yuvada kelimenin anlami duruyor.
+  */
+  if (!card.imageNote) {
+    return (
+      <div
+        className={`${ratio} rounded-[1.4rem] bg-gradient-to-br ${zeminOf(card.id)} px-6 grid place-items-center text-center overflow-hidden`}
+      >
+        {/* Soru ekranlarinda (kompakt) anlam yazilmaz: cevabi verirdi */}
+        <p className="word text-3xl font-extrabold text-ink/80">{size === 'full' ? card.tr : card.en}</p>
+      </div>
+    );
+  }
+
   return (
     <div
       className={`${ratio} rounded-[1.4rem] bg-gradient-to-br ${zeminOf(card.id)} px-6 flex flex-col items-center justify-center text-center gap-2 overflow-hidden`}

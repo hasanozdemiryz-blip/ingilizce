@@ -1,6 +1,7 @@
 import { CardVisual } from './CardVisual';
 import { Card as CardShell, HookChip, Yonerge } from './ui';
-import type { Card } from '../types';
+import { kancaliMi, type Card } from '../types';
+import { CagrisimIpucu } from './Cagrisim';
 import { t } from '../dil';
 
 /**
@@ -39,11 +40,19 @@ export function Choice({
           <p className={`text-[2.25rem] leading-none font-extrabold ${ters ? '' : 'word'}`}>
             {sorulan}
           </p>
-          {(!ters || hookRevealed) && (
-            <span className={hookRevealed ? 'pop' : ''}>
-              <HookChip>{card.hook}</HookChip>
-            </span>
-          )}
+          {/* Kancasiz kartta (gorsel cagrisim) duz yonde resim zaten ustte; ipucu yalnizca ters yonde */}
+          {kancaliMi(card)
+            ? (!ters || hookRevealed) && (
+                <span className={hookRevealed ? 'pop' : ''}>
+                  <HookChip>{card.hook}</HookChip>
+                </span>
+              )
+            : ters &&
+              hookRevealed && (
+                <span className="pop">
+                  <CagrisimIpucu card={card} />
+                </span>
+              )}
         </div>
       </CardShell>
 

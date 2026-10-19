@@ -64,7 +64,12 @@ export type Olay =
   | 'profil_degisti'
   | 'hatirlatma_degisti'
   | 'yedek_alindi'
-  | 'yedek_yuklendi';
+  | 'yedek_yuklendi'
+  | 'bolum_degisti'
+  | 'lgs_yil'
+  | 'lgs_unite'
+  | 'unite_testi'
+  | 'tarama_bitti';
 
 type Veri = Record<string, string | number | boolean>;
 

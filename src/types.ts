@@ -267,4 +267,9 @@ export type AppState = {
    * da gecildi). Yalniz seviyesini "Biraz" ya da "Orta" diyen uyeye cikar.
    */
   taramaGoruldu?: boolean;
+  /**
+   * Unite testlerinin EN IYI sonucu: { "3": 8 } = 3. unitede 10'da 8.
+   * Senkronda iki cihazin buyugu kalir (bkz. senkron.ts).
+   */
+  lgsTest?: Record<string, number>;
 };

@@ -1,4 +1,6 @@
+import type { ReactNode } from 'react';
 import { Avatar } from '../components/Avatar';
+import { BolumSecici } from '../components/BolumSecici';
 import { Button, Card, Ikon, Screen, Streak } from '../components/ui';
 import { SetFinale } from '../components/SetFinale';
 import { TAB_SPACE } from '../components/TabBar';
@@ -7,6 +9,7 @@ import { CARD_BY_ID, CARDS, ogrenilenKancalar, setBittiMi } from '../content';
 import { relativeDue } from '../dates';
 import type { AppState, Card as CardType, Progress } from '../types';
 import { t } from '../dil';
+import { kancaYazisi } from '../components/Cagrisim';
 
 type Props = {
   progress: Progress[];
@@ -40,6 +43,10 @@ type Props = {
   onHesap: () => void;
   uye: Uye | null;
   uyelikHazir: boolean;
+  /** Bolume ozel panel (LGS: yil, unite) — ders kartinin ustunde */
+  ustPanel?: ReactNode;
+  /** LGS'de yil/unite secilmeden ders karti gosterilmez */
+  dersGizli?: boolean;
 };
 
 /**
@@ -73,6 +80,8 @@ export function Home({
   onHesap,
   uye,
   uyelikHazir,
+  ustPanel,
+  dersGizli = false,
 }: Props) {
   const ogrenilen = progress.filter((p) => p.introduced).length;
   const tekrar = due.length;
@@ -194,8 +203,11 @@ export function Home({
         </span>
       </header>
 
+      <BolumSecici />
+
       {/* Kahraman blok dikey ORTADA — ekran bos gorunmesin, karar tek olsun */}
-      <div className={`flex-1 flex flex-col justify-center lg:justify-start lg:pt-2 gap-4 ${TAB_SPACE}`}>
+      <div className={`flex-1 flex flex-col justify-center lg:justify-start pt-4 lg:pt-4 gap-4 ${TAB_SPACE}`}>
+        {ustPanel}
         {/*
           Set bitince gunluk hedef cubugu YALAN soyluyor: yeni kelime
           kalmadigi icin "0 / 10" her gun boyle kalacak ve kullanici
@@ -214,6 +226,8 @@ export function Home({
           ders sonrasi serit uyari emojisiyle "yalnizca bu cihazda" diyordu.
           Davet artik yalnizca ders sonunda (bkz. davet.ts) ve Ayarlar'da.
         */}
+        {!dersGizli && (
+          <>
         <Card className="rise !py-4">
           <div className="flex items-baseline justify-between mb-2.5">
             <span className="text-sm font-bold text-ink-soft">
@@ -360,6 +374,8 @@ export function Home({
             )}
           </div>
         )}
+          </>
+        )}
 
         {/*
           Kanca ciftleri de kartin icinde. Yanindaki "12 kelime" sayaci
@@ -376,7 +392,7 @@ export function Home({
                 <span key={c.id} className="rounded-full bg-sunken px-3 py-1.5 text-sm">
                   <span className="word font-semibold">{c.en}</span>
                   <span className="text-ink-faint"> ≈ </span>
-                  <span className="font-semibold text-ink bg-spark/55 rounded px-1">{c.hook}</span>
+                  <span className="font-semibold text-ink bg-spark/55 rounded px-1">{kancaYazisi(c)}</span>
                 </span>
               ))}
             </div>

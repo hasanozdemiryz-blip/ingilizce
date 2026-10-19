@@ -259,7 +259,7 @@ export function Runner({
             */}
             {verdict.judgement === 'dogru' && hookRevealed && (
               <span className="text-sm text-ink-faint">
-                {t('Kancayla bildin. Bir dahakine kancasız dene.')}
+                {t('Çağrışımla bildin. Bir dahakine çağrışımsız dene.')}
               </span>
             )}
           </div>
@@ -275,7 +275,7 @@ export function Runner({
                 onClick={() => setHookRevealed(true)}
                 className="px-4 py-2 text-sm font-bold text-brand-deep rounded-full bg-white/70 shadow-[var(--shadow-soft)] hover:bg-white transition"
               >
-                {t('Kancayı göster')}
+                {t('Çağrışımı göster')}
               </button>
             )}
           </div>

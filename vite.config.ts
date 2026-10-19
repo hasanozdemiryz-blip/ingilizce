@@ -47,6 +47,22 @@ export default defineConfig({
      * dala dusup ana paketi 2,3 MB'a cikarmisti.
      */
     assetsInlineLimit: (yol) => (yol.includes('/assets/ikonlar/') ? false : undefined),
+
+    /**
+     * LGS kart gorselleri AYRI KLASORE (20 Ekim). Servis calisani her seyi
+     * on-belliyordu; 384 LGS gorseli (~8,6 MB) Genel calisan herkese de
+     * inecekti. Ayri klasor on-bellekten cikariliyor (bkz. workbox
+     * `globIgnores`) ve goruldukce onbellege giriyor; LGS'ye gecen
+     * kullanicinin calistigi unite arka planda isitiliyor (bkz. App).
+     */
+    rollupOptions: {
+      output: {
+        assetFileNames: (bilgi) =>
+          (bilgi.originalFileNames ?? []).some((d) => d.includes('assets/cards-lgs/'))
+            ? 'assets/lgs/[name]-[hash][extname]'
+            : 'assets/[name]-[hash][extname]',
+      },
+    },
   },
 
   // Telefonda test icin cloudflare tuneli uzerinden servis edilebilsin.
@@ -82,6 +98,14 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,webp,woff2}'],
+        globIgnores: ['**/assets/lgs/**'],
+        runtimeCaching: [
+          {
+            urlPattern: /\/assets\/lgs\//,
+            handler: 'CacheFirst',
+            options: { cacheName: 'lgs-gorseller', expiration: { maxEntries: 500 } },
+          },
+        ],
         // Alt dizinde de dogru giris noktasina dus
         navigateFallback: `${base}index.html`,
       },

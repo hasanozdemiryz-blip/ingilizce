@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { CardVisual } from './CardVisual';
 import { seslendir } from '../speech';
-import { Card as CardShell, HookChip, Ikon, SpeakButton, Yonerge } from './ui';
+import { CagrisimIpucu, CagrisimSatiri } from './Cagrisim';
+import { Card as CardShell, Ikon, SpeakButton, Yonerge } from './ui';
 import type { Card } from '../types';
 import { t } from '../dil';
 
@@ -28,9 +29,7 @@ export function LearnFace({ card, sesli = false }: { card: Card; sesli?: boolean
       <CardVisual card={card} />
       <div className="flex flex-col items-center gap-3 pt-5">
         <KelimeSatiri card={card} />
-        <HookChip big>
-          {card.en} ≈ {card.hook}
-        </HookChip>
+        <CagrisimSatiri card={card} big />
         <p className="text-center text-ink-soft leading-relaxed max-w-[30ch]">“{card.sentence}”</p>
       </div>
     </CardShell>
@@ -50,7 +49,7 @@ export function WriteFace({ card, hookRevealed }: { card: Card; hookRevealed: bo
         <p className="text-[2.5rem] leading-none font-extrabold text-center">{card.tr}</p>
         {hookRevealed && (
           <span className="pop">
-            <HookChip>{card.hook}</HookChip>
+            <CagrisimIpucu card={card} />
           </span>
         )}
       </div>
@@ -87,7 +86,7 @@ export function ListenFace({ card, hookRevealed }: { card: Card; hookRevealed: b
         <span className="text-base font-semibold text-ink-soft">{t('Dokun, tekrar dinle')}</span>
         {hookRevealed && (
           <span className="pop">
-            <HookChip>{card.hook}</HookChip>
+            <CagrisimIpucu card={card} />
           </span>
         )}
       </div>
@@ -105,9 +104,7 @@ export function AnswerFace({ card }: { card: Card }) {
       </div>
       <div className="flex flex-col items-center gap-3 pt-5">
         <KelimeSatiri card={card} />
-        <HookChip>
-          {card.en} ≈ {card.hook}
-        </HookChip>
+        <CagrisimSatiri card={card} />
         <p className="text-center text-ink-soft leading-relaxed max-w-[30ch]">“{card.sentence}”</p>
       </div>
     </CardShell>
