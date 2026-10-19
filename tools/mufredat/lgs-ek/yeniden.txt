@@ -1,0 +1,67 @@
+# Yeniden cizilecekler (kusur): id|sebep
+instead|masa kenara tasti
+invitation|kartta yazi
+relaxed|agaclar kenara degdi
+party|susler kenara degdi
+either|kenarda tuhaf yaratik
+thank-you|govdesiz eller
+rely-on|duvar kenara degdi
+rap|bacaklar silik
+jazz|kenarda goz
+weekday|govde alttan silik
+sunday|masa silik
+morning|ayaklar silik
+afternoon|bahce kenara degdi
+drink|gunes kenara degdi
+lunch|masa kenara degdi
+olive|masa kenara tasti
+change|kenarda goz
+application|altta leke
+caller|ayaklar silik
+now|ayaklar silik
+again|yaninda leke
+hold-on|alt kenarda kesik
+television|izgara cerceveli, bolme kaydi
+radio|izgara cerceveli
+survey|izgara cerceveli
+visual|izgara cerceveli
+advantage|alt kenarda kesik
+agree|ayaklar silik
+high|kenarda sinek
+travel|leke
+afraid-of|kaydirak kenara
+hot-air-balloon|kenara tasti
+expedition|sagdan tasti
+cruise|deniz kenara
+island|deniz kenara
+quiet|yaratik golgesi
+ready|yaratik golgesi
+rich|yaratik golgesi
+sail|yaratik golgesi
+plane|altta leke
+centre|altta leke
+school-trip|yazi MUSEUM
+say|yazi MAMA
+arrive|tren kenara
+little|yaratik/sinek
+father|alttan kesik
+long|kopru kenara
+improve|yaratik
+explorer|gemi kenara
+forget|alttan kesik
+human|anatomi modeli ciplak gibi; iskelet
+realize|goz
+problem|cerceveli
+solve|cerceveli
+university|cerceveli
+step|cerceveli
+damage|prompt yazisi
+deforestation|prompt yazisi
+enough|prompt yazisi
+environment|prompt yazisi
+mountain|alt kenara
+ocean|deniz kenara
+land|pist kenara
+snow|zemin kenara
+wind|goz
+climate-change|deniz kenara

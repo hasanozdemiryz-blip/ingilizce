@@ -35,7 +35,7 @@ surface|yüzey|G|||Su yüzeyinde yapraklar yüzüyordu|Autumn leaves float on th
 warn|uyarmak|G|||Görevli kaygan zemin için uyardı|A cleaner points to a yellow wet floor sign and warns a boy; the sign has no text.|yellow|E|We must warn people about the flood.|İnsanları sel hakkında uyarmalıyız.
 wave|dalga; el sallamak|G|||Sörfçü büyük dalgada kaydı|A surfer rides a big blue wave.|sky-blue|E|A big wave hit the boat.|Büyük bir dalga tekneye çarptı.
 wind|rüzgâr|G|||Rüzgâr değirmeni rüzgârda döndü|A white wind turbine turns on a green hill.|sky-blue|E|The wind was very strong.|Rüzgâr çok sertti.
-earth|dünya, toprak|G|||Dünyayı korumak için ellerini birleştirdiler|Children hold hands around a smiling-free globe of the Earth.|green|E|The Earth goes around the Sun.|Dünya Güneş'in etrafında döner.
+earth|dünya, toprak|G|||Dünyayı korumak için ellerini birleştirdiler|Children hold hands around a big globe of the Earth.|green|E|The Earth goes around the Sun.|Dünya Güneş'in etrafında döner.
 heat|ısı; ısıtmak|G|||Güneşin sıcağında terledi|A boy wipes sweat from his forehead under a hot sun.|yellow|E|Heat the milk.|Sütü ısıt.
 area|alan, bölge|G|||Piknik alanında masalar vardı|A picnic area with wooden tables and trees in a park.|green|E|This area is dangerous in a flood.|Bu bölge selde tehlikeli.
 life|hayat|G|||Okyanusta rengârenk bir hayat var|Colourful fish, turtles and coral live under the sea.|sky-blue|E|Life is beautiful.|Hayat güzel.

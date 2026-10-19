@@ -58,7 +58,7 @@ explorer|kâşif|G|||Kâşif dürbünüyle yeni karayı gördü|An explorer with
 fact|gerçek, olgu|G|||Dünyanın yuvarlak olduğu bir gerçek|A girl points at a round globe while classmates listen.|sky-blue|E
 forever|sonsuza dek|G|||Kumdaki kalbin sonsuza dek kalmasını istedi|Two friends draw a big heart in the sand on a beach.|pink|E
 forget|unutmak|G|||Şemsiyesini unutunca ıslandı|A boy without an umbrella gets wet in the rain, his umbrella left at home behind the window.|sky-blue|E
-human|insan|G|||İnsan vücudu modelini inceledi|Students look at a friendly human body model in a classroom.|peach|E
+human|insan|G|||İnsan vücudu modelini inceledi|Students look at a friendly cartoon skeleton model in a science classroom.|peach|E
 improve|geliştirmek|G|||Her gün çalışıp resmini geliştirdi|A girl shows three drawings of a cat, each one better than the last.|lavender|E
 invention|icat|G|||Telefon büyük bir icattı|An old-fashioned telephone next to a modern smartphone on a table; the screen is blank.|cream|E
 inventor|mucit|G|||Mucit yeni makinesini gösterdi|A happy inventor in a lab coat shows a funny machine with gears and springs.|yellow|E

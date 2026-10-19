@@ -67,7 +67,7 @@ daily|günlük|G|||Her gün günlük planına baktı|A girl ticks a box on a sim
 by mistake|yanlışlıkla|I|||Yanlışlıkla şekerin yerine tuz koydu|A boy sprinkles salt into his tea by mistake, making a funny face after tasting it.|peach|E
 log off|oturumu kapatmak|I|||İşi bitince bilgisayardan çıkış yaptı|A girl clicks a power-style button on a laptop screen and closes the lid; no text.|sky-blue|E
 make new friends|yeni arkadaşlar edinmek|I|||Yaz kampında yeni arkadaşlar edindi|A group of children wave and smile at each other at a summer camp.|green|E
-meet strangers|yabancılarla tanışmak|I|||İnternetteki yabancılarla buluşmamalı|A girl shakes her head and closes a laptop while a faceless grey figure appears on the blank screen.|lavender|E
+meet strangers|yabancılarla tanışmak|I|||İnternetteki yabancılarla buluşmamalı|A girl shakes her head and closes a laptop while a friendly grey question-mark icon appears on the screen.|lavender|E
 surf the internet|internette gezinmek|I|||Kanepede internette gezindi|A relaxed boy on a sofa browses on a tablet, small surfboard-shaped icon floating above; no text.|sky-blue|E
 personal information|kişisel bilgi|I|||Kişisel bilgilerini kimseye vermedi|A girl holds a closed folder with a padlock close to her chest.|pink|E
 social media|sosyal medya|I|||Sosyal medyada fotoğrafı beğenildi|A boy smiles at a phone with many little heart icons floating up; no text.|pink|E

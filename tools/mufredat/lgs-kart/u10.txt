@@ -73,7 +73,7 @@ surface|yüzey|G|||Su yüzeyinde yapraklar yüzüyordu|Autumn leaves float on th
 warn|uyarmak|G|||Görevli kaygan zemin için uyardı|A cleaner points to a yellow wet floor sign and warns a boy; the sign has no text.|yellow|E
 wave|dalga; el sallamak|G|||Sörfçü büyük dalgada kaydı|A surfer rides a big blue wave.|sky-blue|E
 wind|rüzgâr|G|||Rüzgâr değirmeni rüzgârda döndü|A white wind turbine turns on a green hill.|sky-blue|E
-earth|dünya, toprak|G|||Dünyayı korumak için ellerini birleştirdiler|Children hold hands around a smiling-free globe of the Earth.|green|E
+earth|dünya, toprak|G|||Dünyayı korumak için ellerini birleştirdiler|Children hold hands around a big globe of the Earth.|green|E
 heat|ısı; ısıtmak|G|||Güneşin sıcağında terledi|A boy wipes sweat from his forehead under a hot sun.|yellow|E
 area|alan, bölge|G|||Piknik alanında masalar vardı|A picnic area with wooden tables and trees in a park.|green|E
 life|hayat|G|||Okyanusta rengârenk bir hayat var|Colourful fish, turtles and coral live under the sea.|sky-blue|E

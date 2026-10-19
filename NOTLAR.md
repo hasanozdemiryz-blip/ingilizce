@@ -2547,7 +2547,7 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
 - **Çalışma dalı yine `main`** (20 Ekim'de `uc-bolum` birleşti ve yayına çıktı:
   uygulama hafizada.com/ingilizce/, site hafizada.com). Başka cihazda:
   `git checkout main && git pull` (site deposunda `git pull`).
-- **Sıradaki iş (19 Ekim): test turu** (kullanıcı giriş yapar, Claude Chrome'dan test eder; üst menü bozuklukları), sonra **PLAN v2** (onaylı) — bkz. NEREDE KALDIK'ın sonu ve "2026-10-19 — LGS havuz analizi".
+- **Sıradaki iş (19 Ekim akşam): PLAN v2'nin kalanı** — D'nin 66 yeniden çizimi + sesler → E platform → F site → G yayın (bkz. NEREDE KALDIK). Sonra **PLAN v3** (LGS ürün deneyimi) kullanıcıyla konuşulacak.
 - **Önce aşağıdaki KARARLAR'ı oku.** Bir şey önermeden önce onlara bak; çelişen
   öneri yapma. Yeni istekte önce tek cümleyle "anladığım şu" yaz.
 - **Şu anki adım:** "NEREDE KALDIK" (bu bölümün sonunda) — her aşama bitince güncellenir.
@@ -2614,13 +2614,17 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
 13. **Odak bu yıl: LGS 2027 (eski 8. sınıf programı, 10 ünite).** Satış bu yıl
     başlayacak. Maarif ayrımı (2028+ girenler) var, unutulmaz ama şimdi ona
     göre iş yapılmaz (kullanıcı, 19 Ekim).
-14. **Üye kendi bölümünde kalır.** Nereden (Genel / LGS / Çocuk) üye olduysa
-    platformun içinde o bölümdedir; içeriden başka bölüme geçemez (kullanıcı,
-    19 Ekim). Şerit (BolumSecici) üyeye gösterilmez. Açık: aynı kişi ikinci
-    bölüm isterse ne olur (ayrı hesap mı, satın alma mı) — satış modeliyle karar.
+14. **Genel · LGS · Çocuk kesin ayrı ürünler** (kullanıcı, 19 Ekim, son hâli):
+    tek üyelik hepsine açılır ama içeriden bölüm değiştirilmez; LGS'den girene
+    yalnız LGS açılır. **İlerleme, seri, istatistik, ayarlar her bölümde AYRI
+    alan** (bugün ortak — değişecek; mevcut 4 üyenin verisi bölümüne taşınır).
+    Başka bölüm sitedeki sekmeden, ayrı giriş olarak açılır.
 15. **LGS havuzu 418 değil, büyüyecek** (analiz aşağıda, 19 Ekim). LGS için
     üretilen her kart Genel'e de girer (okula özgü/hassas olanlar hariç; bugün
     Genel = 400 + LGS'den 375 = ~775). Çocuk'a da ortak kelimeler gider.
+16. **Kelime sayısı yeter** (kullanıcı, 19 Ekim): LGS'ye bundan sonra yeni kelime
+    eklenmez; üretilen 1.016 LGS kartı (387 + 629 ek) + uniteye bağlı 121 Genel kartı ve Genel'e
+    akanlar yeterli. Sıradaki iş içerik değil, LGS'nin ürün deneyimi.
 
 #### PLAN (onaylı 19 Ekim) — neden / ne / bitti
 
@@ -2749,6 +2753,25 @@ Genel için ayrı üretim yok. Oralara yalnız LGS'de üretilen kartlar eklenir
 **Kullanıcıdan beklenen kararlar:** planın onayı; D'nin kredisi; LGS teması (E);
 satış soruları (I).
 
+#### PLAN v3 — LGS ürün deneyimi (kullanıcı 19 Ekim; PLAN v2 bitince konuşulup netleşecek)
+Kullanıcının notları, son hâli:
+1. **Bölümler kesin ayrı** (KARARLAR 14): her bölümün kendi ilerleme/seri/istatistik/
+   ayar alanı; `AppState`'e bölüm anahtarı (ör. `bolumler: { genel: {...}, lgs: {...} }`),
+   senkron tablosunda da ayrı; mevcut veriler bulunduğu bölüme taşınır. İçeride şerit yok.
+2. **LGS deneme dersi:** üyeliksiz giriş ilk ünitenin ~5 kelimesiyle (Genel'deki
+   karşılama akışının LGS sürümü), sonunda üyelik daveti.
+3. **LGS öğrenim akışı net olmalı.** Kullanıcı gözlemi: 5 kelime bitince "denemek
+   için" yalnız kalıplar geldi, kelimenin kalıba nasıl oturacağı belli değil; kalıp
+   ve diyaloğun yeri belirsiz. Öneri (konuşulacak): ünite = kelime partileri (5'er)
+   → her partiden sonra o kelimelerin geçtiği 2–3 kalıp (boşluk doldurma) → ünite
+   kelimeleri bitince diyaloglar (dinle + sıralama) → ünite testi; ünite haritasında
+   adımlar görünür.
+4. **LGS'nin Egzersiz / İlerleme / Ayarlar ekranları** LGS'ye özgü: ünite ilerleme
+   haritası, ünite testi sonuçları, LGS'ye kalan gün, günlük hedef = sınava kadar
+   bitirme hızı; Genel'in ekranları karşılamıyor.
+5. Kredi açıklaması (kullanıcı sordu): kredi yalnız kart görselleri ve sesler
+   (kelime + diyalog seslendirmesi) için harcandı; kalıp/test metinleri kredisiz.
+
 #### NEREDE KALDIK
 
 - [x] Faz 0, Faz 1'in ilk hali, deneme (yöntem seçildi), 7 güvenlik görselinden 6'sı
@@ -2857,6 +2880,19 @@ satış soruları (I).
   Reklam bağlantıları `?utm_source=instagram&utm_medium=reklam&utm_campaign=…` ile verilmeli.
   Sorgu: `select veri->>'ilk', count(distinct kimlik) from olaylar where ad='uygulama_acildi' group by 1`.
 - [x] **Yayın 3 (19 Ekim):** A + B canlıda (platform `9dfc1db`, site `b3e83f2`), canlıda doğrulandı.
+- [x] **C. LGS kelime metinleri (19 Ekim):** 629 yeni kart (`tools/mufredat/lgs-ek/uNN.txt`
+  kaynak → `node tools/mufredat/lgs-ek.mjs` → `lgs-kart.mjs` → `lgs-icerik.mjs`),
+  90 Genel kartı üniteye bağlı (`lgs-ek/v.txt`), seviye yeniden (`seviye.mjs` + Oxford CSV),
+  1.016 LGS kartının hepsinde örnek cümle. Denetim temiz.
+- [~] **D. Görseller (19 Ekim):** plan 157 ızgara (101–257) üretildi (~11.775 kredi);
+  kontrol sayfasıyla 66 kart kusurlu bulundu → `tools/mufredat/lgs-ek/yeniden.txt`
+  (kenara taşma, yazı, tuhaf yaratık/göz izi, çerçeveli ızgara). 562 PNG
+  `gorseller/lgs/` (depoda değil; Magnific Personal projesinde, creation id'leri
+  `gorsel-log.txt`'te). Sıradaki: 66 kusurlu → ~17 ızgara, seed 20260919,
+  `IZGARA_BASLA=301 node tools/mufredat/izgara-plan.mjs` (webp'ye çevrilenler
+  plandan düşer: önce `node tools/mufredat/lgs-webp.mjs`). Sonra ses.
+  Ders: model ~her 8 ızgarada bir kenara "yeşil göz/yaratık" izi bırakıyor;
+  bazen prompt metnini görsele yazıyor (246) ya da kareleri çerçeveli çiziyor (183, 239).
 - [ ] PLAN v2 (onaylı 19 Ekim): A test → B ölçüm → C LGS metinleri → D görsel/ses →
   E platform (bölüm kilidi, LGS teması) → F site → G yayın → I satış. (H çıktı.) Araçlar hazır: `tools/mufredat/izgara-*.mjs`, `tools/ses/*`,
   kurallar `tools/kanca-kurallari.md`.

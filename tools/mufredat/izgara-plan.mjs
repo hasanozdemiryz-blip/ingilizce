@@ -19,9 +19,8 @@ export const lgsId = (en) => {
 };
 
 /** Genel'den yeniden cizilecek kartlar (izgaraya eklenir). */
-const EKSTRA = [
-  { id: 'rob', genel: true, ton: 'peach', sahne: 'A cute friendly round robot sneakily takes cookies out of a glass cookie jar standing on a small round table; the table is small and fully visible, its legs end well above the panel edge.' },
-];
+// rob 20 Ekim'de yeniden cizildi (gorsel-log.txt); bos.
+const EKSTRA = [];
 
 /** Gorseli zaten olan LGS kartlari (depoda webp) plandan cikar. */
 const HAZIR_KLASOR = path.join(KOK, 'src/assets/cards-lgs');
@@ -63,14 +62,15 @@ for (let i = 0; i < ogeler.length; i += 4) {
 ${dort.map((o, j) => `Panel ${j + 1} (${POZ[j]}), very pale ${o.ton} background: ${o.sahne}`).join('\n')}${dort.length < 4 ? `\n${[...Array(4 - dort.length).keys()].map((j) => `Panel ${dort.length + j + 1} (${POZ[dort.length + j]}), very pale cream background: a single small green potted plant.`).join('\n')}` : ''}
 
 ${ISKELET}`;
-  izgaralar.push({ no: izgaralar.length + 1, ids: dort.map((o) => o.id), genel: dort.map((o) => !!o.genel), prompt });
+  // 19 Ekim eki: numaralar 101'den (ilk tur 1–98, gorsel-log.txt ve gorseller/izgara ile cakismasin)
+  izgaralar.push({ no: Number(process.env.IZGARA_BASLA || 101) + izgaralar.length, ids: dort.map((o) => o.id), genel: dort.map((o) => !!o.genel), prompt });
 }
 fs.writeFileSync(path.join(KOK, 'tools/mufredat/izgara-plan.json'), JSON.stringify(izgaralar, null, 1));
 
 const goster = process.argv.indexOf('--goster');
 if (goster > 0) {
   const n = Number(process.argv[goster + 1]);
-  const g = izgaralar[n - 1];
+  const g = izgaralar.find((x) => x.no === n);
   console.log(JSON.stringify({ no: g.no, ids: g.ids }));
   console.log(g.prompt);
 } else {
