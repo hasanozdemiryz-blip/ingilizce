@@ -2678,43 +2678,69 @@ Genel'i (seviyesine göre) dolduruyor; LGS sezonu şimdi.
   sayfasından platformdaki üniteye doğrudan bağlantı; site yayını.
 - Bitti: ikisi yayında, canlıda tıklama testi.
 
-**Aşama 7a — LGS havuzunu büyüt** (yeni, 19 Ekim; ~16.000 kredi) — ÖNCE BU
-- Neden: satış bu yıl LGS'den; 418 kelime "8. sınıfın bütün kelimeleri" demeye yetmiyor.
-- Girdi: `tools/mufredat/lgs-havuz/havuz.json` (bkz. "LGS havuz analizi"). Önce
-  elle temizlik: çekimli tekrarlar (boiled, invented…), ad/gürültü (mill, sue),
-  sohbet kalıpları → ünite kalıplarına; tanıdık kelime birleşimleri (close friend,
-  true friend) → kalıp/test, kart değil.
-- **Düzeltme (kullanıcı, 19 Ekim): temel kelimeler de LGS'ye girer.** "8. sınıf
-  bilir" diye elemek yanlış; ürün sınavın istediği her kelimeyi verir, bilen hızlı
-  geçer. Önce LGS için üretilir, sonra aynı kart Çocuk'a ve Genel'e eklenir.
-  Havuz (durak/talimat hariç): **~1.566**, 510'unun kartı var. Bağlaçlar
-  (although, however, until…) da kart ya da kalıp olarak eklenir.
-- Kart: **~631 tek kelime** (304'ü temel; 233'ü Çocuk müfredatında → Çocuk'a da)
-  + **~100 phrasal/kalıp** (rely on, hold on, laid back) ≈ **~730 kart** → ~185
-  ızgara ≈ **~14.000–16.000 kredi** + ses ~1.500. Aşama 2–3–5 yöntemi.
-- Ünite içeriği büyür: kalıp ve testlere yeni kelimeler; ünite sayfası sayıları,
-  site "418" metinleri (ana sayfa "Kimin için", /lgs/ SSS, veliler) güncellenir.
-- Genel'e: okula özgü olmayanların hepsi (KARARLAR 15).
+#### PLAN v2 (19 Ekim) — kullanıcı onayı bekliyor; onaydan önce üretim YOK
 
-**Aşama 7b — Bölüm kilidi** (kredi yok; KARARLAR 14)
-- Profilde bölüm kalıcı (üyelikte bulunduğu sekmeden), BolumSecici üyeye gizli,
-  `?bolum=` üyede yok sayılır; mevcut 4 üye: şu anki bölümleri yazılır.
+Aşama 1–6 bitti (yukarıda). Mantık: satış bu yıl LGS 2027'den (KARARLAR 13). Önce
+LGS eksiksiz olur; aynı kartlar sonra Çocuk'a ve Genel'e eklenir, ayrıca üretilmez.
+Bakiye ~71.090; bu plan ~33.500 kredi, ~37.500 kalır.
 
-**Aşama 7c — Genel'in kalanı = Çocuk ortak** (~19.000–25.000 kredi)
-- 2–6. sınıftan kartı olmayan ~1.046 kelime/ifade; çocuk güvenlik kuralıyla
-  yazılır, Genel'e uyanlar (~770) Genel'e de girer. 132'si Aşama 7a'da zaten
-  üretiliyor (yeni LGS havuzunda). Çağrışım, cümle, sahne, görsel, ses (Aşama 2–3–5 yöntemi). Yayın.
+**A. Test turu** (kredi yok) — ilk iş
+- Kullanıcı Chrome'da kendi hesabıyla girer; Claude o oturumdan her ekranı tıklar:
+  site (3 sekme, logo, **üst menü — kullanıcı bozukluk gördü**, alt bilgi, 375 px),
+  platform (Genel ↔ LGS, yıl/ünite, ders, 7. basamak, ünite sayfası, test, sesler +
+  yavaş, senkron, çıkış/giriş). Tarama için ayrı deneme hesabı.
+- Bulunan hatalar düzeltilir, yerelde denenir, kullanıcı onayıyla yayın.
 
-**Aşama 7d — Satış düzeni** (öneri, kullanıcıyla konuşulacak; bkz. "Satış notları")
+**B. Ölçüm** (kredi yok) — satıştan önce şart
+- `olaylar`'a kaynak: referrer + `utm_*` (Google / Instagram / paylaşım / reklam).
+  Bugün 61 cihaz → 4 üye var ama kimin nereden geldiği bilinmiyor.
+- Huni: açıldı → ders bitti → 2. gün → üye. Haftalık bakılır.
 
-**Aşama 8 — Baştan sona test**
-- İlk giriş (üyeliksiz; üç seviye cevabı; tarama), üyelik/giriş/çıkış/Google,
-  başka cihazda devam, Genel ↔ LGS, LGS yılı/ünite, ders, tekrar, ünite testi,
-  cümle içi soru, sesler + yavaş, 375 px + masaüstü, internetsiz, eski kullanıcı
-  ilerlemesi, site → platform, her sekmede logo/menü/alt bilgi, kırık bağlantı,
-  konsol. Bulunanı düzelt, yeniden dene.
+**C. LGS kelime metinleri** (kredi yok)
+- Girdi `tools/mufredat/lgs-havuz/havuz.json`. Temizlik: çekimli tekrar (boiled,
+  invented), ad/gürültü (mill, sue), sohbet kalıbı → ünite kalıbı, tanıdık birleşim
+  (close friend) → kalıp/test.
+- **Temel kelimeler dahil** (kullanıcı 19 Ekim: ürün sınavın istediği her kelimeyi
+  verir). Bağlaçlar (although, however, until) de.
+- Hedef: havuz ~1.566, 510'u hazır → **~730 yeni kart** (631 kelime + ~100 kalıp).
+  Her kart: çağrışım (zorla → sadeleştir), sahne cümlesi, Türkçe, örnek cümle, ünite,
+  seviye, güvenlik (çocuk kuralı — kart Çocuk'a da gidecek).
+- Ünite içeriği: yeni kelimelerle kalıp ve test soruları genişler.
+- Kontrol: ünite başına 10 kart örnek kullanıcıya gösterilir, sonra kalanı.
 
-Toplam kredi ~32.400 (bakiye ~81.220). Planda olmayan: Çocuk'un tamamı, ödeme, reklam.
+**D. LGS görselleri ve sesleri** (~14.000–16.000 + ~1.500 kredi) — ONAYLA
+- ~185 ızgara (2×2, Nano Banana Pro 2K, KARARLAR 8), partiler hâlinde; kontrol
+  ızgarası; kusurlu kare sonraki ızgarada. Ses: Lexi Parker (kelime), diyaloglar Lexi + Matthew.
+- Tahmin %20 aşılırsa durulur (KARARLAR 12).
+
+**E. Platform** (kredi yok)
+- LGS destesi yeni kartlarla; Genel'e okula özgü olmayanlar (KARARLAR 15).
+- **Bölüm kilidi** (KARARLAR 14): üye, üye olduğu bölümde kalır; şerit üyeye gizli;
+  `?bolum=` üyede yok sayılır; mevcut 4 üyenin bölümü korunur.
+- **LGS teması** (öneri, karar kullanıcıda): iskelet aynı, vurgu mavi `#5ec8ff`;
+  geri sayım, ünite ilerleme çubuğu, "sınavda çıktı" rozeti.
+
+**F. Site** (kredi yok)
+- "418" geçen her yer güncellenir (ana sayfa "Kimin için", /lgs/, SSS, veliler,
+  ünite sayıları). Veliler vaadi doğru hâle gelir: "son 8 LGS'deki kelimelerin
+  %95'ten fazlası" (ölçüm: `lgs-havuz`, 2025 hariç tutulup denendi).
+- Yeni sayfa: **"LGS'de gerçekten çıkmış kelimeler"** — kaç sınavda geçtiğiyle
+  (rakiplerde yok).
+- Ana sayfada LGS'ye büyük giriş (geri sayım + düğme). Google adresleri değişmez.
+
+**G. Yayın + test** — platform ve site birlikte (CLAUDE.md), canlıda tıklama testi.
+
+**H. Çocuk + Genel'in kalanı** (~15.000–16.000 kredi) — LGS'den sonra
+- 2–6. sınıf kartsızlar ~1.046 − LGS'de üretilen 233 = **~810 kart**; Genel'e
+  uyanlar Genel'e. Çocuk sekmesinin platformda açılması ayrı karar.
+
+**I. Satış** — kullanıcı kararları gerekiyor
+- Ücretsiz kısım ne kadar (ör. ilk ünite / ilk 50 kelime), fiyat (LGS: sınava
+  kadar paket), ödeme altyapısı, "Ücretsiz · Reklamsız" dilinin değişmesi, SSS.
+- İkinci bölüm isteyen üye ne olur (ayrı hesap mı, ek satın alma mı).
+
+**Kullanıcıdan beklenen kararlar:** planın onayı; D'nin kredisi; LGS teması (E);
+satış soruları (I).
 
 #### NEREDE KALDIK
 
@@ -2800,8 +2826,8 @@ Toplam kredi ~32.400 (bakiye ~81.220). Planda olmayan: Çocuk'un tamamı, ödeme
   Kullanıcı Chrome'da kendi hesabıyla giriş yapar, Claude o oturumdan her şeyi
   tıklayarak test eder (375 px dahil). **Üst menüde bozukluklar var** (kullanıcı
   gördü, ayrıntı testte) → düzelt. Tarama için ayrı deneme hesabı.
-- [ ] Aşama 7a — LGS havuzunu büyüt (~730 kart, temel kelimeler dahil) → 7b bölüm kilidi → 7c Genel/Çocuk
-  ortak → 7d satış düzeni. Araçlar hazır: `tools/mufredat/izgara-*.mjs`, `tools/ses/*`,
+- [ ] PLAN v2 (onay bekliyor): A test → B ölçüm → C LGS metinleri → D görsel/ses →
+  E platform (bölüm kilidi, LGS teması) → F site → G yayın → H Çocuk/Genel → I satış. Araçlar hazır: `tools/mufredat/izgara-*.mjs`, `tools/ses/*`,
   kurallar `tools/kanca-kurallari.md`.
 - [ ] Aşama 8 — baştan sona test (tarama + üyelik + Google + başka cihaz dahil).
 
