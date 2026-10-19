@@ -114,6 +114,8 @@ type LgsHam = {
   mevcut: { id: string; unite: number }[];
   /** Genel kartlarinin seviyesi (Oxford CEFR) */
   seviye: Record<string, 'baslangic' | 'orta'>;
+  /** Genel kartlarinin ornek cumlesi: [Ingilizce, Turkce] — kelime aynen geciyor */
+  ornek: Record<string, [string, string]>;
 };
 const LGS = lgsHam as unknown as LgsHam;
 
@@ -140,6 +142,8 @@ const GENEL_ESKI: Card[] = (() => {
     image: GORSELLER.get(c.id) ?? null,
     seviye: LGS.seviye[c.id] ?? 'baslangic',
     unite: MEVCUT_UNITE.get(c.id),
+    ornek: LGS.ornek[c.id]?.[0],
+    ornekTr: LGS.ornek[c.id]?.[1],
   }));
 })();
 

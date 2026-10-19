@@ -143,7 +143,7 @@ export function activeDays(
 
 /**
  * Ustalik: kelimelerin merdivendeki ortalama yuksekligi.
- * 1. basamak %0, 6. basamak %100. "Kac kelime biliyorum" degil,
+ * 1. basamak %0, son (7.) basamak %100. "Kac kelime biliyorum" degil,
  * "ne kadar iyi biliyorum".
  */
 export function masteryRate(all: Progress[]): number | null {

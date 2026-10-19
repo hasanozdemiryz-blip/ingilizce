@@ -1,0 +1,40 @@
+# LGS ornek cumleleri: en|Ingilizce ornek|Turkce cevirisi
+achievement|Winning the science fair was a great achievement.|Bilim fuarını kazanmak büyük bir başarıydı.
+biochemist|Aziz Sancar is a famous biochemist.|Aziz Sancar ünlü bir biyokimyacıdır.
+catgut|Doctors used catgut to close wounds.|Doktorlar yaraları kapatmak için katgüt kullanırdı.
+cell|Every living thing is made of cells; a cell is very small.|Her canlı hücrelerden oluşur; bir hücre çok küçüktür.
+conduct|Scientists conduct experiments in the lab.|Bilim insanları laboratuvarda deney yürütür.
+cure|Scientists are looking for a cure for the disease.|Bilim insanları hastalığa bir çare arıyor.
+diagnose|Doctors can diagnose the illness with a blood test.|Doktorlar hastalığı kan testiyle teşhis edebilir.
+discover|Scientists discover new stars every year.|Bilim insanları her yıl yeni yıldızlar keşfeder.
+disease|Vaccines protect us from disease.|Aşılar bizi hastalıktan korur.
+do an experiment|Let's do an experiment with water and salt.|Su ve tuzla bir deney yapalım.
+evaluate|The teacher will evaluate our projects on Friday.|Öğretmen projelerimizi cuma günü değerlendirecek.
+examine|The doctor will examine your eyes.|Doktor gözlerini inceleyecek.
+explode|The balloon will explode if you blow too much.|Çok üflersen balon patlar.
+explore|Robots explore the surface of Mars.|Robotlar Mars'ın yüzeyini keşfediyor.
+find out|I want to find out how rainbows form.|Gökkuşağının nasıl oluştuğunu öğrenmek istiyorum.
+genius|Einstein was a genius.|Einstein bir dâhiydi.
+gravity|Gravity keeps us on the ground.|Yer çekimi bizi yerde tutar.
+high-tech|The hospital has high-tech machines.|Hastanede ileri teknoloji makineler var.
+invent|I want to invent a robot that cleans my room.|Odamı temizleyen bir robot icat etmek istiyorum.
+lab|We wear goggles in the lab.|Laboratuvarda koruyucu gözlük takarız.
+observe|We observe the moon with a telescope.|Ay'ı teleskopla gözlemleriz.
+paraplegic|The paraplegic athlete won a gold medal.|Felçli sporcu altın madalya kazandı.
+planet|Mars is called the red planet.|Mars'a kızıl gezegen denir.
+portable|I take my portable speaker to picnics.|Taşınabilir hoparlörümü pikniklere götürürüm.
+process|Making paper is a long process.|Kâğıt yapmak uzun bir süreçtir.
+rabies vaccine|Louis Pasteur developed the rabies vaccine.|Louis Pasteur kuduz aşısını geliştirdi.
+researcher|The researcher studies plants in the forest.|Araştırmacı ormandaki bitkileri inceliyor.
+result|The result of the experiment surprised us.|Deneyin sonucu bizi şaşırttı.
+safety|Safety comes first in the lab.|Laboratuvarda güvenlik önce gelir.
+scientific|This is a scientific magazine for kids.|Bu, çocuklar için bilimsel bir dergi.
+search|I search for information on the internet.|İnternette bilgi ararım.
+smallpox vaccine|Edward Jenner developed the smallpox vaccine.|Edward Jenner çiçek aşısını geliştirdi.
+solar panel|A solar panel turns sunlight into electricity.|Güneş paneli güneş ışığını elektriğe çevirir.
+speciality|Baklava is the speciality of this restaurant.|Baklava bu restoranın uzmanlık yemeği.
+succeed|If you work hard, you will succeed.|Çok çalışırsan başarırsın.
+test tube|Pour the liquid into the test tube.|Sıvıyı deney tüpüne dök.
+tyre|The car has a flat tyre.|Arabanın lastiği patlak.
+vaccination|Vaccination protects children from many diseases.|Aşılama çocukları birçok hastalıktan korur.
+well-equipped|Our school has a well-equipped science lab.|Okulumuzun donanımlı bir fen laboratuvarı var.

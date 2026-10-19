@@ -1,0 +1,39 @@
+# LGS ornek cumleleri: en|Ingilizce ornek|Turkce cevirisi
+accommodation|The price includes accommodation and breakfast.|Fiyata konaklama ve kahvaltı dahil.
+all-inclusive|We stayed at an all-inclusive hotel in Antalya.|Antalya'da her şey dahil bir otelde kaldık.
+ancient|Ephesus is an ancient city.|Efes antik bir şehirdir.
+architecture|I love the architecture of old Istanbul houses.|Eski İstanbul evlerinin mimarisini çok severim.
+attraction|The Galata Tower is a popular attraction.|Galata Kulesi popüler bir turistik yerdir.
+authentic|This restaurant serves authentic Turkish food.|Bu restoran otantik Türk yemekleri sunuyor.
+bamboo bungalow|We slept in a bamboo bungalow near the beach.|Plajın yakınında bir bambu bungalovda uyuduk.
+bed and breakfast|We found a small bed and breakfast in the village.|Köyde küçük bir oda kahvaltı pansiyon bulduk.
+boutique hotel|The boutique hotel had only ten rooms.|Butik otelin sadece on odası vardı.
+capital|Ankara is the capital of Turkey.|Ankara Türkiye'nin başkentidir.
+caravansary|Travellers rested in the caravansary long ago.|Uzun zaman önce yolcular kervansarayda dinlenirdi.
+ceremony|The graduation ceremony was very emotional.|Mezuniyet töreni çok duygusaldı.
+countryside|My grandparents live in the countryside.|Büyükannemle büyükbabam kırsalda yaşıyor.
+cultural|Istanbul has many cultural events.|İstanbul'da birçok kültürel etkinlik var.
+culture|I want to learn about Japanese culture.|Japon kültürünü öğrenmek istiyorum.
+delight|To my delight, the hotel had a pool.|Beni çok sevindiren şey, otelin havuzu vardı.
+destination|Bodrum is a popular holiday destination.|Bodrum popüler bir tatil varış yeridir.
+fountain|Children played around the fountain.|Çocuklar çeşmenin etrafında oynadı.
+historic site|Troy is an important historic site.|Truva önemli bir tarihi alandır.
+incredible|The view from the balloon was incredible.|Balondan manzara inanılmazdı.
+journey|The journey to Van took ten hours.|Van'a yolculuk on saat sürdü.
+landmark|The Maiden's Tower is a famous landmark.|Kız Kulesi ünlü bir simge yapıdır.
+monument|There is a big monument in the city square.|Şehir meydanında büyük bir anıt var.
+mosque|The mosque has beautiful blue tiles.|Caminin güzel mavi çinileri var.
+preserve|We must preserve our historic buildings.|Tarihi binalarımızı korumalıyız.
+prophet|The museum has old books about the life of the prophet.|Müzede peygamberin hayatı hakkında eski kitaplar var.
+province|Konya is the largest province in Turkey.|Konya Türkiye'nin en büyük ilidir.
+refresh|A cold drink will refresh you.|Soğuk bir içecek seni tazeler.
+region|The Black Sea region is very green.|Karadeniz bölgesi çok yeşildir.
+resort|We spent a week at a ski resort.|Bir kayak tatil köyünde bir hafta geçirdik.
+rural|Life in rural areas is quiet.|Kırsal bölgelerde hayat sakindir.
+settlement|Çatalhöyük is a very old settlement in Konya.|Çatalhöyük, Konya'da çok eski bir yerleşim yeridir.
+shrine|Many visitors come to the shrine every year.|Her yıl birçok ziyaretçi türbeye geliyor.
+souvenir|I bought a souvenir for my sister.|Kız kardeşime bir hediyelik eşya aldım.
+square|Let's meet in the main square.|Ana meydanda buluşalım.
+tomb|The tomb is in the garden of the museum.|Mezar müzenin bahçesinde.
+trip|Our school trip to Bursa was great.|Bursa'ya okul gezimiz harikaydı.
+urban|Urban life is busy and noisy.|Kent hayatı yoğun ve gürültülüdür.

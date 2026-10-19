@@ -1,0 +1,41 @@
+# LGS ornek cumleleri: en|Ingilizce ornek|Turkce cevirisi
+addiction|Phone addiction is a problem for many teenagers.|Telefon bağımlılığı birçok genç için bir sorun.
+appointment|I have a dentist appointment at three.|Saat üçte diş hekimi randevum var.
+available|Is the manager available now?|Müdür şu an müsait mi?
+bad line|Sorry, it's a bad line. I can't hear you.|Pardon, hat kötü. Seni duyamıyorum.
+break into|Someone tried to break into the shop last night.|Dün gece biri dükkâna zorla girmeye çalıştı.
+burglary|The police are looking into the burglary.|Polis hırsızlığı araştırıyor.
+call|I will call you this evening.|Bu akşam seni ararım.
+clarification|I asked the teacher for clarification.|Öğretmenden açıklama istedim.
+concentration|Chess needs a lot of concentration.|Satranç çok konsantrasyon ister.
+connect|I can't connect to the internet.|İnternete bağlanamıyorum.
+cons|Every plan has pros and cons.|Her planın artıları ve eksileri vardır.
+contact|You can contact me by e-mail.|Benimle e-postayla iletişim kurabilirsin.
+conversation|We had a long conversation on the phone.|Telefonda uzun bir sohbet ettik.
+customer service|Call customer service if the phone doesn't work.|Telefon çalışmazsa müşteri hizmetlerini ara.
+dial|Dial 112 in an emergency.|Acil durumda 112'yi çevir.
+disturb|Please don't disturb me; I'm studying.|Lütfen beni rahatsız etme; ders çalışıyorum.
+doorbell|The doorbell rang while I was in the shower.|Ben duştayken kapı zili çaldı.
+engaged|I called you twice, but the line was engaged.|Seni iki kez aradım ama hat meşguldü.
+evolve|Phones evolve very quickly.|Telefonlar çok hızlı gelişiyor.
+extension|Please call extension 214.|Lütfen 214 numaralı dahili hattı arayın.
+get back|I will get back to you tomorrow.|Yarın sana geri dönüş yapacağım.
+get in touch|Let's get in touch after the holiday.|Tatilden sonra iletişime geçelim.
+hang on|Hang on a minute, I'll get a pen.|Bir dakika bekle, kalem alayım.
+hang up|Don't hang up! I'm still talking.|Kapatma! Hâlâ konuşuyorum.
+hold|Can you hold, please? She is on another line.|Hatta bekler misiniz? Diğer hatta konuşuyor.
+incident|Nobody was hurt in the incident.|Olayda kimse yaralanmadı.
+line|The line is very noisy today.|Hat bugün çok parazitli.
+memo|I left a memo on the fridge for my mum.|Annem için buzdolabına bir not bıraktım.
+message|Can I leave a message for Ayşe?|Ayşe'ye mesaj bırakabilir miyim?
+misunderstanding|Sorry, it was just a misunderstanding.|Özür dilerim, sadece bir yanlış anlamaydı.
+municipality|The municipality built a new park.|Belediye yeni bir park yaptı.
+notice|Did you notice the new sign?|Yeni tabelayı fark ettin mi?
+pick up|Please pick up the phone when I call.|Aradığımda lütfen telefonu aç.
+polite|Always be polite on the phone.|Telefonda her zaman kibar ol.
+pros|What are the pros of online lessons?|Çevrim içi derslerin artıları ne?
+put someone through|Could you put someone through to the sales office?|Satış bürosuna birini bağlayabilir misiniz?
+quickness|The quickness of the internet surprised me.|İnternetin hızı beni şaşırttı.
+reservation|I made a reservation for four people.|Dört kişilik rezervasyon yaptım.
+security|Call security if you see something strange.|Tuhaf bir şey görürsen güvenliği ara.
+staff|The hotel staff were very helpful.|Otel personeli çok yardımseverdi.

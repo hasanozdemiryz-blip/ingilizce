@@ -10,6 +10,7 @@ import { relativeDue } from '../dates';
 import type { AppState, Card as CardType, Progress } from '../types';
 import { t } from '../dil';
 import { kancaYazisi } from '../components/Cagrisim';
+import { kancaliMi } from '../types';
 
 type Props = {
   progress: Progress[];
@@ -391,7 +392,7 @@ export function Home({
               {sonKancalar.map((c) => (
                 <span key={c.id} className="rounded-full bg-sunken px-3 py-1.5 text-sm">
                   <span className="word font-semibold">{c.en}</span>
-                  <span className="text-ink-faint"> ≈ </span>
+                  <span className="text-ink-faint">{kancaliMi(c) ? ' ≈ ' : ' · '}</span>
                   <span className="font-semibold text-ink bg-spark/55 rounded px-1">{kancaYazisi(c)}</span>
                 </span>
               ))}

@@ -2627,8 +2627,15 @@ Toplam kredi ~32.400 (bakiye ~81.220). Planda olmayan: Çocuk'un tamamı, ödeme
         Genel'e 375 (12'si okula özgü/hassas → yalnız LGS). Kanca istisnaları:
         attend ≈ at (onaylı), mysterious ≈ Mısır. Zorlamaya rağmen K oranı %9:
         soyut/benzemeyen kelimeler görsel çağrışıma döndü (kural: çok alakasızsa sadeleştir).
-  - [ ] Ünite içeriği: her ünite 8–12 kalıp, 3–4 diyalog, 10 test sorusu (özgün).
-  - [ ] Kartları `cards.json`'a ekleme (yeni alanlar: bolumler, lgsUnite, seviye, tur).
+  - [x] Ünite içeriği (20 Ekim): `content/lgs-unite/u01..u10.json` — 104 kalıp,
+        30 diyalog (her biri kadın + erkek), 100 test sorusu; `src/lgs.test.ts` denetliyor.
+  - [x] Kart verisi: `cards.json`'a DEĞİL, `content/lgs.json`'a (üretici
+        `node tools/mufredat/lgs-icerik.mjs`). Neden: cards.json Excel'den üretiliyor,
+        ek alanlar silinirdi. İçinde: LGS kartları (tur/yol/unite/seviye/ornek),
+        üniteye bağlı 31 Genel kartı, Genel seviyeleri, Genel örnek cümleleri.
+  - [x] İngilizce örnek cümleler (7. basamak için): LGS 387 →
+        `tools/mufredat/lgs-ornek/uNN.txt` (`en|cümle|Türkçe`); Genel 365/400
+        `tools/kelime-ek.txt`'ten (35'inde kelime çekimli geçiyor → 7. basamak yok).
 - Sıra notu: görseller yalnız kart metnine bağlı → **Aşama 3 (görseller) şimdi
   başlayabilir**; ünite içeriği ve cards.json entegrasyonu paralel yapılır.
 - LGS deneme görselleri `gorseller/lgs/` (survive, delicious, refuse — onaylı
@@ -2639,13 +2646,10 @@ Toplam kredi ~32.400 (bakiye ~81.220). Planda olmayan: Çocuk'un tamamı, ödeme
   (ayar ve prompt `izgara-plan.mjs`) → `node tools/mufredat/izgara-isle.mjs
   <no> <creationId> <url> [atla-id]` → `kontrol-sayfasi.mjs` ile göz kontrolü
   → `lgs-webp.mjs` → `src/assets/cards-lgs/*.webp` (depoda).
-  - [x] 1–95. ızgara üretildi (kayıt: `tools/mufredat/gorsel-log.txt`, creation
-        id'leriyle; başka cihazda Magnific'ten yeniden indirilebilir). rob yeni
-        görseliyle Genel'de (400/400).
-  - [ ] 96. ızgara (waste, water-shortage + 2 yeniden çizim) ve yeniden çizim
-        ızgaraları. **Yeniden çizilecekler** (`gorseller/yeniden.txt`): awesome,
-        best-friend (alttan kesik), flour (pakette yazı), dough, memo,
-        notification, password, all-inclusive (kenara taşıyor).
+  - [x] **Bitti (20 Ekim):** 98 ızgara (96 plan + 2 yeniden çizim: kusurlu 10 kart),
+        **384/384 LGS görseli** `src/assets/cards-lgs/` (kayıt: `gorsel-log.txt`,
+        creation id'leriyle). rob yeni görseliyle Genel'de (400/400). Harcanan
+        ~7.340 kredi (tahmin 8.500); bakiye 73.880.
   - Dersler: model bazen ince gri çerçeve bırakıyor → `izgara-bol.mjs` her
     kenardan 8 px tıraşlıyor; CDN yavaşlarsa `izgara-isle.mjs` 5 dk zaman aşımı
     + 4 deneme. Ambalaj/etiket yazısı için iskelete "packages, labels" eklendi.

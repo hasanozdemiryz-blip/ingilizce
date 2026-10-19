@@ -129,7 +129,7 @@ export function WordList({ progress, onExit }: { progress: Progress[]; onExit: (
                 <div className="min-w-0 flex-1">
                   <div className="flex items-baseline gap-2 flex-wrap">
                     <span className="word font-semibold">{c.en}</span>
-                    <span className="text-ink-faint text-sm">≈</span>
+                    <span className="text-ink-faint text-sm">{kancaliMi(c) ? '≈' : '·'}</span>
                     <span
                       className={`text-sm font-semibold rounded px-1 ${
                         ogrenildi ? 'bg-spark/55 text-ink' : 'text-ink-faint'

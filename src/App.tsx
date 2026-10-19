@@ -17,6 +17,8 @@ import {
 import { AKTIF_BOLUM } from './bolum';
 import { LgsPanel } from './components/LgsPanel';
 import { Unite } from './screens/Unite';
+import { Tarama } from './screens/Tarama';
+import { TaramaDaveti } from './components/TaramaDaveti';
 import { db, getState, setState, tercihKaydet } from './db';
 import {
   aheadQueue,
@@ -85,6 +87,8 @@ type Flow =
   | { name: 'profil' }
   /** LGS unite sayfasi: kelimeler, kaliplar, diyaloglar, test */
   | { name: 'unite'; no: number }
+  /** Genel: "biliyorum / bilmiyorum" taramasi (bkz. Tarama) */
+  | { name: 'tarama' }
   | null;
 
 export default function App() {
@@ -433,6 +437,19 @@ export default function App() {
       />
     );
   }
+  if (flow?.name === 'tarama') {
+    return (
+      <Tarama
+        kartlar={genelDestesi('baslangic').filter((c) => c.seviye !== 'orta')}
+        progress={progress}
+        onBitti={(bilinen, sorulan) => {
+          olay('tarama_bitti', { bilinen, sorulan });
+          void tercihKaydet({ taramaGoruldu: true });
+        }}
+        onExit={kapat}
+      />
+    );
+  }
   if (flow?.name === 'kelimeler') {
     return <WordList progress={progress} onExit={kapat} />;
   }
@@ -491,6 +508,12 @@ export default function App() {
     : genelDestesi(uye?.bilgi?.seviye === 'orta' ? 'orta' : 'baslangic');
   /* LGS'de yil ve unite secilmeden ders acilmaz: once panel soruyor */
   const lgsHazir = !lgs || (Boolean(state.lgsYil) && Boolean(state.lgsUnite));
+  /*
+    Tarama yalnizca Genel'de ve seviyesini "Biraz" ya da "Orta" diyen uyeye,
+    bir kez (yapilsin ya da gecilsin). "Hic bilmiyorum" diyen bastan baslar.
+  */
+  const taramaSorulur =
+    !lgs && !state.taramaGoruldu && (uye?.bilgi?.seviye === 'biraz' || uye?.bilgi?.seviye === 'orta');
 
   const due = dueQueue(progress);
   const newCards = lgsHazir ? nextBatch(progress, state.dailyLimit, new Date(), deste) : [];
@@ -529,6 +552,11 @@ export default function App() {
                   void tercihKaydet({ lgsUnite });
                 }}
                 onUniteAc={(no) => setFlow({ name: 'unite', no })}
+              />
+            ) : taramaSorulur ? (
+              <TaramaDaveti
+                onBasla={() => setFlow({ name: 'tarama' })}
+                onGec={() => void tercihKaydet({ taramaGoruldu: true })}
               />
             ) : undefined
           }

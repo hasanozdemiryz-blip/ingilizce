@@ -177,18 +177,18 @@ describe('duzenlilik', () => {
 });
 
 describe('ustalik', () => {
-  // 1. basamak %0, 6. basamak %100.
+  // 1. basamak %0, 7. (son) basamak %100.
   it('en alt %0, en ust %100', () => {
     expect(masteryRate([kart(0, 1)])).toBe(0);
-    expect(masteryRate([kart(0, 6)])).toBe(100);
+    expect(masteryRate([kart(0, 7)])).toBe(100);
   });
 
   it('ortalamayi alir', () => {
-    expect(masteryRate([kart(0, 1), kart(1, 6)])).toBe(50);
+    expect(masteryRate([kart(0, 1), kart(1, 7)])).toBe(50);
   });
 
   it('tanisilmamis kart sayilmaz', () => {
-    const ps = [kart(0, 6), { ...kart(1, 1), introduced: false }];
+    const ps = [kart(0, 7), { ...kart(1, 1), introduced: false }];
     expect(masteryRate(ps)).toBe(100);
   });
 

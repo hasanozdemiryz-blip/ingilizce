@@ -7,7 +7,7 @@ import { TAB_SPACE } from '../components/TabBar';
 import { BackButton, Button, Card, Ikon, Screen, TopBar } from '../components/ui';
 import type { IkonAd } from '../icons';
 import { CARD_BY_ID, ESKI_GUN } from '../content';
-import { ADIM, ADIMLAR, type Gorev } from '../exercise';
+import { ADIM, ADIMLAR, adimVarMi, sorulacakAdim, type Gorev } from '../exercise';
 import { hardest } from '../quality';
 import { logAnswer, logSession } from '../db';
 import { todayKey } from '../dates';
@@ -22,6 +22,7 @@ import {
 import type { Progress, Step } from '../types';
 import { t } from '../dil';
 import { kancaYazisi } from '../components/Cagrisim';
+import { kancaliMi } from '../types';
 
 /**
  * Otomatik kapsamlarda parti boyutu.
@@ -93,6 +94,7 @@ const ADIM_RENK: Record<Step, string> = {
   4: 'bg-spark-soft',
   5: 'bg-grow-soft',
   6: 'bg-grow-soft',
+  7: 'bg-grow-soft',
 };
 
 /** Elle secim otomatik kapsamlarla ayni eksende degil; kendi satirinda. */
@@ -264,12 +266,14 @@ export function Practice({
       Merdiveni ve FSRS'i oynatmiyor — Egzersiz'in kurali burada da gecerli.
     */
     if (adim === 'ders') {
-      return ADIMLAR.flatMap((step) => kartlar.map((card): Gorev => ({ card, step })));
+      return ADIMLAR.flatMap((step) =>
+        kartlar.filter((card) => adimVarMi(card, step)).map((card): Gorev => ({ card, step })),
+      );
     }
     return secilenler
       .map((p) => {
         const card = CARD_BY_ID.get(p.cardId);
-        return card ? { card, step: adim === 'karisik' ? p.step : adim } : null;
+        return card ? { card, step: sorulacakAdim(card, adim === 'karisik' ? p.step : adim) } : null;
       })
       .filter((g): g is Gorev => g !== null);
   }, [secilenler, kartlar, adim]);
@@ -343,7 +347,7 @@ export function Practice({
                   <span className="min-w-0 flex-1">
                     <span className="flex items-baseline gap-2 flex-wrap">
                       <span className="word font-semibold">{c.en}</span>
-                      <span className={secili ? 'text-white/60' : 'text-ink-faint'}>≈</span>
+                      <span className={secili ? 'text-white/60' : 'text-ink-faint'}>{kancaliMi(c) ? '≈' : '·'}</span>
                       <span
                         className={`text-sm font-semibold rounded px-1 ${
                           secili ? 'bg-white/25' : 'bg-spark/55 text-ink'

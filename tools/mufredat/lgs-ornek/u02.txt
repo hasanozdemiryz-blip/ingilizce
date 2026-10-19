@@ -1,0 +1,41 @@
+# LGS ornek cumleleri: en|Ingilizce ornek|Turkce cevirisi
+archery|My brother started archery lessons this year.|Ağabeyim bu yıl okçuluk derslerine başladı.
+argue|My sister and I sometimes argue about the TV.|Kız kardeşimle bazen televizyon yüzünden tartışırız.
+backpack|Put your water bottle in your backpack.|Su şişeni sırt çantana koy.
+board game|We play a board game every Friday night.|Her cuma akşamı bir kutu oyunu oynarız.
+campfire|We sang songs around the campfire.|Kamp ateşinin etrafında şarkılar söyledik.
+casual|I prefer casual clothes at the weekend.|Hafta sonları günlük kıyafetleri tercih ederim.
+compass|We used a compass to find the way.|Yolu bulmak için pusula kullandık.
+crunch|The leaves crunch under our feet in autumn.|Sonbaharda yapraklar ayaklarımızın altında çatırdar.
+equipment|We need special equipment for camping.|Kamp için özel ekipmana ihtiyacımız var.
+fashion|She is very interested in fashion.|Modayla çok ilgileniyor.
+fizzy|I don't drink fizzy drinks.|Gazlı içecek içmem.
+folk|My grandfather loves Turkish folk music.|Dedem Türk halk müziğini çok sever.
+fond of|I am fond of reading comics.|Çizgi roman okumaya bayılırım.
+gain|You gain new friends in a sports team.|Bir spor takımında yeni arkadaşlar kazanırsın.
+hang out|We hang out at the park after school.|Okuldan sonra parkta takılırız.
+harmonic|The choir sang a harmonic song.|Koro ahenkli bir şarkı söyledi.
+honest|An honest person always tells the truth.|Dürüst bir insan hep doğruyu söyler.
+impressive|Your science project is very impressive.|Fen projen çok etkileyici.
+map|Let's look at the map before the trip.|Geziden önce haritaya bakalım.
+pitch|The players are warming up on the pitch.|Oyuncular sahada ısınıyor.
+prefer|I prefer tea to coffee.|Çayı kahveye tercih ederim.
+push-up|A push-up is a good exercise for your arms.|Şınav kolların için iyi bir egzersizdir.
+recommend|Can you recommend a good book?|Bana iyi bir kitap tavsiye edebilir misin?
+relationship|She has a good relationship with her parents.|Ailesiyle iyi bir ilişkisi var.
+relaxing|Listening to the rain is very relaxing.|Yağmuru dinlemek çok rahatlatıcı.
+reward|The dog got a reward for sitting quietly.|Köpek sessizce oturduğu için ödül aldı.
+ridiculous|That hat looks ridiculous on you!|O şapka sende gülünç duruyor!
+rope|Hold the rope tightly.|İpi sıkıca tut.
+self-disciplined|She studies every day; she is very self-disciplined.|Her gün çalışıyor; çok öz disiplinli.
+sleeping bag|Don't forget your sleeping bag for the camp.|Kamp için uyku tulumunu unutma.
+snob|He is a snob; he only talks about expensive things.|O bir züppe; sadece pahalı şeylerden bahseder.
+squad|Our squad won the volleyball match.|Ekibimiz voleybol maçını kazandı.
+teenager|My cousin is a teenager; she is fifteen.|Kuzenim bir ergen; on beş yaşında.
+terrific|We had a terrific time at the festival.|Festivalde harika vakit geçirdik.
+training|Football training is on Tuesdays.|Futbol antrenmanı salı günleri.
+trekking|We went trekking in the mountains last summer.|Geçen yaz dağlarda doğa yürüyüşüne gittik.
+trendy|She always wears trendy sneakers.|Hep modaya uygun spor ayakkabılar giyer.
+types of music|What types of music do you like?|Ne tür müzikler seversin?
+unbearable|The heat in August is unbearable.|Ağustostaki sıcak dayanılmaz.
+youth|The youth centre has a big library.|Gençlik merkezinin büyük bir kütüphanesi var.

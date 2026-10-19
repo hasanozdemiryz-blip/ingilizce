@@ -29,6 +29,14 @@ export type Card = {
   unite?: number;
   /** Genel seviyesi (Oxford CEFR: A1–A2 baslangic, B1+ orta). */
   seviye?: 'baslangic' | 'orta';
+  /**
+   * Ingilizce ornek cumle; kelime icinde AYNEN geciyor (bkz.
+   * tools/mufredat/lgs-icerik.mjs). Merdivenin 7. basamagi bundan:
+   * cumlede bosluk doldurma. Yoksa kart 6. basamakta biter.
+   */
+  ornek?: string;
+  /** Ornek cumlenin Turkcesi — cevaptan sonra gosterilir */
+  ornekTr?: string;
 };
 
 /** Kancasi olan kart mi — G/I kartlarda kanca yerine gorsel cagrisim var. */
@@ -51,7 +59,7 @@ export const kancaliMi = (c: Pick<Card, 'hook'>) => c.hook.trim() !== '';
  * 1-2 tanima, 3-4 gecis, 5-6 uretim. Kullanilabilir kelime hazinesi
  * uretim tarafinda olusur, o yuzden merdiven tanimada bitmez.
  */
-export type Step = 1 | 2 | 3 | 4 | 5 | 6;
+export type Step = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
 /** Kullanici ilerlemesi. IndexedDB'de, cihazda. */
 export type Progress = {

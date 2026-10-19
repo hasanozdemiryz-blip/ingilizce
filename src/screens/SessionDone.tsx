@@ -8,6 +8,7 @@ import { CARD_BY_ID } from '../content';
 import type { Kazanim } from '../cerceveler';
 import { t } from '../dil';
 import { kancaYazisi } from '../components/Cagrisim';
+import { kancaliMi } from '../types';
 
 /**
  * Ders bitisi.
@@ -111,7 +112,7 @@ export function SessionDone({
                       <span className="block text-sm text-ink-soft truncate">{c.tr}</span>
                     </span>
                     <span className="shrink-0 rounded-full bg-spark-soft px-2.5 py-1 text-sm font-bold">
-                      {`≈ ${kancaYazisi(c)}`}
+                      {kancaliMi(c) ? `≈ ${c.hook}` : kancaYazisi(c)}
                     </span>
                   </li>
                 ))}
