@@ -2547,7 +2547,7 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
 - **Çalışma dalı yine `main`** (20 Ekim'de `uc-bolum` birleşti ve yayına çıktı:
   uygulama hafizada.com/ingilizce/, site hafizada.com). Başka cihazda:
   `git checkout main && git pull` (site deposunda `git pull`).
-- **Sıradaki iş (19 Ekim): test turu** (kullanıcı giriş yapar, Claude Chrome'dan test eder; üst menü bozuklukları), sonra **PLAN v2** (onay bekliyor) — bkz. NEREDE KALDIK'ın sonu ve "2026-10-19 — LGS havuz analizi".
+- **Sıradaki iş (19 Ekim): test turu** (kullanıcı giriş yapar, Claude Chrome'dan test eder; üst menü bozuklukları), sonra **PLAN v2** (onaylı) — bkz. NEREDE KALDIK'ın sonu ve "2026-10-19 — LGS havuz analizi".
 - **Önce aşağıdaki KARARLAR'ı oku.** Bir şey önermeden önce onlara bak; çelişen
   öneri yapma. Yeni istekte önce tek cümleyle "anladığım şu" yaz.
 - **Şu anki adım:** "NEREDE KALDIK" (bu bölümün sonunda) — her aşama bitince güncellenir.
@@ -2678,11 +2678,11 @@ Genel'i (seviyesine göre) dolduruyor; LGS sezonu şimdi.
   sayfasından platformdaki üniteye doğrudan bağlantı; site yayını.
 - Bitti: ikisi yayında, canlıda tıklama testi.
 
-#### PLAN v2 (19 Ekim) — kullanıcı onayı bekliyor; onaydan önce üretim YOK
+#### PLAN v2 (19 Ekim) — ONAYLANDI (D'nin kredisi C'nin örnekleri görülünce ayrıca sorulur)
 
 Aşama 1–6 bitti (yukarıda). Mantık: satış bu yıl LGS 2027'den (KARARLAR 13). Önce
 LGS eksiksiz olur; aynı kartlar sonra Çocuk'a ve Genel'e eklenir, ayrıca üretilmez.
-Bakiye ~71.090; bu plan ~33.500 kredi, ~37.500 kalır.
+Bakiye ~71.090; bu plan ~17.500 kredi (yalnız D), ~53.500 kalır.
 
 **A. Test turu** (kredi yok) — ilk iş
 - Kullanıcı Chrome'da kendi hesabıyla girer; Claude o oturumdan her ekranı tıklar:
@@ -2730,9 +2730,10 @@ Bakiye ~71.090; bu plan ~33.500 kredi, ~37.500 kalır.
 
 **G. Yayın + test** — platform ve site birlikte (CLAUDE.md), canlıda tıklama testi.
 
-**H. Çocuk + Genel'in kalanı** (~15.000–16.000 kredi) — LGS'den sonra
-- 2–6. sınıf kartsızlar ~1.046 − LGS'de üretilen 233 = **~810 kart**; Genel'e
-  uyanlar Genel'e. Çocuk sekmesinin platformda açılması ayrı karar.
+**H. Çocuk + Genel'in kalanı — PLANDAN ÇIKTI** (kullanıcı, 19 Ekim): Çocuk ve
+Genel için ayrı üretim yok. Oralara yalnız LGS'de üretilen kartlar eklenir
+(Genel'e okula özgü olmayanlar; Çocuk'a 2–6. sınıf müfredatındaki ~233 + mevcut
+231). Eski "Aşama 7 — Genel'in kalanı" iptal.
 
 **I. Satış** — kullanıcı kararları gerekiyor
 - Ücretsiz kısım ne kadar (ör. ilk ünite / ilk 50 kelime), fiyat (LGS: sınava
@@ -2826,8 +2827,8 @@ satış soruları (I).
   Kullanıcı Chrome'da kendi hesabıyla giriş yapar, Claude o oturumdan her şeyi
   tıklayarak test eder (375 px dahil). **Üst menüde bozukluklar var** (kullanıcı
   gördü, ayrıntı testte) → düzelt. Tarama için ayrı deneme hesabı.
-- [ ] PLAN v2 (onay bekliyor): A test → B ölçüm → C LGS metinleri → D görsel/ses →
-  E platform (bölüm kilidi, LGS teması) → F site → G yayın → H Çocuk/Genel → I satış. Araçlar hazır: `tools/mufredat/izgara-*.mjs`, `tools/ses/*`,
+- [ ] PLAN v2 (onaylı 19 Ekim): A test → B ölçüm → C LGS metinleri → D görsel/ses →
+  E platform (bölüm kilidi, LGS teması) → F site → G yayın → I satış. (H çıktı.) Araçlar hazır: `tools/mufredat/izgara-*.mjs`, `tools/ses/*`,
   kurallar `tools/kanca-kurallari.md`.
 - [ ] Aşama 8 — baştan sona test (tarama + üyelik + Google + başka cihaz dahil).
 
