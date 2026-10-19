@@ -1,0 +1,41 @@
+# 6. ünite Adventures — EK (19 Ekim 2026)
+# en|tr|tur|kanca|yol|cumle|sahne (EN)|ton|genel(E/H)|örnek (EN)|örnek (TR)
+absolutely|kesinlikle|G|||Dondurma ister misin deyince kesinlikle dedi|A boy nods eagerly with a huge smile as a friend offers him an ice cream cone.|pink|E|You are absolutely right.|Kesinlikle haklısın.
+adventure|macera|G|||Sandalla adaya maceraya çıktılar|Two children with a map row a small boat toward a little island with a palm tree.|sky-blue|E|Our trip was a big adventure.|Gezimiz büyük bir maceraydı.
+agree|katılmak (fikre)|K|ağrı|ses|Ağrı Dağı'na tırmanma fikrine herkes katıldı|A group of hikers at the foot of a big snowy mountain all raise their hands and nod in agreement.|sky-blue|E|I agree with you.|Sana katılıyorum.
+amused|eğlenmiş|G|||Kuklaları izleyen çocuklar çok eğlendi|Children laugh while watching a puppet show with two colourful puppets.|yellow|E|The children were amused by the clown.|Çocuklar palyaçoyla çok eğlendi.
+cave|mağara|G|||Fenerle mağaranın içine baktılar|Two children with a lantern peek into the entrance of a rocky cave.|cream|E|We explored a dark cave.|Karanlık bir mağarayı keşfettik.
+cycling|bisiklet sürme|G|||Hafta sonu ailece bisiklete bindik|A family rides bicycles together on a park path.|green|E|Cycling is good for your health.|Bisiklet sürmek sağlığa iyidir.
+desert|çöl|G|||Develer çölde yürüdü|A line of camels walks across sand dunes under a bright sun.|yellow|E|It is very hot in the desert.|Çölde hava çok sıcak.
+disagree|katılmamak|G|||Arkadaşının fikrine katılmayıp başını salladı|A girl shakes her head and crosses her arms while a friend points at a map.|cream|E|I disagree with this idea.|Bu fikre katılmıyorum.
+excitement|heyecan|G|||Hediyeyi açarken heyecandan zıpladı|A girl jumps with excitement as she opens a big present.|pink|E|We waited for the trip with excitement.|Geziyi heyecanla bekledik.
+famous|ünlü|G|||Ünlü şarkıcıya imza için koştular|Children hold out notebooks to a smiling famous singer signing autographs; no text.|lavender|E|Pamukkale is a famous place.|Pamukkale ünlü bir yer.
+height|yükseklik, boy|G|||Kapının kenarında boyunu ölçtü|A father marks his daughter's height on a door frame with a pencil.|cream|E|What is your height?|Boyun kaç?
+high|yüksek|G|||Uçurtma çok yükseğe uçtu|A boy holds the string of a kite flying very high in the sky.|sky-blue|E|The mountain is very high.|Dağ çok yüksek.
+less|daha az|G|||Kardeşinin bardağında daha az süt vardı|Two glasses of milk side by side, one full and one with less milk.|cream|E|I watch less TV now.|Artık daha az televizyon izliyorum.
+nature|doğa|G|||Ormanda doğanın sesini dinledi|A girl sits among trees, flowers and birds in a calm forest.|green|E|I love walking in nature.|Doğada yürümeyi severim.
+other|diğer, başka|G|||Bir eldiven buldu, diğerini arıyor|A boy holds one red glove and looks around for the other one.|cream|E|Where is the other shoe?|Diğer ayakkabı nerede?
+rare|nadir|G|||Nadir görülen beyaz kaplanı gördüler|Children look in wonder at a white tiger with dark stripes resting on a rock.|lavender|E|This bird is very rare.|Bu kuş çok nadir.
+row|kürek çekmek; sıra|G|||Gölde kürek çektiler|Two children row a small wooden boat on a calm lake.|sky-blue|E|Let's row across the lake.|Hadi gölün karşısına kürek çekelim.
+scenery|manzara|G|||Tepeden muhteşem manzarayı seyretti|A girl at a hilltop looks out over green valleys, a river and mountains.|green|E|The scenery was beautiful.|Manzara çok güzeldi.
+skiing|kayak yapmak|G|||Karlı dağda kayak yaptı|A child in a red ski suit skis down a gentle snowy slope.|sky-blue|E|We go skiing in Uludağ.|Uludağ'da kayak yaparız.
+travel|seyahat etmek|G|||Valiziyle dünyayı gezdi|A smiling girl with a suitcase and a globe with small planes flying around it.|sky-blue|E|I want to travel around the world.|Dünyayı gezmek istiyorum.
+wooden|ahşap|K|odun|ses|Odunlardan ahşap bir kulübe yaptı|A man and a boy build a small wooden cabin with a pile of logs next to it.|peach|E|We stayed in a wooden house.|Ahşap bir evde kaldık.
+camping|kamp yapmak|T|kamp|ses|Gölün kenarında kamp yaptık|A family sits by a small tent and a campfire next to a lake.|green|E|We go camping every summer.|Her yaz kampa gideriz.
+ride|binmek, sürmek|G|||Ata binip tarlada dolaştı|A girl in a helmet rides a brown pony across a meadow.|green|E|Can you ride a horse?|Ata binebilir misin?
+bike|bisiklet|G|||Yeni bisikletini parkta denedi|A boy rides a shiny red bike in a park.|mint|E|I go to school by bike.|Okula bisikletle giderim.
+scared|korkmuş|G|||Gök gürleyince yorganın altına saklandı|A scared boy hides under his blanket peeking out at a flash of lightning through the window.|lavender|E|I was scared of the dark.|Karanlıktan korkuyordum.
+afraid|korkan, endişeli|G|||Örümcekten korkup sandalyeye çıktı|A girl stands on a chair looking afraid of a tiny friendly spider on the floor.|lavender|E|Are you afraid of dogs?|Köpeklerden korkar mısın?
+accident|kaza|G|||Bisikletten düşünce dizini yaraladı|A boy sits on the ground next to his fallen bicycle with a small plaster on his knee, a friend helping.|cream|E|He had an accident on his bike.|Bisikletiyle kaza geçirdi.
+outside|dışarıda|G|||Kar yağınca dışarıda oynadılar|Children build a snowman outside on a snowy day.|sky-blue|E|Let's play outside.|Hadi dışarıda oynayalım.
+amusement park|lunapark|I|||Lunaparkta dönme dolaba bindik|A colourful Ferris wheel with happy children waving from the seats.|pink|E|We went to the amusement park on Sunday.|Pazar günü lunaparka gittik.
+have a picnic|piknik yapmak|I|||Çimlerde piknik yaptık|A family sits on a checked blanket with a basket of food on the grass.|green|E|Let's have a picnic in the park.|Hadi parkta piknik yapalım.
+afraid of|-den korkmak|I|||Yükseklikten korktuğu için aşağı bakamadı|A boy on a high slide platform covers his eyes, afraid of the height.|lavender|E|My sister is afraid of spiders.|Kız kardeşim örümceklerden korkar.
+fall down|düşmek|I|||Kaykaydan düşüp güldü|A girl falls down from her skateboard onto soft grass and laughs.|mint|E|Be careful! Don't fall down.|Dikkat et! Düşme.
+hot air balloon|sıcak hava balonu|I|||Kapadokya'da sıcak hava balonuna bindiler|Colourful hot air balloons float over soft rock chimneys, a family waving from one basket.|peach|E|We flew in a hot air balloon in Cappadocia.|Kapadokya'da sıcak hava balonuyla uçtuk.
+scuba diving|tüplü dalış|I|||Tüplü dalışta renkli balıklar gördü|A diver with an air tank swims among colourful fish and coral.|sky-blue|E|Scuba diving is an exciting sport.|Tüplü dalış heyecan verici bir spor.
+would rather|tercih etmek|I|||Dağ yerine denize gitmeyi tercih etti|A girl points happily toward a sunny beach rather than a snowy mountain.|yellow|E|I would rather stay at home.|Evde kalmayı tercih ederim.
+on my own|tek başıma|I|||Bisikleti tek başına tamir etti|A proud girl fixes her bicycle chain by herself with a small tool.|mint|E|I did it on my own.|Bunu tek başıma yaptım.
+so far|şimdiye kadar|I|||Şimdiye kadar beş madalya kazandı|A boy shows five medals hanging around his neck; no digits.|yellow|E|I have visited three countries so far.|Şimdiye kadar üç ülkeyi ziyaret ettim.
+winter sports|kış sporları|I|||Kış sporlarından kızak ve kayağı sever|Children sled and ski on a snowy hill.|sky-blue|E|Skiing is one of my favourite winter sports.|Kayak en sevdiğim kış sporlarından biri.
+outdoor activities|açık hava etkinlikleri|I|||Kampta açık hava etkinlikleri yaptılar|Children do archery, canoeing and rope climbing at a summer camp.|green|E|I like outdoor activities.|Açık hava etkinliklerini severim.

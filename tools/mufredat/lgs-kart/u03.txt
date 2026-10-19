@@ -27,3 +27,84 @@ spread|sürmek|G|||Ekmeğe tereyağı sürdü|A knife spreads butter on a slice 
 sprinkle|serpmek|G|||Kekin üstüne renkli şeker serpti|A girl sprinkles colourful sugar sprinkles over a cupcake.|pink|E
 tasty|lezzetli|K|tas|yazılış|Tastaki çorba çok lezzetli|A happy girl eats steaming soup from a shiny metal bowl and licks her lips.|peach|E
 whisk|çırpmak|G|||Yumurtaları çırptı|A boy whisks eggs in a glass bowl with a metal whisk.|cream|E
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+add|eklemek|G|||Çorbaya bir tutam tuz ekledi|A girl adds a pinch of salt to a pot of soup on a small stove.|peach|E
+batter|sıvı hamur|G|||Krep hamurunu tavaya döktü|A boy pours pale yellow batter from a bowl into a small frying pan.|yellow|E
+bean|fasulye|G|||Tabağında kuru fasulye vardı|A plate of white beans in tomato sauce with a spoon next to it.|peach|E
+beef|sığır eti|T|biftek|ses|Biftek için sığır eti aldı|A smiling butcher hands a wrapped piece of red beef to a customer over a counter.|pink|E
+celery|kereviz sapı|G|||Tavşan kereviz sapını kemirdi|A white rabbit nibbles a long green celery stalk.|mint|E
+cinnamon|tarçın|G|||Sütlacın üstüne tarçın serpti|A girl sprinkles brown cinnamon on a bowl of white rice pudding.|cream|E
+combine|birleştirmek|K|kombin|ses|Kıyafetlerini birleştirip yeni bir kombin yaptı|A girl holds a striped shirt and a yellow skirt together in front of a mirror, combining them into a new outfit.|lavender|E
+cover|örtmek, kapatmak|G|||Tencerenin üstünü kapakla örttü|A girl covers a steaming pot on the stove with a round lid.|sky-blue|E
+cumin|kimyon|T|kimyon|ses|Köfteye kimyon kattı|A cook sprinkles brown cumin powder onto a bowl of minced meat.|peach|E
+difficult|zor|G|||Yokuşu çıkmak çok zordu|A boy pushes his bicycle up a very steep hill, sweating.|cream|E
+dissolve|erimek, çözünmek|G|||Şeker sıcak çayda eridi|A sugar cube dissolves into a glass of hot tea with a spoon stirring it.|peach|E
+divide|bölmek|G|||Pizzayı dört parçaya böldü|A girl cuts a round pizza into four equal slices with a pizza cutter.|yellow|E
+finally|sonunda|K|final|ses|Finalde sonunda kupayı kaldırdılar|A happy team of children lifts a golden trophy together.|yellow|E
+first|ilk, önce|G|||Yarışı birinci bitirdi|A girl stands on the highest step of a winners' podium with a gold medal.|yellow|E
+fridge|buzdolabı|T|frijider|ses|Frijiderden soğuk süt aldı|A boy opens a white fridge and takes out a bottle of milk.|sky-blue|E
+garlic|sarımsak|G|||Sarımsağı ince ince doğradı|A cook chops white garlic cloves on a wooden board.|cream|E
+grated|rendelenmiş|G|||Makarnanın üstüne rendelenmiş peynir koydu|A girl sprinkles grated yellow cheese from a small grater onto a plate of pasta.|yellow|E
+hour|saat (süre)|G|||Kek bir saat fırında kaldı|A cake rises in an oven while a round kitchen timer sits on top; no digits.|peach|E
+knead|yoğurmak|G|||Ninesi hamuru yoğurdu|A smiling grandmother kneads a soft ball of dough with both hands on a floury table.|cream|E
+later|sonra|G|||Önce ödev, sonra oyun|A boy does homework at a desk while a football waits next to the chair for later.|mint|E
+method|yöntem|T|metot|ses|Yeni metotla bulmacayı çözdü|A girl solves a colourful puzzle cube with a clever smile.|lavender|E
+minute|dakika|G|||Yumurta üç dakikada haşlandı|An egg boils in a small pot next to a sand timer.|yellow|E
+mixture|karışım|K|mikser|ses|Mikserle karışımı köpürttü|A girl uses an electric mixer to whisk a creamy mixture in a big bowl.|pink|E
+next|sonraki|G|||Sıradaki çocuk kaydıraktan kaydı|Children wait in a line at a slide; the next child is about to go down.|green|E
+nut|kuruyemiş, fındık-ceviz|G|||Sincap cevizi yanaklarına doldurdu|A squirrel holds a walnut with chubby full cheeks.|cream|E
+parsley|maydanoz|G|||Salataya maydanoz doğradı|A boy chops green parsley on a cutting board next to a salad bowl.|green|E
+pepper|biber|G|||Tezgâhta kırmızı ve yeşil biberler vardı|Red, yellow and green peppers on a market stall.|green|E
+place|yer; yerleştirmek|G|||Tabakları masaya yerleştirdi|A girl places plates neatly around a dining table.|cream|E
+pot|tencere|G|||Tencerede çorba kaynıyordu|A big pot of soup bubbles on a small stove.|peach|E
+prawn|karides|G|||Tabaktaki karidesler pembeydi|A plate of pink prawns with a lemon slice.|pink|E
+preheat|önceden ısıtmak|G|||Keki koymadan fırını ısıttı|A girl turns the knob of an oven while a cake tray waits on the counter.|peach|E
+raisin|kuru üzüm|G|||Pilava kuru üzüm kattı|A cook adds a handful of small dark raisins to a bowl of rice.|lavender|E
+remember|hatırlamak|G|||Fotoğrafa bakınca tatili hatırladı|A girl smiles at a photo of a beach holiday, remembering it.|sky-blue|E
+remove|çıkarmak|G|||Keki fırından çıkardı|A boy in oven gloves removes a golden cake from the oven.|peach|E
+rise|kabarmak, yükselmek|G|||Hamur kâsede kabardı|A big puffy dough rises over the edge of a bowl under a cloth.|cream|E
+saffron|safran|T|safran|ses|Zerdeye safran kattı|A cook adds a few orange saffron threads to a pot of yellow rice dessert.|yellow|E
+second|ikinci; saniye|G|||Yarışta ikinci oldu|A boy stands on the second step of a winners' podium with a silver medal.|cream|E
+shape|şekil|G|||Kurabiyelere yıldız şekli verdi|A girl presses a star-shaped cutter into cookie dough.|yellow|E
+slightly|biraz, hafifçe|G|||Tabloyu hafifçe sağa çevirdi|A boy slightly tilts a picture frame on a wall to make it straight.|cream|E
+smooth|pürüzsüz|G|||Kremayı pastanın üstüne pürüzsüzce sürdü|A girl spreads white cream smoothly on top of a cake with a spatula.|pink|E
+soak|suda bekletmek, ıslatmak|K|sok|ses|Fasulyeyi suya sokup bir gece beklettik|A girl pours dry beans into a big bowl of water to soak overnight.|sky-blue|E
+starch|nişasta|G|||Muhallebiye nişasta kattı|A cook adds white starch powder into a pot of milk.|cream|E
+stir|karıştırmak|G|||Çorbayı kaşıkla karıştırdı|A boy stirs a pot of soup with a long wooden spoon.|peach|E
+strain|süzmek|G|||Makarnanın suyunu süzdü|A cook pours pasta and water into a colander over a sink.|sky-blue|E
+syrup|şerbet, şurup|T|şurup|ses|Baklavanın üstüne şurup döktü|A cook pours golden syrup over a tray of baklava.|yellow|E
+tender|yumuşak (et)|G|||Et o kadar yumuşaktı ki çatalla kesildi|A fork easily cuts a soft piece of cooked meat on a plate.|peach|E
+top|üst, tepe|G|||Pastanın en üstüne çilek koydu|A girl places a red strawberry on the very top of a tall cake.|pink|E
+tray|tepsi|G|||Kurabiyeleri tepsiye dizdi|A boy arranges round cookies on a baking tray.|cream|E
+use|kullanmak|G|||Kâğıdı makasla dikkatle kesti|A girl carefully uses a pair of child safety scissors to cut a paper star.|sky-blue|E
+mussel|midye|G|||Kumsalda midye kabuğu topladı|A girl collects dark blue mussel shells in a small bucket on the sand.|sky-blue|E
+food|yiyecek, yemek|G|||Masada bir sürü yiyecek vardı|A table full of food: bread, cheese, fruit and soup.|cream|E
+drink|içmek; içecek|G|||Sıcakta soğuk limonata içti|A boy drinks a glass of cold lemonade with a straw on a sunny day.|yellow|E
+breakfast|kahvaltı|G|||Pazar kahvaltısında yumurta yedik|A family eats breakfast with eggs, olives, cheese and tea.|yellow|E
+lunch|öğle yemeği|G|||Okulda öğle yemeğini yedik|Children eat lunch from trays at a school canteen table.|green|E
+salad|salata|T|salata|ses|Domatesli salata hazırladı|A girl mixes a fresh salad with tomatoes and lettuce in a big bowl.|green|E
+tomato|domates|T|domates|ses|Bahçeden kırmızı domates topladı|A boy picks a red tomato from a plant in a vegetable garden.|pink|E
+onion|soğan|G|||Soğan doğrarken gözleri yaşardı|A cook with watery eyes chops an onion on a board.|lavender|E
+olive|zeytin|G|||Kahvaltıda siyah zeytin yedi|A small bowl of black and green olives on a breakfast table.|green|E
+milk|süt|G|||Kedi kâsedeki sütü içti|A kitten laps milk from a small bowl.|cream|E
+fruit|meyve|G|||Sepette rengârenk meyve vardı|A basket full of apples, bananas, oranges and grapes.|peach|E
+vegetable|sebze|G|||Pazardan taze sebze aldık|A market stall with carrots, cabbages, peppers and potatoes.|green|E
+sweet|tatlı; şeker|G|||Bayramda şeker dağıttık|A child offers a bowl of colourful wrapped sweets to guests.|pink|E
+cake|kek, pasta|T|kek|ses|Fırından mis gibi kek çıktı|A golden cake on a plate with steam rising, a girl smelling it.|yellow|E
+chocolate|çikolata|T|çikolata|ses|Çikolatayı arkadaşıyla paylaştı|A boy breaks a bar of chocolate and shares it with a friend.|peach|E
+lemonade|limonata|T|limonata|ses|Sıcak günde limonata sattı|A girl sells lemonade from a little wooden stand.|yellow|E
+water|su|G|||Bardağa su doldurdu|A boy fills a glass with water from a jug.|sky-blue|E
+restaurant|restoran|T|restoran|ses|Restoranda garson siparişimizi aldı|A waiter takes an order from a family at a restaurant table.|cream|E
+order|sipariş etmek|G|||Garsona pizza sipariş etti|A boy points at a menu and orders from a smiling waiter; the menu is blank.|peach|E
+half|yarım|G|||Elmayı ikiye bölüp yarısını verdi|A girl cuts an apple in half and gives one half to her brother.|green|E
+piece|parça, dilim|G|||Pastadan bir dilim aldı|A boy takes a piece of cake from a round cake on a plate.|pink|E
+customer|müşteri|G|||Fırıncı müşteriye ekmek verdi|A baker hands a loaf of bread to a smiling customer over a counter.|cream|E
+a pinch of salt|bir tutam tuz|I|||Yemeğe bir tutam tuz attı|A cook holds a tiny pinch of salt between two fingers over a pot.|cream|E
+after that|ondan sonra|I|||Önce ellerini yıkadı, ondan sonra yemek yedi|A boy washes his hands at a sink, then sits at a table with a plate of food.|mint|E
+baking powder|kabartma tozu|I|||Kek hamuruna kabartma tozu kattı|A girl adds a spoon of white baking powder from a small packet into a bowl; the packet is blank.|cream|E
+frying pan|kızartma tavası|I|||Tavada yumurta kızardı|Two eggs fry in a black frying pan.|yellow|E
+rolling pin|oklava|I|||Ninesi oklavayla yufka açtı|A grandmother rolls out thin dough with a long wooden rolling pin.|cream|E
+set aside|bir kenara koymak|I|||Sosu hazırlayıp bir kenara koydu|A cook places a bowl of sauce to the side of the counter while chopping vegetables.|peach|E
+how long|ne kadar süre|I|||Kekin ne kadar pişeceğine baktı|A girl looks at a kitchen timer next to an oven with a curious face; no digits.|cream|E
+how many|kaç tane|I|||Kavanozda kaç kurabiye var diye saydı|A boy counts cookies in a glass jar, pointing at each one.|yellow|E
+how much|ne kadar (miktar, fiyat)|I|||Bu ne kadar diye sordu|A girl holds up a red apple at a market stall asking the seller the price.|green|E

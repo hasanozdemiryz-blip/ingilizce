@@ -1,0 +1,52 @@
+# 8. ünite Chores — EK (19 Ekim 2026)
+# en|tr|tur|kanca|yol|cumle|sahne (EN)|ton|genel(E/H)|örnek (EN)|örnek (TR)
+annoy|sinirlendirmek, rahatsız etmek|G|||Sinek kulağının dibinde vızıldayıp onu sinirlendirdi|An annoyed boy waves his hand at a buzzing fly near his ear while reading.|cream|E|Please don't annoy your sister.|Lütfen kız kardeşini rahatsız etme.
+article|makale|G|||Gazetedeki makaleyi dikkatle okudu|A grandfather reads a newspaper article with glasses on; the newspaper has no text.|cream|E|I read an article about recycling.|Geri dönüşüm hakkında bir makale okudum.
+complain|şikâyet etmek|G|||Soğuk çorbadan şikâyet etti|A girl frowns and points at a bowl of soup while talking to a waiter.|peach|E|Don't complain about the chores.|Ev işlerinden şikâyet etme.
+elder|yaşça büyük|G|||Ağabeyi ona ayakkabı bağlamayı öğretti|An elder brother kneels to teach his little brother how to tie his shoelaces.|mint|E|My elder sister helps me with my homework.|Ablam ödevime yardım ediyor.
+hard|zor; sert|G|||Ağır kutuyu taşımak zordu|A boy struggles to carry a big heavy box.|cream|E|Ironing is hard work.|Ütü yapmak zor bir iş.
+housework|ev işi|G|||Ailece ev işlerini paylaştık|A family cleans together: one sweeps, one dusts, one washes dishes.|mint|E|I help my mother with the housework.|Ev işlerinde anneme yardım ederim.
+lesson|ders|G|||Piyano dersinde notaları çaldı|A girl plays the piano while her teacher sits beside her.|lavender|E|I have a piano lesson on Friday.|Cuma günü piyano dersim var.
+mess|dağınıklık|G|||Oda o kadar dağınıktı ki yatak görünmüyordu|A very messy bedroom with clothes and toys everywhere, a mother standing at the door with hands on hips.|peach|E|Your room is a mess!|Odan darmadağın!
+mind|aldırmak, sakıncası olmak|G|||Pencereyi açmamın sakıncası var mı diye sordu|A polite boy points at a window and asks his grandmother, who nods with a smile.|cream|E|Do you mind if I open the window?|Pencereyi açmamın sakıncası var mı?
+necessary|gerekli|G|||Kampa gitmek için çadır gerekliydi|A boy packs a tent, a torch and a sleeping bag into a backpack.|green|E|It is necessary to help at home.|Evde yardım etmek gerekli.
+peaceful|huzurlu|G|||Göl kenarı çok huzurluydu|A calm lake with ducks, trees and a girl sitting peacefully on the grass.|mint|E|Our village is very peaceful.|Köyümüz çok huzurlu.
+responsible|sorumlu|G|||Kedisinin mamasını vermekten o sorumlu|A girl pours food into a cat's bowl while the cat waits.|yellow|E|I am responsible for feeding the cat.|Kediyi beslemekten ben sorumluyum.
+right|doğru; sağ; hak|G|||Doğru cevabı bulunca sevindi|A boy cheers next to a board with a big green tick mark.|green|E|Your answer is right.|Cevabın doğru.
+rude|kaba|G|||Kaba çocuk sırayı kesti|A rude boy pushes in front of others in a queue at an ice cream cart while they frown.|cream|E|Don't be rude to your sister.|Kız kardeşine kaba davranma.
+say|söylemek|G|||Bebek ilk kelimesini söyledi|A baby in a high chair says its first word while its parents smile and clap.|pink|E|What did you say?|Ne dedin?
+task|görev|G|||Herkese bir görev verildi|A mother hands a broom to one child and a watering can to another.|yellow|E|My task is to water the plants.|Benim görevim bitkileri sulamak.
+tidy|düzenli, toplu|G|||Masası her zaman düzenliydi|A neat desk with books lined up, pencils in a cup and a small plant.|mint|E|Keep your room tidy.|Odanı düzenli tut.
+dishwasher|bulaşık makinesi|G|||Tabakları bulaşık makinesine dizdi|A boy puts plates into an open dishwasher.|sky-blue|E|Can you empty the dishwasher?|Bulaşık makinesini boşaltabilir misin?
+bathroom|banyo|G|||Banyoda dişlerini fırçaladı|A girl brushes her teeth at a bathroom sink with a mirror.|sky-blue|E|Clean the bathroom, please.|Lütfen banyoyu temizle.
+clothes|kıyafetler|G|||Kıyafetlerini katlayıp dolaba koydu|A boy folds clothes and puts them neatly into a wardrobe.|lavender|E|Put your clothes in the wardrobe.|Kıyafetlerini dolaba koy.
+pet|evcil hayvan|K|pet şişe|ses|Evcil kedisi boş pet şişeyle oynadı|A playful kitten pushes an empty plastic bottle across the floor.|peach|E|Do you have a pet?|Evcil hayvanın var mı?
+house|ev|G|||Bacasından duman çıkan küçük bir ev|A small cosy house with a red roof and smoke from the chimney.|cream|E|Our house has a garden.|Evimizin bahçesi var.
+home|ev, yuva|G|||Okuldan sonra eve koştu|A boy runs happily toward his front door where his dog waits.|peach|E|I go home at four.|Dörtte eve giderim.
+family|aile|G|||Aile fotoğrafında herkes gülümsüyordu|A smiling family of four poses together for a photo.|pink|E|I have a big family.|Büyük bir ailem var.
+mother|anne|G|||Annesi ona masal okudu|A mother reads a bedtime story to her child in bed.|pink|E|My mother is a teacher.|Annem öğretmen.
+father|baba|G|||Babası onu omzuna aldı|A father carries his laughing daughter on his shoulders.|sky-blue|E|My father cooks dinner on Sundays.|Babam pazar günleri akşam yemeği pişirir.
+sister|kız kardeş|G|||Kız kardeşiyle el ele yürüdü|An older girl walks hand in hand with her little sister to school.|lavender|E|My sister is ten years old.|Kız kardeşim on yaşında.
+cousin|kuzen|T|kuzen|ses|Kuzeniyle bayramda oynadı|Two cousins play with a kite in a grandparent's garden.|green|E|My cousin lives in Bursa.|Kuzenim Bursa'da yaşıyor.
+grandparents|büyükanne ve büyükbaba|G|||Büyükannesi ve büyükbabasıyla çay içti|A boy drinks tea with his grandmother and grandfather in a garden.|peach|E|I visit my grandparents every weekend.|Her hafta sonu büyükannemleri ziyaret ederim.
+grandfather|büyükbaba, dede|G|||Dedesiyle balık tuttu|A grandfather and grandson fish together from a small pier.|sky-blue|E|My grandfather tells funny stories.|Dedem komik hikâyeler anlatır.
+husband|koca, eş (erkek)|G|||Eşi ona çiçek getirdi|A smiling husband gives a bunch of flowers to his wife at the door.|pink|E|Her husband is a doctor.|Kocası doktor.
+parents|anne baba|G|||Anne babası karnesini görünce sevindi|A mother and father smile at their son's school report.|yellow|E|My parents work in a bank.|Annem ve babam bankada çalışıyor.
+boy|erkek çocuk|G|||Erkek çocuk uçurtma uçurdu|A smiling boy flies a red kite.|sky-blue|E|The boy in the red shirt is my brother.|Kırmızı tişörtlü çocuk benim kardeşim.
+old|yaşlı; eski|G|||Yaşlı adam eski bir saati tamir etti|An old man with glasses repairs an old pocket watch.|cream|E|My grandmother is old but very active.|Büyükannem yaşlı ama çok hareketli.
+little|küçük; biraz|G|||Küçük kedi süt içti|A little kitten drinks milk from a bowl.|pink|E|I have a little brother.|Küçük bir erkek kardeşim var.
+small|küçük|G|||Küçük fare büyük peynire baktı|A small mouse looks up at a big piece of cheese.|yellow|E|Our flat is small.|Dairemiz küçük.
+long|uzun|G|||Uzun bir tren köprüden geçti|A very long colourful train crosses a bridge.|green|E|She has long hair.|Onun uzun saçı var.
+black|siyah|G|||Siyah kedi pencerede oturdu|A black cat sits on a windowsill.|lavender|E|I have a black bag.|Siyah bir çantam var.
+white|beyaz|G|||Bembeyaz kardan adam yaptık|Children build a white snowman with a carrot nose.|sky-blue|E|The walls are white.|Duvarlar beyaz.
+brown|kahverengi|G|||Kahverengi ayı bal yedi|A friendly brown bear eats honey from a pot.|peach|E|My dog is brown.|Köpeğim kahverengi.
+green|yeşil|G|||Yeşil kurbağa yaprağın üstünde zıpladı|A green frog jumps on a lily pad.|green|E|My favourite colour is green.|En sevdiğim renk yeşil.
+dry the dishes|bulaşıkları kurulamak|I|||Kardeşi yıkadı, o kuruladı|A boy dries a plate with a towel while his sister washes dishes.|sky-blue|E|Can you dry the dishes?|Bulaşıkları kurulayabilir misin?
+walk the dog|köpeği gezdirmek|I|||Her akşam köpeği gezdirir|A girl walks a happy dog on a lead in a park.|green|E|I walk the dog every evening.|Her akşam köpeği gezdiririm.
+vacuum the carpet|halıyı süpürmek|I|||Elektrik süpürgesiyle halıyı süpürdü|A boy vacuums a colourful carpet with a vacuum cleaner.|lavender|E|I vacuum the carpet on Saturdays.|Cumartesileri halıyı süpürürüm.
+pocket money|harçlık|I|||Harçlığını kumbarasına attı|A girl drops coins into a pink piggy bank.|pink|E|I save my pocket money.|Harçlığımı biriktiririm.
+take care of|ilgilenmek, bakmak|I|||Bahçedeki çiçeklerle o ilgilenir|A boy waters flowers and pulls weeds in a garden.|green|E|I take care of my little sister.|Küçük kız kardeşime ben bakarım.
+do the shopping|alışveriş yapmak|I|||Annesiyle markette alışveriş yaptı|A boy pushes a shopping trolley with fruit while his mother picks vegetables.|peach|E|I help my father do the shopping.|Babama alışveriş yapmasında yardım ederim.
+in charge of|-den sorumlu|I|||Bitkileri sulamaktan o sorumluydu|A girl with a watering can stands proudly next to plants at school.|mint|E|I am in charge of the plants.|Bitkilerden ben sorumluyum.
+responsible for|-den sorumlu|I|||Çöpü çıkarmaktan kardeşi sorumlu|A boy carries a rubbish bag out of the front door.|cream|E|Who is responsible for the dishes?|Bulaşıklardan kim sorumlu?
+busy with|ile meşgul|I|||Ödeviyle meşgul olduğu için oynayamadı|A girl writes homework at a desk while her brother waits with a ball.|lavender|E|I am busy with my homework.|Ödevimle meşgulüm.

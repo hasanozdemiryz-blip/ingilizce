@@ -27,3 +27,84 @@ spread|Spread some butter on the bread.|Ekmeğe biraz tereyağı sür.
 sprinkle|Sprinkle some sugar on the pancakes.|Pankeklerin üstüne biraz şeker serp.
 tasty|These cookies are really tasty.|Bu kurabiyeler gerçekten lezzetli.
 whisk|Whisk the eggs until they are light and fluffy.|Yumurtaları hafif ve kabarık olana kadar çırp.
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+add|Add some sugar to the tea.|Çaya biraz şeker ekle.
+batter|Pour the batter into the pan.|Hamuru tavaya dök.
+bean|Put one bean in each cup.|Her bardağa bir fasulye koy.
+beef|I don't eat beef.|Sığır eti yemem.
+celery|Celery is good for your health.|Kereviz sapı sağlığa iyidir.
+cinnamon|I like cinnamon on my apple pie.|Elmalı turtamın üstünde tarçın severim.
+combine|Combine the flour and the eggs.|Unu ve yumurtaları birleştir.
+cover|Cover the pot and wait.|Tencerenin üstünü kapat ve bekle.
+cumin|Add a little cumin to the meatballs.|Köftelere biraz kimyon ekle.
+difficult|This question is difficult.|Bu soru zor.
+dissolve|Salt can dissolve in water.|Tuz suda çözünebilir.
+divide|Divide the cake into eight pieces.|Pastayı sekiz parçaya böl.
+finally|Finally, put the cake in the oven.|Son olarak keki fırına koy.
+first|First, wash your hands.|Önce ellerini yıka.
+fridge|Put the milk in the fridge.|Sütü buzdolabına koy.
+garlic|This sauce has garlic in it.|Bu sosta sarımsak var.
+grated|Put some grated cheese on top.|Üstüne biraz rendelenmiş peynir koy.
+hour|Bake it for one hour.|Bir saat pişir.
+knead|Knead the dough for ten minutes.|Hamuru on dakika yoğur.
+later|See you later!|Sonra görüşürüz!
+method|This is an easy method to make bread.|Bu, ekmek yapmanın kolay bir yöntemi.
+minute|Wait a minute, please.|Bir dakika bekleyin lütfen.
+mixture|Pour the mixture into the tray.|Karışımı tepsiye dök.
+next|What is the next step?|Bir sonraki adım ne?
+nut|Don't eat this cake if you can't eat a nut.|Fındık yiyemiyorsan bu keki yeme.
+parsley|Put some parsley on the salad.|Salataya biraz maydanoz koy.
+pepper|Add a little black pepper.|Biraz karabiber ekle.
+place|Place the cake on a plate.|Keki bir tabağa yerleştir.
+pot|Put the potatoes in a pot.|Patatesleri bir tencereye koy.
+prawn|I have never eaten a prawn.|Hiç karides yemedim.
+preheat|Preheat the oven to 180 degrees.|Fırını 180 dereceye ısıt.
+raisin|There is a raisin in my bread.|Ekmeğimde bir kuru üzüm var.
+remember|I can't remember his name.|Onun adını hatırlayamıyorum.
+remove|Remove the cake from the oven.|Keki fırından çıkar.
+rise|Leave the dough to rise.|Hamuru kabarması için bırak.
+saffron|Saffron is very expensive.|Safran çok pahalıdır.
+second|He finished second in the race.|Yarışı ikinci bitirdi.
+shape|Give the dough a round shape.|Hamura yuvarlak bir şekil ver.
+slightly|The soup is slightly salty.|Çorba biraz tuzlu.
+smooth|Mix until the batter is smooth.|Hamur pürüzsüz olana kadar karıştır.
+soak|Soak the beans in water overnight.|Fasulyeyi bir gece suda beklet.
+starch|Add a spoon of starch to the milk.|Süte bir kaşık nişasta ekle.
+stir|Stir the soup slowly.|Çorbayı yavaşça karıştır.
+strain|Strain the pasta.|Makarnayı süz.
+syrup|Pour the syrup over the dessert.|Şerbeti tatlının üstüne dök.
+tender|Cook the meat until it is tender.|Eti yumuşayana kadar pişir.
+top|Put a cherry on top.|Üstüne bir kiraz koy.
+tray|Put the cookies on a tray.|Kurabiyeleri bir tepsiye koy.
+use|Can I use your phone?|Telefonunu kullanabilir miyim?
+mussel|A mussel lives in the sea.|Midye denizde yaşar.
+food|What is your favourite food?|En sevdiğin yemek ne?
+drink|Would you like a drink?|Bir içecek ister misin?
+breakfast|I have breakfast at seven.|Yedide kahvaltı yaparım.
+lunch|We have lunch at school.|Öğle yemeğini okulda yeriz.
+salad|I eat salad every day.|Her gün salata yerim.
+tomato|Cut the tomato into small pieces.|Domatesi küçük parçalara kes.
+onion|Chop the onion.|Soğanı doğra.
+olive|I like olive oil.|Zeytinyağını severim.
+milk|Children should drink milk.|Çocuklar süt içmeli.
+fruit|Fruit is good for you.|Meyve sana iyi gelir.
+vegetable|Carrot is my favourite vegetable.|Havuç en sevdiğim sebze.
+sweet|This cake is too sweet.|Bu kek çok tatlı.
+cake|My mother made a chocolate cake.|Annem çikolatalı kek yaptı.
+chocolate|I love chocolate.|Çikolatayı çok severim.
+lemonade|Let's make lemonade.|Hadi limonata yapalım.
+water|Drink a lot of water.|Bol su iç.
+restaurant|We had dinner at a restaurant.|Bir restoranda akşam yemeği yedik.
+order|Can I order a pizza, please?|Bir pizza sipariş edebilir miyim lütfen?
+half|I ate half of the pizza.|Pizzanın yarısını yedim.
+piece|Can I have a piece of cake?|Bir dilim pasta alabilir miyim?
+customer|The customer is always right.|Müşteri her zaman haklıdır.
+a pinch of salt|Add a pinch of salt.|Bir tutam tuz ekle.
+after that|First boil the water. After that, add the pasta.|Önce suyu kaynat. Ondan sonra makarnayı ekle.
+baking powder|Add a teaspoon of baking powder.|Bir çay kaşığı kabartma tozu ekle.
+frying pan|Heat the oil in a frying pan.|Yağı bir tavada ısıt.
+rolling pin|Roll the dough with a rolling pin.|Hamuru oklavayla aç.
+set aside|Mix the sauce and set aside.|Sosu karıştır ve bir kenara koy.
+how long|How long does it take?|Ne kadar sürer?
+how many|How many eggs do we need?|Kaç yumurtaya ihtiyacımız var?
+how much|How much is this cake?|Bu kek ne kadar?

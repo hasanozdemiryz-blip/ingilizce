@@ -38,3 +38,37 @@ usage|Internet usage is increasing every year.|İnternet kullanımı her yıl ar
 vary from|Prices vary from shop to shop.|Fiyatlar dükkândan dükkâna değişir.
 vlogger|The vlogger shares travel videos every week.|O vlogger her hafta gezi videoları paylaşıyor.
 website|Our school has a new website.|Okulumuzun yeni bir web sitesi var.
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+addict|He is a computer game addict.|O bir bilgisayar oyunu bağımlısı.
+advantage|Speaking English is a big advantage.|İngilizce konuşmak büyük bir avantaj.
+disadvantage|One disadvantage of the internet is addiction.|İnternetin bir dezavantajı bağımlılıktır.
+affect|Too much screen time can affect your eyes.|Çok fazla ekran süresi gözlerini etkileyebilir.
+broken|My computer is broken.|Bilgisayarım bozuk.
+careful|Be careful on the internet.|İnternette dikkatli ol.
+communicate|We communicate by email.|E-postayla iletişim kurarız.
+dangerous|It is dangerous to share your password.|Şifreni paylaşmak tehlikeli.
+detail|Tell me every detail.|Bana her ayrıntıyı anlat.
+harmful|Some websites can be harmful.|Bazı web siteleri zararlı olabilir.
+member|I am a member of the chess club.|Satranç kulübünün üyesiyim.
+percent|Ninety percent of teens use the internet.|Gençlerin yüzde doksanı internet kullanıyor.
+reset|I need to reset my password.|Şifremi sıfırlamam gerekiyor.
+useful|The internet is useful for homework.|İnternet ödev için faydalı.
+username|Enter your username and password.|Kullanıcı adını ve şifreni gir.
+internet|I use the internet every day.|Her gün interneti kullanırım.
+computer|I do my homework on the computer.|Ödevimi bilgisayarda yaparım.
+blog|She writes a blog about cooking.|Yemek hakkında bir blog yazıyor.
+network|Our school has a fast network.|Okulumuzun hızlı bir ağı var.
+television|I don't watch television much.|Çok televizyon izlemem.
+radio|My grandfather listens to the radio.|Dedem radyo dinler.
+survey|We did a survey about internet use.|İnternet kullanımı hakkında bir anket yaptık.
+visual|This video has great visual effects.|Bu videonun harika görsel efektleri var.
+personal|Never share your personal information.|Kişisel bilgilerini asla paylaşma.
+daily|I read the daily news online.|Günlük haberleri internetten okurum.
+by mistake|I deleted the file by mistake.|Dosyayı yanlışlıkla sildim.
+log off|Don't forget to log off.|Oturumu kapatmayı unutma.
+make new friends|It is easy to make new friends at camp.|Kampta yeni arkadaşlar edinmek kolaydır.
+meet strangers|It is not safe to meet strangers from the internet.|İnternetten tanıdığın yabancılarla buluşmak güvenli değil.
+surf the internet|I surf the internet in my free time.|Boş zamanımda internette gezinirim.
+personal information|Don't share your personal information online.|Kişisel bilgilerini internette paylaşma.
+social media|Teens spend a lot of time on social media.|Gençler sosyal medyada çok vakit geçiriyor.
+isolated|Too much screen time can make you feel isolated.|Çok fazla ekran süresi seni yalnız hissettirebilir.

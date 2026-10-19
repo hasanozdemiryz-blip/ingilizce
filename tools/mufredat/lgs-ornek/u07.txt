@@ -37,3 +37,74 @@ square|Let's meet in the main square.|Ana meydanda buluşalım.
 tomb|The tomb is in the garden of the museum.|Mezar müzenin bahçesinde.
 trip|Our school trip to Bursa was great.|Bursa'ya okul gezimiz harikaydı.
 urban|Urban life is busy and noisy.|Kent hayatı yoğun ve gürültülüdür.
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+amphitheatre|Aspendos has a famous amphitheatre.|Aspendos'un ünlü bir amfitiyatrosu var.
+attractive|Antalya is an attractive place for tourists.|Antalya turistler için çekici bir yer.
+beautiful|What a beautiful view!|Ne güzel bir manzara!
+big|We stayed in a big hotel.|Büyük bir otelde kaldık.
+build|They want to build a new bridge.|Yeni bir köprü inşa etmek istiyorlar.
+compare|Compare the two hotels.|İki oteli karşılaştır.
+country|Which country do you want to visit?|Hangi ülkeyi ziyaret etmek istiyorsun?
+cruise|We went on a cruise in the summer.|Yazın gemi turuna çıktık.
+dirty|Your shoes are dirty.|Ayakkabıların kirli.
+entertainment|The hotel has a lot of entertainment for children.|Otelde çocuklar için çok eğlence var.
+escape|Don't let the bird escape.|Kuşun kaçmasına izin verme.
+excited|I am excited about the trip.|Gezi için heyecanlıyım.
+expedition|They went on an expedition to the North Pole.|Kuzey Kutbu'na bir keşif gezisine çıktılar.
+expensive|This hotel is too expensive.|Bu otel çok pahalı.
+gorgeous|The beach was gorgeous.|Plaj muhteşemdi.
+happen|What will happen next?|Sonra ne olacak?
+heritage|Cappadocia is a world heritage site.|Kapadokya bir dünya mirası alanı.
+history|I am interested in history.|Tarihle ilgileniyorum.
+hospitable|Turkish people are very hospitable.|Türk insanı çok misafirperverdir.
+huge|There is a huge statue in the square.|Meydanda kocaman bir heykel var.
+island|We spent our holiday on an island.|Tatilimizi bir adada geçirdik.
+keep|Keep your ticket with you.|Biletini yanında tut.
+location|The hotel is in a good location.|Otel iyi bir konumda.
+lovely|We had a lovely time.|Çok güzel vakit geçirdik.
+natural|Pamukkale has natural pools.|Pamukkale'nin doğal havuzları var.
+noisy|The city centre is very noisy.|Şehir merkezi çok gürültülü.
+opinion|What is your opinion?|Senin fikrin ne?
+organize|Let's organize a trip to the museum.|Hadi müzeye bir gezi düzenleyelim.
+palace|We visited a palace in İstanbul.|İstanbul'da bir sarayı ziyaret ettik.
+perfect|The weather was perfect.|Hava mükemmeldi.
+public|The museum is open to the public.|Müze halka açık.
+quiet|Please be quiet.|Lütfen sessiz olun.
+ready|Are you ready?|Hazır mısın?
+rich|The region is rich in history.|Bölge tarih açısından zengin.
+sail|We will sail to the island.|Adaya yelkenliyle gideceğiz.
+spend|We spend every summer in Bodrum.|Her yazı Bodrum'da geçiririz.
+stay|We stay at my uncle's house in summer.|Yazın amcamın evinde kalırız.
+sunbathe|Don't sunbathe at noon.|Öğle saatinde güneşlenme.
+terrible|The food was terrible.|Yemek berbattı.
+theatre|We went to the theatre last night.|Dün akşam tiyatroya gittik.
+tiring|The journey was tiring.|Yolculuk yorucuydu.
+together|We travelled together.|Birlikte seyahat ettik.
+traditional|We ate traditional Turkish food.|Geleneksel Türk yemeği yedik.
+transportation|Public transportation is cheap here.|Burada toplu ulaşım ucuz.
+unbelievable|The view was unbelievable.|Manzara inanılmazdı.
+world|I want to see the world.|Dünyayı görmek istiyorum.
+city|İstanbul is a big city.|İstanbul büyük bir şehir.
+museum|Let's visit the museum.|Hadi müzeyi gezelim.
+tourist|A tourist asked me the way.|Bir turist bana yolu sordu.
+tour|We joined a city tour.|Bir şehir turuna katıldık.
+flight|Our flight was three hours long.|Uçuşumuz üç saat sürdü.
+plane|We went to İzmir by plane.|İzmir'e uçakla gittik.
+centre|Our hotel is in the city centre.|Otelimiz şehir merkezinde.
+street|Turn left at the next street.|Bir sonraki sokaktan sola dön.
+visit|I visit my aunt every summer.|Her yaz teyzemi ziyaret ederim.
+arrive|What time does the train arrive?|Tren saat kaçta varıyor?
+return|We will return home on Sunday.|Pazar günü eve döneceğiz.
+price|What is the price of this hat?|Bu şapkanın fiyatı ne?
+century|The mosque was built in the 16th century.|Cami 16. yüzyılda inşa edildi.
+local|We tried the local food.|Yerel yemekleri denedik.
+modern|The city has many modern buildings.|Şehirde birçok modern bina var.
+july|We go on holiday in July.|Temmuzda tatile gideriz.
+august|My birthday is in August.|Doğum günüm ağustosta.
+summer|I love summer holidays.|Yaz tatillerini çok severim.
+in my opinion|In my opinion, the beach is better.|Bence plaj daha iyi.
+have a rest|Let's have a rest here.|Hadi burada dinlenelim.
+sightseeing tour|We took a sightseeing tour of the city.|Şehirde bir gezi turuna çıktık.
+have been to|I have been to İzmir twice.|İzmir'e iki kez gittim.
+school trip|We went on a school trip to Ankara.|Ankara'ya okul gezisine gittik.
+book a room|I want to book a room for two nights.|İki gecelik oda ayırtmak istiyorum.

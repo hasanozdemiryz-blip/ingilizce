@@ -420,3 +420,723 @@
 10|volcano|yanardağ|T|||volkan
 10|waste|atık|R|||
 10|water shortage|su kıtlığı|I|||
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+1|also|ayrıca, de/da|R|||ek 19 Ekim
+1|apologise|özür dilemek|R|||ek 19 Ekim
+1|ask|sormak|R|||ek 19 Ekim
+1|become|olmak (dönüşmek)|R|||ek 19 Ekim
+1|better|daha iyi|R|||ek 19 Ekim
+1|boring|sıkıcı|R|||ek 19 Ekim
+1|care|önemsemek, ilgilenmek|R|||ek 19 Ekim
+1|crazy|çılgın|R|||ek 19 Ekim
+1|decide|karar vermek|R|||ek 19 Ekim
+1|describe|tarif etmek, tanımlamak|R|||ek 19 Ekim
+1|experience|deneyim, yaşamak|R|||ek 19 Ekim
+1|fashionable|modaya uygun|R|||ek 19 Ekim
+1|fun|eğlence, eğlenceli|R|||ek 19 Ekim
+1|funny|komik|R|||ek 19 Ekim
+1|generation|nesil|R|||ek 19 Ekim
+1|give|vermek|R|||ek 19 Ekim
+1|guess|tahmin etmek|R|||ek 19 Ekim
+1|guest|misafir|R|||ek 19 Ekim
+1|idea|fikir|R|||ek 19 Ekim
+1|important|önemli|R|||ek 19 Ekim
+1|individual|bireysel, kişi|R|||ek 19 Ekim
+1|instead|yerine|R|||ek 19 Ekim
+1|introduce|tanıştırmak|R|||ek 19 Ekim
+1|invitation|davet, davetiye|R|||ek 19 Ekim
+1|learn|öğrenmek|R|||ek 19 Ekim
+1|letter|mektup|R|||ek 19 Ekim
+1|lie|yalan|R|||ek 19 Ekim
+1|loyal|sadık|R|||ek 19 Ekim
+1|match|maç; eşleştirmek|R|||ek 19 Ekim
+1|mean|anlamına gelmek; kaba|R|||ek 19 Ekim
+1|need|ihtiyaç duymak|R|||ek 19 Ekim
+1|neighbour|komşu|R|||ek 19 Ekim
+1|occupied|meşgul, dolu|R|||ek 19 Ekim
+1|offer|teklif etmek|R|||ek 19 Ekim
+1|outgoing|dışa dönük, girişken|R|||ek 19 Ekim
+1|patient|sabırlı; hasta|R|||ek 19 Ekim
+1|personality|kişilik|R|||ek 19 Ekim
+1|rarely|nadiren|R|||ek 19 Ekim
+1|reason|sebep|R|||ek 19 Ekim
+1|relaxed|rahat, gevşemiş|R|||ek 19 Ekim
+1|reliable|güvenilir|R|||ek 19 Ekim
+1|remain|kalmak|R|||ek 19 Ekim
+1|respectful|saygılı|R|||ek 19 Ekim
+1|same|aynı|R|||ek 19 Ekim
+1|still|hâlâ|R|||ek 19 Ekim
+1|supportive|destekleyici|R|||ek 19 Ekim
+1|sure|emin; tabii|R|||ek 19 Ekim
+1|thing|şey|R|||ek 19 Ekim
+1|thirsty|susamış|R|||ek 19 Ekim
+1|understand|anlamak|R|||ek 19 Ekim
+1|want|istemek|R|||ek 19 Ekim
+1|birthday|doğum günü|R|||ek 19 Ekim
+1|party|parti|R|||ek 19 Ekim
+1|classmate|sınıf arkadaşı|R|||ek 19 Ekim
+1|dear|sevgili, değerli|R|||ek 19 Ekim
+1|believe|inanmak|R|||ek 19 Ekim
+1|truth|gerçek, doğru|R|||ek 19 Ekim
+1|positive|olumlu|R|||ek 19 Ekim
+1|similar|benzer|R|||ek 19 Ekim
+1|both|her ikisi de|R|||ek 19 Ekim
+1|each|her bir|R|||ek 19 Ekim
+1|either|ikisinden biri|R|||ek 19 Ekim
+1|neither|hiçbiri (ikisi de değil)|R|||ek 19 Ekim
+1|another|başka bir, bir tane daha|R|||ek 19 Ekim
+1|thank you|teşekkür ederim|I|||ek 19 Ekim
+1|sorry|üzgün; özür dilerim|R|||ek 19 Ekim
+1|please|lütfen|R|||ek 19 Ekim
+1|nice|hoş, güzel|R|||ek 19 Ekim
+1|good|iyi|R|||ek 19 Ekim
+1|love|sevmek|R|||ek 19 Ekim
+1|people|insanlar|R|||ek 19 Ekim
+1|as soon as possible|mümkün olan en kısa sürede|I|||ek 19 Ekim
+1|break a promise|sözünden dönmek|I|||ek 19 Ekim
+1|keep a promise|sözünü tutmak|I|||ek 19 Ekim
+1|keep a secret|sır tutmak|I|||ek 19 Ekim
+1|tell a lie|yalan söylemek|I|||ek 19 Ekim
+1|each other|birbirini|I|||ek 19 Ekim
+1|give advice|tavsiye vermek|I|||ek 19 Ekim
+1|have a lot in common|birçok ortak noktası olmak|I|||ek 19 Ekim
+1|interested in|ile ilgilenmek|I|||ek 19 Ekim
+1|rely on|güvenmek|I|||ek 19 Ekim
+1|spend time|vakit geçirmek|I|||ek 19 Ekim
+1|of course|tabii ki|I|||ek 19 Ekim
+1|not at all|hiç de değil|I|||ek 19 Ekim
+1|that's why|bu yüzden|I|||ek 19 Ekim
+1|feel alone|yalnız hissetmek|I|||ek 19 Ekim
+2|admire|hayran olmak|R|||ek 19 Ekim
+2|adult|yetişkin|R|||ek 19 Ekim
+2|advise|tavsiye etmek|R|||ek 19 Ekim
+2|always|her zaman|R|||ek 19 Ekim
+2|amazing|muhteşem, şaşırtıcı|R|||ek 19 Ekim
+2|band|müzik grubu|R|||ek 19 Ekim
+2|chat|sohbet etmek|R|||ek 19 Ekim
+2|comfortable|rahat, konforlu|R|||ek 19 Ekim
+2|different|farklı|R|||ek 19 Ekim
+2|documentary|belgesel|R|||ek 19 Ekim
+2|drummer|davulcu|R|||ek 19 Ekim
+2|easy|kolay|R|||ek 19 Ekim
+2|educational|eğitici|R|||ek 19 Ekim
+2|enjoy|keyif almak|R|||ek 19 Ekim
+2|everywhere|her yerde|R|||ek 19 Ekim
+2|express|ifade etmek|R|||ek 19 Ekim
+2|follow|takip etmek|R|||ek 19 Ekim
+2|hate|nefret etmek|R|||ek 19 Ekim
+2|healthy|sağlıklı|R|||ek 19 Ekim
+2|hiking|doğa yürüyüşü|R|||ek 19 Ekim
+2|historical|tarihi|R|||ek 19 Ekim
+2|latest|en son, en yeni|R|||ek 19 Ekim
+2|mostly|çoğunlukla|R|||ek 19 Ekim
+2|national|ulusal|R|||ek 19 Ekim
+2|reach|ulaşmak, uzanmak|R|||ek 19 Ekim
+2|rest|dinlenmek|R|||ek 19 Ekim
+2|seldom|nadiren|R|||ek 19 Ekim
+2|sometimes|bazen|R|||ek 19 Ekim
+2|suggest|önermek|R|||ek 19 Ekim
+2|think|düşünmek|R|||ek 19 Ekim
+2|ticket|bilet|R|||ek 19 Ekim
+2|usually|genellikle|R|||ek 19 Ekim
+2|wear|giymek|R|||ek 19 Ekim
+2|weather|hava (durumu)|R|||ek 19 Ekim
+2|weekend|hafta sonu|R|||ek 19 Ekim
+2|while|iken, sırasında|R|||ek 19 Ekim
+2|hobby|hobi|R|||ek 19 Ekim
+2|pop|pop müzik|R|||ek 19 Ekim
+2|rap|rap müzik|R|||ek 19 Ekim
+2|jazz|caz|R|||ek 19 Ekim
+2|music|müzik|R|||ek 19 Ekim
+2|basketball|basketbol|R|||ek 19 Ekim
+2|football|futbol|R|||ek 19 Ekim
+2|sport|spor|R|||ek 19 Ekim
+2|bored|sıkılmış|R|||ek 19 Ekim
+2|favourite|en sevdiği|R|||ek 19 Ekim
+2|magazine|dergi|R|||ek 19 Ekim
+2|popular|popüler|R|||ek 19 Ekim
+2|movie|film|R|||ek 19 Ekim
+2|cinema|sinema|R|||ek 19 Ekim
+2|video|video|R|||ek 19 Ekim
+2|game|oyun|R|||ek 19 Ekim
+2|play|oynamak; çalmak|R|||ek 19 Ekim
+2|watch|izlemek|R|||ek 19 Ekim
+2|weekday|hafta içi|R|||ek 19 Ekim
+2|dislike|sevmemek|R|||ek 19 Ekim
+2|english|İngilizce|R|||ek 19 Ekim
+2|social|sosyal|R|||ek 19 Ekim
+2|train|antrenman yapmak; tren|R|||ek 19 Ekim
+2|photo|fotoğraf|R|||ek 19 Ekim
+2|often|sık sık|R|||ek 19 Ekim
+2|never|asla, hiç|R|||ek 19 Ekim
+2|rather|oldukça; tercihen|R|||ek 19 Ekim
+2|quite|oldukça|R|||ek 19 Ekim
+2|monday|pazartesi|R|||ek 19 Ekim
+2|tuesday|salı|R|||ek 19 Ekim
+2|wednesday|çarşamba|R|||ek 19 Ekim
+2|thursday|perşembe|R|||ek 19 Ekim
+2|friday|cuma|R|||ek 19 Ekim
+2|saturday|cumartesi|R|||ek 19 Ekim
+2|sunday|pazar|R|||ek 19 Ekim
+2|morning|sabah|R|||ek 19 Ekim
+2|afternoon|öğleden sonra|R|||ek 19 Ekim
+2|evening|akşam|R|||ek 19 Ekim
+2|today|bugün|R|||ek 19 Ekim
+2|month|ay (takvim)|R|||ek 19 Ekim
+2|time|zaman, saat|R|||ek 19 Ekim
+2|late|geç|R|||ek 19 Ekim
+2|start|başlamak|R|||ek 19 Ekim
+2|finish|bitirmek|R|||ek 19 Ekim
+2|can't stand|katlanamamak|I|||ek 19 Ekim
+2|keen on|meraklı, çok sevmek|I|||ek 19 Ekim
+2|hang around|takılmak, vakit geçirmek|I|||ek 19 Ekim
+2|work out|spor yapmak|I|||ek 19 Ekim
+2|free time|boş zaman|I|||ek 19 Ekim
+2|do exercise|egzersiz yapmak|I|||ek 19 Ekim
+2|form a band|müzik grubu kurmak|I|||ek 19 Ekim
+2|team sport|takım sporu|I|||ek 19 Ekim
+2|casual clothes|günlük kıyafetler|I|||ek 19 Ekim
+2|for example|örneğin|I|||ek 19 Ekim
+2|to be honest|dürüst olmak gerekirse|I|||ek 19 Ekim
+3|add|eklemek|R|||ek 19 Ekim
+3|batter|sıvı hamur|R|||ek 19 Ekim
+3|bean|fasulye|R|||ek 19 Ekim
+3|beef|sığır eti|R|||ek 19 Ekim
+3|celery|kereviz sapı|R|||ek 19 Ekim
+3|cinnamon|tarçın|R|||ek 19 Ekim
+3|combine|birleştirmek|R|||ek 19 Ekim
+3|cover|örtmek, kapatmak|R|||ek 19 Ekim
+3|cumin|kimyon|R|||ek 19 Ekim
+3|difficult|zor|R|||ek 19 Ekim
+3|dissolve|erimek, çözünmek|R|||ek 19 Ekim
+3|divide|bölmek|R|||ek 19 Ekim
+3|finally|sonunda|R|||ek 19 Ekim
+3|first|ilk, önce|R|||ek 19 Ekim
+3|fridge|buzdolabı|R|||ek 19 Ekim
+3|garlic|sarımsak|R|||ek 19 Ekim
+3|grated|rendelenmiş|R|||ek 19 Ekim
+3|hour|saat (süre)|R|||ek 19 Ekim
+3|knead|yoğurmak|R|||ek 19 Ekim
+3|later|sonra|R|||ek 19 Ekim
+3|method|yöntem|R|||ek 19 Ekim
+3|minute|dakika|R|||ek 19 Ekim
+3|mixture|karışım|R|||ek 19 Ekim
+3|next|sonraki|R|||ek 19 Ekim
+3|nut|kuruyemiş, fındık-ceviz|R|||ek 19 Ekim
+3|parsley|maydanoz|R|||ek 19 Ekim
+3|pepper|biber|R|||ek 19 Ekim
+3|place|yer; yerleştirmek|R|||ek 19 Ekim
+3|pot|tencere|R|||ek 19 Ekim
+3|prawn|karides|R|||ek 19 Ekim
+3|preheat|önceden ısıtmak|R|||ek 19 Ekim
+3|raisin|kuru üzüm|R|||ek 19 Ekim
+3|remember|hatırlamak|R|||ek 19 Ekim
+3|remove|çıkarmak|R|||ek 19 Ekim
+3|rise|kabarmak, yükselmek|R|||ek 19 Ekim
+3|saffron|safran|R|||ek 19 Ekim
+3|second|ikinci; saniye|R|||ek 19 Ekim
+3|shape|şekil|R|||ek 19 Ekim
+3|slightly|biraz, hafifçe|R|||ek 19 Ekim
+3|smooth|pürüzsüz|R|||ek 19 Ekim
+3|soak|suda bekletmek, ıslatmak|R|||ek 19 Ekim
+3|starch|nişasta|R|||ek 19 Ekim
+3|stir|karıştırmak|R|||ek 19 Ekim
+3|strain|süzmek|R|||ek 19 Ekim
+3|syrup|şerbet, şurup|R|||ek 19 Ekim
+3|tender|yumuşak (et)|R|||ek 19 Ekim
+3|top|üst, tepe|R|||ek 19 Ekim
+3|tray|tepsi|R|||ek 19 Ekim
+3|use|kullanmak|R|||ek 19 Ekim
+3|mussel|midye|R|||ek 19 Ekim
+3|food|yiyecek, yemek|R|||ek 19 Ekim
+3|drink|içmek; içecek|R|||ek 19 Ekim
+3|breakfast|kahvaltı|R|||ek 19 Ekim
+3|lunch|öğle yemeği|R|||ek 19 Ekim
+3|salad|salata|R|||ek 19 Ekim
+3|tomato|domates|R|||ek 19 Ekim
+3|onion|soğan|R|||ek 19 Ekim
+3|olive|zeytin|R|||ek 19 Ekim
+3|milk|süt|R|||ek 19 Ekim
+3|fruit|meyve|R|||ek 19 Ekim
+3|vegetable|sebze|R|||ek 19 Ekim
+3|sweet|tatlı; şeker|R|||ek 19 Ekim
+3|cake|kek, pasta|R|||ek 19 Ekim
+3|chocolate|çikolata|R|||ek 19 Ekim
+3|lemonade|limonata|R|||ek 19 Ekim
+3|water|su|R|||ek 19 Ekim
+3|restaurant|restoran|R|||ek 19 Ekim
+3|order|sipariş etmek|R|||ek 19 Ekim
+3|half|yarım|R|||ek 19 Ekim
+3|piece|parça, dilim|R|||ek 19 Ekim
+3|customer|müşteri|R|||ek 19 Ekim
+3|a pinch of salt|bir tutam tuz|I|||ek 19 Ekim
+3|after that|ondan sonra|I|||ek 19 Ekim
+3|baking powder|kabartma tozu|I|||ek 19 Ekim
+3|frying pan|kızartma tavası|I|||ek 19 Ekim
+3|rolling pin|oklava|I|||ek 19 Ekim
+3|set aside|bir kenara koymak|I|||ek 19 Ekim
+3|how long|ne kadar süre|I|||ek 19 Ekim
+3|how many|kaç tane|I|||ek 19 Ekim
+3|how much|ne kadar (miktar, fiyat)|I|||ek 19 Ekim
+4|application|uygulama; başvuru|R|||ek 19 Ekim
+4|arrange|ayarlamak, düzenlemek|R|||ek 19 Ekim
+4|begin|başlamak|R|||ek 19 Ekim
+4|caller|arayan kişi|R|||ek 19 Ekim
+4|change|değiştirmek; bozuk para|R|||ek 19 Ekim
+4|delivery|teslimat|R|||ek 19 Ekim
+4|fine|iyi; ince|R|||ek 19 Ekim
+4|graduation|mezuniyet|R|||ek 19 Ekim
+4|great|harika|R|||ek 19 Ekim
+4|hear|duymak|R|||ek 19 Ekim
+4|ill|hasta|R|||ek 19 Ekim
+4|imagine|hayal etmek|R|||ek 19 Ekim
+4|leave|ayrılmak; bırakmak|R|||ek 19 Ekim
+4|possible|mümkün|R|||ek 19 Ekim
+4|reminder|hatırlatıcı|R|||ek 19 Ekim
+4|repeat|tekrarlamak|R|||ek 19 Ekim
+4|replace|değiştirmek, yerine koymak|R|||ek 19 Ekim
+4|shout|bağırmak|R|||ek 19 Ekim
+4|try|denemek|R|||ek 19 Ekim
+4|way|yol; yöntem|R|||ek 19 Ekim
+4|phone|telefon|R|||ek 19 Ekim
+4|mobile|mobil, cep telefonu|R|||ek 19 Ekim
+4|email|e-posta|R|||ek 19 Ekim
+4|address|adres|R|||ek 19 Ekim
+4|secretary|sekreter|R|||ek 19 Ekim
+4|company|şirket|R|||ek 19 Ekim
+4|wait|beklemek|R|||ek 19 Ekim
+4|speak|konuşmak|R|||ek 19 Ekim
+4|tonight|bu gece|R|||ek 19 Ekim
+4|tomorrow|yarın|R|||ek 19 Ekim
+4|date|tarih; randevu|R|||ek 19 Ekim
+4|now|şimdi|R|||ek 19 Ekim
+4|again|tekrar|R|||ek 19 Ekim
+4|check|kontrol etmek|R|||ek 19 Ekim
+4|bill|fatura; hesap|R|||ek 19 Ekim
+4|sound|ses; kulağa gelmek|R|||ek 19 Ekim
+4|hold on|beklemek (hatta)|I|||ek 19 Ekim
+4|put through|telefonu bağlamak|I|||ek 19 Ekim
+4|at the moment|şu anda|I|||ek 19 Ekim
+4|just a minute|bir dakika|I|||ek 19 Ekim
+4|keep in touch|iletişimde kalmak|I|||ek 19 Ekim
+4|take care|kendine iyi bak|I|||ek 19 Ekim
+4|get well soon|geçmiş olsun|I|||ek 19 Ekim
+4|feel better|daha iyi hissetmek|I|||ek 19 Ekim
+4|make a phone call|telefon etmek|I|||ek 19 Ekim
+4|send a message|mesaj göndermek|I|||ek 19 Ekim
+4|smartphone|akıllı telefon|I|||ek 19 Ekim
+4|you're welcome|bir şey değil|I|||ek 19 Ekim
+4|waste time|vakit kaybetmek|I|||ek 19 Ekim
+4|how often|ne sıklıkla|I|||ek 19 Ekim
+4|o'clock|saat (tam)|I|||ek 19 Ekim
+4|dial a number|numara çevirmek|I|||ek 19 Ekim
+5|addict|bağımlı|R|||ek 19 Ekim
+5|advantage|avantaj|R|||ek 19 Ekim
+5|disadvantage|dezavantaj|R|||ek 19 Ekim
+5|affect|etkilemek|R|||ek 19 Ekim
+5|broken|kırık, bozuk|R|||ek 19 Ekim
+5|careful|dikkatli|R|||ek 19 Ekim
+5|communicate|iletişim kurmak|R|||ek 19 Ekim
+5|dangerous|tehlikeli|R|||ek 19 Ekim
+5|detail|detay, ayrıntı|R|||ek 19 Ekim
+5|harmful|zararlı|R|||ek 19 Ekim
+5|member|üye|R|||ek 19 Ekim
+5|percent|yüzde|R|||ek 19 Ekim
+5|reset|sıfırlamak|R|||ek 19 Ekim
+5|useful|faydalı|R|||ek 19 Ekim
+5|username|kullanıcı adı|R|||ek 19 Ekim
+5|internet|internet|R|||ek 19 Ekim
+5|computer|bilgisayar|R|||ek 19 Ekim
+5|blog|blog|R|||ek 19 Ekim
+5|network|ağ|R|||ek 19 Ekim
+5|television|televizyon|R|||ek 19 Ekim
+5|radio|radyo|R|||ek 19 Ekim
+5|survey|anket|R|||ek 19 Ekim
+5|visual|görsel|R|||ek 19 Ekim
+5|personal|kişisel|R|||ek 19 Ekim
+5|daily|günlük|R|||ek 19 Ekim
+5|by mistake|yanlışlıkla|I|||ek 19 Ekim
+5|log off|oturumu kapatmak|I|||ek 19 Ekim
+5|make new friends|yeni arkadaşlar edinmek|I|||ek 19 Ekim
+5|meet strangers|yabancılarla tanışmak|I|||ek 19 Ekim
+5|surf the internet|internette gezinmek|I|||ek 19 Ekim
+5|personal information|kişisel bilgi|I|||ek 19 Ekim
+5|social media|sosyal medya|I|||ek 19 Ekim
+5|isolated|yalnız, soyutlanmış|R|||ek 19 Ekim
+6|absolutely|kesinlikle|R|||ek 19 Ekim
+6|adventure|macera|R|||ek 19 Ekim
+6|agree|katılmak (fikre)|R|||ek 19 Ekim
+6|amused|eğlenmiş|R|||ek 19 Ekim
+6|cave|mağara|R|||ek 19 Ekim
+6|cycling|bisiklet sürme|R|||ek 19 Ekim
+6|desert|çöl|R|||ek 19 Ekim
+6|disagree|katılmamak|R|||ek 19 Ekim
+6|excitement|heyecan|R|||ek 19 Ekim
+6|famous|ünlü|R|||ek 19 Ekim
+6|height|yükseklik, boy|R|||ek 19 Ekim
+6|high|yüksek|R|||ek 19 Ekim
+6|less|daha az|R|||ek 19 Ekim
+6|nature|doğa|R|||ek 19 Ekim
+6|other|diğer, başka|R|||ek 19 Ekim
+6|rare|nadir|R|||ek 19 Ekim
+6|row|kürek çekmek; sıra|R|||ek 19 Ekim
+6|scenery|manzara|R|||ek 19 Ekim
+6|skiing|kayak yapmak|R|||ek 19 Ekim
+6|travel|seyahat etmek|R|||ek 19 Ekim
+6|wooden|ahşap|R|||ek 19 Ekim
+6|camping|kamp yapmak|R|||ek 19 Ekim
+6|ride|binmek, sürmek|R|||ek 19 Ekim
+6|bike|bisiklet|R|||ek 19 Ekim
+6|scared|korkmuş|R|||ek 19 Ekim
+6|afraid|korkan, endişeli|R|||ek 19 Ekim
+6|accident|kaza|R|||ek 19 Ekim
+6|outside|dışarıda|R|||ek 19 Ekim
+6|amusement park|lunapark|I|||ek 19 Ekim
+6|have a picnic|piknik yapmak|I|||ek 19 Ekim
+6|afraid of|-den korkmak|I|||ek 19 Ekim
+6|fall down|düşmek|I|||ek 19 Ekim
+6|hot air balloon|sıcak hava balonu|I|||ek 19 Ekim
+6|scuba diving|tüplü dalış|I|||ek 19 Ekim
+6|would rather|tercih etmek|I|||ek 19 Ekim
+6|on my own|tek başıma|I|||ek 19 Ekim
+6|so far|şimdiye kadar|I|||ek 19 Ekim
+6|winter sports|kış sporları|I|||ek 19 Ekim
+6|outdoor activities|açık hava etkinlikleri|I|||ek 19 Ekim
+7|amphitheatre|amfitiyatro|R|||ek 19 Ekim
+7|attractive|çekici, ilgi çekici|R|||ek 19 Ekim
+7|beautiful|güzel|R|||ek 19 Ekim
+7|big|büyük|R|||ek 19 Ekim
+7|build|inşa etmek|R|||ek 19 Ekim
+7|compare|karşılaştırmak|R|||ek 19 Ekim
+7|country|ülke; kırsal|R|||ek 19 Ekim
+7|cruise|gemi turu|R|||ek 19 Ekim
+7|dirty|kirli|R|||ek 19 Ekim
+7|entertainment|eğlence|R|||ek 19 Ekim
+7|escape|kaçmak|R|||ek 19 Ekim
+7|excited|heyecanlı|R|||ek 19 Ekim
+7|expedition|keşif gezisi|R|||ek 19 Ekim
+7|expensive|pahalı|R|||ek 19 Ekim
+7|gorgeous|muhteşem|R|||ek 19 Ekim
+7|happen|olmak, meydana gelmek|R|||ek 19 Ekim
+7|heritage|miras (kültürel)|R|||ek 19 Ekim
+7|history|tarih|R|||ek 19 Ekim
+7|hospitable|misafirperver|R|||ek 19 Ekim
+7|huge|kocaman|R|||ek 19 Ekim
+7|island|ada|R|||ek 19 Ekim
+7|keep|tutmak, saklamak|R|||ek 19 Ekim
+7|location|konum, yer|R|||ek 19 Ekim
+7|lovely|çok güzel, hoş|R|||ek 19 Ekim
+7|natural|doğal|R|||ek 19 Ekim
+7|noisy|gürültülü|R|||ek 19 Ekim
+7|opinion|fikir, görüş|R|||ek 19 Ekim
+7|organize|düzenlemek|R|||ek 19 Ekim
+7|palace|saray|R|||ek 19 Ekim
+7|perfect|mükemmel|R|||ek 19 Ekim
+7|public|halka açık|R|||ek 19 Ekim
+7|quiet|sessiz|R|||ek 19 Ekim
+7|ready|hazır|R|||ek 19 Ekim
+7|rich|zengin|R|||ek 19 Ekim
+7|sail|yelken açmak|R|||ek 19 Ekim
+7|spend|harcamak; geçirmek|R|||ek 19 Ekim
+7|stay|kalmak|R|||ek 19 Ekim
+7|sunbathe|güneşlenmek|R|||ek 19 Ekim
+7|terrible|berbat, korkunç|R|||ek 19 Ekim
+7|theatre|tiyatro|R|||ek 19 Ekim
+7|tiring|yorucu|R|||ek 19 Ekim
+7|together|birlikte|R|||ek 19 Ekim
+7|traditional|geleneksel|R|||ek 19 Ekim
+7|transportation|ulaşım|R|||ek 19 Ekim
+7|unbelievable|inanılmaz|R|||ek 19 Ekim
+7|world|dünya|R|||ek 19 Ekim
+7|city|şehir|R|||ek 19 Ekim
+7|museum|müze|R|||ek 19 Ekim
+7|tourist|turist|R|||ek 19 Ekim
+7|tour|tur|R|||ek 19 Ekim
+7|flight|uçuş|R|||ek 19 Ekim
+7|plane|uçak|R|||ek 19 Ekim
+7|centre|merkez|R|||ek 19 Ekim
+7|street|sokak, cadde|R|||ek 19 Ekim
+7|visit|ziyaret etmek|R|||ek 19 Ekim
+7|arrive|varmak, gelmek|R|||ek 19 Ekim
+7|return|geri dönmek|R|||ek 19 Ekim
+7|price|fiyat|R|||ek 19 Ekim
+7|century|yüzyıl|R|||ek 19 Ekim
+7|local|yerel|R|||ek 19 Ekim
+7|modern|modern|R|||ek 19 Ekim
+7|july|temmuz|R|||ek 19 Ekim
+7|august|ağustos|R|||ek 19 Ekim
+7|summer|yaz|R|||ek 19 Ekim
+7|in my opinion|bence|I|||ek 19 Ekim
+7|have a rest|dinlenmek|I|||ek 19 Ekim
+7|sightseeing tour|gezi turu|I|||ek 19 Ekim
+7|have been to|bulunmuş olmak, gitmiş olmak|I|||ek 19 Ekim
+7|school trip|okul gezisi|I|||ek 19 Ekim
+7|book a room|oda ayırtmak|I|||ek 19 Ekim
+8|annoy|sinirlendirmek, rahatsız etmek|R|||ek 19 Ekim
+8|article|makale|R|||ek 19 Ekim
+8|complain|şikâyet etmek|R|||ek 19 Ekim
+8|elder|yaşça büyük|R|||ek 19 Ekim
+8|hard|zor; sert|R|||ek 19 Ekim
+8|housework|ev işi|R|||ek 19 Ekim
+8|lesson|ders|R|||ek 19 Ekim
+8|mess|dağınıklık|R|||ek 19 Ekim
+8|mind|aldırmak, sakıncası olmak|R|||ek 19 Ekim
+8|necessary|gerekli|R|||ek 19 Ekim
+8|peaceful|huzurlu|R|||ek 19 Ekim
+8|responsible|sorumlu|R|||ek 19 Ekim
+8|right|doğru; sağ; hak|R|||ek 19 Ekim
+8|rude|kaba|R|||ek 19 Ekim
+8|say|söylemek|R|||ek 19 Ekim
+8|task|görev|R|||ek 19 Ekim
+8|tidy|düzenli, toplu|R|||ek 19 Ekim
+8|dishwasher|bulaşık makinesi|R|||ek 19 Ekim
+8|bathroom|banyo|R|||ek 19 Ekim
+8|clothes|kıyafetler|R|||ek 19 Ekim
+8|pet|evcil hayvan|R|||ek 19 Ekim
+8|house|ev|R|||ek 19 Ekim
+8|home|ev, yuva|R|||ek 19 Ekim
+8|family|aile|R|||ek 19 Ekim
+8|mother|anne|R|||ek 19 Ekim
+8|father|baba|R|||ek 19 Ekim
+8|sister|kız kardeş|R|||ek 19 Ekim
+8|cousin|kuzen|R|||ek 19 Ekim
+8|grandparents|büyükanne ve büyükbaba|R|||ek 19 Ekim
+8|grandfather|büyükbaba, dede|R|||ek 19 Ekim
+8|husband|koca, eş (erkek)|R|||ek 19 Ekim
+8|parents|anne baba|R|||ek 19 Ekim
+8|boy|erkek çocuk|R|||ek 19 Ekim
+8|old|yaşlı; eski|R|||ek 19 Ekim
+8|little|küçük; biraz|R|||ek 19 Ekim
+8|small|küçük|R|||ek 19 Ekim
+8|long|uzun|R|||ek 19 Ekim
+8|black|siyah|R|||ek 19 Ekim
+8|white|beyaz|R|||ek 19 Ekim
+8|brown|kahverengi|R|||ek 19 Ekim
+8|green|yeşil|R|||ek 19 Ekim
+8|dry the dishes|bulaşıkları kurulamak|I|||ek 19 Ekim
+8|walk the dog|köpeği gezdirmek|I|||ek 19 Ekim
+8|vacuum the carpet|halıyı süpürmek|I|||ek 19 Ekim
+8|pocket money|harçlık|I|||ek 19 Ekim
+8|take care of|ilgilenmek, bakmak|I|||ek 19 Ekim
+8|do the shopping|alışveriş yapmak|I|||ek 19 Ekim
+8|in charge of|-den sorumlu|I|||ek 19 Ekim
+8|responsible for|-den sorumlu|I|||ek 19 Ekim
+8|busy with|ile meşgul|I|||ek 19 Ekim
+9|allow|izin vermek|R|||ek 19 Ekim
+9|appreciate|takdir etmek, minnettar olmak|R|||ek 19 Ekim
+9|borrow|ödünç almak|R|||ek 19 Ekim
+9|brilliant|parlak, harika|R|||ek 19 Ekim
+9|bring|getirmek|R|||ek 19 Ekim
+9|calculator|hesap makinesi|R|||ek 19 Ekim
+9|carry|taşımak|R|||ek 19 Ekim
+9|childhood|çocukluk|R|||ek 19 Ekim
+9|create|yaratmak, oluşturmak|R|||ek 19 Ekim
+9|deserve|hak etmek|R|||ek 19 Ekim
+9|design|tasarlamak|R|||ek 19 Ekim
+9|discovery|keşif|R|||ek 19 Ekim
+9|education|eğitim|R|||ek 19 Ekim
+9|engineering|mühendislik|R|||ek 19 Ekim
+9|experiment|deney|R|||ek 19 Ekim
+9|explorer|kâşif|R|||ek 19 Ekim
+9|fact|gerçek, olgu|R|||ek 19 Ekim
+9|forever|sonsuza dek|R|||ek 19 Ekim
+9|forget|unutmak|R|||ek 19 Ekim
+9|human|insan|R|||ek 19 Ekim
+9|improve|geliştirmek|R|||ek 19 Ekim
+9|invention|icat|R|||ek 19 Ekim
+9|inventor|mucit|R|||ek 19 Ekim
+9|journalist|gazeteci|R|||ek 19 Ekim
+9|lend|ödünç vermek|R|||ek 19 Ekim
+9|live|yaşamak|R|||ek 19 Ekim
+9|masterpiece|başyapıt|R|||ek 19 Ekim
+9|novel|roman|R|||ek 19 Ekim
+9|paint|boyamak; boya|R|||ek 19 Ekim
+9|physics|fizik|R|||ek 19 Ekim
+9|poem|şiir|R|||ek 19 Ekim
+9|publish|yayımlamak|R|||ek 19 Ekim
+9|realize|fark etmek|R|||ek 19 Ekim
+9|record|kaydetmek; rekor|R|||ek 19 Ekim
+9|science|bilim, fen|R|||ek 19 Ekim
+9|scientist|bilim insanı|R|||ek 19 Ekim
+9|space|uzay; boşluk|R|||ek 19 Ekim
+9|strange|garip|R|||ek 19 Ekim
+9|struggle|mücadele etmek|R|||ek 19 Ekim
+9|typewriter|daktilo|R|||ek 19 Ekim
+9|unique|eşsiz|R|||ek 19 Ekim
+9|universe|evren|R|||ek 19 Ekim
+9|wonder|merak etmek|R|||ek 19 Ekim
+9|writer|yazar|R|||ek 19 Ekim
+9|chemistry|kimya|R|||ek 19 Ekim
+9|medicine|ilaç; tıp|R|||ek 19 Ekim
+9|health|sağlık|R|||ek 19 Ekim
+9|hospital|hastane|R|||ek 19 Ekim
+9|doctor|doktor|R|||ek 19 Ekim
+9|tool|alet|R|||ek 19 Ekim
+9|project|proje|R|||ek 19 Ekim
+9|problem|problem, sorun|R|||ek 19 Ekim
+9|solve|çözmek|R|||ek 19 Ekim
+9|university|üniversite|R|||ek 19 Ekim
+9|step|adım|R|||ek 19 Ekim
+9|discuss|tartışmak, görüşmek|R|||ek 19 Ekim
+9|interest|ilgi|R|||ek 19 Ekim
+9|language|dil (lisan)|R|||ek 19 Ekim
+9|wrong|yanlış|R|||ek 19 Ekim
+9|word|kelime|R|||ek 19 Ekim
+9|write|yazmak|R|||ek 19 Ekim
+9|teacher|öğretmen|R|||ek 19 Ekim
+9|student|öğrenci|R|||ek 19 Ekim
+9|school|okul|R|||ek 19 Ekim
+9|classroom|sınıf (oda)|R|||ek 19 Ekim
+9|homework|ödev|R|||ek 19 Ekim
+9|library|kütüphane|R|||ek 19 Ekim
+9|course|kurs; ders|R|||ek 19 Ekim
+9|subject|ders, konu|R|||ek 19 Ekim
+9|change the world|dünyayı değiştirmek|I|||ek 19 Ekim
+9|get better|iyileşmek|I|||ek 19 Ekim
+9|look for|aramak|I|||ek 19 Ekim
+9|thanks to|sayesinde|I|||ek 19 Ekim
+9|light bulb|ampul|I|||ek 19 Ekim
+9|printing press|matbaa|I|||ek 19 Ekim
+9|insist on|ısrar etmek|I|||ek 19 Ekim
+10|agriculture|tarım|R|||ek 19 Ekim
+10|blow|esmek; üflemek|R|||ek 19 Ekim
+10|climate|iklim|R|||ek 19 Ekim
+10|damage|hasar vermek, zarar|R|||ek 19 Ekim
+10|death|ölüm|R|||ek 19 Ekim
+10|deforestation|ormansızlaşma|R|||ek 19 Ekim
+10|enough|yeterli|R|||ek 19 Ekim
+10|environment|çevre|R|||ek 19 Ekim
+10|factory|fabrika|R|||ek 19 Ekim
+10|future|gelecek|R|||ek 19 Ekim
+10|government|hükümet|R|||ek 19 Ekim
+10|increase|artırmak, artmak|R|||ek 19 Ekim
+10|injury|yaralanma|R|||ek 19 Ekim
+10|lack|eksiklik|R|||ek 19 Ekim
+10|land|kara, arazi; inmek|R|||ek 19 Ekim
+10|lightning|şimşek, yıldırım|R|||ek 19 Ekim
+10|liquid|sıvı|R|||ek 19 Ekim
+10|mountain|dağ|R|||ek 19 Ekim
+10|movement|hareket|R|||ek 19 Ekim
+10|ocean|okyanus|R|||ek 19 Ekim
+10|past|geçmiş|R|||ek 19 Ekim
+10|prevent|önlemek|R|||ek 19 Ekim
+10|river|nehir|R|||ek 19 Ekim
+10|save|kurtarmak; biriktirmek|R|||ek 19 Ekim
+10|shortage|kıtlık, sıkıntı|R|||ek 19 Ekim
+10|snow|kar|R|||ek 19 Ekim
+10|solid|katı|R|||ek 19 Ekim
+10|strong|güçlü, sağlam|R|||ek 19 Ekim
+10|sudden|ani|R|||ek 19 Ekim
+10|suggestion|öneri|R|||ek 19 Ekim
+10|surface|yüzey|R|||ek 19 Ekim
+10|warn|uyarmak|R|||ek 19 Ekim
+10|wave|dalga; el sallamak|R|||ek 19 Ekim
+10|wind|rüzgâr|R|||ek 19 Ekim
+10|earth|dünya, toprak|R|||ek 19 Ekim
+10|heat|ısı; ısıtmak|R|||ek 19 Ekim
+10|area|alan, bölge|R|||ek 19 Ekim
+10|life|hayat|R|||ek 19 Ekim
+10|soil|toprak|R|||ek 19 Ekim
+10|reduce|azaltmak|R|||ek 19 Ekim
+10|air pollution|hava kirliliği|I|||ek 19 Ekim
+10|climate change|iklim değişikliği|I|||ek 19 Ekim
+10|first aid|ilk yardım|I|||ek 19 Ekim
+10|natural disaster|doğal afet|I|||ek 19 Ekim
+10|forest fire|orman yangını|I|||ek 19 Ekim
+10|deal with|başa çıkmak|I|||ek 19 Ekim
+10|lead to|yol açmak|I|||ek 19 Ekim
+10|run out of|tükenmek, bitmek|I|||ek 19 Ekim
+10|stay away|uzak durmak|I|||ek 19 Ekim
+10|warm up|ısınmak|I|||ek 19 Ekim
+10|grow crops|ürün yetiştirmek|I|||ek 19 Ekim
+10|rescue team|kurtarma ekibi|I|||ek 19 Ekim
+1|calm|sakin|V|||ek 19 Ekim
+1|fair|adil|V|||ek 19 Ekim
+1|hope|umut|V|||ek 19 Ekim
+1|meet|buluşmak|V|||ek 19 Ekim
+1|talk|konuşmak|V|||ek 19 Ekim
+1|tell|söylemek|V|||ek 19 Ekim
+1|friend|arkadaş|V|||ek 19 Ekim
+1|happy|mutlu|V|||ek 19 Ekim
+1|bad|kötü|V|||ek 19 Ekim
+1|name|ad|V|||ek 19 Ekim
+2|buy|satın almak|V|||ek 19 Ekim
+2|cheap|ucuz|V|||ek 19 Ekim
+2|fast|hızlı|V|||ek 19 Ekim
+2|gym|spor salonu|V|||ek 19 Ekim
+2|kind|nazik|V|||ek 19 Ekim
+2|send|göndermek|V|||ek 19 Ekim
+2|type|yazmak|V|||ek 19 Ekim
+2|listen|dinlemek|V|||ek 19 Ekim
+2|team|takım|V|||ek 19 Ekim
+2|week|hafta|V|||ek 19 Ekim
+2|night|gece|V|||ek 19 Ekim
+2|early|erken|V|||ek 19 Ekim
+2|hat|şapka|V|||ek 19 Ekim
+3|butter|tereyağı|V|||ek 19 Ekim
+3|cook|yemek pişirmek|V|||ek 19 Ekim
+3|dish|tabak|V|||ek 19 Ekim
+3|drain|gider|V|||ek 19 Ekim
+3|large|büyük|V|||ek 19 Ekim
+3|put|koymak|V|||ek 19 Ekim
+3|rinse|durulamak|V|||ek 19 Ekim
+3|salt|tuz|V|||ek 19 Ekim
+3|serve|servis atmak|V|||ek 19 Ekim
+3|sharp|keskin|V|||ek 19 Ekim
+3|stretch|germek|V|||ek 19 Ekim
+3|dinner|akşam yemeği|V|||ek 19 Ekim
+3|sauce|sos|V|||ek 19 Ekim
+3|soup|çorba|V|||ek 19 Ekim
+3|egg|yumurta|V|||ek 19 Ekim
+3|sugar|şeker|V|||ek 19 Ekim
+3|eat|yemek yemek|V|||ek 19 Ekim
+3|kitchen|mutfak|V|||ek 19 Ekim
+4|soon|yakında|V|||ek 19 Ekim
+5|web|ağ|V|||ek 19 Ekim
+5|net|ağ, file|V|||ek 19 Ekim
+6|climb|tırmanmak|V|||ek 19 Ekim
+6|speed|hız|V|||ek 19 Ekim
+7|book|kitap|V|||ek 19 Ekim
+7|clean|temizlemek|V|||ek 19 Ekim
+7|feel|hissetmek|V|||ek 19 Ekim
+7|taste|tat|V|||ek 19 Ekim
+7|town|kasaba|V|||ek 19 Ekim
+7|pay|ödemek|V|||ek 19 Ekim
+7|money|para|V|||ek 19 Ekim
+7|year|yıl|V|||ek 19 Ekim
+7|car|araba|V|||ek 19 Ekim
+7|bus|otobüs|V|||ek 19 Ekim
+7|wish|dilek|V|||ek 19 Ekim
+8|wash|yıkamak|V|||ek 19 Ekim
+8|young|genç|V|||ek 19 Ekim
+8|bed|yatak|V|||ek 19 Ekim
+8|floor|zemin|V|||ek 19 Ekim
+8|window|pencere|V|||ek 19 Ekim
+8|garden|bahçe|V|||ek 19 Ekim
+8|help|yardım etmek|V|||ek 19 Ekim
+8|rule|kural|V|||ek 19 Ekim
+8|list|liste|V|||ek 19 Ekim
+8|dog|köpek|V|||ek 19 Ekim
+8|brother|erkek kardeş|V|||ek 19 Ekim
+8|short|kısa|V|||ek 19 Ekim
+8|sit|oturmak|V|||ek 19 Ekim
+8|count|saymak|V|||ek 19 Ekim
+9|lift|kaldırmak|V|||ek 19 Ekim
+9|print|basmak|V|||ek 19 Ekim
+9|study|ders çalışmak|V|||ek 19 Ekim
+9|find|bulmak|V|||ek 19 Ekim
+9|make|yapmak|V|||ek 19 Ekim
+9|take|almak|V|||ek 19 Ekim
+9|show|göstermek|V|||ek 19 Ekim
+9|class|sınıf|V|||ek 19 Ekim
+9|mark|işaret|V|||ek 19 Ekim
+10|fall|düşmek|V|||ek 19 Ekim
+10|hill|tepe|V|||ek 19 Ekim
+10|mud|çamur|V|||ek 19 Ekim
+10|rain|yağmur|V|||ek 19 Ekim
+10|roof|çatı|V|||ek 19 Ekim
+10|safe|güvenli|V|||ek 19 Ekim
+10|shake|sallamak|V|||ek 19 Ekim
+10|storm|fırtına|V|||ek 19 Ekim
+10|cold|soğuk|V|||ek 19 Ekim
+10|rock|kaya|V|||ek 19 Ekim

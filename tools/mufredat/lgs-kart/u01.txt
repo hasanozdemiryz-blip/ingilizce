@@ -52,3 +52,90 @@ tournament|turnuva|T|turnuva|ses|Satranç turnuvasını kazandı|A smiling girl 
 treasure|hazine|G|||Kumda bir hazine sandığı buldular|Two children kneel on a beach and open a small wooden treasure chest full of shiny gold coins.|yellow|E
 trust|güvenmek|K|tıraş|ses|Berbere güvendim, tıraşım harika oldu|A relaxed boy sits in a barber chair with closed eyes while a smiling barber trims his hair with scissors.|mint|E
 unconditional|koşulsuz|G|||Annesi onu koşulsuz sever|A mother kneels and hugs her small son tightly, both smiling with closed eyes.|pink|E
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+also|ayrıca, de/da|G|||Kedi de köpek de bahçede oynadı|A cat and a dog both chase the same red ball together on a small patch of grass, the dog also wagging its tail.|green|E
+apologise|özür dilemek|G|||Kardeşine özür dileyip çiçek verdi|A sorry-looking boy in a blue t-shirt hands a small flower to his little sister, who smiles and forgives him.|pink|E
+ask|sormak|K|as|yazılış|Bayrağı nereye asayım diye sordu|A girl holding a folded red flag looks up and asks her teacher where to hang it on a low string of bunting.|sky-blue|E
+become|olmak (dönüşmek)|G|||Tırtıl kelebek oldu|A green caterpillar on a leaf next to a colourful butterfly flying away, showing it has become a butterfly.|mint|E
+better|daha iyi|G|||İkinci resmi daha iyi oldu|A girl proudly holds up a bright colourful drawing next to an earlier messy scribbled one, smiling because the new one is better.|yellow|E
+boring|sıkıcı|G|||Sıkıcı derste esnedi|A boy yawns widely at his school desk, chin in his hand, while a clock on the wall moves slowly.|cream|E
+care|önemsemek, ilgilenmek|K|kare|ses|Kareli defterine özenle baktı|A girl carefully wraps her squared notebook in a clear protective cover at a small desk, smiling, treating it with care.|lavender|E
+crazy|çılgın|G|||Çılgın saç modeliyle okula geldi|A laughing boy with a wild rainbow-coloured spiky hairstyle and a school backpack waves hello.|pink|E
+decide|karar vermek|G|||Hangi dondurmayı alacağına karar verdi|A girl stands in front of an ice cream cart pointing at a pink strawberry scoop, finally deciding.|peach|E
+describe|tarif etmek, tanımlamak|G|||Kayıp kedisini polise tarif etti|A girl stretches her arms to show the size of her lost orange cat to a friendly police officer who is taking notes.|sky-blue|E
+experience|deneyim, yaşamak|K|peri|yazılış|Periyle tanışmak harika bir deneyimdi|A delighted girl meets a tiny friendly fairy with sparkling wings who hovers above her open hand in a garden.|lavender|E
+fashionable|modaya uygun|G|||Modaya uygun yeni ceketiyle poz verdi|A smiling teenage girl poses in a trendy bright yellow jacket, white trainers and a small bag.|yellow|E
+fun|eğlence, eğlenceli|G|||Balonlu partide çok eğlendik|Three children laugh and jump among many colourful balloons at a party.|pink|E
+funny|komik|G|||Palyaçonun komik gösterisine güldük|Two children laugh out loud at a friendly clown with a red nose juggling three soft balls.|yellow|E
+generation|nesil|T|jenerasyon|ses|Üç nesil aynı fotoğrafta|A grandmother, a mother and a little girl stand side by side and smile, three generations of one family.|peach|E
+give|vermek|G|||Arkadaşına kalemini verdi|A boy hands his blue pencil to a friend sitting next to him at a school desk.|mint|E
+guess|tahmin etmek|G|||Kutuda ne olduğunu tahmin etmeye çalıştı|A boy shakes a wrapped gift box next to his ear with a curious face, trying to guess what is inside.|lavender|E
+guest|misafir|G|||Misafirlere çay ikram ettik|A smiling family welcomes two guests at the door and offers them a tray with glasses of tea.|cream|E
+idea|fikir|G|||Aklına parlak bir fikir geldi|A girl snaps her fingers with a big smile while a glowing yellow light bulb floats above her head.|yellow|E
+important|önemli|G|||Önemli mektubu dikkatle taşıdı|A boy carefully carries a big envelope with a red seal in both hands, looking serious.|cream|E
+individual|bireysel, kişi|G|||Herkes kendi resmini ayrı ayrı yaptı|Three children sit at separate easels, each painting their own different picture.|mint|E
+instead|yerine|G|||Kola yerine ayran içti|A boy pushes away a fizzy drink and happily drinks a glass of white yoghurt drink instead.|sky-blue|E
+introduce|tanıştırmak|G|||Yeni arkadaşını sınıfa tanıttı|A teacher with her hand on a new girl's shoulder introduces her to three smiling classmates who wave.|peach|E
+invitation|davet, davetiye|G|||Doğum günü davetiyesini açtı|A girl happily opens a colourful envelope and pulls out a party invitation card decorated with balloons.|pink|E
+learn|öğrenmek|G|||Bisiklet sürmeyi öğrendi|A happy boy in a helmet rides a small bicycle while his father lets go of the seat behind him.|green|E
+letter|mektup|G|||Dedesine mektup yazdı|A girl writes a letter at a desk and puts it into an envelope with a stamp.|cream|E
+lie|yalan|G|||Yalan söyleyince yüzü kızardı|A boy with red cheeks hides a broken vase behind his back and looks away from his mother.|peach|E
+loyal|sadık|G|||Sadık köpek her gün kapıda bekledi|A small brown dog sits patiently by a front door holding a slipper in its mouth.|cream|E
+match|maç; eşleştirmek|T|maç|ses|Maçta golü atınca sevindi|A boy in a red football kit cheers with both arms up after scoring, the round black-and-white ball in the net.|green|E
+mean|anlamına gelmek; kaba|G|||Bu işaret dur anlamına geliyor|A girl points at a red traffic stop hand signal and explains to her little brother what it means.|sky-blue|E
+need|ihtiyaç duymak|G|||Bitkinin suya ihtiyacı var|A girl waters a drooping green plant in a pot with a small yellow watering can.|green|E
+neighbour|komşu|G|||Komşumuz bize pasta getirdi|A smiling elderly neighbour stands at the door holding a homemade cake for a family.|peach|E
+occupied|meşgul, dolu|G|||Bütün sandalyeler doluydu|A boy holding a tray looks for a seat in a small café where every chair is occupied by smiling people.|cream|E
+offer|teklif etmek|G|||Arkadaşına kurabiye teklif etti|A girl holds out a plate of cookies to a friend who reaches to take one.|peach|E
+outgoing|dışa dönük, girişken|G|||Girişken çocuk herkesle hemen tanıştı|A cheerful boy waves and says hello to a group of new kids at a playground.|yellow|E
+patient|sabırlı; hasta|G|||Balıkçı sabırla bekledi|A calm old man sits on a small wooden pier with a fishing rod, waiting patiently, a little fish just biting.|sky-blue|E
+personality|kişilik|G|||Herkesin kişiliği farklı|Three children side by side: one reading quietly, one laughing loudly, one painting — each showing a different personality.|lavender|E
+rarely|nadiren|G|||Bu çiçek çölde nadiren açar|A single pink flower blooms on a small cactus in sandy ground under a clear sky.|peach|E
+reason|sebep|G|||Geç kalma sebebini anlattı|A boy points at a flat bicycle tyre while explaining to his teacher why he is late.|cream|E
+relaxed|rahat, gevşemiş|G|||Hamakta rahat rahat kitap okudu|A relaxed girl lies in a hammock between two trees reading a book.|mint|E
+reliable|güvenilir|G|||Güvenilir arkadaşı anahtarı sakladı|A boy hands his house key to a trusted friend who nods and puts it safely in his pocket.|green|E
+remain|kalmak|G|||Tabakta tek kurabiye kaldı|A plate with only one cookie remaining, crumbs around it, two children looking at it.|cream|E
+respectful|saygılı|G|||Otobüste yaşlı teyzeye yer verdi|A boy stands up from his seat and offers it to an elderly lady with a walking stick; no bus interior, no windows.|lavender|E
+same|aynı|G|||İkizler aynı kıyafeti giydi|Twin girls wearing exactly the same yellow dress and red shoes stand side by side and smile.|yellow|E
+still|hâlâ|G|||Saat on oldu ama o hâlâ uyuyor|A boy is still asleep in bed under a blue blanket while a round alarm clock rings on the bedside table.|sky-blue|E
+supportive|destekleyici|G|||Yarışta ailesi onu destekledi|A girl runs in a race while her parents cheer and wave from the side.|green|E
+sure|emin; tabii|G|||Emin adımlarla ip üstünde yürüdü|A confident girl walks on a low balance beam in a gym, arms out, smiling.|mint|E
+thing|şey|G|||Çantasından bir sürü şey çıktı|A girl turns her backpack upside down and many small things fall out: pencils, a ball, a toy car, an apple.|lavender|E
+thirsty|susamış|G|||Koşudan sonra çok susamıştı|A tired boy in sports clothes drinks a big glass of water after running.|sky-blue|E
+understand|anlamak|G|||Öğretmen anlatınca konuyu anladı|A girl at a desk smiles and nods while her teacher points at a simple drawing on a whiteboard.|cream|E
+want|istemek|G|||Vitrindeki oyuncak trene bakıp onu istedi|A little boy presses his hands against a shop window looking at a red toy train, wanting it.|peach|E
+birthday|doğum günü|G|||Doğum günü pastasındaki mumları üfledi|A girl in a party hat blows out candles on a birthday cake while friends clap.|pink|E
+party|parti|T|parti|ses|Partide herkes dans etti|Children in party hats dance under colourful paper garlands.|pink|E
+classmate|sınıf arkadaşı|G|||Sınıf arkadaşıyla ödev yaptı|Two classmates sit side by side at a school desk doing homework together.|mint|E
+dear|sevgili, değerli|G|||Sevgili dedesine sarıldı|A girl hugs her grandfather tightly, both smiling.|peach|E
+believe|inanmak|G|||Sihirbazın numarasına inanamadı|A surprised boy stares with open mouth as a magician pulls a white rabbit out of a black hat.|lavender|E
+truth|gerçek, doğru|G|||Kırık vazonun gerçeğini anlattı|A boy honestly points at himself and a broken vase while talking to his mother, who listens calmly.|cream|E
+positive|olumlu|T|pozitif|ses|Pozitif düşünen kız gülümsedi|A cheerful girl gives a thumbs up under a grey cloud with a small rainbow appearing behind it.|yellow|E
+similar|benzer|G|||İki kedi birbirine çok benziyordu|Two almost identical striped grey kittens sit side by side, one with a red collar and one with a blue collar.|cream|E
+both|her ikisi de|G|||İki elinde de dondurma vardı|A happy boy holds an ice cream cone in both hands.|peach|E
+each|her bir|G|||Her çocuğa bir elma düştü|A teacher hands one red apple to each of three children standing in a row.|green|E
+either|ikisinden biri|G|||Kırmızı ya da maviyi seçebilirdi|A boy looks at two balloons, one red and one blue, deciding which one to take.|sky-blue|E
+neither|hiçbiri (ikisi de değil)|G|||İki yemeği de beğenmedi|A boy shakes his head at two plates, one with broccoli and one with fish, liking neither.|mint|E
+another|başka bir, bir tane daha|G|||Bir kurabiye daha aldı|A smiling girl reaches for another cookie from a plate while already holding one.|cream|E
+thank you|teşekkür ederim|I|||Hediyeyi alınca teşekkür etti|A girl receives a wrapped present and says thank you with a big smile, hand on her heart.|pink|E
+sorry|üzgün; özür dilerim|G|||Topu cama çarpınca özür diledi|A boy holding a football looks sorry next to a neighbour who points at a cracked window.|sky-blue|E
+please|lütfen|G|||Lütfen deyip tuzu istedi|A polite girl at a dinner table asks her father to pass the salt, pointing at it.|cream|E
+nice|hoş, güzel|G|||Bahçedeki çiçekler çok hoştu|A girl smells colourful flowers in a small garden and smiles.|pink|E
+good|iyi|G|||Karnesi iyi gelince sevindi|A happy boy holds up his school report with a big gold star on it.|yellow|E
+love|sevmek|G|||Köpeğini çok seviyor|A girl hugs her fluffy white dog with closed eyes and a big smile.|pink|E
+people|insanlar|G|||Meydanda çok insan vardı|A crowd of different smiling people walks across a small town square.|cream|E
+as soon as possible|mümkün olan en kısa sürede|I|||Annesi onu hemen eve çağırdı|A mother waves from a doorway calling her son, who runs home quickly from the park.|peach|E
+break a promise|sözünden dönmek|I|||Söz verdiği hâlde parka gelmedi|A sad girl waits alone on a park bench looking at her watch, her friend did not come.|lavender|E
+keep a promise|sözünü tutmak|I|||Söz verdiği gibi kitabı geri getirdi|A boy hands a book back to a friend, both shaking hands with a smile.|green|E
+keep a secret|sır tutmak|I|||Arkadaşının sırrını kimseye söylemedi|A girl whispers a secret into her friend's ear; the friend puts a finger on her lips.|lavender|E
+tell a lie|yalan söylemek|I|||Ödevini köpek yedi diye yalan söyledi|A boy with crossed fingers behind his back talks to his teacher while a puppy sits beside him.|cream|E
+each other|birbirini|I|||İki arkadaş birbirine yardım etti|Two children help each other climb over a low wooden fence, one pulling and one pushing.|green|E
+give advice|tavsiye vermek|I|||Ablası ona sınav için tavsiye verdi|An older sister sits with her younger brother at a desk, pointing at a book and giving advice.|cream|E
+have a lot in common|birçok ortak noktası olmak|I|||İkisi de kitap ve kedi seviyor|Two girls sit together on a bench, both reading books, both with a cat on their lap.|pink|E
+interested in|ile ilgilenmek|I|||Dinozorlarla çok ilgileniyor|A boy looks at a big dinosaur skeleton model with great interest, holding a book about dinosaurs.|mint|E
+rely on|güvenmek|I|||Tırmanırken babasına güvendi|A girl climbing a small rock wall holds a rope that her father firmly holds from below.|sky-blue|E
+spend time|vakit geçirmek|I|||Dedesiyle bahçede vakit geçirdi|A boy and his grandfather plant flowers together in a garden.|green|E
+of course|tabii ki|I|||Yardım ister misin diye sorunca tabii dedi|A girl nods happily as a friend offers to carry her heavy box.|yellow|E
+not at all|hiç de değil|I|||Yorgun musun diye sordular, hiç değil dedi|An energetic girl jumps on a trampoline shaking her head with a big smile.|mint|E
+that's why|bu yüzden|I|||Yağmur yağıyordu, bu yüzden şemsiye aldı|A boy opens a yellow umbrella as raindrops fall from a small cloud.|sky-blue|E
+feel alone|yalnız hissetmek|I|||Yeni okulda yalnız hissetti|A new girl stands alone with her backpack at the edge of a playground while others play.|lavender|E

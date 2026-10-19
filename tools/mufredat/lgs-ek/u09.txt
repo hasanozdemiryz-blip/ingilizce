@@ -1,0 +1,78 @@
+# 9. ünite Science — EK (19 Ekim 2026)
+# en|tr|tur|kanca|yol|cumle|sahne (EN)|ton|genel(E/H)|örnek (EN)|örnek (TR)
+allow|izin vermek|G|||Annesi parka gitmesine izin verdi|A mother nods and opens the garden gate, allowing her son to go to the park with his ball.|green|E|My parents allow me to play games at the weekend.|Ailem hafta sonu oyun oynamama izin veriyor.
+appreciate|takdir etmek, minnettar olmak|G|||Yardımını takdir edip teşekkür etti|An old lady smiles and shakes hands with a boy who carried her shopping bags.|peach|E|I appreciate your help.|Yardımını takdir ediyorum.
+borrow|ödünç almak|G|||Kütüphaneden kitap ödünç aldı|A girl borrows a book from a smiling librarian at a desk.|lavender|E|Can I borrow your pen?|Kalemini ödünç alabilir miyim?
+brilliant|parlak, harika|K|briyantin|ses|Briyantinli saçlı mucit parlak bir fikir buldu|A cheerful inventor with shiny slicked-back hair jumps up with a glowing light bulb above his head.|yellow|E|That's a brilliant idea!|Bu harika bir fikir!
+bring|getirmek|G|||Köpek topu geri getirdi|A happy dog brings a ball back to a girl in a park.|green|E|Bring your notebook tomorrow.|Yarın defterini getir.
+calculator|hesap makinesi|G|||Hesap makinesiyle toplama yaptı|A boy presses buttons on a calculator; the screen and buttons have no digits.|cream|E|You can't use a calculator in the exam.|Sınavda hesap makinesi kullanamazsın.
+carry|taşımak|G|||Karınca kendinden büyük yaprağı taşıdı|A tiny ant carries a big green leaf over its head.|green|E|Can you carry this box?|Bu kutuyu taşıyabilir misin?
+childhood|çocukluk|G|||Dedesi çocukluk fotoğrafını gösterdi|A grandfather shows his grandson an old photo of himself as a little boy.|cream|E|I had a happy childhood.|Mutlu bir çocukluğum oldu.
+create|yaratmak, oluşturmak|G|||Kilden bir heykel yarattı|A girl shapes a small clay sculpture of a cat on a table.|peach|E|Artists create beautiful works.|Sanatçılar güzel eserler yaratır.
+deserve|hak etmek|G|||Çok çalıştığı için ödülü hak etti|A hardworking girl receives a gold medal from her teacher.|yellow|E|You deserve the prize.|Ödülü hak ediyorsun.
+design|tasarlamak|T|dizayn|ses|Yeni bir uçak dizayn etti|A boy draws a plan of a colourful aeroplane on a big sheet of paper; no text.|sky-blue|E|I want to design my own clothes.|Kendi kıyafetlerimi tasarlamak istiyorum.
+discovery|keşif|G|||Bahçede eski bir sandık keşfetti|A boy discovers an old wooden chest half buried in a garden.|cream|E|It was an important discovery.|Bu önemli bir keşifti.
+education|eğitim|G|||Eğitim için her gün okula gidiyor|Children walk into a school with backpacks, a teacher waving at the door.|mint|E|Education is very important.|Eğitim çok önemli.
+engineering|mühendislik|G|||Mühendislik öğrencisi köprü modeli yaptı|A young woman builds a model bridge from wooden sticks.|sky-blue|E|My brother studies engineering.|Ağabeyim mühendislik okuyor.
+experiment|deney|G|||Laboratuvarda renkli bir deney yaptı|A girl in safety glasses pours blue liquid into a flask that bubbles.|mint|E|We did an experiment in the science class.|Fen dersinde bir deney yaptık.
+explorer|kâşif|G|||Kâşif dürbünüyle yeni karayı gördü|An explorer with a hat stands on a ship looking through a telescope at an island.|sky-blue|E|He was a famous explorer.|O ünlü bir kâşifti.
+fact|gerçek, olgu|G|||Dünyanın yuvarlak olduğu bir gerçek|A girl points at a round globe while classmates listen.|sky-blue|E|It is a fact that the Earth is round.|Dünyanın yuvarlak olduğu bir gerçek.
+forever|sonsuza dek|G|||Kumdaki kalbin sonsuza dek kalmasını istedi|Two friends draw a big heart in the sand on a beach.|pink|E|I will remember this day forever.|Bu günü sonsuza dek hatırlayacağım.
+forget|unutmak|G|||Şemsiyesini unutunca ıslandı|A boy without an umbrella gets wet in the rain, his umbrella left at home behind the window.|sky-blue|E|Don't forget your homework.|Ödevini unutma.
+human|insan|G|||İnsan vücudu modelini inceledi|Students look at a friendly human body model in a classroom.|peach|E|A human needs water to live.|İnsanın yaşamak için suya ihtiyacı var.
+improve|geliştirmek|G|||Her gün çalışıp resmini geliştirdi|A girl shows three drawings of a cat, each one better than the last.|lavender|E|I want to improve my English.|İngilizcemi geliştirmek istiyorum.
+invention|icat|G|||Telefon büyük bir icattı|An old-fashioned telephone next to a modern smartphone on a table; the screen is blank.|cream|E|The telephone was a great invention.|Telefon büyük bir icattı.
+inventor|mucit|G|||Mucit yeni makinesini gösterdi|A happy inventor in a lab coat shows a funny machine with gears and springs.|yellow|E|Edison was a famous inventor.|Edison ünlü bir mucitti.
+journalist|gazeteci|G|||Gazeteci mikrofonla röportaj yaptı|A journalist holds a microphone up to a smiling football player.|lavender|E|My aunt is a journalist.|Teyzem gazeteci.
+lend|ödünç vermek|G|||Arkadaşına silgisini ödünç verdi|A boy lends his eraser to the girl sitting next to him.|mint|E|Can you lend me your book?|Bana kitabını ödünç verebilir misin?
+live|yaşamak|G|||Penguenler buzullarda yaşar|A family of penguins stands on white ice.|sky-blue|E|I live in Ankara.|Ankara'da yaşıyorum.
+masterpiece|başyapıt|G|||Müzedeki başyapıtı hayranlıkla izledi|Visitors admire a famous painting in a golden frame in a museum.|cream|E|This painting is a masterpiece.|Bu tablo bir başyapıt.
+novel|roman|K|nobel|ses|Nobel ödüllü yazarın romanını okudu|A girl reads a thick novel with a gold medal drawn on its blank cover.|lavender|E|I am reading a novel by Orhan Pamuk.|Orhan Pamuk'un bir romanını okuyorum.
+paint|boyamak; boya|G|||Duvarı maviye boyadı|A boy paints a wall blue with a roller.|sky-blue|E|Let's paint the fence.|Hadi çiti boyayalım.
+physics|fizik|T|fizik|ses|Fizik dersinde mıknatısla deney yaptı|A boy holds a magnet that pulls metal paper clips.|mint|E|Physics is my favourite subject.|Fizik en sevdiğim ders.
+poem|şiir|G|||Anneler Günü için şiir okudu|A girl reads a poem from a paper to her smiling mother; the paper has no text.|pink|E|I wrote a poem for my mother.|Annem için bir şiir yazdım.
+publish|yayımlamak|G|||Yazarın kitabı yayımlandı|A smiling writer holds up her first printed book; the cover is blank.|cream|E|She wants to publish her first book.|İlk kitabını yayımlamak istiyor.
+realize|fark etmek|G|||Ayakkabılarının farklı olduğunu fark etti|A boy looks down in surprise at his feet wearing one red and one blue shoe.|yellow|E|Did you realize your mistake?|Hatanı fark ettin mi?
+record|kaydetmek; rekor|K|rekor|ses|Rekoru kırınca anı kaydettiler|A runner breaks a ribbon while a friend records the moment with a camera.|green|E|Let's record a song together.|Hadi birlikte bir şarkı kaydedelim.
+science|bilim, fen|G|||Fen dersinde yanardağ yaptık|Children watch a model volcano erupt with foam in a classroom.|mint|E|I love science.|Fen bilimlerini çok severim.
+scientist|bilim insanı|G|||Bilim insanı mikroskopla inceledi|A scientist in a white coat looks into a microscope.|mint|E|She wants to be a scientist.|O bilim insanı olmak istiyor.
+space|uzay; boşluk|G|||Astronot uzayda süzüldü|An astronaut floats in space next to a small planet and stars.|lavender|E|I want to travel to space.|Uzaya gitmek istiyorum.
+strange|garip|G|||Bahçede garip bir hayvan gördü|A girl looks curiously at a funny purple creature with three eyes in the garden.|lavender|E|I heard a strange noise.|Garip bir ses duydum.
+struggle|mücadele etmek|G|||Rüzgâra karşı mücadele etti|A girl walks against a strong wind holding her hat.|sky-blue|E|Many animals struggle in cold winters.|Birçok hayvan soğuk kışlarda zorlanır.
+typewriter|daktilo|G|||Dedesi eski daktiloda yazdı|A grandfather types on an old typewriter; the paper is blank.|cream|E|My grandfather used a typewriter.|Dedem daktilo kullanırdı.
+unique|eşsiz|G|||Her kar tanesi eşsizdir|A girl looks at a big snowflake on her mitten through a magnifying glass.|sky-blue|E|Every person is unique.|Her insan eşsizdir.
+universe|evren|G|||Teleskopla evrene baktı|A boy looks through a telescope at planets and stars.|lavender|E|The universe is very big.|Evren çok büyük.
+wonder|merak etmek|G|||Yıldızlara bakıp ne olduklarını merak etti|A girl lies on the grass looking up at the stars with wonder.|lavender|E|I wonder what time it is.|Saatin kaç olduğunu merak ediyorum.
+writer|yazar|G|||Yazar yeni hikâyesini yazdı|A writer types a story on a laptop at a desk with a cup of tea; the screen is blank.|cream|E|My favourite writer is Sabahattin Ali.|En sevdiğim yazar Sabahattin Ali.
+chemistry|kimya|G|||Kimya dersinde renkli sıvıları karıştırdı|A student mixes coloured liquids in test tubes.|mint|E|Chemistry is difficult for me.|Kimya benim için zor.
+medicine|ilaç; tıp|G|||Doktorun verdiği ilacı içti|A boy takes a spoon of medicine from his mother.|pink|E|Take this medicine twice a day.|Bu ilacı günde iki kez al.
+health|sağlık|G|||Sağlığı için her gün meyve yedi|A healthy girl eats an apple after jogging.|green|E|Sport is good for your health.|Spor sağlığa iyidir.
+hospital|hastane|G|||Hastanede hemşire ateşini ölçtü|A friendly nurse checks a boy's temperature in a hospital bed.|mint|E|My aunt works at a hospital.|Teyzem bir hastanede çalışıyor.
+doctor|doktor|T|doktor|ses|Doktor kalbini dinledi|A doctor listens to a girl's heart with a stethoscope.|sky-blue|E|I want to be a doctor.|Doktor olmak istiyorum.
+tool|alet|G|||Alet çantasından çekiç çıkardı|A boy takes a hammer from a red toolbox.|cream|E|A hammer is a useful tool.|Çekiç faydalı bir alettir.
+project|proje|T|proje|ses|Fen projesi için güneş sistemi maketi yaptı|A girl shows a model of the solar system with colourful balls.|lavender|E|We have a science project.|Bir fen projemiz var.
+problem|problem, sorun|T|problem|ses|Zor problemi çözünce sevindi|A boy cheers at a desk after solving a puzzle.|yellow|E|There is a problem with my computer.|Bilgisayarımda bir sorun var.
+solve|çözmek|G|||Yapbozu sonunda çözdü|A girl places the last piece of a big puzzle.|lavender|E|Can you solve this problem?|Bu problemi çözebilir misin?
+university|üniversite|T|üniversite|ses|Abla üniversiteyi kazandı|A happy young woman holds an acceptance letter in front of a big university building; the letter has no text.|lavender|E|My sister goes to university.|Ablam üniversiteye gidiyor.
+step|adım|G|||Bebek ilk adımını attı|A baby takes its first step toward its smiling father.|peach|E|The first step is the hardest.|İlk adım en zorudur.
+discuss|tartışmak, görüşmek|G|||Grup projeyi masada görüştü|Four students talk about a project around a table with papers.|cream|E|Let's discuss the problem.|Hadi sorunu konuşalım.
+interest|ilgi|G|||Kelebeklere büyük ilgisi var|A girl with a butterfly net looks at butterflies with great interest.|green|E|I have an interest in art.|Sanata ilgim var.
+language|dil (lisan)|G|||Üç dilde merhaba dedi|A girl waves next to three speech bubbles with different coloured flags; no text.|sky-blue|E|English is an international language.|İngilizce uluslararası bir dildir.
+wrong|yanlış|G|||Yanlış cevaba kırmızı çarpı kondu|A paper with a big red cross mark next to a sad face; no text.|pink|E|Your answer is wrong.|Cevabın yanlış.
+word|kelime|G|||Kelime kartlarını sıraya dizdi|A boy arranges blank colourful word cards on a table.|yellow|E|I don't know this word.|Bu kelimeyi bilmiyorum.
+write|yazmak|G|||Defterine güzel yazıyla yazdı|A girl writes carefully in her notebook with a pencil; the page has only lines.|cream|E|Write your name here.|Adını buraya yaz.
+teacher|öğretmen|G|||Öğretmen tahtada resim çizdi|A smiling teacher draws a sun on the board for children.|mint|E|Our teacher is very kind.|Öğretmenimiz çok nazik.
+student|öğrenci|G|||Öğrenciler sırayla sınıfa girdi|Students with backpacks walk into a classroom in a line.|mint|E|Every student has a locker.|Her öğrencinin bir dolabı var.
+school|okul|G|||Okulun bahçesinde bayrak dalgalandı|A school building with a flag and children playing in the yard.|sky-blue|E|I go to school by bus.|Okula otobüsle giderim.
+classroom|sınıf (oda)|G|||Sınıfın duvarında harita asılıydı|A bright classroom with desks, a board and a world map on the wall; no text.|cream|E|Our classroom is on the second floor.|Sınıfımız ikinci katta.
+homework|ödev|G|||Ödevini bitirip çantasına koydu|A boy finishes his homework and puts the notebook in his bag.|lavender|E|I do my homework after dinner.|Ödevimi akşam yemeğinden sonra yaparım.
+library|kütüphane|G|||Kütüphanede sessizce kitap seçti|A girl chooses a book from tall library shelves.|lavender|E|I borrowed this book from the library.|Bu kitabı kütüphaneden ödünç aldım.
+course|kurs; ders|T|kurs|ses|Yüzme kursunda yüzmeyi öğrendi|A child with armbands learns to swim with an instructor in a pool.|sky-blue|E|I take a swimming course.|Yüzme kursuna gidiyorum.
+subject|ders, konu|G|||En sevdiği ders matematik|A girl happily solves shapes and puzzles on a board; no digits.|yellow|E|What is your favourite subject?|En sevdiğin ders hangisi?
+change the world|dünyayı değiştirmek|I|||Mucitler dünyayı değiştirdi|A light bulb, a telephone and a computer float around a globe while a girl smiles.|sky-blue|E|Great inventions change the world.|Büyük icatlar dünyayı değiştirir.
+get better|iyileşmek|I|||İlacını içince iyileşti|A boy in bed sits up and smiles, holding a cup of soup.|mint|E|I hope you get better soon.|Umarım yakında iyileşirsin.
+look for|aramak|I|||Kayıp gözlüğünü her yerde aradı|A grandmother looks for her glasses while they sit on top of her head.|cream|E|Can you help me look for my keys?|Anahtarlarımı aramama yardım eder misin?
+thanks to|sayesinde|I|||Aşı sayesinde hastalanmadı|A smiling child with a small plaster on her arm next to a friendly nurse.|mint|E|Thanks to the internet, we can learn quickly.|İnternet sayesinde hızlı öğrenebiliyoruz.
+light bulb|ampul|I|||Ampulü yakınca oda aydınlandı|A boy screws a light bulb into a lamp and the room becomes bright.|yellow|E|Edison invented the light bulb.|Edison ampulü icat etti.
+printing press|matbaa|I|||Eski matbaada kitap basıldı|An old wooden printing press with sheets of paper; the papers have no text.|cream|E|The printing press changed the world.|Matbaa dünyayı değiştirdi.
+insist on|ısrar etmek|I|||Kırmızı ayakkabıyı almakta ısrar etti|A little girl hugs red shoes in a shop, refusing to let go, while her mother laughs.|pink|E|I insist on paying the bill.|Hesabı ödemekte ısrar ediyorum.

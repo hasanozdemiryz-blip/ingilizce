@@ -51,3 +51,90 @@ tournament|Our team won the chess tournament.|Takımımız satranç turnuvasın�
 treasure|The children found a treasure box in the garden.|Çocuklar bahçede bir hazine sandığı buldu.
 trust|I trust my brother completely.|Ağabeyime tamamen güvenirim.
 unconditional|A mother's love is unconditional.|Bir annenin sevgisi koşulsuzdur.
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+also|I like apples and I also like bananas.|Elmayı severim, muzu da severim.
+apologise|I want to apologise for being late.|Geç kaldığım için özür dilemek istiyorum.
+ask|Can I ask you a question?|Sana bir soru sorabilir miyim?
+become|She wants to become a doctor.|O doktor olmak istiyor.
+better|My second drawing is better than the first one.|İkinci resmim birincisinden daha iyi.
+boring|The film was so boring that I fell asleep.|Film o kadar sıkıcıydı ki uyuyakaldım.
+care|She takes care of her little brother.|Küçük kardeşine o bakıyor.
+crazy|My uncle has some crazy ideas.|Amcamın çılgın fikirleri var.
+decide|We must decide where to go this weekend.|Bu hafta sonu nereye gideceğimize karar vermeliyiz.
+describe|Can you describe your best friend?|En iyi arkadaşını tarif edebilir misin?
+experience|Travelling abroad was a great experience for me.|Yurt dışına gitmek benim için harika bir deneyimdi.
+fashionable|She always wears fashionable clothes.|Her zaman modaya uygun kıyafetler giyer.
+fun|The party was a lot of fun.|Parti çok eğlenceliydi.
+funny|My brother told a funny joke.|Kardeşim komik bir fıkra anlattı.
+generation|My grandparents' generation didn't have mobile phones.|Büyükannemlerin neslinin cep telefonu yoktu.
+give|Can you give me your pencil, please?|Kalemini bana verebilir misin lütfen?
+guess|Can you guess what is in the box?|Kutuda ne olduğunu tahmin edebilir misin?
+guest|We have a guest for dinner tonight.|Bu akşam yemeğe bir misafirimiz var.
+idea|I have a great idea for the project.|Proje için harika bir fikrim var.
+important|It is important to drink water every day.|Her gün su içmek önemlidir.
+individual|Tennis can be an individual sport.|Tenis bireysel bir spor olabilir.
+instead|I drank water instead of cola.|Kola yerine su içtim.
+introduce|Let me introduce my friend Ali.|Arkadaşım Ali'yi tanıştırayım.
+invitation|Thank you for the invitation.|Davetin için teşekkürler.
+learn|I want to learn to play the guitar.|Gitar çalmayı öğrenmek istiyorum.
+letter|I wrote a letter to my pen friend.|Mektup arkadaşıma bir mektup yazdım.
+lie|Never tell a lie to your friends.|Arkadaşlarına asla yalan söyleme.
+loyal|A loyal friend never leaves you alone.|Sadık bir arkadaş seni asla yalnız bırakmaz.
+match|We watched the football match on TV.|Futbol maçını televizyonda izledik.
+mean|What does this word mean?|Bu kelime ne anlama geliyor?
+need|Plants need water and sunlight.|Bitkilerin suya ve güneş ışığına ihtiyacı var.
+neighbour|Our neighbour has a big dog.|Komşumuzun büyük bir köpeği var.
+occupied|Sorry, this seat is occupied.|Üzgünüm, bu koltuk dolu.
+offer|Can I offer you some tea?|Size biraz çay ikram edebilir miyim?
+outgoing|My sister is very outgoing and talkative.|Kız kardeşim çok girişken ve konuşkan.
+patient|You need to be patient when you fish.|Balık tutarken sabırlı olmalısın.
+personality|She has a warm personality.|Onun sıcak bir kişiliği var.
+rarely|I rarely eat fast food.|Nadiren fast food yerim.
+reason|What is the reason for your absence?|Gelmemenin sebebi ne?
+relaxed|I feel relaxed after a hot shower.|Sıcak bir duştan sonra rahatlamış hissediyorum.
+reliable|Ali is a reliable friend.|Ali güvenilir bir arkadaştır.
+remain|Please remain in your seats.|Lütfen yerlerinizde kalın.
+respectful|Be respectful to older people.|Yaşlılara saygılı ol.
+same|We are in the same class.|Aynı sınıftayız.
+still|It is ten o'clock but he is still sleeping.|Saat on ama o hâlâ uyuyor.
+supportive|My parents are very supportive.|Ailem bana çok destek oluyor.
+sure|Are you sure about the answer?|Cevaptan emin misin?
+thing|I have one more thing to say.|Söyleyecek bir şeyim daha var.
+thirsty|I am thirsty. Can I have some water?|Susadım. Biraz su alabilir miyim?
+understand|I don't understand this question.|Bu soruyu anlamıyorum.
+want|I want a new bike for my birthday.|Doğum günüm için yeni bir bisiklet istiyorum.
+birthday|My birthday is in May.|Doğum günüm mayısta.
+party|Are you coming to my party?|Partime geliyor musun?
+classmate|My classmate helped me with maths.|Sınıf arkadaşım matematikte bana yardım etti.
+dear|Dear Ali, thank you for your letter.|Sevgili Ali, mektubun için teşekkürler.
+believe|I can't believe it!|Buna inanamıyorum!
+truth|Always tell the truth.|Her zaman doğruyu söyle.
+positive|Try to be positive.|Olumlu olmaya çalış.
+similar|My sister and I have similar hobbies.|Kız kardeşimle benzer hobilerimiz var.
+both|Both of my brothers play football.|İki erkek kardeşim de futbol oynuyor.
+each|Each student has a book.|Her öğrencinin bir kitabı var.
+either|You can choose either the red one or the blue one.|Kırmızıyı ya da maviyi seçebilirsin.
+neither|Neither of them likes broccoli.|İkisi de brokoli sevmiyor.
+another|Can I have another cookie?|Bir kurabiye daha alabilir miyim?
+thank you|Thank you for your help.|Yardımın için teşekkür ederim.
+sorry|I'm sorry, I can't come.|Üzgünüm, gelemem.
+please|Can you open the door, please?|Kapıyı açabilir misin lütfen?
+nice|What a nice day!|Ne güzel bir gün!
+good|You are a good friend.|Sen iyi bir arkadaşsın.
+love|I love my dog.|Köpeğimi çok seviyorum.
+people|Many people came to the concert.|Konsere çok insan geldi.
+as soon as possible|Please call me as soon as possible.|Lütfen beni mümkün olan en kısa sürede ara.
+break a promise|A good friend doesn't break a promise.|İyi bir arkadaş sözünden dönmez.
+keep a promise|It is important to keep a promise.|Sözünü tutmak önemlidir.
+keep a secret|Can you keep a secret?|Sır tutabilir misin?
+tell a lie|Don't tell a lie to your parents.|Ailene yalan söyleme.
+each other|We help each other with homework.|Ödevde birbirimize yardım ederiz.
+give advice|Teachers give advice to students.|Öğretmenler öğrencilere tavsiye verir.
+have a lot in common|Ali and I have a lot in common.|Ali'yle birçok ortak noktamız var.
+interested in|I am interested in science.|Bilimle ilgileniyorum.
+rely on|You can rely on me.|Bana güvenebilirsin.
+spend time|I like to spend time with my family.|Ailemle vakit geçirmeyi severim.
+of course|Of course I can help you.|Tabii ki sana yardım edebilirim.
+not at all|Do you mind if I sit here? — Not at all.|Buraya oturmamın sakıncası var mı? — Hiç değil.
+that's why|I was ill. That's why I didn't come.|Hastaydım. Bu yüzden gelmedim.
+feel alone|I sometimes feel alone at my new school.|Yeni okulumda bazen yalnız hissediyorum.

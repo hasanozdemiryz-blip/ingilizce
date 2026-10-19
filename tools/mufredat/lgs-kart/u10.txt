@@ -38,3 +38,56 @@ tsunami|tsunami|T|tsunami|ses|Tsunami uyarısı yapıldı|A big wave rises far o
 volcano|yanardağ|T|volkan|ses|Volkan duman çıkardı|A volcano puffs a little smoke on a sunny island.|peach|E
 waste|atık|G|||Atıkları ayrı kutulara ayırdı|A boy sorts waste into three coloured bins.|green|E
 water shortage|su kıtlığı|I|||Su kıtlığında musluktan tek damla çıktı|A single drop falls from an almost dry tap.|sky-blue|E
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+agriculture|tarım|G|||Çiftçi tarlada buğday ekti|A smiling farmer plants seeds in neat rows on a green field with a small tractor nearby.|green|E
+blow|esmek; üflemek|G|||Rüzgâr esince şapkası uçtu|A strong wind blows a girl's yellow hat off her head as she laughs.|sky-blue|E
+climate|iklim|G|||Kutupta soğuk, çölde sıcak iklim|A split scene: a penguin on ice on one side and a camel in desert sand on the other.|sky-blue|E
+damage|hasar vermek, zarar|G|||Dolu arabanın camına zarar verdi|Hailstones bounce off a small car with a cracked windscreen; no people inside.|cream|E
+death|ölüm|G|||Depremde ölümleri önlemek için sağlam binalar şart|||E
+deforestation|ormansızlaşma|G|||Ormansızlaşmayı durdurmak için fidan diktiler|Children plant small saplings on a bare hillside with tree stumps.|green|E
+enough|yeterli|G|||Herkese yetecek kadar pasta vardı|A big cake with enough slices for every smiling child around the table.|pink|E
+environment|çevre|G|||Çevreyi korumak için çöp topladılar|Children pick up litter in a park and put it into recycling bins.|green|E
+factory|fabrika|G|||Fabrikanın bacasından duman çıkıyordu|A factory with tall chimneys releasing grey smoke into the sky; no text.|cream|E
+future|gelecek|G|||Gelecekte uçan arabalar olacak|A boy dreams of a future city with flying cars, shown in a thought bubble.|lavender|E
+government|hükümet|G|||Hükümet yeni bir park açtı|Officials in suits cut a ribbon at the opening of a new green park; no text.|cream|E
+increase|artırmak, artmak|G|||Fidan büyüdükçe boyu arttı|Three pictures of the same plant getting taller from small to big.|green|E
+injury|yaralanma|G|||Dizindeki küçük yaraya yara bandı yapıştırdı|A girl puts a plaster on a small scratch on her knee, smiling bravely.|peach|E
+lack|eksiklik|G|||Yağmursuzluktan topraklar çatladı|Cracked dry ground with a thirsty little plant and a farmer looking at the clear sky.|yellow|E
+land|kara, arazi; inmek|G|||Uçak piste indi|A white plane lands on a runway.|sky-blue|E
+lightning|şimşek, yıldırım|G|||Gökte şimşek çaktı|A bright zigzag of lightning in a dark-grey cloud over a calm field; the scene is light, not dark.|lavender|E
+liquid|sıvı|T|likit|ses|Likit sabunu eline döktü|A girl pours green liquid soap onto her hands at a sink.|mint|E
+mountain|dağ|G|||Karlı dağın zirvesine bayrak diktiler|Climbers plant a flag on top of a snowy mountain.|sky-blue|E
+movement|hareket|G|||Dansçının her hareketi zarifti|A girl dances gracefully, ribbons showing her movement.|pink|E
+ocean|okyanus|T|okyanus|ses|Okyanusta balinalar yüzdü|Whales swim in a wide blue ocean.|sky-blue|E
+past|geçmiş|G|||Müzede geçmişin oyuncaklarını gördük|Children look at old wooden toys in a museum display.|cream|E
+prevent|önlemek|G|||Kask kafasını korudu, kazayı önledi|A boy in a helmet rides a bike safely.|green|E
+river|nehir|G|||Nehirde kayıkla ilerlediler|A small boat floats down a winding river between trees.|sky-blue|E
+save|kurtarmak; biriktirmek|G|||İtfaiyeci ağaçtaki kediyi kurtardı|A firefighter on a ladder rescues a kitten from a tree.|peach|E
+shortage|kıtlık, sıkıntı|G|||Musluklardan su gelmedi|A boy turns a tap but no water comes out; an empty bucket below.|yellow|E
+snow|kar|G|||Kar yağınca kartopu oynadık|Children throw snowballs in a snowy park.|sky-blue|E
+solid|katı|G|||Su donunca katı buz oldu|A glass of water next to a solid ice cube.|sky-blue|E
+strong|güçlü, sağlam|G|||Güçlü adam ağırlığı kaldırdı|A strong smiling man lifts a big barbell.|peach|E
+sudden|ani|G|||Ani yağmurda herkes koştu|People run with bags over their heads in a sudden rain shower.|sky-blue|E
+suggestion|öneri|G|||Arkadaşının önerisini beğendi|A girl nods happily at a friend pointing at a map.|yellow|E
+surface|yüzey|G|||Su yüzeyinde yapraklar yüzüyordu|Autumn leaves float on the surface of a calm pond.|green|E
+warn|uyarmak|G|||Görevli kaygan zemin için uyardı|A cleaner points to a yellow wet floor sign and warns a boy; the sign has no text.|yellow|E
+wave|dalga; el sallamak|G|||Sörfçü büyük dalgada kaydı|A surfer rides a big blue wave.|sky-blue|E
+wind|rüzgâr|G|||Rüzgâr değirmeni rüzgârda döndü|A white wind turbine turns on a green hill.|sky-blue|E
+earth|dünya, toprak|G|||Dünyayı korumak için ellerini birleştirdiler|Children hold hands around a smiling-free globe of the Earth.|green|E
+heat|ısı; ısıtmak|G|||Güneşin sıcağında terledi|A boy wipes sweat from his forehead under a hot sun.|yellow|E
+area|alan, bölge|G|||Piknik alanında masalar vardı|A picnic area with wooden tables and trees in a park.|green|E
+life|hayat|G|||Okyanusta rengârenk bir hayat var|Colourful fish, turtles and coral live under the sea.|sky-blue|E
+soil|toprak|G|||Fidanı toprağa dikti|A girl plants a small sapling in brown soil with a little shovel.|peach|E
+reduce|azaltmak|G|||Çöpü azaltmak için bez çanta kullandı|A boy carries groceries in a reusable cloth bag; the bag is blank.|green|E
+air pollution|hava kirliliği|I|||Hava kirliliği yüzünden maske taktı|A girl wears a mask in a city with grey smog and factory chimneys.|cream|E
+climate change|iklim değişikliği|I|||İklim değişikliğiyle buzullar eridi|A polar bear stands on a small melting piece of ice in the sea.|sky-blue|E
+first aid|ilk yardım|I|||İlk yardım çantasıyla dizini sardı|A teacher bandages a boy's knee with a red first aid kit beside her.|peach|E
+natural disaster|doğal afet|I|||Doğal afetlere karşı tatbikat yaptık|Children practise drop, cover and hold under their desks during a drill.|cream|E
+forest fire|orman yangını|I|||Uçak orman yangınına su döktü|A firefighting plane drops water over a small forest fire far away on a hill.|peach|E
+deal with|başa çıkmak|I|||Tatbikatla depremle başa çıkmayı öğrendik|A teacher shows children how to cover their heads under desks.|mint|E
+lead to|yol açmak|I|||Yağmursuzluk kuraklığa yol açtı|A dry, cracked field next to an empty dry riverbed under a hot sun.|yellow|E
+run out of|tükenmek, bitmek|I|||Arabanın benzini bitti|A father stands next to a car on the roadside looking at an empty fuel gauge drawn as a simple dial.|cream|E
+stay away|uzak durmak|I|||Depremde camlardan uzak durdular|Children move away from windows and gather in the middle of a room with their teacher.|lavender|E
+warm up|ısınmak|I|||Maçtan önce ısındılar|A team of children stretches and jogs before a football match.|green|E
+grow crops|ürün yetiştirmek|I|||Çiftçiler tarlada mısır yetiştirdi|Farmers stand in a field of tall corn plants.|yellow|E
+rescue team|kurtarma ekibi|I|||Kurtarma ekibi köpekle arama yaptı|A rescue team in orange helmets works with a search dog near a fallen wall, no injured people shown.|peach|E

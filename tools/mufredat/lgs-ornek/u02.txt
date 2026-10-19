@@ -39,3 +39,95 @@ trendy|She always wears trendy sneakers.|Hep modaya uygun spor ayakkabılar giye
 types of music|What types of music do you like?|Ne tür müzikler seversin?
 unbearable|The heat in August is unbearable.|Ağustostaki sıcak dayanılmaz.
 youth|The youth centre has a big library.|Gençlik merkezinin büyük bir kütüphanesi var.
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+admire|I admire my grandmother's courage.|Büyükannemin cesaretine hayranım.
+adult|The ticket is ten liras for an adult.|Yetişkin bileti on lira.
+advise|I advise you to sleep early.|Erken yatmanı tavsiye ederim.
+always|I always brush my teeth before bed.|Yatmadan önce her zaman dişlerimi fırçalarım.
+amazing|The view from the top was amazing.|Tepeden manzara muhteşemdi.
+band|My brother plays the guitar in a band.|Ağabeyim bir müzik grubunda gitar çalıyor.
+chat|We chat online every evening.|Her akşam internette sohbet ederiz.
+comfortable|These shoes are very comfortable.|Bu ayakkabılar çok rahat.
+different|My sister and I are very different.|Kız kardeşimle çok farklıyız.
+documentary|We watched a documentary about penguins.|Penguenler hakkında bir belgesel izledik.
+drummer|The drummer of the band is my cousin.|Grubun davulcusu kuzenim.
+easy|The test was easy.|Sınav kolaydı.
+educational|This game is fun and educational.|Bu oyun eğlenceli ve eğitici.
+enjoy|I enjoy reading books.|Kitap okumaktan keyif alırım.
+everywhere|I looked everywhere for my keys.|Anahtarlarımı her yerde aradım.
+express|Music helps me express my feelings.|Müzik duygularımı ifade etmeme yardım eder.
+follow|Please follow me.|Lütfen beni takip edin.
+hate|I hate getting up early.|Erken kalkmaktan nefret ederim.
+healthy|Vegetables are healthy.|Sebzeler sağlıklıdır.
+hiking|We go hiking in the mountains.|Dağlarda doğa yürüyüşüne çıkarız.
+historical|Istanbul has many historical places.|İstanbul'da birçok tarihi yer var.
+latest|Have you seen her latest video?|Onun en son videosunu gördün mü?
+mostly|I mostly read books at the weekend.|Hafta sonu çoğunlukla kitap okurum.
+national|We celebrate national holidays at school.|Okulda ulusal bayramları kutlarız.
+reach|I can't reach the top shelf.|Üst rafa uzanamıyorum.
+rest|You should rest after the match.|Maçtan sonra dinlenmelisin.
+seldom|We seldom go to the cinema.|Sinemaya nadiren gideriz.
+sometimes|I sometimes walk to school.|Bazen okula yürüyerek giderim.
+suggest|I suggest going to the park.|Parka gitmeyi öneriyorum.
+think|I think it will rain today.|Bence bugün yağmur yağacak.
+ticket|I need a ticket for the train.|Tren için bir bilete ihtiyacım var.
+usually|I usually get up at seven.|Genellikle yedide kalkarım.
+wear|I wear a uniform at school.|Okulda üniforma giyerim.
+weather|The weather is sunny today.|Bugün hava güneşli.
+weekend|What do you do at the weekend?|Hafta sonu ne yaparsın?
+while|I listen to music while I study.|Ders çalışırken müzik dinlerim.
+hobby|My hobby is painting.|Hobim resim yapmak.
+pop|I like pop music.|Pop müziği severim.
+rap|My brother listens to rap all the time.|Ağabeyim sürekli rap dinler.
+jazz|My father loves jazz.|Babam cazı çok sever.
+music|Music makes me happy.|Müzik beni mutlu eder.
+basketball|We play basketball after school.|Okuldan sonra basketbol oynarız.
+football|Football is very popular in Turkey.|Futbol Türkiye'de çok popüler.
+sport|Swimming is my favourite sport.|Yüzme en sevdiğim spor.
+bored|I am bored. Let's go out.|Sıkıldım. Hadi dışarı çıkalım.
+favourite|What is your favourite colour?|En sevdiğin renk ne?
+magazine|I read a magazine about animals.|Hayvanlarla ilgili bir dergi okudum.
+popular|This song is very popular.|Bu şarkı çok popüler.
+movie|Let's watch a movie tonight.|Bu akşam film izleyelim.
+cinema|We went to the cinema on Saturday.|Cumartesi sinemaya gittik.
+video|I watched a funny video.|Komik bir video izledim.
+game|Do you want to play a game?|Bir oyun oynamak ister misin?
+play|Let's play in the garden.|Hadi bahçede oynayalım.
+watch|I watch TV in the evening.|Akşamları televizyon izlerim.
+weekday|Monday is a weekday.|Pazartesi hafta içi bir gündür.
+dislike|I dislike cold weather.|Soğuk havayı sevmem.
+english|English is my favourite lesson.|İngilizce en sevdiğim ders.
+social|She is very social and has many friends.|O çok sosyal ve birçok arkadaşı var.
+train|We train together after school.|Okuldan sonra birlikte antrenman yaparız.
+photo|Can you take a photo of us?|Bizim fotoğrafımızı çekebilir misin?
+often|I often visit my grandparents.|Büyükannemleri sık sık ziyaret ederim.
+never|I never drink coffee.|Asla kahve içmem.
+rather|It is rather cold today.|Bugün hava oldukça soğuk.
+quite|The film was quite long.|Film oldukça uzundu.
+monday|We have English on Monday.|Pazartesi İngilizce dersimiz var.
+tuesday|I go swimming on Tuesday.|Salı günü yüzmeye giderim.
+wednesday|The market is open on Wednesday.|Pazar çarşamba günü açık.
+thursday|We have art on Thursday.|Perşembe günü resim dersimiz var.
+friday|Let's meet on Friday.|Cuma günü buluşalım.
+saturday|I play football on Saturday.|Cumartesi futbol oynarım.
+sunday|We visit our grandparents on Sunday.|Pazar günü büyükannemleri ziyaret ederiz.
+morning|I drink milk every morning.|Her sabah süt içerim.
+afternoon|We play in the park in the afternoon.|Öğleden sonra parkta oynarız.
+evening|I do my homework in the evening.|Akşam ödevimi yaparım.
+today|Today is my birthday.|Bugün benim doğum günüm.
+month|My birthday is next month.|Doğum günüm gelecek ay.
+time|What time is it?|Saat kaç?
+late|Sorry, I'm late.|Üzgünüm, geç kaldım.
+start|When does the film start?|Film ne zaman başlıyor?
+finish|Did you finish your homework?|Ödevini bitirdin mi?
+can't stand|I can't stand loud music.|Yüksek sesli müziğe katlanamam.
+keen on|My sister is keen on dancing.|Kız kardeşim dansa çok meraklı.
+hang around|We hang around in the shopping mall.|Alışveriş merkezinde takılırız.
+work out|I work out three times a week.|Haftada üç kez spor yaparım.
+free time|What do you do in your free time?|Boş zamanında ne yaparsın?
+do exercise|You should do exercise every day.|Her gün egzersiz yapmalısın.
+form a band|We want to form a band.|Bir müzik grubu kurmak istiyoruz.
+team sport|Football is a team sport.|Futbol bir takım sporudur.
+casual clothes|I wear casual clothes at the weekend.|Hafta sonu günlük kıyafetler giyerim.
+for example|I like fruit, for example, apples and bananas.|Meyve severim, örneğin elma ve muz.
+to be honest|To be honest, I don't like this song.|Dürüst olmak gerekirse bu şarkıyı sevmiyorum.

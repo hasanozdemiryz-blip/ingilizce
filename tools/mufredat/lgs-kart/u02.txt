@@ -39,3 +39,95 @@ trendy|modaya uygun|T|trend|ses|Yeni ceketi çok trend|A teenager poses in a tre
 types of music|müzik türleri|I|||Farklı müzik türlerini dinledik|A guitar, a violin, a drum kit and a microphone stand side by side with different coloured music notes.|lavender|E
 unbearable|dayanılmaz|K|un|yazılış|Un çuvalı dayanılmaz derecede ağırdı|A man struggles to carry a huge sack of flour on his back, knees bending, sweating.|cream|E
 youth|gençlik|G|||Gençlik festivalinde herkes dans etti|A group of young people dance together happily at a sunny youth festival.|yellow|E
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+admire|hayran olmak|G|||Ünlü ressamın tablosuna hayranlıkla baktı|A girl gazes in admiration at a big colourful painting in a frame on a gallery wall.|lavender|E
+adult|yetişkin|G|||Yetişkin bilet, çocuk bileti|A tall adult and a small child stand side by side holding hands, the adult twice as tall.|cream|E
+advise|tavsiye etmek|G|||Doktor bol su içmesini tavsiye etti|A friendly doctor in a white coat holds up a glass of water and advises a boy to drink more.|mint|E
+always|her zaman|G|||Her sabah her zaman süt içer|A boy drinks a glass of milk at breakfast as the sun rises behind a window frame on a plain wall.|yellow|E
+amazing|muhteşem, şaşırtıcı|G|||Havai fişek gösterisi muhteşemdi|Children look up with open mouths at bright colourful fireworks in a pale evening sky.|lavender|E
+band|müzik grubu|K|bando|ses|Bando gibi coşkulu bir müzik grubu kurdular|Four teenagers play guitar, drums, keyboard and trumpet together on a small stage.|pink|E
+chat|sohbet etmek|K|çat|ses|Çat kapı gelen arkadaşıyla saatlerce sohbet etti|A girl opens the door to a surprise visiting friend, and then the two sit on a sofa chatting and laughing.|peach|E
+comfortable|rahat, konforlu|T|konfor|ses|Konforlu koltukta uyuyakaldı|A boy sleeps peacefully in a big soft armchair with a cushion.|cream|E
+different|farklı|G|||Sürüdeki tek farklı koyun siyahtı|A row of white sheep with one black sheep in the middle, looking different.|green|E
+documentary|belgesel|T|dokümanter|ses|Penguen belgeseli izledik|A family on a sofa watches a TV screen showing penguins on ice; the screen has no text.|sky-blue|E
+drummer|davulcu|G|||Davulcu tempo tuttu|A smiling teenage drummer plays a drum kit with two sticks raised.|peach|E
+easy|kolay|K|iz|ses|Karda izi takip etmek kolaydı|A child easily follows a line of clear footprints in white snow toward a small snowman.|sky-blue|E
+educational|eğitici|G|||Eğitici oyunla toplama öğrendi|A girl plays with a colourful counting toy with beads, learning to add numbers; no digits.|mint|E
+enjoy|keyif almak|G|||Güneşte dondurmanın keyfini çıkardı|A girl sits on a beach towel enjoying an ice cream cone with her eyes closed.|yellow|E
+everywhere|her yerde|G|||Odada her yerde oyuncak vardı|A messy room with toys everywhere: on the bed, on the floor, on the shelf, a boy standing in the middle.|lavender|E
+express|ifade etmek|G|||Duygularını resimle ifade etti|A girl paints a big smiling sun and a heart on paper, expressing her happy feelings.|pink|E
+follow|takip etmek|G|||Ördek yavruları annelerini takip etti|Five little yellow ducklings follow their mother duck in a neat line.|green|E
+hate|nefret etmek|G|||Ispanaktan nefret ediyor|A boy pushes away a plate of spinach with a disgusted face.|green|E
+healthy|sağlıklı|G|||Sağlıklı kahvaltı yaptı|A smiling girl eats a breakfast of fruit, yoghurt and bread at a small table.|mint|E
+hiking|doğa yürüyüşü|G|||Hafta sonu doğa yürüyüşüne çıktık|A family with backpacks and walking sticks hikes up a gentle green hill path.|green|E
+historical|tarihi|G|||Tarihi kaleyi gezdik|Children with a teacher look up at an old stone castle tower.|cream|E
+latest|en son, en yeni|G|||En yeni telefonu vitrinde gördü|A boy looks excitedly at a shiny new phone on a stand; the screen is blank.|sky-blue|E
+mostly|çoğunlukla|G|||Bahçedeki çiçeklerin çoğu kırmızıydı|A garden bed with mostly red tulips and only two yellow ones.|pink|E
+national|ulusal|G|||Ulusal takımı desteklemek için bayrak salladı|A cheering girl waves a red flag with a white crescent and star at a stadium.|cream|E
+reach|ulaşmak, uzanmak|G|||Üst raftaki kavanoza uzandı|A girl stands on her tiptoes reaching for a cookie jar on a high shelf.|peach|E
+rest|dinlenmek|G|||Yorgun koşucu ağacın altında dinlendi|A tired runner sits under a shady tree, resting with a water bottle.|green|E
+seldom|nadiren|G|||Kar bu şehre nadiren yağar|A surprised child catches a single snowflake in a sunny city park.|sky-blue|E
+sometimes|bazen|G|||Bazen okula bisikletle gider|A boy rides a bicycle with a school backpack on a quiet road.|yellow|E
+suggest|önermek|G|||Arkadaşı yeni bir oyun önerdi|A boy holds up a board game box and suggests playing it to two friends who look interested.|lavender|E
+think|düşünmek|G|||Satranç hamlesini uzun uzun düşündü|A girl thinks hard with her hand on her chin in front of a chessboard.|cream|E
+ticket|bilet|G|||Sinema biletini görevliye gösterdi|A boy hands his paper ticket to a smiling usher at a cinema entrance; the ticket is blank.|peach|E
+usually|genellikle|G|||Genellikle yedide uyanır|A girl stretches and wakes up in bed as a round alarm clock rings; no digits.|yellow|E
+wear|giymek|G|||Kışın kalın mont giydi|A girl puts on a thick red winter coat, scarf and woolly hat.|sky-blue|E
+weather|hava (durumu)|G|||Hava güneşli olunca pikniğe çıktık|A family has a picnic on a blanket under a bright sun and blue sky.|yellow|E
+weekend|hafta sonu|G|||Hafta sonu bütün gün oynadık|Children play happily with a kite and a ball on a sunny Saturday in a park.|green|E
+while|iken, sırasında|G|||Duş alırken şarkı söyledi|A boy sings happily while taking a shower, bubbles around him; only head and shoulders visible behind a plain shower curtain.|sky-blue|E
+hobby|hobi|T|hobi|ses|En sevdiği hobi pul biriktirmek|A boy carefully puts a colourful stamp into an album with a pair of tweezers.|cream|E
+pop|pop müzik|T|pop|ses|Pop şarkısıyla dans etti|A teenage girl dances with headphones on, musical notes around her.|pink|E
+rap|rap müzik|T|rap|ses|Rap şarkısını ezbere söyledi|A teenage boy in a cap raps into a microphone, musical notes around him.|lavender|E
+jazz|caz|T|caz|ses|Caz grubunda saksafon çaldı|A smiling musician plays a golden saxophone, musical notes floating up.|peach|E
+music|müzik|T|müzik|ses|Müzik dersinde şarkı söyledik|Children sing together around a piano in a music class.|lavender|E
+basketball|basketbol|T|basketbol|ses|Basketbol maçında smaç yaptı|A tall boy jumps and dunks an orange basketball into a hoop.|peach|E
+football|futbol|T|futbol|ses|Futbolda kaleye şut çekti|A girl kicks a round black-and-white soccer ball toward a small goal.|green|E
+sport|spor|T|spor|ses|Her gün spor yapıyor|A girl jogs in sports clothes and trainers, smiling.|mint|E
+bored|sıkılmış|G|||Yağmurlu günde evde sıkıldı|A bored boy leans his face on his hands at a window while rain falls outside.|sky-blue|E
+favourite|en sevdiği|T|favori|ses|Favori oyuncağı pelüş ayıydı|A little girl hugs her favourite brown teddy bear.|pink|E
+magazine|dergi|G|||Bilim dergisini merakla okudu|A boy reads a colourful science magazine with a planet on its cover; the cover has no text.|lavender|E
+popular|popüler|T|popüler|ses|Popüler şarkıcıya herkes el salladı|A crowd of children waves at a smiling singer on a small stage.|pink|E
+movie|film|G|||Patlamış mısırla film izledik|Two children watch a movie at home sharing a big bowl of popcorn; the screen is blank.|lavender|E
+cinema|sinema|T|sinema|ses|Sinemada en öne oturduk|Children sit in red cinema seats holding popcorn, looking at a big blank screen.|peach|E
+video|video|T|video|ses|Kedisinin videosunu çekti|A girl films her cat playing with a ball of yarn using a phone; the phone screen is blank.|cream|E
+game|oyun|G|||Ailece kutu oyunu oynadık|A family sits around a table playing a colourful board game with dice.|yellow|E
+play|oynamak; çalmak|G|||Çocuklar bahçede top oynadı|Children play with a big red ball on a patch of grass.|green|E
+watch|izlemek|G|||Kuşları dürbünle izledi|A girl watches colourful birds on a branch through binoculars.|green|E
+weekday|hafta içi|G|||Hafta içi her gün okula gider|A boy walks to school with his backpack on a sunny morning.|mint|E
+dislike|sevmemek|G|||Sütü sevmediği için burnunu tuttu|A girl holds her nose and pushes away a glass of milk.|cream|E
+english|İngilizce|G|||İngilizce dersinde şarkı öğrendik|Children in a classroom sing together while a teacher points at a picture of a red double-decker bus.|sky-blue|E
+social|sosyal|T|sosyal|ses|Sosyal bir kız, herkesle konuşur|A friendly girl talks and laughs with a group of kids at a school picnic.|yellow|E
+train|antrenman yapmak; tren|K|tren|ses|Trenin yanında koşarak antrenman yaptı|A girl in sportswear jogs along a path next to a slow colourful toy-like train.|mint|E
+photo|fotoğraf|T|foto|ses|Ailece fotoğraf çektirdik|A family poses and smiles while a girl takes a photo with a camera.|peach|E
+often|sık sık|G|||Sık sık parka gideriz|Two children run happily into a green park with trees again and again.|green|E
+never|asla, hiç|G|||Kedi suya asla girmez|A cat sits on a dry rock with its paws away from a small pond, refusing to go in.|sky-blue|E
+rather|oldukça; tercihen|G|||Çay yerine sıcak çikolatayı tercih etti|A girl chooses a mug of hot chocolate over a glass of tea on a table.|peach|E
+quite|oldukça|G|||Zürafa oldukça uzundu|A boy looks up at a very tall giraffe next to him.|yellow|E
+monday|pazartesi|G|||Pazartesi sabahı okul başladı|Children walk into a school building with backpacks on a sunny morning.|sky-blue|E
+tuesday|salı|G|||Salı günü yüzme dersine gitti|A girl in a swimsuit and cap jumps into a pool.|sky-blue|E
+wednesday|çarşamba|G|||Çarşamba pazarında meyve aldık|A mother and child buy fruit at a colourful outdoor market stall.|green|E
+thursday|perşembe|G|||Perşembe günü resim yaptık|Children paint at easels in an art class.|lavender|E
+friday|cuma|G|||Cuma akşamı ailece film izledik|A family watches a film on a sofa with popcorn in the evening.|peach|E
+saturday|cumartesi|G|||Cumartesi futbol maçına gittik|Children play football on a green pitch on a sunny day.|green|E
+sunday|pazar|G|||Pazar günü geç kahvaltı yaptık|A family has a big relaxed breakfast with eggs, cheese and bread.|yellow|E
+morning|sabah|G|||Sabah güneş doğarken uyandı|A girl stretches by a window as the sun rises over hills.|yellow|E
+afternoon|öğleden sonra|G|||Öğleden sonra bahçede çay içtik|A family drinks tea in a garden under a bright afternoon sun.|peach|E
+evening|akşam|G|||Akşam güneş batarken eve döndü|A boy walks home with his bicycle as the sun sets in an orange sky.|peach|E
+today|bugün|G|||Bugün onun doğum günü|A girl in a party hat jumps happily next to a wall calendar with one day circled in red; no digits.|pink|E
+month|ay (takvim)|G|||Takvimde bir ayı işaretledi|A boy points at a big wall calendar page full of squares; no digits, no text.|cream|E
+time|zaman, saat|G|||Saat kaç diye duvara baktı|A girl looks up at a big round wall clock; no digits.|cream|E
+late|geç|G|||Otobüse geç kalıp arkasından koştu|A boy with a backpack runs after a yellow school bus that is leaving.|yellow|E
+start|başlamak|G|||Hakem düdüğü çalınca yarış başladı|Children at a starting line begin to run as a coach blows a whistle.|green|E
+finish|bitirmek|G|||Bitiş çizgisini ilk o geçti|A girl breaks through a ribbon at a finish line with her arms raised.|green|E
+can't stand|katlanamamak|I|||Gürültüye katlanamayıp kulaklarını kapattı|A girl covers her ears with an annoyed face while a loud drum is played next to her.|cream|E
+keen on|meraklı, çok sevmek|I|||Uzaya çok meraklı, teleskopla bakıyor|A boy eagerly looks through a telescope at the stars, posters of planets behind him.|lavender|E
+hang around|takılmak, vakit geçirmek|I|||Arkadaşlarıyla parkta takıldılar|Three teenagers sit and chat on a park bench, one with a skateboard.|green|E
+work out|spor yapmak|I|||Spor salonunda ağırlık kaldırdı|A smiling young man lifts light dumbbells in a gym.|mint|E
+free time|boş zaman|I|||Boş zamanında gitar çalar|A girl plays the guitar sitting on her bed.|lavender|E
+do exercise|egzersiz yapmak|I|||Sabah parkta egzersiz yaptılar|A grandfather and grandson do stretching exercises together in a park.|green|E
+form a band|müzik grubu kurmak|I|||Dört arkadaş müzik grubu kurdu|Four friends with a guitar, drums and microphone shake hands, starting a band.|pink|E
+team sport|takım sporu|I|||Voleybol bir takım sporudur|A team of girls in matching shirts celebrate together around a volleyball.|peach|E
+casual clothes|günlük kıyafetler|I|||Hafta sonu günlük kıyafetler giydi|A relaxed boy in jeans, a t-shirt and trainers.|sky-blue|E
+for example|örneğin|I|||Meyveleri severim, örneğin elma|A girl holds up a red apple as an example while pointing to a fruit bowl.|green|E
+to be honest|dürüst olmak gerekirse|I|||Dürüst olmak gerekirse yemeği beğenmedi|A boy politely pushes a plate away with a hand on his heart, shaking his head gently.|cream|E

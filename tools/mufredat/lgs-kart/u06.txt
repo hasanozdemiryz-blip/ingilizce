@@ -36,3 +36,43 @@ steering|direksiyon|G|||Direksiyonu sıkıca tuttu|A girl holds the steering whe
 take risks|risk almak|I|||İp cambazı risk aldı ama altında ağ vardı|A tightrope walker balances on a rope high up with a safety net below.|lavender|E
 wet suit|dalış giysisi|I|||Sörfçü dalış giysisini giydi|A surfer in a black wet suit carries a surfboard on a beach.|sky-blue|E
 wrist guards|bilek koruyucu|I|||Kaykaydan önce bilek koruyucularını taktı|A child straps on wrist guards before skateboarding.|mint|E
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+absolutely|kesinlikle|G|||Dondurma ister misin deyince kesinlikle dedi|A boy nods eagerly with a huge smile as a friend offers him an ice cream cone.|pink|E
+adventure|macera|G|||Sandalla adaya maceraya çıktılar|Two children with a map row a small boat toward a little island with a palm tree.|sky-blue|E
+agree|katılmak (fikre)|K|ağrı|ses|Ağrı Dağı'na tırmanma fikrine herkes katıldı|A group of hikers at the foot of a big snowy mountain all raise their hands and nod in agreement.|sky-blue|E
+amused|eğlenmiş|G|||Kuklaları izleyen çocuklar çok eğlendi|Children laugh while watching a puppet show with two colourful puppets.|yellow|E
+cave|mağara|G|||Fenerle mağaranın içine baktılar|Two children with a lantern peek into the entrance of a rocky cave.|cream|E
+cycling|bisiklet sürme|G|||Hafta sonu ailece bisiklete bindik|A family rides bicycles together on a park path.|green|E
+desert|çöl|G|||Develer çölde yürüdü|A line of camels walks across sand dunes under a bright sun.|yellow|E
+disagree|katılmamak|G|||Arkadaşının fikrine katılmayıp başını salladı|A girl shakes her head and crosses her arms while a friend points at a map.|cream|E
+excitement|heyecan|G|||Hediyeyi açarken heyecandan zıpladı|A girl jumps with excitement as she opens a big present.|pink|E
+famous|ünlü|G|||Ünlü şarkıcıya imza için koştular|Children hold out notebooks to a smiling famous singer signing autographs; no text.|lavender|E
+height|yükseklik, boy|G|||Kapının kenarında boyunu ölçtü|A father marks his daughter's height on a door frame with a pencil.|cream|E
+high|yüksek|G|||Uçurtma çok yükseğe uçtu|A boy holds the string of a kite flying very high in the sky.|sky-blue|E
+less|daha az|G|||Kardeşinin bardağında daha az süt vardı|Two glasses of milk side by side, one full and one with less milk.|cream|E
+nature|doğa|G|||Ormanda doğanın sesini dinledi|A girl sits among trees, flowers and birds in a calm forest.|green|E
+other|diğer, başka|G|||Bir eldiven buldu, diğerini arıyor|A boy holds one red glove and looks around for the other one.|cream|E
+rare|nadir|G|||Nadir görülen beyaz kaplanı gördüler|Children look in wonder at a white tiger with dark stripes resting on a rock.|lavender|E
+row|kürek çekmek; sıra|G|||Gölde kürek çektiler|Two children row a small wooden boat on a calm lake.|sky-blue|E
+scenery|manzara|G|||Tepeden muhteşem manzarayı seyretti|A girl at a hilltop looks out over green valleys, a river and mountains.|green|E
+skiing|kayak yapmak|G|||Karlı dağda kayak yaptı|A child in a red ski suit skis down a gentle snowy slope.|sky-blue|E
+travel|seyahat etmek|G|||Valiziyle dünyayı gezdi|A smiling girl with a suitcase and a globe with small planes flying around it.|sky-blue|E
+wooden|ahşap|K|odun|ses|Odunlardan ahşap bir kulübe yaptı|A man and a boy build a small wooden cabin with a pile of logs next to it.|peach|E
+camping|kamp yapmak|T|kamp|ses|Gölün kenarında kamp yaptık|A family sits by a small tent and a campfire next to a lake.|green|E
+ride|binmek, sürmek|G|||Ata binip tarlada dolaştı|A girl in a helmet rides a brown pony across a meadow.|green|E
+bike|bisiklet|G|||Yeni bisikletini parkta denedi|A boy rides a shiny red bike in a park.|mint|E
+scared|korkmuş|G|||Gök gürleyince yorganın altına saklandı|A scared boy hides under his blanket peeking out at a flash of lightning through the window.|lavender|E
+afraid|korkan, endişeli|G|||Örümcekten korkup sandalyeye çıktı|A girl stands on a chair looking afraid of a tiny friendly spider on the floor.|lavender|E
+accident|kaza|G|||Bisikletten düşünce dizini yaraladı|A boy sits on the ground next to his fallen bicycle with a small plaster on his knee, a friend helping.|cream|E
+outside|dışarıda|G|||Kar yağınca dışarıda oynadılar|Children build a snowman outside on a snowy day.|sky-blue|E
+amusement park|lunapark|I|||Lunaparkta dönme dolaba bindik|A colourful Ferris wheel with happy children waving from the seats.|pink|E
+have a picnic|piknik yapmak|I|||Çimlerde piknik yaptık|A family sits on a checked blanket with a basket of food on the grass.|green|E
+afraid of|-den korkmak|I|||Yükseklikten korktuğu için aşağı bakamadı|A boy on a high slide platform covers his eyes, afraid of the height.|lavender|E
+fall down|düşmek|I|||Kaykaydan düşüp güldü|A girl falls down from her skateboard onto soft grass and laughs.|mint|E
+hot air balloon|sıcak hava balonu|I|||Kapadokya'da sıcak hava balonuna bindiler|Colourful hot air balloons float over soft rock chimneys, a family waving from one basket.|peach|E
+scuba diving|tüplü dalış|I|||Tüplü dalışta renkli balıklar gördü|A diver with an air tank swims among colourful fish and coral.|sky-blue|E
+would rather|tercih etmek|I|||Dağ yerine denize gitmeyi tercih etti|A girl points happily toward a sunny beach rather than a snowy mountain.|yellow|E
+on my own|tek başıma|I|||Bisikleti tek başına tamir etti|A proud girl fixes her bicycle chain by herself with a small tool.|mint|E
+so far|şimdiye kadar|I|||Şimdiye kadar beş madalya kazandı|A boy shows five medals hanging around his neck; no digits.|yellow|E
+winter sports|kış sporları|I|||Kış sporlarından kızak ve kayağı sever|Children sled and ski on a snowy hill.|sky-blue|E
+outdoor activities|açık hava etkinlikleri|I|||Kampta açık hava etkinlikleri yaptılar|Children do archery, canoeing and rope climbing at a summer camp.|green|E

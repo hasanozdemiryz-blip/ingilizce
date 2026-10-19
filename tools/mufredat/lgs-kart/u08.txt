@@ -34,3 +34,54 @@ to-do list|yapılacaklar listesi|I|||Yapılacaklar listesindeki işleri işaretl
 tradition|gelenek|G|||Büyükannesi ona geleneksel börek açmayı öğretti|A grandmother teaches her granddaughter to roll thin pastry dough with a long rolling pin.|peach|E
 wash the dishes|bulaşık yıkamak|I|||Akşam bulaşıkları yıkadı|A boy washes plates in a sink full of bubbles.|sky-blue|E
 water the plants|bitkileri sulamak|I|||Balkondaki bitkileri suladı|A girl waters potted plants on a balcony with a watering can.|green|E
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+annoy|sinirlendirmek, rahatsız etmek|G|||Sinek kulağının dibinde vızıldayıp onu sinirlendirdi|An annoyed boy waves his hand at a buzzing fly near his ear while reading.|cream|E
+article|makale|G|||Gazetedeki makaleyi dikkatle okudu|A grandfather reads a newspaper article with glasses on; the newspaper has no text.|cream|E
+complain|şikâyet etmek|G|||Soğuk çorbadan şikâyet etti|A girl frowns and points at a bowl of soup while talking to a waiter.|peach|E
+elder|yaşça büyük|G|||Ağabeyi ona ayakkabı bağlamayı öğretti|An elder brother kneels to teach his little brother how to tie his shoelaces.|mint|E
+hard|zor; sert|G|||Ağır kutuyu taşımak zordu|A boy struggles to carry a big heavy box.|cream|E
+housework|ev işi|G|||Ailece ev işlerini paylaştık|A family cleans together: one sweeps, one dusts, one washes dishes.|mint|E
+lesson|ders|G|||Piyano dersinde notaları çaldı|A girl plays the piano while her teacher sits beside her.|lavender|E
+mess|dağınıklık|G|||Oda o kadar dağınıktı ki yatak görünmüyordu|A very messy bedroom with clothes and toys everywhere, a mother standing at the door with hands on hips.|peach|E
+mind|aldırmak, sakıncası olmak|G|||Pencereyi açmamın sakıncası var mı diye sordu|A polite boy points at a window and asks his grandmother, who nods with a smile.|cream|E
+necessary|gerekli|G|||Kampa gitmek için çadır gerekliydi|A boy packs a tent, a torch and a sleeping bag into a backpack.|green|E
+peaceful|huzurlu|G|||Göl kenarı çok huzurluydu|A calm lake with ducks, trees and a girl sitting peacefully on the grass.|mint|E
+responsible|sorumlu|G|||Kedisinin mamasını vermekten o sorumlu|A girl pours food into a cat's bowl while the cat waits.|yellow|E
+right|doğru; sağ; hak|G|||Doğru cevabı bulunca sevindi|A boy cheers next to a board with a big green tick mark.|green|E
+rude|kaba|G|||Kaba çocuk sırayı kesti|A rude boy pushes in front of others in a queue at an ice cream cart while they frown.|cream|E
+say|söylemek|G|||Bebek ilk kelimesini söyledi|A baby in a high chair says its first word while its parents smile and clap.|pink|E
+task|görev|G|||Herkese bir görev verildi|A mother hands a broom to one child and a watering can to another.|yellow|E
+tidy|düzenli, toplu|G|||Masası her zaman düzenliydi|A neat desk with books lined up, pencils in a cup and a small plant.|mint|E
+dishwasher|bulaşık makinesi|G|||Tabakları bulaşık makinesine dizdi|A boy puts plates into an open dishwasher.|sky-blue|E
+bathroom|banyo|G|||Banyoda dişlerini fırçaladı|A girl brushes her teeth at a bathroom sink with a mirror.|sky-blue|E
+clothes|kıyafetler|G|||Kıyafetlerini katlayıp dolaba koydu|A boy folds clothes and puts them neatly into a wardrobe.|lavender|E
+pet|evcil hayvan|K|pet şişe|ses|Evcil kedisi boş pet şişeyle oynadı|A playful kitten pushes an empty plastic bottle across the floor.|peach|E
+house|ev|G|||Bacasından duman çıkan küçük bir ev|A small cosy house with a red roof and smoke from the chimney.|cream|E
+home|ev, yuva|G|||Okuldan sonra eve koştu|A boy runs happily toward his front door where his dog waits.|peach|E
+family|aile|G|||Aile fotoğrafında herkes gülümsüyordu|A smiling family of four poses together for a photo.|pink|E
+mother|anne|G|||Annesi ona masal okudu|A mother reads a bedtime story to her child in bed.|pink|E
+father|baba|G|||Babası onu omzuna aldı|A father carries his laughing daughter on his shoulders.|sky-blue|E
+sister|kız kardeş|G|||Kız kardeşiyle el ele yürüdü|An older girl walks hand in hand with her little sister to school.|lavender|E
+cousin|kuzen|T|kuzen|ses|Kuzeniyle bayramda oynadı|Two cousins play with a kite in a grandparent's garden.|green|E
+grandparents|büyükanne ve büyükbaba|G|||Büyükannesi ve büyükbabasıyla çay içti|A boy drinks tea with his grandmother and grandfather in a garden.|peach|E
+grandfather|büyükbaba, dede|G|||Dedesiyle balık tuttu|A grandfather and grandson fish together from a small pier.|sky-blue|E
+husband|koca, eş (erkek)|G|||Eşi ona çiçek getirdi|A smiling husband gives a bunch of flowers to his wife at the door.|pink|E
+parents|anne baba|G|||Anne babası karnesini görünce sevindi|A mother and father smile at their son's school report.|yellow|E
+boy|erkek çocuk|G|||Erkek çocuk uçurtma uçurdu|A smiling boy flies a red kite.|sky-blue|E
+old|yaşlı; eski|G|||Yaşlı adam eski bir saati tamir etti|An old man with glasses repairs an old pocket watch.|cream|E
+little|küçük; biraz|G|||Küçük kedi süt içti|A little kitten drinks milk from a bowl.|pink|E
+small|küçük|G|||Küçük fare büyük peynire baktı|A small mouse looks up at a big piece of cheese.|yellow|E
+long|uzun|G|||Uzun bir tren köprüden geçti|A very long colourful train crosses a bridge.|green|E
+black|siyah|G|||Siyah kedi pencerede oturdu|A black cat sits on a windowsill.|lavender|E
+white|beyaz|G|||Bembeyaz kardan adam yaptık|Children build a white snowman with a carrot nose.|sky-blue|E
+brown|kahverengi|G|||Kahverengi ayı bal yedi|A friendly brown bear eats honey from a pot.|peach|E
+green|yeşil|G|||Yeşil kurbağa yaprağın üstünde zıpladı|A green frog jumps on a lily pad.|green|E
+dry the dishes|bulaşıkları kurulamak|I|||Kardeşi yıkadı, o kuruladı|A boy dries a plate with a towel while his sister washes dishes.|sky-blue|E
+walk the dog|köpeği gezdirmek|I|||Her akşam köpeği gezdirir|A girl walks a happy dog on a lead in a park.|green|E
+vacuum the carpet|halıyı süpürmek|I|||Elektrik süpürgesiyle halıyı süpürdü|A boy vacuums a colourful carpet with a vacuum cleaner.|lavender|E
+pocket money|harçlık|I|||Harçlığını kumbarasına attı|A girl drops coins into a pink piggy bank.|pink|E
+take care of|ilgilenmek, bakmak|I|||Bahçedeki çiçeklerle o ilgilenir|A boy waters flowers and pulls weeds in a garden.|green|E
+do the shopping|alışveriş yapmak|I|||Annesiyle markette alışveriş yaptı|A boy pushes a shopping trolley with fruit while his mother picks vegetables.|peach|E
+in charge of|-den sorumlu|I|||Bitkileri sulamaktan o sorumluydu|A girl with a watering can stands proudly next to plants at school.|mint|E
+responsible for|-den sorumlu|I|||Çöpü çıkarmaktan kardeşi sorumlu|A boy carries a rubbish bag out of the front door.|cream|E
+busy with|ile meşgul|I|||Ödeviyle meşgul olduğu için oynayamadı|A girl writes homework at a desk while her brother waits with a ball.|lavender|E
