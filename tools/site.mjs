@@ -221,7 +221,7 @@ const SSS = [
   ],
   [
     'LGS ve çocuklar için de var mı?',
-    'Evet. LGS sekmesinde 8. sınıfın 10 ünitesinin kelimeleri, LGS’de en çok çıkanlar ve mini testler var. Çocuk sekmesi 2–6. sınıf için okul müfredatına uygun olarak hazırlanıyor.',
+    'Evet. LGS sekmesinde 8. sınıfın 10 ünitesinin kelimeleri, LGS’de en çok çıkanlar ve mini testler var; platformda her ünitenin kelimeleri çağrışım ve görselleriyle, kalıpları, sesli diyalogları ve ünite testi. Çocuk sekmesi 2–6. sınıf için okul müfredatına uygun olarak hazırlanıyor.',
   ],
 ];
 

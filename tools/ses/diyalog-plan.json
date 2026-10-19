@@ -1,0 +1,674 @@
+[
+ {
+  "no": 1,
+  "unite": 1,
+  "cinsiyet": "k",
+  "ses": 154,
+  "ogeler": [
+   {
+    "id": "u1-1-1",
+    "en": "Hi Kerem! There is a book fair at the culture centre this Saturday. Would you like to come with me?"
+   },
+   {
+    "id": "u1-1-3",
+    "en": "Great! Let's meet at the bus stop at ten o'clock."
+   },
+   {
+    "id": "u1-2-2",
+    "en": "Thanks for inviting me, but I'm afraid I can't. I have a piano lesson."
+   },
+   {
+    "id": "u1-2-4",
+    "en": "Definitely! Have fun."
+   },
+   {
+    "id": "u1-3-1",
+    "en": "Who is your best friend, Emir?"
+   },
+   {
+    "id": "u1-3-3",
+    "en": "Why do you like him so much?"
+   },
+   {
+    "id": "u1-3-5",
+    "en": "You are lucky. A true friend is priceless."
+   }
+  ],
+  "metin": "Hi Kerem! There is a book fair at the culture centre this Saturday. Would you like to come with me? [pause 2s] Great! Let's meet at the bus stop at ten o'clock. [pause 2s] Thanks for inviting me, but I'm afraid I can't. I have a piano lesson. [pause 2s] Definitely! Have fun. [pause 2s] Who is your best friend, Emir? [pause 2s] Why do you like him so much? [pause 2s] You are lucky. A true friend is priceless."
+ },
+ {
+  "no": 2,
+  "unite": 1,
+  "cinsiyet": "e",
+  "ses": 288,
+  "ogeler": [
+   {
+    "id": "u1-1-2",
+    "en": "Sure, I'd love to! I want to buy a science fiction novel."
+   },
+   {
+    "id": "u1-1-4",
+    "en": "OK. See you on Saturday!"
+   },
+   {
+    "id": "u1-2-1",
+    "en": "Zeynep, we are going bowling after school. Do you want to join us?"
+   },
+   {
+    "id": "u1-2-3",
+    "en": "No problem. Maybe next time?"
+   },
+   {
+    "id": "u1-3-2",
+    "en": "It's Mert. We have been friends since primary school."
+   },
+   {
+    "id": "u1-3-4",
+    "en": "He is honest and loyal. He never tells my secrets, and I can always count on him."
+   }
+  ],
+  "metin": "Sure, I'd love to! I want to buy a science fiction novel. [pause 2s] OK. See you on Saturday! [pause 2s] Zeynep, we are going bowling after school. Do you want to join us? [pause 2s] No problem. Maybe next time? [pause 2s] It's Mert. We have been friends since primary school. [pause 2s] He is honest and loyal. He never tells my secrets, and I can always count on him."
+ },
+ {
+  "no": 3,
+  "unite": 2,
+  "cinsiyet": "k",
+  "ses": 154,
+  "ogeler": [
+   {
+    "id": "u2-1-1",
+    "en": "What types of music do you like, Mert?"
+   },
+   {
+    "id": "u2-1-3",
+    "en": "I prefer folk music. It's relaxing."
+   },
+   {
+    "id": "u2-2-2",
+    "en": "Yes, and I have a backpack and a compass too."
+   },
+   {
+    "id": "u2-2-4",
+    "en": "Me too, but I'd rather sleep early. Trekking is tiring!"
+   },
+   {
+    "id": "u2-3-2",
+    "en": "Hmm, I prefer board games to team sports."
+   },
+   {
+    "id": "u2-3-4",
+    "en": "OK, I don't mind trying it once."
+   }
+  ],
+  "metin": "What types of music do you like, Mert? [pause 2s] I prefer folk music. It's relaxing. [pause 2s] Yes, and I have a backpack and a compass too. [pause 2s] Me too, but I'd rather sleep early. Trekking is tiring! [pause 2s] Hmm, I prefer board games to team sports. [pause 2s] OK, I don't mind trying it once."
+ },
+ {
+  "no": 4,
+  "unite": 2,
+  "cinsiyet": "e",
+  "ses": 288,
+  "ogeler": [
+   {
+    "id": "u2-1-2",
+    "en": "I'm into rock, but I can't stand jazz. What about you?"
+   },
+   {
+    "id": "u2-1-4",
+    "en": "Maybe you can play me some songs one day."
+   },
+   {
+    "id": "u2-2-1",
+    "en": "We are going camping next weekend. Do you have a sleeping bag?"
+   },
+   {
+    "id": "u2-2-3",
+    "en": "Great! I'm fond of sitting around a campfire at night."
+   },
+   {
+    "id": "u2-3-1",
+    "en": "Do you want to join the school volleyball squad?"
+   },
+   {
+    "id": "u2-3-3",
+    "en": "But training is fun, and you gain a lot of friends."
+   }
+  ],
+  "metin": "I'm into rock, but I can't stand jazz. What about you? [pause 2s] Maybe you can play me some songs one day. [pause 2s] We are going camping next weekend. Do you have a sleeping bag? [pause 2s] Great! I'm fond of sitting around a campfire at night. [pause 2s] Do you want to join the school volleyball squad? [pause 2s] But training is fun, and you gain a lot of friends."
+ },
+ {
+  "no": 5,
+  "unite": 3,
+  "cinsiyet": "k",
+  "ses": 154,
+  "ogeler": [
+   {
+    "id": "u3-1-1",
+    "en": "Dad, how do you make pancakes?"
+   },
+   {
+    "id": "u3-1-3",
+    "en": "Then?"
+   },
+   {
+    "id": "u3-1-5",
+    "en": "And finally, I spread some honey on it!"
+   },
+   {
+    "id": "u3-2-2",
+    "en": "Oh, sorry. Add some water and boil it again."
+   },
+   {
+    "id": "u3-2-4",
+    "en": "Sure. Now it smells delicious!"
+   },
+   {
+    "id": "u3-3-1",
+    "en": "What are you cooking for the school competition?"
+   },
+   {
+    "id": "u3-3-3",
+    "en": "A dessert. I need flour, sugar, butter and a whisk."
+   }
+  ],
+  "metin": "Dad, how do you make pancakes? [pause 2s] Then? [pause 2s] And finally, I spread some honey on it! [pause 2s] Oh, sorry. Add some water and boil it again. [pause 2s] Sure. Now it smells delicious! [pause 2s] What are you cooking for the school competition? [pause 2s] A dessert. I need flour, sugar, butter and a whisk."
+ },
+ {
+  "no": 6,
+  "unite": 3,
+  "cinsiyet": "e",
+  "ses": 288,
+  "ogeler": [
+   {
+    "id": "u3-1-2",
+    "en": "It's easy! First, mix flour, eggs and milk in a bowl."
+   },
+   {
+    "id": "u3-1-4",
+    "en": "Then, heat a pan and pour a little of the mixture into it. After a minute, turn it over."
+   },
+   {
+    "id": "u3-2-1",
+    "en": "Mum, this soup tastes a bit salty."
+   },
+   {
+    "id": "u3-2-3",
+    "en": "OK. Can I sprinkle some mint on it?"
+   },
+   {
+    "id": "u3-3-2",
+    "en": "Roast chicken with mashed potatoes. What about you?"
+   },
+   {
+    "id": "u3-3-4",
+    "en": "Good luck! I'm sure it will be tasty."
+   }
+  ],
+  "metin": "It's easy! First, mix flour, eggs and milk in a bowl. [pause 2s] Then, heat a pan and pour a little of the mixture into it. After a minute, turn it over. [pause 2s] Mum, this soup tastes a bit salty. [pause 2s] OK. Can I sprinkle some mint on it? [pause 2s] Roast chicken with mashed potatoes. What about you? [pause 2s] Good luck! I'm sure it will be tasty."
+ },
+ {
+  "no": 7,
+  "unite": 4,
+  "cinsiyet": "k",
+  "ses": 154,
+  "ogeler": [
+   {
+    "id": "u4-1-1",
+    "en": "Hello?"
+   },
+   {
+    "id": "u4-1-3",
+    "en": "Sorry, she isn't at home. Can I take a message?"
+   },
+   {
+    "id": "u4-1-5",
+    "en": "Of course. I'll tell her."
+   },
+   {
+    "id": "u4-2-1",
+    "en": "Good morning, City Hospital. How can I help you?"
+   },
+   {
+    "id": "u4-2-3",
+    "en": "Hold on, please... She is available on Tuesday at two o'clock."
+   },
+   {
+    "id": "u4-3-1",
+    "en": "Hi Can! Are we meeting at five?"
+   },
+   {
+    "id": "u4-3-3",
+    "en": "ARE WE MEETING AT FIVE?"
+   }
+  ],
+  "metin": "Hello? [pause 2s] Sorry, she isn't at home. Can I take a message? [pause 2s] Of course. I'll tell her. [pause 2s] Good morning, City Hospital. How can I help you? [pause 2s] Hold on, please... She is available on Tuesday at two o'clock. [pause 2s] Hi Can! Are we meeting at five? [pause 2s] ARE WE MEETING AT FIVE?"
+ },
+ {
+  "no": 8,
+  "unite": 4,
+  "cinsiyet": "e",
+  "ses": 288,
+  "ogeler": [
+   {
+    "id": "u4-1-2",
+    "en": "Hello, this is Kerem. Can I speak to Ayşe, please?"
+   },
+   {
+    "id": "u4-1-4",
+    "en": "Yes, please. Can you ask her to call me back? It's about our project."
+   },
+   {
+    "id": "u4-2-2",
+    "en": "Good morning. I'd like to make an appointment with Dr Kaya."
+   },
+   {
+    "id": "u4-2-4",
+    "en": "That's fine. Thank you."
+   },
+   {
+    "id": "u4-3-2",
+    "en": "Sorry, it's a bad line. Could you speak up, please?"
+   },
+   {
+    "id": "u4-3-4",
+    "en": "Yes! Five o'clock in front of the library. I'll text you the address."
+   }
+  ],
+  "metin": "Hello, this is Kerem. Can I speak to Ayşe, please? [pause 2s] Yes, please. Can you ask her to call me back? It's about our project. [pause 2s] Good morning. I'd like to make an appointment with Dr Kaya. [pause 2s] That's fine. Thank you. [pause 2s] Sorry, it's a bad line. Could you speak up, please? [pause 2s] Yes! Five o'clock in front of the library. I'll text you the address."
+ },
+ {
+  "no": 9,
+  "unite": 5,
+  "cinsiyet": "k",
+  "ses": 154,
+  "ogeler": [
+   {
+    "id": "u5-1-1",
+    "en": "Emir, how do I open an account on this website?"
+   },
+   {
+    "id": "u5-1-3",
+    "en": "OK. Should I use my birthday as a password?"
+   },
+   {
+    "id": "u5-2-1",
+    "en": "How often do you use the internet, Kerem?"
+   },
+   {
+    "id": "u5-2-3",
+    "en": "Do you use it for your lessons too?"
+   },
+   {
+    "id": "u5-3-2",
+    "en": "Wow! But did you ask everyone before you posted it?"
+   },
+   {
+    "id": "u5-3-4",
+    "en": "Good idea. If someone doesn't want it, you can delete it."
+   }
+  ],
+  "metin": "Emir, how do I open an account on this website? [pause 2s] OK. Should I use my birthday as a password? [pause 2s] How often do you use the internet, Kerem? [pause 2s] Do you use it for your lessons too? [pause 2s] Wow! But did you ask everyone before you posted it? [pause 2s] Good idea. If someone doesn't want it, you can delete it."
+ },
+ {
+  "no": 10,
+  "unite": 5,
+  "cinsiyet": "e",
+  "ses": 288,
+  "ogeler": [
+   {
+    "id": "u5-1-2",
+    "en": "First, click on 'Sign up'. Then, write your e-mail address and choose a password."
+   },
+   {
+    "id": "u5-1-4",
+    "en": "No, you shouldn't. Use letters, numbers and symbols. And never share it!"
+   },
+   {
+    "id": "u5-2-2",
+    "en": "Every day. I usually watch videos and play online games."
+   },
+   {
+    "id": "u5-2-4",
+    "en": "Sometimes. I use search engines to do research for my projects."
+   },
+   {
+    "id": "u5-3-1",
+    "en": "Look! I uploaded our class photo. It has fifty comments!"
+   },
+   {
+    "id": "u5-3-3",
+    "en": "Oh, no, I didn't. You're right. I'll ask them now."
+   }
+  ],
+  "metin": "First, click on 'Sign up'. Then, write your e-mail address and choose a password. [pause 2s] No, you shouldn't. Use letters, numbers and symbols. And never share it! [pause 2s] Every day. I usually watch videos and play online games. [pause 2s] Sometimes. I use search engines to do research for my projects. [pause 2s] Look! I uploaded our class photo. It has fifty comments! [pause 2s] Oh, no, I didn't. You're right. I'll ask them now."
+ },
+ {
+  "no": 11,
+  "unite": 6,
+  "cinsiyet": "k",
+  "ses": 154,
+  "ogeler": [
+   {
+    "id": "u6-1-2",
+    "en": "Yes, I have. I tried it last summer in Rize. It was thrilling!"
+   },
+   {
+    "id": "u6-1-4",
+    "en": "Not really. We had an instructor, and we wore helmets and life vests."
+   },
+   {
+    "id": "u6-2-1",
+    "en": "Which one do you prefer, paragliding or caving?"
+   },
+   {
+    "id": "u6-2-3",
+    "en": "I think paragliding is more exciting than caving. You can see everything from the sky!"
+   },
+   {
+    "id": "u6-3-2",
+    "en": "Is this slope easy for beginners?"
+   },
+   {
+    "id": "u6-3-4",
+    "en": "OK! I'm a bit nervous, but it's exciting."
+   }
+  ],
+  "metin": "Yes, I have. I tried it last summer in Rize. It was thrilling! [pause 2s] Not really. We had an instructor, and we wore helmets and life vests. [pause 2s] Which one do you prefer, paragliding or caving? [pause 2s] I think paragliding is more exciting than caving. You can see everything from the sky! [pause 2s] Is this slope easy for beginners? [pause 2s] OK! I'm a bit nervous, but it's exciting."
+ },
+ {
+  "no": 12,
+  "unite": 6,
+  "cinsiyet": "e",
+  "ses": 288,
+  "ogeler": [
+   {
+    "id": "u6-1-1",
+    "en": "Have you ever tried rafting, Elif?"
+   },
+   {
+    "id": "u6-1-3",
+    "en": "Wasn't it dangerous?"
+   },
+   {
+    "id": "u6-2-2",
+    "en": "I prefer caving. I'm afraid of heights, so paragliding is too scary for me."
+   },
+   {
+    "id": "u6-2-4",
+    "en": "Maybe, but caves are mysterious and fascinating."
+   },
+   {
+    "id": "u6-3-1",
+    "en": "Welcome to the ski camp! First, you must wear your helmet and gloves."
+   },
+   {
+    "id": "u6-3-3",
+    "en": "Yes, it's the easiest one. Don't take risks, and follow me."
+   }
+  ],
+  "metin": "Have you ever tried rafting, Elif? [pause 2s] Wasn't it dangerous? [pause 2s] I prefer caving. I'm afraid of heights, so paragliding is too scary for me. [pause 2s] Maybe, but caves are mysterious and fascinating. [pause 2s] Welcome to the ski camp! First, you must wear your helmet and gloves. [pause 2s] Yes, it's the easiest one. Don't take risks, and follow me."
+ },
+ {
+  "no": 13,
+  "unite": 7,
+  "cinsiyet": "k",
+  "ses": 154,
+  "ogeler": [
+   {
+    "id": "u7-1-1",
+    "en": "Have you ever been to Mardin, Mert?"
+   },
+   {
+    "id": "u7-1-3",
+    "en": "What did you do there?"
+   },
+   {
+    "id": "u7-2-1",
+    "en": "Where shall we stay in Antalya?"
+   },
+   {
+    "id": "u7-2-3",
+    "en": "It's expensive. I'd prefer a small bed and breakfast near the old town."
+   },
+   {
+    "id": "u7-3-2",
+    "en": "It's famous for its ancient monuments and its old caravansary."
+   },
+   {
+    "id": "u7-3-4",
+    "en": "I recommend visiting the museum in the main square. It's really worth seeing."
+   }
+  ],
+  "metin": "Have you ever been to Mardin, Mert? [pause 2s] What did you do there? [pause 2s] Where shall we stay in Antalya? [pause 2s] It's expensive. I'd prefer a small bed and breakfast near the old town. [pause 2s] It's famous for its ancient monuments and its old caravansary. [pause 2s] I recommend visiting the museum in the main square. It's really worth seeing."
+ },
+ {
+  "no": 14,
+  "unite": 7,
+  "cinsiyet": "e",
+  "ses": 288,
+  "ogeler": [
+   {
+    "id": "u7-1-2",
+    "en": "Yes, I have. I went there with my family last summer."
+   },
+   {
+    "id": "u7-1-4",
+    "en": "We visited the old stone houses and tasted the local food. The architecture is incredible!"
+   },
+   {
+    "id": "u7-2-2",
+    "en": "How about an all-inclusive resort? Food and drinks are included."
+   },
+   {
+    "id": "u7-2-4",
+    "en": "Good idea. Then we can walk to the historic sites."
+   },
+   {
+    "id": "u7-3-1",
+    "en": "Excuse me, what is this city famous for?"
+   },
+   {
+    "id": "u7-3-3",
+    "en": "What do you recommend for today?"
+   }
+  ],
+  "metin": "Yes, I have. I went there with my family last summer. [pause 2s] We visited the old stone houses and tasted the local food. The architecture is incredible! [pause 2s] How about an all-inclusive resort? Food and drinks are included. [pause 2s] Good idea. Then we can walk to the historic sites. [pause 2s] Excuse me, what is this city famous for? [pause 2s] What do you recommend for today?"
+ },
+ {
+  "no": 15,
+  "unite": 8,
+  "cinsiyet": "k",
+  "ses": 154,
+  "ogeler": [
+   {
+    "id": "u8-1-1",
+    "en": "Kerem, here is the to-do list for this week."
+   },
+   {
+    "id": "u8-1-3",
+    "en": "You have to tidy up your room and take out the garbage every evening."
+   },
+   {
+    "id": "u8-1-5",
+    "en": "No, you don't have to. Dad will do it."
+   },
+   {
+    "id": "u8-2-1",
+    "en": "Whose turn is it to load the dishwasher?"
+   },
+   {
+    "id": "u8-2-3",
+    "en": "OK, but then you have to sweep the floor."
+   },
+   {
+    "id": "u8-3-2",
+    "en": "I am, sir. I check the books and remind everyone to return them on time."
+   }
+  ],
+  "metin": "Kerem, here is the to-do list for this week. [pause 2s] You have to tidy up your room and take out the garbage every evening. [pause 2s] No, you don't have to. Dad will do it. [pause 2s] Whose turn is it to load the dishwasher? [pause 2s] OK, but then you have to sweep the floor. [pause 2s] I am, sir. I check the books and remind everyone to return them on time."
+ },
+ {
+  "no": 16,
+  "unite": 8,
+  "cinsiyet": "e",
+  "ses": 288,
+  "ogeler": [
+   {
+    "id": "u8-1-2",
+    "en": "What do I have to do, Mum?"
+   },
+   {
+    "id": "u8-1-4",
+    "en": "OK. Do I have to iron my shirts too?"
+   },
+   {
+    "id": "u8-2-2",
+    "en": "It's your turn! I did it yesterday."
+   },
+   {
+    "id": "u8-2-4",
+    "en": "Fine. I don't mind sweeping."
+   },
+   {
+    "id": "u8-3-1",
+    "en": "Students, who is in charge of the class library this month?"
+   },
+   {
+    "id": "u8-3-3",
+    "en": "Well done. Responsibility is very important."
+   }
+  ],
+  "metin": "What do I have to do, Mum? [pause 2s] OK. Do I have to iron my shirts too? [pause 2s] It's your turn! I did it yesterday. [pause 2s] Fine. I don't mind sweeping. [pause 2s] Students, who is in charge of the class library this month? [pause 2s] Well done. Responsibility is very important."
+ },
+ {
+  "no": 17,
+  "unite": 9,
+  "cinsiyet": "k",
+  "ses": 154,
+  "ogeler": [
+   {
+    "id": "u9-1-1",
+    "en": "What is your project about, Emir?"
+   },
+   {
+    "id": "u9-1-3",
+    "en": "Interesting! How did you test it?"
+   },
+   {
+    "id": "u9-2-1",
+    "en": "Do you know who discovered the rabies vaccine?"
+   },
+   {
+    "id": "u9-2-3",
+    "en": "Right. And the smallpox vaccine was developed by Edward Jenner."
+   },
+   {
+    "id": "u9-3-2",
+    "en": "No! You must wear gloves and goggles first. Safety is important."
+   },
+   {
+    "id": "u9-3-4",
+    "en": "Mix it slowly and observe the colour. Then write the result in your notebook."
+   }
+  ],
+  "metin": "What is your project about, Emir? [pause 2s] Interesting! How did you test it? [pause 2s] Do you know who discovered the rabies vaccine? [pause 2s] Right. And the smallpox vaccine was developed by Edward Jenner. [pause 2s] No! You must wear gloves and goggles first. Safety is important. [pause 2s] Mix it slowly and observe the colour. Then write the result in your notebook."
+ },
+ {
+  "no": 18,
+  "unite": 9,
+  "cinsiyet": "e",
+  "ses": 288,
+  "ogeler": [
+   {
+    "id": "u9-1-2",
+    "en": "It's about solar panels. They are used to produce clean energy."
+   },
+   {
+    "id": "u9-1-4",
+    "en": "First, I put a small panel in the sun. Then, I connected it to a lamp. The result was amazing. The lamp worked!"
+   },
+   {
+    "id": "u9-2-2",
+    "en": "Yes, it was developed by Louis Pasteur in 1885."
+   },
+   {
+    "id": "u9-2-4",
+    "en": "Scientists are real heroes. They save millions of lives."
+   },
+   {
+    "id": "u9-3-1",
+    "en": "Can I touch the liquid in this test tube?"
+   },
+   {
+    "id": "u9-3-3",
+    "en": "OK. What should I do next?"
+   }
+  ],
+  "metin": "It's about solar panels. They are used to produce clean energy. [pause 2s] First, I put a small panel in the sun. Then, I connected it to a lamp. The result was amazing. The lamp worked! [pause 2s] Yes, it was developed by Louis Pasteur in 1885. [pause 2s] Scientists are real heroes. They save millions of lives. [pause 2s] Can I touch the liquid in this test tube? [pause 2s] OK. What should I do next?"
+ },
+ {
+  "no": 19,
+  "unite": 10,
+  "cinsiyet": "k",
+  "ses": 154,
+  "ogeler": [
+   {
+    "id": "u10-1-2",
+    "en": "We should drop, cover and hold on. We get under our desks."
+   },
+   {
+    "id": "u10-1-4",
+    "en": "We leave the building calmly and go to the meeting point."
+   },
+   {
+    "id": "u10-2-2",
+    "en": "Yes. Global warming causes them to melt. It's terrible."
+   },
+   {
+    "id": "u10-2-4",
+    "en": "We should use renewable energy and recycle more."
+   },
+   {
+    "id": "u10-3-1",
+    "en": "Can, please turn off the tap while you brush your teeth."
+   },
+   {
+    "id": "u10-3-3",
+    "en": "If everyone wastes a little water, there will be a water shortage. It's a precaution."
+   }
+  ],
+  "metin": "We should drop, cover and hold on. We get under our desks. [pause 2s] We leave the building calmly and go to the meeting point. [pause 2s] Yes. Global warming causes them to melt. It's terrible. [pause 2s] We should use renewable energy and recycle more. [pause 2s] Can, please turn off the tap while you brush your teeth. [pause 2s] If everyone wastes a little water, there will be a water shortage. It's a precaution."
+ },
+ {
+  "no": 20,
+  "unite": 10,
+  "cinsiyet": "e",
+  "ses": 288,
+  "ogeler": [
+   {
+    "id": "u10-1-1",
+    "en": "Today we will have an earthquake drill. What should we do during an earthquake?"
+   },
+   {
+    "id": "u10-1-3",
+    "en": "Right. And after it stops?"
+   },
+   {
+    "id": "u10-2-1",
+    "en": "Did you watch the documentary about glaciers?"
+   },
+   {
+    "id": "u10-2-3",
+    "en": "If we don't stop it, sea levels will rise."
+   },
+   {
+    "id": "u10-3-2",
+    "en": "Why, Mum? It's only a little water."
+   },
+   {
+    "id": "u10-3-4",
+    "en": "You're right. I'll be more careful."
+   }
+  ],
+  "metin": "Today we will have an earthquake drill. What should we do during an earthquake? [pause 2s] Right. And after it stops? [pause 2s] Did you watch the documentary about glaciers? [pause 2s] If we don't stop it, sea levels will rise. [pause 2s] Why, Mum? It's only a little water. [pause 2s] You're right. I'll be more careful."
+ }
+]

@@ -2,6 +2,7 @@ import raw from '../content/cards.json';
 import lgsHam from '../content/lgs.json';
 import { normalize } from './answer';
 import { AKTIF_BOLUM } from './bolum';
+import { sesDosyalariKaydet } from './speech';
 import { kancaliMi, type Card } from './types';
 
 /**
@@ -198,6 +199,15 @@ export function lgsDestesi(aktifUnite?: number): Card[] {
 }
 
 export const UNITE_SAYISI = 10;
+
+/*
+  Kelime sesleri: public/ses/k/<kart-id>.mp3 (tools/ses/ses-bol.mjs).
+  Iki bolumun BUTUN kartlari kaydediliyor — dosya cagrilinca iniyor,
+  kaydetmek bir sey indirmiyor.
+*/
+sesDosyalariKaydet(
+  [...GENEL_ESKI, ...LGS_KARTLARI].map((c): [string, string] => [c.en, `${import.meta.env.BASE_URL}ses/k/${c.id}.mp3`]),
+);
 
 /** Bir unitenin kelimeleri (LGS destesindeki sirayla). */
 export const uniteKartlari = (u: number): Card[] => lgsDestesi(u).filter((c) => c.unite === u);

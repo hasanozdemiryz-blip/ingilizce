@@ -2654,6 +2654,42 @@ Toplam kredi ~32.400 (bakiye ~81.220). Planda olmayan: Çocuk'un tamamı, ödeme
     kenardan 8 px tıraşlıyor; CDN yavaşlarsa `izgara-isle.mjs` 5 dk zaman aşımı
     + 4 deneme. Ambalaj/etiket yazısı için iskelete "packages, labels" eklendi.
   - Kredi: 95 ızgara × 75 ≈ 7.125 (tahmin 7.200 + yeniden deneme; sınır içinde).
+- [x] **Aşama 4 — Platform (20 Ekim):**
+  - Bölüm: `src/bolum.ts` (localStorage + `?bolum=lgs`, `?unite=N`); değişince
+    sayfa yeniden yüklenir. Şerit `BolumSecici` (Genel · LGS · Çocuk yakında).
+  - Deste: `content.ts` `genelDestesi(seviye)` (Başlangıç önce; üyelikte "Orta"
+    diyene Orta önce; ilk 5 güçlü kanca hep başta) / `lgsDestesi(unite)` (seçili
+    ünite başta). `CARDS` = aktif deste; ilerleme iki bölümde ORTAK.
+  - LGS: `LgsPanel` (yıl → ünite → aktif ünite kartı), `screens/Unite.tsx`
+    (Kelimeler · Kalıplar · Diyaloglar · Test; test şıkları karışık, en iyi
+    sonuç `state.lgsTest` senkronda max). Ünite görselleri ön-bellekte değil
+    (`assets/lgs`, CacheFirst), aktif ünite arka planda ısıtılır.
+  - Kart: kancasız (G/I) → "Resme bak", ipucu resim; yazılış çağrışımında parça
+    altı çizili (`src/yazilis.ts`); arayüzde "kanca" → "çağrışım".
+  - Merdiven 7 basamak: 7 = cümlede boşluk (`components/Cumle.tsx`); cümlesi
+    olmayan kart 6'da biter (`adimVarMi`). Ustalık 7'ye göre (eski 6'lar %83).
+  - Genel tarama (`screens/Tarama.tsx`): "Biraz"/"Orta" üyeye bir kez, 40 temel
+    kelime biliyorum/bilmiyorum. **Tarayıcıda denenmedi** (üye hesabı gerekiyor) →
+    Aşama 8'de gerçek hesapla.
+  - Test: eski sürümle (main) ders yapılan cihaz yeni sürüme geçince ilerleme,
+    seri, profil aynen duruyor (aynı adreste denendi). 284 test, derleme temiz.
+- [x] **Aşama 5 — Sesler (20 Ekim):** kelimeler **Lexi Parker** (Magnific ses 154,
+  kadın), diyaloglar Lexi + **Matthew Wilson** (288, erkek), eleven_v3.
+  787 kelime `public/ses/k/<id>.mp3` (6,3 MB), 123 diyalog satırı
+  `public/ses/d/u<ü>-<d>-<s>.mp3` (2,4 MB). Yöntem: 60'lık partiler tek TTS'te
+  ("accept. advice. …"), **sessizlikten bölünür** (`tools/ses/ses-bol.mjs`;
+  Magnific kelime zamanlamaları ~1,4 sn kaymıştı, kullanılmıyor). Denetim:
+  `ses-hiza.mjs` (süre–uzunluk ilişkisi), `src/ses.test.ts` (her kartın dosyası var).
+  Uygulama: `speech.ts` önce dosya, yoksa cihaz sesi; aynı düğmeye 2,5 sn içinde
+  ikinci basış **0,75×**. Kredi ~2.790 (tahmin 4.900). Bakiye **71.090**.
+- [x] **Aşama 6 — Yayın (20 Ekim):** `uc-bolum` → `main` (otomatik yayın); sitede
+  `LGS_UYGULAMADA = true`, ünite sayfası düğmesi "Bu üniteyi çalış" →
+  `/ingilizce/?basla=1&bolum=lgs&unite=N`. Site denetimi 79 sayfa, 3.625 bağlantı, 0 sorun.
+- [ ] **SIRADAKİ: Aşama 7 — Genel'in kalanı** (~770 Başlangıç kelimesi, 2–6. sınıf;
+  ~19.000 kredi): çağrışım + cümle + örnek cümle + sahne → ızgara görsel → ses.
+  Araçlar hazır: `tools/mufredat/izgara-*.mjs`, `tools/ses/*`. Kelime listesi
+  `tools/mufredat/mufredat.json` (2–6. sınıf), kurallar `tools/kanca-kurallari.md`.
+- [ ] Aşama 8 — baştan sona test (tarama + üyelik + Google + başka cihaz dahil).
 
 
 

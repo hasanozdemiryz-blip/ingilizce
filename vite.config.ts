@@ -101,6 +101,12 @@ export default defineConfig({
         globIgnores: ['**/assets/lgs/**'],
         runtimeCaching: [
           {
+            // Kelime ve diyalog sesleri (public/ses): calindikca onbellege
+            urlPattern: /\/ses\/[kd]\/.+\.mp3$/,
+            handler: 'CacheFirst',
+            options: { cacheName: 'sesler', expiration: { maxEntries: 1200 } },
+          },
+          {
             urlPattern: /\/assets\/lgs\//,
             handler: 'CacheFirst',
             options: { cacheName: 'lgs-gorseller', expiration: { maxEntries: 500 } },

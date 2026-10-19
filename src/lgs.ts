@@ -7,6 +7,7 @@
  * iniyor (her unite ~10 KB) — Genel calisan kimse bunlari indirmiyor.
  */
 import { t } from './dil';
+import { sesDosyalariKaydet } from './speech';
 
 export const UNITELER: { no: number; ad: string; tr: string; ikon: string }[] = [
   { no: 1, ad: 'Friendship', tr: t('Arkadaşlık'), ikon: '🤝' },
@@ -42,7 +43,15 @@ export async function uniteYukle(no: number): Promise<UniteIcerik> {
   const yol = `../content/lgs-unite/u${String(no).padStart(2, '0')}.json`;
   const yukle = YUKLEYICILER[yol];
   if (!yukle) throw new Error(`unite yok: ${no}`);
-  return yukle();
+  const icerik = await yukle();
+  // Diyalog satirlarinin sesleri: public/ses/d/u<unite>-<diyalog>-<satir>.mp3
+  // (kadin satirlari Lexi Parker, erkekler Matthew Wilson; tools/ses/diyalog-plan.mjs)
+  sesDosyalariKaydet(
+    icerik.diyaloglar.flatMap((d, i) =>
+      d.satirlar.map((s, j): [string, string] => [s.en, `${import.meta.env.BASE_URL}ses/d/u${no}-${i + 1}-${j + 1}.mp3`]),
+    ),
+  );
+  return icerik;
 }
 
 /**

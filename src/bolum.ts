@@ -42,6 +42,26 @@ function oku(): Bolum {
 
 export const AKTIF_BOLUM: Bolum = typeof window === 'undefined' ? 'genel' : oku();
 
+/**
+ * Sitedeki unite sayfasindan gelen istek: `?bolum=lgs&unite=3`. Adresten
+ * okunup siliniyor; App bir kez calisilan uniteyi buna ayarliyor (bkz.
+ * App, `ISTENEN_UNITE`). Yil sorulmadiysa once yil sorulur, unite hazir bekler.
+ */
+export const ISTENEN_UNITE: number | null = (() => {
+  if (typeof window === 'undefined') return null;
+  try {
+    const adres = new URL(window.location.href);
+    const n = Number(adres.searchParams.get('unite'));
+    if (adres.searchParams.has('unite')) {
+      adres.searchParams.delete('unite');
+      history.replaceState(history.state, '', adres.pathname + adres.search + adres.hash);
+    }
+    return AKTIF_BOLUM === 'lgs' && Number.isInteger(n) && n >= 1 && n <= 10 ? n : null;
+  } catch {
+    return null;
+  }
+})();
+
 /** Bolumu degistirir ve desteyi yeniden kurmak icin sayfayi yeniler. */
 export function bolumDegistir(b: Bolum): void {
   if (b === AKTIF_BOLUM) return;

@@ -10,7 +10,7 @@ export const LGS_TARIH = '2027-06-12';
 const LGS_TARIH_YAZI = '12 Haziran 2027 (tahmini; MEB kılavuzu açıklanınca güncellenecek)';
 
 /** Uygulamada LGS yolu henuz yok (Faz 3). Acilinca true: "yakinda" notlari kalkar. */
-const LGS_UYGULAMADA = false;
+const LGS_UYGULAMADA = true; // 20 Ekim: LGS bolumu platformda (Asama 6)
 const COCUK_UYGULAMADA = false;
 
 /** Ana sayfadaki dalga gecisleri (anasayfa.html ile ayni). */
@@ -142,7 +142,7 @@ ${tablo}
     <a href="/lgs/#uniteler">Bütün üniteler</a>
     ${sonraki ? `<a href="${sonraki.yol}">${sonraki.no}. Ünite: ${sonraki.ad} →</a>` : '<span></span>'}
   </nav>
-  <div class="cagri"><p>Kelimeleri hafıza teknikleri ve aralıklı tekrarla kalıcı öğren. Ücretsiz.</p><a class="btn btn-lacivert" href="${c.baslaYol('lgs')}" data-basla>Hemen başla</a></div>
+  <div class="cagri"><p>${LGS_UYGULAMADA ? `${u.no}. ünitenin kelimeleri çağrışım ve görselleriyle, kalıpları, sesli diyalogları ve ünite testi platformda. Ücretsiz.` : 'Kelimeleri hafıza teknikleri ve aralıklı tekrarla kalıcı öğren. Ücretsiz.'}</p><a class="btn btn-lacivert" href="${LGS_UYGULAMADA ? `${c.baslaYol('lgs')}&amp;unite=${u.no}` : c.baslaYol('lgs')}" data-basla>${LGS_UYGULAMADA ? 'Bu üniteyi çalış' : 'Hemen başla'}</a></div>
 </div>`,
       script: c.TEST_JS,
       ld: c.jsonld(c.kirinti([['Ana sayfa', '/'], ['LGS', '/lgs/'], [`${u.no}. Ünite`, u.yol]]), {

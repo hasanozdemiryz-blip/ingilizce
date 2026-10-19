@@ -14,7 +14,7 @@ import {
   setteOlanlar,
   uniteKartlari,
 } from './content';
-import { AKTIF_BOLUM } from './bolum';
+import { AKTIF_BOLUM, ISTENEN_UNITE } from './bolum';
 import { LgsPanel } from './components/LgsPanel';
 import { Unite } from './screens/Unite';
 import { Tarama } from './screens/Tarama';
@@ -259,6 +259,15 @@ export default function App() {
     internetsiz de acilsin. Servis calisani onlari `lgs-gorseller`
     onbellegine aliyor.
   */
+  /* Siteden "bu üniteyi çalış" ile gelen: üniteyi bir kez o yap */
+  const veriHazir = data !== undefined;
+  const uniteIstegiIslendi = useRef(false);
+  useEffect(() => {
+    if (!veriHazir || uniteIstegiIslendi.current || !ISTENEN_UNITE) return;
+    uniteIstegiIslendi.current = true;
+    if (data?.state.lgsUnite !== ISTENEN_UNITE) void tercihKaydet({ lgsUnite: ISTENEN_UNITE });
+  }, [veriHazir, data?.state.lgsUnite]);
+
   const lgsUniteDurum = data?.state.lgsUnite;
   useEffect(() => {
     if (AKTIF_BOLUM !== 'lgs' || !lgsUniteDurum) return;
