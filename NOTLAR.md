@@ -2469,10 +2469,12 @@ kitapta; kelimeleri konu ile temaya bağlanır).
 
 ## Sırada
 
-### >>> BAŞKA CİHAZDA BURADAN DEVAM (19 Ekim 2026 gece) <<<
+### >>> BAŞKA CİHAZDA BURADAN DEVAM (20 Ekim 2026 sabah) <<<
 
-- **Aktif dal `uc-bolum`** (main'e geçmedi; main = eski yayın). Başka cihazda:
-  `git fetch && git checkout uc-bolum && git pull` (site deposunda `git pull`).
+- **Çalışma dalı yine `main`** (20 Ekim'de `uc-bolum` birleşti ve yayına çıktı:
+  uygulama hafizada.com/ingilizce/, site hafizada.com). Başka cihazda:
+  `git checkout main && git pull` (site deposunda `git pull`).
+- **Sıradaki iş: Aşama 7 (Genel'in kalanı)** — bkz. NEREDE KALDIK'ın sonu.
 - **Önce aşağıdaki KARARLAR'ı oku.** Bir şey önermeden önce onlara bak; çelişen
   öneri yapma. Yeni istekte önce tek cümleyle "anladığım şu" yaz.
 - **Şu anki adım:** "NEREDE KALDIK" (bu bölümün sonunda) — her aşama bitince güncellenir.
