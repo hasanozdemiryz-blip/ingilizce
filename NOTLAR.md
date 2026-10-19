@@ -2467,6 +2467,79 @@ iki tema dizilmiş, sütun okuması bazı kelimeleri komşu temaya yazıyor.
 tema). Kids tamamen Maarif temalarıyla (2026-27'de yalnız 4. sınıf eski
 kitapta; kelimeleri konu ile temaya bağlanır).
 
+## 2026-10-19 — LGS havuz analizi, bölüm kilidi, satış notları
+
+Kullanıcı: "LGS havuzu düşük geldi; sınavda 6–7. sınıf kelimeleri de çıkıyor mu?"
+İnternette "LGS kelimeleri" diye aranınca her kaynak "8. sınıf ünite kelimeleri"ne
+çıkıyor; sınavdan sayım yapan yok. Biz iki kaynağı birleştirdik (kredi yok).
+
+**Yöntem** (`tools/mufredat/lgs-havuz/`, betik başlıkları nasıl yeniden
+üretileceğini yazıyor):
+- 8 sınav (LGS 2018–2025 İngilizce) PDF → metin (pypdf; bu Mac'te pdftotext yok).
+  Kelimeler kök hâline getirildi (basit çekim + düzensiz fiiller).
+- **Tam ünite listeleri:** ingilizceciyiz.com 8. sınıf 1–10. ünite, toplam 1.294
+  satır, **1.075 benzersiz** (bizim sözlük listemiz 418). Fark: biz kitabın
+  sözlük sayfasını almıştık, onlar kitapta geçen bütün kelimeleri.
+- Elenenler: durak kelimeleri (the, of, can…), soru talimatı (following, blank,
+  according…), **temel** = Oxford A1 ve müfredatta 2–4. sınıf ya da hiç yok
+  (friend, go, phone — 8. sınıf bunları biliyor).
+
+**Sonuç — katmanlar:**
+
+| Katman | Kelime | Sınavda geçen |
+|---|---:|---:|
+| A — mevcut 8. sınıf sözlüğü | 416 | 94 |
+| B — tam ünite listesinden ek | 711 | 92 |
+| C — sınavda çıkmış 5–7. sınıf (temel olmayan) | 59 | 59 |
+| D — sınavda çıkmış, müfredatta yok (A2+) | 39 | 39 |
+| **Yeni LGS havuzu** | **1.225** (465'i ifade) | |
+
+- **Evet, sınavda alt sınıf kelimeleri çıkıyor:** C katmanı ve ayrıca 310 temel
+  kelime (friend, birthday, help…). Ör.: rule, secretary, visit (5. sınıf), news,
+  train (7.), social, mark, activity (6.), hobby, camping, tidy.
+- Mevcut 418'in yalnız 94'ü sınavda geçmiş; sınav kelimelerinin büyük kısmı
+  listemizin dışında → "LGS kelimeleri" = 8. sınıf sözlüğü tanımı dar.
+- **Kartı olmayan 776:** 381 tek kelime (15'i çekimli tekrar; CEFR: a2 132,
+  b1 64, yok 111) + 395 ifade (75'i sohbet kalıbı → ünite kalıbına; kalan 320'nin
+  çoğu tanıdık birleşim → kalıp/test; gerçek kart ~100). **Tahmin: ~450 yeni kart.**
+- Rakiplerde olmayan site sayfası fırsatı: "LGS'de gerçekten çıkmış kelimeler,
+  kaç sınavda geçtiğiyle" (D/C katmanı dahil).
+
+**Çocuk için Genel + LGS'den gelebilecekler:** Çocuk = 2–6. sınıf müfredatı
+1.277 kelime. Genel kartında 168, LGS kartında 63, yeni LGS havuzunda (kartsız)
+132 → **~360 hazır ya da LGS ile birlikte üretilir.** Müfredat dışı ama çocuğa
+uygun başlangıç kelimeleri de var (Genel 74: car, boat, ball, sugar…; LGS 58:
+concert, secret, oven…) — güvenlik taramasından geçerse (gun gibi elenir) Çocuk'a
+bonus. Geriye Çocuk'a özel ~900 yeni kart kalıyor (çoğu Aşama 7c'de Genel'le ortak).
+
+**Kullanıcı kararları (19 Ekim):** KARARLAR 13 (odak LGS 2027), 14 (üye kendi
+bölümünde kalır), 15 (LGS havuzu büyür, Genel'e akar). Test üretimden önce,
+kullanıcının giriş yaptığı Chrome oturumundan; üst menüde bozukluk var.
+
+### Satış notları (öneri, karar yok)
+
+Bugünkü site satış için değil "ücretsiz" için yazılmış:
+- **Kök (`/`) Genel'i satıyor, bu yılın ürünü LGS.** Alıcı veli, kullanıcı 8.
+  sınıf. Öneri: ana sayfa üstünde LGS'ye görünür giriş (geri sayım + "LGS
+  kelimeleri" düğmesi) ya da `/` ilk ekranında iki büyük kapı (LGS / Genel).
+  Google adresleri bozulmaz.
+- **"Ücretsiz · Reklamsız" her yerde** (hero, SSS "Ücretli mi? Hayır", alt bilgi).
+  Ödeme gelmeden önce dil değişmeli: "Ücretsiz başla" (ör. ilk ünite / ilk 50
+  kelime açık) + tam erişim ücretli. SSS'deki "Hayır" kaldırılır.
+- **"8. sınıfın bütün İngilizce kelimeleri"** (veliler paragrafı) bugün 418 ile
+  doğru değil; havuz büyüyünce "1.200'e yakın kelime ve kalıp, sınavda çıkmış
+  olanlar işaretli" güçlü ve doğru bir vaat olur.
+- Veli için kanıt: veli özeti (haftada kaç kelime, ünite testi sonucu),
+  örnek ünite, "sınav verisinden" rozeti. Sosyal kanıt henüz yok (4 üye).
+- Bölüm kilidi (KARARLAR 14) ürünleri ayırıyor → ayrı fiyat: LGS paketi (sınava
+  kadar), Genel (aylık/yıllık), Çocuk (veli). Fiyat kararı kullanıcıda.
+
+**LGS platformu farklı renk/tasarım mı?** Öneri: iskelet aynı, **tema farklı** —
+sitedeki gibi LGS vurgusu mavi (`#5ec8ff`), Genel sarı, Çocuk turuncu; LGS'ye özgü
+öğeler (geri sayım, ünite ilerleme çubuğu, "sınavda çıktı" rozeti). Üye kendi
+bölümünde kaldığı için "bu benim LGS ürünüm" hissini güçlendirir; bileşenler
+ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
+
 ## Sırada
 
 ### >>> BAŞKA CİHAZDA BURADAN DEVAM (20 Ekim 2026 sabah) <<<
@@ -2474,7 +2547,7 @@ kitapta; kelimeleri konu ile temaya bağlanır).
 - **Çalışma dalı yine `main`** (20 Ekim'de `uc-bolum` birleşti ve yayına çıktı:
   uygulama hafizada.com/ingilizce/, site hafizada.com). Başka cihazda:
   `git checkout main && git pull` (site deposunda `git pull`).
-- **Sıradaki iş: Aşama 7 (Genel'in kalanı)** — bkz. NEREDE KALDIK'ın sonu.
+- **Sıradaki iş (19 Ekim): test turu** (kullanıcı giriş yapar, Claude Chrome'dan test eder; üst menü bozuklukları), sonra **Aşama 7a — LGS havuzunu büyüt** — bkz. NEREDE KALDIK'ın sonu ve "2026-10-19 — LGS havuz analizi".
 - **Önce aşağıdaki KARARLAR'ı oku.** Bir şey önermeden önce onlara bak; çelişen
   öneri yapma. Yeni istekte önce tek cümleyle "anladığım şu" yaz.
 - **Şu anki adım:** "NEREDE KALDIK" (bu bölümün sonunda) — her aşama bitince güncellenir.
@@ -2538,6 +2611,16 @@ kitapta; kelimeleri konu ile temaya bağlanır).
     karar çıkarsa. Her değişiklikten sonra **sıradan kullanıcı gibi her düğme,
     logo, menü tıklanarak** ve 375 px'te test (logo hatası bu yüzden kaçmıştı).
     Her aşama sonunda NOTLAR "NEREDE KALDIK" güncellenir, dal push'lanır.
+13. **Odak bu yıl: LGS 2027 (eski 8. sınıf programı, 10 ünite).** Satış bu yıl
+    başlayacak. Maarif ayrımı (2028+ girenler) var, unutulmaz ama şimdi ona
+    göre iş yapılmaz (kullanıcı, 19 Ekim).
+14. **Üye kendi bölümünde kalır.** Nereden (Genel / LGS / Çocuk) üye olduysa
+    platformun içinde o bölümdedir; içeriden başka bölüme geçemez (kullanıcı,
+    19 Ekim). Şerit (BolumSecici) üyeye gösterilmez. Açık: aynı kişi ikinci
+    bölüm isterse ne olur (ayrı hesap mı, satın alma mı) — satış modeliyle karar.
+15. **LGS havuzu 418 değil, büyüyecek** (analiz aşağıda, 19 Ekim). LGS için
+    üretilen her kart Genel'e de girer (okula özgü/hassas olanlar hariç; bugün
+    Genel = 400 + LGS'den 375 = ~775). Çocuk'a da ortak kelimeler gider.
 
 #### PLAN (onaylı 19 Ekim) — neden / ne / bitti
 
@@ -2595,9 +2678,28 @@ Genel'i (seviyesine göre) dolduruyor; LGS sezonu şimdi.
   sayfasından platformdaki üniteye doğrudan bağlantı; site yayını.
 - Bitti: ikisi yayında, canlıda tıklama testi.
 
-**Aşama 7 — Genel'in kalanı** (~19.000 kredi)
-- Başlangıç'a 2–6. sınıftan ~770 kelime: çağrışım, cümle, sahne, görsel, ses
-  (Aşama 2–3–5 yöntemi). Yayın.
+**Aşama 7a — LGS havuzunu büyüt** (yeni, 19 Ekim; ~9.000–12.000 kredi) — ÖNCE BU
+- Neden: satış bu yıl LGS'den; 418 kelime "8. sınıfın bütün kelimeleri" demeye yetmiyor.
+- Girdi: `tools/mufredat/lgs-havuz/havuz.json` (bkz. "LGS havuz analizi"). Önce
+  elle temizlik: çekimli tekrarlar (boiled, invented…), ad/gürültü (mill, sue),
+  sohbet kalıpları → ünite kalıplarına; tanıdık kelime birleşimleri (close friend,
+  true friend) → kalıp/test, kart değil.
+- Kart: ~365 tek kelime + ~100 phrasal/kalıp (rely on, hold on, laid back) ≈ **~450
+  kart** → ~115 ızgara. Aşama 2–3–5 yöntemi (çağrışım zorla, sahne, ızgara, ses).
+- Ünite içeriği büyür: kalıp ve testlere yeni kelimeler; ünite sayfası sayıları,
+  site "418" metinleri (ana sayfa "Kimin için", /lgs/ SSS, veliler) güncellenir.
+- Genel'e: okula özgü olmayanların hepsi (KARARLAR 15).
+
+**Aşama 7b — Bölüm kilidi** (kredi yok; KARARLAR 14)
+- Profilde bölüm kalıcı (üyelikte bulunduğu sekmeden), BolumSecici üyeye gizli,
+  `?bolum=` üyede yok sayılır; mevcut 4 üye: şu anki bölümleri yazılır.
+
+**Aşama 7c — Genel'in kalanı = Çocuk ortak** (~19.000–25.000 kredi)
+- 2–6. sınıftan kartı olmayan ~1.046 kelime/ifade; çocuk güvenlik kuralıyla
+  yazılır, Genel'e uyanlar (~770) Genel'e de girer. 132'si Aşama 7a'da zaten
+  üretiliyor (yeni LGS havuzunda). Çağrışım, cümle, sahne, görsel, ses (Aşama 2–3–5 yöntemi). Yayın.
+
+**Aşama 7d — Satış düzeni** (öneri, kullanıcıyla konuşulacak; bkz. "Satış notları")
 
 **Aşama 8 — Baştan sona test**
 - İlk giriş (üyeliksiz; üç seviye cevabı; tarama), üyelik/giriş/çıkış/Google,
@@ -2687,10 +2789,14 @@ Toplam kredi ~32.400 (bakiye ~81.220). Planda olmayan: Çocuk'un tamamı, ödeme
 - [x] **Aşama 6 — Yayın (20 Ekim):** `uc-bolum` → `main` (otomatik yayın); sitede
   `LGS_UYGULAMADA = true`, ünite sayfası düğmesi "Bu üniteyi çalış" →
   `/ingilizce/?basla=1&bolum=lgs&unite=N`. Site denetimi 79 sayfa, 3.625 bağlantı, 0 sorun.
-- [ ] **SIRADAKİ: Aşama 7 — Genel'in kalanı** (~770 Başlangıç kelimesi, 2–6. sınıf;
-  ~19.000 kredi): çağrışım + cümle + örnek cümle + sahne → ızgara görsel → ses.
-  Araçlar hazır: `tools/mufredat/izgara-*.mjs`, `tools/ses/*`. Kelime listesi
-  `tools/mufredat/mufredat.json` (2–6. sınıf), kurallar `tools/kanca-kurallari.md`.
+- [x] **LGS havuz analizi (19 Ekim)** — bkz. "LGS havuz analizi" (Sırada'nın üstünde).
+- [ ] **SIRADAKİ: Aşama 8'in ilk turu — test** (kullanıcı 19 Ekim: üretimden önce).
+  Kullanıcı Chrome'da kendi hesabıyla giriş yapar, Claude o oturumdan her şeyi
+  tıklayarak test eder (375 px dahil). **Üst menüde bozukluklar var** (kullanıcı
+  gördü, ayrıntı testte) → düzelt. Tarama için ayrı deneme hesabı.
+- [ ] Aşama 7a — LGS havuzunu büyüt (~450 kart) → 7b bölüm kilidi → 7c Genel/Çocuk
+  ortak → 7d satış düzeni. Araçlar hazır: `tools/mufredat/izgara-*.mjs`, `tools/ses/*`,
+  kurallar `tools/kanca-kurallari.md`.
 - [ ] Aşama 8 — baştan sona test (tarama + üyelik + Google + başka cihaz dahil).
 
 
