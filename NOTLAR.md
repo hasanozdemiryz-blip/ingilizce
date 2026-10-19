@@ -2678,14 +2678,20 @@ Genel'i (seviyesine göre) dolduruyor; LGS sezonu şimdi.
   sayfasından platformdaki üniteye doğrudan bağlantı; site yayını.
 - Bitti: ikisi yayında, canlıda tıklama testi.
 
-**Aşama 7a — LGS havuzunu büyüt** (yeni, 19 Ekim; ~9.000–12.000 kredi) — ÖNCE BU
+**Aşama 7a — LGS havuzunu büyüt** (yeni, 19 Ekim; ~16.000 kredi) — ÖNCE BU
 - Neden: satış bu yıl LGS'den; 418 kelime "8. sınıfın bütün kelimeleri" demeye yetmiyor.
 - Girdi: `tools/mufredat/lgs-havuz/havuz.json` (bkz. "LGS havuz analizi"). Önce
   elle temizlik: çekimli tekrarlar (boiled, invented…), ad/gürültü (mill, sue),
   sohbet kalıpları → ünite kalıplarına; tanıdık kelime birleşimleri (close friend,
   true friend) → kalıp/test, kart değil.
-- Kart: ~365 tek kelime + ~100 phrasal/kalıp (rely on, hold on, laid back) ≈ **~450
-  kart** → ~115 ızgara. Aşama 2–3–5 yöntemi (çağrışım zorla, sahne, ızgara, ses).
+- **Düzeltme (kullanıcı, 19 Ekim): temel kelimeler de LGS'ye girer.** "8. sınıf
+  bilir" diye elemek yanlış; ürün sınavın istediği her kelimeyi verir, bilen hızlı
+  geçer. Önce LGS için üretilir, sonra aynı kart Çocuk'a ve Genel'e eklenir.
+  Havuz (durak/talimat hariç): **~1.566**, 510'unun kartı var. Bağlaçlar
+  (although, however, until…) da kart ya da kalıp olarak eklenir.
+- Kart: **~631 tek kelime** (304'ü temel; 233'ü Çocuk müfredatında → Çocuk'a da)
+  + **~100 phrasal/kalıp** (rely on, hold on, laid back) ≈ **~730 kart** → ~185
+  ızgara ≈ **~14.000–16.000 kredi** + ses ~1.500. Aşama 2–3–5 yöntemi.
 - Ünite içeriği büyür: kalıp ve testlere yeni kelimeler; ünite sayfası sayıları,
   site "418" metinleri (ana sayfa "Kimin için", /lgs/ SSS, veliler) güncellenir.
 - Genel'e: okula özgü olmayanların hepsi (KARARLAR 15).
@@ -2794,7 +2800,7 @@ Toplam kredi ~32.400 (bakiye ~81.220). Planda olmayan: Çocuk'un tamamı, ödeme
   Kullanıcı Chrome'da kendi hesabıyla giriş yapar, Claude o oturumdan her şeyi
   tıklayarak test eder (375 px dahil). **Üst menüde bozukluklar var** (kullanıcı
   gördü, ayrıntı testte) → düzelt. Tarama için ayrı deneme hesabı.
-- [ ] Aşama 7a — LGS havuzunu büyüt (~450 kart) → 7b bölüm kilidi → 7c Genel/Çocuk
+- [ ] Aşama 7a — LGS havuzunu büyüt (~730 kart, temel kelimeler dahil) → 7b bölüm kilidi → 7c Genel/Çocuk
   ortak → 7d satış düzeni. Araçlar hazır: `tools/mufredat/izgara-*.mjs`, `tools/ses/*`,
   kurallar `tools/kanca-kurallari.md`.
 - [ ] Aşama 8 — baştan sona test (tarama + üyelik + Google + başka cihaz dahil).
