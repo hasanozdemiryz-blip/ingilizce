@@ -65,3 +65,4 @@ land|pist kenara
 snow|zemin kenara
 wind|goz
 climate-change|deniz kenara
+# 19 Ekim aksami kalan (3): land, wind, climate-change — referans sizintisi; tek kare ya da baska referansla yeniden

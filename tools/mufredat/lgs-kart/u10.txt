@@ -53,18 +53,18 @@ government|hükümet|G|||Hükümet yeni bir park açtı|Officials in suits cut a
 increase|artırmak, artmak|G|||Fidan büyüdükçe boyu arttı|Three pictures of the same plant getting taller from small to big.|green|E
 injury|yaralanma|G|||Dizindeki küçük yaraya yara bandı yapıştırdı|A girl puts a plaster on a small scratch on her knee, smiling bravely.|peach|E
 lack|eksiklik|G|||Yağmursuzluktan topraklar çatladı|Cracked dry ground with a thirsty little plant and a farmer looking at the clear sky.|yellow|E
-land|kara, arazi; inmek|G|||Uçak piste indi|A white plane lands on a runway.|sky-blue|E
+land|kara, arazi; inmek|G|||Uçak piste indi|A white plane lands on a short runway strip that does NOT reach the panel edges.|sky-blue|E
 lightning|şimşek, yıldırım|G|||Gökte şimşek çaktı|A bright zigzag of lightning in a dark-grey cloud over a calm field; the scene is light, not dark.|lavender|E
 liquid|sıvı|T|likit|ses|Likit sabunu eline döktü|A girl pours green liquid soap onto her hands at a sink.|mint|E
-mountain|dağ|G|||Karlı dağın zirvesine bayrak diktiler|Climbers plant a flag on top of a snowy mountain.|sky-blue|E
+mountain|dağ|G|||Karlı dağın zirvesine bayrak diktiler|Two climbers plant a flag on top of a small snowy mountain peak that is fully visible with empty space around it.|sky-blue|E
 movement|hareket|G|||Dansçının her hareketi zarifti|A girl dances gracefully, ribbons showing her movement.|pink|E
-ocean|okyanus|T|okyanus|ses|Okyanusta balinalar yüzdü|Whales swim in a wide blue ocean.|sky-blue|E
+ocean|okyanus|T|okyanus|ses|Okyanusta balinalar yüzdü|Two whales swim in a small oval patch of blue ocean water that does NOT reach the panel edges.|sky-blue|E
 past|geçmiş|G|||Müzede geçmişin oyuncaklarını gördük|Children look at old wooden toys in a museum display.|cream|E
 prevent|önlemek|G|||Kask kafasını korudu, kazayı önledi|A boy in a helmet rides a bike safely.|green|E
 river|nehir|G|||Nehirde kayıkla ilerlediler|A small boat floats down a winding river between trees.|sky-blue|E
 save|kurtarmak; biriktirmek|G|||İtfaiyeci ağaçtaki kediyi kurtardı|A firefighter on a ladder rescues a kitten from a tree.|peach|E
 shortage|kıtlık, sıkıntı|G|||Musluklardan su gelmedi|A boy turns a tap but no water comes out; an empty bucket below.|yellow|E
-snow|kar|G|||Kar yağınca kartopu oynadık|Children throw snowballs in a snowy park.|sky-blue|E
+snow|kar|G|||Kar yağınca kartopu oynadık|Children throw snowballs on a small patch of snow that does NOT reach the panel edges.|sky-blue|E
 solid|katı|G|||Su donunca katı buz oldu|A glass of water next to a solid ice cube.|sky-blue|E
 strong|güçlü, sağlam|G|||Güçlü adam ağırlığı kaldırdı|A strong smiling man lifts a big barbell.|peach|E
 sudden|ani|G|||Ani yağmurda herkes koştu|People run with bags over their heads in a sudden rain shower.|sky-blue|E
@@ -80,7 +80,7 @@ life|hayat|G|||Okyanusta rengârenk bir hayat var|Colourful fish, turtles and co
 soil|toprak|G|||Fidanı toprağa dikti|A girl plants a small sapling in brown soil with a little shovel.|peach|E
 reduce|azaltmak|G|||Çöpü azaltmak için bez çanta kullandı|A boy carries groceries in a reusable cloth bag; the bag is blank.|green|E
 air pollution|hava kirliliği|I|||Hava kirliliği yüzünden maske taktı|A girl wears a mask in a city with grey smog and factory chimneys.|cream|E
-climate change|iklim değişikliği|I|||İklim değişikliğiyle buzullar eridi|A polar bear stands on a small melting piece of ice in the sea.|sky-blue|E
+climate change|iklim değişikliği|I|||İklim değişikliğiyle buzullar eridi|A polar bear stands on a small melting piece of ice in a small round patch of sea that does NOT reach the panel edges.|sky-blue|E
 first aid|ilk yardım|I|||İlk yardım çantasıyla dizini sardı|A teacher bandages a boy's knee with a red first aid kit beside her.|peach|E
 natural disaster|doğal afet|I|||Doğal afetlere karşı tatbikat yaptık|Children practise drop, cover and hold under their desks during a drill.|cream|E
 forest fire|orman yangını|I|||Uçak orman yangınına su döktü|A firefighting plane drops water over a small forest fire far away on a hill.|peach|E

@@ -2547,7 +2547,7 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
 - **Çalışma dalı yine `main`** (20 Ekim'de `uc-bolum` birleşti ve yayına çıktı:
   uygulama hafizada.com/ingilizce/, site hafizada.com). Başka cihazda:
   `git checkout main && git pull` (site deposunda `git pull`).
-- **Sıradaki iş (19 Ekim akşam): PLAN v2'nin kalanı** — D'nin 66 yeniden çizimi + sesler → E platform → F site → G yayın (bkz. NEREDE KALDIK). Sonra **PLAN v3** (LGS ürün deneyimi) kullanıcıyla konuşulacak.
+- **Sıradaki iş (19 Ekim akşam durdu):** dal **`lgs-ek`**. Kalan: 3 görsel → D2 sesler → E platform → F site → G yayın (bkz. NEREDE KALDIK). Sonra **PLAN v3** (LGS ürün deneyimi) kullanıcıyla konuşulacak. Magnific bakiyesi ~57.000.
 - **Önce aşağıdaki KARARLAR'ı oku.** Bir şey önermeden önce onlara bak; çelişen
   öneri yapma. Yeni istekte önce tek cümleyle "anladığım şu" yaz.
 - **Şu anki adım:** "NEREDE KALDIK" (bu bölümün sonunda) — her aşama bitince güncellenir.
@@ -2884,15 +2884,23 @@ Kullanıcının notları, son hâli:
   kaynak → `node tools/mufredat/lgs-ek.mjs` → `lgs-kart.mjs` → `lgs-icerik.mjs`),
   90 Genel kartı üniteye bağlı (`lgs-ek/v.txt`), seviye yeniden (`seviye.mjs` + Oxford CSV),
   1.016 LGS kartının hepsinde örnek cümle. Denetim temiz.
-- [~] **D. Görseller (19 Ekim):** plan 157 ızgara (101–257) üretildi (~11.775 kredi);
-  kontrol sayfasıyla 66 kart kusurlu bulundu → `tools/mufredat/lgs-ek/yeniden.txt`
-  (kenara taşma, yazı, tuhaf yaratık/göz izi, çerçeveli ızgara). 562 PNG
-  `gorseller/lgs/` (depoda değil; Magnific Personal projesinde, creation id'leri
-  `gorsel-log.txt`'te). Sıradaki: 66 kusurlu → ~17 ızgara, seed 20260919,
-  `IZGARA_BASLA=301 node tools/mufredat/izgara-plan.mjs` (webp'ye çevrilenler
-  plandan düşer: önce `node tools/mufredat/lgs-webp.mjs`). Sonra ses.
-  Ders: model ~her 8 ızgarada bir kenara "yeşil göz/yaratık" izi bırakıyor;
-  bazen prompt metnini görsele yazıyor (246) ya da kareleri çerçeveli çiziyor (183, 239).
+- [~] **D. Görseller (19 Ekim, akşam durdu):** 157 + 14 yeniden ızgara (~12.800 kredi).
+  **625/628 kart görselli** (`src/assets/cards-lgs/`, 1.009 webp). Kalan 3: `land`, `wind`,
+  `climate-change` (ref sızıntısı). Ders: stil referansı VXEgEPIMMU (snake ≈ sinek) kenarlara
+  yılan/sinek/göz sızdırıyor (~her 8 ızgarada 1); yeni ref IfwzJPutvE (ızgara 101) kendi
+  karelerini sızdırıyor (bayrak süsü, kelebek). Öneri: kalan 3 için tek kare (1K, ızgarasız)
+  ya da referanssız + aynı iskelet. Yeniden çizim: `YENIDEN=1 IZGARA_BASLA=601 node
+  tools/mufredat/izgara-plan.mjs`, `izgara-toplu.sh`, `lgs-webp.mjs`, `lgs-icerik.mjs`.
+- [ ] **D2. Sesler:** 629 yeni kelime + (varsa) yeni diyalog yok → yalnız kelime sesi
+  (~1.300 kredi, Lexi Parker, `tools/ses/ses-plan.mjs` → `ses-bol.mjs`; 60'lık partiler).
+  `src/ses.test.ts` şu an kırmızı (yeni kartların sesi yok) — ses gelince yeşile döner.
+- [ ] **E. Platform:** LGS destesi yeni kartlarla çalışıyor mu (görselsiz 3 kart → deste dışı
+  ya da metinli); Genel'e monte (LGS_GENELE, `genel: E`); bölüm kilidi; LGS teması (mavi).
+- [ ] **F. Site:** "En önemli 25" → "Örnek kelimeler" (+yönlendirme), "418" metinleri → yeni
+  sayılar, "LGS'de gerçekten çıkmış kelimeler" sayfası, ana sayfada kelime sayıları + LGS girişi.
+- [ ] **G. Yayın:** `lgs-ek` dalı → `main` (testler yeşilken), site üret + push, canlı test.
+- Çalışma dalı: **`lgs-ek`** (main'e birleşmedi; canlı eski hâlde). Başka cihazda:
+  `git fetch && git checkout lgs-ek`.
 - [ ] PLAN v2 (onaylı 19 Ekim): A test → B ölçüm → C LGS metinleri → D görsel/ses →
   E platform (bölüm kilidi, LGS teması) → F site → G yayın → I satış. (H çıktı.) Araçlar hazır: `tools/mufredat/izgara-*.mjs`, `tools/ses/*`,
   kurallar `tools/kanca-kurallari.md`.

@@ -110,9 +110,9 @@ wednesday|çarşamba|G|||Çarşamba pazarında meyve aldık|A mother and child b
 thursday|perşembe|G|||Perşembe günü resim yaptık|Children paint at easels in an art class.|lavender|E
 friday|cuma|G|||Cuma akşamı ailece film izledik|A family watches a film on a sofa with popcorn in the evening.|peach|E
 saturday|cumartesi|G|||Cumartesi futbol maçına gittik|Children play football on a green pitch on a sunny day.|green|E
-sunday|pazar|G|||Pazar günü geç kahvaltı yaptık|A family has a big relaxed breakfast with eggs, cheese and bread.|yellow|E
+sunday|pazar|G|||Pazar günü geç kahvaltı yaptık|A family has a relaxed breakfast with eggs, cheese and bread at a small table that is fully visible.|yellow|E
 morning|sabah|G|||Sabah güneş doğarken uyandı|A girl stretches by a window as the sun rises over hills.|yellow|E
-afternoon|öğleden sonra|G|||Öğleden sonra bahçede çay içtik|A family drinks tea in a garden under a bright afternoon sun.|peach|E
+afternoon|öğleden sonra|G|||Öğleden sonra bahçede çay içtik|A family drinks tea at a small garden table under a bright afternoon sun; the scene is small and fully inside the panel.|peach|E
 evening|akşam|G|||Akşam güneş batarken eve döndü|A boy walks home with his bicycle as the sun sets in an orange sky.|peach|E
 today|bugün|G|||Bugün onun doğum günü|A girl in a party hat jumps happily next to a wall calendar with one day circled in red; no digits.|pink|E
 month|ay (takvim)|G|||Takvimde bir ayı işaretledi|A boy points at a big wall calendar page full of squares; no digits, no text.|cream|E

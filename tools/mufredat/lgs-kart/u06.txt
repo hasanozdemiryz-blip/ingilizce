@@ -67,9 +67,9 @@ accident|kaza|G|||Bisikletten düşünce dizini yaraladı|A boy sits on the grou
 outside|dışarıda|G|||Kar yağınca dışarıda oynadılar|Children build a snowman outside on a snowy day.|sky-blue|E
 amusement park|lunapark|I|||Lunaparkta dönme dolaba bindik|A colourful Ferris wheel with happy children waving from the seats.|pink|E
 have a picnic|piknik yapmak|I|||Çimlerde piknik yaptık|A family sits on a checked blanket with a basket of food on the grass.|green|E
-afraid of|-den korkmak|I|||Yükseklikten korktuğu için aşağı bakamadı|A boy on a high slide platform covers his eyes, afraid of the height.|lavender|E
+afraid of|-den korkmak|I|||Yükseklikten korktuğu için aşağı bakamadı|A boy on a small slide platform covers his eyes, afraid of the height; the whole slide is small and fully visible.|lavender|E
 fall down|düşmek|I|||Kaykaydan düşüp güldü|A girl falls down from her skateboard onto soft grass and laughs.|mint|E
-hot air balloon|sıcak hava balonu|I|||Kapadokya'da sıcak hava balonuna bindiler|Colourful hot air balloons float over soft rock chimneys, a family waving from one basket.|peach|E
+hot air balloon|sıcak hava balonu|I|||Kapadokya'da sıcak hava balonuna bindiler|A family waves from the basket of one colourful hot air balloon floating above small rock chimneys; everything is small and fully visible.|peach|E
 scuba diving|tüplü dalış|I|||Tüplü dalışta renkli balıklar gördü|A diver with an air tank swims among colourful fish and coral.|sky-blue|E
 would rather|tercih etmek|I|||Dağ yerine denize gitmeyi tercih etti|A girl points happily toward a sunny beach rather than a snowy mountain.|yellow|E
 on my own|tek başıma|I|||Bisikleti tek başına tamir etti|A proud girl fixes her bicycle chain by herself with a small tool.|mint|E

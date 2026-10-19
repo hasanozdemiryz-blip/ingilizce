@@ -14,7 +14,7 @@ peaceful|huzurlu|G|||Göl kenarı çok huzurluydu|A calm lake with ducks, trees 
 responsible|sorumlu|G|||Kedisinin mamasını vermekten o sorumlu|A girl pours food into a cat's bowl while the cat waits.|yellow|E|I am responsible for feeding the cat.|Kediyi beslemekten ben sorumluyum.
 right|doğru; sağ; hak|G|||Doğru cevabı bulunca sevindi|A boy cheers next to a board with a big green tick mark.|green|E|Your answer is right.|Cevabın doğru.
 rude|kaba|G|||Kaba çocuk sırayı kesti|A rude boy pushes in front of others in a queue at an ice cream cart while they frown.|cream|E|Don't be rude to your sister.|Kız kardeşine kaba davranma.
-say|söylemek|G|||Bebek ilk kelimesini söyledi|A baby in a high chair says its first word while its parents smile and clap.|pink|E|What did you say?|Ne dedin?
+say|söylemek|G|||Bebek ilk kelimesini söyledi|A baby in a high chair says its first word, shown as a small speech bubble containing only a red heart, while its parents smile and clap.|pink|E|What did you say?|Ne dedin?
 task|görev|G|||Herkese bir görev verildi|A mother hands a broom to one child and a watering can to another.|yellow|E|My task is to water the plants.|Benim görevim bitkileri sulamak.
 tidy|düzenli, toplu|G|||Masası her zaman düzenliydi|A neat desk with books lined up, pencils in a cup and a small plant.|mint|E|Keep your room tidy.|Odanı düzenli tut.
 dishwasher|bulaşık makinesi|G|||Tabakları bulaşık makinesine dizdi|A boy puts plates into an open dishwasher.|sky-blue|E|Can you empty the dishwasher?|Bulaşık makinesini boşaltabilir misin?
@@ -36,7 +36,7 @@ boy|erkek çocuk|G|||Erkek çocuk uçurtma uçurdu|A smiling boy flies a red kit
 old|yaşlı; eski|G|||Yaşlı adam eski bir saati tamir etti|An old man with glasses repairs an old pocket watch.|cream|E|My grandmother is old but very active.|Büyükannem yaşlı ama çok hareketli.
 little|küçük; biraz|G|||Küçük kedi süt içti|A little kitten drinks milk from a bowl.|pink|E|I have a little brother.|Küçük bir erkek kardeşim var.
 small|küçük|G|||Küçük fare büyük peynire baktı|A small mouse looks up at a big piece of cheese.|yellow|E|Our flat is small.|Dairemiz küçük.
-long|uzun|G|||Uzun bir tren köprüden geçti|A very long colourful train crosses a bridge.|green|E|She has long hair.|Onun uzun saçı var.
+long|uzun|G|||Uzun bir tren köprüden geçti|A long colourful toy-like train crosses a small arched bridge; the bridge and train are fully visible with empty space around them.|green|E|She has long hair.|Onun uzun saçı var.
 black|siyah|G|||Siyah kedi pencerede oturdu|A black cat sits on a windowsill.|lavender|E|I have a black bag.|Siyah bir çantam var.
 white|beyaz|G|||Bembeyaz kardan adam yaptık|Children build a white snowman with a carrot nose.|sky-blue|E|The walls are white.|Duvarlar beyaz.
 brown|kahverengi|G|||Kahverengi ayı bal yedi|A friendly brown bear eats honey from a pot.|peach|E|My dog is brown.|Köpeğim kahverengi.

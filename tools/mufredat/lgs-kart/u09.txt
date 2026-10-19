@@ -54,7 +54,7 @@ discovery|keşif|G|||Bahçede eski bir sandık keşfetti|A boy discovers an old 
 education|eğitim|G|||Eğitim için her gün okula gidiyor|Children walk into a school with backpacks, a teacher waving at the door.|mint|E
 engineering|mühendislik|G|||Mühendislik öğrencisi köprü modeli yaptı|A young woman builds a model bridge from wooden sticks.|sky-blue|E
 experiment|deney|G|||Laboratuvarda renkli bir deney yaptı|A girl in safety glasses pours blue liquid into a flask that bubbles.|mint|E
-explorer|kâşif|G|||Kâşif dürbünüyle yeni karayı gördü|An explorer with a hat stands on a ship looking through a telescope at an island.|sky-blue|E
+explorer|kâşif|G|||Kâşif dürbünüyle yeni karayı gördü|An explorer with a hat stands on a small boat looking through a telescope at a tiny island; the boat is fully visible.|sky-blue|E
 fact|gerçek, olgu|G|||Dünyanın yuvarlak olduğu bir gerçek|A girl points at a round globe while classmates listen.|sky-blue|E
 forever|sonsuza dek|G|||Kumdaki kalbin sonsuza dek kalmasını istedi|Two friends draw a big heart in the sand on a beach.|pink|E
 forget|unutmak|G|||Şemsiyesini unutunca ıslandı|A boy without an umbrella gets wet in the rain, his umbrella left at home behind the window.|sky-blue|E

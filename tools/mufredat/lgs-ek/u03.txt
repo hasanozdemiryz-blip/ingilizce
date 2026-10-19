@@ -51,13 +51,13 @@ tray|tepsi|G|||Kurabiyeleri tepsiye dizdi|A boy arranges round cookies on a baki
 use|kullanmak|G|||Kâğıdı makasla dikkatle kesti|A girl carefully uses a pair of child safety scissors to cut a paper star.|sky-blue|E|Can I use your phone?|Telefonunu kullanabilir miyim?
 mussel|midye|G|||Kumsalda midye kabuğu topladı|A girl collects dark blue mussel shells in a small bucket on the sand.|sky-blue|E|A mussel lives in the sea.|Midye denizde yaşar.
 food|yiyecek, yemek|G|||Masada bir sürü yiyecek vardı|A table full of food: bread, cheese, fruit and soup.|cream|E|What is your favourite food?|En sevdiğin yemek ne?
-drink|içmek; içecek|G|||Sıcakta soğuk limonata içti|A boy drinks a glass of cold lemonade with a straw on a sunny day.|yellow|E|Would you like a drink?|Bir içecek ister misin?
+drink|içmek; içecek|G|||Sıcakta soğuk limonata içti|A boy drinks a glass of cold lemonade with a straw; a small sun is in the sky well inside the panel.|yellow|E|Would you like a drink?|Bir içecek ister misin?
 breakfast|kahvaltı|G|||Pazar kahvaltısında yumurta yedik|A family eats breakfast with eggs, olives, cheese and tea.|yellow|E|I have breakfast at seven.|Yedide kahvaltı yaparım.
-lunch|öğle yemeği|G|||Okulda öğle yemeğini yedik|Children eat lunch from trays at a school canteen table.|green|E|We have lunch at school.|Öğle yemeğini okulda yeriz.
+lunch|öğle yemeği|G|||Okulda öğle yemeğini yedik|Two children eat lunch from trays at a small school table that is fully visible.|green|E|We have lunch at school.|Öğle yemeğini okulda yeriz.
 salad|salata|T|salata|ses|Domatesli salata hazırladı|A girl mixes a fresh salad with tomatoes and lettuce in a big bowl.|green|E|I eat salad every day.|Her gün salata yerim.
 tomato|domates|T|domates|ses|Bahçeden kırmızı domates topladı|A boy picks a red tomato from a plant in a vegetable garden.|pink|E|Cut the tomato into small pieces.|Domatesi küçük parçalara kes.
 onion|soğan|G|||Soğan doğrarken gözleri yaşardı|A cook with watery eyes chops an onion on a board.|lavender|E|Chop the onion.|Soğanı doğra.
-olive|zeytin|G|||Kahvaltıda siyah zeytin yedi|A small bowl of black and green olives on a breakfast table.|green|E|I like olive oil.|Zeytinyağını severim.
+olive|zeytin|G|||Kahvaltıda siyah zeytin yedi|A small bowl of black and green olives on a small round table that is fully visible.|green|E|I like olive oil.|Zeytinyağını severim.
 milk|süt|G|||Kedi kâsedeki sütü içti|A kitten laps milk from a small bowl.|cream|E|Children should drink milk.|Çocuklar süt içmeli.
 fruit|meyve|G|||Sepette rengârenk meyve vardı|A basket full of apples, bananas, oranges and grapes.|peach|E|Fruit is good for you.|Meyve sana iyi gelir.
 vegetable|sebze|G|||Pazardan taze sebze aldık|A market stall with carrots, cabbages, peppers and potatoes.|green|E|Carrot is my favourite vegetable.|Havuç en sevdiğim sebze.

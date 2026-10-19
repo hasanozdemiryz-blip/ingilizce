@@ -7,12 +7,12 @@ big|büyük|G|||Küçük çocuğun yanında büyük bir fil vardı|A small boy s
 build|inşa etmek|G|||Kumdan büyük bir kale inşa etti|A girl builds a big sandcastle with towers on a beach.|yellow|E|They want to build a new bridge.|Yeni bir köprü inşa etmek istiyorlar.
 compare|karşılaştırmak|G|||İki elmayı karşılaştırdı|A boy holds a big red apple in one hand and a small green apple in the other, comparing them.|green|E|Compare the two hotels.|İki oteli karşılaştır.
 country|ülke; kırsal|G|||Dünya haritasında ülkesini gösterdi|A girl points at a country on a big colourful globe.|sky-blue|E|Which country do you want to visit?|Hangi ülkeyi ziyaret etmek istiyorsun?
-cruise|gemi turu|T|kruvaziyer|ses|Kruvaziyer gemisiyle adaları gezdik|A big white cruise ship sails on a calm blue sea, passengers waving from the deck.|sky-blue|E|We went on a cruise in the summer.|Yazın gemi turuna çıktık.
+cruise|gemi turu|T|kruvaziyer|ses|Kruvaziyer gemisiyle adaları gezdik|A small white cruise ship sails on a small oval patch of blue water that does NOT reach the panel edges, passengers waving from the deck.|sky-blue|E|We went on a cruise in the summer.|Yazın gemi turuna çıktık.
 dirty|kirli|K|dört|ses|Dört çorabın dördü de kirliydi|A boy holds his nose next to four muddy socks on a washing line.|cream|E|Your shoes are dirty.|Ayakkabıların kirli.
 entertainment|eğlence|G|||Otelde akşam eğlencesi vardı|Tourists clap at a cheerful music and dance show on a small hotel stage.|lavender|E|The hotel has a lot of entertainment for children.|Otelde çocuklar için çok eğlence var.
 escape|kaçmak|G|||Papağan kafesten kaçtı|A colourful parrot flies out of an open birdcage while a girl laughs.|green|E|Don't let the bird escape.|Kuşun kaçmasına izin verme.
 excited|heyecanlı|G|||Tatile gitmeden önce çok heyecanlıydı|A boy jumps excitedly next to a packed suitcase.|yellow|E|I am excited about the trip.|Gezi için heyecanlıyım.
-expedition|keşif gezisi|T|ekspedisyon|ses|Ekspedisyon ekibi kutba yürüdü|A small team in warm coats pulls a sled across a snowy land with a flag.|sky-blue|E|They went on an expedition to the North Pole.|Kuzey Kutbu'na bir keşif gezisine çıktılar.
+expedition|keşif gezisi|T|ekspedisyon|ses|Ekspedisyon ekibi kutba yürüdü|A small team in warm coats pulls a sled across a small patch of snow with a flag; everyone is fully visible.|sky-blue|E|They went on an expedition to the North Pole.|Kuzey Kutbu'na bir keşif gezisine çıktılar.
 expensive|pahalı|G|||Vitrindeki pahalı saati gördü|A boy looks wide-eyed at a shiny watch in a shop window with a tag showing a big pile of coins; no digits.|cream|E|This hotel is too expensive.|Bu otel çok pahalı.
 gorgeous|muhteşem|G|||Gün batımı muhteşemdi|A family on a beach watches a gorgeous orange and pink sunset over the sea.|peach|E|The beach was gorgeous.|Plaj muhteşemdi.
 happen|olmak, meydana gelmek|G|||Ne oldu diye merakla baktı|A curious girl peeks around a corner to see what happened, a fallen basket of apples on the floor.|cream|E|What will happen next?|Sonra ne olacak?
@@ -20,7 +20,7 @@ heritage|miras (kültürel)|G|||Tarihi çarşı kültürel mirasımız|A family 
 history|tarih|G|||Müzede tarih dersini yaşadılar|Children look at an old clay vase in a museum glass case.|cream|E|I am interested in history.|Tarihle ilgileniyorum.
 hospitable|misafirperver|G|||Köylüler misafirlere çay ikram etti|A smiling village family offers tea and bread to visiting tourists at their door.|peach|E|Turkish people are very hospitable.|Türk insanı çok misafirperverdir.
 huge|kocaman|G|||Kocaman bir balina gemiyi selamladı|A huge friendly whale swims next to a tiny boat with waving children.|sky-blue|E|There is a huge statue in the square.|Meydanda kocaman bir heykel var.
-island|ada|G|||Sandalla küçük adaya gittiler|A small island with a lighthouse and palm trees in a blue sea.|sky-blue|E|We spent our holiday on an island.|Tatilimizi bir adada geçirdik.
+island|ada|G|||Sandalla küçük adaya gittiler|A small island with a lighthouse and two palm trees in a small round patch of blue sea that does NOT reach the panel edges.|sky-blue|E|We spent our holiday on an island.|Tatilimizi bir adada geçirdik.
 keep|tutmak, saklamak|G|||Deniz kabuklarını kutuda sakladı|A girl puts sea shells into a small wooden box to keep them.|cream|E|Keep your ticket with you.|Biletini yanında tut.
 location|konum, yer|T|lokasyon|ses|Haritada otelin lokasyonunu buldu|A girl points at a red pin on a phone map; no text.|green|E|The hotel is in a good location.|Otel iyi bir konumda.
 lovely|çok güzel, hoş|G|||Hoş bir kır evinde kaldık|A cosy little cottage with flowers around the door.|pink|E|We had a lovely time.|Çok güzel vakit geçirdik.
@@ -34,7 +34,7 @@ public|halka açık|G|||Halka açık parkta herkes oynuyordu|Many different peop
 quiet|sessiz|G|||Kütüphanede sessizce kitap okudu|A girl reads a book quietly in a library, a finger on her lips.|lavender|E|Please be quiet.|Lütfen sessiz olun.
 ready|hazır|G|||Valizini hazırlayıp kapıda bekledi|A boy stands by the door with a suitcase and a hat, ready to go.|yellow|E|Are you ready?|Hazır mısın?
 rich|zengin|G|||Zengin adam yatından el salladı|A smiling man in a white cap waves from a big shiny yacht.|sky-blue|E|The region is rich in history.|Bölge tarih açısından zengin.
-sail|yelken açmak|G|||Yelkenliyle denize açıldılar|A small sailboat with a white sail glides on the blue sea.|sky-blue|E|We will sail to the island.|Adaya yelkenliyle gideceğiz.
+sail|yelken açmak|G|||Yelkenliyle denize açıldılar|A small sailboat with a white sail on a small patch of blue sea that does NOT reach the panel edges.|sky-blue|E|We will sail to the island.|Adaya yelkenliyle gideceğiz.
 spend|harcamak; geçirmek|G|||Bütün harçlığını oyuncağa harcadı|A boy pays coins to a shopkeeper for a toy car.|cream|E|We spend every summer in Bodrum.|Her yazı Bodrum'da geçiririz.
 stay|kalmak|G|||Tatilde deniz kenarındaki otelde kaldık|A family checks into a seaside hotel with suitcases.|sky-blue|E|We stay at my uncle's house in summer.|Yazın amcamın evinde kalırız.
 sunbathe|güneşlenmek|G|||Plajda şemsiyenin altında güneşlendi|A man in shorts relaxes on a beach towel under an umbrella in the sun.|yellow|E|Don't sunbathe at noon.|Öğle saatinde güneşlenme.
@@ -55,7 +55,7 @@ plane|uçak|G|||Uçak havalimanından havalandı|A white passenger plane takes o
 centre|merkez|G|||Şehir merkezinde saat kulesi vardı|A clock tower stands in a busy town square; no digits.|cream|E|Our hotel is in the city centre.|Otelimiz şehir merkezinde.
 street|sokak, cadde|G|||Sokakta rengârenk evler vardı|A cobbled street lined with colourful houses and flower pots.|peach|E|Turn left at the next street.|Bir sonraki sokaktan sola dön.
 visit|ziyaret etmek|K|vizite|ses|Doktor viziteye gelip hastayı ziyaret etti|A friendly doctor visits a smiling boy in a hospital bed during a morning visit.|mint|E|I visit my aunt every summer.|Her yaz teyzemi ziyaret ederim.
-arrive|varmak, gelmek|G|||Tren istasyona vardı|A colourful train arrives at a station where a family waits.|sky-blue|E|What time does the train arrive?|Tren saat kaçta varıyor?
+arrive|varmak, gelmek|G|||Tren istasyona vardı|A short colourful train arrives at a small station platform where a family waits; the train is fully visible.|sky-blue|E|What time does the train arrive?|Tren saat kaçta varıyor?
 return|geri dönmek|G|||Tatilden eve geri döndüler|A family with suitcases walks back into their house.|cream|E|We will return home on Sunday.|Pazar günü eve döneceğiz.
 price|fiyat|G|||Dondurmanın fiyatını sordu|A boy points at an ice cream cart asking the price; no digits.|peach|E|What is the price of this hat?|Bu şapkanın fiyatı ne?
 century|yüzyıl|G|||Bu kale yüzyıllar önce yapıldı|An old stone castle with moss on its walls on a hill.|cream|E|The mosque was built in the 16th century.|Cami 16. yüzyılda inşa edildi.
@@ -68,5 +68,5 @@ in my opinion|bence|I|||Bence en güzel yer Kapadokya|A girl points at a photo o
 have a rest|dinlenmek|I|||Yürüyüşten sonra bankta dinlendiler|Tired tourists sit on a bench under a tree, resting.|green|E|Let's have a rest here.|Hadi burada dinlenelim.
 sightseeing tour|gezi turu|I|||Çift katlı otobüsle gezi turuna çıktık|Tourists wave from the open top of a red double-decker bus.|peach|E|We took a sightseeing tour of the city.|Şehirde bir gezi turuna çıktık.
 have been to|bulunmuş olmak, gitmiş olmak|I|||Daha önce Paris'e gitmişti|A girl shows a photo album with a picture of a tall iron tower; no text.|lavender|E|I have been to İzmir twice.|İzmir'e iki kez gittim.
-school trip|okul gezisi|I|||Okul gezisinde müzeyi gezdik|A teacher leads a line of children off a school bus toward a museum.|yellow|E|We went on a school trip to Ankara.|Ankara'ya okul gezisine gittik.
+school trip|okul gezisi|I|||Okul gezisinde müzeyi gezdik|A teacher leads a short line of children off a small yellow school bus toward a small museum building with columns; the building has no sign and no words.|yellow|E|We went on a school trip to Ankara.|Ankara'ya okul gezisine gittik.
 book a room|oda ayırtmak|I|||Otelde iki kişilik oda ayırttı|A father talks to a receptionist at a hotel desk who hands him a key.|cream|E|I want to book a room for two nights.|İki gecelik oda ayırtmak istiyorum.

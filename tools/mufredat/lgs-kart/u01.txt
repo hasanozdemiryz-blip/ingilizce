@@ -76,7 +76,7 @@ important|önemli|G|||Önemli mektubu dikkatle taşıdı|A boy carefully carries
 individual|bireysel, kişi|G|||Herkes kendi resmini ayrı ayrı yaptı|Three children sit at separate easels, each painting their own different picture.|mint|E
 instead|yerine|G|||Kola yerine ayran içti|A boy pushes away a fizzy drink and happily drinks a glass of white yoghurt drink instead.|sky-blue|E
 introduce|tanıştırmak|G|||Yeni arkadaşını sınıfa tanıttı|A teacher with her hand on a new girl's shoulder introduces her to three smiling classmates who wave.|peach|E
-invitation|davet, davetiye|G|||Doğum günü davetiyesini açtı|A girl happily opens a colourful envelope and pulls out a party invitation card decorated with balloons.|pink|E
+invitation|davet, davetiye|G|||Doğum günü davetiyesini açtı|A girl happily opens a colourful envelope and pulls out a party invitation card that shows only three balloons and no words at all.|pink|E
 learn|öğrenmek|G|||Bisiklet sürmeyi öğrendi|A happy boy in a helmet rides a small bicycle while his father lets go of the seat behind him.|green|E
 letter|mektup|G|||Dedesine mektup yazdı|A girl writes a letter at a desk and puts it into an envelope with a stamp.|cream|E
 lie|yalan|G|||Yalan söyleyince yüzü kızardı|A boy with red cheeks hides a broken vase behind his back and looks away from his mother.|peach|E
@@ -92,7 +92,7 @@ patient|sabırlı; hasta|G|||Balıkçı sabırla bekledi|A calm old man sits on 
 personality|kişilik|G|||Herkesin kişiliği farklı|Three children side by side: one reading quietly, one laughing loudly, one painting — each showing a different personality.|lavender|E
 rarely|nadiren|G|||Bu çiçek çölde nadiren açar|A single pink flower blooms on a small cactus in sandy ground under a clear sky.|peach|E
 reason|sebep|G|||Geç kalma sebebini anlattı|A boy points at a flat bicycle tyre while explaining to his teacher why he is late.|cream|E
-relaxed|rahat, gevşemiş|G|||Hamakta rahat rahat kitap okudu|A relaxed girl lies in a hammock between two trees reading a book.|mint|E
+relaxed|rahat, gevşemiş|G|||Hamakta rahat rahat kitap okudu|A relaxed girl lies in a small hammock on a short wooden stand, reading a book; the stand is small and fully visible.|mint|E
 reliable|güvenilir|G|||Güvenilir arkadaşı anahtarı sakladı|A boy hands his house key to a trusted friend who nods and puts it safely in his pocket.|green|E
 remain|kalmak|G|||Tabakta tek kurabiye kaldı|A plate with only one cookie remaining, crumbs around it, two children looking at it.|cream|E
 respectful|saygılı|G|||Otobüste yaşlı teyzeye yer verdi|A boy stands up from his seat and offers it to an elderly lady with a walking stick; no bus interior, no windows.|lavender|E
@@ -105,7 +105,7 @@ thirsty|susamış|G|||Koşudan sonra çok susamıştı|A tired boy in sports clo
 understand|anlamak|G|||Öğretmen anlatınca konuyu anladı|A girl at a desk smiles and nods while her teacher points at a simple drawing on a whiteboard.|cream|E
 want|istemek|G|||Vitrindeki oyuncak trene bakıp onu istedi|A little boy presses his hands against a shop window looking at a red toy train, wanting it.|peach|E
 birthday|doğum günü|G|||Doğum günü pastasındaki mumları üfledi|A girl in a party hat blows out candles on a birthday cake while friends clap.|pink|E
-party|parti|T|parti|ses|Partide herkes dans etti|Children in party hats dance under colourful paper garlands.|pink|E
+party|parti|T|parti|ses|Partide herkes dans etti|Children in party hats dance under a short colourful paper garland that hangs well inside the panel.|pink|E
 classmate|sınıf arkadaşı|G|||Sınıf arkadaşıyla ödev yaptı|Two classmates sit side by side at a school desk doing homework together.|mint|E
 dear|sevgili, değerli|G|||Sevgili dedesine sarıldı|A girl hugs her grandfather tightly, both smiling.|peach|E
 believe|inanmak|G|||Sihirbazın numarasına inanamadı|A surprised boy stares with open mouth as a magician pulls a white rabbit out of a black hat.|lavender|E
@@ -117,7 +117,7 @@ each|her bir|G|||Her çocuğa bir elma düştü|A teacher hands one red apple to
 either|ikisinden biri|G|||Kırmızı ya da maviyi seçebilirdi|A boy looks at two balloons, one red and one blue, deciding which one to take.|sky-blue|E
 neither|hiçbiri (ikisi de değil)|G|||İki yemeği de beğenmedi|A boy shakes his head at two plates, one with broccoli and one with fish, liking neither.|mint|E
 another|başka bir, bir tane daha|G|||Bir kurabiye daha aldı|A smiling girl reaches for another cookie from a plate while already holding one.|cream|E
-thank you|teşekkür ederim|I|||Hediyeyi alınca teşekkür etti|A girl receives a wrapped present and says thank you with a big smile, hand on her heart.|pink|E
+thank you|teşekkür ederim|I|||Hediyeyi alınca teşekkür etti|A smiling mother hands a wrapped present to her daughter, who says thank you with a big smile, hand on her heart; both people are fully visible.|pink|E
 sorry|üzgün; özür dilerim|G|||Topu cama çarpınca özür diledi|A boy holding a football looks sorry next to a neighbour who points at a cracked window.|sky-blue|E
 please|lütfen|G|||Lütfen deyip tuzu istedi|A polite girl at a dinner table asks her father to pass the salt, pointing at it.|cream|E
 nice|hoş, güzel|G|||Bahçedeki çiçekler çok hoştu|A girl smells colourful flowers in a small garden and smiles.|pink|E

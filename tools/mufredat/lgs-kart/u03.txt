@@ -79,13 +79,13 @@ tray|tepsi|G|||Kurabiyeleri tepsiye dizdi|A boy arranges round cookies on a baki
 use|kullanmak|G|||Kâğıdı makasla dikkatle kesti|A girl carefully uses a pair of child safety scissors to cut a paper star.|sky-blue|E
 mussel|midye|G|||Kumsalda midye kabuğu topladı|A girl collects dark blue mussel shells in a small bucket on the sand.|sky-blue|E
 food|yiyecek, yemek|G|||Masada bir sürü yiyecek vardı|A table full of food: bread, cheese, fruit and soup.|cream|E
-drink|içmek; içecek|G|||Sıcakta soğuk limonata içti|A boy drinks a glass of cold lemonade with a straw on a sunny day.|yellow|E
+drink|içmek; içecek|G|||Sıcakta soğuk limonata içti|A boy drinks a glass of cold lemonade with a straw; a small sun is in the sky well inside the panel.|yellow|E
 breakfast|kahvaltı|G|||Pazar kahvaltısında yumurta yedik|A family eats breakfast with eggs, olives, cheese and tea.|yellow|E
-lunch|öğle yemeği|G|||Okulda öğle yemeğini yedik|Children eat lunch from trays at a school canteen table.|green|E
+lunch|öğle yemeği|G|||Okulda öğle yemeğini yedik|Two children eat lunch from trays at a small school table that is fully visible.|green|E
 salad|salata|T|salata|ses|Domatesli salata hazırladı|A girl mixes a fresh salad with tomatoes and lettuce in a big bowl.|green|E
 tomato|domates|T|domates|ses|Bahçeden kırmızı domates topladı|A boy picks a red tomato from a plant in a vegetable garden.|pink|E
 onion|soğan|G|||Soğan doğrarken gözleri yaşardı|A cook with watery eyes chops an onion on a board.|lavender|E
-olive|zeytin|G|||Kahvaltıda siyah zeytin yedi|A small bowl of black and green olives on a breakfast table.|green|E
+olive|zeytin|G|||Kahvaltıda siyah zeytin yedi|A small bowl of black and green olives on a small round table that is fully visible.|green|E
 milk|süt|G|||Kedi kâsedeki sütü içti|A kitten laps milk from a small bowl.|cream|E
 fruit|meyve|G|||Sepette rengârenk meyve vardı|A basket full of apples, bananas, oranges and grapes.|peach|E
 vegetable|sebze|G|||Pazardan taze sebze aldık|A market stall with carrots, cabbages, peppers and potatoes.|green|E

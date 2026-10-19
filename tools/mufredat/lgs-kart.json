@@ -982,7 +982,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Doğum günü davetiyesini açtı",
-  "sahne": "A girl happily opens a colourful envelope and pulls out a party invitation card decorated with balloons.",
+  "sahne": "A girl happily opens a colourful envelope and pulls out a party invitation card that shows only three balloons and no words at all.",
   "ton": "pink",
   "genel": true,
   "seviye": "baslangic"
@@ -1190,7 +1190,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Hamakta rahat rahat kitap okudu",
-  "sahne": "A relaxed girl lies in a hammock between two trees reading a book.",
+  "sahne": "A relaxed girl lies in a small hammock on a short wooden stand, reading a book; the stand is small and fully visible.",
   "ton": "mint",
   "genel": true,
   "seviye": "orta"
@@ -1359,7 +1359,7 @@
   "kanca": "parti",
   "yol": "ses",
   "cumle": "Partide herkes dans etti",
-  "sahne": "Children in party hats dance under colourful paper garlands.",
+  "sahne": "Children in party hats dance under a short colourful paper garland that hangs well inside the panel.",
   "ton": "pink",
   "genel": true,
   "seviye": "baslangic"
@@ -1515,7 +1515,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Hediyeyi alınca teşekkür etti",
-  "sahne": "A girl receives a wrapped present and says thank you with a big smile, hand on her heart.",
+  "sahne": "A smiling mother hands a wrapped present to her daughter, who says thank you with a big smile, hand on her heart; both people are fully visible.",
   "ton": "pink",
   "genel": true,
   "seviye": "baslangic"
@@ -3231,7 +3231,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Pazar günü geç kahvaltı yaptık",
-  "sahne": "A family has a big relaxed breakfast with eggs, cheese and bread.",
+  "sahne": "A family has a relaxed breakfast with eggs, cheese and bread at a small table that is fully visible.",
   "ton": "yellow",
   "genel": true,
   "seviye": "baslangic"
@@ -3257,7 +3257,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Öğleden sonra bahçede çay içtik",
-  "sahne": "A family drinks tea in a garden under a bright afternoon sun.",
+  "sahne": "A family drinks tea at a small garden table under a bright afternoon sun; the scene is small and fully inside the panel.",
   "ton": "peach",
   "genel": true,
   "seviye": "baslangic"
@@ -4531,7 +4531,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Sıcakta soğuk limonata içti",
-  "sahne": "A boy drinks a glass of cold lemonade with a straw on a sunny day.",
+  "sahne": "A boy drinks a glass of cold lemonade with a straw; a small sun is in the sky well inside the panel.",
   "ton": "yellow",
   "genel": true,
   "seviye": "baslangic"
@@ -4557,7 +4557,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Okulda öğle yemeğini yedik",
-  "sahne": "Children eat lunch from trays at a school canteen table.",
+  "sahne": "Two children eat lunch from trays at a small school table that is fully visible.",
   "ton": "green",
   "genel": true,
   "seviye": "baslangic"
@@ -4609,7 +4609,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Kahvaltıda siyah zeytin yedi",
-  "sahne": "A small bowl of black and green olives on a breakfast table.",
+  "sahne": "A small bowl of black and green olives on a small round table that is fully visible.",
   "ton": "green",
   "genel": true,
   "seviye": "orta"
@@ -7911,7 +7911,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Yükseklikten korktuğu için aşağı bakamadı",
-  "sahne": "A boy on a high slide platform covers his eyes, afraid of the height.",
+  "sahne": "A boy on a small slide platform covers his eyes, afraid of the height; the whole slide is small and fully visible.",
   "ton": "lavender",
   "genel": true,
   "seviye": "baslangic"
@@ -7937,7 +7937,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Kapadokya'da sıcak hava balonuna bindiler",
-  "sahne": "Colourful hot air balloons float over soft rock chimneys, a family waving from one basket.",
+  "sahne": "A family waves from the basket of one colourful hot air balloon floating above small rock chimneys; everything is small and fully visible.",
   "ton": "peach",
   "genel": true,
   "seviye": "baslangic"
@@ -8613,7 +8613,7 @@
   "kanca": "kruvaziyer",
   "yol": "ses",
   "cumle": "Kruvaziyer gemisiyle adaları gezdik",
-  "sahne": "A big white cruise ship sails on a calm blue sea, passengers waving from the deck.",
+  "sahne": "A small white cruise ship sails on a small oval patch of blue water that does NOT reach the panel edges, passengers waving from the deck.",
   "ton": "sky-blue",
   "genel": true,
   "seviye": "orta"
@@ -8678,7 +8678,7 @@
   "kanca": "ekspedisyon",
   "yol": "ses",
   "cumle": "Ekspedisyon ekibi kutba yürüdü",
-  "sahne": "A small team in warm coats pulls a sled across a snowy land with a flag.",
+  "sahne": "A small team in warm coats pulls a sled across a small patch of snow with a flag; everyone is fully visible.",
   "ton": "sky-blue",
   "genel": true,
   "seviye": "orta"
@@ -8782,7 +8782,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Sandalla küçük adaya gittiler",
-  "sahne": "A small island with a lighthouse and palm trees in a blue sea.",
+  "sahne": "A small island with a lighthouse and two palm trees in a small round patch of blue sea that does NOT reach the panel edges.",
   "ton": "sky-blue",
   "genel": true,
   "seviye": "baslangic"
@@ -8964,7 +8964,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Yelkenliyle denize açıldılar",
-  "sahne": "A small sailboat with a white sail glides on the blue sea.",
+  "sahne": "A small sailboat with a white sail on a small patch of blue sea that does NOT reach the panel edges.",
   "ton": "sky-blue",
   "genel": true,
   "seviye": "baslangic"
@@ -9237,7 +9237,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Tren istasyona vardı",
-  "sahne": "A colourful train arrives at a station where a family waits.",
+  "sahne": "A short colourful train arrives at a small station platform where a family waits; the train is fully visible.",
   "ton": "sky-blue",
   "genel": true,
   "seviye": "baslangic"
@@ -9406,7 +9406,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Okul gezisinde müzeyi gezdik",
-  "sahne": "A teacher leads a line of children off a school bus toward a museum.",
+  "sahne": "A teacher leads a short line of children off a small yellow school bus toward a small museum building with columns; the building has no sign and no words.",
   "ton": "yellow",
   "genel": true,
   "seviye": "baslangic"
@@ -10069,7 +10069,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Bebek ilk kelimesini söyledi",
-  "sahne": "A baby in a high chair says its first word while its parents smile and clap.",
+  "sahne": "A baby in a high chair says its first word, shown as a small speech bubble containing only a red heart, while its parents smile and clap.",
   "ton": "pink",
   "genel": true,
   "seviye": "baslangic"
@@ -10355,7 +10355,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Uzun bir tren köprüden geçti",
-  "sahne": "A very long colourful train crosses a bridge.",
+  "sahne": "A long colourful toy-like train crosses a small arched bridge; the bridge and train are fully visible with empty space around them.",
   "ton": "green",
   "genel": true,
   "seviye": "baslangic"
@@ -11239,7 +11239,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Kâşif dürbünüyle yeni karayı gördü",
-  "sahne": "An explorer with a hat stands on a ship looking through a telescope at an island.",
+  "sahne": "An explorer with a hat stands on a small boat looking through a telescope at a tiny island; the boat is fully visible.",
   "ton": "sky-blue",
   "genel": true,
   "seviye": "orta"
@@ -12721,7 +12721,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Uçak piste indi",
-  "sahne": "A white plane lands on a runway.",
+  "sahne": "A white plane lands on a short runway strip that does NOT reach the panel edges.",
   "ton": "sky-blue",
   "genel": true,
   "seviye": "baslangic"
@@ -12760,7 +12760,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Karlı dağın zirvesine bayrak diktiler",
-  "sahne": "Climbers plant a flag on top of a snowy mountain.",
+  "sahne": "Two climbers plant a flag on top of a small snowy mountain peak that is fully visible with empty space around it.",
   "ton": "sky-blue",
   "genel": true,
   "seviye": "baslangic"
@@ -12786,7 +12786,7 @@
   "kanca": "okyanus",
   "yol": "ses",
   "cumle": "Okyanusta balinalar yüzdü",
-  "sahne": "Whales swim in a wide blue ocean.",
+  "sahne": "Two whales swim in a small oval patch of blue ocean water that does NOT reach the panel edges.",
   "ton": "sky-blue",
   "genel": true,
   "seviye": "baslangic"
@@ -12864,7 +12864,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "Kar yağınca kartopu oynadık",
-  "sahne": "Children throw snowballs in a snowy park.",
+  "sahne": "Children throw snowballs on a small patch of snow that does NOT reach the panel edges.",
   "ton": "sky-blue",
   "genel": true,
   "seviye": "baslangic"
@@ -13072,7 +13072,7 @@
   "kanca": "",
   "yol": "",
   "cumle": "İklim değişikliğiyle buzullar eridi",
-  "sahne": "A polar bear stands on a small melting piece of ice in the sea.",
+  "sahne": "A polar bear stands on a small melting piece of ice in a small round patch of sea that does NOT reach the panel edges.",
   "ton": "sky-blue",
   "genel": true,
   "seviye": "baslangic"
