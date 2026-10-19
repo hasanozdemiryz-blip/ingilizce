@@ -2678,7 +2678,7 @@ Genel'i (seviyesine göre) dolduruyor; LGS sezonu şimdi.
   sayfasından platformdaki üniteye doğrudan bağlantı; site yayını.
 - Bitti: ikisi yayında, canlıda tıklama testi.
 
-#### PLAN v2 (19 Ekim) — ONAYLANDI (D'nin kredisi C'nin örnekleri görülünce ayrıca sorulur)
+#### PLAN v2 (19 Ekim) — kullanıcı son hâline onay verince BAŞTAN SONA tamamlanır (D'nin kredisi dahil)
 
 Aşama 1–6 bitti (yukarıda). Mantık: satış bu yıl LGS 2027'den (KARARLAR 13). Önce
 LGS eksiksiz olur; aynı kartlar sonra Çocuk'a ve Genel'e eklenir, ayrıca üretilmez.
@@ -2706,15 +2706,15 @@ Bakiye ~71.090; bu plan ~17.500 kredi (yalnız D), ~53.500 kalır.
   Her kart: çağrışım (zorla → sadeleştir), sahne cümlesi, Türkçe, örnek cümle, ünite,
   seviye, güvenlik (çocuk kuralı — kart Çocuk'a da gidecek).
 - Ünite içeriği: yeni kelimelerle kalıp ve test soruları genişler.
-- Kontrol: ünite başına 10 kart örnek kullanıcıya gösterilir, sonra kalanı.
+- Kullanıcı (19 Ekim): **hepsi toplu yapılır**, ara onay yok (örnek kart turu kalktı).
 
 **D. LGS görselleri ve sesleri** (~14.000–16.000 + ~1.500 kredi) — ONAYLA
 - ~185 ızgara (2×2, Nano Banana Pro 2K, KARARLAR 8), partiler hâlinde; kontrol
   ızgarası; kusurlu kare sonraki ızgarada. Ses: Lexi Parker (kelime), diyaloglar Lexi + Matthew.
-- Tahmin %20 aşılırsa durulur (KARARLAR 12).
+- Kredi, PLAN v2'nin bütün onayıyla birlikte onaylanır (CLAUDE.md görsel kuralı). Tahmin %20 aşılırsa durulur (KARARLAR 12).
 
 **E. Platform** (kredi yok)
-- LGS destesi yeni kartlarla; Genel'e okula özgü olmayanlar (KARARLAR 15).
+- LGS destesi yeni kartlarla; **üretilen kartlar Genel'e de monte edilir** (okula özgü/hassas olanlar hariç; KARARLAR 15). Çocuk'a 2–6. sınıf müfredatındakiler etiketlenir.
 - **Bölüm kilidi** (KARARLAR 14): üye, üye olduğu bölümde kalır; şerit üyeye gizli;
   `?bolum=` üyede yok sayılır; mevcut 4 üyenin bölümü korunur.
 - **LGS teması** (öneri, karar kullanıcıda): iskelet aynı, vurgu mavi `#5ec8ff`;
@@ -2724,8 +2724,14 @@ Bakiye ~71.090; bu plan ~17.500 kredi (yalnız D), ~53.500 kalır.
 - "418" geçen her yer güncellenir (ana sayfa "Kimin için", /lgs/, SSS, veliler,
   ünite sayıları). Veliler vaadi doğru hâle gelir: "son 8 LGS'deki kelimelerin
   %95'ten fazlası" (ölçüm: `lgs-havuz`, 2025 hariç tutulup denendi).
+- **"En önemli 25" → "Örnek kelimeler"** (kullanıcı 19 Ekim: menüyü uzatıyor,
+  "en önemli" iddiası dayanaksız — eski 418'den sınav sıklığıyla seçilmişti).
+  Çağrışımlı vitrin; eski adres yeni sayfaya yönlenir; menü adı kısa.
 - Yeni sayfa: **"LGS'de gerçekten çıkmış kelimeler"** — kaç sınavda geçtiğiyle
-  (rakiplerde yok).
+  (rakiplerde yok; mevcut "Çıkmış sorular" sayfası bununla birleşir).
+- **Ana ekranlar açıklayıcı ve çekici** (kullanıcı 19 Ekim): site ana sayfası,
+  /lgs/ ve platform ana ekranında **kelime sayıları** (Genel ~X, LGS ~1.500 kelime
+  ve kalıp), ne olduğu tek bakışta (yöntem + örnek kart + kime göre), net düğme.
 - Ana sayfada LGS'ye büyük giriş (geri sayım + düğme). Google adresleri değişmez.
 
 **G. Yayın + test** — platform ve site birlikte (CLAUDE.md), canlıda tıklama testi.
@@ -2850,6 +2856,7 @@ satış soruları (I).
   (`src/kaynak.ts`, test `kaynak.test.ts`). Gizlilik ve KVKK metnine eklendi.
   Reklam bağlantıları `?utm_source=instagram&utm_medium=reklam&utm_campaign=…` ile verilmeli.
   Sorgu: `select veri->>'ilk', count(distinct kimlik) from olaylar where ad='uygulama_acildi' group by 1`.
+- [x] **Yayın 3 (19 Ekim):** A + B canlıda (platform `9dfc1db`, site `b3e83f2`), canlıda doğrulandı.
 - [ ] PLAN v2 (onaylı 19 Ekim): A test → B ölçüm → C LGS metinleri → D görsel/ses →
   E platform (bölüm kilidi, LGS teması) → F site → G yayın → I satış. (H çıktı.) Araçlar hazır: `tools/mufredat/izgara-*.mjs`, `tools/ses/*`,
   kurallar `tools/kanca-kurallari.md`.
