@@ -1,0 +1,41 @@
+# 4. ünite On the Phone — en|tr|tur|kanca|yol|cumle|sahne|ton|genel
+addiction|bağımlılık|G|||Telefon bağımlılığı yüzünden güneşli günü kaçırdı|A teenager stares at a phone on a sofa while a sunny park with friends playing is visible through the window.|lavender|E
+appointment|randevu|G|||Dişçi randevusunu ajandaya yazdı|A receptionist marks a day in a big diary with a pen while a girl waits at the desk.|mint|E
+available|müsait|G|||Doktor şimdi müsait|A smiling doctor at an open office door waves a patient in.|mint|E
+bad line|hat kötü|I|||Hat kötüydü, sesi kesik kesik geldi|A confused man holds a phone away from his ear while zigzag crackle lines come out of it.|sky-blue|E
+break into|zorla girmek|I|||İtfaiyeci yavru kediyi kurtarmak için eve zorla girdi|A firefighter climbs in through a window to rescue a small kitten waiting inside.|peach|H
+burglary|hırsızlık|G|||Polis hırsızlık olayını inceledi|A police officer with a notebook looks at an empty open safe and a trail of cartoon footprints.|cream|H
+call|aramak|G|||Babaannesini telefonla aradı|A girl calls her grandmother on a phone; the grandmother answers happily on the other side.|pink|E
+clarification|açıklama|G|||Öğretmen konuyu çizerek açıkladı|A teacher draws a simple diagram on the board to clarify while students nod.|cream|E
+concentration|konsantrasyon|T|konsantrasyon|ses|Bulmacaya tam konsantre oldu|A boy concentrates hard on a jigsaw puzzle, tongue out, surrounded by pieces.|lavender|E
+connect|bağlanmak|G|||Kabloyu bilgisayara bağladı|A hand plugs a cable into a laptop; a small connection light turns green.|sky-blue|E
+cons|eksiler|G|||Planın eksilerini kırmızıyla yazdı|A boy looks at a clipboard list with red minus signs and frowns.|cream|E
+contact|iletişim kurmak|T|kontak|ses|Toplantıda yeni biriyle iletişim kurdu|Two adults shake hands and exchange small business cards with no writing.|cream|E
+conversation|sohbet|G|||Çay içerken uzun bir sohbet ettiler|Two friends talk happily at a small table with cups of tea.|peach|E
+customer service|müşteri hizmetleri|I|||Müşteri hizmetleri sorunu çözdü|A smiling call-centre worker wearing a headset helps a customer on the phone.|mint|E
+dial|numara çevirmek|G|||Eski telefonda numarayı çevirdi|A girl turns the round dial of an old-fashioned red telephone.|peach|E
+disturb|rahatsız etmek|G|||Davulcu uyuyan komşuyu rahatsız etti|A boy plays a loud drum while a sleepy neighbour in pyjamas covers her ears at the wall.|lavender|E
+doorbell|kapı zili|I|||Kapı zilini çaldı|A girl presses a doorbell beside a green front door.|green|E
+engaged|meşgul (hat)|G|||Hat meşguldü, bekledi|A man waits with a phone at his ear, looking impatient, busy-signal lines coming from it.|sky-blue|E
+evolve|gelişmek|G|||Kurbağa yavrusu zamanla gelişti|A tadpole, a small froglet and a grown frog sit in a row on a lily pad.|green|E
+extension|dahili hat|G|||Sekreter çağrıyı dahili hatta aktardı|An office worker presses a button on a desk phone with many lines.|cream|E
+get back|geri dönmek|I|||Toplantıdan sonra arkadaşına geri döndü|A man returns a missed call on his phone, smiling.|sky-blue|E
+get in touch|iletişime geçmek|I|||Eski arkadaşlar görüntülü aramayla iletişime geçti|Two old friends wave at each other on a video call on a laptop.|sky-blue|E
+hang on|beklemek (telefonda)|I|||Bir dakika bekle dedi|A receptionist on the phone holds up one finger, signalling wait.|mint|E
+hang up|telefonu kapatmak|I|||Telefonu kapattı|A man puts a telephone receiver back down onto its base.|cream|E
+hold|hatta beklemek|G|||Hatta beklerken müzik dinledi|A bored woman waits on the phone with music notes coming from the receiver.|lavender|E
+incident|olay|G|||Muz kabuğu olayı herkesi güldürdü|A boy slips on a banana peel while his friends gasp and then laugh.|yellow|E
+line|hat|G|||Telefon hattı direklere bağlı|Two wooden poles hold telephone lines across a sunny countryside.|sky-blue|E
+memo|not|T|memo|ses|Buzdolabına bir not bıraktı|Colourful sticky memo notes with no writing are stuck on a fridge door.|yellow|E
+message|mesaj|T|mesaj|ses|Telefonuna bir mesaj geldi|A phone screen shows a new message envelope icon while a girl smiles at it.|pink|E
+misunderstanding|yanlış anlama|G|||Tırmık yerine pasta getirince yanlış anlaşıldı|A boy proudly hands his dad a cake while the dad, standing in the garden, wanted a rake.|green|E
+municipality|belediye|G|||Belediye parka yeni banklar koydu|Workers in orange vests install new benches in a city park.|green|E
+notice|fark etmek|G|||Yapraktaki uğur böceğini fark etti|A girl notices a tiny ladybird on a leaf and looks at it through a magnifying glass.|green|E
+pick up|telefonu açmak|I|||Telefon çalınca hemen açtı|A girl picks up a ringing phone with a happy face.|pink|E
+polite|kibar|G|||Kibar çocuk yaşlı kadına kapıyı tuttu|A polite boy holds a door open for an elderly woman with a shopping bag.|peach|E
+pros|artılar|G|||Planın artılarını yeşille yazdı|A girl looks at a clipboard list with green plus signs and smiles.|mint|E
+put someone through|telefonu bağlamak|I|||Santral memuru çağrıyı müdüre bağladı|A smiling operator with a headset connects a cable on an old switchboard.|cream|E
+quickness|çabukluk|G|||Çita çabukluğuyla herkesi geçti|A cheetah sprints fast across a field with speed lines behind it.|yellow|E
+reservation|rezervasyon|T|rezervasyon|ses|Restoranda iki kişilik rezervasyon yaptık|A waiter places a small blank reserved sign on a table set for two.|peach|E
+security|güvenlik|G|||Güvenlik görevlisi müze kapısında bekliyor|A friendly security guard in uniform stands at a museum entrance.|sky-blue|E
+staff|personel|G|||Otel personeli misafirleri karşıladı|Hotel staff in matching uniforms smile and greet guests at a reception desk.|cream|E

@@ -1,0 +1,1278 @@
+[
+ {
+  "unite": 1,
+  "en": "accept",
+  "tr": "kabul etmek",
+  "tur": "K",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2021
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "attend",
+  "tr": "katılmak",
+  "tur": "K",
+  "sinav": 2,
+  "toplam": 3,
+  "yillar": [
+   2022,
+   2024
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "awesome",
+  "tr": "harika",
+  "tur": "R",
+  "sinav": 2,
+  "toplam": 2,
+  "yillar": [
+   2021,
+   2023
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "best friend",
+  "tr": "en iyi arkadaş",
+  "tur": "I",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2022
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "busy",
+  "tr": "meşgul",
+  "tur": "V",
+  "sinav": 2,
+  "toplam": 2,
+  "yillar": [
+   2020,
+   2022
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "come over",
+  "tr": "uğramak",
+  "tur": "I",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2021
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "concert",
+  "tr": "konser",
+  "tur": "T",
+  "sinav": 5,
+  "toplam": 10,
+  "yillar": [
+   2020,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "cool",
+  "tr": "harika",
+  "tur": "T",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2019
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "count on",
+  "tr": "güvenmek",
+  "tur": "I",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2020
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "event",
+  "tr": "etkinlik",
+  "tur": "R",
+  "sinav": 4,
+  "toplam": 8,
+  "yillar": [
+   2020,
+   2021,
+   2024,
+   2025
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "excuse",
+  "tr": "bahane",
+  "tur": "R",
+  "sinav": 2,
+  "toplam": 3,
+  "yillar": [
+   2022,
+   2023
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "friendship",
+  "tr": "arkadaşlık",
+  "tur": "R",
+  "sinav": 2,
+  "toplam": 3,
+  "yillar": [
+   2020,
+   2022
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "invite",
+  "tr": "davet etmek",
+  "tur": "K",
+  "sinav": 3,
+  "toplam": 5,
+  "yillar": [
+   2022,
+   2023,
+   2025
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "refuse",
+  "tr": "reddetmek",
+  "tur": "K",
+  "sinav": 1,
+  "toplam": 3,
+  "yillar": [
+   2023
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "response",
+  "tr": "yanıt",
+  "tur": "R",
+  "sinav": 2,
+  "toplam": 5,
+  "yillar": [
+   2022,
+   2023
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "secret",
+  "tr": "sır",
+  "tur": "R",
+  "sinav": 3,
+  "toplam": 4,
+  "yillar": [
+   2020,
+   2022,
+   2025
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "share",
+  "tr": "paylaşmak",
+  "tur": "R",
+  "sinav": 5,
+  "toplam": 8,
+  "yillar": [
+   2020,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "support",
+  "tr": "desteklemek",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2025
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "text",
+  "tr": "mesaj atmak",
+  "tur": "T",
+  "sinav": 2,
+  "toplam": 3,
+  "yillar": [
+   2022,
+   2025
+  ]
+ },
+ {
+  "unite": 1,
+  "en": "trust",
+  "tr": "güvenmek",
+  "tur": "K",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2025
+  ]
+ },
+ {
+  "unite": 2,
+  "en": "equipment",
+  "tr": "ekipman",
+  "tur": "T",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2024
+  ]
+ },
+ {
+  "unite": 2,
+  "en": "folk",
+  "tr": "halk",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2022
+  ]
+ },
+ {
+  "unite": 2,
+  "en": "honest",
+  "tr": "dürüst",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2019
+  ]
+ },
+ {
+  "unite": 2,
+  "en": "impressive",
+  "tr": "etkileyici",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2018
+  ]
+ },
+ {
+  "unite": 2,
+  "en": "map",
+  "tr": "harita",
+  "tur": "R",
+  "sinav": 2,
+  "toplam": 4,
+  "yillar": [
+   2021,
+   2025
+  ]
+ },
+ {
+  "unite": 2,
+  "en": "prefer",
+  "tr": "tercih etmek",
+  "tur": "R",
+  "sinav": 4,
+  "toplam": 6,
+  "yillar": [
+   2018,
+   2019,
+   2020,
+   2021
+  ]
+ },
+ {
+  "unite": 2,
+  "en": "teenager",
+  "tr": "ergen",
+  "tur": "R",
+  "sinav": 2,
+  "toplam": 8,
+  "yillar": [
+   2019,
+   2020
+  ]
+ },
+ {
+  "unite": 2,
+  "en": "trekking",
+  "tr": "doğa yürüyüşü",
+  "tur": "T",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2024
+  ]
+ },
+ {
+  "unite": 2,
+  "en": "trendy",
+  "tr": "modaya uygun",
+  "tur": "T",
+  "sinav": 2,
+  "toplam": 2,
+  "yillar": [
+   2018,
+   2021
+  ]
+ },
+ {
+  "unite": 2,
+  "en": "unbearable",
+  "tr": "dayanılmaz",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 2,
+  "yillar": [
+   2022
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "bake",
+  "tr": "fırında pişirmek",
+  "tur": "V",
+  "sinav": 3,
+  "toplam": 4,
+  "yillar": [
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "boil",
+  "tr": "kaynatmak",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 3,
+  "yillar": [
+   2025
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "bowl",
+  "tr": "kâse",
+  "tur": "V",
+  "sinav": 3,
+  "toplam": 4,
+  "yillar": [
+   2018,
+   2019,
+   2025
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "chop",
+  "tr": "doğramak",
+  "tur": "K",
+  "sinav": 2,
+  "toplam": 2,
+  "yillar": [
+   2019,
+   2023
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "cut",
+  "tr": "kesmek",
+  "tur": "V",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2018
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "delicious",
+  "tr": "lezzetli",
+  "tur": "K",
+  "sinav": 3,
+  "toplam": 3,
+  "yillar": [
+   2019,
+   2022,
+   2024
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "dessert",
+  "tr": "tatlı",
+  "tur": "K",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2019
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "dice",
+  "tr": "küp küp doğramak",
+  "tur": "K",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2020
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "flour",
+  "tr": "un",
+  "tur": "R",
+  "sinav": 2,
+  "toplam": 3,
+  "yillar": [
+   2019,
+   2024
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "fry",
+  "tr": "kızartmak",
+  "tur": "V",
+  "sinav": 3,
+  "toplam": 5,
+  "yillar": [
+   2020,
+   2023,
+   2025
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "ingredient",
+  "tr": "malzeme",
+  "tur": "R",
+  "sinav": 2,
+  "toplam": 2,
+  "yillar": [
+   2021,
+   2024
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "meal",
+  "tr": "öğün",
+  "tur": "R",
+  "sinav": 3,
+  "toplam": 3,
+  "yillar": [
+   2020,
+   2022,
+   2024
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "mix",
+  "tr": "karıştırmak",
+  "tur": "T",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2018
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "oil",
+  "tr": "yağ",
+  "tur": "V",
+  "sinav": 2,
+  "toplam": 2,
+  "yillar": [
+   2018,
+   2020
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "pan",
+  "tr": "tava",
+  "tur": "R",
+  "sinav": 3,
+  "toplam": 7,
+  "yillar": [
+   2020,
+   2023,
+   2025
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "peel",
+  "tr": "soymak",
+  "tur": "V",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2019
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "pour",
+  "tr": "dökmek",
+  "tur": "R",
+  "sinav": 2,
+  "toplam": 2,
+  "yillar": [
+   2019,
+   2020
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "recipe",
+  "tr": "tarif",
+  "tur": "R",
+  "sinav": 4,
+  "toplam": 4,
+  "yillar": [
+   2018,
+   2020,
+   2021,
+   2023
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "salty",
+  "tr": "tuzlu",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2020
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "saucepan",
+  "tr": "tencere",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 2,
+  "yillar": [
+   2019
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "sour",
+  "tr": "ekşi",
+  "tur": "V",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2020
+  ]
+ },
+ {
+  "unite": 3,
+  "en": "spicy",
+  "tr": "baharatlı",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2020
+  ]
+ },
+ {
+  "unite": 4,
+  "en": "appointment",
+  "tr": "randevu",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2022
+  ]
+ },
+ {
+  "unite": 4,
+  "en": "available",
+  "tr": "müsait",
+  "tur": "R",
+  "sinav": 3,
+  "toplam": 3,
+  "yillar": [
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "unite": 4,
+  "en": "call",
+  "tr": "aramak",
+  "tur": "R",
+  "sinav": 6,
+  "toplam": 18,
+  "yillar": [
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "unite": 4,
+  "en": "connect",
+  "tr": "bağlanmak",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2023
+  ]
+ },
+ {
+  "unite": 4,
+  "en": "contact",
+  "tr": "iletişim kurmak",
+  "tur": "T",
+  "sinav": 2,
+  "toplam": 2,
+  "yillar": [
+   2020,
+   2024
+  ]
+ },
+ {
+  "unite": 4,
+  "en": "conversation",
+  "tr": "sohbet",
+  "tur": "R",
+  "sinav": 7,
+  "toplam": 18,
+  "yillar": [
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "unite": 4,
+  "en": "hold",
+  "tr": "hatta beklemek",
+  "tur": "R",
+  "sinav": 3,
+  "toplam": 3,
+  "yillar": [
+   2019,
+   2023,
+   2025
+  ]
+ },
+ {
+  "unite": 4,
+  "en": "message",
+  "tr": "mesaj",
+  "tur": "T",
+  "sinav": 5,
+  "toplam": 9,
+  "yillar": [
+   2020,
+   2021,
+   2023,
+   2024,
+   2025
+  ]
+ },
+ {
+  "unite": 5,
+  "en": "account",
+  "tr": "hesap",
+  "tur": "R",
+  "sinav": 2,
+  "toplam": 2,
+  "yillar": [
+   2021,
+   2023
+  ]
+ },
+ {
+  "unite": 5,
+  "en": "comment",
+  "tr": "yorum",
+  "tur": "R",
+  "sinav": 4,
+  "toplam": 11,
+  "yillar": [
+   2020,
+   2021,
+   2022,
+   2025
+  ]
+ },
+ {
+  "unite": 5,
+  "en": "develop",
+  "tr": "geliştirmek",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2025
+  ]
+ },
+ {
+  "unite": 5,
+  "en": "device",
+  "tr": "cihaz",
+  "tur": "K",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2022
+  ]
+ },
+ {
+  "unite": 5,
+  "en": "habit",
+  "tr": "alışkanlık",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2020
+  ]
+ },
+ {
+  "unite": 5,
+  "en": "online",
+  "tr": "çevrim içi",
+  "tur": "T",
+  "sinav": 5,
+  "toplam": 9,
+  "yillar": [
+   2019,
+   2020,
+   2021,
+   2023,
+   2024
+  ]
+ },
+ {
+  "unite": 5,
+  "en": "password",
+  "tr": "şifre",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 9,
+  "yillar": [
+   2023
+  ]
+ },
+ {
+  "unite": 5,
+  "en": "post",
+  "tr": "gönderi",
+  "tur": "T",
+  "sinav": 1,
+  "toplam": 2,
+  "yillar": [
+   2022
+  ]
+ },
+ {
+  "unite": 5,
+  "en": "properly",
+  "tr": "düzgünce",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2020
+  ]
+ },
+ {
+  "unite": 5,
+  "en": "research",
+  "tr": "araştırma",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2022
+  ]
+ },
+ {
+  "unite": 5,
+  "en": "website",
+  "tr": "web sitesi",
+  "tur": "T",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2023
+  ]
+ },
+ {
+  "unite": 6,
+  "en": "canoeing",
+  "tr": "kano",
+  "tur": "T",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2024
+  ]
+ },
+ {
+  "unite": 6,
+  "en": "caving",
+  "tr": "mağaracılık",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2024
+  ]
+ },
+ {
+  "unite": 6,
+  "en": "challenging",
+  "tr": "zorlu",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2021
+  ]
+ },
+ {
+  "unite": 6,
+  "en": "exciting",
+  "tr": "heyecan verici",
+  "tur": "R",
+  "sinav": 2,
+  "toplam": 3,
+  "yillar": [
+   2018,
+   2021
+  ]
+ },
+ {
+  "unite": 6,
+  "en": "extreme",
+  "tr": "aşırı, uç",
+  "tur": "T",
+  "sinav": 3,
+  "toplam": 7,
+  "yillar": [
+   2019,
+   2024,
+   2025
+  ]
+ },
+ {
+  "unite": 6,
+  "en": "extreme sports",
+  "tr": "ekstrem sporlar",
+  "tur": "I",
+  "sinav": 3,
+  "toplam": 6,
+  "yillar": [
+   2019,
+   2024,
+   2025
+  ]
+ },
+ {
+  "unite": 6,
+  "en": "fascinating",
+  "tr": "büyüleyici",
+  "tur": "R",
+  "sinav": 2,
+  "toplam": 2,
+  "yillar": [
+   2018,
+   2019
+  ]
+ },
+ {
+  "unite": 6,
+  "en": "hang-gliding",
+  "tr": "kanatla uçuş",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2022
+  ]
+ },
+ {
+  "unite": 6,
+  "en": "helmet",
+  "tr": "kask",
+  "tur": "R",
+  "sinav": 2,
+  "toplam": 2,
+  "yillar": [
+   2019,
+   2021
+  ]
+ },
+ {
+  "unite": 6,
+  "en": "paragliding",
+  "tr": "yamaç paraşütü",
+  "tur": "T",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2019
+  ]
+ },
+ {
+  "unite": 6,
+  "en": "rafting",
+  "tr": "rafting",
+  "tur": "T",
+  "sinav": 3,
+  "toplam": 4,
+  "yillar": [
+   2021,
+   2024,
+   2025
+  ]
+ },
+ {
+  "unite": 7,
+  "en": "architecture",
+  "tr": "mimari",
+  "tur": "T",
+  "sinav": 2,
+  "toplam": 2,
+  "yillar": [
+   2018,
+   2025
+  ]
+ },
+ {
+  "unite": 7,
+  "en": "destination",
+  "tr": "varış yeri",
+  "tur": "T",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2025
+  ]
+ },
+ {
+  "unite": 7,
+  "en": "souvenir",
+  "tr": "hediyelik eşya",
+  "tur": "T",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2022
+  ]
+ },
+ {
+  "unite": 7,
+  "en": "trip",
+  "tr": "gezi",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2019
+  ]
+ },
+ {
+  "unite": 8,
+  "en": "do the laundry",
+  "tr": "çamaşır yıkamak",
+  "tur": "I",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2022
+  ]
+ },
+ {
+  "unite": 8,
+  "en": "festival",
+  "tr": "festival",
+  "tur": "T",
+  "sinav": 2,
+  "toplam": 9,
+  "yillar": [
+   2021,
+   2022
+  ]
+ },
+ {
+  "unite": 8,
+  "en": "iron",
+  "tr": "ütülemek",
+  "tur": "K",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2021
+  ]
+ },
+ {
+  "unite": 8,
+  "en": "laundry",
+  "tr": "çamaşır",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2022
+  ]
+ },
+ {
+  "unite": 8,
+  "en": "load the dishwasher",
+  "tr": "bulaşık makinesini doldurmak",
+  "tur": "I",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2021
+  ]
+ },
+ {
+  "unite": 8,
+  "en": "make the bed",
+  "tr": "yatağı toplamak",
+  "tur": "I",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2021
+  ]
+ },
+ {
+  "unite": 8,
+  "en": "prepare",
+  "tr": "hazırlamak",
+  "tur": "R",
+  "sinav": 3,
+  "toplam": 3,
+  "yillar": [
+   2022,
+   2023,
+   2024
+  ]
+ },
+ {
+  "unite": 8,
+  "en": "responsibility",
+  "tr": "sorumluluk",
+  "tur": "R",
+  "sinav": 2,
+  "toplam": 2,
+  "yillar": [
+   2021,
+   2024
+  ]
+ },
+ {
+  "unite": 8,
+  "en": "to-do list",
+  "tr": "yapılacaklar listesi",
+  "tur": "I",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2018
+  ]
+ },
+ {
+  "unite": 9,
+  "en": "achievement",
+  "tr": "başarı",
+  "tur": "R",
+  "sinav": 3,
+  "toplam": 4,
+  "yillar": [
+   2019,
+   2021,
+   2025
+  ]
+ },
+ {
+  "unite": 9,
+  "en": "conduct",
+  "tr": "yürütmek (deney)",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2022
+  ]
+ },
+ {
+  "unite": 9,
+  "en": "disease",
+  "tr": "hastalık",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2025
+  ]
+ },
+ {
+  "unite": 9,
+  "en": "invent",
+  "tr": "icat etmek",
+  "tur": "R",
+  "sinav": 3,
+  "toplam": 3,
+  "yillar": [
+   2019,
+   2022,
+   2024
+  ]
+ },
+ {
+  "unite": 9,
+  "en": "lab",
+  "tr": "laboratuvar",
+  "tur": "T",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2025
+  ]
+ },
+ {
+  "unite": 9,
+  "en": "planet",
+  "tr": "gezegen",
+  "tur": "T",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2024
+  ]
+ },
+ {
+  "unite": 9,
+  "en": "process",
+  "tr": "süreç",
+  "tur": "T",
+  "sinav": 2,
+  "toplam": 2,
+  "yillar": [
+   2020,
+   2023
+  ]
+ },
+ {
+  "unite": 9,
+  "en": "researcher",
+  "tr": "araştırmacı",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2019
+  ]
+ },
+ {
+  "unite": 9,
+  "en": "result",
+  "tr": "sonuç",
+  "tur": "R",
+  "sinav": 3,
+  "toplam": 7,
+  "yillar": [
+   2019,
+   2020,
+   2022
+  ]
+ },
+ {
+  "unite": 9,
+  "en": "safety",
+  "tr": "güvenlik",
+  "tur": "R",
+  "sinav": 1,
+  "toplam": 1,
+  "yillar": [
+   2021
+  ]
+ },
+ {
+  "unite": 9,
+  "en": "scientific",
+  "tr": "bilimsel",
+  "tur": "R",
+  "sinav": 2,
+  "toplam": 3,
+  "yillar": [
+   2019,
+   2021
+  ]
+ },
+ {
+  "unite": 9,
+  "en": "search",
+  "tr": "aramak",
+  "tur": "R",
+  "sinav": 2,
+  "toplam": 2,
+  "yillar": [
+   2021,
+   2024
+  ]
+ }
+]

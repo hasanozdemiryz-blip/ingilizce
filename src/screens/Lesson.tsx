@@ -3,7 +3,7 @@ import { olay } from '../analitik';
 import { useGeri } from '../geri';
 import { LearnFace } from '../components/CardFace';
 import { Runner } from '../components/Runner';
-import { ADIMLAR, bolgelereBol, type Gorev } from '../exercise';
+import { ADIMLAR, adimVarMi, bolgelereBol, sorulacakAdim, type Gorev } from '../exercise';
 import { BackButton, Button, Progressbar, Screen, TopBar } from '../components/ui';
 import { CARD_BY_ID } from '../content';
 import { db, logAnswer, logSession } from '../db';
@@ -197,7 +197,10 @@ export function Lesson({
    * buradaki basari kalici hafizanin degil, tazeligin sonucu.
    */
   const ogrenmeGorevleri = useMemo<Gorev[]>(
-    () => ADIMLAR.flatMap((step) => dersKartlari.map((c): Gorev => ({ card: c, step }))),
+    () =>
+      ADIMLAR.flatMap((step) =>
+        dersKartlari.filter((c) => adimVarMi(c, step)).map((c): Gorev => ({ card: c, step })),
+      ),
     [dersKartlari],
   );
 
@@ -216,7 +219,7 @@ export function Lesson({
           const card = CARD_BY_ID.get(p.cardId);
           if (!card) return null;
           const step = eslestirmesiz && p.step === 1 ? 2 : p.step;
-          return { card, step } as Gorev;
+          return { card, step: sorulacakAdim(card, step) } as Gorev;
         })
         .filter((g): g is Gorev => g !== null),
     [tekrarKuyrugu, eslestirmesiz],

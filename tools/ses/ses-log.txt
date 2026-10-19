@@ -1,0 +1,53 @@
+2026-10-19T05:00|deneme (ses-plan-01.json)|lJVtXs3gv9|20 kelime|supheli:
+2026-10-19T05:02|parti 1|EbNYGbFuuO|60 kelime|supheli:
+2026-10-19T05:02|parti 2|1lndDlbr4r|60 kelime|supheli:
+2026-10-19T05:02|parti 3|P38QCRu42C|60 kelime|supheli:
+2026-10-19T05:03|parti 4|kszeMgn16B|60 kelime|supheli:
+2026-10-19T05:03|parti 1|x|60 kelime|supheli:instrument
+2026-10-19T05:03|parti 2|x|60 kelime|supheli:
+2026-10-19T05:04|parti 3|x|60 kelime|supheli:
+2026-10-19T05:04|parti 4|x|60 kelime|supheli:
+2026-10-19T05:04|deneme 1|lJVtXs3gv9|20 kelime|esik 0.4s|supheli:
+2026-10-19T05:04|parti 2|x|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:04|parti 3|x|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:04|parti 4|x|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:05|parti 1|x|60 kelime|esik 0.4+birlestirmes|supheli:share,stuffed
+2026-10-19T05:05|deneme 1|lJVtXs3gv9|20 kelime|esik 0.4s|supheli:
+2026-10-19T05:05|parti 1|x|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:06|parti 2|x|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:06|parti 3|x|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:06|parti 4|x|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:07|deneme 1|lJVtXs3gv9|20 kelime|esik 0.4s|supheli:
+2026-10-19T05:07|parti 1|x|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:07|parti 2|x|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:07|parti 3|x|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:07|parti 4|x|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:09|parti 5|79dfCcLJAL|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:09|parti 6|rgYXBZLxtc|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:09|parti 7|Xml9N14Bfo|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:09|parti 8|gOMmhWRSXO|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:10|parti 9|p8jyPkBehw|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:10|parti 10|79dfCMSJAL|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:10|parti 11|jUco8njLD0|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:10|parti 12|gOMmhTsSXO|60 kelime|esik 0.4s|supheli:
+2026-10-19T05:10|parti 13|5jADp2IKxe|47 kelime|esik 0.4s|supheli:
+2026-10-19T05:12|diyalog 1|s7TImrOl8e|7 kelime|esik 1.2s|supheli:
+2026-10-19T05:14|diyalog 2|xSWBIzXjfW|6 kelime|esik 0.8s|supheli:
+2026-10-19T05:14|diyalog 3|9ZtH58pNYZ|6 kelime|esik 1.2s|supheli:
+2026-10-19T05:14|diyalog 4|iGv51mi3uK|6 kelime|esik 1.2s|supheli:
+2026-10-19T05:14|diyalog 5|gOMmaVLSXO|7 kelime|esik 1.2s|supheli:
+2026-10-19T05:14|diyalog 6|xSWBIW8jfW|6 kelime|esik 1.2s|supheli:
+2026-10-19T05:14|diyalog 7|fH4zW9OCDY|7 kelime|esik 0.8s|supheli:
+2026-10-19T05:14|diyalog 9|DoxO4Lypcl|6 kelime|esik 1.2s|supheli:
+2026-10-19T05:14|diyalog 10|1lndodZr4r|6 kelime|esik 1.2s|supheli:
+2026-10-19T05:14|diyalog 11|P38QqFN42C|6 kelime|esik 1s|supheli:
+2026-10-19T05:14|diyalog 12|0eKUJwSTfW|6 kelime|esik 1s|supheli:
+2026-10-19T05:14|diyalog 13|s7TIhm3l8e|6 kelime|esik 1.2s|supheli:
+2026-10-19T05:14|diyalog 14|s7TIhhRl8e|6 kelime|esik 1.2s|supheli:
+2026-10-19T05:14|diyalog 15|Lw08mh4swO|6 kelime|esik 1.2s|supheli:
+2026-10-19T05:14|diyalog 16|Xml9i3MBfo|6 kelime|esik 1s|supheli:
+2026-10-19T05:14|diyalog 17|bx2MeXt5Y2|6 kelime|esik 1.2s|supheli:
+2026-10-19T05:14|diyalog 18|xSWBIEdjfW|6 kelime|esik 1.2s|supheli:
+2026-10-19T05:14|diyalog 19|tC7RAVRmZJ|6 kelime|esik 1.2s|supheli:
+2026-10-19T05:14|diyalog 20|Lw08mHAswO|6 kelime|esik 1s|supheli:
+2026-10-19T05:14|diyalog 8|p8jy9stehw|6 kelime|esik 0.6s|supheli:

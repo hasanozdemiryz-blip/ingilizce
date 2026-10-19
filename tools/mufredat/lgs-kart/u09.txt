@@ -1,0 +1,40 @@
+# 9. ünite Science — en|tr|tur|kanca|yol|cumle|sahne|ton|genel
+achievement|başarı|G|||Bilim fuarında birinci olmak büyük bir başarıydı|A proud girl holds a blue first-place ribbon next to her science fair project.|yellow|E
+biochemist|biyokimyacı|T|biyokimya|ses|Biyokimyacı laboratuvarda çalıştı|A scientist in a white coat looks into a microscope in a bright lab.|mint|E
+catgut|katgüt|G|||Doktor yarayı katgütle dikti|A tidy medical tray with a curved needle and a roll of thread.|mint|H
+cell|hücre|G|||Mikroskopta hücreleri gördü|A microscope view shows round cells with nuclei in a circle.|mint|E
+conduct|yürütmek (deney)|K|kondüktör|ses+yazılış|Kondüktör trende bir deney yürüttü|A train conductor in a cap and uniform conducts a fizzy experiment with test tubes on a seat inside a train carriage.|sky-blue|E
+cure|tedavi, çare|T|kür|ses|Doktor hastalığa çare buldu|A smiling doctor hands a bottle of medicine to a happy child.|mint|E
+diagnose|teşhis koymak|T|diyagnoz|ses|Doktor stetoskopla teşhis koydu|A doctor listens to a child's chest with a stethoscope.|mint|E
+discover|keşfetmek|K|disko|yazılış|Okul diskosunda yeni bir dans keşfetti|A boy discovers a funny new dance move at a colourful school disco with a shiny disco ball.|lavender|E
+disease|hastalık|G|||Hastalık yüzünden yatakta dinlendi|A sick boy rests in bed with a thermometer and a cup of tea.|lavender|E
+do an experiment|deney yapmak|I|||Öğrenciler deney yaptı|Students in goggles mix coloured liquids in a school lab.|mint|E
+evaluate|değerlendirmek|G|||Öğretmen projeyi değerlendirdi|A teacher looks at a student's poster and gives a thumbs up.|cream|E
+examine|incelemek|G|||Böceği büyüteçle inceledi|A boy examines a beetle through a big magnifying glass.|green|E
+explode|patlamak|G|||Balon iğneye değince patladı|A balloon pops with confetti bursting out.|yellow|E
+explore|keşfetmek|G|||Ormanı keşfe çıktılar|Two kids with backpacks and a map explore a sunny forest.|green|E
+find out|öğrenmek, bulmak|I|||Bulmacanın cevabını buldu|A girl has a bright idea, a light bulb shining above her head, as she solves a puzzle.|yellow|E
+genius|dâhi|K|cin|ses|Cin, dâhi çocuğa bulmaca sordu|A friendly blue genie rising from a golden lamp asks a smart boy with glasses a riddle; the boy thinks happily.|lavender|E
+gravity|yer çekimi|K|grev|ses+yazılış|Elmalar grev yaptı ama yer çekimi kazandı ve hepsi düştü|Cartoon apples hold tiny picket signs with no writing on a tree branch, but they all fall to the ground below.|green|E
+high-tech|ileri teknoloji|I|||İleri teknoloji robot laboratuvarda çalıştı|A sleek robot arm assembles a small device in a bright modern lab.|sky-blue|E
+invent|icat etmek|G|||Genç mucit uçan bir makine icat etti|A young inventor shows off a small flying machine with propellers.|yellow|E
+lab|laboratuvar|T|laboratuvar|ses|Okulun laboratuvarında çalıştık|A school laboratory with test tubes, flasks and a microscope.|mint|E
+observe|gözlemlemek|G|||Teleskopla gökyüzünü gözlemledi|A girl looks through a telescope at a bright sky with the moon and stars.|lavender|E
+paraplegic|felçli|G|||Tekerlekli sandalyedeki sporcu yarışı kazandı|A smiling athlete in a racing wheelchair crosses the finish line with arms raised.|sky-blue|H
+planet|gezegen|T|planet|ses|Gezegenler güneşin etrafında döner|The colourful planets of the solar system around a bright sun.|lavender|E
+portable|taşınabilir|T|portatif|ses|Taşınabilir hoparlörü pikniğe götürdü|A boy carries a small portable speaker by its handle to a picnic.|green|E
+process|süreç|T|proses|ses|Ekmek yapım süreci adım adım|Four little pictures connected by arrows: wheat, flour, dough, bread.|cream|E
+rabies vaccine|kuduz aşısı|I|||Veteriner köpeğe kuduz aşısı yaptı|A gentle vet gives a calm dog a vaccine while its owner pets it.|mint|H
+researcher|araştırmacı|G|||Araştırmacı not defterine yazdı|A researcher writes in a notebook next to plants in a greenhouse.|green|E
+result|sonuç|G|||Deneyin sonucu başarılı çıktı|A girl cheers as her experiment glows green in a test tube.|mint|E
+safety|güvenlik|G|||Laboratuvarda güvenlik gözlüğü taktı|A boy puts on safety goggles and gloves in a school lab.|mint|E
+scientific|bilimsel|G|||Bilimsel bir poster hazırladılar|Two students present a poster with charts and pictures but no writing.|cream|E
+search|aramak|G|||Yatağın altında oyuncağını aradı|A boy searches under his bed with a torch for a lost toy.|lavender|E
+smallpox vaccine|çiçek aşısı|I|||Doktor koluna aşı yaptı|A doctor gives a calm child a vaccine in the upper arm, the child holding a teddy bear.|mint|H
+solar panel|güneş paneli|I|solar|ses|Çatıdaki güneş panelleri enerji üretiyor|Blue solar panels on a house roof shine in the sun.|sky-blue|E
+speciality|uzmanlık|G|||Şefin uzmanlığı pastalar|A proud chef presents a beautiful layered cake, her speciality.|pink|E
+succeed|başarmak|K|saksı|ses|Saksıdaki çiçeği büyütmeyi başardı|A happy girl proudly holds a terracotta flowerpot with a big blooming sunflower she grew.|yellow|E
+test tube|deney tüpü|I|||Deney tüpü mavi sıvıyla doldu|A test tube filled with blue liquid stands in a rack.|mint|E
+tyre|lastik|K|tayyare|ses|Tayyarenin lastiği patladı|A small old-fashioned propeller airplane on a runway has a flat tyre; a mechanic kneels beside it with a pump.|sky-blue|E
+vaccination|aşılama|G|||Okulda aşılama günü yapıldı|A line of children wait calmly to see a nurse on vaccination day at school.|mint|E
+well-equipped|donanımlı|I|||Laboratuvar çok donanımlı|A well-equipped lab with many machines, microscopes and shelves of bottles.|mint|E

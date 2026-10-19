@@ -1,0 +1,58 @@
+{
+ "unite": 5,
+ "ad": "The Internet",
+ "konu": "İnterneti ne için kullandığımızı anlatmak, sıklık ve yüzde bildirmek, güvenli internet tavsiyesi vermek",
+ "kaliplar": [
+  { "en": "I use the internet to do research for my homework.", "tr": "İnterneti ödevlerim için araştırma yapmak amacıyla kullanırım.", "not": "use ... to + fiil" },
+  { "en": "I usually chat with my friends online.", "tr": "Genelde arkadaşlarımla çevrim içi sohbet ederim.", "not": "Sıklık zarfı" },
+  { "en": "How often do you check your messages?", "tr": "Mesajlarına ne sıklıkla bakarsın?", "not": "Sıklık sormak" },
+  { "en": "Sixty percent of teenagers use social networking sites every day.", "tr": "Gençlerin yüzde altmışı her gün sosyal ağ sitelerini kullanıyor.", "not": "Yüzde bildirmek" },
+  { "en": "First, sign up. Then, log in with your password.", "tr": "Önce kaydol. Sonra şifrenle giriş yap.", "not": "Adım adım" },
+  { "en": "You should never share your password with anyone.", "tr": "Şifreni asla kimseyle paylaşmamalısın.", "not": "should never" },
+  { "en": "Don't download files from unknown websites.", "tr": "Bilinmeyen sitelerden dosya indirme.", "not": "Olumsuz emir" },
+  { "en": "Click on the link and upload your photo.", "tr": "Bağlantıya tıkla ve fotoğrafını yükle.", "not": "Bilgisayar eylemleri" },
+  { "en": "The internet is useful for communication.", "tr": "İnternet iletişim için faydalıdır.", "not": "useful for" },
+  { "en": "Spending too much time online can be an addiction.", "tr": "Çevrim içi çok fazla zaman geçirmek bir bağımlılık olabilir.", "not": "Uyarı" }
+ ],
+ "diyaloglar": [
+  {
+   "baslik": "Yeni hesap",
+   "satirlar": [
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "Emir, how do I open an account on this website?", "tr": "Emir, bu sitede nasıl hesap açarım?" },
+    { "kim": "Emir", "cinsiyet": "e", "en": "First, click on 'Sign up'. Then, write your e-mail address and choose a password.", "tr": "Önce 'Kaydol'a tıkla. Sonra e-posta adresini yaz ve bir şifre seç." },
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "OK. Should I use my birthday as a password?", "tr": "Tamam. Şifre olarak doğum günümü kullanayım mı?" },
+    { "kim": "Emir", "cinsiyet": "e", "en": "No, you shouldn't. Use letters, numbers and symbols. And never share it!", "tr": "Hayır, kullanmamalısın. Harf, rakam ve sembol kullan. Ve asla paylaşma!" }
+   ]
+  },
+  {
+   "baslik": "İnternet alışkanlıkları",
+   "satirlar": [
+    { "kim": "Öğretmen", "cinsiyet": "k", "en": "How often do you use the internet, Kerem?", "tr": "İnterneti ne sıklıkla kullanıyorsun, Kerem?" },
+    { "kim": "Kerem", "cinsiyet": "e", "en": "Every day. I usually watch videos and play online games.", "tr": "Her gün. Genelde video izliyorum ve çevrim içi oyun oynuyorum." },
+    { "kim": "Öğretmen", "cinsiyet": "k", "en": "Do you use it for your lessons too?", "tr": "Dersler için de kullanıyor musun?" },
+    { "kim": "Kerem", "cinsiyet": "e", "en": "Sometimes. I use search engines to do research for my projects.", "tr": "Bazen. Projelerim için arama motorlarıyla araştırma yapıyorum." }
+   ]
+  },
+  {
+   "baslik": "Fotoğraf paylaşmak",
+   "satirlar": [
+    { "kim": "Mert", "cinsiyet": "e", "en": "Look! I uploaded our class photo. It has fifty comments!", "tr": "Bak! Sınıf fotoğrafımızı yükledim. Elli yorum almış!" },
+    { "kim": "Ayşe", "cinsiyet": "k", "en": "Wow! But did you ask everyone before you posted it?", "tr": "Vay! Ama paylaşmadan önce herkese sordun mu?" },
+    { "kim": "Mert", "cinsiyet": "e", "en": "Oh, no, I didn't. You're right. I'll ask them now.", "tr": "Ah, hayır, sormadım. Haklısın. Şimdi soracağım." },
+    { "kim": "Ayşe", "cinsiyet": "k", "en": "Good idea. If someone doesn't want it, you can delete it.", "tr": "İyi fikir. Biri istemezse silebilirsin." }
+   ]
+  }
+ ],
+ "test": [
+  { "soru": "You should never share your ______ with strangers.", "secenekler": ["password", "browser", "screen", "habit"], "dogru": 0, "aciklama": "Şifre kimseyle paylaşılmaz." },
+  { "soru": "First, ______ to the website. Then, log in with your username.", "secenekler": ["delete", "sign up", "ignore", "hang up"], "dogru": 1, "aciklama": "Siteye önce kaydolunur (sign up), sonra giriş yapılır." },
+  { "soru": "Which one is a safety tip for the internet?", "secenekler": ["Download every file you see.", "Don't open e-mails from people you don't know.", "Share your address online.", "Use the same password everywhere."], "dogru": 1, "aciklama": "Tanımadığın kişilerin e-postalarını açmamak güvenli bir davranıştır." },
+  { "soru": "I use a ______ like Google to find information.", "secenekler": ["search engine", "vlogger", "subscriber", "comment"], "dogru": 0, "aciklama": "Bilgi aramak için arama motoru kullanılır." },
+  { "soru": "A: ______ do you check your e-mails?\nB: Twice a day.", "secenekler": ["How much", "How often", "How long", "How many"], "dogru": 1, "aciklama": "Cevap bir sıklık (günde iki kez), soru How often." },
+  { "soru": "Look at the survey: \"Watching videos 45%, Doing homework 30%, Online games 25%\".\nWhich is true?", "secenekler": ["Most students play online games.", "Doing homework is the most popular activity.", "Watching videos is the most popular activity.", "Nobody does homework online."], "dogru": 2, "aciklama": "En yüksek oran %45 ile video izleme." },
+  { "soru": "This video is very popular. It has two million ______.", "secenekler": ["passwords", "subscribers", "browsers", "attachments"], "dogru": 1, "aciklama": "Bir kanalın aboneleri: subscribers." },
+  { "soru": "Can: I can't stop playing online games. I play for eight hours a day.\nDefne: It sounds like an ______.", "secenekler": ["account", "addiction", "attachment", "access"], "dogru": 1, "aciklama": "Günde sekiz saat oyun = bağımlılık (addiction)." },
+  { "soru": "Read the text.\n\"Elif uses the internet every day. She does research for her lessons and sends e-mails to her cousin in Germany. She never shares personal information online.\"\nWhat does Elif NOT do?", "secenekler": ["She does research.", "She sends e-mails.", "She shares personal information.", "She uses the internet every day."], "dogru": 2, "aciklama": "\"She never shares personal information online.\"" },
+  { "soru": "Please ______ the photo to the e-mail before you send it.", "secenekler": ["attach", "ignore", "browse", "evolve"], "dogru": 0, "aciklama": "E-postaya dosya eklemek: attach." }
+ ]
+}

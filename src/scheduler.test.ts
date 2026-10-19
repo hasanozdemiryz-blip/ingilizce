@@ -181,14 +181,14 @@ describe('merdiven', () => {
   });
 
   it('son basamagin ustune cikmaz', () => {
-    let p = cikar(6);
-    expect(p.step).toBe(6);
+    let p = cikar(7);
+    expect(p.step).toBe(7);
     p = reviewCard(p, true, false, day(40)).progress;
-    expect(p.step).toBe(6);
+    expect(p.step).toBe(7);
   });
 
-  it('bastan sona tirmanis alti basamak surer', () => {
-    expect(cikar(6).fsrs.reps).toBe(5);
+  it('bastan sona tirmanis yedi basamak surer', () => {
+    expect(cikar(7).fsrs.reps).toBe(6);
   });
 });
 

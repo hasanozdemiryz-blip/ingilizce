@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>__BASLIK__</title>
 <meta name="description" content="__ACIKLAMA__">
+__ROBOTS__
 <link rel="canonical" href="__KANONIK__">
 <meta name="theme-color" content="#16233a">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -25,15 +26,16 @@ __HREFLANG__
 <link rel="stylesheet" href="/varliklar/site.css?v=__SURUM__">
 __JSONLD__
 </head>
-<body>
+<body data-bolum="__BOLUM__">
 
+__BOLUM_SERIDI__
 <header>
   <div class="kap">
-    <a class="marka" href="__K_ANA__" aria-label="__K_ANA_ARIA__">
+    <a class="marka" href="__MARKA_YOL__" aria-label="__K_ANA_ARIA__">
       <img src="/varliklar/logo-koyu.svg" alt="" width="44" height="44">
       <span>
         <span class="ad">HAFIZADA</span>
-        <span class="alt">İngilizce</span>
+        <span class="alt">__MARKA_ALT__</span>
       </span>
     </a>
     <nav class="baglar" aria-label="__K_ANA_MENU__">
@@ -42,7 +44,7 @@ __MENU__
     <div class="ust-sag">
 __DIL_SECICI__
       <a class="ust-giris" href="/ingilizce/?giris=1" data-giris>__K_GIRIS__</a>
-      <span class="ust-cta"><a class="btn btn-sari" href="/ingilizce/?basla=1" data-basla>__K_BASLA__</a></span>
+      <span class="ust-cta"><a class="btn btn-sari" href="__BASLA_YOL__" data-basla>__K_BASLA__</a></span>
       <button class="menu-dugme" type="button" aria-expanded="false" aria-controls="mobil-menu">__K_MENU__</button>
     </div>
   </div>
@@ -60,11 +62,11 @@ __ICERIK__
 <footer>
   <div class="kap alt-izgara">
     <div class="alt-marka">
-      <a class="marka" href="__K_ANA__">
+      <a class="marka" href="__MARKA_YOL__">
         <img src="/varliklar/logo-koyu.svg" alt="" width="30" height="30">
         <span>
           <span class="ad">HAFIZADA</span>
-          <span class="alt">İngilizce</span>
+          <span class="alt">__MARKA_ALT__</span>
         </span>
       </a>
       <p>__K_ALT_TANIM__</p>
@@ -75,7 +77,7 @@ __ICERIK__
     </div>
     <nav aria-label="__K_UYGULAMA__">
       <h3>__K_UYGULAMA__</h3>
-      <a href="/ingilizce/?basla=1" data-basla>__K_BASLA__</a>
+      <a href="__BASLA_YOL__" data-basla>__K_BASLA__</a>
       <a href="/ingilizce/?giris=1" data-giris>__K_GIRIS__</a>
       <a href="__K_ANA__#yontem">__K_NASIL__</a>
       <a href="__K_ANA__#neden">__K_NEDEN__</a>
@@ -145,7 +147,7 @@ __OGREN_MENU__
     var ad = String(m.ad || m.full_name || m.name || '').split(' ')[0];
     document.querySelectorAll('[data-giris]').forEach(function (a) {
       a.href = '/ingilizce/';
-      var don = en ? 'Back to the app' : 'Uygulamaya dön';
+      var don = en ? 'Back to lessons' : 'Derslerime dön';
       a.textContent = ad ? don + ' · ' + ad : don;
     });
     document.querySelectorAll('[data-basla]').forEach(function (a) {

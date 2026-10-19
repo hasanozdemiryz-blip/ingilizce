@@ -1,7 +1,8 @@
 import { useMemo, useState } from 'react';
 import { olay } from '../analitik';
 import { CardVisual } from '../components/CardVisual';
-import { Button, Card, HookChip, Ikon, Screen } from '../components/ui';
+import { Button, Card, Ikon, Screen } from '../components/ui';
+import { CagrisimSatiri } from '../components/Cagrisim';
 import { CARDS, LIMIT_CHOICES, LIMIT_DEFAULT, SHOWCASE_CARD } from '../content';
 import { setState } from '../db';
 import { secenekler } from '../exercise';
@@ -75,7 +76,7 @@ export function Welcome({
           <div className="rise text-center">
             <h1 className="word text-3xl font-extrabold leading-tight">{t('Ezberleme. Bağla.')}</h1>
             <p className="text-ink-soft mt-2 leading-relaxed max-w-[30ch] mx-auto">
-              {t('Her İngilizce kelimeyi benzer sesli bir Türkçe kelimeye bağlayacaksın.')}
+              {t('Her İngilizce kelimeyi sesi ya da yazılışı benzeyen bir Türkçe kelimeye bağlayacaksın.')}
             </p>
           </div>
 
@@ -84,9 +85,7 @@ export function Welcome({
             <div className="flex flex-col items-center gap-3 pt-5">
               <p className="word text-[2.5rem] leading-none font-extrabold">{card.en}</p>
               <p className="word text-xl leading-none font-semibold text-ink-soft">{card.tr}</p>
-              <HookChip big>
-                {card.en} ≈ {card.hook}
-              </HookChip>
+              <CagrisimSatiri card={card} big />
               <p className="text-center text-ink-soft leading-relaxed max-w-[30ch]">
                 “{card.sentence}”
               </p>
@@ -149,12 +148,10 @@ export function Welcome({
               <p className="text-ink-soft mt-3 leading-relaxed max-w-[28ch] mx-auto">
                 {dogru
                   ? t('Yöntem bu kadar.')
-                  : t('Kanca birkaç tekrarda oturur. Acelesi yok.')}
+                  : t('Çağrışım birkaç tekrarda oturur. Acelesi yok.')}
               </p>
               <div className="mt-6 inline-flex">
-                <HookChip big>
-                  {card.en} ≈ {card.hook}
-                </HookChip>
+                <CagrisimSatiri card={card} big />
               </div>
             </div>
           )}

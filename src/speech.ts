@@ -7,10 +7,9 @@
  * Daha erken verilirse kancayla kavga eder, daha gec verilirse yanlis
  * telaffuz cimentolasir. Devir teslim noktasi tam orasi (bkz. CardFace).
  *
- * Tarayicinin kendi ses sentezini kullaniyoruz: ses dosyasi uretmek,
- * barindirmak ve indirmek yok — "backend yok" sozu bozulmuyor. Sentez sesi
- * kayit kalitesinde degil; yeterli olmazsa ayni arayuz onceden uretilmis
- * dosyalara baglanabilir, cagri noktalari degismez.
+ * 20 Ekim'den beri once ONCEDEN URETILMIS DOSYA calar (asagida
+ * `sesDosyalariKaydet`); yoksa tarayicinin / cihazin ses sentezi. Cagri
+ * noktalari degismedi: hepsi hala `seslendir(metin)`.
  */
 
 import { useSyncExternalStore } from 'react';
@@ -163,7 +162,8 @@ export async function telaffuzHazirla(): Promise<void> {
   }
 }
 
-export const telaffuzVar = () => motor !== 'yok';
+/** Dosya da cihaz sesi de olmayabilir; ikisinden biri varsa telaffuz var. */
+export const telaffuzVar = () => motor !== 'yok' || (DOSYALAR.size > 0 && typeof Audio !== 'undefined');
 
 /**
  * Bilesenler bunu kullanir, `telaffuzVar`i degil.
@@ -190,14 +190,58 @@ const HIZ = 0.9;
  * motor sesi zaten dogru tercih. Test edilemeyen bir ses indeksi gondermek
  * iyilestirmez, bozabilir.
  */
+/*
+  ONCEDEN URETILMIS SES DOSYALARI (20 Ekim, KARARLAR 9). Kelimeler tek
+  kadin sesiyle (public/ses/k/<kart-id>.mp3), LGS diyaloglari kadin + erkek
+  (public/ses/d/). Metin → dosya eslemesini icerik modulleri kaydediyor
+  (content.ts kelimeler, lgs.ts diyaloglar); burasi icerigi bilmiyor.
+  Dosya yoksa ya da calamazsa cihaz sesi yedek.
+
+  YAVAS: ayni metin 2,5 sn icinde ikinci kez istenirse 0,75x. Dugme ayni
+  kaliyor — "bir daha bas, yavas soylesin" ogrenen icin dogal hareket.
+*/
+const DOSYALAR = new Map<string, string>();
+const anahtar = (metin: string) => metin.trim().toLowerCase();
+
+export function sesDosyalariKaydet(eslesmeler: Iterable<[string, string]>) {
+  for (const [metin, url] of eslesmeler) DOSYALAR.set(anahtar(metin), url);
+  dinleyiciler.forEach((f) => f());
+}
+
+export const sesDosyasi = (metin: string) => DOSYALAR.get(anahtar(metin)) ?? null;
+
+let calan: HTMLAudioElement | null = null;
+let son: { metin: string; an: number } = { metin: '', an: 0 };
+export const YAVAS_HIZ = 0.75;
+const YAVAS_ARALIK_MS = 2500;
+
 export function seslendir(kelime: string) {
+  const simdi = Date.now();
+  const yavas = son.metin === kelime && simdi - son.an < YAVAS_ARALIK_MS;
+  // Ucuncu basis yine normal hizda: yavas bir kez, sonra donguye girmesin
+  son = yavas ? { metin: '', an: 0 } : { metin: kelime, an: simdi };
+  calan?.pause();
+  const url = sesDosyasi(kelime);
+  if (url && typeof Audio !== 'undefined') {
+    if (motor === 'web') sentez()?.cancel();
+    const a = new Audio(url);
+    a.playbackRate = yavas ? YAVAS_HIZ : 1;
+    calan = a;
+    a.play().catch(() => sentezle(kelime, yavas));
+    return;
+  }
+  sentezle(kelime, yavas);
+}
+
+function sentezle(kelime: string, yavas = false) {
+  const hiz = yavas ? HIZ * YAVAS_HIZ : HIZ;
   if (motor === 'web') {
     const s = sentez();
     if (!s) return;
     s.cancel();
     const u = new SpeechSynthesisUtterance(kelime);
     u.lang = AKSAN;
-    u.rate = HIZ;
+    u.rate = hiz;
     const ses = enIyiSes();
     if (ses) u.voice = ses;
     s.speak(u);
@@ -205,11 +249,12 @@ export function seslendir(kelime: string) {
   }
   if (motor === 'native' && native) {
     // queueStrategy varsayilani Flush: yeni istek oncekini keser.
-    void native.speak({ text: kelime, lang: AKSAN, rate: HIZ }).catch(() => {});
+    void native.speak({ text: kelime, lang: AKSAN, rate: hiz }).catch(() => {});
   }
 }
 
 export function seslendirmeyiDurdur() {
+  calan?.pause();
   if (motor === 'web') sentez()?.cancel();
   else if (motor === 'native') void native?.stop().catch(() => {});
 }

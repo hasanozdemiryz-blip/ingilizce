@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { harfKarolari } from '../exercise';
-import { Card as CardShell, HookChip, Yonerge } from './ui';
+import { Card as CardShell, Yonerge } from './ui';
+import { CagrisimIpucu } from './Cagrisim';
 import type { Card } from '../types';
 import { t } from '../dil';
 
@@ -83,7 +84,7 @@ export function Scramble({
           <p className="text-[2.25rem] leading-none font-extrabold text-center">{card.tr}</p>
           {hookRevealed && (
             <span className="pop">
-              <HookChip>{card.hook}</HookChip>
+              <CagrisimIpucu card={card} />
             </span>
           )}
         </div>

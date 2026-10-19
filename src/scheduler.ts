@@ -220,11 +220,17 @@ export function remainingToday(all: Progress[], limit: number, now = new Date())
 const kapali = (all: Progress[]) =>
   new Set(all.filter((p) => p.introduced || p.bilinen).map((p) => p.cardId));
 
-export function nextBatch(all: Progress[], limit: number, now = new Date()): Card[] {
+export function nextBatch(
+  all: Progress[],
+  limit: number,
+  now = new Date(),
+  /** Yeni kelimenin sirasi: seviyeye (Genel) ya da uniteye (LGS) gore — bkz. App */
+  deste: readonly Card[] = CARDS,
+): Card[] {
   const kalan = remainingToday(all, limit, now);
   if (kalan === 0) return [];
   const disarida = kapali(all);
-  return CARDS.filter((c) => !disarida.has(c.id)).slice(0, Math.min(BATCH, kalan));
+  return deste.filter((c) => !disarida.has(c.id)).slice(0, Math.min(BATCH, kalan));
 }
 
 /**
@@ -234,10 +240,15 @@ export function nextBatch(all: Progress[], limit: number, now = new Date()): Car
  * gunluk hedef "5 kelime OGRENDIM" anlamini koruyor. Parti disinda kalan
  * ilk kartlardan olusuyor.
  */
-export function spareCards(all: Progress[], parti: readonly Card[], sayi = BATCH): Card[] {
+export function spareCards(
+  all: Progress[],
+  parti: readonly Card[],
+  sayi = BATCH,
+  deste: readonly Card[] = CARDS,
+): Card[] {
   const disarida = kapali(all);
   const partidekiler = new Set(parti.map((c) => c.id));
-  return CARDS.filter((c) => !disarida.has(c.id) && !partidekiler.has(c.id)).slice(0, sayi);
+  return deste.filter((c) => !disarida.has(c.id) && !partidekiler.has(c.id)).slice(0, sayi);
 }
 
 /**

@@ -1,0 +1,36 @@
+# 8. ünite Chores — en|tr|tur|kanca|yol|cumle|sahne|ton|genel
+arrive on time|zamanında varmak|I|||Zil çalarken tam zamanında sınıfa vardı|A girl with a backpack steps through the classroom door just as the school bell rings.|yellow|E
+clean up|temizlemek|I|||Parktaki çöpleri temizledik|Children in gloves pick up litter in a park and put it into a bag.|green|E
+do the laundry|çamaşır yıkamak|I|||Çamaşırları makineye koyup yıkadı|A boy puts colourful clothes into a washing machine.|sky-blue|E
+do chores|ev işi yapmak|I|||Hafta sonu hep birlikte ev işi yaptık|A family does chores together: one vacuums, one dusts, one waters plants.|mint|E
+dust the shelves|rafların tozunu almak|I|||Rafların tozunu tüy süpürgeyle aldı|A girl dusts a bookshelf with a fluffy feather duster.|cream|E
+duty|görev|K|düdük|ses|Görevli düdüğü öttürdü|A crossing guard in a bright vest blows a whistle and holds up a stop paddle with no writing while children cross the road.|yellow|E
+feature|özellik|K|fıçı|ses|Fıçının en güzel özelliği musluğuydu|A wooden barrel with a shiny brass tap; a boy fills a cup from the tap, delighted.|cream|E
+festival|festival|T|festival|ses|Festivalde balonlar ve müzik vardı|A colourful festival with balloons, bunting and a small stage.|yellow|E
+household|hane|G|||Hanede dört kişi yaşıyor|A cosy house drawn in cross-section showing a family of four in different rooms.|peach|E
+iron|ütülemek|K|ayran|ses|Ütünün üstüne ayran döküldü|A boy ironing a shirt gasps as a glass of white ayran tips over and splashes onto the iron.|mint|E
+janitor|hademe|G|||Hademe koridoru paspasladı|A friendly school janitor mops a shiny school hallway.|cream|E
+keep promises|sözünü tutmak|I|||Babası sözünü tuttu ve onu hayvanat bahçesine götürdü|A dad and his happy son stand in front of a zoo gate, the son pointing at a giraffe.|green|E
+keep quiet|sessiz olmak|I|||Kütüphaneci sessiz olun dedi|A librarian holds a finger to her lips in a quiet library.|cream|E
+laundry|çamaşır|G|||Çamaşır sepeti doldu|A basket overflowing with colourful laundry.|sky-blue|E
+load the dishwasher|bulaşık makinesini doldurmak|I|||Tabakları bulaşık makinesine yerleştirdi|A girl loads plates and cups into an open dishwasher.|mint|E
+make the bed|yatağı toplamak|I|||Sabah yatağını topladı|A boy smooths a blanket and fluffs a pillow on his bed.|lavender|E
+moral|ahlaki|G|||Fazla verilen parayı geri vermek ahlaki bir davranış|A girl hands extra change back to a smiling shopkeeper at a counter.|cream|E
+neat|düzenli|G|||Masası çok düzenli|A tidy desk with neatly stacked books, pencils in a cup and a small plant.|mint|E
+obey the rules|kurallara uymak|I|||Kırmızı ışıkta bekleyerek kurallara uydular|Children wait at a crossing while the pedestrian light shows a red figure.|green|E
+obligation|zorunluluk|G|||Arabada emniyet kemeri takmak zorunluluk|A child in the back seat of a car buckles a seatbelt.|sky-blue|E
+pay the bill|faturayı ödemek|I|||Kasada faturayı ödedi|A woman pays at a shop till with a card while the cashier smiles.|cream|E
+periodically|periyodik olarak|T|periyodik|ses|Araba periyodik bakıma girdi|A mechanic checks a small car on a lift in a clean garage.|cream|E
+prepare|hazırlamak|G|||Annesiyle kahvaltı hazırladı|A mother and daughter prepare breakfast together at a kitchen counter.|peach|E
+respect|saygı|G|||Otobüste yaşlı kadına yer verdi|A boy stands up and offers his bus seat to an elderly woman.|peach|E
+responsibility|sorumluluk|G|||Balığı beslemek onun sorumluluğu|A girl sprinkles food into a goldfish bowl.|sky-blue|E
+return books|kitapları iade etmek|I|||Kitapları kütüphaneye iade etti|A boy hands a stack of books to a librarian at the return desk.|cream|E
+set the table|sofrayı kurmak|I|||Akşam yemeği için sofrayı kurdu|A girl places plates, forks and glasses neatly on a dinner table.|peach|E
+slipper|terlik|G|||Evde yumuşak terliklerini giydi|A pair of fluffy bunny slippers next to a bed.|pink|E
+sweep|süpürmek|T|süpür|ses+yazılış|Bahçedeki yaprakları süpürdü|A boy sweeps autumn leaves into a pile with a broom.|yellow|E
+take out the garbage|çöpü çıkarmak|I|||Akşam çöpü dışarı çıkardı|A boy carries a garbage bag out to a bin by the gate.|green|E
+tidy up|toparlamak|I|||Oyuncaklarını toparladı|A girl puts her toys back into a toy box in a tidy room.|lavender|E
+to-do list|yapılacaklar listesi|I|||Yapılacaklar listesindeki işleri işaretledi|A boy ticks boxes on a notepad list that has no writing, only checkboxes.|yellow|E
+tradition|gelenek|G|||Büyükannesi ona geleneksel börek açmayı öğretti|A grandmother teaches her granddaughter to roll thin pastry dough with a long rolling pin.|peach|E
+wash the dishes|bulaşık yıkamak|I|||Akşam bulaşıkları yıkadı|A boy washes plates in a sink full of bubbles.|sky-blue|E
+water the plants|bitkileri sulamak|I|||Balkondaki bitkileri suladı|A girl waters potted plants on a balcony with a watering can.|green|E

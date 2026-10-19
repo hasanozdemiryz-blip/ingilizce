@@ -8,11 +8,29 @@ import type { IkonAd } from './icons';
 import type { Card, Step } from './types';
 import { t } from './dil';
 
-export type Egzersiz = 'kart' | 'eslestirme' | 'secmeli' | 'ters-secmeli' | 'harf' | 'yazma' | 'dinleme';
+export type Egzersiz =
+  | 'kart'
+  | 'eslestirme'
+  | 'secmeli'
+  | 'ters-secmeli'
+  | 'harf'
+  | 'yazma'
+  | 'dinleme'
+  | 'cumle';
 
-export const ADIMLAR: Step[] = [1, 2, 3, 4, 5, 6];
+export const ADIMLAR: Step[] = [1, 2, 3, 4, 5, 6, 7];
 export const ILK_ADIM: Step = 1;
-export const SON_ADIM: Step = 6;
+export const SON_ADIM: Step = 7;
+
+/**
+ * 7. basamak (20 Ekim): kelime CUMLE ICINDE. Ornek cumlesi olmayan kartta
+ * bu basamak yok — merdiveni 6'da biter (bkz. types.ts `ornek`).
+ */
+export const adimVarMi = (card: Pick<Card, 'ornek'>, step: Step) => step !== 7 || Boolean(card.ornek);
+
+/** Kartin sorulabilecegi basamak: 7 istenip cumlesi yoksa 6. */
+export const sorulacakAdim = (card: Pick<Card, 'ornek'>, step: Step): Step =>
+  adimVarMi(card, step) ? step : 6;
 
 type AdimBilgisi = {
   egzersiz: Egzersiz;
@@ -45,6 +63,7 @@ export const ADIM: Record<Step, AdimBilgisi> = {
   4: { egzersiz: 'harf',         ad: t('Harf dizme'),     ikon: 'harf',       alt: t('harfleri sıraya diz'),  kancaGorunur: false, kartGorunur: false, cevapDili: 'en' },
   5: { egzersiz: 'yazma',        ad: t('Yazma'),          ikon: 'yazma',      alt: t('baştan yaz'),           kancaGorunur: false, kartGorunur: false, cevapDili: 'en' },
   6: { egzersiz: 'dinleme',      ad: t('Dinleme'),        ikon: 'ses',        alt: t('yazı yok, sadece ses'), kancaGorunur: false, kartGorunur: false, cevapDili: 'en' },
+  7: { egzersiz: 'cumle',        ad: t('Cümlede'),        ikon: 'secmeli',    alt: t('cümledeki boşluğu doldur'), kancaGorunur: false, kartGorunur: false, cevapDili: 'en' },
 };
 
 /**
@@ -85,7 +104,7 @@ export const BOLGELER: Bolge[] = [
     renk: 'spark',
   },
   {
-    adimlar: [5, 6],
+    adimlar: [5, 6, 7],
     ad: t('Ürettin'),
     ikon: 'yazma',
     renk: 'grow',

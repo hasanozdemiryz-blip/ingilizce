@@ -7,7 +7,8 @@ Projenin hafızası `NOTLAR.md`.
 kısa bir şey dediğinde:**
 
 1. `git pull` ile son hali al (site deposu `../hasanozdemiryz-blip.github.io` de varsa onu da).
-   **19 Ekim 2026'dan beri aktif çalışma dalı `uc-bolum`** (plan, kararlar ve son durum orada): `git fetch && git checkout uc-bolum && git pull`.
+   **20 Ekim 2026'da `uc-bolum` `main`'e birleşti; çalışma dalı yine `main`.**
+   NOTLAR'ın "Sırada" bölümündeki **KARARLAR** tek kaynaktır; öneriden önce oku, çelişme.
 2. `NOTLAR.md`'nin **Sırada** bölümünü oku; en üstteki başlık sıradaki iştir
    (ör. "SIRADAKİ İŞ").
 3. Kelime, kanca ya da cümle işi varsa `tools/kanca-kurallari.md`'yi; görsel işi varsa

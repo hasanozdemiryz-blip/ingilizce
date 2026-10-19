@@ -1,0 +1,36 @@
+# LGS ornek cumleleri: en|Ingilizce ornek|Turkce cevirisi
+arrive on time|Please arrive on time for the exam.|Lütfen sınava zamanında gel.
+clean up|Let's clean up the classroom after the party.|Partiden sonra sınıfı temizleyelim.
+do the laundry|My father and I do the laundry on Saturdays.|Babamla cumartesileri çamaşır yıkarız.
+do chores|We all do chores at home.|Evde hepimiz ev işi yaparız.
+dust the shelves|Can you dust the shelves in the living room?|Oturma odasındaki rafların tozunu alır mısın?
+duty|It is my duty to feed the cat.|Kediyi beslemek benim görevim.
+feature|This phone has a great camera feature.|Bu telefonun harika bir kamera özelliği var.
+festival|We went to a music festival last summer.|Geçen yaz bir müzik festivaline gittik.
+household|Everyone in the household helps with the cooking.|Hanedeki herkes yemeğe yardım eder.
+iron|I iron my school shirts on Sunday evening.|Okul gömleklerimi pazar akşamı ütülerim.
+janitor|The janitor fixed the broken door.|Hademe kırık kapıyı tamir etti.
+keep promises|Good friends keep promises.|İyi arkadaşlar sözlerini tutar.
+keep quiet|Please keep quiet in the library.|Kütüphanede lütfen sessiz ol.
+laundry|There is a lot of laundry in the basket.|Sepette bir sürü çamaşır var.
+load the dishwasher|It's your turn to load the dishwasher.|Bulaşık makinesini doldurma sırası sende.
+make the bed|I make the bed every morning.|Her sabah yatağımı toplarım.
+moral|Helping others is a moral duty.|Başkalarına yardım etmek ahlaki bir görevdir.
+neat|Her handwriting is very neat.|El yazısı çok düzenli.
+obey the rules|Players must obey the rules of the game.|Oyuncular oyunun kurallarına uymalı.
+obligation|Wearing a seatbelt is an obligation.|Emniyet kemeri takmak bir zorunluluktur.
+pay the bill|Dad will pay the bill at the restaurant.|Restoranda faturayı babam ödeyecek.
+periodically|We check the smoke alarm periodically.|Duman alarmını periyodik olarak kontrol ederiz.
+prepare|Let's prepare dinner together.|Akşam yemeğini birlikte hazırlayalım.
+respect|We should respect older people.|Yaşlılara saygı göstermeliyiz.
+responsibility|Taking care of a pet is a big responsibility.|Bir evcil hayvana bakmak büyük bir sorumluluktur.
+return books|Don't forget to return books to the library.|Kitapları kütüphaneye iade etmeyi unutma.
+set the table|Can you set the table for dinner?|Akşam yemeği için sofrayı kurar mısın?
+slipper|I can only find one slipper.|Sadece bir terliğimi bulabiliyorum.
+sweep|Please sweep the kitchen floor.|Lütfen mutfak yerini süpür.
+take out the garbage|I take out the garbage every evening.|Her akşam çöpü çıkarırım.
+tidy up|Tidy up your room before your friends come.|Arkadaşların gelmeden odanı toparla.
+to-do list|I write a to-do list every Monday.|Her pazartesi bir yapılacaklar listesi yazarım.
+tradition|Eating sweets at Bayram is a tradition.|Bayramda tatlı yemek bir gelenektir.
+wash the dishes|After dinner, I wash the dishes.|Akşam yemeğinden sonra bulaşıkları yıkarım.
+water the plants|Don't forget to water the plants.|Bitkileri sulamayı unutma.

@@ -40,7 +40,7 @@ describe('merdivenin uc bolgesi', () => {
     const bolgeler = bolgelereBol(gorevler);
 
     expect(bolgeler).toHaveLength(3);
-    expect(bolgeler.map((b) => b.gorevler.map((g) => g.step))).toEqual([[1, 2], [3, 4], [5, 6]]);
+    expect(bolgeler.map((b) => b.gorevler.map((g) => g.step))).toEqual([[1, 2], [3, 4], [5, 6, 7]]);
   });
 
   /*
@@ -55,8 +55,8 @@ describe('merdivenin uc bolgesi', () => {
 });
 
 describe('merdiven tanimlari', () => {
-  it('alti basamak, hepsi tanimli', () => {
-    expect(ADIMLAR).toEqual([1, 2, 3, 4, 5, 6]);
+  it('yedi basamak, hepsi tanimli', () => {
+    expect(ADIMLAR).toEqual([1, 2, 3, 4, 5, 6, 7]);
     expect(ADIMLAR.every((n) => ADIM[n]?.ad)).toBe(true);
   });
 
@@ -67,7 +67,7 @@ describe('merdiven tanimlari', () => {
 
   // Olcum, kancanin ekranda OLMADIGI basamaklarda anlamli.
   it('olcum 3. basamakta baslar', () => {
-    expect(ADIMLAR.filter(olculebilir)).toEqual([3, 4, 5, 6]);
+    expect(ADIMLAR.filter(olculebilir)).toEqual([3, 4, 5, 6, 7]);
   });
 
   it('merdiven tanimadan uretime gider', () => {
@@ -79,7 +79,8 @@ describe('merdiven tanimlari', () => {
   it('clampStep araligin disina cikmaz', () => {
     expect(clampStep(0)).toBe(1);
     expect(clampStep(-5)).toBe(1);
-    expect(clampStep(7)).toBe(6);
+    expect(clampStep(8)).toBe(7);
+    expect(clampStep(7)).toBe(7);
     expect(clampStep(3)).toBe(3);
   });
 });

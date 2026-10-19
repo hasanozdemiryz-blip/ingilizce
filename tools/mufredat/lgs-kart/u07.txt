@@ -1,0 +1,39 @@
+# 7. ünite Tourism — en|tr|tur|kanca|yol|cumle|sahne|ton|genel
+accommodation|konaklama|K|komodin|ses+yazılış|Konakladığımız otelde anahtarı komodinin üstüne koydum|A cosy hotel room with a bed, a suitcase and a big wooden nightstand in front, a room key placed on top of it.|cream|E
+all-inclusive|her şey dahil|I|||Her şey dahil otelde açık büfe vardı|A smiling family with plates stands at a big hotel buffet full of colourful food, wearing wristbands.|peach|E
+ancient|antik|K|enişte|ses|Enişte antik vazoyu kırdı|A surprised uncle in a museum accidentally knocks over an ancient Greek vase that cracks on the floor.|cream|E
+architecture|mimari|G|||Mimar binanın maketini gösterdi|An architect points proudly at a small white model of a modern building on a table.|sky-blue|E
+attraction|turistik yer|T|atraksiyon|ses|Dönme dolap şehrin en büyük atraksiyonu|Tourists queue happily in front of a giant Ferris wheel by the sea.|sky-blue|E
+authentic|otantik|T|otantik|ses|Köyde otantik bir evde kaldık|A traditional village house with a wooden balcony, colourful handwoven rugs and flower pots.|peach|E
+bamboo bungalow|bambu bungalov|I|bambu|ses|Sahilde bambu bungalovda kaldık|A small bamboo bungalow with a straw roof stands on a sandy beach under palm trees.|sky-blue|E
+bed and breakfast|oda kahvaltı|I|||Oda kahvaltı pansiyonda sabah kahvaltısı geldi|A small guesthouse room with a tray of breakfast — tea, bread, cheese, olives — on the bed.|cream|E
+boutique hotel|butik otel|I|butik|ses|Küçük ve şirin bir butik otelde kaldık|A small charming hotel building with flower boxes on the windows and a blue door.|pink|E
+capital|başkent|G|||Başkentin haritasında yıldız var|A simple map of a country with a big star marking the capital city.|cream|E
+caravansary|kervansaray|T|kervansaray|ses|Kervansarayın önünde develer dinlendi|Camels rest in front of an old stone caravanserai with a big arched gate.|yellow|H
+ceremony|tören|T|seremoni|ses|Mezuniyet töreninde kepler havaya uçtu|Graduates in gowns throw their caps into the air at a graduation ceremony.|sky-blue|E
+countryside|kırsal|G|||Kırsalda tarlalar ve bir ahır var|Green fields, a red barn and a few sheep in the peaceful countryside.|green|E
+cultural|kültürel|T|kültür|ses|Kültürel festivalde halk oyunları izledik|Dancers in traditional costumes perform at a cultural festival while families watch.|peach|E
+culture|kültür|T|kültür|ses|Müzede eski kültürleri tanıdık|Children look at old pots and masks in glass cases at a culture museum.|cream|E
+delight|zevk|G|||Hediyesini açınca zevkten havalara uçtu|A girl jumps with delight while opening a present.|pink|E
+destination|varış yeri|T|destinasyon|ses|Uçak varış yerine, sahile indi|A small plane lands on a runway next to a sunny beach destination.|sky-blue|E
+fountain|çeşme|G|||Meydandaki çeşmeden su içtik|A boy drinks water from a stone public fountain in a town square.|sky-blue|E
+historic site|tarihi alan|I|||Tarihi alanda eski sütunları gezdik|Tourists walk among old marble columns at a historic site.|cream|E
+incredible|inanılmaz|K|kredi|yazılış|Kredi kartına inanılmaz bir borç geldi|A shocked man holds a very long paper receipt that unrolls to the floor next to a credit card.|lavender|E
+journey|yolculuk|G|||Uzun bir yolculuğa çıktık|A family car with suitcases tied on the roof drives along a winding road.|sky-blue|E
+landmark|simge yapı|G|||Kule şehrin simge yapısı|An old stone tower stands above the rooftops of a seaside city.|sky-blue|E
+monument|anıt|G|||Meydandaki anıtın önünde fotoğraf çektik|A family takes a photo in front of a tall stone monument in a city square.|cream|E
+mosque|cami|G|||Tarihi caminin kubbelerini gezdik|An old stone building with domes and two slender towers, seen from the front.|sky-blue|H
+preserve|korumak|G|||Müze eski vazoyu özenle korudu|A museum worker in gloves carefully cleans an old clay vase.|cream|E
+prophet|peygamber|G||||||H
+province|il|G|||Haritada her il farklı renkte|A simple country map divided into regions of different colours.|cream|E
+refresh|tazelemek|G|||Soğuk suyla yüzünü yıkayıp tazelendi|A girl splashes cold water on her face at a sink and looks refreshed.|sky-blue|E
+region|bölge|G|||Haritada dağlık bölge işaretli|A map with one mountainous area highlighted in green.|green|E
+resort|tatil köyü|T|resort|ses|Tatil köyünde havuz başında dinlendik|A beach resort with a blue pool, sun loungers and palm trees.|sky-blue|E
+rural|kırsal|G|||Kırsalda traktör tarlayı sürdü|A red tractor ploughs a field next to a small farmhouse.|green|E
+settlement|yerleşim yeri|G|||Tepedeki küçük yerleşim yeri|A small village of white houses sits on a green hillside.|green|E
+shrine|türbe|G||||||H
+souvenir|hediyelik eşya|T|suvenir|ses|Tatilden suvenir olarak magnet aldık|A souvenir shop shelf with fridge magnets, snow globes and keychains.|yellow|E
+square|meydan|G|||Meydanda güvercinler uçuştu|Pigeons fly around a wide city square with a fountain.|cream|E
+tomb|mezar|G||||||H
+trip|gezi|G|||Okul gezisinde otobüse bindik|Excited children wave from the windows of a yellow school-trip bus.|yellow|E
+urban|kentsel|G|||Kentsel alanda trafik ve binalar var|A busy city street with tall buildings, a bus and people walking.|sky-blue|E

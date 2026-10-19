@@ -1,0 +1,58 @@
+{
+ "unite": 6,
+ "ad": "Adventures",
+ "konu": "Macera sporlarını karşılaştırmak, tercih ve sebep bildirmek, deneyim sormak",
+ "kaliplar": [
+  { "en": "Rafting is more exciting than canoeing.", "tr": "Rafting kanoculuktan daha heyecanlıdır.", "not": "Karşılaştırma: more ... than" },
+  { "en": "Skydiving is the most dangerous sport for me.", "tr": "Benim için en tehlikeli spor paraşütle atlamaktır.", "not": "En üstünlük: the most" },
+  { "en": "Kayaking is safer than bungee jumping.", "tr": "Kano, bungee jumpingden daha güvenlidir.", "not": "Kısa sıfat: -er than" },
+  { "en": "I prefer caving to paragliding because I'm afraid of heights.", "tr": "Yükseklik korkum olduğu için mağaracılığı yamaç paraşütüne tercih ederim.", "not": "prefer + because" },
+  { "en": "Have you ever tried rafting?", "tr": "Hiç rafting denedin mi?", "not": "Deneyim sormak" },
+  { "en": "It's too risky for me.", "tr": "Benim için fazla riskli.", "not": "too + sıfat" },
+  { "en": "You must wear a helmet and a life vest.", "tr": "Kask ve can yeleği giymelisin.", "not": "Zorunluluk: must" },
+  { "en": "I'd like to try hang-gliding one day.", "tr": "Bir gün yamaç kanadı denemek isterim.", "not": "İstek" },
+  { "en": "It was an amazing experience!", "tr": "Muhteşem bir deneyimdi!", "not": "Deneyim anlatmak" },
+  { "en": "Adventurous people like taking risks.", "tr": "Maceracı insanlar risk almayı sever.", "not": "like + -ing" }
+ ],
+ "diyaloglar": [
+  {
+   "baslik": "Hafta sonu macerası",
+   "satirlar": [
+    { "kim": "Can", "cinsiyet": "e", "en": "Have you ever tried rafting, Elif?", "tr": "Hiç rafting denedin mi, Elif?" },
+    { "kim": "Elif", "cinsiyet": "k", "en": "Yes, I have. I tried it last summer in Rize. It was thrilling!", "tr": "Evet, denedim. Geçen yaz Rize'de denedim. Çok heyecanlıydı!" },
+    { "kim": "Can", "cinsiyet": "e", "en": "Wasn't it dangerous?", "tr": "Tehlikeli değil miydi?" },
+    { "kim": "Elif", "cinsiyet": "k", "en": "Not really. We had an instructor, and we wore helmets and life vests.", "tr": "Pek değil. Bir eğitmenimiz vardı, kask ve can yeleği giydik." }
+   ]
+  },
+  {
+   "baslik": "Hangisi daha iyi?",
+   "satirlar": [
+    { "kim": "Defne", "cinsiyet": "k", "en": "Which one do you prefer, paragliding or caving?", "tr": "Hangisini tercih edersin, yamaç paraşütü mü mağaracılık mı?" },
+    { "kim": "Kerem", "cinsiyet": "e", "en": "I prefer caving. I'm afraid of heights, so paragliding is too scary for me.", "tr": "Mağaracılığı tercih ederim. Yükseklik korkum var, bu yüzden yamaç paraşütü bana fazla korkutucu." },
+    { "kim": "Defne", "cinsiyet": "k", "en": "I think paragliding is more exciting than caving. You can see everything from the sky!", "tr": "Bence yamaç paraşütü mağaracılıktan daha heyecanlı. Gökyüzünden her şeyi görebilirsin!" },
+    { "kim": "Kerem", "cinsiyet": "e", "en": "Maybe, but caves are mysterious and fascinating.", "tr": "Belki, ama mağaralar gizemli ve büyüleyici." }
+   ]
+  },
+  {
+   "baslik": "Kayak kampı",
+   "satirlar": [
+    { "kim": "Eğitmen", "cinsiyet": "e", "en": "Welcome to the ski camp! First, you must wear your helmet and gloves.", "tr": "Kayak kampına hoş geldiniz! Önce kaskınızı ve eldivenlerinizi takmalısınız." },
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "Is this slope easy for beginners?", "tr": "Bu pist yeni başlayanlar için kolay mı?" },
+    { "kim": "Eğitmen", "cinsiyet": "e", "en": "Yes, it's the easiest one. Don't take risks, and follow me.", "tr": "Evet, en kolayı bu. Risk almayın ve beni takip edin." },
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "OK! I'm a bit nervous, but it's exciting.", "tr": "Tamam! Biraz gerginim ama heyecan verici." }
+   ]
+  }
+ ],
+ "test": [
+  { "soru": "Rafting is ______ than walking in the park.", "secenekler": ["exciting", "more exciting", "the most exciting", "most exciting"], "dogru": 1, "aciklama": "İki şey karşılaştırılırken uzun sıfat: more ... than." },
+  { "soru": "I think bungee jumping is ______ sport in the world.", "secenekler": ["riskier", "the riskiest", "risky than", "more risky"], "dogru": 1, "aciklama": "\"in the world\" en üstünlük ister: the riskiest." },
+  { "soru": "You must wear a ______ when you go kayaking.", "secenekler": ["life vest", "skyscraper", "steering", "demonstration"], "dogru": 0, "aciklama": "Su sporlarında can yeleği giyilir." },
+  { "soru": "A: Have you ever tried caving?\nB: ______ I'd like to try it one day.", "secenekler": ["Yes, it was great.", "No, I haven't.", "Yes, I have.", "I tried it last year."], "dogru": 1, "aciklama": "\"Bir gün denemek isterim\" dediği için hiç denememiştir." },
+  { "soru": "Kerem is afraid of heights, so he doesn't like ______.", "secenekler": ["paragliding", "canoeing", "caving", "skateboarding"], "dogru": 0, "aciklama": "Yükseklik korkusu olan biri yamaç paraşütünü sevmez." },
+  { "soru": "Defne loves trying new and dangerous activities. She is very ______.", "secenekler": ["disappointing", "adventurous", "boring", "individually"], "dogru": 1, "aciklama": "Yeni ve riskli şeyleri seven kişi maceracıdır." },
+  { "soru": "Which sentence gives a reason?", "secenekler": ["I prefer canoeing because it's relaxing.", "Have you ever tried rafting?", "Rafting is a water sport.", "Let's go caving."], "dogru": 0, "aciklama": "\"because\" bir sebep bildirir." },
+  { "soru": "Read the text.\n\"Last weekend, Emir went rock climbing with his instructor. At first he was nervous, but then he reached the top. He says it was the most challenging but the most amazing day of his life.\"\nHow did Emir feel at first?", "secenekler": ["bored", "nervous", "disappointed", "angry"], "dogru": 1, "aciklama": "\"At first he was nervous\"" },
+  { "soru": "Skateboarding is fun, but you should wear ______ to protect your hands.", "secenekler": ["wrist guards", "a dry suit", "a paddle", "a glove box"], "dogru": 0, "aciklama": "Bilekleri ve elleri korumak için bileklik takılır." },
+  { "soru": "The film was ______. Everybody laughed a lot.", "secenekler": ["amusing", "risky", "disappointing", "extreme"], "dogru": 0, "aciklama": "Herkesi güldüren film eğlencelidir: amusing." }
+ ]
+}

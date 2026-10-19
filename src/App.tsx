@@ -5,11 +5,20 @@ import { TabBar, type Tab } from './components/TabBar';
 import {
   AGIR_TEKRAR,
   AHEAD_BATCH,
+  BATCH,
   DAILY_REVIEW_CAP,
+  genelDestesi,
+  lgsDestesi,
   ogrenilenKancalar,
   setBittiMi,
   setteOlanlar,
+  uniteKartlari,
 } from './content';
+import { AKTIF_BOLUM, ISTENEN_UNITE } from './bolum';
+import { LgsPanel } from './components/LgsPanel';
+import { Unite } from './screens/Unite';
+import { Tarama } from './screens/Tarama';
+import { TaramaDaveti } from './components/TaramaDaveti';
 import { db, getState, setState, tercihKaydet } from './db';
 import {
   aheadQueue,
@@ -76,6 +85,10 @@ type Flow =
     }
   | { name: 'kelimeler' }
   | { name: 'profil' }
+  /** LGS unite sayfasi: kelimeler, kaliplar, diyaloglar, test */
+  | { name: 'unite'; no: number }
+  /** Genel: "biliyorum / bilmiyorum" taramasi (bkz. Tarama) */
+  | { name: 'tarama' }
   | null;
 
 export default function App() {
@@ -240,6 +253,30 @@ export default function App() {
     return () => clearTimeout(zamanlayici);
   }, [veriVar, tercihDamgasi]);
 
+  /*
+    LGS gorselleri on-bellekte DEGIL (bkz. vite.config `globIgnores`):
+    calisilan unitenin gorselleri arka planda bir kez cekiliyor ki ders
+    internetsiz de acilsin. Servis calisani onlari `lgs-gorseller`
+    onbellegine aliyor.
+  */
+  /* Siteden "bu üniteyi çalış" ile gelen: üniteyi bir kez o yap */
+  const veriHazir = data !== undefined;
+  const uniteIstegiIslendi = useRef(false);
+  useEffect(() => {
+    if (!veriHazir || uniteIstegiIslendi.current || !ISTENEN_UNITE) return;
+    uniteIstegiIslendi.current = true;
+    if (data?.state.lgsUnite !== ISTENEN_UNITE) void tercihKaydet({ lgsUnite: ISTENEN_UNITE });
+  }, [veriHazir, data?.state.lgsUnite]);
+
+  const lgsUniteDurum = data?.state.lgsUnite;
+  useEffect(() => {
+    if (AKTIF_BOLUM !== 'lgs' || !lgsUniteDurum) return;
+    const zamanlayici = setTimeout(() => {
+      for (const c of uniteKartlari(lgsUniteDurum)) if (c.image) void fetch(c.image).catch(() => {});
+    }, 3000);
+    return () => clearTimeout(zamanlayici);
+  }, [lgsUniteDurum]);
+
   if (!data) return <Splash />;
 
   const { progress, state: kayitliState } = data;
@@ -389,6 +426,39 @@ export default function App() {
       />
     );
   }
+  if (flow?.name === 'unite') {
+    return (
+      <Unite
+        no={flow.no}
+        progress={progress}
+        enIyiTest={state.lgsTest?.[String(flow.no)]}
+        onTestSonucu={(no, dogru) => {
+          olay('unite_testi', { unite: no, dogru });
+          const onceki = state.lgsTest?.[String(no)] ?? -1;
+          if (dogru > onceki) void setState({ lgsTest: { ...state.lgsTest, [String(no)]: dogru } });
+        }}
+        onCalis={(no) => {
+          void tercihKaydet({ lgsUnite: no });
+          setFlow(null);
+          setTab('ogren');
+        }}
+        onExit={() => setFlow(null)}
+      />
+    );
+  }
+  if (flow?.name === 'tarama') {
+    return (
+      <Tarama
+        kartlar={genelDestesi('baslangic').filter((c) => c.seviye !== 'orta')}
+        progress={progress}
+        onBitti={(bilinen, sorulan) => {
+          olay('tarama_bitti', { bilinen, sorulan });
+          void tercihKaydet({ taramaGoruldu: true });
+        }}
+        onExit={kapat}
+      />
+    );
+  }
   if (flow?.name === 'kelimeler') {
     return <WordList progress={progress} onExit={kapat} />;
   }
@@ -436,10 +506,28 @@ export default function App() {
     );
   }
 
+  /*
+    YENI KELIMENIN SIRASI (20 Ekim). Genel'de uyelikteki seviye cevabina
+    gore ("Orta seviye" diyen Orta kelimelerle baslar), LGS'de secilen
+    uniteden. Kartlar ayni; yalnizca sira degisiyor (KARARLAR 5, 7).
+  */
+  const lgs = AKTIF_BOLUM === 'lgs';
+  const deste = lgs
+    ? lgsDestesi(state.lgsUnite)
+    : genelDestesi(uye?.bilgi?.seviye === 'orta' ? 'orta' : 'baslangic');
+  /* LGS'de yil ve unite secilmeden ders acilmaz: once panel soruyor */
+  const lgsHazir = !lgs || (Boolean(state.lgsYil) && Boolean(state.lgsUnite));
+  /*
+    Tarama yalnizca Genel'de ve seviyesini "Biraz" ya da "Orta" diyen uyeye,
+    bir kez (yapilsin ya da gecilsin). "Hic bilmiyorum" diyen bastan baslar.
+  */
+  const taramaSorulur =
+    !lgs && !state.taramaGoruldu && (uye?.bilgi?.seviye === 'biraz' || uye?.bilgi?.seviye === 'orta');
+
   const due = dueQueue(progress);
-  const newCards = nextBatch(progress, state.dailyLimit);
+  const newCards = lgsHazir ? nextBatch(progress, state.dailyLimit, new Date(), deste) : [];
   /* "Bunu biliyorum" denince yerine kayacak kartlar (bkz. Lesson) */
-  const yedekKartlar = spareCards(progress, newCards);
+  const yedekKartlar = spareCards(progress, newCards, BATCH, deste);
   const bugununKartlari = todaysCards(progress);
   const ahead = aheadQueue(progress, AHEAD_BATCH);
 
@@ -458,6 +546,30 @@ export default function App() {
           todaysIds={bugununKartlari.map((p) => p.cardId)}
           aheadCount={ahead.length}
           agirTekrar={AGIR_TEKRAR}
+          ustPanel={
+            lgs ? (
+              <LgsPanel
+                progress={progress}
+                yil={state.lgsYil}
+                unite={state.lgsUnite}
+                onYil={(lgsYil) => {
+                  olay('lgs_yil', { yil: lgsYil });
+                  void tercihKaydet({ lgsYil });
+                }}
+                onUnite={(lgsUnite) => {
+                  olay('lgs_unite', { unite: lgsUnite });
+                  void tercihKaydet({ lgsUnite });
+                }}
+                onUniteAc={(no) => setFlow({ name: 'unite', no })}
+              />
+            ) : taramaSorulur ? (
+              <TaramaDaveti
+                onBasla={() => setFlow({ name: 'tarama' })}
+                onGec={() => void tercihKaydet({ taramaGoruldu: true })}
+              />
+            ) : undefined
+          }
+          dersGizli={!lgsHazir}
           onStart={() =>
             setFlow({ name: 'ders', yeni: newCards, yedek: yedekKartlar, tekrar: due.slice(0, DAILY_REVIEW_CAP) })
           }

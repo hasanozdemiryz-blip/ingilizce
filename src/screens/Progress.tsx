@@ -77,7 +77,7 @@ export function ProgressScreen({
               <span className="block text-sm text-white/70 mt-0.5">
                 {saglam > 0
                   ? t('{n} kelimeyi sağlam biliyorsun', { n: saglam })
-                  : t('Öğrendiğin kelimeler ve kancaları')}
+                  : t('Öğrendiğin kelimeler ve çağrışımları')}
               </span>
             </span>
             <span className="text-xl text-white/60">›</span>

@@ -14,7 +14,33 @@ export type Card = {
   klass: Klass;
   decision: string | null;
   image: string | null;
+  /**
+   * Cagrisim turu (LGS kartlari, 20 Ekim; bkz. content/lgs.json):
+   *   K  ses/yazilis cagrisimi — `hook` dolu
+   *   T  Turkcede ayni/cok benzer (concert ≈ konser) — `hook` Turkce bicimi
+   *   G  gorsel cagrisim — `hook` BOS, cagrisim gorselde
+   *   I  kalip ifade (best friend) — `hook` BOS
+   * Genel'in eski 400 kartinda yok: hepsi K gibi davranir.
+   */
+  tur?: 'K' | 'T' | 'G' | 'I';
+  /** Cagrisimin yolu. 'yazılış' kartta kanca kelimenin icinde vurgulanir. */
+  yol?: 'ses' | 'yazılış' | 'ses+yazılış' | null;
+  /** LGS unitesi (1–10). Genel'deki kart da LGS kelimesiyse dolu. */
+  unite?: number;
+  /** Genel seviyesi (Oxford CEFR: A1–A2 baslangic, B1+ orta). */
+  seviye?: 'baslangic' | 'orta';
+  /**
+   * Ingilizce ornek cumle; kelime icinde AYNEN geciyor (bkz.
+   * tools/mufredat/lgs-icerik.mjs). Merdivenin 7. basamagi bundan:
+   * cumlede bosluk doldurma. Yoksa kart 6. basamakta biter.
+   */
+  ornek?: string;
+  /** Ornek cumlenin Turkcesi — cevaptan sonra gosterilir */
+  ornekTr?: string;
 };
+
+/** Kancasi olan kart mi — G/I kartlarda kanca yerine gorsel cagrisim var. */
+export const kancaliMi = (c: Pick<Card, 'hook'>) => c.hook.trim() !== '';
 
 /**
  * Egzersiz merdiveni — kelimenin tek ilerleme ekseni.
@@ -33,7 +59,7 @@ export type Card = {
  * 1-2 tanima, 3-4 gecis, 5-6 uretim. Kullanilabilir kelime hazinesi
  * uretim tarafinda olusur, o yuzden merdiven tanimada bitmez.
  */
-export type Step = 1 | 2 | 3 | 4 | 5 | 6;
+export type Step = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
 /** Kullanici ilerlemesi. IndexedDB'de, cihazda. */
 export type Progress = {
@@ -232,4 +258,26 @@ export type AppState = {
    * yeni kurulmus bos bir cihaz sunucudaki tercihleri ezerdi.
    */
   tercihDegisti?: number;
+  /**
+   * LGS bolumu (20 Ekim). Hangi yil sinava girecek: 2027 = 8. sinif eski
+   * program (10 unite), 2028 = Maarif programi (kitaplar cikinca).
+   * Sorulmadiysa yok; LGS ana ekrani once bunu soruyor.
+   */
+  lgsYil?: 2027 | 2028;
+  /**
+   * Calisilan unite (1–10). Ilk acilista "Okulda hangi ünitedesin?" ile
+   * secilir, sonra unite yolundan degistirilir. Uniteler KILITSIZ.
+   * Yeni kelimeler once bu uniteden gelir (bkz. content.ts `lgsDestesi`).
+   */
+  lgsUnite?: number;
+  /**
+   * Genel'deki "biliyorum / bilmiyorum" taramasi gosterildi mi (yapildi ya
+   * da gecildi). Yalniz seviyesini "Biraz" ya da "Orta" diyen uyeye cikar.
+   */
+  taramaGoruldu?: boolean;
+  /**
+   * Unite testlerinin EN IYI sonucu: { "3": 8 } = 3. unitede 10'da 8.
+   * Senkronda iki cihazin buyugu kalir (bkz. senkron.ts).
+   */
+  lgsTest?: Record<string, number>;
 };

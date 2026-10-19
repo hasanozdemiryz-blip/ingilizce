@@ -1,0 +1,40 @@
+# LGS ornek cumleleri: en|Ingilizce ornek|Turkce cevirisi
+avalanche|The road is closed because of an avalanche.|Yol bir çığ yüzünden kapalı.
+cause|Heavy rain can cause floods.|Şiddetli yağmur sele sebep olabilir.
+decrease|The number of bees will decrease without flowers.|Çiçekler olmadan arıların sayısı azalır.
+destroy|Fires destroy forests every summer.|Yangınlar her yaz ormanları yok ediyor.
+destructive|The storm was very destructive.|Fırtına çok yıkıcıydı.
+disappear|Some animals may disappear forever.|Bazı hayvanlar sonsuza dek kaybolabilir.
+disaster|An earthquake is a natural disaster.|Deprem doğal bir felakettir.
+drought|The farmers lost their crops in the drought.|Çiftçiler kuraklıkta ürünlerini kaybetti.
+earthquake|We practise what to do in an earthquake.|Depremde ne yapacağımızı çalışıyoruz.
+eco-friendly|Cycling is an eco-friendly way to travel.|Bisiklet sürmek çevre dostu bir ulaşım yoludur.
+erosion|Trees stop soil erosion.|Ağaçlar toprak erozyonunu durdurur.
+extinct|Dinosaurs are extinct.|Dinozorların nesli tükenmiştir.
+flood|The flood damaged many houses.|Sel birçok eve zarar verdi.
+glacier|The glacier is melting because of the heat.|Buzul sıcak yüzünden eriyor.
+global warming|Global warming is a serious problem.|Küresel ısınma ciddi bir sorundur.
+heat up|The Earth will heat up if we don't act.|Harekete geçmezsek Dünya ısınacak.
+heat-trapping gases|Cars and factories release heat-trapping gases.|Arabalar ve fabrikalar ısı tutan gazlar salar.
+hurricane|The hurricane hit the coast last night.|Kasırga dün gece kıyıyı vurdu.
+landslide|A landslide blocked the village road.|Bir heyelan köy yolunu kapattı.
+pollute|Plastic bags pollute the seas.|Plastik poşetler denizleri kirletir.
+precaution|Wearing a helmet is a good precaution.|Kask takmak iyi bir önlemdir.
+produce|Bees produce honey.|Arılar bal üretir.
+protect|We must protect the forests.|Ormanları korumalıyız.
+provide|Trees provide oxygen.|Ağaçlar oksijen sağlar.
+rainforest|The Amazon is the largest rainforest in the world.|Amazon dünyanın en büyük yağmur ormanıdır.
+rechargeable|I use rechargeable batteries in my camera.|Fotoğraf makinemde şarj edilebilir pil kullanırım.
+recycle|We recycle paper and glass at school.|Okulda kâğıt ve camı geri dönüştürürüz.
+renewable|Wind is a renewable source of energy.|Rüzgâr yenilenebilir bir enerji kaynağıdır.
+rescue|Firefighters rescue people from fires.|İtfaiyeciler insanları yangından kurtarır.
+source|The sun is a source of energy.|Güneş bir enerji kaynağıdır.
+suffer|Animals suffer when their homes are destroyed.|Yuvaları yok edilince hayvanlar acı çeker.
+survivor|The survivor told his story on TV.|Hayatta kalan kişi hikâyesini televizyonda anlattı.
+temperature|The temperature is thirty degrees today.|Bugün sıcaklık otuz derece.
+tornado|The tornado moved quickly across the fields.|Hortum tarlaların üzerinden hızla geçti.
+treatment|The doctor started a new treatment.|Doktor yeni bir tedaviye başladı.
+tsunami|A tsunami is a giant wave caused by an earthquake.|Tsunami, depremin sebep olduğu dev bir dalgadır.
+volcano|Mount Ararat is a volcano.|Ağrı Dağı bir yanardağdır.
+waste|Put the waste in the right bin.|Atığı doğru kutuya at.
+water shortage|Many cities have a water shortage in summer.|Birçok şehirde yazın su kıtlığı olur.

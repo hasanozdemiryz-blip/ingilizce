@@ -1,0 +1,58 @@
+{
+ "unite": 7,
+ "ad": "Tourism",
+ "konu": "Gezilen yerleri anlatmak, deneyim sormak, bir yeri tanıtmak ve önermek, konaklama seçmek",
+ "kaliplar": [
+  { "en": "Have you ever been to Cappadocia?", "tr": "Hiç Kapadokya'ya gittin mi?", "not": "Deneyim sormak" },
+  { "en": "Yes, I have. I went there last spring.", "tr": "Evet, gittim. Geçen bahar oraya gittim.", "not": "Evet + ne zaman" },
+  { "en": "No, I've never been there.", "tr": "Hayır, oraya hiç gitmedim.", "not": "Hiç yapmamak" },
+  { "en": "Where would you like to go on holiday?", "tr": "Tatilde nereye gitmek istersin?", "not": "İstek sormak" },
+  { "en": "Istanbul is famous for its historic sites.", "tr": "İstanbul tarihi yerleriyle ünlüdür.", "not": "be famous for" },
+  { "en": "You can visit the museums and buy souvenirs.", "tr": "Müzeleri gezebilir ve hediyelik eşya alabilirsin.", "not": "Yapılabilecekler" },
+  { "en": "I'd like to stay in a boutique hotel.", "tr": "Butik bir otelde kalmak isterim.", "not": "Konaklama" },
+  { "en": "It's worth seeing.", "tr": "Görmeye değer.", "not": "Önermek" },
+  { "en": "I recommend visiting Ephesus. It's an ancient city.", "tr": "Efes'i ziyaret etmeni öneririm. Antik bir şehir.", "not": "recommend + -ing" },
+  { "en": "What is the best time to visit?", "tr": "Ziyaret için en iyi zaman ne zaman?", "not": "Bilgi sormak" }
+ ],
+ "diyaloglar": [
+  {
+   "baslik": "Tatil anıları",
+   "satirlar": [
+    { "kim": "Ayşe", "cinsiyet": "k", "en": "Have you ever been to Mardin, Mert?", "tr": "Hiç Mardin'e gittin mi, Mert?" },
+    { "kim": "Mert", "cinsiyet": "e", "en": "Yes, I have. I went there with my family last summer.", "tr": "Evet, gittim. Geçen yaz ailemle gittim." },
+    { "kim": "Ayşe", "cinsiyet": "k", "en": "What did you do there?", "tr": "Orada ne yaptınız?" },
+    { "kim": "Mert", "cinsiyet": "e", "en": "We visited the old stone houses and tasted the local food. The architecture is incredible!", "tr": "Eski taş evleri gezdik ve yöresel yemekleri tattık. Mimarisi inanılmaz!" }
+   ]
+  },
+  {
+   "baslik": "Otel seçmek",
+   "satirlar": [
+    { "kim": "Defne", "cinsiyet": "k", "en": "Where shall we stay in Antalya?", "tr": "Antalya'da nerede kalalım?" },
+    { "kim": "Emir", "cinsiyet": "e", "en": "How about an all-inclusive resort? Food and drinks are included.", "tr": "Her şey dahil bir tatil köyüne ne dersin? Yemek ve içecekler dahil." },
+    { "kim": "Defne", "cinsiyet": "k", "en": "It's expensive. I'd prefer a small bed and breakfast near the old town.", "tr": "Pahalı. Ben eski şehre yakın küçük bir pansiyonu tercih ederim." },
+    { "kim": "Emir", "cinsiyet": "e", "en": "Good idea. Then we can walk to the historic sites.", "tr": "İyi fikir. O zaman tarihi yerlere yürüyebiliriz." }
+   ]
+  },
+  {
+   "baslik": "Turist rehberi",
+   "satirlar": [
+    { "kim": "Turist", "cinsiyet": "e", "en": "Excuse me, what is this city famous for?", "tr": "Affedersiniz, bu şehir neyle ünlü?" },
+    { "kim": "Rehber", "cinsiyet": "k", "en": "It's famous for its ancient monuments and its old caravansary.", "tr": "Antik anıtları ve eski kervansarayıyla ünlü." },
+    { "kim": "Turist", "cinsiyet": "e", "en": "What do you recommend for today?", "tr": "Bugün için ne önerirsiniz?" },
+    { "kim": "Rehber", "cinsiyet": "k", "en": "I recommend visiting the museum in the main square. It's really worth seeing.", "tr": "Ana meydandaki müzeyi ziyaret etmenizi öneririm. Gerçekten görmeye değer." }
+   ]
+  }
+ ],
+ "test": [
+  { "soru": "A: Have you ever been to Pamukkale?\nB: ______ I went there two years ago.", "secenekler": ["No, I haven't.", "Yes, I have.", "I've never been there.", "I'd like to go."], "dogru": 1, "aciklama": "İki yıl önce gittiğini söylüyor; cevap olumlu." },
+  { "soru": "Cappadocia is famous ______ its fairy chimneys.", "secenekler": ["in", "at", "for", "with"], "dogru": 2, "aciklama": "be famous for = ... ile ünlü olmak." },
+  { "soru": "We stayed in a hotel where all meals and drinks were included. It was an ______ hotel.", "secenekler": ["all-inclusive", "ancient", "urban", "rural"], "dogru": 0, "aciklama": "Her şey dahil: all-inclusive." },
+  { "soru": "I bought a small fridge magnet as a ______ from Istanbul.", "secenekler": ["souvenir", "landmark", "province", "settlement"], "dogru": 0, "aciklama": "Gezilen yerden alınan hatıra eşya: souvenir." },
+  { "soru": "Which one is a place to stay?", "secenekler": ["monument", "bed and breakfast", "square", "fountain"], "dogru": 1, "aciklama": "Pansiyon (bed and breakfast) konaklama yeridir." },
+  { "soru": "A: ______\nB: I'd like to go to Italy because I love pizza and history.", "secenekler": ["Have you been to Italy?", "Where would you like to go?", "When did you go?", "How was the hotel?"], "dogru": 1, "aciklama": "Cevap gitmek istediği yeri söylüyor." },
+  { "soru": "People live in a village in ______ areas.", "secenekler": ["urban", "rural", "ancient", "capital"], "dogru": 1, "aciklama": "Köyler kırsal (rural) bölgelerdedir." },
+  { "soru": "Read the text.\n\"Last year, Zeynep visited Safranbolu. She stayed in a traditional house. She walked around the old streets and visited the caravansary. She says the town is worth seeing.\"\nWhere did Zeynep stay?", "secenekler": ["in a resort", "in a tent", "in a traditional house", "in a boutique hotel"], "dogru": 2, "aciklama": "\"She stayed in a traditional house.\"" },
+  { "soru": "Ankara is the ______ of Turkey.", "secenekler": ["region", "capital", "destination", "journey"], "dogru": 1, "aciklama": "Başkent: capital." },
+  { "soru": "Which sentence is a recommendation?", "secenekler": ["I've never been there.", "You should visit the old town.", "We stayed for a week.", "The hotel was expensive."], "dogru": 1, "aciklama": "\"You should ...\" bir öneridir." }
+ ]
+}

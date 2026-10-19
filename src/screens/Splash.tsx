@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Logo } from '../components/ui';
 import { CARDS } from '../content';
 import { t } from '../dil';
+import { kancaliMi } from '../types';
 
 /**
  * ACILIS EKRANI.
@@ -22,7 +23,7 @@ import { t } from '../dil';
  * karesi (manifest `background_color`) krem, bu ekran krem, sonra
  * uygulama kendi mavisine aciliyor.
  */
-const ORNEKLER = CARDS.slice(0, 12);
+const ORNEKLER = CARDS.filter(kancaliMi).slice(0, 12);
 
 export function Splash() {
   const [ornek] = useState(() => ORNEKLER[Math.floor(Math.random() * ORNEKLER.length)]);

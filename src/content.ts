@@ -1,6 +1,9 @@
 import raw from '../content/cards.json';
+import lgsHam from '../content/lgs.json';
 import { normalize } from './answer';
-import type { Card } from './types';
+import { AKTIF_BOLUM } from './bolum';
+import { sesDosyalariKaydet } from './speech';
+import { kancaliMi, type Card } from './types';
 
 /**
  * Bir seferde tanisilan kelime sayisi.
@@ -51,7 +54,7 @@ const norm = (s: string) => s.toLocaleLowerCase('tr').replace(/[^a-zçğıöşü
  * Bunlar aslinda mnemonik degil, Turkceye gecmis kelimeler — yontemin
  * ne yaptigini GOSTERMIYORLAR. Kart olarak degerliler ama vitrin degiller.
  */
-const zayifKanca = (c: Card) => norm(c.en) === norm(c.hook);
+const zayifKanca = (c: Card) => !kancaliMi(c) || norm(c.en) === norm(c.hook);
 
 /**
  * Kart gorselleri.
@@ -100,7 +103,36 @@ const frekansSirasi = (raw as Card[]).slice().sort((a, b) => a.order - b.order);
  */
 const v1Seti = frekansSirasi.filter((c) => GORSELLER.has(c.id));
 
-export const CARDS: Card[] = (() => {
+/*
+  LGS (20 Ekim). Kart metinleri `content/lgs.json`'da (uretici:
+  tools/mufredat/lgs-icerik.mjs), gorseller `src/assets/cards-lgs/`.
+  cards.json'a eklenmedi: o dosya Excel'den uretiliyor ve ek alanlar bir
+  sonraki iceri aktarmada silinirdi.
+*/
+type LgsHam = {
+  kartlar: (Card & { genel: boolean })[];
+  /** Zaten Genel'de kart olan LGS kelimeleri ve uniteleri */
+  mevcut: { id: string; unite: number }[];
+  /** Genel kartlarinin seviyesi (Oxford CEFR) */
+  seviye: Record<string, 'baslangic' | 'orta'>;
+  /** Genel kartlarinin ornek cumlesi: [Ingilizce, Turkce] — kelime aynen geciyor */
+  ornek: Record<string, [string, string]>;
+};
+const LGS = lgsHam as unknown as LgsHam;
+
+const LGS_GORSEL_DOSYALARI = import.meta.glob('./assets/cards-lgs/*.webp', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+}) as Record<string, string>;
+const LGS_GORSELLER = new Map(
+  Object.entries(LGS_GORSEL_DOSYALARI).map(([yol, url]) => [yol.split('/').pop()!.replace(/\.[^.]+$/, ''), url]),
+);
+
+const MEVCUT_UNITE = new Map(LGS.mevcut.map((m) => [m.id, m.unite]));
+
+/** Genel'in eski kartlari, gorseli ve seviyesiyle. */
+const GENEL_ESKI: Card[] = (() => {
   const guclu = v1Seti.filter((c) => !zayifKanca(c));
   const zayif = v1Seti.filter(zayifKanca);
   const ilkGrup = guclu.slice(0, BATCH);
@@ -109,8 +141,84 @@ export const CARDS: Card[] = (() => {
     ...c,
     order: i + 1,
     image: GORSELLER.get(c.id) ?? null,
+    seviye: LGS.seviye[c.id] ?? 'baslangic',
+    unite: MEVCUT_UNITE.get(c.id),
+    ornek: LGS.ornek[c.id]?.[0],
+    ornekTr: LGS.ornek[c.id]?.[1],
   }));
 })();
+
+/** LGS kartlari. Gorseli olmayan uc kart (dini yapilar) da destede: yuzu yalniz kelime. */
+const LGS_KARTLARI: Card[] = LGS.kartlar.map(({ genel: _genel, ...c }) => ({
+  ...c,
+  image: LGS_GORSELLER.get(c.id) ?? null,
+}));
+const LGS_GENELE: Set<string> = new Set(LGS.kartlar.filter((k) => k.genel).map((k) => k.id));
+
+const SEVIYE_SIRA = { baslangic: 0, orta: 1 } as const;
+
+/**
+ * GENEL destesi: eski kartlar + Genel'e uygun LGS kartlari (okula ozgu
+ * olanlar haric — caravansary, catgut...). Gorseli olmayan kart girmez.
+ *
+ * Sira SEVIYEYE gore: once Baslangic, sonra Orta; kendi icinde eski siklik
+ * sirasi, ardindan LGS'den gelenler. Ilk bes guclu kanca HER ZAMAN basta —
+ * ilk dersi yontemi gosteren kartlar acmali (bkz. yukarida).
+ *
+ * `basla: 'orta'` (uyelikte "Orta seviye" diyen) Orta'yi one alir; seviye
+ * yalnizca SIRAYI degistirir, kart ayni (KARARLAR 5).
+ */
+export function genelDestesi(basla: 'baslangic' | 'orta' = 'baslangic'): Card[] {
+  const lgsden = LGS_KARTLARI.filter((c) => LGS_GENELE.has(c.id) && c.image);
+  const ilk = GENEL_ESKI.slice(0, BATCH);
+  const govde = [...GENEL_ESKI.slice(BATCH), ...lgsden];
+  const sira = (c: Card) => {
+    const s = SEVIYE_SIRA[c.seviye ?? 'baslangic'];
+    return basla === 'orta' ? 1 - s : s;
+  };
+  // Array.sort kararli: ayni seviyede gelis sirasi korunur.
+  return [...ilk, ...govde.sort((a, b) => sira(a) - sira(b))].map((c, i) => ({ ...c, order: i + 1 }));
+}
+
+/**
+ * LGS destesi: unite unite. Her unitede once yeni LGS kartlari, sonra o
+ * unitenin Genel'de zaten olan kelimeleri (busy, bake...).
+ *
+ * `aktifUnite` verilirse o unite basa alinir, ardindan sonraki uniteler,
+ * en son oncekiler: unite bitince yeni kelime bir sonrakinden gelir.
+ */
+export function lgsDestesi(aktifUnite?: number): Card[] {
+  const genelden = GENEL_ESKI.filter((c) => c.unite);
+  const unitesi = (u: number) => [
+    ...LGS_KARTLARI.filter((c) => c.unite === u),
+    ...genelden.filter((c) => c.unite === u),
+  ];
+  const bas = aktifUnite && aktifUnite >= 1 && aktifUnite <= UNITE_SAYISI ? aktifUnite : 1;
+  const sira = Array.from({ length: UNITE_SAYISI }, (_, i) => ((bas - 1 + i) % UNITE_SAYISI) + 1);
+  return sira.flatMap(unitesi).map((c, i) => ({ ...c, order: i + 1 }));
+}
+
+export const UNITE_SAYISI = 10;
+
+/*
+  Kelime sesleri: public/ses/k/<kart-id>.mp3 (tools/ses/ses-bol.mjs).
+  Iki bolumun BUTUN kartlari kaydediliyor — dosya cagrilinca iniyor,
+  kaydetmek bir sey indirmiyor.
+*/
+sesDosyalariKaydet(
+  [...GENEL_ESKI, ...LGS_KARTLARI].map((c): [string, string] => [c.en, `${import.meta.env.BASE_URL}ses/k/${c.id}.mp3`]),
+);
+
+/** Bir unitenin kelimeleri (LGS destesindeki sirayla). */
+export const uniteKartlari = (u: number): Card[] => lgsDestesi(u).filter((c) => c.unite === u);
+
+/**
+ * AKTIF DESTE — bolume gore (bkz. bolum.ts). Uygulamanin geri kalani
+ * `CARDS`'i "setteki kartlar" olarak okuyor: sayaclar, kelime listesi,
+ * secenek havuzu. Yeni kelimenin SIRASI ise App'te kullanicinin seviyesine
+ * ya da unitesine gore kuruluyor (bkz. scheduler `nextBatch`).
+ */
+export const CARDS: Card[] = AKTIF_BOLUM === 'lgs' ? lgsDestesi() : genelDestesi();
 
 export const CARD_BY_ID = new Map(CARDS.map((c) => [c.id, c]));
 
@@ -119,7 +227,11 @@ export const CARD_BY_ID = new Map(CARDS.map((c) => [c.id, c]));
  * Deste 1'in disindan secilir ki kullanici ayni karti iki kez "yeni" gormesin.
  */
 export const SHOWCASE_CARD =
-  CARDS.find((c) => c.id === 'snake' && c.order > BATCH) ?? CARDS[BATCH];
+  CARDS.find((c) => c.id === 'snake' && c.order > BATCH) ??
+  // LGS: yazilis cagrisimi — bizim farkimiz (deli + cious)
+  CARDS.find((c) => c.id === 'delicious' && c.order > BATCH) ??
+  CARDS.find((c, i) => i >= BATCH && kancaliMi(c) && c.image) ??
+  CARDS[BATCH];
 
 /**
  * Settekilerin ilerlemesi. Setten CIKMIS kartin kaydi elenir — SILINMEZ.
@@ -153,7 +265,7 @@ export function ogrenilenKancalar(progress: readonly { cardId: string; introduce
   return progress
     .filter((p) => p.introduced)
     .map((p) => CARD_BY_ID.get(p.cardId))
-    .filter((c): c is Card => Boolean(c))
+    .filter((c): c is Card => Boolean(c) && kancaliMi(c!))
     .sort((a, b) => a.order - b.order)
     .map((c) => ({ en: c.en, hook: c.hook }));
 }

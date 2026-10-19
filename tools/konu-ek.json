@@ -1,0 +1,20 @@
+{
+ "_aciklama": "301-400 kartlarin konusu (18 Ekim 2026). Anahtarlar tools/kart-inceleme.mjs KATEGORI ile ayni. 1-300 kart-inceleme.json'da.",
+ "dog": "hayvan", "money": "para", "friend": "insan", "face": "vucut", "hand": "vucut", "name": "insan",
+ "book": "okul", "bed": "ev", "chair": "ev", "wall": "yapi", "girl": "insan", "bus": "ulasim",
+ "town": "yer", "rain": "doga", "fire": "doga", "ice": "doga", "shop": "yer", "job": "para",
+ "boss": "para", "pay": "para", "take": "eylem", "send": "eylem", "help": "eylem", "find": "eylem",
+ "clean": "eylem", "sleep": "eylem", "catch": "eylem", "fall": "eylem", "count": "eylem", "wish": "duygu",
+ "hungry": "vucut", "busy": "nitelik", "young": "nitelik", "kind": "nitelik", "lazy": "nitelik", "wet": "nitelik",
+ "loud": "nitelik", "sour": "mutfak", "fast": "nitelik", "apple": "mutfak", "egg": "mutfak", "rice": "mutfak",
+ "soup": "mutfak", "oil": "mutfak", "knife": "mutfak", "cow": "hayvan", "horse": "hayvan", "sheep": "hayvan",
+ "ant": "hayvan", "owl": "hayvan", "tooth": "vucut", "cheek": "vucut", "body": "vucut", "roof": "yapi",
+ "lake": "doga", "hat": "giyim", "ring": "giyim", "boot": "giyim", "toy": "ev", "doll": "ev",
+ "mirror": "ev", "soap": "ev", "bird": "hayvan", "smile": "duygu", "tent": "yer", "tower": "yapi",
+ "lock": "ev", "hammer": "yapi", "cage": "hayvan", "tail": "hayvan", "hide": "eylem", "tie": "eylem",
+ "dig": "eylem", "melt": "doga", "candy": "mutfak", "cook": "mutfak", "middle": "yer", "shell": "doga",
+ "hunt": "hayvan", "dinner": "mutfak", "prize": "spor", "wallet": "para", "fog": "doga", "port": "ulasim",
+ "sailor": "insan", "ghost": "insan", "luck": "duygu", "trap": "eylem", "cliff": "doga", "hay": "doga",
+ "bubble": "doga", "climb": "eylem", "pray": "eylem", "beg": "eylem", "rob": "eylem", "rough": "nitelik",
+ "deaf": "vucut", "crowd": "insan", "page": "okul", "cherry": "mutfak"
+}

@@ -19,6 +19,36 @@ mantığı tutuyor. Yeni kelime eklerken, kanca ya da cümle değiştirirken
 5. Kanca = anlam olan tanıdık kelimeler (lamp ≈ lamba, pilot ≈ pilot) kanca
    gerektirmez; cümleleri olduğu gibi kalır, yeni kelime seçerken alınmaz.
 
+## Çağrışım: ses VE yazılış (18 Ekim 2026)
+
+Kullanıcıya "kanca" denmez, **çağrışım** denir (kodda ve notlarda "kanca"
+kalır). Bir kelime **Hafıza Teknikli** sayılır, eğer:
+
+- **Ses çağrışımı:** okunuşu gerçek bir Türkçe kelimeye benziyor —
+  succeed ≈ **saksı**, duty ≈ **düdük**, genius ≈ **cin**, ancient ≈ **enişte**.
+- **Yazılış çağrışımı:** yazılışının içinde gerçek bir Türkçe kelime görünüyor —
+  **deli**cious, des**sert**, **dev**ice, re**fuse** (füze), **in**vite,
+  **at**tend, in**credi**ble (kredi), **tas**ty. Rakiplerde yok; **farkımız**.
+- İkisi birden en güçlüsü: **sur**vive (sur), **deli**cious.
+
+**Zorla, olmazsa sadeleştir.** Her kelimede önce ses, sonra yazılış
+çağrışımı aranır; iki parçalı ("ek sepet") ve iki kelimelik kancalar serbest.
+Sonuç **çok alakasız** kalırsa kelime **görsel çağrışım** olur: kanca yok,
+anlamı gösteren tek sahne. Yukarıdaki 14 örnek kullanıcı onaylı ölçü
+(`tools/mufredat/lgs8-etiket.txt`). Yazılış çağrışımlı kartta doğru İngilizce
+ses ayrıca vurgulanır (öğrenci "deliciyus" diye okumasın).
+
+## Güvenlik — Çocuk ve LGS (18 Ekim 2026)
+
+Kanca, cümle ve görselde **olmaz**: silah, şiddet, suç; alkol, sigara, gece
+hayatı; din ve siyaset (din adamı, dini yapı kanca olmaz); korku, ölüm, kan;
+engel, beden ya da görünüşle alay; romantik/cinsel ima; çocuğun taklit
+edebileceği tehlike; hakaret olarak da kullanılan kelime ("it" köpek anlamıyla).
+Kelimenin kendisi böyleyse (gun, tomb, burglary) Çocuk'a girmez; LGS'de
+yalnız metin ya da en masum sahne (gun → su tabancası). 18 Ekim'de
+düzeltilen kartlar: gun, night, shake, slap, rob, eat, referee
+(`tools/guvenlik-cumleleri.mjs`).
+
 ## Cümle
 
 - **Kanca ile anlam aynı sahnede ve birbirine bir şey YAPIYOR.**

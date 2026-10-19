@@ -1,0 +1,58 @@
+{
+ "unite": 10,
+ "ad": "Natural Forces",
+ "konu": "Doğal afetleri anlatmak, sebep-sonuç kurmak, gelecekle ilgili tahmin yapmak, doğayı korumak için öneri vermek",
+ "kaliplar": [
+  { "en": "If we don't save water, there will be a water shortage.", "tr": "Su tasarrufu yapmazsak su kıtlığı olacak.", "not": "Koşul: If ..., will" },
+  { "en": "Global warming causes glaciers to melt.", "tr": "Küresel ısınma buzulların erimesine neden olur.", "not": "Sebep-sonuç: cause" },
+  { "en": "Pollution leads to climate change.", "tr": "Kirlilik iklim değişikliğine yol açar.", "not": "lead to" },
+  { "en": "I think the temperature will increase in the future.", "tr": "Bence gelecekte sıcaklık artacak.", "not": "Tahmin: will" },
+  { "en": "It may rain heavily, so there might be a flood.", "tr": "Şiddetli yağmur yağabilir, bu yüzden sel olabilir.", "not": "Olasılık: may / might" },
+  { "en": "We should recycle paper, glass and plastic.", "tr": "Kâğıt, cam ve plastiği geri dönüştürmeliyiz.", "not": "Öneri: should" },
+  { "en": "We must protect the rainforests.", "tr": "Yağmur ormanlarını korumalıyız.", "not": "must" },
+  { "en": "During an earthquake, get under a table.", "tr": "Deprem sırasında bir masanın altına gir.", "not": "Güvenlik talimatı" },
+  { "en": "Renewable energy is better for the environment.", "tr": "Yenilenebilir enerji çevre için daha iyidir.", "not": "Karşılaştırma" },
+  { "en": "Many animals will become extinct if we destroy their homes.", "tr": "Yaşam alanlarını yok edersek birçok hayvanın nesli tükenecek.", "not": "Koşul + gelecek" }
+ ],
+ "diyaloglar": [
+  {
+   "baslik": "Deprem tatbikatı",
+   "satirlar": [
+    { "kim": "Öğretmen", "cinsiyet": "e", "en": "Today we will have an earthquake drill. What should we do during an earthquake?", "tr": "Bugün deprem tatbikatı yapacağız. Deprem sırasında ne yapmalıyız?" },
+    { "kim": "Defne", "cinsiyet": "k", "en": "We should drop, cover and hold on. We get under our desks.", "tr": "Çök, kapan, tutun yapmalıyız. Sıralarımızın altına gireriz." },
+    { "kim": "Öğretmen", "cinsiyet": "e", "en": "Right. And after it stops?", "tr": "Doğru. Peki durduktan sonra?" },
+    { "kim": "Defne", "cinsiyet": "k", "en": "We leave the building calmly and go to the meeting point.", "tr": "Binadan sakince çıkarız ve toplanma alanına gideriz." }
+   ]
+  },
+  {
+   "baslik": "Küresel ısınma",
+   "satirlar": [
+    { "kim": "Mert", "cinsiyet": "e", "en": "Did you watch the documentary about glaciers?", "tr": "Buzullarla ilgili belgeseli izledin mi?" },
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "Yes. Global warming causes them to melt. It's terrible.", "tr": "Evet. Küresel ısınma onların erimesine neden oluyor. Korkunç." },
+    { "kim": "Mert", "cinsiyet": "e", "en": "If we don't stop it, sea levels will rise.", "tr": "Bunu durdurmazsak deniz seviyesi yükselecek." },
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "We should use renewable energy and recycle more.", "tr": "Yenilenebilir enerji kullanmalı ve daha fazla geri dönüşüm yapmalıyız." }
+   ]
+  },
+  {
+   "baslik": "Su tasarrufu",
+   "satirlar": [
+    { "kim": "Anne", "cinsiyet": "k", "en": "Can, please turn off the tap while you brush your teeth.", "tr": "Can, lütfen dişlerini fırçalarken musluğu kapat." },
+    { "kim": "Can", "cinsiyet": "e", "en": "Why, Mum? It's only a little water.", "tr": "Neden anne? Sadece biraz su." },
+    { "kim": "Anne", "cinsiyet": "k", "en": "If everyone wastes a little water, there will be a water shortage. It's a precaution.", "tr": "Herkes biraz su israf ederse su kıtlığı olur. Bu bir önlem." },
+    { "kim": "Can", "cinsiyet": "e", "en": "You're right. I'll be more careful.", "tr": "Haklısın. Daha dikkatli olacağım." }
+   ]
+  }
+ ],
+ "test": [
+  { "soru": "If we cut down all the trees, many animals ______ extinct.", "secenekler": ["become", "will become", "became", "becoming"], "dogru": 1, "aciklama": "If + geniş zaman, will + fiil." },
+  { "soru": "A ______ is a very strong wind that moves in a circle.", "secenekler": ["tornado", "drought", "glacier", "landslide"], "dogru": 0, "aciklama": "Dönerek ilerleyen çok güçlü rüzgâr: tornado (hortum)." },
+  { "soru": "There was no rain for months. The plants died because of the ______.", "secenekler": ["flood", "drought", "avalanche", "tsunami"], "dogru": 1, "aciklama": "Aylarca yağmur yağmaması kuraklıktır: drought." },
+  { "soru": "Which one is renewable energy?", "secenekler": ["coal", "oil", "wind", "gas"], "dogru": 2, "aciklama": "Rüzgâr yenilenebilir enerji kaynağıdır." },
+  { "soru": "What should you do during an earthquake?", "secenekler": ["Use the lift.", "Run to the window.", "Get under a strong table.", "Go to the balcony."], "dogru": 2, "aciklama": "Deprem sırasında sağlam bir masanın altına girilir." },
+  { "soru": "Factories ______ the air with smoke.", "secenekler": ["pollute", "protect", "recycle", "rescue"], "dogru": 0, "aciklama": "Fabrika dumanı havayı kirletir: pollute." },
+  { "soru": "A: Why are the glaciers melting?\nB: ______", "secenekler": ["Because of global warming.", "Because it is winter.", "Because of the earthquake.", "Because people recycle."], "dogru": 0, "aciklama": "Buzulların erimesinin sebebi küresel ısınma." },
+  { "soru": "Read the text.\n\"Every year, many people in Turkey help after floods and earthquakes. Volunteers collect food and clothes. Rescue teams look for survivors. These small actions save many lives.\"\nWhat do rescue teams do?", "secenekler": ["They collect clothes.", "They look for survivors.", "They cook food.", "They build houses."], "dogru": 1, "aciklama": "\"Rescue teams look for survivors.\"" },
+  { "soru": "We should ______ plastic bottles instead of throwing them away.", "secenekler": ["waste", "recycle", "destroy", "decrease"], "dogru": 1, "aciklama": "Plastik şişeler geri dönüştürülmeli." },
+  { "soru": "It ______ snow tomorrow. The sky is very cloudy.", "secenekler": ["might", "mustn't", "doesn't", "didn't"], "dogru": 0, "aciklama": "Bulutlu gökyüzü bir olasılık gösterir: might." }
+ ]
+}

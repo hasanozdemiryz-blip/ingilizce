@@ -1,0 +1,40 @@
+# 5. ünite The Internet — en|tr|tur|kanca|yol|cumle|sahne|ton|genel
+access|erişim|G|||Kartla binaya erişim sağladı|A girl taps a key card on a reader and a glass door slides open.|sky-blue|E
+account|hesap|G|||Yeni bir hesap açtı|A boy types on a laptop showing a profile picture circle on the screen.|sky-blue|E
+aim|amaç|G|||Amacı topu sepete atmaktı|A boy aims a crumpled paper ball at a wastepaper basket across the room.|yellow|E
+attachment|ek (dosya)|G|||E-postaya bir fotoğraf ekledi|A computer screen shows an envelope with a big paperclip and a small photo attached.|sky-blue|E
+browse|gezinmek|G|||Tablette internette gezindi|A girl relaxes on a sofa scrolling through pages on a tablet.|lavender|E
+browser|tarayıcı|G|||Tarayıcıda yeni sekme açtı|A laptop screen shows a browser window with tabs and a search bar but no writing.|sky-blue|E
+click|tıklamak|T|klik|ses|Fareyle düğmeye tıkladı|A hand clicks a computer mouse with little click lines around the button.|mint|E
+comment|yorum|G|||Fotoğrafın altına yorum yazdılar|A phone shows a photo of a cat with several speech-bubble comments below it.|pink|E
+communication|iletişim|T|komünikasyon|ses|Teneke telefonla iletişim kurdular|Two children talk through a tin-can telephone connected by a string.|yellow|E
+confirm|onaylamak|G|||Siparişi onayladı|A finger taps a big green tick button on a phone screen.|mint|E
+connection|bağlantı|G|||Wi-fi bağlantısı güçlüydü|A phone shows a full wi-fi signal icon and the girl holding it smiles.|sky-blue|E
+delete|silmek|G|||Fotoğrafı çöp kutusuna atıp sildi|A finger drags a photo into a trash-bin icon on a tablet screen.|cream|E
+develop|geliştirmek|G|||Kardeşler robot geliştirdi|Two kids build a small robot at a table with a screwdriver and wires.|mint|E
+device|cihaz|K|dev|yazılış|Dev, cihazı tek eliyle kaldırdı|A friendly giant twice as tall as the small house beside him, with a big brown beard and a green tunic, easily lifts a big modern gadget with a screen above his head with one hand.|mint|E
+download|indirmek|T|download|ses|Oyunu telefona indirdi|A phone screen shows a big down arrow and a filling progress bar.|sky-blue|E
+habit|alışkanlık|G|||Her sabah su içmek iyi bir alışkanlık|A boy drinks a glass of water next to a window with the morning sun.|sky-blue|E
+ignore|görmezden gelmek|T|ignore|ses|Kedi oyuncağı görmezden geldi|A cat turns its head away and ignores a toy mouse a boy is offering.|peach|E
+instant|anlık|G|||Anlık fotoğraf makinesi fotoğrafı hemen bastı|An instant camera prints a photo that slides out of the front.|yellow|E
+log in|giriş yapmak|I|||Bilgisayara giriş yaptı|A girl types on a laptop showing a padlock icon and a row of dots in a password box.|sky-blue|E
+notification|bildirim|G|||Telefonuna bildirim geldi|A phone on a table lights up with a ringing bell icon.|yellow|E
+online|çevrim içi|T|online|ses|Çevrim içi derse bağlandı|A boy waves at classmates in a grid of small video squares on a laptop.|sky-blue|E
+password|şifre|G|||Şifresini kimseye söylemedi|A laptop screen shows a big padlock and a box with hidden dots.|lavender|E
+post|gönderi|T|post|ses|Tatil fotoğrafını paylaştı|A girl holds up her phone to share a photo of the sea with a little heart icon.|pink|E
+properly|düzgünce|G|||Kıyafetlerini düzgünce katladı|A boy neatly folds a t-shirt on a bed next to a tidy stack of clothes.|cream|E
+recent|son, yeni|G|||En son fotoğraflara baktı|A girl scrolls through her newest photos on a phone, smiling.|pink|E
+register|kaydolmak|G|||Satranç kulübüne kaydoldu|A boy writes his name on a sign-up sheet held by a smiling teacher at a desk.|cream|E
+reply|yanıtlamak|G|||Arkadaşının mektubunu yanıtladı|A boy writes a reply letter at his desk next to an opened envelope.|cream|E
+research|araştırma|G|||Ödevi için araştırma yaptı|A girl researches at a desk with open books and a laptop.|mint|E
+screen|ekran|G|||Büyük ekranda film izledik|A family watches a cartoon on a big TV screen in a living room.|lavender|E
+search engine|arama motoru|I|||Arama motorunda cevabı buldu|A laptop shows a big magnifying glass icon on the screen.|sky-blue|E
+sign up|kaydolmak|I|||Futbol kursuna kaydoldu|Kids line up at a table to sign up on a clipboard for a football course.|green|E
+social networking site|sosyal ağ sitesi|I|||Sosyal ağ sitesinde arkadaşlarını buldu|A phone screen shows small round profile pictures connected by lines.|pink|E
+subscriber|abone|G|||Kanalın yeni bir abonesi oldu|A teenager presses a big red bell button next to a video on a phone.|peach|E
+update|güncellemek|T|update|ses|Telefonunu güncelledi|A phone screen shows circular arrows going round while it updates.|sky-blue|E
+upload|yüklemek|T|upload|ses|Fotoğrafı buluta yükledi|A photo floats up from a laptop to a small cloud with an up arrow.|sky-blue|E
+usage|kullanım|G|||Telefon kullanımını takip etti|A girl looks at a colourful pie chart on her phone.|lavender|E
+vary from|-den -e değişmek|I|||Dondurmanın boyu küçükten büyüğe değişiyor|A row of ice cream cones from tiny to huge.|pink|E
+vlogger|vlogger|T|vlogger|ses|Vlogger telefonuyla kendini çekti|A teenage girl films herself with a phone on a small tripod, talking and smiling.|pink|E
+website|web sitesi|T|web sitesi|ses|Okulun web sitesini açtı|A laptop shows a colourful website layout with pictures and boxes but no writing.|sky-blue|E

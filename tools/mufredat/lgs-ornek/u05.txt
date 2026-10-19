@@ -1,0 +1,40 @@
+# LGS ornek cumleleri: en|Ingilizce ornek|Turkce cevirisi
+access|You need a password to access the website.|Siteye erişmek için şifreye ihtiyacın var.
+account|I opened a new account on this website.|Bu sitede yeni bir hesap açtım.
+aim|The aim of this project is to help animals.|Bu projenin amacı hayvanlara yardım etmek.
+attachment|I sent the photos as an attachment.|Fotoğrafları ek olarak gönderdim.
+browse|I like to browse online bookshops.|Çevrim içi kitapçılarda gezinmeyi severim.
+browser|Open the browser and type the address.|Tarayıcıyı aç ve adresi yaz.
+click|Click the blue button to start.|Başlamak için mavi düğmeye tıkla.
+comment|She wrote a nice comment under my photo.|Fotoğrafımın altına güzel bir yorum yazdı.
+communication|The internet makes communication easy.|İnternet iletişimi kolaylaştırır.
+confirm|Please confirm your e-mail address.|Lütfen e-posta adresini onayla.
+connection|The internet connection is very slow today.|İnternet bağlantısı bugün çok yavaş.
+delete|Don't delete that file; I need it.|O dosyayı silme; ona ihtiyacım var.
+develop|Engineers develop new apps every day.|Mühendisler her gün yeni uygulamalar geliştirir.
+device|A tablet is a useful device for students.|Tablet öğrenciler için kullanışlı bir cihazdır.
+download|You can download the game for free.|Oyunu ücretsiz indirebilirsin.
+habit|Reading every night is a good habit.|Her gece kitap okumak iyi bir alışkanlıktır.
+ignore|Ignore messages from strangers.|Yabancılardan gelen mesajları görmezden gel.
+instant|Instant messages arrive in seconds.|Anlık mesajlar saniyeler içinde gelir.
+log in|Log in with your username and password.|Kullanıcı adın ve şifrenle giriş yap.
+notification|I got a notification from my friend.|Arkadaşımdan bir bildirim aldım.
+online|I chat with my cousin online every day.|Kuzenimle her gün çevrim içi sohbet ederim.
+password|Never share your password.|Şifreni asla paylaşma.
+post|Her last post got a hundred likes.|Son gönderisi yüz beğeni aldı.
+properly|Close the program properly before you turn off the computer.|Bilgisayarı kapatmadan önce programı düzgünce kapat.
+recent|These are my most recent photos.|Bunlar en son fotoğraflarım.
+register|You must register before the course starts.|Kurs başlamadan önce kaydolmalısın.
+reply|Please reply to my e-mail soon.|Lütfen e-postama yakında yanıt ver.
+research|I did some research for my history project.|Tarih projem için biraz araştırma yaptım.
+screen|Don't sit too close to the screen.|Ekrana çok yakın oturma.
+search engine|I found the answer with a search engine.|Cevabı bir arama motoruyla buldum.
+sign up|Sign up for our newsletter.|Bültenimize kaydol.
+social networking site|My mother joined a social networking site.|Annem bir sosyal ağ sitesine katıldı.
+subscriber|The channel has a million subscribers; I am a subscriber too.|Kanalın bir milyon abonesi var; ben de bir aboneyim.
+update|You should update your apps regularly.|Uygulamalarını düzenli olarak güncellemelisin.
+upload|I will upload the video tonight.|Videoyu bu gece yükleyeceğim.
+usage|Internet usage is increasing every year.|İnternet kullanımı her yıl artıyor.
+vary from|Prices vary from shop to shop.|Fiyatlar dükkândan dükkâna değişir.
+vlogger|The vlogger shares travel videos every week.|O vlogger her hafta gezi videoları paylaşıyor.
+website|Our school has a new website.|Okulumuzun yeni bir web sitesi var.

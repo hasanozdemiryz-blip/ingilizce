@@ -56,6 +56,7 @@ const ISTISNA = [
   // ve karsiliklari asagidaki ayri testte denetleniyor.
   /^\s*('[^']+',\s*)+$/,
   /\{ ad: '[^']+', dosya: '/,
+  /'yazılış'/, // types.ts, yazilis.ts: icerik verisindeki cagrisim yolu degeri (content/lgs.json)
 ];
 
 describe('arayuz dili', () => {

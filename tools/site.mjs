@@ -17,6 +17,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
+import { kelimeEk, konular, KONU_ADI, lgsKelimeleri, UNITELER } from './site-veri.mjs';
+import { lgsSayfalari, cocukSayfalari } from './site-bolumler.mjs';
 
 const KOK = path.resolve(import.meta.dirname, '..');
 const SITE = path.join(KOK, 'site');
@@ -43,13 +45,57 @@ const MENU = [
   ['/iletisim/', 'İletişim'],
 ];
 
+/**
+ * UC SEKME (18 Ekim): Genel · LGS · Cocuk. Tek uygulama; sekme yalnizca
+ * hangi kelimelerin gelecegini belirliyor. Her sekmenin kendi menusu, marka
+ * alt yazisi ve rengi var (stil.css `body[data-bolum]`). Ust serit
+ * tidalcolors.com'daki marka sekmelerinden: kucuk "HAFIZADA" + bolum adi.
+ */
+const BOLUMLER = {
+  genel: { ad: 'Genel', en: 'General', marka: 'İngilizce', ana: '/' },
+  lgs: { ad: 'LGS', en: 'LGS', marka: 'LGS İngilizce', ana: '/lgs/' },
+  cocuk: { ad: 'Çocuk', en: 'Kids', marka: 'Çocuklar için', ana: '/cocuk/' },
+};
+/** Uygulamaya gecis: bolum parametresi uygulama sekmeleri gelince (Faz 3) okunacak. */
+const baslaYol = (bolum) => (bolum && bolum !== 'genel' ? `/ingilizce/?basla=1&amp;bolum=${bolum}` : '/ingilizce/?basla=1');
+
+const MENU_LGS = [
+  ['/lgs/#uniteler', 'Üniteler'],
+  ['/lgs/en-onemli-25-kelime/', 'En önemli 25'],
+  ['/lgs/cikmis-sorulardaki-kelimeler/', 'Çıkmış sorular'],
+  ['/lgs/#yontem', 'Nasıl çalışıyor?'],
+  ['/lgs/#veli', 'Veliler için'],
+  ['/lgs/#sss', 'SSS'],
+];
+const MENU_COCUK = [
+  ['/cocuk/#siniflar', 'Sınıflar'],
+  ['/cocuk/#yontem', 'Nasıl çalışıyor?'],
+  ['/cocuk/#veli', 'Veliler için'],
+  ['/cocuk/#sss', 'SSS'],
+];
+
+function bolumSeridi(aktif, dil) {
+  const en = dil === 'en';
+  return `<nav class="bolum-serit" aria-label="${en ? 'Sections' : 'Bölümler'}">
+  <div class="kap">
+${Object.entries(BOLUMLER)
+  .map(
+    ([k, b]) =>
+      `    <a class="sekme sekme-${k}" href="${b.ana}"${k === aktif ? ' aria-current="page"' : ''}><span class="ust">HAFIZADA</span><span class="ad">${en ? b.en : b.ad}</span></a>`,
+  )
+  .join('\n')}
+  </div>
+</nav>`;
+}
+
 /** Footer'daki "Ogren" sutunu. */
 const OGREN = [
   ['/kelimeler/', 'Kelime listesi'],
-  ['/blog/', 'Blog'],
+  ['/lgs/', 'LGS kelimeleri'],
+  ['/cocuk/', 'Çocuklar için'],
   ['/blog/turkceye-benzeyen-ingilizce-kelimeler/', 'Türkçeye benzeyen kelimeler'],
-  ['/blog/ses-kancasi-yontemi/', 'Ses kancası yöntemi'],
-  ['/#sss', 'Sık sorulan sorular'],
+  ['/blog/ses-kancasi-yontemi/', 'Çağrışım yöntemi'],
+  ['/blog/', 'Blog'],
 ];
 
 /**
@@ -81,8 +127,8 @@ const KABUK = {
     BASLA: 'Hemen başla',
     MENU: 'Menü',
     ALT_TANIM:
-      'İngilizce kelimeleri benzer sesli Türkçe kelimelere bağlayarak öğren. Ezber yok, reklam yok, ücretsiz.',
-    UYGULAMA: 'Uygulama',
+      'Görselleştirilmiş hafıza tekniğiyle İngilizce: her kelimeyi sesiyle ya da yazılışıyla bir Türkçe kelimeye bağla. Ezber yok, reklam yok, ücretsiz.',
+    UYGULAMA: 'Platform',
     NASIL: 'Nasıl çalışıyor?',
     NEDEN: 'Neden işe yarıyor?',
     OGREN: 'Öğren',
@@ -103,7 +149,7 @@ const KABUK = {
     MENU: 'Menu',
     ALT_TANIM:
       'Learn English words by linking them to similar-sounding Turkish words. No rote learning, no ads, free.',
-    UYGULAMA: 'App',
+    UYGULAMA: 'Platform',
     NASIL: 'How it works',
     NEDEN: 'Why it works',
     OGREN: 'Learn',
@@ -147,11 +193,11 @@ const HREFLANG = [
 const SSS = [
   [
     'Hafızada İngilizce nedir?',
-    'İngilizce kelimeleri benzer sesli bir Türkçe kelimeye ve tek bir görsele bağlayarak öğreten ücretsiz bir uygulama. Kelimeyi ezberlemiyorsun; bir sese ve bir sahneye bağlıyorsun.',
+    'Görselleştirilmiş hafıza tekniğiyle İngilizce kelime öğreten ücretsiz bir online eğitim platformu. Her kelimeyi sesiyle ya da yazılışıyla bir Türkçe kelimeye ve tek bir sahneye bağlıyorsun; ezberlemiyorsun.',
   ],
   [
-    'Ses kancası ne demek?',
-    'İngilizce kelimeye sesçe benzeyen bir Türkçe kelime. Örneğin sell (satmak) ≈ sel: “Sel gelmeden evini sattı.” Sahneyi hatırlayınca kelimenin anlamı da geliyor.',
+    'Çağrışım ne demek?',
+    'İngilizce kelimenin aklına getirdiği Türkçe kelime. Sesten gelebilir: sell (satmak) ≈ sel, “Sel gelmeden evini sattı.” Yazılıştan da gelebilir: delicious kelimesinin içinde “deli” yazıyor, “Deli aşçının yemeği lezzetli çıktı.” Sahneyi hatırlayınca anlam da geliyor.',
   ],
   [
     'Ücretli mi?',
@@ -163,15 +209,19 @@ const SSS = [
   ],
   [
     'Telaffuzu da öğrenebilir miyim?',
-    'Evet. Kanca anlamı hatırlatır, telaffuzu değil; o yüzden her kelimenin doğru sesini dinlersin ve son basamakta kelimeyi yalnızca duyarak tanırsın.',
+    'Evet. Çağrışım anlamı hatırlatır, telaffuzu değil; o yüzden her kelimenin doğru sesini dinlersin ve son basamakta kelimeyi yalnızca duyarak tanırsın.',
   ],
   [
     'Günde ne kadar zaman ayırmalıyım?',
-    'Günde 5, 10 ya da 15 yeni kelime seçebilirsin. Bir ders birkaç dakika sürer; uygulama tekrarları tam unutacakken karşına getirir.',
+    'Günde 5, 10 ya da 15 yeni kelime seçebilirsin. Bir ders birkaç dakika sürer; platform tekrarları tam unutacakken karşına getirir.',
   ],
   [
     'Hangi cihazlarda çalışıyor?',
     'Telefonun ve bilgisayarının tarayıcısında çalışır. Ana ekrana ekleyip uygulama gibi kullanabilirsin; internet yokken de açılır.',
+  ],
+  [
+    'LGS ve çocuklar için de var mı?',
+    'Evet. LGS sekmesinde 8. sınıfın 10 ünitesinin kelimeleri, LGS’de en çok çıkanlar ve mini testler var; platformda her ünitenin kelimeleri çağrışım ve görselleriyle, kalıpları, sesli diyalogları ve ünite testi. Çocuk sekmesi 2–6. sınıf için okul müfredatına uygun olarak hazırlanıyor.',
   ],
 ];
 
@@ -202,6 +252,10 @@ const SSS_EN = [
     'Which devices does it work on?',
     'It runs in the browser on your phone and computer. Add it to your home screen to use it like an app; it opens even without internet.',
   ],
+  [
+    'Is there something for exams and kids?',
+    'Yes. The LGS tab covers the 8th-grade national exam vocabulary unit by unit, and the Kids tab is being prepared for grades 2–6 (both in Turkish).',
+  ],
 ];
 
 /** Kahraman slider: urun degil INSAN (bkz. NOTLAR). */
@@ -210,29 +264,35 @@ const KISILER = [
     en: { an: 'Four minutes on the bus', sure: 'Five words between two stops' } },
   { dosya: 'kahve', an: 'Kahve molasında', sure: 'Ezber yok. Bağlıyorsun, kalıyor.',
     en: { an: 'On a coffee break', sure: 'No memorizing. You link it, it stays.' } },
-  { dosya: 'ogrenci', an: 'Sırada beklerken', sure: 'Telefon açık, kanca hazır',
+  { dosya: 'ogrenci', an: 'Sırada beklerken', sure: 'Telefon açık, çağrışım hazır',
     en: { an: 'Waiting in line', sure: 'Phone out, hook ready' } },
   { dosya: 'kanepe', an: 'Akşam kanepede', sure: 'Günlük hedef dolunca gün kapanıyor',
     en: { an: 'On the couch at night', sure: 'Hit your daily goal and the day is done' } },
 ];
 
 /**
- * Sitede sayfasi olan kelime sayisi — uygulamadaki setin EN SIK kullanilan
- * kelimeleri (`order` = siklik sirasi).
+ * KELIME SAYFALARI: setin TAMAMI (18 Ekim; once yalnizca 20 "vitrin" kelime).
  *
- * Neden hepsi degil: kancalar urunun asil degeri; yuzunu birden aramaya
- * acmak kopyalanmalarini kolaylastirir. Ayrica ayni sablondan yuz sayfa,
- * Google'in "toplu uretilmis" saydigi turden ve butun sitenin siralamasini
- * asagi cekebilir. Yirmi vitrin kelime; Search Console verisi gelince
- * genisletme karari verilecek (bkz. NOTLAR, 5 Ekim).
+ * 5 Ekim'de iki cekince vardi: cagrisimlar urunun degeri, toplu acmak
+ * kopyalanmayi kolaylastirir; ayni sablondan yuzlerce ince sayfa Google'in
+ * "toplu uretilmis" saydigi turden olabilir. Search Console (18 Ekim) kelime
+ * sayfalarinin gosterim aldigini ama tiklanmadigini gosterdi: "X ne demek"
+ * aramasini Google kendi kutusuyla yanitliyor, sayfa da inceydi. Kullanici
+ * hepsini acmayi onayladi; ince olmasin diye her sayfaya okunus, Ingilizce
+ * ornek cumle + ceviri, konu, LGS unitesi ve mini test eklendi
+ * (tools/kelime-ek.txt). Eski 20 adres degismedi.
+ *
+ * 19 Ekim: "her seyi verme" — yalniz 50 sayfa. Yayindaki 20 (Search
+ * Console'da gosterim aliyorlar) + siklik, mufredat ve Google onerisiyle
+ * secilen 30 (tools/arama-sinyal.json). Gerisi platformda.
  */
-/*
-  ACIK LISTE, hesaplanmiyor: once "setin en sik 20'si" diye hesaplaniyordu;
-  set buyudukce (6 Ekim: 100 → 200) liste kayabilir ve Google'a bildirilmis
-  /kelime/<id>/ adresleri 404 verirdi. Adresler sabit kalmali.
-*/
-const VITRIN = ['far', 'sell', 'door', 'salt', 'dust', 'sick', 'bad', 'car', 'eye', 'fish',
-  'dark', 'deep', 'cup', 'coat', 'boat', 'box', 'brother', 'foot', 'full', 'safe'];
+const SAYFA_KELIMELERI = [
+  'far', 'sell', 'door', 'salt', 'dust', 'sick', 'bad', 'car', 'eye', 'fish',
+  'dark', 'deep', 'cup', 'coat', 'boat', 'box', 'brother', 'foot', 'full', 'safe',
+  'put', 'bowl', 'branch', 'lead', 'short', 'table', 'cut', 'gate', 'jam', 'feed',
+  'crack', 'pass', 'wash', 'meet', 'belt', 'rule', 'pillow', 'thunder', 'storm', 'hook',
+  'bag', 'fork', 'cap', 'season', 'freeze', 'towel', 'spin', 'arm', 'lamp', 'torch',
+];
 
 /**
  * Kanca bolumunun havuzu: kancasi en net anlasilan dokuz kart — YALNIZCA
@@ -252,9 +312,9 @@ const DENEME_METIN = {
     kayboldu: 'Kart kayboldu.',
     soru: '{en} ne demekti?',
     dogruBaslik: 'Hatırladın.',
-    dogruMetin: 'Ezberlemedin, bağladın. Uygulamada her gün yeni kelimeler böyle geliyor.',
+    dogruMetin: 'Ezberlemedin, bağladın. Platformda her gün yeni kelimeler böyle geliyor.',
     yanlisBaslik: 'Doğrusu: {tr}',
-    yanlisMetin: 'Kanca: {en} ≈ {hook}. Birkaç tekrarda oturuyor.',
+    yanlisMetin: 'Çağrışım: {en} ≈ {hook}. Birkaç tekrarda oturuyor.',
     devam: 'Devam et',
   },
   en: {
@@ -266,7 +326,7 @@ const DENEME_METIN = {
     dogruBaslik: 'You remembered.',
     dogruMetin: 'No memorizing, just a link. The app brings new words like this every day.',
     yanlisBaslik: 'It means: {tr}',
-    yanlisMetin: 'Hook: {en} ≈ {hook}. It settles in after a few reviews.',
+    yanlisMetin: 'Memory hook: {en} ≈ {hook}. It settles in after a few reviews.',
     devam: 'Keep going',
   },
 };
@@ -290,7 +350,7 @@ const YASAL = [
   {
     dosya: 'kullanim-kosullari',
     baslik: 'Kullanım Koşulları',
-    aciklama: 'Hafızada İngilizce uygulamasının kullanım koşulları.',
+    aciklama: 'Hafızada İngilizce platformunun kullanım koşulları.',
   },
   {
     dosya: 'kvkk',
@@ -467,14 +527,79 @@ function kelimeAciklama(k) {
   return `<div class="aciklama">
       <h2>${En} nasıl akılda kalır?</h2>
       ${bag}
-      <p>Benzer sesli bir Türkçe kelimeyle kurulan bu bağa <a href="/blog/ses-kancasi-yontemi/">ses kancası</a> diyoruz. Kanca anlamı hatırlatır; doğru okunuş için <b>Dinle</b> düğmesine bas.</p>
+      <p>Kelimenin sesiyle ya da yazılışıyla bir Türkçe kelime arasında kurulan bu bağa <a href="/blog/ses-kancasi-yontemi/">çağrışım</a> diyoruz; yöntemin adı görselleştirilmiş hafıza tekniği. Çağrışım anlamı hatırlatır; doğru okunuş için <b>Dinle</b> düğmesine bas.</p>
     </div>`;
 }
 
 // --- Uretim ------------------------------------------------------------------
 
+/**
+ * MINI TEST (kelime ve unite sayfalari): `data-test` icinde soru listesi —
+ * {soru (HTML), secenekler, dogru}. Secenekler tarayicida karisiyor; ilk
+ * secenek her zaman dogrusu oldugu icin sunucuda sira verilmiyor.
+ */
+const TEST_JS = `<script>
+(function () {
+  function karistir(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var x = a[i]; a[i] = a[j]; a[j] = x; } return a; }
+  document.querySelectorAll('[data-test]').forEach(function (kutu) {
+    var sorular = JSON.parse(kutu.getAttribute('data-test'));
+    var i = 0, dogru = 0;
+    function goster() {
+      kutu.innerHTML = '';
+      if (i >= sorular.length) {
+        var s = document.createElement('p'); s.className = 'test-sonuc';
+        s.innerHTML = '<b>' + dogru + ' / ' + sorular.length + '</b> doğru. ' + (dogru === sorular.length ? 'Harika!' : 'Kaçırdıklarını platformda tekrar edebilirsin.');
+        var t = document.createElement('button'); t.type = 'button'; t.className = 'btn btn-beyaz'; t.textContent = 'Tekrar çöz';
+        t.onclick = function () { i = 0; dogru = 0; goster(); };
+        kutu.appendChild(s); kutu.appendChild(t); return;
+      }
+      var q = sorular[i];
+      var sira = document.createElement('p'); sira.className = 'test-sira'; sira.textContent = 'Soru ' + (i + 1) + ' / ' + sorular.length;
+      var soru = document.createElement('p'); soru.className = 'test-soru'; soru.innerHTML = q.soru;
+      var izgara = document.createElement('div'); izgara.className = 'test-secenekler';
+      var geri = document.createElement('p'); geri.className = 'test-geri'; geri.setAttribute('aria-live', 'polite');
+      karistir(q.secenekler).forEach(function (yazi) {
+        var b = document.createElement('button'); b.type = 'button'; b.className = 'secenek'; b.textContent = yazi;
+        b.onclick = function () {
+          var bildi = yazi === q.dogru;
+          if (bildi) dogru++;
+          izgara.querySelectorAll('button').forEach(function (d) {
+            d.disabled = true;
+            if (d.textContent === q.dogru) d.classList.add('dogru');
+          });
+          if (!bildi) b.classList.add('yanlis');
+          geri.textContent = bildi ? 'Doğru!' : 'Doğrusu: ' + q.dogru;
+          var ileri = document.createElement('button'); ileri.type = 'button'; ileri.className = 'btn btn-sari';
+          ileri.textContent = i + 1 < sorular.length ? 'Sonraki' : 'Sonucu gör';
+          ileri.onclick = function () { i++; goster(); };
+          kutu.appendChild(ileri); ileri.focus();
+        };
+        izgara.appendChild(b);
+      });
+      kutu.appendChild(sira); kutu.appendChild(soru); kutu.appendChild(izgara); kutu.appendChild(geri);
+    }
+    goster();
+  });
+})();
+</script>`;
+
+/** Ornek cumlede kelimeyi bosluga cevir (cekimli halleri de: shoot → shot degil, shoots/shooting evet). */
+function bosluklu(cumle, en) {
+  // Kelimeler yalnizca harf: kacis gerekmiyor. Ikinci harf tekrarli cekim (stopped) de.
+  const re = new RegExp(`\\b${en}(?:${en.at(-1)})?(?:s|es|ed|d|ing)?\\b`, 'i');
+  return re.test(cumle) ? cumle.replace(re, '……') : null;
+}
+
+/**
+ * 18 Ekim guvenlik turunda cumlesi/kancasi degisen kartlar (bkz.
+ * tools/guvenlik-cumleleri.mjs). Gorselleri hala ESKI sahne (ornegin gun:
+ * silahli siluet); yeniden uretilene kadar sitede sayfalari yok. Gorsel
+ * gelince listeden cikar.
+ */
+const GORSEL_YENILENECEK = ['rob'];
+
 /** Uretilen klasorler — her derlemede bastan yaziliyor, eskisi kalmasin. */
-const URETILEN = ['varliklar', 'kelime', 'kelimeler', 'blog', 'iletisim', 'gizlilik', 'kullanim-kosullari', 'kvkk', 'en'];
+const URETILEN = ['varliklar', 'kelime', 'kelimeler', 'blog', 'iletisim', 'gizlilik', 'kullanim-kosullari', 'kvkk', 'en', 'lgs', 'cocuk'];
 
 async function derle(hedef) {
   for (const k of URETILEN) fs.rmSync(path.join(hedef, k), { recursive: true, force: true });
@@ -653,6 +778,25 @@ async function derle(hedef) {
     </div>`;
   };
 
+  /** Ana sayfadaki "Kimin icin?" — uc sekmenin kapisi (ic baglanti da). */
+  const lgsSayi = lgsKelimeleri().length;
+  const bolumKartlari = (dil) => {
+    const en = dil === 'en';
+    const kart = (b, baslik, metin, alt) =>
+      `<a class="bolum-kart bolum-kart-${b}" href="${BOLUMLER[b].ana}"><span class="ust">HAFIZADA</span><span class="ad">${en ? BOLUMLER[b].en : BOLUMLER[b].ad}</span><h3>${baslik}</h3><p>${metin}</p><span class="devam">${alt} →</span></a>`;
+    return `<section class="kimin-icin" id="kimin-icin">
+  <div class="kap">
+    <h2>${en ? 'Who is it for?' : 'Kimin için?'}</h2>
+    <p class="ust">${en ? 'One method, three tabs. Pick yours at the top of the page.' : 'Tek yöntem, üç sekme. Sayfanın en üstünden seçebilirsin.'}</p>
+    <div class="bolum-kartlar">
+      ${kart('genel', en ? 'Everyday English' : 'Günlük İngilizce', en ? 'The most used English words with Turkish memory hooks.' : 'En sık kullanılan İngilizce kelimeler, çağrışımları ve görselleriyle.', en ? 'You are here' : 'Buradasın')}
+      ${kart('lgs', en ? '8th grade national exam' : '8. sınıf, LGS', en ? `${lgsSayi} words in 10 units, the most frequent exam words, mini tests.` : `10 ünitede ${lgsSayi} kelime ve kalıp, LGS'de en çok çıkanlar, mini testler.`, en ? 'LGS words (Turkish)' : 'LGS kelimeleri')}
+      ${kart('cocuk', en ? 'Kids, grades 2–6' : 'Çocuklar, 2–6. sınıf', en ? 'School-curriculum words with pictures. Coming soon.' : 'Okul müfredatına uygun, resimli kelimeler. Hazırlanıyor.', en ? 'For parents (Turkish)' : 'Veliler için')}
+    </div>
+  </div>
+</section>`;
+  };
+
   const anaSayfa = (dil) => {
     const en = dil === 'en';
     const yerine = {
@@ -662,6 +806,7 @@ async function derle(hedef) {
         .slice(0, GORUNEN)
         .map((k) => `<article class="kanca-kart">${kartGovde(k)}</article>`)
         .join(''),
+      BOLUM_KARTLARI: bolumKartlari(dil),
       SSS: en ? ingilizceye(sssHtml(SSS_EN)) : sssHtml(SSS),
       ILETISIM: en ? ingilizceye(iletisimBolum('Write to us')) : iletisimBolum('Bize yaz'),
       ...cizimler,
@@ -678,18 +823,18 @@ async function derle(hedef) {
     enParcaDenetle([oku('sayfalar/iletisim-bolum.html'), formHtml, formJs, anaJs, oku('sayfalar/sss.html')]);
   }
 
-  // --- Kelimeler: gorseli olan kartlar (uygulamadaki set) ---
+  // --- Kelimeler: gorseli olan kartlarin hepsi (uygulamadaki set) ---
   const setKartlari = tumKartlar
     .filter((k) => fs.existsSync(path.join(KOK, 'src/assets/cards', `${k.id}.webp`)))
+    .filter((k) => !GORSEL_YENILENECEK.includes(k.id))
     .sort((a, b) => a.order - b.order);
-  const kelimeler = VITRIN.map((id) => {
-    const k = setKartlari.find((x) => x.id === id);
-    if (!k) throw new Error(`vitrin kelimesinin gorseli yok: ${id}`);
-    return k;
-  });
+  const kelimeler = setKartlari.filter((k) => SAYFA_KELIMELERI.includes(k.id));
+  if (kelimeler.length !== SAYFA_KELIMELERI.length) {
+    throw new Error(`sayfa kelimesi sette yok: ${SAYFA_KELIMELERI.filter((id) => !kelimeler.some((k) => k.id === id)).join(', ')}`);
+  }
   const yayinda = new Set(kelimeler.map((k) => k.id));
   const disarida = HAVUZ.filter((id) => !yayinda.has(id));
-  if (disarida.length) throw new Error(`kanca havuzunda vitrin disi kelime: ${disarida.join(', ')}`);
+  if (disarida.length) throw new Error(`kanca havuzunda yayinda olmayan kelime: ${disarida.join(', ')}`);
   for (const k of kelimeler) {
     k.sayfaResmi = await webpYaz(
       hedef,
@@ -699,20 +844,60 @@ async function derle(hedef) {
       600,
     );
   }
+  const ekler = kelimeEk();
+  const konu = konular();
+  const eksikEk = kelimeler.filter((k) => !ekler.has(k.id)).map((k) => k.id);
+  if (eksikEk.length) throw new Error(`tools/kelime-ek.txt eksik: ${eksikEk.join(', ')}`);
+  /** LGS'de gecen kelime → unite (kelime sayfasinda rozet ve baglanti). */
+  const lgsUnite = new Map(lgsKelimeleri().map((k) => [k.en, UNITELER[k.unite - 1]]));
+
   const kelimeKart = (k) =>
     `<a href="/kelime/${k.id}/"><span class="en">${k.en}</span><span class="tr">${esc(k.tr)}</span></a>`;
 
+  /** Ayni konudan, sirayla dagitilmis alti kelime; konu kucukse komsular. */
+  const benzerleri = (k, i) => {
+    const ayni = kelimeler.filter((x) => x !== k && konu.get(x.id) && konu.get(x.id) === konu.get(k.id));
+    const sec = ayni.length >= 6 ? [0, 1, 2, 3, 4, 5].map((d) => ayni[(i + d * 7) % ayni.length]) : ayni;
+    const tamam = new Set(sec);
+    for (let d = 1; sec.length < 6; d++) {
+      const x = kelimeler[(i + d) % kelimeler.length];
+      if (!tamam.has(x) && x !== k) { sec.push(x); tamam.add(x); }
+    }
+    return [...new Set(sec)].slice(0, 6);
+  };
+
+  /** Iki soru: anlam secimi ve ornek cumlede bosluk. Celdiriciler ayni konudan. */
+  const kelimeTesti = (k, benzer) => {
+    const tekil = (dizi) => [...new Set(dizi)];
+    const ek = ekler.get(k.id);
+    const celdirici = tekil(benzer.map((x) => x.tr).filter((tr) => tr !== k.tr)).slice(0, 3);
+    const sorular = [{ soru: `<b>${esc(k.en)}</b> ne demek?`, secenekler: [k.tr, ...celdirici], dogru: k.tr }];
+    const bos = bosluklu(ek.ornek, k.en);
+    if (bos) {
+      const enler = tekil(benzer.map((x) => x.en).filter((en) => en !== k.en)).slice(0, 3);
+      sorular.push({ soru: `Boşluğa hangisi gelir?<br><i>${esc(bos)}</i>`, secenekler: [k.en, ...enler], dogru: k.en });
+    }
+    return sorular;
+  };
+
   const kelimeSayfalari = kelimeler.map((k, i) => {
     const En = enBuyuk(k.en);
-    const benzer = [1, 2, 3, 4, 5, 6].map((d) => kelimeler[(i + d) % kelimeler.length]);
+    const benzer = benzerleri(k, i);
     const yol = `/kelime/${k.id}/`;
+    const ek = ekler.get(k.id);
+    const kn = konu.get(k.id);
+    const unite = lgsUnite.get(k.en);
+    const rozetler = [
+      kn ? `<span class="bilgi-rozet">Konu: ${KONU_ADI[kn]}</span>` : '',
+      unite ? `<a class="bilgi-rozet lgs" href="${unite.yol}">LGS · 8. sınıf ${unite.no}. ünite</a>` : '',
+    ].join('');
     return {
       yol,
-      baslik: `${En} ne demek? Türkçe anlamı “${k.tr}” — Hafızada İngilizce`,
-      aciklama: `${En} Türkçede “${k.tr}” demek. ${k.en} ≈ ${k.hook} kancasıyla akılda kalır: “${k.sentence}” Görselli ve sesli öğren.`,
+      baslik: `${En} ne demek? Türkçe anlamı, okunuşu ve örnek cümle — Hafızada`,
+      aciklama: `${En} Türkçede “${k.tr}” demek, okunuşu “${ek.okunus}”. Örnek: ${ek.ornek} Çağrışım: ${k.en} ≈ ${k.hook}, “${k.sentence}”`,
       ogTur: 'article',
       icerik:
-        altBaslik(`${En} ne demek?`, `${En}, Türkçede <b>${esc(k.tr)}</b> demek.`, [
+        altBaslik(`${En} ne demek?`, `${En}, Türkçede <b>${esc(k.tr)}</b> demek. Okunuşu: <b>${esc(ek.okunus)}</b>`, [
           ['Kelimeler', '/kelimeler/'],
           [k.en, yol],
         ]) +
@@ -721,27 +906,36 @@ async function derle(hedef) {
     <div class="gorsel"><img src="${k.sayfaResmi}" alt="${esc(k.sentence)}" width="800" height="600"></div>
     <div>
       <p class="anlam">${k.en} — anlamı<b>${esc(k.tr)}</b></p>
+      <div class="okunus-satir"><button class="btn btn-beyaz dinle" type="button" data-dinle="${k.en}">${HOPARLOR} Dinle</button><span class="okunus">okunuşu (yaklaşık): <b>${esc(ek.okunus)}</b></span></div>
       <div class="kanca-kutu">
         <span class="kanca-rozet">${k.en} ≈ ${esc(k.hook)}</span>
         <p class="cumle">“${esc(k.sentence)}”</p>
       </div>
-      <button class="btn btn-beyaz dinle" type="button" data-dinle="${k.en}">${HOPARLOR} Dinle</button>
+      <div class="ornek-kutu">
+        <span class="kucuk-baslik">Örnek cümle</span>
+        <p class="ornek-en" lang="en">${esc(ek.ornek)}</p>
+        <p class="ornek-tr">${esc(ek.ornekTr)}</p>
+      </div>
+      ${rozetler ? `<div class="rozetler">${rozetler}</div>` : ''}
       ${kelimeAciklama(k)}
+      <div class="test-bolum kucuk-test"><h2>Kendini dene</h2>
+        <div class="mini-test" data-test="${esc(JSON.stringify(kelimeTesti(k, benzer)))}"><p>Mini test için JavaScript gerekiyor.</p></div>
+      </div>
       <div class="cagri">
-        <p>${k.en} ve ${setKartlari.length - 1} kelime daha uygulamada kancası ve görseliyle seni bekliyor.</p>
-        <a class="btn btn-lacivert" href="/ingilizce/?basla=1" data-basla>Hemen başla</a>
+        <p>${k.en} ve ${setKartlari.length - 1} kelime daha platformda çağrışımı ve görseliyle seni bekliyor.</p>
+        <a class="btn btn-lacivert" href="${baslaYol('genel')}" data-basla>Hemen başla</a>
       </div>
     </div>
   </div>
 </section>
 <section class="benzerler">
   <div class="kap">
-    <h2>Diğer kelimeler</h2>
+    <h2>${kn ? `${KONU_ADI[kn]}: diğer kelimeler` : 'Diğer kelimeler'}</h2>
     <div class="kelime-izgara">${benzer.map(kelimeKart).join('')}</div>
     <p style="margin-top:16px"><a href="/kelimeler/"><b>Bütün kelimeler →</b></a></p>
   </div>
 </section>`,
-      script: DINLE_JS,
+      script: DINLE_JS + TEST_JS,
       ld: jsonld(
         kirinti([['Ana sayfa', '/'], ['Kelimeler', '/kelimeler/'], [k.en, yol]]),
         {
@@ -760,6 +954,7 @@ async function derle(hedef) {
         },
       ),
       resim: `${ALAN}${k.sayfaResmi}`,
+      resimler: [`${ALAN}${k.sayfaResmi}`],
     };
   });
 
@@ -772,13 +967,13 @@ async function derle(hedef) {
   }
   const kelimeListesi = {
     yol: '/kelimeler/',
-    baslik: `En sık kullanılan ${kelimeler.length} İngilizce kelime ve Türkçe anlamları — Hafızada İngilizce`,
-    aciklama: `En sık kullanılan ${kelimeler.length} İngilizce kelime: her birinin Türkçe anlamı, benzer sesli Türkçe kancası ve akılda kalan sahnesi.`,
+    baslik: `Sık kullanılan ${kelimeler.length} İngilizce kelime: Türkçe anlamları, okunuşları ve hafıza teknikleri — Hafızada`,
+    aciklama: `${kelimeler.length} İngilizce kelime: her birinin Türkçe anlamı, okunuşu, örnek cümlesi, Türkçe çağrışımı ve akılda kalan sahnesi.`,
     ogTur: 'website',
     icerik:
       altBaslik(
         'Kelimeler',
-        `En sık kullanılan ${kelimeler.length} İngilizce kelime, Türkçe anlamı ve ses kancasıyla. Uygulamada ${setKartlari.length} kelimenin hepsi seni bekliyor.`,
+        `Sık kullanılan ${kelimeler.length} İngilizce kelime; Türkçe anlamı, okunuşu, örnek cümlesi ve çağrışımıyla. Platformda ${setKartlari.length} kelimenin hepsi var. LGS kelimeleri için <a href="/lgs/" style="color:#fff;text-decoration:underline">LGS sekmesine</a> bak.`,
         [['Kelimeler', '/kelimeler/']],
       ) +
       `<section class="benzerler">
@@ -824,7 +1019,7 @@ ${[...harfGruplari]
 <p class="ustbilgi">${new Date(y.tarih).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' })} · Hafızada İngilizce</p>
 ${y.govde}
 <div class="cagri yazi-alt">
-  <p>Kancaları ve görselleriyle ilk kelimelerini şimdi öğren. Ücretsiz.</p>
+  <p>Çağrışımları ve görselleriyle ilk kelimelerini şimdi öğren. Ücretsiz.</p>
   <a class="btn btn-lacivert" href="/ingilizce/?basla=1" data-basla>Hemen başla</a>
 </div>
 <nav class="ilgili" aria-label="Diğer yazılar">
@@ -873,12 +1068,19 @@ ${yazilar
   };
 
   // --- Sayfa listesi ---
+  /** LGS ve Cocuk sayfalarinin (site-bolumler.mjs) kullandigi yardimcilar. */
+  const baglam = {
+    ALAN, esc, jsonld, kirinti, altBaslik, baslaYol, TEST_JS,
+    sssHtml,
+    kartlar: new Map(kelimeler.map((k) => [k.en, k])),
+  };
+
   const sayfalar = [
     {
       yol: '/',
-      baslik: 'Hafızada İngilizce — Ezberlemeden İngilizce kelime öğren',
+      baslik: 'Hafızada — Hafıza Teknikleriyle İngilizce Kelime Öğren',
       aciklama:
-        'Her İngilizce kelimeyi benzer sesli bir Türkçe kelimeye ve tek bir görsele bağla. Ezber yok, reklam yok, ücretsiz.',
+        'Görselleştirilmiş hafıza teknikleriyle İngilizce kelime öğren: her kelime bir Türkçe çağrışıma ve tek bir resme bağlanıyor. Genel İngilizce, LGS ve çocuklar için. Ücretsiz, reklamsız.',
       ogTur: 'website',
       icerik: anaGovde,
       script: anaJs + formJs,
@@ -961,11 +1163,15 @@ ${yazilar
         `<div class="kap"><article class="metin">\n${oku(`yasal/${y.dosya}.html`)}\n${ilgili(y.dosya)}\n</article></div>`,
       script: '',
       ld: jsonld(kirinti([['Ana sayfa', '/'], [y.baslik, `/${y.dosya}/`]])),
+      // 18 Ekim: Google sonucun altinda bu sayfalari gosteriyordu; aramada gerekmiyorlar.
+      robots: 'noindex, follow',
     })),
     kelimeListesi,
     ...kelimeSayfalari,
     blogListesi,
     ...blogSayfalari,
+    ...lgsSayfalari(baglam),
+    ...cocukSayfalari(baglam),
   ];
 
   /**
@@ -973,15 +1179,23 @@ ${yazilar
    * Turkce sayfalarda EN, Ingilizce ana sayfaya gidiyor ve hreflang yok
    * (karsiligi olmayan sayfaya alternatif bildirmek Google'i yaniltir).
    */
-  const dilYerleri = (dil, yol) => {
+  const dilYerleri = (dil, yol, bolum = 'genel') => {
     const en = dil === 'en';
     const anaMi = yol === '/' || yol === '/en/';
+    const menu = bolum === 'lgs' ? MENU_LGS : bolum === 'cocuk' ? MENU_COCUK : en ? MENU_EN : MENU;
     const yerine = {
       DIL: dil,
       OG_LOCALE: en ? 'en_US' : 'tr_TR',
       HREFLANG: anaMi ? HREFLANG : '',
       DIL_SECICI: dilSecici(dil, en ? '/' : yol, '/en/'),
-      MENU: menuHtml(en ? MENU_EN : MENU, '      '),
+      BOLUM: bolum,
+      BOLUM_SERIDI: bolumSeridi(bolum, dil),
+      MARKA_ALT: BOLUMLER[bolum].marka,
+      // Logo bulundugu sekmenin ana sayfasina gider (LGS'de /lgs/, Ingilizce'de /en/).
+      MARKA_YOL: bolum === 'genel' ? (en ? '/en/' : '/') : BOLUMLER[bolum].ana,
+      BASLA_YOL: baslaYol(bolum),
+      ROBOTS: '',
+      MENU: menuHtml(menu, '      '),
       OGREN_MENU: menuHtml(en ? OGREN_EN : OGREN, '      '),
       YIL: String(new Date().getFullYear()),
     };
@@ -1001,7 +1215,8 @@ ${yazilar
       JSONLD: s.ld,
       ICERIK: s.icerik,
       SCRIPT: s.script,
-      ...dilYerleri(s.dil ?? 'tr', s.yol),
+      ...dilYerleri(s.dil ?? 'tr', s.yol, s.bolum ?? 'genel'),
+      ROBOTS: s.robots ? `<meta name="robots" content="${s.robots}">` : '',
     };
     for (const [k, d] of Object.entries(yerine)) html = html.split(`__${k}__`).join(d);
     const kalan = html.match(/__[A-Z_]+__/g);
@@ -1018,8 +1233,9 @@ ${yazilar
     OG_TUR: 'website',
     OG_RESIM: OG,
     SURUM: surum,
-    JSONLD: '<meta name="robots" content="noindex">',
+    JSONLD: '',
     ...dilYerleri('tr', '/'),
+    ROBOTS: '<meta name="robots" content="noindex">',
     // 404'te dil secici ana sayfalara gitsin, hreflang olmasin.
     HREFLANG: '',
     ICERIK:
@@ -1037,8 +1253,14 @@ ${yazilar
     hedef,
     'sitemap.xml',
     `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sayfalar.map((s) => `  <url><loc>${ALAN}${s.yol}</loc><lastmod>${bugun}</lastmod></url>`).join('\n')}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+${sayfalar
+  .filter((s) => !s.robots)
+  .map(
+    (s) =>
+      `  <url><loc>${ALAN}${s.yol}</loc><lastmod>${bugun}</lastmod>${(s.resimler ?? []).map((r) => `<image:image><image:loc>${r}</image:loc></image:image>`).join('')}</url>`,
+  )
+  .join('\n')}
 </urlset>
 `,
   );
@@ -1057,7 +1279,7 @@ Sitemap: ${ALAN}/sitemap.xml
   );
 
   console.log(
-    `${hedef} — ${sayfalar.length} sayfa (${kelimeSayfalari.length} kelime, ${blogSayfalari.length} yazı) + 404, iletişim formu ${ILETISIM_HAZIR ? 'AÇIK' : 'kapalı (e-posta bağlantısı)'}`,
+    `${hedef} — ${sayfalar.length} sayfa (${kelimeSayfalari.length} kelime, ${blogSayfalari.length} yazı, LGS + Çocuk ${sayfalar.filter((s) => s.bolum).length}) + 404, iletişim formu ${ILETISIM_HAZIR ? 'AÇIK' : 'kapalı (e-posta bağlantısı)'}`,
   );
 }
 

@@ -1,0 +1,58 @@
+{
+ "unite": 2,
+ "ad": "Teen Life",
+ "konu": "Sevdiklerini ve sevmediklerini söylemek, tercih belirtmek, gençlik hayatını anlatmak",
+ "kaliplar": [
+  { "en": "I prefer board games to video games.", "tr": "Kutu oyunlarını video oyunlarına tercih ederim.", "not": "prefer A to B" },
+  { "en": "I'm fond of trekking in the mountains.", "tr": "Dağlarda doğa yürüyüşü yapmayı çok severim.", "not": "be fond of + -ing" },
+  { "en": "I can't stand loud music.", "tr": "Yüksek sese dayanamam.", "not": "Hiç sevmemek" },
+  { "en": "I'm into folk music these days.", "tr": "Bu aralar halk müziğine merakım var.", "not": "be into" },
+  { "en": "I'd rather stay at home than go to the cinema.", "tr": "Sinemaya gitmektense evde kalmayı tercih ederim.", "not": "would rather ... than" },
+  { "en": "I don't mind doing push-ups every morning.", "tr": "Her sabah şınav çekmekten rahatsız olmam.", "not": "don't mind + -ing" },
+  { "en": "My favourite free-time activity is archery.", "tr": "En sevdiğim boş zaman etkinliği okçuluk.", "not": "Favori" },
+  { "en": "I'm not interested in fashion.", "tr": "Modayla ilgilenmiyorum.", "not": "be interested in" },
+  { "en": "We usually hang out at the park after school.", "tr": "Okuldan sonra genelde parkta takılırız.", "not": "Sıklık + hang out" },
+  { "en": "Teenagers should be self-disciplined.", "tr": "Gençler öz disiplinli olmalı.", "not": "should" }
+ ],
+ "diyaloglar": [
+  {
+   "baslik": "Hangi müzik?",
+   "satirlar": [
+    { "kim": "Ayşe", "cinsiyet": "k", "en": "What types of music do you like, Mert?", "tr": "Ne tür müzikler seversin, Mert?" },
+    { "kim": "Mert", "cinsiyet": "e", "en": "I'm into rock, but I can't stand jazz. What about you?", "tr": "Rock'a merakım var ama caza dayanamam. Ya sen?" },
+    { "kim": "Ayşe", "cinsiyet": "k", "en": "I prefer folk music. It's relaxing.", "tr": "Ben halk müziğini tercih ederim. Rahatlatıcı." },
+    { "kim": "Mert", "cinsiyet": "e", "en": "Maybe you can play me some songs one day.", "tr": "Belki bir gün bana birkaç şarkı çalarsın." }
+   ]
+  },
+  {
+   "baslik": "Kamp hazırlığı",
+   "satirlar": [
+    { "kim": "Kerem", "cinsiyet": "e", "en": "We are going camping next weekend. Do you have a sleeping bag?", "tr": "Gelecek hafta sonu kampa gidiyoruz. Uyku tulumun var mı?" },
+    { "kim": "Defne", "cinsiyet": "k", "en": "Yes, and I have a backpack and a compass too.", "tr": "Evet, sırt çantam ve pusulam da var." },
+    { "kim": "Kerem", "cinsiyet": "e", "en": "Great! I'm fond of sitting around a campfire at night.", "tr": "Harika! Geceleri kamp ateşinin etrafında oturmayı çok severim." },
+    { "kim": "Defne", "cinsiyet": "k", "en": "Me too, but I'd rather sleep early. Trekking is tiring!", "tr": "Ben de, ama erken uyumayı tercih ederim. Doğa yürüyüşü yorucu!" }
+   ]
+  },
+  {
+   "baslik": "Spor mu, oyun mu?",
+   "satirlar": [
+    { "kim": "Emir", "cinsiyet": "e", "en": "Do you want to join the school volleyball squad?", "tr": "Okulun voleybol takımına katılmak ister misin?" },
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "Hmm, I prefer board games to team sports.", "tr": "Hmm, kutu oyunlarını takım sporlarına tercih ederim." },
+    { "kim": "Emir", "cinsiyet": "e", "en": "But training is fun, and you gain a lot of friends.", "tr": "Ama antrenman eğlenceli ve bir sürü arkadaş kazanırsın." },
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "OK, I don't mind trying it once.", "tr": "Tamam, bir kez denemekten rahatsız olmam." }
+   ]
+  }
+ ],
+ "test": [
+  { "soru": "I ______ chess to football. It's more relaxing for me.", "secenekler": ["prefer", "hate", "argue", "gain"], "dogru": 0, "aciklama": "prefer A to B = A'yı B'ye tercih etmek." },
+  { "soru": "Mert can't ______ loud music. It gives him a headache.", "secenekler": ["prefer", "stand", "recommend", "reward"], "dogru": 1, "aciklama": "can't stand = dayanamamak, hiç sevmemek." },
+  { "soru": "Ayşe: What do you think about fashion?\nCan: ______ I just wear comfortable clothes.", "secenekler": ["I'm crazy about it.", "I'm not interested in it.", "It's my favourite hobby.", "I always follow trends."], "dogru": 1, "aciklama": "Can sadece rahat giyindiğini söylüyor; modayla ilgilenmiyor." },
+  { "soru": "Which sentence shows a preference?", "secenekler": ["I'd rather read a book than watch TV.", "I went camping last week.", "She has a compass.", "They argue a lot."], "dogru": 0, "aciklama": "would rather ... than tercih bildirir." },
+  { "soru": "Kerem always studies on time and goes to bed early. He is very ______.", "secenekler": ["ridiculous", "self-disciplined", "unbearable", "casual"], "dogru": 1, "aciklama": "Kendi düzenine uyan kişi öz disiplinlidir." },
+  { "soru": "We need a tent, a sleeping bag and a ______ for the camping trip.", "secenekler": ["backpack", "push-up", "snob", "pitch"], "dogru": 0, "aciklama": "Kamp için sırt çantası gerekir." },
+  { "soru": "Defne: Do you like trekking?\nEmir: Yes, ______ walking in nature.", "secenekler": ["I can't stand", "I'm fond of", "I hate", "I'm not into"], "dogru": 1, "aciklama": "\"Yes\" dediği için olumlu bir kalıp gerekir: be fond of." },
+  { "soru": "Read the text.\n\"Zeynep is a teenager. She loves board games and plays them with her family every weekend. She doesn't like fizzy drinks, so she always drinks water or fruit juice.\"\nWhich is true about Zeynep?", "secenekler": ["She hates board games.", "She drinks fizzy drinks every weekend.", "She plays board games with her family.", "She never drinks fruit juice."], "dogru": 2, "aciklama": "Metin her hafta sonu ailesiyle kutu oyunu oynadığını söylüyor." },
+  { "soru": "My brother and I sometimes ______ about the TV remote.", "secenekler": ["argue", "prefer", "gain", "reward"], "dogru": 0, "aciklama": "argue = tartışmak." },
+  { "soru": "Can: I don't mind ______ the dishes.", "secenekler": ["wash", "to washing", "washing", "washed"], "dogru": 2, "aciklama": "don't mind kalıbından sonra fiil -ing alır." }
+ ]
+}

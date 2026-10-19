@@ -1,0 +1,38 @@
+# LGS ornek cumleleri: en|Ingilizce ornek|Turkce cevirisi
+adventurous|My aunt is very adventurous; she travels alone.|Teyzem çok maceracı; yalnız seyahat eder.
+aerobatic|We watched an aerobatic show at the airport.|Havalimanında akrobatik bir gösteri izledik.
+ambitious|She is ambitious and wants to be a doctor.|Hırslı biri ve doktor olmak istiyor.
+amusing|The clown was very amusing.|Palyaço çok eğlenceliydi.
+bungee jumping|Bungee jumping is too scary for me.|Bungee jumping benim için fazla korkutucu.
+canoeing|We went canoeing on the lake.|Gölde kano yapmaya gittik.
+caving|Caving is popular in the Taurus Mountains.|Toros Dağları'nda mağaracılık popüler.
+challenging|Climbing this mountain is challenging.|Bu dağa tırmanmak zorlu.
+courage|It takes courage to speak in front of the class.|Sınıfın önünde konuşmak cesaret ister.
+demonstration|The coach gave us a demonstration of the move.|Antrenör bize hareketin bir gösterisini yaptı.
+disappointing|The end of the film was disappointing.|Filmin sonu hayal kırıklığı yarattı.
+dry suit|Divers wear a dry suit in very cold water.|Dalgıçlar çok soğuk suda kuru dalış giysisi giyer.
+entertaining|The magic show was very entertaining.|Sihirbazlık gösterisi çok eğlendiriciydi.
+exciting|The roller coaster was really exciting.|Hız treni gerçekten heyecan vericiydi.
+extreme|Some people like extreme cold.|Bazı insanlar aşırı soğuğu sever.
+extreme sports|Extreme sports can be dangerous without training.|Ekstrem sporlar eğitim olmadan tehlikeli olabilir.
+fascinating|The documentary about sharks was fascinating.|Köpek balıkları belgeseli büyüleyiciydi.
+glove|I lost my left glove in the snow.|Sol eldivenimi karda kaybettim.
+hang-gliding|My cousin tried hang-gliding in Ölüdeniz.|Kuzenim Ölüdeniz'de kanatla uçuşu denedi.
+helmet|Always wear a helmet when you ride a bike.|Bisiklete binerken her zaman kask tak.
+individually|The teacher talked to each student individually.|Öğretmen her öğrenciyle bireysel olarak konuştu.
+instructor|Our ski instructor was very patient.|Kayak eğitmenimiz çok sabırlıydı.
+kayaking|Kayaking on the river was great fun.|Nehirde kano sporu çok eğlenceliydi.
+life vest|Put on your life vest before you get in the boat.|Tekneye binmeden önce can yeleğini giy.
+magnificent|The view from the top was magnificent.|Tepeden manzara muhteşemdi.
+motor racing|My father watches motor racing on TV.|Babam televizyonda motor yarışı izler.
+mysterious|The old house looks mysterious at night.|Eski ev geceleri gizemli görünüyor.
+paddle|Hold the paddle with both hands.|Küreği iki elinle tut.
+paragliding|We saw people paragliding over the beach.|Plajın üstünde yamaç paraşütü yapan insanlar gördük.
+rafting|Rafting on the Köprülü River is popular.|Köprülü Çayı'nda rafting popüler.
+risky|Swimming in a storm is risky.|Fırtınada yüzmek riskli.
+skateboarding|He goes skateboarding in the park every day.|Her gün parka kaykay yapmaya gider.
+skyscraper|There is a new skyscraper in the city centre.|Şehir merkezinde yeni bir gökdelen var.
+steering|Keep both hands on the steering wheel.|İki elini de direksiyonda tut.
+take risks|Adventurous people like to take risks.|Maceracı insanlar risk almayı sever.
+wet suit|You need a wet suit for surfing in spring.|İlkbaharda sörf için dalış giysisi gerekir.
+wrist guards|Wear wrist guards when you skate.|Paten yaparken bilek koruyucu tak.

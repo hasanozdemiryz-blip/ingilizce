@@ -1,0 +1,54 @@
+# 1. ünite Friendship — en|tr|tur|kanca|yol|cumle|sahne (EN, tek cümle)|ton|genel(E/H)
+# tur: K hafıza teknikli (yol: ses / yazılış / ses+yazılış), T tanıdık (kanca = Türkçe biçimi), G görsel çağrışım (kanca yok), I kalıp (görsel sahne)
+accept|kabul etmek|K|ek sepet|ses|Pazarcının verdiği ek sepeti kabul ettim|A smiling woman at a fruit market stall happily accepts an extra wicker basket full of apples that the friendly seller hands her.|peach|E
+advice|tavsiye|K|avize|ses|Avizenin altında dedem bana tavsiye verdi|A kind grandfather in a cardigan sits under a big sparkling chandelier and gives advice to his grandson, one finger raised.|cream|E
+attend|katılmak|K|at|yazılış|Törene atıyla katıldı|A smiling girl in a school uniform rides a brown horse into a cheerful school ceremony with bunting flags; classmates clap.|sky-blue|E
+awesome|harika|G||| Herkes harika gösteriye bayıldı|Three children with wide-open mouths and sparkling eyes point up at colourful fireworks in a light evening sky.|lavender|E
+back up|desteklemek|I|||Arkadaşları sahnede onu destekledi|A nervous boy sings on a small stage while two friends stand right behind him with thumbs up, backing him up.|yellow|E
+best friend|en iyi arkadaş|I|||En iyi arkadaşıyla sarıldılar|Two girls in colourful t-shirts hug each other tightly and laugh, matching friendship bracelets on their wrists.|pink|E
+book fair|kitap fuarı|I|fuar|ses|Fuarda yüzlerce kitap vardı|Children walk between colourful stands piled with books at a bright indoor book fair, one girl holding a stack of new books.|cream|E
+bowling alley|bovling salonu|I|||Bovling salonunda bütün lobutları devirdi|A boy jumps with joy as his bowling ball knocks down all the white pins at the end of a shiny bowling lane.|mint|E
+buddy|kanka|G|||Kankasıyla çak yaptı|Two smiling teenage boys give each other an enthusiastic high five, one holding a skateboard.|green|E
+chit-chat|sohbet|G|||Komşular bahçede uzun uzun sohbet etti|Two smiling neighbours lean on a low white garden fence and chat happily, one holding a watering can.|green|E
+come over|uğramak|I|||Arkadaşım akşam bize uğradı|A girl opens her front door and happily welcomes a friend who arrives holding a small box of cookies.|peach|E
+concert|konser|T|konser|ses|Konserde herkes şarkıya eşlik etti|A happy crowd of young people waves their arms at an outdoor concert while a band plays on a stage with coloured lights.|lavender|E
+cool|harika|T|cool|ses|Yeni gözlüğüyle çok havalı görünüyordu|A grinning boy in sunglasses and a cap gives a double thumbs up, looking very cool.|sky-blue|E
+count on|güvenmek|I|||Tırmanırken arkadaşına güvendi|A boy climbs a short indoor climbing wall while his friend below firmly holds the safety rope and smiles.|mint|E
+eat out|dışarıda yemek|I|||Cumartesi akşamı dışarıda yemek yedik|A smiling family of four sits at a small restaurant table with a red checked cloth, a waiter bringing plates of food.|peach|E
+event|etkinlik|K|evet|ses|Okul etkinliğine katılır mısınız diye sordular, herkes evet dedi|A group of happy children all raise their hands and nod at once in front of a teacher holding a clipboard at a school event.|yellow|E
+excuse|bahane|G|||Ödevini köpeğin yediğini söyledi ama bu bir bahaneydi|A sheepish boy points at a puppy chewing a sheet of paper while the teacher raises one eyebrow.|cream|E
+exhibition|sergi|G|||Okulun resim sergisini gezdik|Children in a bright hall look at framed colourful paintings hanging on the wall at a school art exhibition.|cream|E
+faultless|kusursuz|G|||Kusursuz bir kale yaptı|A proud girl kneels beside a perfect, beautifully detailed sandcastle with towers and a little flag.|yellow|E
+friendship|arkadaşlık|G|||Arkadaşlıklarını bileklikle kutladılar|Two children exchange colourful handmade friendship bracelets and smile at each other.|pink|E
+get on well with|iyi geçinmek|I|||Kedi ile köpek iyi geçiniyor|A cat and a dog curl up together happily on one round cushion.|peach|E
+go for a walk|yürüyüşe çıkmak|I|||Akşam parkta yürüyüşe çıktık|A smiling grandmother and her grandson walk hand in hand along a park path with a small dog on a lead.|green|E
+instrument|enstrüman|T|enstrüman|ses|Her çocuk bir enstrüman çaldı|Three children play a guitar, a drum and a recorder together, musical notes floating above them.|mint|E
+invite|davet etmek|K|in|yazılış|Ayı bizi inine davet etti|A friendly brown bear stands at the entrance of its cosy cave and waves two children inside with a welcoming gesture.|green|E
+laid-back|rahat|G|||Tatilde çok rahat bir adamdı|A relaxed man in shorts lies in a hammock between two palm trees, sipping juice with a smile.|sky-blue|E
+loyalty|sadakat|G|||Köpek sadakatle sahibini bekledi|A loyal dog sits patiently at a front door, wagging its tail, waiting for its owner to come home.|cream|E
+mate|arkadaş|G|||Arkadaşımla satranç oynadık|Two boys sit at a chessboard; one grins and moves a piece while the other laughs, holding his head.|lavender|E
+mutual|karşılıklı|G|||Karşılıklı hediye verdiler|Two children face each other and hand each other wrapped gifts at the same moment, both smiling.|pink|E
+patience|sabır|K|peşin|ses|Peşin ödemek için sabırla sırada bekledi|A calm man holding banknotes waits patiently at the end of a short queue at a shop counter, smiling.|cream|E
+phobia|fobi|T|fobi|ses|Küçük örümcek fobisini tetikledi|A startled boy jumps onto a chair, pointing at a tiny cute cartoon spider on the floor.|mint|E
+plant|bitki|G|||Her sabah bitkisini suladı|A girl waters a green potted plant on a sunny windowsill with a small yellow watering can.|green|E
+priceless|paha biçilmez|G|||Dedesiyle geçen o an paha biçilmezdi|A grandfather and his granddaughter laugh together on a park bench, sharing an ice cream.|peach|E
+promise|söz vermek|G|||Serçe parmaklarıyla söz verdiler|Two children hook their little fingers together in a pinky promise, smiling.|yellow|E
+receiver|alıcı|G|||Postacı paketi alıcıya teslim etti|A smiling postman hands a parcel to a woman standing at her front door.|cream|E
+refuse|reddetmek|K|füze|yazılış|Kral füzeyi hediye olarak reddetti|A cartoon king in a red robe raises one palm to say no thank you to a colourful toy space rocket offered on a red cushion.|lavender|E
+regularly|düzenli olarak|G|||Her gün düzenli olarak dişlerini fırçalar|A boy brushes his teeth at a bathroom sink, a wall calendar beside him covered in green tick marks.|sky-blue|E
+response|yanıt|G|||Sorusuna hemen yanıt verdi|A girl eagerly raises her hand to answer while the teacher points at her.|yellow|E
+science fiction|bilim kurgu|I|||Bilim kurgu filminde uzay gemisi vardı|Three children in a cinema watch a big screen showing a silver spaceship flying past planets, eating popcorn.|lavender|E
+secret|sır|G|||Kulağına bir sır fısıldadı|A girl cups her hand and whispers a secret into her friend's ear; the friend's eyes go wide.|pink|E
+sender|gönderen|G|||Mektubun göndereni kâğıt uçak yaptı|A boy launches a paper airplane letter from his window toward a smiling friend at another window.|sky-blue|E
+serious|ciddi|G|||Satranç oynarken çok ciddiydi|A serious-looking girl frowns in concentration over a chessboard, chin on her hand.|cream|E
+share|paylaşmak|G|||Sandviçini arkadaşıyla paylaştı|A boy breaks his sandwich in half and gives one half to his smiling friend on a school bench.|peach|E
+stuffed|tıka basa doymuş|G|||Bayram yemeğinden sonra tıka basa doymuştu|A boy leans back in his chair after a big meal, holding his round full belly, empty plates in front of him.|yellow|E
+support|desteklemek|G|||Arkadaşları koşucuyu destekledi|Classmates cheer and wave a banner with no letters as a girl runs past them in a school race.|green|E
+survive|hayatta kalmak|K|sur|ses+yazılış|Surların arkasında hayatta kaldılar|A section of old stone city walls with a round tower; three relieved people stand safe behind it while two broken siege ladders lie on the ground in front.|sky-blue|E
+text|mesaj atmak|T|tekst|ses|Arkadaşına kısa bir mesaj attı|A teenage girl types a message on her phone with both thumbs, a speech bubble with a heart above the phone.|mint|E
+thriller|gerilim filmi|T|gerilim|ses|Gerilim filminde patlamış mısırı döktü|Two friends on a sofa watch a mystery film with wide eyes, one accidentally spilling popcorn.|lavender|E
+thrilling|heyecan verici|G|||Hız treni çok heyecan vericiydi|Children with arms up scream with joy on a colourful roller coaster car going down a slope.|yellow|E
+tournament|turnuva|T|turnuva|ses|Satranç turnuvasını kazandı|A smiling girl holds up a golden trophy beside a chessboard at a chess tournament.|cream|E
+treasure|hazine|G|||Kumda bir hazine sandığı buldular|Two children kneel on a beach and open a small wooden treasure chest full of shiny gold coins.|yellow|E
+trust|güvenmek|K|tıraş|ses|Berbere güvendim, tıraşım harika oldu|A relaxed boy sits in a barber chair with closed eyes while a smiling barber trims his hair with scissors.|mint|E
+unconditional|koşulsuz|G|||Annesi onu koşulsuz sever|A mother kneels and hugs her small son tightly, both smiling with closed eyes.|pink|E

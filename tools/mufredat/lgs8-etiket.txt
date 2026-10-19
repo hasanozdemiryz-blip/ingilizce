@@ -2,7 +2,7 @@
 # unite|ingilizce|turkce|tur|kanca|ses|not
 # tur: K = hafiza teknikli (ses ve/veya yazilis cagrisimi; kanca-kurallari.md), T = tanidik (Turkcede ayni/cok benzer), R = gorsel cagrisim (sahne),
 #      I = kalip ifade, V = mevcut 400 kartta var. ses: 3 guclu / 2 orta benzerlik. not: G = Kids/LGS guvenlik dikkati.
-1|accept|kabul etmek|K|ek sepet|2|iki parcali kanca
+1|accept|kabul etmek|K|ek sepet|2|ses · öneri 18 Ekim · Pazarcının verdiği ek sepeti kabul ettim · iki parcali kanca
 1|advice|tavsiye|R|||
 1|attend|katılmak|K|at|3|yazılış · ONAYLI 18 Ekim · Törene atıyla katıldı
 1|awesome|harika|R|||
@@ -32,7 +32,7 @@
 1|loyalty|sadakat|R|||
 1|mate|arkadaş|R|||G: kanca adayı "meyit" — kullanılmaz
 1|mutual|karşılıklı|R|||
-1|patience|sabır|K|peşin|3|
+1|patience|sabır|K|peşin|3|ses · öneri 18 Ekim · Peşin ödemek için sabırla sırada bekledi
 1|phobia|fobi|T|||kitapta "Phobie"
 1|plant|bitki|R|||"plan" İngilizce de kelime (kural 3)
 1|priceless|paha biçilmez|R|||
@@ -54,10 +54,10 @@
 1|thrilling|heyecan verici|R|||
 1|tournament|turnuva|T|||
 1|treasure|hazine|R|||
-1|trust|güvenmek|K|tıraş|3|
+1|trust|güvenmek|K|tıraş|3|ses · öneri 18 Ekim · Berbere güvendim, tıraşım harika oldu
 1|unconditional|koşulsuz|R|||
 2|archery|okçuluk|R|||
-2|argue|tartışmak|K|argo|3|
+2|argue|tartışmak|K|argo|3|ses · öneri 18 Ekim · Argo konuşunca tartıştılar
 2|backpack|sırt çantası|R|||
 2|board game|kutu oyunu|I|||
 2|branch|dal|V|||
@@ -104,13 +104,13 @@
 3|bitter|acı|V|||
 3|boil|kaynatmak|R|||
 3|bowl|kâse|V|||
-3|chop|doğramak|K|çöp|3|
+3|chop|doğramak|K|çöp|3|ses · öneri 18 Ekim · Soğanı doğradı, kabuklarını çöpe attı
 3|crack|kırmak|V|||
 3|cuisine|mutfak (yemek kültürü)|R|||
 3|cut|kesmek|V|||
 3|delicious|lezzetli|K|deli|3|yazılış · ONAYLI 18 Ekim · Deli aşçının yemeği lezzetli çıktı
 3|dessert|tatlı|K|sert|3|yazılış · ONAYLI 18 Ekim · Tatlı taş gibi sert çıktı
-3|dice|küp küp doğramak|K|dayı|2|
+3|dice|küp küp doğramak|K|dayı|2|ses · öneri 18 Ekim · Dayım havucu küp küp doğradı
 3|dough|hamur|R|||
 3|flour|un|R|||
 3|fork|çatal|V|||
@@ -120,7 +120,7 @@
 3|ingredient|malzeme|R|||
 3|kitchen tool|mutfak aleti|I|||
 3|knife|bıçak|V|||
-3|mash|ezmek|K|meşe|2|
+3|mash|ezmek|K|meşe|2|ses · öneri 18 Ekim · Meşe tokmağıyla patatesi ezdi
 3|meal|öğün|R|||
 3|mix|karıştırmak|T|||mikser
 3|oil|yağ|V|||
@@ -314,7 +314,7 @@
 8|feed|beslemek|V|||
 8|festival|festival|T|||
 8|household|hane|R|||
-8|iron|ütülemek|K|ayran|3|
+8|iron|ütülemek|K|ayran|3|ses · öneri 18 Ekim · Ütünün üstüne ayran döküldü
 8|janitor|hademe|R|||
 8|keep promises|sözünü tutmak|I|||break promises dahil
 8|keep quiet|sessiz olmak|I|||
@@ -381,7 +381,7 @@
 9|vaccination|aşılama|R|||
 9|well-equipped|donanımlı|I|||
 10|avalanche|çığ|K|avaz|3|ses · ONAYLI 18 Ekim · Avaz avaz bağırdı, çığ düştü
-10|cause|sebep olmak|K|koz|3|
+10|cause|sebep olmak|K|koz|3|ses · öneri 18 Ekim · Son kozunu oynadı, herkesin gülmesine sebep oldu
 10|decrease|azalmak|R|||
 10|destroy|yok etmek|R|||
 10|destructive|yıkıcı|R|||
@@ -411,7 +411,7 @@
 10|renewable|yenilenebilir|R|||
 10|rescue|kurtarmak|R|||
 10|source|kaynak|R|||sos başka kartta (kural 4)
-10|suffer|acı çekmek|K|safir|2|
+10|suffer|acı çekmek|K|safir|2|ses · öneri 18 Ekim · Safir yüzüğünü kaybedince çok acı çekti
 10|survivor|hayatta kalan|R|||
 10|temperature|sıcaklık|T|||temperatür
 10|tornado|hortum|T|||

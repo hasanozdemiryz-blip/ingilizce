@@ -1,0 +1,58 @@
+{
+ "unite": 8,
+ "ad": "Chores",
+ "konu": "Ev işlerini, sorumlulukları ve zorunlulukları anlatmak, sevdiğin ve sevmediğin işleri söylemek",
+ "kaliplar": [
+  { "en": "I have to make my bed every morning.", "tr": "Her sabah yatağımı toplamak zorundayım.", "not": "have to" },
+  { "en": "I don't have to cook. My dad does it.", "tr": "Yemek yapmak zorunda değilim. Babam yapıyor.", "not": "don't have to" },
+  { "en": "We must obey the rules at school.", "tr": "Okulda kurallara uymalıyız.", "not": "must" },
+  { "en": "It's my responsibility to feed the cat.", "tr": "Kediyi beslemek benim sorumluluğum.", "not": "Sorumluluk" },
+  { "en": "Whose turn is it to wash the dishes?", "tr": "Bulaşıkları yıkama sırası kimde?", "not": "Sıra sormak" },
+  { "en": "It's your turn to take out the garbage.", "tr": "Çöpü çıkarma sırası sende.", "not": "Sıra söylemek" },
+  { "en": "I'm in charge of watering the plants.", "tr": "Bitkileri sulamaktan ben sorumluyum.", "not": "be in charge of" },
+  { "en": "I hate ironing, but I don't mind doing the laundry.", "tr": "Ütü yapmaktan nefret ederim ama çamaşır yıkamaktan rahatsız olmam.", "not": "Sevip sevmemek" },
+  { "en": "Can you help me set the table, please?", "tr": "Sofrayı kurmama yardım eder misin lütfen?", "not": "Yardım istemek" },
+  { "en": "I tidy up my room once a week.", "tr": "Odamı haftada bir toplarım.", "not": "Sıklık" }
+ ],
+ "diyaloglar": [
+  {
+   "baslik": "Ev işi listesi",
+   "satirlar": [
+    { "kim": "Anne", "cinsiyet": "k", "en": "Kerem, here is the to-do list for this week.", "tr": "Kerem, bu haftanın yapılacaklar listesi burada." },
+    { "kim": "Kerem", "cinsiyet": "e", "en": "What do I have to do, Mum?", "tr": "Ne yapmam gerekiyor, anne?" },
+    { "kim": "Anne", "cinsiyet": "k", "en": "You have to tidy up your room and take out the garbage every evening.", "tr": "Odanı toplaman ve her akşam çöpü çıkarman gerekiyor." },
+    { "kim": "Kerem", "cinsiyet": "e", "en": "OK. Do I have to iron my shirts too?", "tr": "Tamam. Gömleklerimi de ütülemem gerekiyor mu?" },
+    { "kim": "Anne", "cinsiyet": "k", "en": "No, you don't have to. Dad will do it.", "tr": "Hayır, gerek yok. Baban yapacak." }
+   ]
+  },
+  {
+   "baslik": "Sıra kimde?",
+   "satirlar": [
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "Whose turn is it to load the dishwasher?", "tr": "Bulaşık makinesini doldurma sırası kimde?" },
+    { "kim": "Can", "cinsiyet": "e", "en": "It's your turn! I did it yesterday.", "tr": "Sende! Dün ben yaptım." },
+    { "kim": "Zeynep", "cinsiyet": "k", "en": "OK, but then you have to sweep the floor.", "tr": "Tamam, ama o zaman sen yeri süpürmelisin." },
+    { "kim": "Can", "cinsiyet": "e", "en": "Fine. I don't mind sweeping.", "tr": "Peki. Süpürmekten rahatsız olmam." }
+   ]
+  },
+  {
+   "baslik": "Okulda sorumluluk",
+   "satirlar": [
+    { "kim": "Öğretmen", "cinsiyet": "e", "en": "Students, who is in charge of the class library this month?", "tr": "Öğrenciler, bu ay sınıf kütüphanesinden kim sorumlu?" },
+    { "kim": "Defne", "cinsiyet": "k", "en": "I am, sir. I check the books and remind everyone to return them on time.", "tr": "Benim, öğretmenim. Kitapları kontrol ediyorum ve herkese zamanında iade etmelerini hatırlatıyorum." },
+    { "kim": "Öğretmen", "cinsiyet": "e", "en": "Well done. Responsibility is very important.", "tr": "Aferin. Sorumluluk çok önemli." }
+   ]
+  }
+ ],
+ "test": [
+  { "soru": "I ______ clean my room today. My mum said so.", "secenekler": ["have to", "don't have to", "mustn't", "doesn't have to"], "dogru": 0, "aciklama": "Annesi söylediği için bir zorunluluk var: have to." },
+  { "soru": "It's Sunday. We ______ get up early.", "secenekler": ["have to", "must", "don't have to", "has to"], "dogru": 2, "aciklama": "Pazar günü erken kalkmak zorunda değiliz: don't have to." },
+  { "soru": "A: Whose turn is it to wash the dishes?\nB: ______", "secenekler": ["It's Ali's turn.", "I hate washing.", "Yes, I have.", "In the kitchen."], "dogru": 0, "aciklama": "\"Sıra kimde?\" sorusuna kişinin adıyla cevap verilir." },
+  { "soru": "Which one is NOT a household chore?", "secenekler": ["dust the shelves", "do the laundry", "go for a walk", "set the table"], "dogru": 2, "aciklama": "Yürüyüşe çıkmak bir ev işi değildir." },
+  { "soru": "Mert ______ watering the plants. He does it every day.", "secenekler": ["is in charge of", "hates", "can't stand", "refuses"], "dogru": 0, "aciklama": "Her gün yaptığı için bu onun sorumluluğu: be in charge of." },
+  { "soru": "Before dinner, I ______: I put the plates, forks and glasses on the table.", "secenekler": ["make the bed", "set the table", "sweep the floor", "take out the garbage"], "dogru": 1, "aciklama": "Tabak, çatal ve bardak koymak sofra kurmaktır." },
+  { "soru": "Zeynep: I can't stand ironing. ______\nCan: I like cooking.", "secenekler": ["What about you?", "Do you iron?", "Where is the iron?", "Is it your turn?"], "dogru": 0, "aciklama": "Can kendi tercihini söylüyor; soru \"Ya sen?\"" },
+  { "soru": "Read the text.\n\"Emir's family shares the chores. His father cooks, his mother does the laundry and his sister vacuums the carpet. Emir has to wash the dishes and take out the garbage.\"\nWho does the laundry?", "secenekler": ["Emir", "his father", "his mother", "his sister"], "dogru": 2, "aciklama": "\"his mother does the laundry\"" },
+  { "soru": "We ______ talk in the library. We must keep quiet.", "secenekler": ["must", "mustn't", "have to", "don't mind"], "dogru": 1, "aciklama": "Kütüphanede konuşmak yasak: mustn't." },
+  { "soru": "My room is always ______. Everything is in its place.", "secenekler": ["neat", "messy", "dirty", "noisy"], "dogru": 0, "aciklama": "Her şey yerindeyse oda derli topludur: neat." }
+ ]
+}

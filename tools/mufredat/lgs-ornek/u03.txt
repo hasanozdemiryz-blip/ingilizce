@@ -1,0 +1,29 @@
+# LGS ornek cumleleri: en|Ingilizce ornek|Turkce cevirisi
+boil|Boil the eggs for ten minutes.|Yumurtaları on dakika kaynat.
+chop|Chop the onions into small pieces.|Soğanları küçük parçalara doğra.
+cuisine|Italian cuisine is famous for pizza and pasta.|İtalyan mutfağı pizza ve makarnasıyla ünlüdür.
+delicious|This chocolate cake is delicious!|Bu çikolatalı kek nefis!
+dessert|We had ice cream for dessert.|Tatlı olarak dondurma yedik.
+dice|Dice the carrots before you cook them.|Pişirmeden önce havuçları küp küp doğra.
+dough|Knead the dough for five minutes.|Hamuru beş dakika yoğur.
+flour|We need two cups of flour for the cake.|Kek için iki su bardağı una ihtiyacımız var.
+grater|Use a grater for the cheese.|Peynir için rende kullan.
+ingredient|Eggs are the main ingredient of an omelette.|Yumurta omletin ana malzemesidir.
+kitchen tool|A whisk is a useful kitchen tool.|Çırpma teli kullanışlı bir mutfak aletidir.
+mash|Mash the potatoes with a fork.|Patatesleri çatalla ez.
+meal|Breakfast is the most important meal of the day.|Kahvaltı günün en önemli öğünüdür.
+mix|Mix the sugar and the butter.|Şekerle tereyağını karıştır.
+oven|Put the tray in the oven.|Tepsiyi fırına koy.
+pan|Heat some oil in a pan.|Bir tavada biraz yağ ısıt.
+pour|Pour the milk into the glass slowly.|Sütü bardağa yavaşça dök.
+preparation|The preparation of this dish takes an hour.|Bu yemeğin hazırlığı bir saat sürer.
+recipe|This is my grandmother's recipe for baklava.|Bu, babaannemin baklava tarifi.
+roast|We roast a chicken every Sunday.|Her pazar fırında tavuk kızartırız.
+salty|The soup is too salty.|Çorba fazla tuzlu.
+saucepan|Put the pasta in a saucepan of boiling water.|Makarnayı kaynar sulu bir tencereye koy.
+spicy|Mexican food is often spicy.|Meksika yemekleri genelde baharatlıdır.
+spoon|Eat your soup with a spoon.|Çorbanı kaşıkla iç.
+spread|Spread some butter on the bread.|Ekmeğe biraz tereyağı sür.
+sprinkle|Sprinkle some sugar on the pancakes.|Pankeklerin üstüne biraz şeker serp.
+tasty|These cookies are really tasty.|Bu kurabiyeler gerçekten lezzetli.
+whisk|Whisk the eggs until they are light and fluffy.|Yumurtaları hafif ve kabarık olana kadar çırp.

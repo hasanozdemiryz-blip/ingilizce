@@ -7,6 +7,8 @@ import { shareHookBoard } from '../share';
 import { Button } from '../components/ui';
 import type { Progress } from '../types';
 import { t } from '../dil';
+import { kancaYazisi } from '../components/Cagrisim';
+import { kancaliMi } from '../types';
 
 /**
  * Uc bolum, daha fazlasi degil.
@@ -75,7 +77,7 @@ export function WordList({ progress, onExit }: { progress: Progress[]; onExit: (
           <input
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder={t('Kelime, anlam veya kanca ara…')}
+            placeholder={t('Kelime, anlam veya çağrışım ara…')}
             className="w-full rounded-full bg-white pl-11 pr-5 py-3.5 text-sm shadow-[var(--shadow-soft)] outline-none placeholder:text-ink-faint focus:ring-2 focus:ring-brand"
           />
         </div>
@@ -105,11 +107,11 @@ export function WordList({ progress, onExit }: { progress: Progress[]; onExit: (
             variant="brand"
             onClick={() =>
               void shareHookBoard(
-                taban.map((c) => ({ en: c.en, hook: c.hook })),
+                taban.filter(kancaliMi).map((c) => ({ en: c.en, hook: c.hook })),
               )
             }
           >
-            {t('Kanca panosunu paylaş')}
+            {t('Çağrışım panosunu paylaş')}
           </Button>
         )}
 
@@ -127,13 +129,13 @@ export function WordList({ progress, onExit }: { progress: Progress[]; onExit: (
                 <div className="min-w-0 flex-1">
                   <div className="flex items-baseline gap-2 flex-wrap">
                     <span className="word font-semibold">{c.en}</span>
-                    <span className="text-ink-faint text-sm">≈</span>
+                    <span className="text-ink-faint text-sm">{kancaliMi(c) ? '≈' : '·'}</span>
                     <span
                       className={`text-sm font-semibold rounded px-1 ${
                         ogrenildi ? 'bg-spark/55 text-ink' : 'text-ink-faint'
                       }`}
                     >
-                      {c.hook}
+                      {kancaYazisi(c)}
                     </span>
                   </div>
                   <p className="text-sm text-ink-soft mt-0.5 truncate">{c.tr}</p>

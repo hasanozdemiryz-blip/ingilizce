@@ -48,7 +48,7 @@ export function SetFinale({
 
       <div className="mt-5">
         <Button variant="brand" onClick={paylas} disabled={paylasiliyor}>
-          {paylasiliyor ? t('Hazırlanıyor…') : t('Kanca panosunu paylaş')}
+          {paylasiliyor ? t('Hazırlanıyor…') : t('Çağrışım panosunu paylaş')}
         </Button>
       </div>
 

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { CumleSecimi } from './Cumle';
 import { AnswerFace, ListenFace, WriteFace } from './CardFace';
 import { Choice } from './Choice';
 import { Match } from './Match';
@@ -90,8 +91,9 @@ export function Runner({
    */
   const siklar = useMemo(() => {
     if (!tekliGorev) return [];
-    const ters = ADIM[tekliGorev.step].egzersiz === 'ters-secmeli';
-    return secenekler(tekliGorev.card, CARDS, ters ? 'en' : 'tr');
+    const egz = ADIM[tekliGorev.step].egzersiz;
+    const enSik = egz === 'ters-secmeli' || egz === 'cumle';
+    return secenekler(tekliGorev.card, CARDS, enSik ? 'en' : 'tr');
   }, [tekliGorev?.card.id, tekliGorev?.step]);
 
   useEffect(() => {
@@ -146,7 +148,10 @@ export function Runner({
   const { card, step } = blok.gorev;
   const bilgi = ADIM[step];
   // Ses sentezi yoksa dinleme cevaplanamaz; kart kilitlenmesin diye yazma olarak sorulur
-  const egzersiz = bilgi.egzersiz === 'dinleme' && !sesVar ? 'yazma' : bilgi.egzersiz;
+  // Cumlesi olmayan kart 7. basamakta sorulmaz (gorev listeleri eliyor); yine de
+  // gelirse 6'nin egzersizine duser.
+  const istenen = bilgi.egzersiz === 'cumle' && !card.ornek ? 'dinleme' : bilgi.egzersiz;
+  const egzersiz = istenen === 'dinleme' && !sesVar ? 'yazma' : istenen;
 
   /**
    * `temiz=false`, cevabin dogru ama YARDIMLA bulundugunu soyler.
@@ -163,7 +168,7 @@ export function Runner({
 
   function sikSec(secim: string) {
     if (secilen !== null) return;
-    const ters = egzersiz === 'ters-secmeli';
+    const ters = egzersiz === 'ters-secmeli' || egzersiz === 'cumle';
     const dogru = ters ? card.en : card.tr;
     const ok = judge(secim, dogru, { dil: ters ? 'en' : 'tr' }) === 'dogru';
     setSecilen(secim);
@@ -173,8 +178,13 @@ export function Runner({
   }
 
   const soru = (() => {
-    if (verdict) return <AnswerFace card={card} />;
+    // Cumlede sonuc AYNI ekranda: dogru kelime boslukta, altinda Turkcesi
+    if (verdict && egzersiz !== 'cumle') return <AnswerFace card={card} />;
     switch (egzersiz) {
+      case 'cumle':
+        return (
+          <CumleSecimi card={card} options={siklar} secilen={secilen} hookRevealed={hookRevealed} onPick={sikSec} />
+        );
       case 'secmeli':
       case 'ters-secmeli': {
         const ters = egzersiz === 'ters-secmeli';
@@ -259,7 +269,7 @@ export function Runner({
             */}
             {verdict.judgement === 'dogru' && hookRevealed && (
               <span className="text-sm text-ink-faint">
-                {t('Kancayla bildin. Bir dahakine kancasız dene.')}
+                {t('Çağrışımla bildin. Bir dahakine çağrışımsız dene.')}
               </span>
             )}
           </div>
@@ -275,7 +285,7 @@ export function Runner({
                 onClick={() => setHookRevealed(true)}
                 className="px-4 py-2 text-sm font-bold text-brand-deep rounded-full bg-white/70 shadow-[var(--shadow-soft)] hover:bg-white transition"
               >
-                {t('Kancayı göster')}
+                {t('Çağrışımı göster')}
               </button>
             )}
           </div>
