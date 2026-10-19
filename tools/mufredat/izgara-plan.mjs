@@ -42,7 +42,7 @@ BACKGROUND of each panel: one single very pale washed-out tint as given, extreme
 
 Inanimate objects have NO faces, NO eyes, NO mouths, NO limbs (robots and toys excepted).
 
-No text, no letters, no numbers, no logos anywhere in the image; signs, papers and screens are blank.
+No text, no letters, no numbers, no logos anywhere in the image; signs, papers, packages, labels and screens are blank.
 
 Child-friendly and wholesome: nothing scary, violent, dangerous, religious, romantic or rude.`;
 

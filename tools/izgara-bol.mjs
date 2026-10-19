@@ -69,6 +69,12 @@ for (const [i, id] of ids.entries()) {
   // (soluk zemin tonlari 255'e esit olmadigi icin korunuyor).
   const kare = await sharp(dosya).extract(kareler[i]).png().toBuffer();
   const kirpik = await sharp(kare).trim({ background: '#ffffff', threshold: 6 }).toBuffer().catch(() => kare);
-  await sharp(kirpik).png().toFile(path.join(klasor, `${id}.png`));
+  // Bazen karenin kenarinda ince gri cerceve cizgisi kaliyor: her kenardan KENAR px tiras.
+  const m = await sharp(kirpik).metadata();
+  const KENAR = 8;
+  await sharp(kirpik)
+    .extract({ left: KENAR, top: KENAR, width: m.width - 2 * KENAR, height: m.height - 2 * KENAR })
+    .png()
+    .toFile(path.join(klasor, `${id}.png`));
   console.log(`${id}.png  ${kareler[i].width}x${kareler[i].height}`);
 }
