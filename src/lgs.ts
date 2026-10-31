@@ -72,3 +72,51 @@ export function karistir(soru: TestSorusu): { secenekler: string[]; dogru: numbe
   }
   return { secenekler: sira.map((i) => soru.secenekler[i]), dogru: sira.indexOf(soru.dogru) };
 }
+
+/**
+ * LGS 2027 tarihi — RESMI DEGIL, onceki yillarin takvimine gore tahmin
+ * (Haziranin ikinci cumartesisi). Sitede de ayni: tools/site-bolumler.mjs
+ * `LGS_TARIH`. MEB kilavuzu cikinca ikisi birlikte guncellenir.
+ */
+export const LGS_TARIH = '2027-06-12';
+
+/** LGS'ye kalan gun (sinav sabahi 09:30). Gecmisse 0. */
+export function lgsyeKalanGun(simdi = new Date()): number {
+  const fark = new Date(`${LGS_TARIH}T09:30:00+03:00`).getTime() - simdi.getTime();
+  return Math.max(0, Math.ceil(fark / 864e5));
+}
+
+/**
+ * Unite basina kalip ve diyalog SAYISI. Icerik uniteler acilinca iniyor
+ * (yukarida); ana ekran ve Ilerleme yalniz sayiyi istiyor, bunun icin on
+ * unitenin hepsini indirmek gereksiz. `lgs.test.ts` icerikle esitligini denetliyor.
+ */
+export const UNITE_SAYILARI: Record<number, { kalip: number; diyalog: number }> = {
+  1: { kalip: 12, diyalog: 3 },
+  2: { kalip: 10, diyalog: 3 },
+  3: { kalip: 10, diyalog: 3 },
+  4: { kalip: 12, diyalog: 3 },
+  5: { kalip: 10, diyalog: 3 },
+  6: { kalip: 10, diyalog: 3 },
+  7: { kalip: 10, diyalog: 3 },
+  8: { kalip: 10, diyalog: 3 },
+  9: { kalip: 10, diyalog: 3 },
+  10: { kalip: 10, diyalog: 3 },
+};
+
+/** Kalip ve diyalog kimlikleri: "3-5" = 3. unitenin 5. kalibi (1'den). */
+export const kalipId = (unite: number, i: number): string => `${unite}-${i + 1}`;
+export const diyalogId = (unite: number, i: number): string => `${unite}-${i + 1}`;
+
+/** Bir unitede dogru cozulmus kalip / diyalog sayisi. */
+export function uniteKalipDurumu(
+  unite: number,
+  kalip: Record<string, { d: number; t: number }> | undefined,
+  diyalog: Record<string, number> | undefined,
+): { kalip: number; diyalog: number } {
+  const on = `${unite}-`;
+  return {
+    kalip: Object.entries(kalip ?? {}).filter(([k, v]) => k.startsWith(on) && v.d > 0).length,
+    diyalog: Object.keys(diyalog ?? {}).filter((k) => k.startsWith(on)).length,
+  };
+}

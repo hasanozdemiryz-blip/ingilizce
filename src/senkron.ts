@@ -97,6 +97,31 @@ function enIyiTestler(
   return cikti;
 }
 
+/** Kalip ilerlemesi: her kalipta iki cihazin buyugu (dogru sayisi ve son zaman ayri ayri). */
+function kaliplariBirlestir(
+  a: AppState['lgsKalip'],
+  b: AppState['lgsKalip'],
+): AppState['lgsKalip'] {
+  if (!a && !b) return undefined;
+  const cikti: NonNullable<AppState['lgsKalip']> = { ...a };
+  for (const [k, v] of Object.entries(b ?? {})) {
+    const o = cikti[k];
+    cikti[k] = o ? { d: Math.max(o.d, v.d), t: Math.max(o.t, v.t) } : v;
+  }
+  return cikti;
+}
+
+/** Diyalog ilerlemesi: birlesim; ayni diyalogda en son zaman. */
+function diyaloglariBirlestir(
+  a: AppState['lgsDiyalog'],
+  b: AppState['lgsDiyalog'],
+): AppState['lgsDiyalog'] {
+  if (!a && !b) return undefined;
+  const cikti: Record<string, number> = { ...a };
+  for (const [k, v] of Object.entries(b ?? {})) cikti[k] = Math.max(cikti[k] ?? 0, v);
+  return cikti;
+}
+
 function gunleriBirlestir(a: AppState['days'], b: AppState['days']): AppState['days'] {
   const cikti: AppState['days'] = { ...a };
   for (const [gun, v] of Object.entries(b ?? {})) {
@@ -190,6 +215,8 @@ export function birlestir(a: Paket, b: Paket): Paket {
       uyelikDavetGorulen: [...davet],
       // Unite testi: her unitede iki cihazin en iyisi.
       lgsTest: enIyiTestler(a.state.lgsTest, b.state.lgsTest),
+      lgsKalip: kaliplariBirlestir(a.state.lgsKalip, b.state.lgsKalip),
+      lgsDiyalog: diyaloglariBirlestir(a.state.lgsDiyalog, b.state.lgsDiyalog),
       // Karsilama bir kez gorulur; bir tarafta goruldüyse tekrar cikmasin.
       onboarded: a.state.onboarded || b.state.onboarded,
     },
@@ -223,7 +250,7 @@ export function paketiAyir(
 ): { genel: Paket; lgs: Paket } {
   const lgsKullandi = Boolean(p.state.lgsYil);
   const lgsin = (id: string) => lgsKullandi && lgsMi(id);
-  const { lgsYil, lgsUnite, lgsTest, ...genelState } = p.state;
+  const { lgsYil, lgsUnite, lgsTest, lgsKalip, lgsDiyalog, ...genelState } = p.state;
   const ortak: Partial<AppState> = {};
   for (const k of ORTAK_TERCIHLER) {
     if (p.state[k] !== undefined) (ortak as Record<string, unknown>)[k] = p.state[k];
@@ -237,6 +264,8 @@ export function paketiAyir(
     ...(lgsYil ? { lgsYil } : {}),
     ...(lgsUnite ? { lgsUnite } : {}),
     ...(lgsTest ? { lgsTest } : {}),
+    ...(lgsKalip ? { lgsKalip } : {}),
+    ...(lgsDiyalog ? { lgsDiyalog } : {}),
     bolumAyrildi: true,
   };
   return {

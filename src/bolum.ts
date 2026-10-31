@@ -47,6 +47,13 @@ function oku(): Bolum {
 
 export const AKTIF_BOLUM: Bolum = typeof window === 'undefined' ? 'genel' : oku();
 
+/*
+  Bolum temasi (31 Ekim, PLAN v3): <html data-bolum="lgs"> — index.css LGS'de
+  zemini serin maviye ceviriyor. Bolum acilista bir kez belirlendigi icin
+  burada bir kez yazmak yetiyor.
+*/
+if (typeof document !== 'undefined') document.documentElement.dataset.bolum = AKTIF_BOLUM;
+
 /**
  * Sitedeki unite sayfasindan gelen istek: `?bolum=lgs&unite=3`. Adresten
  * okunup siliniyor; App bir kez calisilan uniteyi buna ayarliyor (bkz.

@@ -2757,7 +2757,54 @@ Genel için ayrı üretim yok. Oralara yalnız LGS'de üretilen kartlar eklenir
 **Kullanıcıdan beklenen kararlar:** planın onayı; D'nin kredisi; LGS teması (E);
 satış soruları (I).
 
-#### PLAN v3 — LGS ürün deneyimi (kullanıcı 19 Ekim; PLAN v2 bitince konuşulup netleşecek)
+#### PLAN v3 — KARAR (31 Ekim, kullanıcıyla konuşuldu; "deneyelim, bitene kadar dur ma")
+
+Kullanıcının sorusu: "kalıpları bilmeyen nasıl öğrenecek, neden var?" Cevap: LGS soruları
+durum/işlev soruyor (davet, kabul, ret, tercih, tarif sırası, telefon dili…); bugün kalıplar
+ünite sayfasında yalnız LİSTE — öğretmiyor, ilerlemesi yok, tekrar gelmiyor.
+**Karar:**
+1. **Kelimeler aynen kalır, ürünün merkezi.** Gramer anlatımı yine yok (KARARLAR 7).
+2. **Ders sonu kalıp eki (LGS):** her dersin sonunda 1–2 dk: o günün kelimelerinin geçtiği
+   (yoksa ünitenin sıradaki) 1–2 kalıp. Önce durum + kalıp gösterilir (sabit kısım vurgulu),
+   sonra "durumdan doğru cümleyi seç" (LGS soru tipi) ve "cümleyi diz".
+3. **Diyalog eki:** ünitenin kelimeleri ilerledikçe ders sonuna kısa "diyaloğu dinle, boş
+   satırı seç".
+4. **İlerleme kaydı:** kalıp ve diyalog alıştırması doğru çözülünce sayılır; senkronda.
+5. **LGS İlerleme ekranı:** 10 ünite haritası (kelime / kalıp / diyalog / test), LGS'ye kalan
+   gün, "bu hızla bitirme" hesabı.
+6. **LGS görünümü:** LGS bölümü kendi rengiyle (mavi vurgu), ana ekranda geri sayım.
+   Görsel gerekirse Magnific (kullanıcı izin verdi).
+Sonra (konuşulacak): LGS deneme dersi (üyeliksiz ilk ders), ünite "bitti" ölçütü, günlük
+hedefin sınava göre hesaplanması, ücretsiz sınır.
+
+**YAPILDI (31 Ekim akşam):**
+- `src/pekistir.ts` (seçim, saf, testli) + `screens/Pekistir.tsx`: LGS'de ders bitince
+  (`App` flow `pekistir`, sonra `done`) 1–2 kalıp: [tanıt (yalnız ilk kez): durum etiketi +
+  kalıp, bugünün kelimesi fosforlu, ses] → [durumdan seç: Türkçe durum, 4 kalıp şıkkı] →
+  [cümleyi diz: kelime kutuları]. Seçim: çözülmemiş + bugünün kelimesi geçen önce, sonra
+  vadesi gelmiş tekrar (1/3/7/14/30 gün). Diyalog: ünite kelimelerinin %20/%50/%80'inde
+  sırayla açılır, varsa kalıp bire iner; boş satır = ilk olmayan en uzun satır, 3 şık.
+  "Geç" ve geri her an. Kayıt `state.lgsKalip` {"u-i": {d, t}}, `state.lgsDiyalog` {"u-d": ts};
+  senkron `birlestir` en büyüğü alır; `paketiAyir` LGS'ye taşır.
+  - Etiket ele vermesin: `durumEtiketi` ("Sıralama: First" → "Sıralama", "How about +
+    fiil-ing" → gizli). "A / B" iki biçimli kalıpta dizme yalnız ilk biçimle (`ilkBicim`).
+- `lgs.ts`: `LGS_TARIH` (sitedeki ile aynı, tahmini), `lgsyeKalanGun`, `UNITE_SAYILARI`
+  (test içerikle eşitliği denetliyor), `kalipId`/`diyalogId`, `uniteKalipDurumu`.
+- Ana ekran LGS kartı: lacivert "LGS 2027 · N gün kaldı" şeridi, ünite görseli,
+  "Kalıp a/b · Diyalog a/b". Ünite sayfası: çözülen kalıp/diyalog "✓ çözdün".
+- İlerleme (LGS): `components/LgsHarita.tsx` — kalan gün + hız (son 14 gün, `introducedAt`'tan;
+  `days[].i` ESKİ alan, hiç dolmuyor!) + 10 ünite haritası (kelime · kalıp · diyalog · test),
+  dokununca ünite sayfası.
+- Tema: `<html data-bolum>` (bolum.ts), index.css `:root[data-bolum='lgs']` serin mavi zemin.
+- Ünite görselleri: Magnific 4 ızgara (300 kredi; 1. ızgarada Teen Life'a ref sızdı, seed
+  20260919 ile yeniden), `gorseller/unite/` → `node tools/unite-gorsel.mjs` →
+  `src/assets/lgs-unite/u1..u10.webp` (192 px kare), `components/UniteGorseli.tsx` (yoksa emoji).
+  Yedek kareler `lgs-kep` (kep + kitap) ve `lgs-kupa` gorseller/unite'ta, kullanılmadı.
+- Test sırasında bulunan eski hata: harf dizmede çok kelimeli ifadelerde ("get back")
+  BOŞLUK havuzda boş beyaz karo olarak duruyordu → artık havuzda yok, kendiliğinden yerleşiyor
+  (`Scramble.tsx`).
+
+#### PLAN v3 — LGS ürün deneyimi (kullanıcı 19 Ekim; ilk notlar)
 Kullanıcının notları, son hâli:
 1. **Bölümler kesin ayrı** (KARARLAR 14): her bölümün kendi ilerleme/seri/istatistik/
    ayar alanı; `AppState`'e bölüm anahtarı (ör. `bolumler: { genel: {...}, lgs: {...} }`),

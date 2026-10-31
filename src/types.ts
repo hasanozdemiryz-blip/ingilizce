@@ -287,4 +287,12 @@ export type AppState = {
    * yapilmamasi ve eski sunucu paketinin LGS kartlarini Genel'e geri tasimamasi icin.
    */
   bolumAyrildi?: boolean;
+  /**
+   * LGS kalip ilerlemesi (31 Ekim, PLAN v3): "3-5" → { d: dogru cozulme sayisi,
+   * t: son cozulme zamani (ms) }. Ders sonu "Pekistir" adiminda yaziliyor; d
+   * arttikca kalip daha seyrek geri gelir (bkz. Pekistir).
+   */
+  lgsKalip?: Record<string, { d: number; t: number }>;
+  /** LGS diyalog ilerlemesi: "3-2" → dogru cozuldugu zaman (ms). */
+  lgsDiyalog?: Record<string, number>;
 };

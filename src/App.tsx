@@ -13,10 +13,12 @@ import {
   setBittiMi,
   setteOlanlar,
   uniteKartlari,
+  CARD_BY_ID,
 } from './content';
 import { AKTIF_BOLUM, ISTENEN_UNITE } from './bolum';
 import { LgsPanel } from './components/LgsPanel';
 import { Unite } from './screens/Unite';
+import { Pekistir } from './screens/Pekistir';
 import { Tarama } from './screens/Tarama';
 import { TaramaDaveti } from './components/TaramaDaveti';
 import { db, getState, setState, tercihKaydet } from './db';
@@ -83,6 +85,11 @@ type Flow =
       /** Bu derste tanisilan kelimeler — bitis ekrani bunlari kancalariyla gosteriyor */
       yeniIdler: string[];
     }
+  /**
+   * LGS ders sonu eki (PLAN v3): kaliplar + diyalog, sonra bitis ekrani.
+   * Ders ozeti tasiniyor ki bitis ekrani ayni sayilari gostersin.
+   */
+  | { name: 'pekistir'; ozet: Omit<Extract<Flow, { name: 'done' }>, 'name'> }
   | { name: 'kelimeler' }
   | { name: 'profil' }
   /** LGS unite sayfasi: kelimeler, kaliplar, diyaloglar, test */
@@ -422,7 +429,30 @@ export default function App() {
         eslestirmesiz={flow.eslestirmesiz}
         tekrarOnce={flow.tekrarOnce}
         onExit={kapat}
-        onFinish={(ozet) => setFlow({ name: 'done', ...ozet })}
+        onFinish={(ozet) =>
+          setFlow(AKTIF_BOLUM === 'lgs' && state.lgsYil ? { name: 'pekistir', ozet } : { name: 'done', ...ozet })
+        }
+      />
+    );
+  }
+  if (flow?.name === 'pekistir') {
+    const unite = state.lgsUnite ?? 1;
+    const uk = uniteKartlari(unite);
+    const ogrenilen = new Set(progress.filter((p) => p.introduced || p.bilinen).map((p) => p.cardId));
+    const oran = uk.length ? uk.filter((c) => ogrenilen.has(c.id)).length / uk.length : 0;
+    const ozet = flow.ozet;
+    return (
+      <Pekistir
+        unite={unite}
+        bugunKelimeler={ozet.yeniIdler.map((id) => CARD_BY_ID.get(id)?.en).filter((x): x is string => Boolean(x))}
+        oran={oran}
+        lgsKalip={state.lgsKalip}
+        lgsDiyalog={state.lgsDiyalog}
+        onKaydet={(patch) => {
+          olay('pekistir', { unite, kalip: Boolean(patch.lgsKalip), diyalog: Boolean(patch.lgsDiyalog) });
+          void setState(patch);
+        }}
+        onBitti={() => setFlow({ name: 'done', ...ozet })}
       />
     );
   }
@@ -432,6 +462,8 @@ export default function App() {
         no={flow.no}
         progress={progress}
         enIyiTest={state.lgsTest?.[String(flow.no)]}
+        lgsKalip={state.lgsKalip}
+        lgsDiyalog={state.lgsDiyalog}
         onTestSonucu={(no, dogru) => {
           olay('unite_testi', { unite: no, dogru });
           const onceki = state.lgsTest?.[String(no)] ?? -1;
@@ -552,6 +584,8 @@ export default function App() {
                 progress={progress}
                 yil={state.lgsYil}
                 unite={state.lgsUnite}
+                lgsKalip={state.lgsKalip}
+                lgsDiyalog={state.lgsDiyalog}
                 onYil={(lgsYil) => {
                   olay('lgs_yil', { yil: lgsYil });
                   void tercihKaydet({ lgsYil });
@@ -601,6 +635,7 @@ export default function App() {
           state={state}
           progress={progress}
           onWords={() => setFlow({ name: 'kelimeler' })}
+          onUniteAc={(no) => setFlow({ name: 'unite', no })}
         />
       )}
       {tab === 'ayarlar' && (

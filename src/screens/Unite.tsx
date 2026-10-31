@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useState } from 'react';
 import { BackButton, Button, Card, Screen, SpeakButton, TopBar } from '../components/ui';
+import { UniteGorseli } from '../components/UniteGorseli';
 import { kancaYazisi } from '../components/Cagrisim';
 import { uniteKartlari } from '../content';
-import { karistir, uniteYukle, UNITELER, type Diyalog, type UniteIcerik } from '../lgs';
+import { diyalogId, kalipId, karistir, uniteYukle, UNITELER, type Diyalog, type UniteIcerik } from '../lgs';
 import { seslendir } from '../speech';
-import { kancaliMi, type Progress } from '../types';
+import { kancaliMi, type AppState, type Progress } from '../types';
 import { t } from '../dil';
 
 type Bolum = 'kelimeler' | 'kaliplar' | 'diyaloglar' | 'test';
@@ -24,6 +25,9 @@ type Props = {
   /** Unite testi bitince en iyi puan kaydedilir */
   onTestSonucu: (no: number, dogru: number) => void;
   enIyiTest?: number;
+  /** Ders sonu "Pekistir"de cozulmus kalip ve diyaloglar (PLAN v3): isaretli gorunur */
+  lgsKalip?: AppState['lgsKalip'];
+  lgsDiyalog?: AppState['lgsDiyalog'];
   onExit: () => void;
 };
 
@@ -34,7 +38,7 @@ type Props = {
  * gorduyse oradan baslayabilir. Gramer anlatimi yok — kalip, ornek ve
  * Turkce karsiligiyla; diyalogda satira dokununca Turkcesi acilir.
  */
-export function Unite({ no, progress, onCalis, onTestSonucu, enIyiTest, onExit }: Props) {
+export function Unite({ no, progress, onCalis, onTestSonucu, enIyiTest, lgsKalip, lgsDiyalog, onExit }: Props) {
   const [bolum, setBolum] = useState<Bolum>('kelimeler');
   const [icerik, setIcerik] = useState<UniteIcerik | null>(null);
   const [hata, setHata] = useState(false);
@@ -56,9 +60,7 @@ export function Unite({ no, progress, onCalis, onTestSonucu, enIyiTest, onExit }
     <Screen yanMenusuz>
       <TopBar left={<BackButton onClick={onExit} />} right={t('{n}. ünite', { n: no })} />
       <div className="flex items-center gap-3 mb-3 shrink-0">
-        <span className="text-4xl" aria-hidden>
-          {meta.ikon}
-        </span>
+        <UniteGorseli no={no} className="h-16 w-16" />
         <div className="min-w-0">
           <h1 className="word text-2xl font-extrabold leading-tight">{meta.ad}</h1>
           <p className="text-sm text-ink-soft">{meta.tr}</p>
@@ -91,9 +93,11 @@ export function Unite({ no, progress, onCalis, onTestSonucu, enIyiTest, onExit }
         ) : !icerik ? (
           <Card className="text-center text-sm text-ink-soft">{t('Yükleniyor…')}</Card>
         ) : bolum === 'kaliplar' ? (
-          <Kaliplar icerik={icerik} />
+          <Kaliplar icerik={icerik} cozulen={(i) => Boolean(lgsKalip?.[kalipId(no, i)]?.d)} />
         ) : bolum === 'diyaloglar' ? (
-          icerik.diyaloglar.map((d) => <DiyalogKarti key={d.baslik} diyalog={d} />)
+          icerik.diyaloglar.map((d, i) => (
+            <DiyalogKarti key={d.baslik} diyalog={d} cozuldu={Boolean(lgsDiyalog?.[diyalogId(no, i)])} />
+          ))
         ) : (
           <UniteTesti icerik={icerik} enIyi={enIyiTest} onBitti={(dogru) => onTestSonucu(no, dogru)} />
         )}
@@ -162,14 +166,20 @@ function Kelimeler({ no, progress, onCalis }: { no: number; progress: Progress[]
   );
 }
 
-function Kaliplar({ icerik }: { icerik: UniteIcerik }) {
+function Kaliplar({ icerik, cozulen }: { icerik: UniteIcerik; cozulen: (i: number) => boolean }) {
   return (
     <>
       <p className="text-sm text-ink-soft px-1">{icerik.konu}</p>
-      {icerik.kaliplar.map((k) => (
+      <p className="text-xs text-ink-faint px-1 -mt-1">
+        {t('Kalıplar ders sonlarında, o günün kelimeleriyle alıştırma olarak da gelir. Çözdüklerin işaretli.')}
+      </p>
+      {icerik.kaliplar.map((k, i) => (
         <Card key={k.en} className="!py-4">
           {/* Buyuk harf YOK: not Turkce + Ingilizce karisik; tr yerelinde "FİRST" cikiyordu */}
-          {k.not && <p className="text-xs font-bold text-brand-deep mb-1">{k.not}</p>}
+          <div className="flex items-center gap-2 mb-1">
+            {k.not && <p className="text-xs font-bold text-brand-deep">{k.not}</p>}
+            {cozulen(i) && <span className="ml-auto rounded-full bg-grow-soft px-2 py-0.5 text-[11px] font-extrabold text-grow-deep">✓ {t('çözdün')}</span>}
+          </div>
           <div className="flex items-start gap-2">
             <p className="word flex-1 text-lg font-bold leading-snug">{k.en}</p>
             <SpeakButton word={k.en} size="mini" />
@@ -186,7 +196,7 @@ function Kaliplar({ icerik }: { icerik: UniteIcerik }) {
  * once anlamaya calis, takilinca bak. Kadin satirlari solda, erkekler
  * sagda (sesler Asama 5'te bu cinsiyete gore uretiliyor).
  */
-function DiyalogKarti({ diyalog }: { diyalog: Diyalog }) {
+function DiyalogKarti({ diyalog, cozuldu }: { diyalog: Diyalog; cozuldu?: boolean }) {
   const [acik, setAcik] = useState<Set<number>>(new Set());
   const ac = (i: number) =>
     setAcik((s) => {
@@ -197,7 +207,10 @@ function DiyalogKarti({ diyalog }: { diyalog: Diyalog }) {
     });
   return (
     <Card>
-      <p className="word text-lg font-extrabold mb-3">{diyalog.baslik}</p>
+      <div className="flex items-center gap-2 mb-3">
+        <p className="word text-lg font-extrabold">{diyalog.baslik}</p>
+        {cozuldu && <span className="ml-auto rounded-full bg-grow-soft px-2 py-0.5 text-[11px] font-extrabold text-grow-deep">✓ {t('çözdün')}</span>}
+      </div>
       <ol className="flex flex-col gap-2.5">
         {diyalog.satirlar.map((s, i) => {
           const sag = s.cinsiyet === 'e';

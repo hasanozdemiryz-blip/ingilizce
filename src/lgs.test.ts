@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
-import { karistir, type UniteIcerik } from './lgs';
+import { karistir, UNITE_SAYILARI, type UniteIcerik } from './lgs';
 
 const KLASOR = path.resolve(__dirname, '../content/lgs-unite');
 const uniteler: UniteIcerik[] = fs
@@ -20,6 +20,10 @@ describe('LGS unite icerigi', () => {
       expect(u.diyaloglar.length).toBeLessThanOrEqual(4);
       expect(u.test).toHaveLength(10);
     }
+  });
+
+  it('UNITE_SAYILARI icerikle ayni (ana ekran ve Ilerleme bunu okuyor)', () => {
+    for (const u of uniteler) expect(UNITE_SAYILARI[u.unite]).toEqual({ kalip: u.kaliplar.length, diyalog: u.diyaloglar.length });
   });
 
   it('her diyalogda kadin ve erkek ses var (KARARLAR 9)', () => {

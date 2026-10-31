@@ -8,6 +8,8 @@ import { CARDS } from '../content';
 import { PENCERELER, abilities, activeDays, successRate, type Pencere } from '../score';
 import type { AppState, Cevap, Progress as ProgressRow } from '../types';
 import { BolumRozeti } from '../components/BolumRozeti';
+import { LgsHarita } from '../components/LgsHarita';
+import { AKTIF_BOLUM } from '../bolum';
 import { t } from '../dil';
 
 /**
@@ -35,10 +37,13 @@ export function ProgressScreen({
   state,
   progress,
   onWords,
+  onUniteAc,
 }: {
   state: AppState;
   progress: ProgressRow[];
   onWords: () => void;
+  /** LGS: unite haritasindan unite sayfasina */
+  onUniteAc?: (no: number) => void;
 }) {
   const [pencere, setPencere] = useState<Pencere>('hafta');
 
@@ -93,6 +98,9 @@ export function ProgressScreen({
             />
           </div>
         </button>
+
+        {/* LGS: sinava kalan gun + unite haritasi (PLAN v3) */}
+        {AKTIF_BOLUM === 'lgs' && onUniteAc && <LgsHarita state={state} progress={progress} onUniteAc={onUniteAc} />}
 
         {/* --- Dogruluk: donemsel, tek satir --- */}
         <Card className="rise delay-1">

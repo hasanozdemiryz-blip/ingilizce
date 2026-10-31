@@ -69,7 +69,8 @@ export type Olay =
   | 'lgs_yil'
   | 'lgs_unite'
   | 'unite_testi'
-  | 'tarama_bitti';
+  | 'tarama_bitti'
+  | 'pekistir';
 
 type Veri = Record<string, string | number | boolean>;
 

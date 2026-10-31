@@ -114,6 +114,19 @@
   --shadow-lift: 0 14px 32px -16px rgba(22, 35, 58, 0.22);
 }
 
+/*
+  LGS TEMASI (31 Ekim, PLAN v3). Genel krem kagit; LGS ayni iskelette SERIN
+  mavi zemin — sitedeki LGS sekmesinin rengi (#5ec8ff ailesi). Vurgu, sari
+  kanca ve murekkep ayni kaliyor: yontem ayni, bolum farkli. Yalniz zemin
+  tonlari degisiyor ki kartlar (beyaz) ve metin kontrasti bozulmasin.
+*/
+:root[data-bolum='lgs'] {
+  --color-paper: #eef6fd;
+  --color-sunken: #e0eefa;
+  --color-line: #d2e3f3;
+  --color-brand-soft: #d9ebfc;
+}
+
 html,
 body,
 #root {

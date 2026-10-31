@@ -69,6 +69,17 @@ export function Scramble({
     }
 
     const yeni = [...secili, i];
+    /*
+      BOSLUK KENDILIGINDEN (31 Ekim testi). Cok kelimeli ifadelerde ("get
+      back", "hang on") bosluk havuzda BOS BEYAZ bir karo olarak duruyordu;
+      kullanici onun bosluk oldugunu anlayamiyor ve takiliyordu. Artik
+      havuzda yok; sirasi gelince kendisi yerlesiyor.
+    */
+    while (card.en[yeni.length] === ' ') {
+      const b = karolar.findIndex((h, j) => h === ' ' && !yeni.includes(j));
+      if (b < 0) break;
+      yeni.push(b);
+    }
     setSecili(yeni);
     if (yeni.length === karolar.length) {
       // Dizilim bittiginde kelime zaten dogru; bekletmeden sonuca gec.
@@ -92,36 +103,42 @@ export function Scramble({
 
       {/* Yazilan: bos kutucuklar kac harf oldugunu da soyler */}
       <div className="flex justify-center gap-1.5 min-h-[4.5rem]">
-        {karolar.map((_, i) => (
-          <span
-            key={i}
-            className={`word grid ${boyut} place-items-center rounded-xl font-extrabold transition-all ${
-              i < secili.length
-                ? 'bg-grow-soft text-[#128a5f] shadow-[var(--shadow-soft)]'
-                : 'bg-white/45 text-transparent'
-            }`}
-          >
-            {karolar[secili[i]] ?? '·'}
-          </span>
-        ))}
+        {karolar.map((_, i) =>
+          card.en[i] === ' ' ? (
+            <span key={i} className="w-2 shrink-0" aria-hidden />
+          ) : (
+            <span
+              key={i}
+              className={`word grid ${boyut} place-items-center rounded-xl font-extrabold transition-all ${
+                i < secili.length
+                  ? 'bg-grow-soft text-[#128a5f] shadow-[var(--shadow-soft)]'
+                  : 'bg-white/45 text-transparent'
+              }`}
+            >
+              {karolar[secili[i]] ?? '·'}
+            </span>
+          ),
+        )}
       </div>
 
       <div className="flex flex-wrap justify-center gap-2">
-        {karolar.map((h, i) => (
-          <button
-            key={i}
-            onClick={() => karoyaDokun(i)}
-            className={`word grid ${boyut} place-items-center rounded-xl font-extrabold transition-all active:scale-90 ${
-              kullanildi.has(i)
-                ? 'bg-sunken text-transparent'
-                : hata === i
-                  ? 'bg-blush text-white'
-                  : 'bg-white text-ink shadow-[var(--shadow-soft)]'
-            }`}
-          >
-            {h}
-          </button>
-        ))}
+        {karolar.map((h, i) =>
+          h === ' ' ? null : (
+            <button
+              key={i}
+              onClick={() => karoyaDokun(i)}
+              className={`word grid ${boyut} place-items-center rounded-xl font-extrabold transition-all active:scale-90 ${
+                kullanildi.has(i)
+                  ? 'bg-sunken text-transparent'
+                  : hata === i
+                    ? 'bg-blush text-white'
+                    : 'bg-white text-ink shadow-[var(--shadow-soft)]'
+              }`}
+            >
+              {h}
+            </button>
+          ),
+        )}
       </div>
     </div>
   );

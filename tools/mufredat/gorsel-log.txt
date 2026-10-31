@@ -282,3 +282,7 @@
 2026-10-19T11:28|izgara 504|ovSzF7y829|ocean,snow,wind,climate-change|atlanan:
 2026-10-31T13:04|izgara 701|O6tUVSHynm|land,wind,climate-change|atlanan:
 2026-10-31T16:05|izgara 701|O6tUVSHynm|land,wind,climate-change|atlanan:
+2026-10-31T17:00|unite 1|kscb4Qv16B|u1,-(teen life sizinti),u3,u4|atlanan:u2
+2026-10-31T17:00|unite 2|dtUDHTcXSL|u5,u6,u7,u8|atlanan:
+2026-10-31T17:00|unite 3|IfyBkdetvE|u9,u10,lgs-kep,lgs-kupa|atlanan:
+2026-10-31T17:10|unite 4 (u2 yeniden, seed 20260919)|ovJdKP3829|-,-(sizinti),-,u2|atlanan:1-3 (4. kare secildi)

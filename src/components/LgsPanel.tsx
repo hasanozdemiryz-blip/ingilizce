@@ -1,14 +1,17 @@
 import { useState } from 'react';
+import { UniteGorseli } from './UniteGorseli';
 import { Button, Card } from './ui';
-import { UNITELER } from '../lgs';
+import { lgsyeKalanGun, UNITE_SAYILARI, uniteKalipDurumu, UNITELER } from '../lgs';
 import { uniteKartlari } from '../content';
-import type { Progress } from '../types';
+import type { AppState, Progress } from '../types';
 import { t } from '../dil';
 
 type Props = {
   progress: Progress[];
   yil?: 2027 | 2028;
   unite?: number;
+  lgsKalip?: AppState['lgsKalip'];
+  lgsDiyalog?: AppState['lgsDiyalog'];
   onYil: (yil: 2027 | 2028) => void;
   onUnite: (no: number) => void;
   /** Unite sayfasini ac (kaliplar, diyaloglar, test) */
@@ -23,7 +26,7 @@ type Props = {
  * KILITSIZ: her an baska uniteye gecilebilir; secim yalnizca yeni
  * kelimelerin hangi uniteden gelecegini belirliyor.
  */
-export function LgsPanel({ progress, yil, unite, onYil, onUnite, onUniteAc }: Props) {
+export function LgsPanel({ progress, yil, unite, lgsKalip, lgsDiyalog, onYil, onUnite, onUniteAc }: Props) {
   const [uniteSeciliyor, setUniteSeciliyor] = useState(false);
 
   if (!yil) {
@@ -73,9 +76,7 @@ export function LgsPanel({ progress, yil, unite, onYil, onUnite, onUniteAc }: Pr
                     u.no === unite ? 'bg-brand text-white' : 'bg-sunken hover:bg-brand-soft'
                   }`}
                 >
-                  <span className="text-2xl" aria-hidden>
-                    {u.ikon}
-                  </span>
+                  <UniteGorseli no={u.no} className="h-11 w-11" />
                   <span className="min-w-0 flex-1">
                     <span className="block text-xs font-bold opacity-70">{t('{n}. ünite', { n: u.no })}</span>
                     <span className="word block font-extrabold leading-tight">{u.ad}</span>
@@ -101,12 +102,22 @@ export function LgsPanel({ progress, yil, unite, onYil, onUnite, onUniteAc }: Pr
   const u = UNITELER[unite - 1];
   const d = durum(unite);
   const pct = d.toplam ? Math.round((d.bitti / d.toplam) * 100) : 0;
+  const kd = uniteKalipDurumu(unite, lgsKalip, lgsDiyalog);
+  const say = UNITE_SAYILARI[unite];
+  const kalanGun = lgsyeKalanGun();
   return (
-    <Card className="rise !py-4">
+    <Card className="rise !py-4 overflow-hidden">
+      {/* LGS'ye kalan gun (PLAN v3): LGS'li icin her gunun anlami bu sayi */}
+      {kalanGun > 0 && (
+        <div className="-mx-5 -mt-4 mb-3 flex items-center justify-between bg-[#16233a] px-5 py-2 text-white">
+          <span className="text-xs font-bold text-white/75">{t('LGS 2027')}</span>
+          <span className="text-sm font-extrabold">
+            <span className="text-spark tabular-nums">{kalanGun}</span> {t('gün kaldı')}
+          </span>
+        </div>
+      )}
       <div className="flex items-center gap-3">
-        <span className="text-3xl" aria-hidden>
-          {u.ikon}
-        </span>
+        <UniteGorseli no={u.no} className="h-14 w-14" />
         <div className="min-w-0 flex-1">
           <p className="text-xs font-bold text-ink-soft">
             {t('{n}. ünite', { n: u.no })} · {u.tr}
@@ -127,6 +138,15 @@ export function LgsPanel({ progress, yil, unite, onYil, onUnite, onUniteAc }: Pr
         </div>
         <span className="text-xs font-bold tabular-nums text-ink-soft">
           {t('{a}/{b} kelime', { a: d.bitti, b: d.toplam })}
+        </span>
+      </div>
+      {/* Kalip ve diyalog: ders sonu "Pekistir"de ilerliyor (PLAN v3) */}
+      <div className="mt-2 grid grid-cols-2 gap-2 text-xs font-bold text-ink-soft">
+        <span className="rounded-xl bg-sunken px-3 py-1.5 tabular-nums">
+          {t('Kalıp {a}/{b}', { a: kd.kalip, b: say.kalip })}
+        </span>
+        <span className="rounded-xl bg-sunken px-3 py-1.5 tabular-nums">
+          {t('Diyalog {a}/{b}', { a: kd.diyalog, b: say.diyalog })}
         </span>
       </div>
       <Button variant="soft" className="mt-3 !py-3" onClick={() => onUniteAc(unite)}>
