@@ -153,6 +153,8 @@ const LGS_KARTLARI: Card[] = LGS.kartlar.map(({ genel: _genel, ...c }) => ({
   ...c,
   image: LGS_GORSELLER.get(c.id) ?? null,
 }));
+/** LGS'nin kendi kartlari (Genel'in 400 karti haric) — bolum ayriminda kullanilir (senkron.ts). */
+export const LGS_KART_IDLERI: ReadonlySet<string> = new Set(LGS_KARTLARI.map((c) => c.id));
 const LGS_GENELE: Set<string> = new Set(LGS.kartlar.filter((k) => k.genel).map((k) => k.id));
 
 const SEVIYE_SIRA = { baslangic: 0, orta: 1 } as const;

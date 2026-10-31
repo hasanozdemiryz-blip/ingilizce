@@ -7,6 +7,7 @@ import { uyelikVarMi, type Uye } from '../uyelik';
 import { CARD_BY_ID, CARDS, ogrenilenKancalar, setBittiMi } from '../content';
 import { relativeDue } from '../dates';
 import type { AppState, Card as CardType, Progress } from '../types';
+import { BolumRozeti } from '../components/BolumRozeti';
 import { t } from '../dil';
 import { kancaYazisi } from '../components/Cagrisim';
 import { kancaliMi } from '../types';
@@ -190,6 +191,8 @@ export function Home({
           <span className="word text-base font-extrabold text-ink-soft">{t('Hafızada İngilizce')}</span>
         )}
         <span className="flex shrink-0 items-center gap-2">
+          {/* Hangi bolumdesin (31 Ekim): platformda bolum gecisi yok, yalniz gosterge */}
+          <BolumRozeti />
           {state.streakCount > 0 && <Streak count={state.streakCount} />}
           {/* Girissize ustte de bir kapi; serit asagida kalabiliyor */}
           {uyelikVarMi() && uyelikHazir && !uye && (

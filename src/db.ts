@@ -1,4 +1,5 @@
 import Dexie, { type Table } from 'dexie';
+import { AKTIF_BOLUM, type Bolum } from './bolum';
 import { LIMIT_DEFAULT } from './content';
 import { nextStreak, todayKey } from './dates';
 import { yeniProfil } from './profil';
@@ -6,13 +7,24 @@ import type { AppState, Cevap, Progress } from './types';
 
 type MetaRow = { key: string; value: unknown };
 
-class AppDB extends Dexie {
+/**
+ * Her bolumun kendi veritabani (31 Ekim). Genel ESKI adi tasiyor: bolumler
+ * ayrilmadan onceki butun ilerleme orada, kimse veri kaybetmesin. LGS yeni
+ * ve bos baslar; eski veriden LGS'ye ait olanlar bir kez tasinir
+ * (bkz. senkron.ts `bolumleriAyir`).
+ */
+export const DB_ADI: Record<Bolum, string> = {
+  genel: 'hafizada-ingilizce',
+  lgs: 'hafizada-ingilizce-lgs',
+};
+
+export class AppDB extends Dexie {
   progress!: Table<Progress, string>;
   meta!: Table<MetaRow, string>;
   answers!: Table<Cevap, number>;
 
-  constructor() {
-    super('hafizada-ingilizce');
+  constructor(ad: string = DB_ADI.genel) {
+    super(ad);
     // IndexedDB boolean index'lemez — 'introduced' bilerek index disi.
     this.version(1).stores({
       progress: 'cardId, due, deck',
@@ -173,7 +185,8 @@ export function normalizeProgress(p: Progress): Progress {
   };
 }
 
-export const db = new AppDB();
+/** Aktif bolumun veritabani — bolum sayfa acilisinda bir kez belirleniyor (bkz. bolum.ts). */
+export const db = new AppDB(DB_ADI[AKTIF_BOLUM]);
 
 export const APP_KEY = 'app';
 
@@ -355,4 +368,12 @@ export async function resetAll(): Promise<void> {
     await db.meta.clear();
     await db.answers.clear();
   });
+  /*
+    Cikista OTEKI bolumun cihazdaki kopyasi da gitmeli: cihazi paylasan
+    baska biri LGS'yi acinca cikan kisinin LGS ilerlemesini gormesin.
+    Veri hesapta duruyor, tekrar girince gelir.
+  */
+  for (const ad of Object.values(DB_ADI)) {
+    if (ad !== db.name) await Dexie.delete(ad).catch(() => undefined);
+  }
 }

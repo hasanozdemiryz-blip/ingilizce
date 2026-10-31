@@ -280,4 +280,11 @@ export type AppState = {
    * Senkronda iki cihazin buyugu kalir (bkz. senkron.ts).
    */
   lgsTest?: Record<string, number>;
+  /**
+   * Bu paket bolumlere ayrildi mi (31 Ekim). Once Genel ve LGS tek veritabaninda,
+   * tek senkron paketinde duruyordu; ayrilmamis paket gorulunce bir kez ikiye
+   * bolunuyor (bkz. senkron.ts `paketiAyir`). Bayrak, ayni ayrimin bir daha
+   * yapilmamasi ve eski sunucu paketinin LGS kartlarini Genel'e geri tasimamasi icin.
+   */
+  bolumAyrildi?: boolean;
 };

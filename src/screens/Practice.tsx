@@ -20,6 +20,7 @@ import {
   todaysCards,
 } from '../scheduler';
 import type { Progress, Step } from '../types';
+import { BolumRozeti } from '../components/BolumRozeti';
 import { t } from '../dil';
 import { kancaYazisi } from '../components/Cagrisim';
 import { kancaliMi } from '../types';
@@ -485,7 +486,10 @@ export function Practice({
   return (
     <Screen yanMenusuz>
       <header className="flex items-center justify-between h-14 shrink-0">
-        <span className="word text-lg font-bold">{t('Egzersiz')}</span>
+        <span className="flex items-center gap-2">
+          <span className="word text-lg font-bold">{t('Egzersiz')}</span>
+          <BolumRozeti />
+        </span>
         <span className="text-sm text-ink-soft tabular-nums">{t('{n} kelime', { n: ogrenilenler.length })}</span>
       </header>
 

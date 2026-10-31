@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { birlestir, tazelik, type Paket } from './senkron';
+import { birlestir, paketiAyir, satiriOku, tazelik, type Paket } from './senkron';
 import type { AppState, Cevap, Progress } from './types';
 
 const durum = (p: Partial<AppState> = {}): AppState => ({
@@ -233,5 +233,45 @@ describe('birlestir — tercihler kendi damgasiyla', () => {
     const a = paket('2026-10-04T12:00:00Z', { state: durum({ lastSessionDate: '2026-10-03' }) });
     const b = paket('2026-10-04T09:00:00Z', { state: durum({ lastSessionDate: '2026-10-04' }) });
     expect(birlestir(a, b).state.lastSessionDate).toBe('2026-10-04');
+  });
+});
+
+describe('paketiAyir — Genel ve LGS (31 Ekim)', () => {
+  const lgsMi = (id: string) => id === 'accept' || id === 'attend';
+  const eski = (p: Partial<AppState>) =>
+    paket('2026-10-30T10:00:00Z', {
+      state: durum({ streakCount: 3, profil: { ad: 'Hasan' } as AppState['profil'], ...p }),
+      progress: [kart('snake'), kart('accept'), kart('attend')],
+      answers: [cevap('snake', 1), cevap('accept', 2)],
+    });
+
+  it("LGS'yi kullanmis (yil secmis): LGS kartlari ve LGS ayarlari LGS'ye gider", () => {
+    const { genel, lgs } = paketiAyir(eski({ lgsYil: 2027, lgsUnite: 3, lgsTest: { '3': 9 } }), lgsMi);
+    expect(genel.progress.map((x) => x.cardId)).toEqual(['snake']);
+    expect(lgs.progress.map((x) => x.cardId)).toEqual(['accept', 'attend']);
+    expect(genel.answers.map((c) => c.cardId)).toEqual(['snake']);
+    expect(lgs.answers.map((c) => c.cardId)).toEqual(['accept']);
+    expect(genel.state.lgsYil).toBeUndefined();
+    expect(lgs.state).toMatchObject({ lgsYil: 2027, lgsUnite: 3, lgsTest: { '3': 9 }, onboarded: true, bolumAyrildi: true });
+    // Seri Genel'de kalir, LGS sifirdan; profil ikisinde de.
+    expect(genel.state.streakCount).toBe(3);
+    expect(lgs.state.streakCount).toBe(0);
+    expect(lgs.state.profil?.ad).toBe('Hasan');
+    expect(genel.state.bolumAyrildi).toBe(true);
+  });
+
+  it("LGS'yi hic acmamis: her sey Genel'de kalir (LGS kartlari Genel destesinde de var)", () => {
+    const { genel, lgs } = paketiAyir(eski({}), lgsMi);
+    expect(genel.progress).toHaveLength(3);
+    expect(lgs.progress).toHaveLength(0);
+    expect(lgs.state.onboarded).toBe(false);
+  });
+
+  it('ayrilmamis sunucu satiri okunurken bolunur, ayrilmis satir oldugu gibi okunur', () => {
+    const ham = paketiAyir(eski({ lgsYil: 2027 }), lgsMi);
+    const ayrilmis = satiriOku({ ...ham.genel, lgs: ham.lgs });
+    expect(ayrilmis.genel?.progress).toHaveLength(ham.genel.progress.length);
+    expect(ayrilmis.lgs?.state.lgsYil).toBe(2027);
+    expect(satiriOku(null)).toEqual({ genel: null, lgs: null });
   });
 });

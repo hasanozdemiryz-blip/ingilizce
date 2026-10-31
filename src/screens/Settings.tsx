@@ -21,6 +21,7 @@ import { GirisRozeti } from '../components/HesapMenusu';
 import { DevPanel } from './DevPanel';
 import type { AppState } from '../types';
 import { dosyayiVer, paylasilabilir, telefonaKaydet, yedekAdi, yol } from '../dosya';
+import { BolumRozeti } from '../components/BolumRozeti';
 import { t } from '../dil';
 import { karsilamaIzniniSil } from '../karsilama';
 import { DAVET_METNI } from '../davet';
@@ -150,8 +151,9 @@ export function Settings({
 
   return (
     <Screen>
-      <header className="flex items-center h-14 shrink-0">
+      <header className="flex items-center gap-2 h-14 shrink-0">
         <span className="word text-lg font-bold">{t('Ayarlar')}</span>
+        <BolumRozeti />
       </header>
 
       <div className={`flex-1 flex flex-col gap-3 ${TAB_SPACE}`}>

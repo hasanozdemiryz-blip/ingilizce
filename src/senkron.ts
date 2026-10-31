@@ -1,4 +1,6 @@
-import { APP_KEY, db, getAnswers, getState, normalizeProgress, resetAll } from './db';
+import { AKTIF_BOLUM } from './bolum';
+import { LGS_KART_IDLERI } from './content';
+import { APP_KEY, AppDB, DB_ADI, db, EMPTY_STATE, getAnswers, getState, normalizeProgress, resetAll } from './db';
 import { cikisYap, istemciAl, uyeOku } from './uyelik';
 import type { AppState, Cevap, Progress } from './types';
 
@@ -194,6 +196,128 @@ export function birlestir(a: Paket, b: Paket): Paket {
   };
 }
 
+// --- Bolum ayrimi (31 Ekim) ------------------------------------------------
+
+/*
+  Genel ve LGS ayri urunler (KARARLAR 14): ilerleme, seri, istatistik, ayar
+  her bolumde ayri. Once tek paketteydi; LGS'den giren kullanici Genel'deki
+  ilerlemesini LGS'de goruyordu. Ayrilmamis her paket (cihazda ya da
+  sunucuda) bir kez ikiye bolunuyor.
+*/
+
+/** Her iki bolume de giden kisisel tercihler. Ilerleme ve seri gitmez. */
+const ORTAK_TERCIHLER = ['profil', 'sound', 'dailyLimit', 'reminderHour', 'reminderMinute', 'olcum', 'tercihDegisti', 'uyelikDavetGorulen'] as const;
+
+/**
+ * Ayrilmamis paketi Genel ve LGS'ye boler. Saf fonksiyon.
+ *
+ * Kural: Genel'in kendi kartlari Genel'de kalir. LGS kartlari YALNIZ
+ * kullanici LGS'yi kullanmissa (yil secmis) LGS'ye gider; LGS'yi hic
+ * acmamis birinde o kartlar Genel destesinde ogrenilmistir (Genel'e uygun
+ * LGS kartlari Genel'de de var), orada kalir. Yil, unite ve unite testleri
+ * LGS'nin; seri, gunler, karsilama Genel'in.
+ */
+export function paketiAyir(
+  p: Paket,
+  lgsMi: (cardId: string) => boolean = (id) => LGS_KART_IDLERI.has(id),
+): { genel: Paket; lgs: Paket } {
+  const lgsKullandi = Boolean(p.state.lgsYil);
+  const lgsin = (id: string) => lgsKullandi && lgsMi(id);
+  const { lgsYil, lgsUnite, lgsTest, ...genelState } = p.state;
+  const ortak: Partial<AppState> = {};
+  for (const k of ORTAK_TERCIHLER) {
+    if (p.state[k] !== undefined) (ortak as Record<string, unknown>)[k] = p.state[k];
+  }
+  const lgsProgress = p.progress.filter((x) => lgsin(x.cardId));
+  const lgsAnswers = p.answers.filter((c) => lgsin(c.cardId));
+  const lgsState: AppState = {
+    ...EMPTY_STATE,
+    ...ortak,
+    onboarded: lgsKullandi,
+    ...(lgsYil ? { lgsYil } : {}),
+    ...(lgsUnite ? { lgsUnite } : {}),
+    ...(lgsTest ? { lgsTest } : {}),
+    bolumAyrildi: true,
+  };
+  return {
+    genel: {
+      ...p,
+      progress: p.progress.filter((x) => !lgsin(x.cardId)),
+      answers: p.answers.filter((c) => !lgsin(c.cardId)),
+      state: { ...genelState, bolumAyrildi: true },
+    },
+    lgs: {
+      surum: SURUM,
+      yazildi: tazelik({ state: lgsState, progress: lgsProgress, answers: lgsAnswers }),
+      state: lgsState,
+      progress: lgsProgress,
+      answers: lgsAnswers,
+    },
+  };
+}
+
+/** Bos ve "her karsilastirmayi kaybeden" bir paket — karsi tarafin verisini ezmez. */
+const bosPaket = (state: AppState): Paket => ({
+  surum: SURUM,
+  yazildi: new Date(0).toISOString(),
+  state: { ...EMPTY_STATE, profil: state.profil, bolumAyrildi: true },
+  progress: [],
+  answers: [],
+});
+
+async function dbOku(d: AppDB): Promise<Paket> {
+  const [progress, row, answers] = await Promise.all([d.progress.toArray(), d.meta.get(APP_KEY), d.answers.toArray()]);
+  const state = { ...EMPTY_STATE, ...((row?.value as Partial<AppState>) ?? {}) };
+  return { surum: SURUM, yazildi: tazelik({ state, progress, answers }), state, progress, answers };
+}
+
+async function dbYaz(d: AppDB, p: Paket): Promise<void> {
+  await d.transaction('rw', d.progress, d.meta, d.answers, async () => {
+    await d.progress.clear();
+    await d.progress.bulkPut(p.progress.map(normalizeProgress));
+    await d.answers.clear();
+    if (p.answers.length > 0) await d.answers.bulkAdd(p.answers.map(({ id: _yok, ...c }) => c));
+    await d.meta.put({ key: APP_KEY, value: p.state });
+  });
+}
+
+/**
+ * Cihazdaki eski (ortak) veritabanini bir kez boler. Acilista, her seyden
+ * once cagriliyor (bkz. main.tsx). Eski veritabani Genel'in adini tasiyor;
+ * LGS'ye ait olanlar LGS veritabanina yazilip Genel'den cikariliyor.
+ * Hata olursa sessizce gecer: veri yerinde kalir, bir sonraki acilista denenir.
+ */
+export async function bolumleriAyir(): Promise<void> {
+  const acik: AppDB[] = [];
+  const ac = (b: 'genel' | 'lgs'): AppDB => {
+    if (AKTIF_BOLUM === b) return db;
+    const d = new AppDB(DB_ADI[b]);
+    acik.push(d);
+    return d;
+  };
+  try {
+    const genelDb = ac('genel');
+    const eski = await dbOku(genelDb);
+    if (eski.state.bolumAyrildi) return;
+    const bos = eski.progress.length === 0 && eski.answers.length === 0 && !eski.state.onboarded;
+    if (bos) {
+      // Yeni kurulum: ayrilacak bir sey yok, yalniz isaretle.
+      await genelDb.meta.put({ key: APP_KEY, value: { ...eski.state, bolumAyrildi: true } });
+      return;
+    }
+    const { genel, lgs } = paketiAyir(eski);
+    const lgsDb = ac('lgs');
+    const lgsSimdi = await dbOku(lgsDb);
+    const lgsDolu = lgsSimdi.progress.length > 0 || lgsSimdi.state.onboarded;
+    await dbYaz(lgsDb, lgsDolu ? birlestir(lgsSimdi, lgs) : lgs);
+    await dbYaz(genelDb, genel);
+  } catch {
+    /* veri yerinde; bir sonraki acilista yeniden denenir */
+  } finally {
+    for (const d of acik) d.close();
+  }
+}
+
 // --- Cihaz tarafi ----------------------------------------------------------
 
 /**
@@ -255,7 +379,29 @@ export async function yereleYaz(p: Paket): Promise<void> {
 
 // --- Sunucu tarafi ---------------------------------------------------------
 
-async function uzaktanOku(): Promise<Paket | null> {
+/*
+  SUNUCU SEKLI (31 Ekim). Kullanici basina yine tek satir: `veri` Genel'in
+  paketi (eski sekil; eski surum uygulamalar okumaya devam etsin), LGS
+  paketi onun icinde `veri.lgs`. Satir ayrilmamissa (`state.bolumAyrildi`
+  yok) okurken ikiye bolunuyor; ilk yazmada ayrilmis hali gidiyor.
+*/
+type Satir = Paket & { lgs?: Paket };
+type Uzak = { genel: Paket | null; lgs: Paket | null };
+
+const paketMi = (v: unknown): v is Paket => Boolean(v) && Array.isArray((v as Paket).progress);
+
+/** Sunucu satirini bolumlere ayirir. Saf — test edilebilir. */
+export function satiriOku(v: unknown): Uzak {
+  if (!paketMi(v)) return { genel: null, lgs: null };
+  const { lgs: lgsHam, ...genelHam } = v as Satir;
+  const lgsVar = paketMi(lgsHam) ? lgsHam : null;
+  if (genelHam.state?.bolumAyrildi) return { genel: genelHam, lgs: lgsVar };
+  // Ayrilmamis eski satir: bol.
+  const ayri = paketiAyir(genelHam);
+  return { genel: ayri.genel, lgs: lgsVar ? birlestir(lgsVar, ayri.lgs) : ayri.lgs };
+}
+
+async function uzaktanOku(): Promise<Uzak | null> {
   const c = await istemciAl();
   const u = uyeOku();
   if (!c || !u) return null;
@@ -264,19 +410,18 @@ async function uzaktanOku(): Promise<Paket | null> {
     .select('veri')
     .eq('kullanici', u.id)
     .maybeSingle();
-  if (error || !data) return null;
-  const v = data.veri as Paket;
-  return v && Array.isArray(v.progress) ? v : null;
+  if (error) return null;
+  return satiriOku(data?.veri);
 }
 
-async function uzagaYaz(p: Paket): Promise<boolean> {
+async function uzagaYaz(satir: Satir): Promise<boolean> {
   const c = await istemciAl();
   const u = uyeOku();
   if (!c || !u) return false;
   const { error } = await c
     .from('ilerleme')
     .upsert(
-      { kullanici: u.id, veri: p, guncellendi: new Date().toISOString() },
+      { kullanici: u.id, veri: satir, guncellendi: new Date().toISOString() },
       { onConflict: 'kullanici' },
     );
   return !error;
@@ -304,10 +449,16 @@ export function senkronla(): Promise<SenkronSonuc> {
     try {
       if (!uyeOku()) return 'uyeyok';
       const yerel = await yereliOku();
-      const uzak = await uzaktanOku();
+      const uzakHepsi = await uzaktanOku();
+      if (!uzakHepsi) return 'hata';
+      // Yalniz AKTIF bolum birlestirilir; oteki satirda oldugu gibi korunur.
+      const uzak = uzakHepsi[AKTIF_BOLUM];
       const sonuc = uzak ? birlestir(yerel, uzak) : yerel;
       if (uzak) await yereleYaz(sonuc);
-      const yazildi = await uzagaYaz(sonuc);
+      const genel = AKTIF_BOLUM === 'genel' ? sonuc : (uzakHepsi.genel ?? bosPaket(sonuc.state));
+      const lgs = AKTIF_BOLUM === 'lgs' ? sonuc : uzakHepsi.lgs;
+      const satir: Satir = { ...genel, state: { ...genel.state, bolumAyrildi: true }, ...(lgs ? { lgs } : {}) };
+      const yazildi = await uzagaYaz(satir);
       return yazildi ? 'yapildi' : 'hata';
     } catch {
       return 'hata';

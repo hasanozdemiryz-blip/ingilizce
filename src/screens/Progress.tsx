@@ -7,6 +7,7 @@ import { FREEZE_MAX } from '../dates';
 import { CARDS } from '../content';
 import { PENCERELER, abilities, activeDays, successRate, type Pencere } from '../score';
 import type { AppState, Cevap, Progress as ProgressRow } from '../types';
+import { BolumRozeti } from '../components/BolumRozeti';
 import { t } from '../dil';
 
 /**
@@ -58,7 +59,10 @@ export function ProgressScreen({
   return (
     <Screen>
       <header className="flex items-center justify-between h-14 shrink-0">
-        <span className="word text-lg font-bold">{t('İlerleme')}</span>
+        <span className="flex items-center gap-2">
+          <span className="word text-lg font-bold">{t('İlerleme')}</span>
+          <BolumRozeti />
+        </span>
         {state.streakCount > 0 && <Streak count={state.streakCount} />}
       </header>
 

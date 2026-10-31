@@ -5,6 +5,7 @@ import './index.css';
 import { olcumHazirla, olay } from './analitik';
 import { kaynakVerisi } from './kaynak';
 import { profilSagla } from './db';
+import { bolumleriAyir } from './senkron';
 import { geriHazirla } from './geri';
 import { hatirlatmaHazirla } from './reminder';
 import { telaffuzHazirla } from './speech';
@@ -47,7 +48,14 @@ void hatirlatmaHazirla();
  * diye sorulmaz. Kayit duvari yeni bir uygulamanin en pahali ekranidir;
  * isteyen Ayarlar'dan degistirir, istemeyen hic fark etmez.
  */
-void profilSagla().then((state) => {
+/*
+  BOLUM AYRIMI ONCE (31 Ekim): eski ortak veritabani Genel ve LGS diye bir kez
+  bolunuyor. Profil, uyelik (senkron) ve ekran ayrilmis veriyi okumali; ayrim
+  bitmeden okuyan ekran LGS kartlarini Genel'de gosterirdi. IndexedDB, milisaniyeler.
+*/
+const ayrim = bolumleriAyir();
+
+void ayrim.then(profilSagla).then((state) => {
   /*
     Olcum profil KURULDUKTAN sonra basliyor: kullanici kimligi olarak
     `Profil.id` veriliyor — rastgele, kisisel veri degil, ve kullaniciyi
@@ -91,10 +99,11 @@ if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
  * giris baglantisindan donulduyse. Ilk kez gelen ziyaretciye tek bayt
  * inmiyor (bkz. uyelik.ts).
  */
-void uyelikHazirla();
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-);
+void ayrim.then(() => {
+  void uyelikHazirla();
+  createRoot(document.getElementById('root')!).render(
+    <StrictMode>
+      <App />
+    </StrictMode>,
+  );
+});

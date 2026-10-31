@@ -8,8 +8,9 @@
  * bolum gunde bir kez bile degismiyor.
  *
  * Cihazda (localStorage) tutuluyor, hesapta degil: ayni kisi telefonda LGS,
- * bilgisayarda Genel calisabilir. Ilerleme ise iki bolumde de ORTAK ve
- * senkronlu — ayni kelime (share, invite) iki destede ayni kayitla durur.
+ * bilgisayarda Genel calisabilir. Ilerleme, seri ve istatistik her bolumde
+ * AYRI (31 Ekim; KARARLAR 14): ayri veritabani (db.ts `DB_ADI`) ve sunucuda
+ * ayri paket (senkron.ts). Ayni kelime (share) iki bolumde ayri ogrenilir.
  *
  * Tanitim sitesi `?bolum=lgs` / `?bolum=genel` ile getiriyor (bkz. tools/site.mjs
  * `baslaYol`); adresten okunup siliniyor, yoksa yenileyen hep oraya doner.
