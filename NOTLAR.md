@@ -2546,7 +2546,10 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
 
 - **Çalışma dalı `main`.** 31 Ekim'de `lgs-ek` birleşti ve PLAN v2 (A–G) bitti, yayında.
   Başka cihazda: `git checkout main && git pull` (site deposunda `git pull`).
-- **SIRADAKİ İŞ: PLAN v3 (LGS ürün deneyimi) kullanıcıyla konuşulacak** (aşağıda), sonra
+- **31 Ekim öğleden sonra bitti:** Google hesabına şifre belirleme, **Genel/LGS ilerlemesi
+  ayrı** (PLAN v3 madde 1), platformda bölüm rozeti, girişli + misafir kullanıcı testi
+  (ayrıntı: NEREDE KALDIK → "31 Ekim — ilerleme ayrımı").
+- **SIRADAKİ İŞ: PLAN v3'ün kalanı (madde 2–4) kullanıcıyla konuşulacak** (aşağıda), sonra
   blog yol haritası (NEREDE KALDIK → "31 Ekim"). Magnific bakiyesi **22.499** (31 Ekim;
   19 Ekim'deki "~57.000" notu eskimişti, arada başka işlerde harcanmış).
 - **Önce aşağıdaki KARARLAR'ı oku.** Bir şey önermeden önce onlara bak; çelişen
@@ -2929,6 +2932,38 @@ Kullanıcının notları, son hâli:
   önizlemeyle (site + `BASE_PATH=/ingilizce/` derleme, `npx serve`) Chrome'da 375 px test:
   menü, LGS/Genel girişi, ünite 1 doğrudan, ders, ses dosyaları, örnek/çıkmış/yönlendirme;
   bağlantı denetimi 85 sayfa 4.848 bağlantı, sorun yok. 288 test yeşil.
+- [x] **31 Ekim — kullanıcı testi (misafir, canlı):** plan `tools/kullanici-testi.md`.
+  LGS baştan sona (siteden ünite 3 → karşılama → yıl → ders 5 kelime + 7. basamak →
+  ünite sayfası kalıplar/diyalog sesi/test 9/10 → ünite değiştir → Egzersiz/İlerleme/
+  Ayarlar/EN). Bulunan ve düzeltilen: karşılama kelimesi (delicious) ünite 3'te ilk derste
+  tekrar "yeni" çıkıyordu (`content.ts` `istenenDisi`); ünite listesinde "≈ görsel çağrışım";
+  ses düğmesi etiketi "nasil". Dinleme sorusunun kendiliğinden çalması betikle doğrulanamadı
+  (tarayıcı otomatik sesi gerçek dokunuş olmadan engelliyor); dosyalar 200.
+- [x] **31 Ekim — Google hesabına şifre:** Ayarlar → Hesap: şifresi olmayana "Şifre belirle",
+  olana "Şifre değiştir" (`Uye.sifreVar`). Supabase Google hesabına şifre eklenince
+  `app_metadata.providers`'a 'email' YAZMIYOR (kullanıcının hesabında görüldü: yalnız
+  ["google"]) → `sifreBelirle` `user_metadata.sifre = true` da yazıyor. Kaydedince onay penceresi.
+  E-posta + şifreyle giriş gerçek hesapta henüz denenmedi (kullanıcı çıkış yapıp denemeli).
+- [x] **31 Ekim — ilerleme ayrımı (PLAN v3 madde 1, KARARLAR 14):**
+  - Cihaz: `DB_ADI` — Genel eski `hafizada-ingilizce` (kimse veri kaybetmesin), LGS
+    `hafizada-ingilizce-lgs`. `db` açılışta `AKTIF_BOLUM`'a göre.
+  - Bir kerelik bölme `senkron.ts bolumleriAyir` (main.tsx'te her şeyden önce, render
+    onun arkasında). Kural `paketiAyir`: Genel'in 400 kartı + seri/günler/karşılama Genel'de;
+    LGS kartları YALNIZ `lgsYil` seçilmişse LGS'ye (yoksa Genel destesinde öğrenilmiş sayılır);
+    lgsYil/lgsUnite/lgsTest LGS'ye; profil/ses/hedef ikisine. `state.bolumAyrildi` bayrağı.
+  - Sunucu: tablo değişmedi. `veri` = Genel paketi (eski sürümler okumaya devam eder),
+    `veri.lgs` = LGS paketi. Ayrılmamış satır okunurken bölünüyor (`satiriOku`). Senkron
+    yalnız aktif bölümü birleştirir, ötekini satırda korur.
+  - Çıkışta (`resetAll`) öteki bölümün cihaz veritabanı da siliniyor.
+  - `BolumRozeti` (Ana ekran, Egzersiz, İlerleme, Ayarlar başında; telefonda "LGS"/"Genel").
+  - Doğrulama: yerelde eski biçimde veri kurulup (snake + accept/attend + yıl/ünite/test)
+    taşıma denendi; canlıda kullanıcının hesabında: Genel 20 kart / 243 cevap / seri 3
+    korundu, LGS 0 kart + yıl 2027/ünite 1; LGS senkronu Genel'i bozmadı; sitede girişli
+    "Derslerime dön" LGS sayfasında `bolum=lgs`, Genel'de `bolum=genel`.
+  - Egzersiz/İlerleme: ayrı veritabanından okuduğu için artık karışmıyor (LGS "0/1137",
+    Genel "20/1403"). LGS'ye özgü İlerleme (ünite haritası, kalan gün) PLAN v3 madde 4'te.
+  - Bilinen sınır: önbellekte ESKİ sürümü çalıştıran bir cihaz satıra eski biçimde yazarsa
+    `veri.lgs` düşer; yeni sürümü açan cihaz LGS'yi kendi cihaz kopyasından yeniden yükler.
 - [ ] PLAN v2 (onaylı 19 Ekim): A test → B ölçüm → C LGS metinleri → D görsel/ses →
   E platform (bölüm kilidi, LGS teması) → F site → G yayın → I satış. (H çıktı.) Araçlar hazır: `tools/mufredat/izgara-*.mjs`, `tools/ses/*`,
   kurallar `tools/kanca-kurallari.md`.
