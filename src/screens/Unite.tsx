@@ -4,7 +4,7 @@ import { kancaYazisi } from '../components/Cagrisim';
 import { uniteKartlari } from '../content';
 import { karistir, uniteYukle, UNITELER, type Diyalog, type UniteIcerik } from '../lgs';
 import { seslendir } from '../speech';
-import type { Progress } from '../types';
+import { kancaliMi, type Progress } from '../types';
 import { t } from '../dil';
 
 type Bolum = 'kelimeler' | 'kaliplar' | 'diyaloglar' | 'test';
@@ -142,7 +142,7 @@ function Kelimeler({ no, progress, onCalis }: { no: number; progress: Progress[]
                 <span className="word block font-extrabold leading-tight">{c.en}</span>
                 <span className="block text-sm text-ink-soft truncate">
                   {c.tr}
-                  {tamam && <span className="text-ink-faint"> · ≈ {kancaYazisi(c)}</span>}
+                  {tamam && <span className="text-ink-faint">{kancaliMi(c) ? ' · ≈ ' : ' · '}{kancaYazisi(c)}</span>}
                 </span>
               </span>
               <SpeakButton word={c.en} size="mini" />

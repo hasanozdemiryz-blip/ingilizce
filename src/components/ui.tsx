@@ -294,7 +294,7 @@ export function SpeakButton({
   return (
     <button
       type="button"
-      aria-label={t('{word} nasil okunur', { word })}
+      aria-label={t('{word} nasıl okunur', { word })}
       onClick={(e) => {
         e.stopPropagation(); // kart yuzunde "cevabi goster"i tetiklemesin
         seslendir(word);

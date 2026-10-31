@@ -1,7 +1,7 @@
 import raw from '../content/cards.json';
 import lgsHam from '../content/lgs.json';
 import { normalize } from './answer';
-import { AKTIF_BOLUM } from './bolum';
+import { AKTIF_BOLUM, ISTENEN_UNITE } from './bolum';
 import { sesDosyalariKaydet } from './speech';
 import { kancaliMi, type Card } from './types';
 
@@ -225,12 +225,16 @@ export const CARD_BY_ID = new Map(CARDS.map((c) => [c.id, c]));
 /**
  * Karsilama ekraninda gosterilen ornek kart.
  * Deste 1'in disindan secilir ki kullanici ayni karti iki kez "yeni" gormesin.
+ * Siteden `?unite=N` ile gelen LGS'li icin o unite de disarida: unite basa
+ * aliniyor, delicious (3. unite) ilk derste yeniden "yeni kelime" cikiyordu (31 Ekim testi).
  */
+const istenenDisi = (c: Card) => !ISTENEN_UNITE || c.unite !== ISTENEN_UNITE;
 export const SHOWCASE_CARD =
   CARDS.find((c) => c.id === 'snake' && c.order > BATCH) ??
-  // LGS: yazilis cagrisimi — bizim farkimiz (deli + cious)
-  CARDS.find((c) => c.id === 'delicious' && c.order > BATCH) ??
-  CARDS.find((c, i) => i >= BATCH && kancaliMi(c) && c.image) ??
+  // LGS: yazilis cagrisimi — bizim farkimiz (deli + cious, re + fuse)
+  CARDS.find((c) => c.id === 'delicious' && c.order > BATCH && istenenDisi(c)) ??
+  CARDS.find((c) => c.id === 'refuse' && c.order > BATCH && istenenDisi(c)) ??
+  CARDS.find((c, i) => i >= BATCH && kancaliMi(c) && c.image && istenenDisi(c)) ??
   CARDS[BATCH];
 
 /**

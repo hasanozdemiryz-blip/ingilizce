@@ -112,7 +112,7 @@ export const EN: Record<string, string> = {
   "Hesabım": "My account",
   "Giriş yap ›": "Sign in ›",
   "İngilizcesini yaz…": "Type the English…",
-  "{word} nasil okunur": "How to pronounce {word}",
+  "{word} nasıl okunur": "How to pronounce {word}",
   "şimdi": "now",
   "{dk} dakika sonra": "in {dk} min",
   "{saat} saat sonra": "in {saat} h",
