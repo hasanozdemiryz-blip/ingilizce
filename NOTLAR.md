@@ -2542,12 +2542,13 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
 
 ## Sırada
 
-### >>> BAŞKA CİHAZDA BURADAN DEVAM (20 Ekim 2026 sabah) <<<
+### >>> BAŞKA CİHAZDA BURADAN DEVAM (31 Ekim 2026) <<<
 
-- **Çalışma dalı yine `main`** (20 Ekim'de `uc-bolum` birleşti ve yayına çıktı:
-  uygulama hafizada.com/ingilizce/, site hafizada.com). Başka cihazda:
-  `git checkout main && git pull` (site deposunda `git pull`).
-- **Sıradaki iş (19 Ekim akşam durdu):** dal **`lgs-ek`**. Kalan: 3 görsel → D2 sesler → E platform → F site → G yayın (bkz. NEREDE KALDIK). Sonra **PLAN v3** (LGS ürün deneyimi) kullanıcıyla konuşulacak. Magnific bakiyesi ~57.000.
+- **Çalışma dalı `main`.** 31 Ekim'de `lgs-ek` birleşti ve PLAN v2 (A–G) bitti, yayında.
+  Başka cihazda: `git checkout main && git pull` (site deposunda `git pull`).
+- **SIRADAKİ İŞ: PLAN v3 (LGS ürün deneyimi) kullanıcıyla konuşulacak** (aşağıda), sonra
+  blog yol haritası (NEREDE KALDIK → "31 Ekim"). Magnific bakiyesi **22.499** (31 Ekim;
+  19 Ekim'deki "~57.000" notu eskimişti, arada başka işlerde harcanmış).
 - **Önce aşağıdaki KARARLAR'ı oku.** Bir şey önermeden önce onlara bak; çelişen
   öneri yapma. Yeni istekte önce tek cümleyle "anladığım şu" yaz.
 - **Şu anki adım:** "NEREDE KALDIK" (bu bölümün sonunda) — her aşama bitince güncellenir.
@@ -2884,23 +2885,50 @@ Kullanıcının notları, son hâli:
   kaynak → `node tools/mufredat/lgs-ek.mjs` → `lgs-kart.mjs` → `lgs-icerik.mjs`),
   90 Genel kartı üniteye bağlı (`lgs-ek/v.txt`), seviye yeniden (`seviye.mjs` + Oxford CSV),
   1.016 LGS kartının hepsinde örnek cümle. Denetim temiz.
-- [~] **D. Görseller (19 Ekim, akşam durdu):** 157 + 14 yeniden ızgara (~12.800 kredi).
-  **625/628 kart görselli** (`src/assets/cards-lgs/`, 1.009 webp). Kalan 3: `land`, `wind`,
+- [x] **D. Görseller (19 + 31 Ekim):** 157 + 14 yeniden ızgara (~12.800 kredi) + 31 Ekim
+  ızgara 701 (land, wind, climate-change; VXEgEPIMMU ile tek deneme temiz çıktı, 75 kredi).
+  **628/628 kart görselli.** Eski not: 625/628 (`src/assets/cards-lgs/`, 1.009 webp). Kalan 3: `land`, `wind`,
   `climate-change` (ref sızıntısı). Ders: stil referansı VXEgEPIMMU (snake ≈ sinek) kenarlara
   yılan/sinek/göz sızdırıyor (~her 8 ızgarada 1); yeni ref IfwzJPutvE (ızgara 101) kendi
   karelerini sızdırıyor (bayrak süsü, kelebek). Öneri: kalan 3 için tek kare (1K, ızgarasız)
   ya da referanssız + aynı iskelet. Yeniden çizim: `YENIDEN=1 IZGARA_BASLA=601 node
   tools/mufredat/izgara-plan.mjs`, `izgara-toplu.sh`, `lgs-webp.mjs`, `lgs-icerik.mjs`.
-- [ ] **D2. Sesler:** 629 yeni kelime + (varsa) yeni diyalog yok → yalnız kelime sesi
-  (~1.300 kredi, Lexi Parker, `tools/ses/ses-plan.mjs` → `ses-bol.mjs`; 60'lık partiler).
-  `src/ses.test.ts` şu an kırmızı (yeni kartların sesi yok) — ses gelince yeşile döner.
-- [ ] **E. Platform:** LGS destesi yeni kartlarla çalışıyor mu (görselsiz 3 kart → deste dışı
-  ya da metinli); Genel'e monte (LGS_GENELE, `genel: E`); bölüm kilidi; LGS teması (mavi).
-- [ ] **F. Site:** "En önemli 25" → "Örnek kelimeler" (+yönlendirme), "418" metinleri → yeni
-  sayılar, "LGS'de gerçekten çıkmış kelimeler" sayfası, ana sayfada kelime sayıları + LGS girişi.
-- [ ] **G. Yayın:** `lgs-ek` dalı → `main` (testler yeşilken), site üret + push, canlı test.
-- Çalışma dalı: **`lgs-ek`** (main'e birleşmedi; canlı eski hâlde). Başka cihazda:
-  `git fetch && git checkout lgs-ek`.
+- [x] **D2. Sesler (31 Ekim):** 629 kelime, 11 parti (Lexi Parker 154, eleven_v3), ~1.360
+  kredi. Parti 1 ilk denemede 60 yerine 37 parça verdi (kelimeler birleşik okunmuş) →
+  `stability: 0.7` ile yeniden üretildi, temiz. `public/ses/k/` 1.416 dosya; `ses-hiza.mjs`
+  her partide doğru hizalı. Ham dosyalar `gorseller/ses-ham/` (eski 20 Ekim partileri
+  `eski-20ekim/` altına taşındı — `ses-bol.mjs` aynı adı görünce indirmeyi atlıyordu!).
+- [x] **E. Platform (31 Ekim):** LGS destesi 1.016 + 121; Genel 400 + 1.003 = **1.403**.
+  **Platform içinde bölüm geçişi kaldırıldı** (kullanıcı 31 Ekim: "LGS'den giren LGS'yi,
+  normal giren normal uygulamayı görecek"): `BolumSecici` silindi, `bolumDegistir` silindi.
+  Bölüm yalnız adresten gelir: sitenin bütün "Hemen başla"/"Giriş yap" bağlantılarında
+  `bolum=genel|lgs` (`baslaYol` her zaman yazar; kabuk.html `__BOLUM__`; girişliye
+  "Derslerime dön" da sekmesinin bölümüyle). İlerleme hâlâ ORTAK — bölüm başına ayrı
+  alan PLAN v3 madde 1. LGS teması (mavi) yapılmadı: karar kullanıcıda.
+- [x] **F. Site (31 Ekim):** site artık platformla aynı LGS verisini okuyor
+  (`site-veri.mjs` `lgsKelimeleri` → `content/lgs.json`, 1.137; `cikmis()` havuz ekiyle 223 çıkan).
+  Vitrin LGS görselleriyle (`lgsResim`, yalnız vitrindekiler `varliklar/lgs/`'e kopyalanır).
+  `/lgs/ornek-kelimeler/` (10 ünite × 3 vitrin), eski `/lgs/en-onemli-25-kelime/` →
+  meta refresh + kanonik (`TASINAN`). Çıkmış sayfası "LGS'de gerçekten çıkmış kelimeler".
+  Menü: Üniteler · Örnekler · Çıkmış kelimeler. Ünite sayfalarına 3 soruluk SSS + FAQPage.
+  Ana sayfa: "1.403 kelime" + LGS girişi kutusu (geri sayım + "LGS'ye başla"). Veliler:
+  "%95'ten fazlası". Ana sayfadaki "altı basamak" → "basamaklar" (merdiven 7 oldu).
+  **Menü düzeltmesi:** telefon menüsü bir maddeye tıklanınca, dışarı tıklanınca, Esc'te ve
+  geri tuşuyla dönüşte (pageshow) kapanıyor (kullanıcı: "menü açık kalıyor").
+- [x] **Blog / SEO (31 Ekim):** rakip araştırması (tahtaapp, rehberpanda, sinavtime,
+  egitimsistem; hacim TAHMİN, araç verisi yok). Bulgular: rakip ünite sayfaları ince
+  (madde listesi), hiçbirinde çağrışım/görsel/ses/aralıklı tekrar yok; Kasım'da "1. yazılı",
+  Mart–Haziran "çıkmış sorular / soru dağılımı" zirvesi. Yapılan: blog künyesine `seoBaslik`,
+  `guncelleme`, `sss` (FAQPage), `bolum: 'lgs'` (çağrı LGS'ye), `ilgili`. 5 yeni LGS yazısı:
+  1. yazılı kelimeleri, hangi üniteden kaç kelime çıktı (kendi sayımımız), LGS full planı,
+  sık karışan kelimeler, ünite ünite kalıplar. Eski 6 yazıya tablo + SSS + SEO başlığı.
+  Sıradaki blog önerileri (raporda): LGS kelime listesi tek sayfa, en çok kullanılan 500
+  kelime (Genel), veli rehberi ("kaç ay kala"), A1–A2 listesi. Ünite sayfasına örnek cümle
+  sütunu önerildi ama KARARLAR 10 ("her şeyi verme") yüzünden eklenmedi — kullanıcıya sor.
+- [x] **G. Yayın (31 Ekim):** `lgs-ek` → `main`, site üretildi + push. Yerelde birleşik
+  önizlemeyle (site + `BASE_PATH=/ingilizce/` derleme, `npx serve`) Chrome'da 375 px test:
+  menü, LGS/Genel girişi, ünite 1 doğrudan, ders, ses dosyaları, örnek/çıkmış/yönlendirme;
+  bağlantı denetimi 85 sayfa 4.848 bağlantı, sorun yok. 288 test yeşil.
 - [ ] PLAN v2 (onaylı 19 Ekim): A test → B ölçüm → C LGS metinleri → D görsel/ses →
   E platform (bölüm kilidi, LGS teması) → F site → G yayın → I satış. (H çıktı.) Araçlar hazır: `tools/mufredat/izgara-*.mjs`, `tools/ses/*`,
   kurallar `tools/kanca-kurallari.md`.

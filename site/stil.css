@@ -548,3 +548,19 @@ a.bilgi-rozet.lgs { background: #e6f6ff; }
 /* LGS en onemli 25 */
 .onemli .sira-no { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--lacivert); color: var(--vurgu); font-family: var(--d); font-weight: 900; font-size: .85rem; }
 .onemli .yol-rozet a { text-decoration: underline; }
+
+/* Ana sayfa LGS girisi (31 Ekim) */
+.lgs-giris { padding-block: 8px 28px; }
+.lgs-giris-kutu { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; background: var(--beyaz); border: 2px solid var(--lacivert); border-radius: 22px; box-shadow: var(--sert); padding: 26px 30px; }
+.lgs-giris-kutu h2 { font-size: clamp(1.4rem, 3.2vw, 2rem); font-weight: 800; margin: 8px 0 0; }
+.lgs-giris-kutu p { color: var(--soft); margin: 10px 0 0; max-width: 56ch; }
+.lgs-giris-kutu .dugmeler { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.lgs-giris-sayac { display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 140px; padding: 18px 22px; border-radius: 18px; background: var(--lacivert); color: #fff !important; margin: 0 !important; }
+.lgs-giris-sayac b { font-family: var(--d); font-size: 2.8rem; line-height: 1; color: #ffd23f; }
+.lgs-giris-sayac span { font-weight: 800; margin-top: 6px; }
+@media (max-width: 720px) {
+  .lgs-giris-kutu { grid-template-columns: 1fr; padding: 22px 18px; }
+  .lgs-giris-sayac { flex-direction: row; gap: 10px; min-width: 0; padding: 12px 16px; }
+  .lgs-giris-sayac b { font-size: 2rem; }
+  .lgs-giris-sayac span { margin-top: 0; }
+}

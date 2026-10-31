@@ -21,23 +21,42 @@ export const UNITELER = [
 }));
 
 /**
- * LGS kelimeleri (`tools/mufredat/lgs8-etiket.txt`). Tur: K hafiza teknikli,
- * T tanidik, R gorsel cagrisim, I kalip, V zaten kartta. Not alaninda
- * "yazılış · ONAYLI 18 Ekim · <cumle>" ya da "ses · öneri 18 Ekim · <cumle>".
+ * LGS kelimeleri. Tur: K hafiza teknikli, T tanidik, R gorsel cagrisim, I kalip,
+ * V zaten Genel'de kart. Etiket notu: "yazılış · ONAYLI 18 Ekim · <cumle>".
  */
+//
+// 31 Ekim: site artik platformdaki LGS destesinin aynisini okuyor — `content/lgs.json`
+// kartlari (1.016) + uniteye bagli Genel kartlari (`mevcut`, 121). Etiket dosyasindan
+// yalniz onay notu alinir (vitrinde "ONAYLI" once gelir). G (gorsel) → R.
 export function lgsKelimeleri() {
-  return satirlar('tools/mufredat/lgs8-etiket.txt').map(([unite, en, tr, tur, kanca, ses, not = '']) => {
-    const parca = not.split(' · ');
-    const yol = ['ses', 'yazılış', 'ses+yazılış'].includes(parca[0]) ? parca[0] : '';
-    const cumle = yol && parca[2] ? parca[2] : '';
-    return { unite: Number(unite), en, tr, tur, kanca, ses: Number(ses) || 0, yol, cumle, not };
+  const json = (d) => JSON.parse(fs.readFileSync(path.join(KOK, d), 'utf8'));
+  const lgs = json('content/lgs.json');
+  const genel = new Map(json('content/cards.json').map((c) => [c.id, c]));
+  const onay = new Map(satirlar('tools/mufredat/lgs8-etiket.txt').map((p) => [p[1], p[6] || '']));
+  const TUR = { K: 'K', T: 'T', G: 'R', I: 'I' };
+  const yeni = lgs.kartlar.map((k) => ({
+    id: k.id, unite: k.unite, en: k.en, tr: k.tr, tur: TUR[k.tur] || 'R', kanca: k.hook || '',
+    yol: k.yol || '', cumle: k.sentence || '', not: onay.get(k.en) || '', lgsKart: true,
+  }));
+  const mevcut = lgs.mevcut.map((m) => {
+    const c = genel.get(m.id);
+    return { id: m.id, unite: m.unite, en: c.en, tr: c.tr, tur: 'V', kanca: c.hook, yol: 'ses', cumle: c.sentence, not: '' };
   });
+  return [...yeni, ...mevcut];
 }
 
-/** LGS 2018-2025 cikmis sorulardaki gecis sayisi (`tools/mufredat/cikmis.json`). */
+/**
+ * LGS 2018-2025 cikmis sorulardaki gecis sayisi. Yillariyla sayilanlar
+ * `tools/mufredat/cikmis.json` (eski 418); havuz eki (19 Ekim) yalniz sayiyla
+ * `lgs-havuz/havuz.json`'da. Ikisi birlesir, cikmis.json onceliklidir.
+ */
 export function cikmis() {
-  const liste = JSON.parse(fs.readFileSync(path.join(KOK, 'tools/mufredat/cikmis.json'), 'utf8'));
-  return new Map(liste.map((x) => [x.en, x]));
+  const json = (d) => JSON.parse(fs.readFileSync(path.join(KOK, d), 'utf8'));
+  const m = new Map(json('tools/mufredat/cikmis.json').map((x) => [x.en, x]));
+  for (const h of json('tools/mufredat/lgs-havuz/havuz.json')) {
+    if (h.sinav > 0 && !m.has(h.w)) m.set(h.w, { en: h.w, sinav: h.sinav, toplam: h.sinav, yillar: [] });
+  }
+  return m;
 }
 
 /** 2-8. sinif ders kitabi sozlukleri (`tools/mufredat/mufredat.json`). */

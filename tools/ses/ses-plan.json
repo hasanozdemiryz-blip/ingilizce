@@ -3,3146 +3,2582 @@
   "no": 1,
   "ogeler": [
    {
-    "id": "get-on-well-with",
-    "en": "get on well with"
+    "id": "also",
+    "en": "also"
    },
    {
-    "id": "go-for-a-walk",
-    "en": "go for a walk"
+    "id": "apologise",
+    "en": "apologise"
    },
    {
-    "id": "instrument",
-    "en": "instrument"
+    "id": "ask",
+    "en": "ask"
    },
    {
-    "id": "invite",
-    "en": "invite"
+    "id": "become",
+    "en": "become"
    },
    {
-    "id": "laid-back",
-    "en": "laid-back"
+    "id": "better",
+    "en": "better"
    },
    {
-    "id": "loyalty",
-    "en": "loyalty"
+    "id": "boring",
+    "en": "boring"
    },
    {
-    "id": "mate",
-    "en": "mate"
+    "id": "care",
+    "en": "care"
    },
    {
-    "id": "mutual",
-    "en": "mutual"
+    "id": "crazy",
+    "en": "crazy"
    },
    {
-    "id": "patience",
-    "en": "patience"
+    "id": "decide",
+    "en": "decide"
    },
    {
-    "id": "phobia",
-    "en": "phobia"
+    "id": "describe",
+    "en": "describe"
    },
    {
-    "id": "plant",
-    "en": "plant"
+    "id": "experience",
+    "en": "experience"
    },
    {
-    "id": "priceless",
-    "en": "priceless"
+    "id": "fashionable",
+    "en": "fashionable"
    },
    {
-    "id": "promise",
-    "en": "promise"
+    "id": "fun",
+    "en": "fun"
    },
    {
-    "id": "receiver",
-    "en": "receiver"
+    "id": "funny",
+    "en": "funny"
    },
    {
-    "id": "refuse",
-    "en": "refuse"
+    "id": "generation",
+    "en": "generation"
    },
    {
-    "id": "regularly",
-    "en": "regularly"
+    "id": "give",
+    "en": "give"
    },
    {
-    "id": "response",
-    "en": "response"
+    "id": "guess",
+    "en": "guess"
    },
    {
-    "id": "science-fiction",
-    "en": "science fiction"
+    "id": "guest",
+    "en": "guest"
    },
    {
-    "id": "secret",
-    "en": "secret"
+    "id": "idea",
+    "en": "idea"
    },
    {
-    "id": "sender",
-    "en": "sender"
+    "id": "important",
+    "en": "important"
    },
    {
-    "id": "serious",
-    "en": "serious"
+    "id": "individual",
+    "en": "individual"
    },
    {
-    "id": "share",
-    "en": "share"
+    "id": "instead",
+    "en": "instead"
    },
    {
-    "id": "stuffed",
-    "en": "stuffed"
+    "id": "introduce",
+    "en": "introduce"
    },
    {
-    "id": "support",
-    "en": "support"
+    "id": "invitation",
+    "en": "invitation"
    },
    {
-    "id": "survive",
-    "en": "survive"
+    "id": "learn",
+    "en": "learn"
    },
    {
-    "id": "text",
-    "en": "text"
+    "id": "letter",
+    "en": "letter"
    },
    {
-    "id": "thriller",
-    "en": "thriller"
+    "id": "lie",
+    "en": "lie"
    },
    {
-    "id": "thrilling",
-    "en": "thrilling"
+    "id": "loyal",
+    "en": "loyal"
    },
    {
-    "id": "tournament",
-    "en": "tournament"
+    "id": "match",
+    "en": "match"
    },
    {
-    "id": "treasure",
-    "en": "treasure"
+    "id": "mean",
+    "en": "mean"
    },
    {
-    "id": "trust",
-    "en": "trust"
+    "id": "need",
+    "en": "need"
    },
    {
-    "id": "unconditional",
-    "en": "unconditional"
+    "id": "neighbour",
+    "en": "neighbour"
    },
    {
-    "id": "archery",
-    "en": "archery"
+    "id": "occupied",
+    "en": "occupied"
    },
    {
-    "id": "argue",
-    "en": "argue"
+    "id": "offer",
+    "en": "offer"
    },
    {
-    "id": "backpack",
-    "en": "backpack"
+    "id": "outgoing",
+    "en": "outgoing"
    },
    {
-    "id": "board-game",
-    "en": "board game"
+    "id": "patient",
+    "en": "patient"
    },
    {
-    "id": "campfire",
-    "en": "campfire"
+    "id": "personality",
+    "en": "personality"
    },
    {
-    "id": "casual",
-    "en": "casual"
+    "id": "rarely",
+    "en": "rarely"
    },
    {
-    "id": "compass",
-    "en": "compass"
+    "id": "reason",
+    "en": "reason"
    },
    {
-    "id": "crunch",
-    "en": "crunch"
+    "id": "relaxed",
+    "en": "relaxed"
    },
    {
-    "id": "equipment",
-    "en": "equipment"
+    "id": "reliable",
+    "en": "reliable"
    },
    {
-    "id": "fashion",
-    "en": "fashion"
+    "id": "remain",
+    "en": "remain"
    },
    {
-    "id": "fizzy",
-    "en": "fizzy"
+    "id": "respectful",
+    "en": "respectful"
    },
    {
-    "id": "folk",
-    "en": "folk"
+    "id": "same",
+    "en": "same"
    },
    {
-    "id": "fond-of",
-    "en": "fond of"
+    "id": "still",
+    "en": "still"
    },
    {
-    "id": "gain",
-    "en": "gain"
+    "id": "supportive",
+    "en": "supportive"
    },
    {
-    "id": "hang-out",
-    "en": "hang out"
+    "id": "sure",
+    "en": "sure"
    },
    {
-    "id": "harmonic",
-    "en": "harmonic"
+    "id": "thing",
+    "en": "thing"
    },
    {
-    "id": "honest",
-    "en": "honest"
+    "id": "thirsty",
+    "en": "thirsty"
    },
    {
-    "id": "impressive",
-    "en": "impressive"
+    "id": "understand",
+    "en": "understand"
    },
    {
-    "id": "map",
-    "en": "map"
+    "id": "want",
+    "en": "want"
    },
    {
-    "id": "pitch",
-    "en": "pitch"
+    "id": "birthday",
+    "en": "birthday"
    },
    {
-    "id": "prefer",
-    "en": "prefer"
+    "id": "party",
+    "en": "party"
    },
    {
-    "id": "push-up",
-    "en": "push-up"
+    "id": "classmate",
+    "en": "classmate"
    },
    {
-    "id": "recommend",
-    "en": "recommend"
+    "id": "dear",
+    "en": "dear"
    },
    {
-    "id": "relationship",
-    "en": "relationship"
+    "id": "believe",
+    "en": "believe"
    },
    {
-    "id": "relaxing",
-    "en": "relaxing"
+    "id": "truth",
+    "en": "truth"
    },
    {
-    "id": "reward",
-    "en": "reward"
+    "id": "positive",
+    "en": "positive"
    },
    {
-    "id": "ridiculous",
-    "en": "ridiculous"
+    "id": "similar",
+    "en": "similar"
    },
    {
-    "id": "rope",
-    "en": "rope"
+    "id": "both",
+    "en": "both"
    }
   ],
-  "metin": "get on well with. go for a walk. instrument. invite. laid-back. loyalty. mate. mutual. patience. phobia. plant. priceless. promise. receiver. refuse. regularly. response. science fiction. secret. sender. serious. share. stuffed. support. survive. text. thriller. thrilling. tournament. treasure. trust. unconditional. archery. argue. backpack. board game. campfire. casual. compass. crunch. equipment. fashion. fizzy. folk. fond of. gain. hang out. harmonic. honest. impressive. map. pitch. prefer. push-up. recommend. relationship. relaxing. reward. ridiculous. rope."
+  "metin": "also. apologise. ask. become. better. boring. care. crazy. decide. describe. experience. fashionable. fun. funny. generation. give. guess. guest. idea. important. individual. instead. introduce. invitation. learn. letter. lie. loyal. match. mean. need. neighbour. occupied. offer. outgoing. patient. personality. rarely. reason. relaxed. reliable. remain. respectful. same. still. supportive. sure. thing. thirsty. understand. want. birthday. party. classmate. dear. believe. truth. positive. similar. both."
  },
  {
   "no": 2,
   "ogeler": [
    {
-    "id": "self-disciplined",
-    "en": "self-disciplined"
+    "id": "each",
+    "en": "each"
    },
    {
-    "id": "sleeping-bag",
-    "en": "sleeping bag"
+    "id": "either",
+    "en": "either"
    },
    {
-    "id": "snob",
-    "en": "snob"
+    "id": "neither",
+    "en": "neither"
    },
    {
-    "id": "squad",
-    "en": "squad"
+    "id": "another",
+    "en": "another"
    },
    {
-    "id": "teenager",
-    "en": "teenager"
+    "id": "thank-you",
+    "en": "thank you"
    },
    {
-    "id": "terrific",
-    "en": "terrific"
+    "id": "sorry",
+    "en": "sorry"
    },
    {
-    "id": "training",
-    "en": "training"
+    "id": "please",
+    "en": "please"
    },
    {
-    "id": "trekking",
-    "en": "trekking"
+    "id": "nice",
+    "en": "nice"
    },
    {
-    "id": "trendy",
-    "en": "trendy"
+    "id": "good",
+    "en": "good"
    },
    {
-    "id": "types-of-music",
-    "en": "types of music"
+    "id": "love",
+    "en": "love"
    },
    {
-    "id": "unbearable",
-    "en": "unbearable"
+    "id": "people",
+    "en": "people"
    },
    {
-    "id": "youth",
-    "en": "youth"
+    "id": "as-soon-as-possible",
+    "en": "as soon as possible"
    },
    {
-    "id": "boil",
-    "en": "boil"
+    "id": "break-a-promise",
+    "en": "break a promise"
    },
    {
-    "id": "chop",
-    "en": "chop"
+    "id": "keep-a-promise",
+    "en": "keep a promise"
    },
    {
-    "id": "cuisine",
-    "en": "cuisine"
+    "id": "keep-a-secret",
+    "en": "keep a secret"
    },
    {
-    "id": "delicious",
-    "en": "delicious"
+    "id": "tell-a-lie",
+    "en": "tell a lie"
    },
    {
-    "id": "dessert",
-    "en": "dessert"
+    "id": "each-other",
+    "en": "each other"
    },
    {
-    "id": "dice",
-    "en": "dice"
+    "id": "give-advice",
+    "en": "give advice"
    },
    {
-    "id": "dough",
-    "en": "dough"
+    "id": "have-a-lot-in-common",
+    "en": "have a lot in common"
    },
    {
-    "id": "flour",
-    "en": "flour"
+    "id": "interested-in",
+    "en": "interested in"
    },
    {
-    "id": "grater",
-    "en": "grater"
+    "id": "rely-on",
+    "en": "rely on"
    },
    {
-    "id": "ingredient",
-    "en": "ingredient"
+    "id": "spend-time",
+    "en": "spend time"
    },
    {
-    "id": "kitchen-tool",
-    "en": "kitchen tool"
+    "id": "of-course",
+    "en": "of course"
    },
    {
-    "id": "mash",
-    "en": "mash"
+    "id": "not-at-all",
+    "en": "not at all"
    },
    {
-    "id": "meal",
-    "en": "meal"
+    "id": "that-s-why",
+    "en": "that's why"
    },
    {
-    "id": "mix",
-    "en": "mix"
+    "id": "feel-alone",
+    "en": "feel alone"
    },
    {
-    "id": "oven",
-    "en": "oven"
+    "id": "admire",
+    "en": "admire"
    },
    {
-    "id": "pan",
-    "en": "pan"
+    "id": "adult",
+    "en": "adult"
    },
    {
-    "id": "pour",
-    "en": "pour"
+    "id": "advise",
+    "en": "advise"
    },
    {
-    "id": "preparation",
-    "en": "preparation"
+    "id": "always",
+    "en": "always"
    },
    {
-    "id": "recipe",
-    "en": "recipe"
+    "id": "amazing",
+    "en": "amazing"
    },
    {
-    "id": "roast",
-    "en": "roast"
+    "id": "band",
+    "en": "band"
    },
    {
-    "id": "salty",
-    "en": "salty"
+    "id": "chat",
+    "en": "chat"
    },
    {
-    "id": "saucepan",
-    "en": "saucepan"
+    "id": "comfortable",
+    "en": "comfortable"
    },
    {
-    "id": "spicy",
-    "en": "spicy"
+    "id": "different",
+    "en": "different"
    },
    {
-    "id": "spoon",
-    "en": "spoon"
+    "id": "documentary",
+    "en": "documentary"
    },
    {
-    "id": "spread",
-    "en": "spread"
+    "id": "drummer",
+    "en": "drummer"
    },
    {
-    "id": "sprinkle",
-    "en": "sprinkle"
+    "id": "easy",
+    "en": "easy"
    },
    {
-    "id": "tasty",
-    "en": "tasty"
+    "id": "educational",
+    "en": "educational"
    },
    {
-    "id": "whisk",
-    "en": "whisk"
+    "id": "enjoy",
+    "en": "enjoy"
    },
    {
-    "id": "addiction",
-    "en": "addiction"
+    "id": "everywhere",
+    "en": "everywhere"
    },
    {
-    "id": "appointment",
-    "en": "appointment"
+    "id": "express",
+    "en": "express"
    },
    {
-    "id": "available",
-    "en": "available"
+    "id": "follow",
+    "en": "follow"
    },
    {
-    "id": "bad-line",
-    "en": "bad line"
+    "id": "hate",
+    "en": "hate"
    },
    {
-    "id": "break-into",
-    "en": "break into"
+    "id": "healthy",
+    "en": "healthy"
    },
    {
-    "id": "burglary",
-    "en": "burglary"
+    "id": "hiking",
+    "en": "hiking"
    },
    {
-    "id": "call",
-    "en": "call"
+    "id": "historical",
+    "en": "historical"
    },
    {
-    "id": "clarification",
-    "en": "clarification"
+    "id": "latest",
+    "en": "latest"
    },
    {
-    "id": "concentration",
-    "en": "concentration"
+    "id": "mostly",
+    "en": "mostly"
    },
    {
-    "id": "connect",
-    "en": "connect"
+    "id": "national",
+    "en": "national"
    },
    {
-    "id": "cons",
-    "en": "cons"
+    "id": "reach",
+    "en": "reach"
    },
    {
-    "id": "contact",
-    "en": "contact"
+    "id": "rest",
+    "en": "rest"
    },
    {
-    "id": "conversation",
-    "en": "conversation"
+    "id": "seldom",
+    "en": "seldom"
    },
    {
-    "id": "customer-service",
-    "en": "customer service"
+    "id": "sometimes",
+    "en": "sometimes"
    },
    {
-    "id": "dial",
-    "en": "dial"
+    "id": "suggest",
+    "en": "suggest"
    },
    {
-    "id": "disturb",
-    "en": "disturb"
+    "id": "think",
+    "en": "think"
    },
    {
-    "id": "doorbell",
-    "en": "doorbell"
+    "id": "ticket",
+    "en": "ticket"
    },
    {
-    "id": "engaged",
-    "en": "engaged"
+    "id": "usually",
+    "en": "usually"
    },
    {
-    "id": "evolve",
-    "en": "evolve"
+    "id": "wear",
+    "en": "wear"
    },
    {
-    "id": "extension",
-    "en": "extension"
+    "id": "weather",
+    "en": "weather"
    }
   ],
-  "metin": "self-disciplined. sleeping bag. snob. squad. teenager. terrific. training. trekking. trendy. types of music. unbearable. youth. boil. chop. cuisine. delicious. dessert. dice. dough. flour. grater. ingredient. kitchen tool. mash. meal. mix. oven. pan. pour. preparation. recipe. roast. salty. saucepan. spicy. spoon. spread. sprinkle. tasty. whisk. addiction. appointment. available. bad line. break into. burglary. call. clarification. concentration. connect. cons. contact. conversation. customer service. dial. disturb. doorbell. engaged. evolve. extension."
+  "metin": "each. either. neither. another. thank you. sorry. please. nice. good. love. people. as soon as possible. break a promise. keep a promise. keep a secret. tell a lie. each other. give advice. have a lot in common. interested in. rely on. spend time. of course. not at all. that's why. feel alone. admire. adult. advise. always. amazing. band. chat. comfortable. different. documentary. drummer. easy. educational. enjoy. everywhere. express. follow. hate. healthy. hiking. historical. latest. mostly. national. reach. rest. seldom. sometimes. suggest. think. ticket. usually. wear. weather."
  },
  {
   "no": 3,
   "ogeler": [
    {
-    "id": "get-back",
-    "en": "get back"
+    "id": "weekend",
+    "en": "weekend"
    },
    {
-    "id": "get-in-touch",
-    "en": "get in touch"
+    "id": "while",
+    "en": "while"
    },
    {
-    "id": "hang-on",
-    "en": "hang on"
+    "id": "hobby",
+    "en": "hobby"
    },
    {
-    "id": "hang-up",
-    "en": "hang up"
+    "id": "pop",
+    "en": "pop"
    },
    {
-    "id": "hold",
-    "en": "hold"
+    "id": "rap",
+    "en": "rap"
    },
    {
-    "id": "incident",
-    "en": "incident"
+    "id": "jazz",
+    "en": "jazz"
    },
    {
-    "id": "line",
-    "en": "line"
+    "id": "music",
+    "en": "music"
    },
    {
-    "id": "memo",
-    "en": "memo"
+    "id": "basketball",
+    "en": "basketball"
    },
    {
-    "id": "message",
-    "en": "message"
+    "id": "football",
+    "en": "football"
    },
    {
-    "id": "misunderstanding",
-    "en": "misunderstanding"
+    "id": "sport",
+    "en": "sport"
    },
    {
-    "id": "municipality",
-    "en": "municipality"
+    "id": "bored",
+    "en": "bored"
    },
    {
-    "id": "notice",
-    "en": "notice"
+    "id": "favourite",
+    "en": "favourite"
    },
    {
-    "id": "pick-up",
-    "en": "pick up"
+    "id": "magazine",
+    "en": "magazine"
    },
    {
-    "id": "polite",
-    "en": "polite"
+    "id": "popular",
+    "en": "popular"
    },
    {
-    "id": "pros",
-    "en": "pros"
+    "id": "movie",
+    "en": "movie"
    },
    {
-    "id": "put-someone-through",
-    "en": "put someone through"
+    "id": "cinema",
+    "en": "cinema"
    },
    {
-    "id": "quickness",
-    "en": "quickness"
+    "id": "video",
+    "en": "video"
    },
    {
-    "id": "reservation",
-    "en": "reservation"
+    "id": "game",
+    "en": "game"
    },
    {
-    "id": "security",
-    "en": "security"
+    "id": "play",
+    "en": "play"
    },
    {
-    "id": "staff",
-    "en": "staff"
+    "id": "watch",
+    "en": "watch"
    },
    {
-    "id": "access",
-    "en": "access"
+    "id": "weekday",
+    "en": "weekday"
    },
    {
-    "id": "account",
-    "en": "account"
+    "id": "dislike",
+    "en": "dislike"
    },
    {
-    "id": "aim",
-    "en": "aim"
+    "id": "english",
+    "en": "english"
    },
    {
-    "id": "attachment",
-    "en": "attachment"
+    "id": "social",
+    "en": "social"
    },
    {
-    "id": "browse",
-    "en": "browse"
+    "id": "train",
+    "en": "train"
    },
    {
-    "id": "browser",
-    "en": "browser"
+    "id": "photo",
+    "en": "photo"
    },
    {
-    "id": "click",
-    "en": "click"
+    "id": "often",
+    "en": "often"
    },
    {
-    "id": "comment",
-    "en": "comment"
+    "id": "never",
+    "en": "never"
    },
    {
-    "id": "communication",
-    "en": "communication"
+    "id": "rather",
+    "en": "rather"
    },
    {
-    "id": "confirm",
-    "en": "confirm"
+    "id": "quite",
+    "en": "quite"
    },
    {
-    "id": "connection",
-    "en": "connection"
+    "id": "monday",
+    "en": "monday"
    },
    {
-    "id": "delete",
-    "en": "delete"
+    "id": "tuesday",
+    "en": "tuesday"
    },
    {
-    "id": "develop",
-    "en": "develop"
+    "id": "wednesday",
+    "en": "wednesday"
    },
    {
-    "id": "device",
-    "en": "device"
+    "id": "thursday",
+    "en": "thursday"
    },
    {
-    "id": "download",
-    "en": "download"
+    "id": "friday",
+    "en": "friday"
    },
    {
-    "id": "habit",
-    "en": "habit"
+    "id": "saturday",
+    "en": "saturday"
    },
    {
-    "id": "ignore",
-    "en": "ignore"
+    "id": "sunday",
+    "en": "sunday"
    },
    {
-    "id": "instant",
-    "en": "instant"
+    "id": "morning",
+    "en": "morning"
    },
    {
-    "id": "log-in",
-    "en": "log in"
+    "id": "afternoon",
+    "en": "afternoon"
    },
    {
-    "id": "notification",
-    "en": "notification"
+    "id": "evening",
+    "en": "evening"
    },
    {
-    "id": "online",
-    "en": "online"
+    "id": "today",
+    "en": "today"
    },
    {
-    "id": "password",
-    "en": "password"
+    "id": "month",
+    "en": "month"
    },
    {
-    "id": "post",
-    "en": "post"
+    "id": "time",
+    "en": "time"
    },
    {
-    "id": "properly",
-    "en": "properly"
+    "id": "late",
+    "en": "late"
    },
    {
-    "id": "recent",
-    "en": "recent"
+    "id": "start",
+    "en": "start"
    },
    {
-    "id": "register",
-    "en": "register"
+    "id": "finish",
+    "en": "finish"
    },
    {
-    "id": "reply",
-    "en": "reply"
+    "id": "can-t-stand",
+    "en": "can't stand"
    },
    {
-    "id": "research",
-    "en": "research"
+    "id": "keen-on",
+    "en": "keen on"
    },
    {
-    "id": "screen",
-    "en": "screen"
+    "id": "hang-around",
+    "en": "hang around"
    },
    {
-    "id": "search-engine",
-    "en": "search engine"
+    "id": "work-out",
+    "en": "work out"
    },
    {
-    "id": "sign-up",
-    "en": "sign up"
+    "id": "free-time",
+    "en": "free time"
    },
    {
-    "id": "social-networking-site",
-    "en": "social networking site"
+    "id": "do-exercise",
+    "en": "do exercise"
    },
    {
-    "id": "subscriber",
-    "en": "subscriber"
+    "id": "form-a-band",
+    "en": "form a band"
    },
    {
-    "id": "update",
-    "en": "update"
+    "id": "team-sport",
+    "en": "team sport"
    },
    {
-    "id": "upload",
-    "en": "upload"
+    "id": "casual-clothes",
+    "en": "casual clothes"
    },
    {
-    "id": "usage",
-    "en": "usage"
+    "id": "for-example",
+    "en": "for example"
    },
    {
-    "id": "vary-from",
-    "en": "vary from"
+    "id": "to-be-honest",
+    "en": "to be honest"
    },
    {
-    "id": "vlogger",
-    "en": "vlogger"
+    "id": "add",
+    "en": "add"
    },
    {
-    "id": "website",
-    "en": "website"
+    "id": "batter",
+    "en": "batter"
    },
    {
-    "id": "adventurous",
-    "en": "adventurous"
+    "id": "bean",
+    "en": "bean"
    }
   ],
-  "metin": "get back. get in touch. hang on. hang up. hold. incident. line. memo. message. misunderstanding. municipality. notice. pick up. polite. pros. put someone through. quickness. reservation. security. staff. access. account. aim. attachment. browse. browser. click. comment. communication. confirm. connection. delete. develop. device. download. habit. ignore. instant. log in. notification. online. password. post. properly. recent. register. reply. research. screen. search engine. sign up. social networking site. subscriber. update. upload. usage. vary from. vlogger. website. adventurous."
+  "metin": "weekend. while. hobby. pop. rap. jazz. music. basketball. football. sport. bored. favourite. magazine. popular. movie. cinema. video. game. play. watch. weekday. dislike. english. social. train. photo. often. never. rather. quite. monday. tuesday. wednesday. thursday. friday. saturday. sunday. morning. afternoon. evening. today. month. time. late. start. finish. can't stand. keen on. hang around. work out. free time. do exercise. form a band. team sport. casual clothes. for example. to be honest. add. batter. bean."
  },
  {
   "no": 4,
   "ogeler": [
    {
-    "id": "aerobatic",
-    "en": "aerobatic"
+    "id": "beef",
+    "en": "beef"
    },
    {
-    "id": "ambitious",
-    "en": "ambitious"
+    "id": "celery",
+    "en": "celery"
    },
    {
-    "id": "amusing",
-    "en": "amusing"
+    "id": "cinnamon",
+    "en": "cinnamon"
    },
    {
-    "id": "bungee-jumping",
-    "en": "bungee jumping"
+    "id": "combine",
+    "en": "combine"
    },
    {
-    "id": "canoeing",
-    "en": "canoeing"
+    "id": "cover",
+    "en": "cover"
    },
    {
-    "id": "caving",
-    "en": "caving"
+    "id": "cumin",
+    "en": "cumin"
    },
    {
-    "id": "challenging",
-    "en": "challenging"
+    "id": "difficult",
+    "en": "difficult"
    },
    {
-    "id": "courage",
-    "en": "courage"
+    "id": "dissolve",
+    "en": "dissolve"
    },
    {
-    "id": "demonstration",
-    "en": "demonstration"
+    "id": "divide",
+    "en": "divide"
    },
    {
-    "id": "disappointing",
-    "en": "disappointing"
+    "id": "finally",
+    "en": "finally"
    },
    {
-    "id": "dry-suit",
-    "en": "dry suit"
+    "id": "first",
+    "en": "first"
    },
    {
-    "id": "entertaining",
-    "en": "entertaining"
+    "id": "fridge",
+    "en": "fridge"
    },
    {
-    "id": "exciting",
-    "en": "exciting"
+    "id": "garlic",
+    "en": "garlic"
    },
    {
-    "id": "extreme",
-    "en": "extreme"
+    "id": "grated",
+    "en": "grated"
    },
    {
-    "id": "extreme-sports",
-    "en": "extreme sports"
+    "id": "hour",
+    "en": "hour"
    },
    {
-    "id": "fascinating",
-    "en": "fascinating"
+    "id": "knead",
+    "en": "knead"
    },
    {
-    "id": "glove",
-    "en": "glove"
+    "id": "later",
+    "en": "later"
    },
    {
-    "id": "hang-gliding",
-    "en": "hang-gliding"
+    "id": "method",
+    "en": "method"
    },
    {
-    "id": "helmet",
-    "en": "helmet"
+    "id": "minute",
+    "en": "minute"
    },
    {
-    "id": "individually",
-    "en": "individually"
+    "id": "mixture",
+    "en": "mixture"
    },
    {
-    "id": "instructor",
-    "en": "instructor"
+    "id": "next",
+    "en": "next"
    },
    {
-    "id": "kayaking",
-    "en": "kayaking"
+    "id": "nut",
+    "en": "nut"
    },
    {
-    "id": "life-vest",
-    "en": "life vest"
+    "id": "parsley",
+    "en": "parsley"
    },
    {
-    "id": "magnificent",
-    "en": "magnificent"
+    "id": "pepper",
+    "en": "pepper"
    },
    {
-    "id": "motor-racing",
-    "en": "motor racing"
+    "id": "place",
+    "en": "place"
    },
    {
-    "id": "mysterious",
-    "en": "mysterious"
+    "id": "pot",
+    "en": "pot"
    },
    {
-    "id": "paddle",
-    "en": "paddle"
+    "id": "prawn",
+    "en": "prawn"
    },
    {
-    "id": "paragliding",
-    "en": "paragliding"
+    "id": "preheat",
+    "en": "preheat"
    },
    {
-    "id": "rafting",
-    "en": "rafting"
+    "id": "raisin",
+    "en": "raisin"
    },
    {
-    "id": "risky",
-    "en": "risky"
+    "id": "remember",
+    "en": "remember"
    },
    {
-    "id": "skateboarding",
-    "en": "skateboarding"
+    "id": "remove",
+    "en": "remove"
    },
    {
-    "id": "skyscraper",
-    "en": "skyscraper"
+    "id": "rise",
+    "en": "rise"
    },
    {
-    "id": "steering",
-    "en": "steering"
+    "id": "saffron",
+    "en": "saffron"
    },
    {
-    "id": "take-risks",
-    "en": "take risks"
+    "id": "second",
+    "en": "second"
    },
    {
-    "id": "wet-suit",
-    "en": "wet suit"
+    "id": "shape",
+    "en": "shape"
    },
    {
-    "id": "wrist-guards",
-    "en": "wrist guards"
+    "id": "slightly",
+    "en": "slightly"
    },
    {
-    "id": "accommodation",
-    "en": "accommodation"
+    "id": "smooth",
+    "en": "smooth"
    },
    {
-    "id": "all-inclusive",
-    "en": "all-inclusive"
+    "id": "soak",
+    "en": "soak"
    },
    {
-    "id": "ancient",
-    "en": "ancient"
+    "id": "starch",
+    "en": "starch"
    },
    {
-    "id": "architecture",
-    "en": "architecture"
+    "id": "stir",
+    "en": "stir"
    },
    {
-    "id": "attraction",
-    "en": "attraction"
+    "id": "strain",
+    "en": "strain"
    },
    {
-    "id": "authentic",
-    "en": "authentic"
+    "id": "syrup",
+    "en": "syrup"
    },
    {
-    "id": "bamboo-bungalow",
-    "en": "bamboo bungalow"
+    "id": "tender",
+    "en": "tender"
    },
    {
-    "id": "bed-and-breakfast",
-    "en": "bed and breakfast"
+    "id": "top",
+    "en": "top"
    },
    {
-    "id": "boutique-hotel",
-    "en": "boutique hotel"
+    "id": "tray",
+    "en": "tray"
    },
    {
-    "id": "capital",
-    "en": "capital"
+    "id": "use",
+    "en": "use"
    },
    {
-    "id": "caravansary",
-    "en": "caravansary"
+    "id": "mussel",
+    "en": "mussel"
    },
    {
-    "id": "ceremony",
-    "en": "ceremony"
+    "id": "food",
+    "en": "food"
    },
    {
-    "id": "countryside",
-    "en": "countryside"
+    "id": "drink",
+    "en": "drink"
    },
    {
-    "id": "cultural",
-    "en": "cultural"
+    "id": "breakfast",
+    "en": "breakfast"
    },
    {
-    "id": "culture",
-    "en": "culture"
+    "id": "lunch",
+    "en": "lunch"
    },
    {
-    "id": "delight",
-    "en": "delight"
+    "id": "salad",
+    "en": "salad"
    },
    {
-    "id": "destination",
-    "en": "destination"
+    "id": "tomato",
+    "en": "tomato"
    },
    {
-    "id": "fountain",
-    "en": "fountain"
+    "id": "onion",
+    "en": "onion"
    },
    {
-    "id": "historic-site",
-    "en": "historic site"
+    "id": "olive",
+    "en": "olive"
    },
    {
-    "id": "incredible",
-    "en": "incredible"
+    "id": "milk",
+    "en": "milk"
    },
    {
-    "id": "journey",
-    "en": "journey"
+    "id": "fruit",
+    "en": "fruit"
    },
    {
-    "id": "landmark",
-    "en": "landmark"
+    "id": "vegetable",
+    "en": "vegetable"
    },
    {
-    "id": "monument",
-    "en": "monument"
+    "id": "sweet",
+    "en": "sweet"
    },
    {
-    "id": "mosque",
-    "en": "mosque"
+    "id": "cake",
+    "en": "cake"
    }
   ],
-  "metin": "aerobatic. ambitious. amusing. bungee jumping. canoeing. caving. challenging. courage. demonstration. disappointing. dry suit. entertaining. exciting. extreme. extreme sports. fascinating. glove. hang-gliding. helmet. individually. instructor. kayaking. life vest. magnificent. motor racing. mysterious. paddle. paragliding. rafting. risky. skateboarding. skyscraper. steering. take risks. wet suit. wrist guards. accommodation. all-inclusive. ancient. architecture. attraction. authentic. bamboo bungalow. bed and breakfast. boutique hotel. capital. caravansary. ceremony. countryside. cultural. culture. delight. destination. fountain. historic site. incredible. journey. landmark. monument. mosque."
+  "metin": "beef. celery. cinnamon. combine. cover. cumin. difficult. dissolve. divide. finally. first. fridge. garlic. grated. hour. knead. later. method. minute. mixture. next. nut. parsley. pepper. place. pot. prawn. preheat. raisin. remember. remove. rise. saffron. second. shape. slightly. smooth. soak. starch. stir. strain. syrup. tender. top. tray. use. mussel. food. drink. breakfast. lunch. salad. tomato. onion. olive. milk. fruit. vegetable. sweet. cake."
  },
  {
   "no": 5,
   "ogeler": [
    {
-    "id": "preserve",
-    "en": "preserve"
+    "id": "chocolate",
+    "en": "chocolate"
    },
    {
-    "id": "prophet",
-    "en": "prophet"
+    "id": "lemonade",
+    "en": "lemonade"
    },
    {
-    "id": "province",
-    "en": "province"
+    "id": "water",
+    "en": "water"
    },
    {
-    "id": "refresh",
-    "en": "refresh"
+    "id": "restaurant",
+    "en": "restaurant"
    },
    {
-    "id": "region",
-    "en": "region"
+    "id": "order",
+    "en": "order"
    },
    {
-    "id": "resort",
-    "en": "resort"
+    "id": "half",
+    "en": "half"
    },
    {
-    "id": "rural",
-    "en": "rural"
+    "id": "piece",
+    "en": "piece"
    },
    {
-    "id": "settlement",
-    "en": "settlement"
+    "id": "customer",
+    "en": "customer"
    },
    {
-    "id": "shrine",
-    "en": "shrine"
+    "id": "a-pinch-of-salt",
+    "en": "a pinch of salt"
    },
    {
-    "id": "souvenir",
-    "en": "souvenir"
+    "id": "after-that",
+    "en": "after that"
    },
    {
-    "id": "square",
-    "en": "square"
+    "id": "baking-powder",
+    "en": "baking powder"
    },
    {
-    "id": "tomb",
-    "en": "tomb"
+    "id": "frying-pan",
+    "en": "frying pan"
    },
    {
-    "id": "trip",
-    "en": "trip"
+    "id": "rolling-pin",
+    "en": "rolling pin"
    },
    {
-    "id": "urban",
-    "en": "urban"
+    "id": "set-aside",
+    "en": "set aside"
    },
    {
-    "id": "arrive-on-time",
-    "en": "arrive on time"
+    "id": "how-long",
+    "en": "how long"
    },
    {
-    "id": "clean-up",
-    "en": "clean up"
+    "id": "how-many",
+    "en": "how many"
    },
    {
-    "id": "do-the-laundry",
-    "en": "do the laundry"
+    "id": "how-much",
+    "en": "how much"
    },
    {
-    "id": "do-chores",
-    "en": "do chores"
+    "id": "application",
+    "en": "application"
    },
    {
-    "id": "dust-the-shelves",
-    "en": "dust the shelves"
+    "id": "arrange",
+    "en": "arrange"
    },
    {
-    "id": "duty",
-    "en": "duty"
+    "id": "begin",
+    "en": "begin"
    },
    {
-    "id": "feature",
-    "en": "feature"
+    "id": "caller",
+    "en": "caller"
    },
    {
-    "id": "festival",
-    "en": "festival"
+    "id": "change",
+    "en": "change"
    },
    {
-    "id": "household",
-    "en": "household"
+    "id": "delivery",
+    "en": "delivery"
    },
    {
-    "id": "iron",
-    "en": "iron"
+    "id": "fine",
+    "en": "fine"
    },
    {
-    "id": "janitor",
-    "en": "janitor"
+    "id": "graduation",
+    "en": "graduation"
    },
    {
-    "id": "keep-promises",
-    "en": "keep promises"
+    "id": "great",
+    "en": "great"
    },
    {
-    "id": "keep-quiet",
-    "en": "keep quiet"
+    "id": "hear",
+    "en": "hear"
    },
    {
-    "id": "laundry",
-    "en": "laundry"
+    "id": "ill",
+    "en": "ill"
    },
    {
-    "id": "load-the-dishwasher",
-    "en": "load the dishwasher"
+    "id": "imagine",
+    "en": "imagine"
    },
    {
-    "id": "make-the-bed",
-    "en": "make the bed"
+    "id": "leave",
+    "en": "leave"
    },
    {
-    "id": "moral",
-    "en": "moral"
+    "id": "possible",
+    "en": "possible"
    },
    {
-    "id": "neat",
-    "en": "neat"
+    "id": "reminder",
+    "en": "reminder"
    },
    {
-    "id": "obey-the-rules",
-    "en": "obey the rules"
+    "id": "repeat",
+    "en": "repeat"
    },
    {
-    "id": "obligation",
-    "en": "obligation"
+    "id": "replace",
+    "en": "replace"
    },
    {
-    "id": "pay-the-bill",
-    "en": "pay the bill"
+    "id": "shout",
+    "en": "shout"
    },
    {
-    "id": "periodically",
-    "en": "periodically"
+    "id": "try",
+    "en": "try"
    },
    {
-    "id": "prepare",
-    "en": "prepare"
+    "id": "way",
+    "en": "way"
    },
    {
-    "id": "respect",
-    "en": "respect"
+    "id": "phone",
+    "en": "phone"
    },
    {
-    "id": "responsibility",
-    "en": "responsibility"
+    "id": "mobile",
+    "en": "mobile"
    },
    {
-    "id": "return-books",
-    "en": "return books"
+    "id": "email",
+    "en": "email"
    },
    {
-    "id": "set-the-table",
-    "en": "set the table"
+    "id": "address",
+    "en": "address"
    },
    {
-    "id": "slipper",
-    "en": "slipper"
+    "id": "secretary",
+    "en": "secretary"
    },
    {
-    "id": "sweep",
-    "en": "sweep"
+    "id": "company",
+    "en": "company"
    },
    {
-    "id": "take-out-the-garbage",
-    "en": "take out the garbage"
+    "id": "wait",
+    "en": "wait"
    },
    {
-    "id": "tidy-up",
-    "en": "tidy up"
+    "id": "speak",
+    "en": "speak"
    },
    {
-    "id": "to-do-list",
-    "en": "to-do list"
+    "id": "tonight",
+    "en": "tonight"
    },
    {
-    "id": "tradition",
-    "en": "tradition"
+    "id": "tomorrow",
+    "en": "tomorrow"
    },
    {
-    "id": "wash-the-dishes",
-    "en": "wash the dishes"
+    "id": "date",
+    "en": "date"
    },
    {
-    "id": "water-the-plants",
-    "en": "water the plants"
+    "id": "now",
+    "en": "now"
    },
    {
-    "id": "achievement",
-    "en": "achievement"
+    "id": "again",
+    "en": "again"
    },
    {
-    "id": "biochemist",
-    "en": "biochemist"
+    "id": "check",
+    "en": "check"
    },
    {
-    "id": "catgut",
-    "en": "catgut"
+    "id": "bill",
+    "en": "bill"
    },
    {
-    "id": "cell",
-    "en": "cell"
+    "id": "sound",
+    "en": "sound"
    },
    {
-    "id": "conduct",
-    "en": "conduct"
+    "id": "hold-on",
+    "en": "hold on"
    },
    {
-    "id": "cure",
-    "en": "cure"
+    "id": "put-through",
+    "en": "put through"
    },
    {
-    "id": "diagnose",
-    "en": "diagnose"
+    "id": "at-the-moment",
+    "en": "at the moment"
    },
    {
-    "id": "discover",
-    "en": "discover"
+    "id": "just-a-minute",
+    "en": "just a minute"
    },
    {
-    "id": "disease",
-    "en": "disease"
+    "id": "keep-in-touch",
+    "en": "keep in touch"
    },
    {
-    "id": "do-an-experiment",
-    "en": "do an experiment"
+    "id": "take-care",
+    "en": "take care"
    },
    {
-    "id": "evaluate",
-    "en": "evaluate"
+    "id": "get-well-soon",
+    "en": "get well soon"
    }
   ],
-  "metin": "preserve. prophet. province. refresh. region. resort. rural. settlement. shrine. souvenir. square. tomb. trip. urban. arrive on time. clean up. do the laundry. do chores. dust the shelves. duty. feature. festival. household. iron. janitor. keep promises. keep quiet. laundry. load the dishwasher. make the bed. moral. neat. obey the rules. obligation. pay the bill. periodically. prepare. respect. responsibility. return books. set the table. slipper. sweep. take out the garbage. tidy up. to-do list. tradition. wash the dishes. water the plants. achievement. biochemist. catgut. cell. conduct. cure. diagnose. discover. disease. do an experiment. evaluate."
+  "metin": "chocolate. lemonade. water. restaurant. order. half. piece. customer. a pinch of salt. after that. baking powder. frying pan. rolling pin. set aside. how long. how many. how much. application. arrange. begin. caller. change. delivery. fine. graduation. great. hear. ill. imagine. leave. possible. reminder. repeat. replace. shout. try. way. phone. mobile. email. address. secretary. company. wait. speak. tonight. tomorrow. date. now. again. check. bill. sound. hold on. put through. at the moment. just a minute. keep in touch. take care. get well soon."
  },
  {
   "no": 6,
   "ogeler": [
    {
-    "id": "examine",
-    "en": "examine"
+    "id": "feel-better",
+    "en": "feel better"
    },
    {
-    "id": "explode",
-    "en": "explode"
+    "id": "make-a-phone-call",
+    "en": "make a phone call"
    },
    {
-    "id": "explore",
-    "en": "explore"
+    "id": "send-a-message",
+    "en": "send a message"
    },
    {
-    "id": "find-out",
-    "en": "find out"
+    "id": "smartphone",
+    "en": "smartphone"
    },
    {
-    "id": "genius",
-    "en": "genius"
+    "id": "you-re-welcome",
+    "en": "you're welcome"
    },
    {
-    "id": "gravity",
-    "en": "gravity"
+    "id": "waste-time",
+    "en": "waste time"
    },
    {
-    "id": "high-tech",
-    "en": "high-tech"
+    "id": "how-often",
+    "en": "how often"
    },
    {
-    "id": "invent",
-    "en": "invent"
+    "id": "o-clock",
+    "en": "o'clock"
    },
    {
-    "id": "lab",
-    "en": "lab"
+    "id": "dial-a-number",
+    "en": "dial a number"
    },
    {
-    "id": "observe",
-    "en": "observe"
+    "id": "addict",
+    "en": "addict"
    },
    {
-    "id": "paraplegic",
-    "en": "paraplegic"
+    "id": "advantage",
+    "en": "advantage"
    },
    {
-    "id": "planet",
-    "en": "planet"
+    "id": "disadvantage",
+    "en": "disadvantage"
    },
    {
-    "id": "portable",
-    "en": "portable"
+    "id": "affect",
+    "en": "affect"
    },
    {
-    "id": "process",
-    "en": "process"
+    "id": "broken",
+    "en": "broken"
    },
    {
-    "id": "rabies-vaccine",
-    "en": "rabies vaccine"
+    "id": "careful",
+    "en": "careful"
    },
    {
-    "id": "researcher",
-    "en": "researcher"
+    "id": "communicate",
+    "en": "communicate"
    },
    {
-    "id": "result",
-    "en": "result"
+    "id": "dangerous",
+    "en": "dangerous"
    },
    {
-    "id": "safety",
-    "en": "safety"
+    "id": "detail",
+    "en": "detail"
    },
    {
-    "id": "scientific",
-    "en": "scientific"
+    "id": "harmful",
+    "en": "harmful"
    },
    {
-    "id": "search",
-    "en": "search"
+    "id": "member",
+    "en": "member"
    },
    {
-    "id": "smallpox-vaccine",
-    "en": "smallpox vaccine"
+    "id": "percent",
+    "en": "percent"
    },
    {
-    "id": "solar-panel",
-    "en": "solar panel"
+    "id": "reset",
+    "en": "reset"
    },
    {
-    "id": "speciality",
-    "en": "speciality"
+    "id": "useful",
+    "en": "useful"
    },
    {
-    "id": "succeed",
-    "en": "succeed"
+    "id": "username",
+    "en": "username"
    },
    {
-    "id": "test-tube",
-    "en": "test tube"
+    "id": "internet",
+    "en": "internet"
    },
    {
-    "id": "tyre",
-    "en": "tyre"
+    "id": "computer",
+    "en": "computer"
    },
    {
-    "id": "vaccination",
-    "en": "vaccination"
+    "id": "blog",
+    "en": "blog"
    },
    {
-    "id": "well-equipped",
-    "en": "well-equipped"
+    "id": "network",
+    "en": "network"
    },
    {
-    "id": "avalanche",
-    "en": "avalanche"
+    "id": "television",
+    "en": "television"
    },
    {
-    "id": "cause",
-    "en": "cause"
+    "id": "radio",
+    "en": "radio"
    },
    {
-    "id": "decrease",
-    "en": "decrease"
+    "id": "survey",
+    "en": "survey"
    },
    {
-    "id": "destroy",
-    "en": "destroy"
+    "id": "visual",
+    "en": "visual"
    },
    {
-    "id": "destructive",
-    "en": "destructive"
+    "id": "personal",
+    "en": "personal"
    },
    {
-    "id": "disappear",
-    "en": "disappear"
+    "id": "daily",
+    "en": "daily"
    },
    {
-    "id": "disaster",
-    "en": "disaster"
+    "id": "by-mistake",
+    "en": "by mistake"
    },
    {
-    "id": "drought",
-    "en": "drought"
+    "id": "log-off",
+    "en": "log off"
    },
    {
-    "id": "earthquake",
-    "en": "earthquake"
+    "id": "make-new-friends",
+    "en": "make new friends"
    },
    {
-    "id": "eco-friendly",
-    "en": "eco-friendly"
+    "id": "meet-strangers",
+    "en": "meet strangers"
    },
    {
-    "id": "erosion",
-    "en": "erosion"
+    "id": "surf-the-internet",
+    "en": "surf the internet"
    },
    {
-    "id": "extinct",
-    "en": "extinct"
+    "id": "personal-information",
+    "en": "personal information"
    },
    {
-    "id": "flood",
-    "en": "flood"
+    "id": "social-media",
+    "en": "social media"
    },
    {
-    "id": "glacier",
-    "en": "glacier"
+    "id": "isolated",
+    "en": "isolated"
    },
    {
-    "id": "global-warming",
-    "en": "global warming"
+    "id": "absolutely",
+    "en": "absolutely"
    },
    {
-    "id": "heat-up",
-    "en": "heat up"
+    "id": "adventure",
+    "en": "adventure"
    },
    {
-    "id": "heat-trapping-gases",
-    "en": "heat-trapping gases"
+    "id": "agree",
+    "en": "agree"
    },
    {
-    "id": "hurricane",
-    "en": "hurricane"
+    "id": "amused",
+    "en": "amused"
    },
    {
-    "id": "landslide",
-    "en": "landslide"
+    "id": "cave",
+    "en": "cave"
    },
    {
-    "id": "pollute",
-    "en": "pollute"
+    "id": "cycling",
+    "en": "cycling"
    },
    {
-    "id": "precaution",
-    "en": "precaution"
+    "id": "desert",
+    "en": "desert"
    },
    {
-    "id": "produce",
-    "en": "produce"
+    "id": "disagree",
+    "en": "disagree"
    },
    {
-    "id": "protect",
-    "en": "protect"
+    "id": "excitement",
+    "en": "excitement"
    },
    {
-    "id": "provide",
-    "en": "provide"
+    "id": "famous",
+    "en": "famous"
    },
    {
-    "id": "rainforest",
-    "en": "rainforest"
+    "id": "height",
+    "en": "height"
    },
    {
-    "id": "rechargeable",
-    "en": "rechargeable"
+    "id": "high",
+    "en": "high"
    },
    {
-    "id": "recycle",
-    "en": "recycle"
+    "id": "less",
+    "en": "less"
    },
    {
-    "id": "renewable",
-    "en": "renewable"
+    "id": "nature",
+    "en": "nature"
    },
    {
-    "id": "rescue",
-    "en": "rescue"
+    "id": "other",
+    "en": "other"
    },
    {
-    "id": "source",
-    "en": "source"
+    "id": "rare",
+    "en": "rare"
    },
    {
-    "id": "suffer",
-    "en": "suffer"
+    "id": "row",
+    "en": "row"
    },
    {
-    "id": "survivor",
-    "en": "survivor"
+    "id": "scenery",
+    "en": "scenery"
    }
   ],
-  "metin": "examine. explode. explore. find out. genius. gravity. high-tech. invent. lab. observe. paraplegic. planet. portable. process. rabies vaccine. researcher. result. safety. scientific. search. smallpox vaccine. solar panel. speciality. succeed. test tube. tyre. vaccination. well-equipped. avalanche. cause. decrease. destroy. destructive. disappear. disaster. drought. earthquake. eco-friendly. erosion. extinct. flood. glacier. global warming. heat up. heat-trapping gases. hurricane. landslide. pollute. precaution. produce. protect. provide. rainforest. rechargeable. recycle. renewable. rescue. source. suffer. survivor."
+  "metin": "feel better. make a phone call. send a message. smartphone. you're welcome. waste time. how often. o'clock. dial a number. addict. advantage. disadvantage. affect. broken. careful. communicate. dangerous. detail. harmful. member. percent. reset. useful. username. internet. computer. blog. network. television. radio. survey. visual. personal. daily. by mistake. log off. make new friends. meet strangers. surf the internet. personal information. social media. isolated. absolutely. adventure. agree. amused. cave. cycling. desert. disagree. excitement. famous. height. high. less. nature. other. rare. row. scenery."
  },
  {
   "no": 7,
   "ogeler": [
    {
-    "id": "temperature",
-    "en": "temperature"
+    "id": "skiing",
+    "en": "skiing"
    },
    {
-    "id": "tornado",
-    "en": "tornado"
+    "id": "travel",
+    "en": "travel"
    },
    {
-    "id": "treatment",
-    "en": "treatment"
+    "id": "wooden",
+    "en": "wooden"
    },
    {
-    "id": "tsunami",
-    "en": "tsunami"
+    "id": "camping",
+    "en": "camping"
    },
    {
-    "id": "volcano",
-    "en": "volcano"
+    "id": "ride",
+    "en": "ride"
    },
    {
-    "id": "waste",
-    "en": "waste"
+    "id": "bike",
+    "en": "bike"
    },
    {
-    "id": "water-shortage",
-    "en": "water shortage"
+    "id": "scared",
+    "en": "scared"
    },
    {
-    "id": "far",
-    "en": "far"
+    "id": "afraid",
+    "en": "afraid"
    },
    {
-    "id": "sell",
-    "en": "sell"
+    "id": "accident",
+    "en": "accident"
    },
    {
-    "id": "door",
-    "en": "door"
+    "id": "outside",
+    "en": "outside"
    },
    {
-    "id": "salt",
-    "en": "salt"
+    "id": "amusement-park",
+    "en": "amusement park"
    },
    {
-    "id": "dust",
-    "en": "dust"
+    "id": "have-a-picnic",
+    "en": "have a picnic"
    },
    {
-    "id": "sick",
-    "en": "sick"
+    "id": "afraid-of",
+    "en": "afraid of"
    },
    {
-    "id": "bad",
-    "en": "bad"
+    "id": "fall-down",
+    "en": "fall down"
    },
    {
-    "id": "car",
-    "en": "car"
+    "id": "hot-air-balloon",
+    "en": "hot air balloon"
    },
    {
-    "id": "eye",
-    "en": "eye"
+    "id": "scuba-diving",
+    "en": "scuba diving"
    },
    {
-    "id": "fish",
-    "en": "fish"
+    "id": "would-rather",
+    "en": "would rather"
    },
    {
-    "id": "dark",
-    "en": "dark"
+    "id": "on-my-own",
+    "en": "on my own"
    },
    {
-    "id": "deep",
-    "en": "deep"
+    "id": "so-far",
+    "en": "so far"
    },
    {
-    "id": "cup",
-    "en": "cup"
+    "id": "winter-sports",
+    "en": "winter sports"
    },
    {
-    "id": "coat",
-    "en": "coat"
+    "id": "outdoor-activities",
+    "en": "outdoor activities"
    },
    {
-    "id": "boat",
-    "en": "boat"
+    "id": "amphitheatre",
+    "en": "amphitheatre"
    },
    {
-    "id": "box",
-    "en": "box"
+    "id": "attractive",
+    "en": "attractive"
    },
    {
-    "id": "brother",
-    "en": "brother"
+    "id": "beautiful",
+    "en": "beautiful"
    },
    {
-    "id": "foot",
-    "en": "foot"
+    "id": "big",
+    "en": "big"
    },
    {
-    "id": "full",
-    "en": "full"
+    "id": "build",
+    "en": "build"
    },
    {
-    "id": "safe",
-    "en": "safe"
+    "id": "compare",
+    "en": "compare"
    },
    {
-    "id": "short",
-    "en": "short"
+    "id": "country",
+    "en": "country"
    },
    {
-    "id": "laugh",
-    "en": "laugh"
+    "id": "cruise",
+    "en": "cruise"
    },
    {
-    "id": "large",
-    "en": "large"
+    "id": "dirty",
+    "en": "dirty"
    },
    {
-    "id": "sit",
-    "en": "sit"
+    "id": "entertainment",
+    "en": "entertainment"
    },
    {
-    "id": "sun",
-    "en": "sun"
+    "id": "escape",
+    "en": "escape"
    },
    {
-    "id": "road",
-    "en": "road"
+    "id": "excited",
+    "en": "excited"
    },
    {
-    "id": "leaf",
-    "en": "leaf"
+    "id": "expedition",
+    "en": "expedition"
    },
    {
-    "id": "ball",
-    "en": "ball"
+    "id": "expensive",
+    "en": "expensive"
    },
    {
-    "id": "pull",
-    "en": "pull"
+    "id": "gorgeous",
+    "en": "gorgeous"
    },
    {
-    "id": "put",
-    "en": "put"
+    "id": "happen",
+    "en": "happen"
    },
    {
-    "id": "pass",
-    "en": "pass"
+    "id": "heritage",
+    "en": "heritage"
    },
    {
-    "id": "tell",
-    "en": "tell"
+    "id": "history",
+    "en": "history"
    },
    {
-    "id": "table",
-    "en": "table"
+    "id": "hospitable",
+    "en": "hospitable"
    },
    {
-    "id": "touch",
-    "en": "touch"
+    "id": "huge",
+    "en": "huge"
    },
    {
-    "id": "turn",
-    "en": "turn"
+    "id": "island",
+    "en": "island"
    },
    {
-    "id": "wash",
-    "en": "wash"
+    "id": "keep",
+    "en": "keep"
    },
    {
-    "id": "bucket",
-    "en": "bucket"
+    "id": "location",
+    "en": "location"
    },
    {
-    "id": "meet",
-    "en": "meet"
+    "id": "lovely",
+    "en": "lovely"
    },
    {
-    "id": "stand",
-    "en": "stand"
+    "id": "natural",
+    "en": "natural"
    },
    {
-    "id": "cut",
-    "en": "cut"
+    "id": "noisy",
+    "en": "noisy"
    },
    {
-    "id": "sugar",
-    "en": "sugar"
+    "id": "opinion",
+    "en": "opinion"
    },
    {
-    "id": "feel",
-    "en": "feel"
+    "id": "organize",
+    "en": "organize"
    },
    {
-    "id": "cold",
-    "en": "cold"
+    "id": "palace",
+    "en": "palace"
    },
    {
-    "id": "bath",
-    "en": "bath"
+    "id": "perfect",
+    "en": "perfect"
    },
    {
-    "id": "kitchen",
-    "en": "kitchen"
+    "id": "public",
+    "en": "public"
    },
    {
-    "id": "candle",
-    "en": "candle"
+    "id": "quiet",
+    "en": "quiet"
    },
    {
-    "id": "basket",
-    "en": "basket"
+    "id": "ready",
+    "en": "ready"
    },
    {
-    "id": "bitter",
-    "en": "bitter"
+    "id": "rich",
+    "en": "rich"
    },
    {
-    "id": "butter",
-    "en": "butter"
+    "id": "sail",
+    "en": "sail"
    },
    {
-    "id": "fork",
-    "en": "fork"
+    "id": "spend",
+    "en": "spend"
    },
    {
-    "id": "bowl",
-    "en": "bowl"
+    "id": "stay",
+    "en": "stay"
    },
    {
-    "id": "branch",
-    "en": "branch"
+    "id": "sunbathe",
+    "en": "sunbathe"
    },
    {
-    "id": "fence",
-    "en": "fence"
+    "id": "terrible",
+    "en": "terrible"
    }
   ],
-  "metin": "temperature. tornado. treatment. tsunami. volcano. waste. water shortage. far. sell. door. salt. dust. sick. bad. car. eye. fish. dark. deep. cup. coat. boat. box. brother. foot. full. safe. short. laugh. large. sit. sun. road. leaf. ball. pull. put. pass. tell. table. touch. turn. wash. bucket. meet. stand. cut. sugar. feel. cold. bath. kitchen. candle. basket. bitter. butter. fork. bowl. branch. fence."
+  "metin": "skiing. travel. wooden. camping. ride. bike. scared. afraid. accident. outside. amusement park. have a picnic. afraid of. fall down. hot air balloon. scuba diving. would rather. on my own. so far. winter sports. outdoor activities. amphitheatre. attractive. beautiful. big. build. compare. country. cruise. dirty. entertainment. escape. excited. expedition. expensive. gorgeous. happen. heritage. history. hospitable. huge. island. keep. location. lovely. natural. noisy. opinion. organize. palace. perfect. public. quiet. ready. rich. sail. spend. stay. sunbathe. terrible."
  },
  {
   "no": 8,
   "ogeler": [
    {
-    "id": "corner",
-    "en": "corner"
+    "id": "theatre",
+    "en": "theatre"
    },
    {
-    "id": "path",
-    "en": "path"
+    "id": "tiring",
+    "en": "tiring"
    },
    {
-    "id": "belt",
-    "en": "belt"
+    "id": "together",
+    "en": "together"
    },
    {
-    "id": "cap",
-    "en": "cap"
+    "id": "traditional",
+    "en": "traditional"
    },
    {
-    "id": "button",
-    "en": "button"
+    "id": "transportation",
+    "en": "transportation"
    },
    {
-    "id": "collar",
-    "en": "collar"
+    "id": "unbelievable",
+    "en": "unbelievable"
    },
    {
-    "id": "lead",
-    "en": "lead"
+    "id": "world",
+    "en": "world"
    },
    {
-    "id": "cash",
-    "en": "cash"
+    "id": "city",
+    "en": "city"
    },
    {
-    "id": "season",
-    "en": "season"
+    "id": "museum",
+    "en": "museum"
    },
    {
-    "id": "truck",
-    "en": "truck"
+    "id": "tourist",
+    "en": "tourist"
    },
    {
-    "id": "team",
-    "en": "team"
+    "id": "tour",
+    "en": "tour"
    },
    {
-    "id": "guard",
-    "en": "guard"
+    "id": "flight",
+    "en": "flight"
    },
    {
-    "id": "court",
-    "en": "court"
+    "id": "plane",
+    "en": "plane"
    },
    {
-    "id": "rule",
-    "en": "rule"
+    "id": "centre",
+    "en": "centre"
    },
    {
-    "id": "press",
-    "en": "press"
+    "id": "street",
+    "en": "street"
    },
    {
-    "id": "freeze",
-    "en": "freeze"
+    "id": "visit",
+    "en": "visit"
    },
    {
-    "id": "burn",
-    "en": "burn"
+    "id": "arrive",
+    "en": "arrive"
    },
    {
-    "id": "shake",
-    "en": "shake"
+    "id": "return",
+    "en": "return"
    },
    {
-    "id": "slide",
-    "en": "slide"
+    "id": "price",
+    "en": "price"
    },
    {
-    "id": "peak",
-    "en": "peak"
+    "id": "century",
+    "en": "century"
    },
    {
-    "id": "speed",
-    "en": "speed"
+    "id": "local",
+    "en": "local"
    },
    {
-    "id": "anchor",
-    "en": "anchor"
+    "id": "modern",
+    "en": "modern"
    },
    {
-    "id": "rent",
-    "en": "rent"
+    "id": "july",
+    "en": "july"
    },
    {
-    "id": "plate",
-    "en": "plate"
+    "id": "august",
+    "en": "august"
    },
    {
-    "id": "pillow",
-    "en": "pillow"
+    "id": "summer",
+    "en": "summer"
    },
    {
-    "id": "towel",
-    "en": "towel"
+    "id": "in-my-opinion",
+    "en": "in my opinion"
    },
    {
-    "id": "chin",
-    "en": "chin"
+    "id": "have-a-rest",
+    "en": "have a rest"
    },
    {
-    "id": "snake",
-    "en": "snake"
+    "id": "sightseeing-tour",
+    "en": "sightseeing tour"
    },
    {
-    "id": "fox",
-    "en": "fox"
+    "id": "have-been-to",
+    "en": "have been to"
    },
    {
-    "id": "thunder",
-    "en": "thunder"
+    "id": "school-trip",
+    "en": "school trip"
    },
    {
-    "id": "storm",
-    "en": "storm"
+    "id": "book-a-room",
+    "en": "book a room"
    },
    {
-    "id": "shore",
-    "en": "shore"
+    "id": "annoy",
+    "en": "annoy"
    },
    {
-    "id": "mud",
-    "en": "mud"
+    "id": "article",
+    "en": "article"
    },
    {
-    "id": "calm",
-    "en": "calm"
+    "id": "complain",
+    "en": "complain"
    },
    {
-    "id": "dawn",
-    "en": "dawn"
+    "id": "elder",
+    "en": "elder"
    },
    {
-    "id": "hook",
-    "en": "hook"
+    "id": "hard",
+    "en": "hard"
    },
    {
-    "id": "gate",
-    "en": "gate"
+    "id": "housework",
+    "en": "housework"
    },
    {
-    "id": "castle",
-    "en": "castle"
+    "id": "lesson",
+    "en": "lesson"
    },
    {
-    "id": "brain",
-    "en": "brain"
+    "id": "mess",
+    "en": "mess"
    },
    {
-    "id": "crawl",
-    "en": "crawl"
+    "id": "mind",
+    "en": "mind"
    },
    {
-    "id": "spin",
-    "en": "spin"
+    "id": "necessary",
+    "en": "necessary"
    },
    {
-    "id": "roll",
-    "en": "roll"
+    "id": "peaceful",
+    "en": "peaceful"
    },
    {
-    "id": "chew",
-    "en": "chew"
+    "id": "responsible",
+    "en": "responsible"
    },
    {
-    "id": "taste",
-    "en": "taste"
+    "id": "right",
+    "en": "right"
    },
    {
-    "id": "coin",
-    "en": "coin"
+    "id": "rude",
+    "en": "rude"
    },
    {
-    "id": "brave",
-    "en": "brave"
+    "id": "say",
+    "en": "say"
    },
    {
-    "id": "pencil",
-    "en": "pencil"
+    "id": "task",
+    "en": "task"
    },
    {
-    "id": "key",
-    "en": "key"
+    "id": "tidy",
+    "en": "tidy"
    },
    {
-    "id": "arm",
-    "en": "arm"
+    "id": "dishwasher",
+    "en": "dishwasher"
    },
    {
-    "id": "corn",
-    "en": "corn"
+    "id": "bathroom",
+    "en": "bathroom"
    },
    {
-    "id": "cheese",
-    "en": "cheese"
+    "id": "clothes",
+    "en": "clothes"
    },
    {
-    "id": "hill",
-    "en": "hill"
+    "id": "pet",
+    "en": "pet"
    },
    {
-    "id": "gun",
-    "en": "gun"
+    "id": "house",
+    "en": "house"
    },
    {
-    "id": "sand",
-    "en": "sand"
+    "id": "home",
+    "en": "home"
    },
    {
-    "id": "wing",
-    "en": "wing"
+    "id": "family",
+    "en": "family"
    },
    {
-    "id": "year",
-    "en": "year"
+    "id": "mother",
+    "en": "mother"
    },
    {
-    "id": "bag",
-    "en": "bag"
+    "id": "father",
+    "en": "father"
    },
    {
-    "id": "bite",
-    "en": "bite"
+    "id": "sister",
+    "en": "sister"
    },
    {
-    "id": "bone",
-    "en": "bone"
+    "id": "cousin",
+    "en": "cousin"
    },
    {
-    "id": "cheap",
-    "en": "cheap"
+    "id": "grandparents",
+    "en": "grandparents"
    }
   ],
-  "metin": "corner. path. belt. cap. button. collar. lead. cash. season. truck. team. guard. court. rule. press. freeze. burn. shake. slide. peak. speed. anchor. rent. plate. pillow. towel. chin. snake. fox. thunder. storm. shore. mud. calm. dawn. hook. gate. castle. brain. crawl. spin. roll. chew. taste. coin. brave. pencil. key. arm. corn. cheese. hill. gun. sand. wing. year. bag. bite. bone. cheap."
+  "metin": "theatre. tiring. together. traditional. transportation. unbelievable. world. city. museum. tourist. tour. flight. plane. centre. street. visit. arrive. return. price. century. local. modern. july. august. summer. in my opinion. have a rest. sightseeing tour. have been to. school trip. book a room. annoy. article. complain. elder. hard. housework. lesson. mess. mind. necessary. peaceful. responsible. right. rude. say. task. tidy. dishwasher. bathroom. clothes. pet. house. home. family. mother. father. sister. cousin. grandparents."
  },
  {
   "no": 9,
   "ogeler": [
    {
-    "id": "desk",
-    "en": "desk"
+    "id": "grandfather",
+    "en": "grandfather"
    },
    {
-    "id": "dress",
-    "en": "dress"
+    "id": "husband",
+    "en": "husband"
    },
    {
-    "id": "early",
-    "en": "early"
+    "id": "parents",
+    "en": "parents"
    },
    {
-    "id": "eat",
-    "en": "eat"
+    "id": "boy",
+    "en": "boy"
    },
    {
-    "id": "floor",
-    "en": "floor"
+    "id": "old",
+    "en": "old"
    },
    {
-    "id": "garden",
-    "en": "garden"
+    "id": "little",
+    "en": "little"
    },
    {
-    "id": "hair",
-    "en": "hair"
+    "id": "small",
+    "en": "small"
    },
    {
-    "id": "happy",
-    "en": "happy"
+    "id": "long",
+    "en": "long"
    },
    {
-    "id": "head",
-    "en": "head"
+    "id": "black",
+    "en": "black"
    },
    {
-    "id": "heavy",
-    "en": "heavy"
+    "id": "white",
+    "en": "white"
    },
    {
-    "id": "hole",
-    "en": "hole"
+    "id": "brown",
+    "en": "brown"
    },
    {
-    "id": "hope",
-    "en": "hope"
+    "id": "green",
+    "en": "green"
    },
    {
-    "id": "kick",
-    "en": "kick"
+    "id": "dry-the-dishes",
+    "en": "dry the dishes"
    },
    {
-    "id": "leg",
-    "en": "leg"
+    "id": "walk-the-dog",
+    "en": "walk the dog"
    },
    {
-    "id": "listen",
-    "en": "listen"
+    "id": "vacuum-the-carpet",
+    "en": "vacuum the carpet"
    },
    {
-    "id": "lose",
-    "en": "lose"
+    "id": "pocket-money",
+    "en": "pocket money"
    },
    {
-    "id": "make",
-    "en": "make"
+    "id": "take-care-of",
+    "en": "take care of"
    },
    {
-    "id": "much",
-    "en": "much"
+    "id": "do-the-shopping",
+    "en": "do the shopping"
    },
    {
-    "id": "night",
-    "en": "night"
+    "id": "in-charge-of",
+    "en": "in charge of"
    },
    {
-    "id": "push",
-    "en": "push"
+    "id": "responsible-for",
+    "en": "responsible for"
    },
    {
-    "id": "red",
-    "en": "red"
+    "id": "busy-with",
+    "en": "busy with"
    },
    {
-    "id": "room",
-    "en": "room"
+    "id": "allow",
+    "en": "allow"
    },
    {
-    "id": "soon",
-    "en": "soon"
+    "id": "appreciate",
+    "en": "appreciate"
    },
    {
-    "id": "study",
-    "en": "study"
+    "id": "borrow",
+    "en": "borrow"
    },
    {
-    "id": "talk",
-    "en": "talk"
+    "id": "brilliant",
+    "en": "brilliant"
    },
    {
-    "id": "week",
-    "en": "week"
+    "id": "bring",
+    "en": "bring"
    },
    {
-    "id": "window",
-    "en": "window"
+    "id": "calculator",
+    "en": "calculator"
    },
    {
-    "id": "buy",
-    "en": "buy"
+    "id": "carry",
+    "en": "carry"
    },
    {
-    "id": "moon",
-    "en": "moon"
+    "id": "childhood",
+    "en": "childhood"
    },
    {
-    "id": "rock",
-    "en": "rock"
+    "id": "create",
+    "en": "create"
    },
    {
-    "id": "sad",
-    "en": "sad"
+    "id": "deserve",
+    "en": "deserve"
    },
    {
-    "id": "show",
-    "en": "show"
+    "id": "design",
+    "en": "design"
    },
    {
-    "id": "tape",
-    "en": "tape"
+    "id": "discovery",
+    "en": "discovery"
    },
    {
-    "id": "sponge",
-    "en": "sponge"
+    "id": "education",
+    "en": "education"
    },
    {
-    "id": "stretch",
-    "en": "stretch"
+    "id": "engineering",
+    "en": "engineering"
    },
    {
-    "id": "tight",
-    "en": "tight"
+    "id": "experiment",
+    "en": "experiment"
    },
    {
-    "id": "curtain",
-    "en": "curtain"
+    "id": "explorer",
+    "en": "explorer"
    },
    {
-    "id": "lamp",
-    "en": "lamp"
+    "id": "fact",
+    "en": "fact"
    },
    {
-    "id": "vase",
-    "en": "vase"
+    "id": "forever",
+    "en": "forever"
    },
    {
-    "id": "switch",
-    "en": "switch"
+    "id": "forget",
+    "en": "forget"
    },
    {
-    "id": "torch",
-    "en": "torch"
+    "id": "human",
+    "en": "human"
    },
    {
-    "id": "tap",
-    "en": "tap"
+    "id": "improve",
+    "en": "improve"
    },
    {
-    "id": "drain",
-    "en": "drain"
+    "id": "invention",
+    "en": "invention"
    },
    {
-    "id": "bin",
-    "en": "bin"
+    "id": "inventor",
+    "en": "inventor"
    },
    {
-    "id": "mop",
-    "en": "mop"
+    "id": "journalist",
+    "en": "journalist"
    },
    {
-    "id": "rust",
-    "en": "rust"
+    "id": "lend",
+    "en": "lend"
    },
    {
-    "id": "dirt",
-    "en": "dirt"
+    "id": "live",
+    "en": "live"
    },
    {
-    "id": "polish",
-    "en": "polish"
+    "id": "masterpiece",
+    "en": "masterpiece"
    },
    {
-    "id": "wipe",
-    "en": "wipe"
+    "id": "novel",
+    "en": "novel"
    },
    {
-    "id": "carrot",
-    "en": "carrot"
+    "id": "paint",
+    "en": "paint"
    },
    {
-    "id": "sauce",
-    "en": "sauce"
+    "id": "physics",
+    "en": "physics"
    },
    {
-    "id": "dish",
-    "en": "dish"
+    "id": "poem",
+    "en": "poem"
    },
    {
-    "id": "bake",
-    "en": "bake"
+    "id": "publish",
+    "en": "publish"
    },
    {
-    "id": "fry",
-    "en": "fry"
+    "id": "realize",
+    "en": "realize"
    },
    {
-    "id": "grill",
-    "en": "grill"
+    "id": "record",
+    "en": "record"
    },
    {
-    "id": "jam",
-    "en": "jam"
+    "id": "science",
+    "en": "science"
    },
    {
-    "id": "mug",
-    "en": "mug"
+    "id": "scientist",
+    "en": "scientist"
    },
    {
-    "id": "slice",
-    "en": "slice"
+    "id": "space",
+    "en": "space"
    },
    {
-    "id": "peel",
-    "en": "peel"
+    "id": "strange",
+    "en": "strange"
    },
    {
-    "id": "steam",
-    "en": "steam"
+    "id": "struggle",
+    "en": "struggle"
    }
   ],
-  "metin": "desk. dress. early. eat. floor. garden. hair. happy. head. heavy. hole. hope. kick. leg. listen. lose. make. much. night. push. red. room. soon. study. talk. week. window. buy. moon. rock. sad. show. tape. sponge. stretch. tight. curtain. lamp. vase. switch. torch. tap. drain. bin. mop. rust. dirt. polish. wipe. carrot. sauce. dish. bake. fry. grill. jam. mug. slice. peel. steam."
+  "metin": "grandfather. husband. parents. boy. old. little. small. long. black. white. brown. green. dry the dishes. walk the dog. vacuum the carpet. pocket money. take care of. do the shopping. in charge of. responsible for. busy with. allow. appreciate. borrow. brilliant. bring. calculator. carry. childhood. create. deserve. design. discovery. education. engineering. experiment. explorer. fact. forever. forget. human. improve. invention. inventor. journalist. lend. live. masterpiece. novel. paint. physics. poem. publish. realize. record. science. scientist. space. strange. struggle."
  },
  {
   "no": 10,
   "ogeler": [
    {
-    "id": "spice",
-    "en": "spice"
+    "id": "typewriter",
+    "en": "typewriter"
    },
    {
-    "id": "feed",
-    "en": "feed"
+    "id": "unique",
+    "en": "unique"
    },
    {
-    "id": "palm",
-    "en": "palm"
+    "id": "universe",
+    "en": "universe"
    },
    {
-    "id": "nerve",
-    "en": "nerve"
+    "id": "wonder",
+    "en": "wonder"
    },
    {
-    "id": "itch",
-    "en": "itch"
+    "id": "writer",
+    "en": "writer"
    },
    {
-    "id": "blink",
-    "en": "blink"
+    "id": "chemistry",
+    "en": "chemistry"
    },
    {
-    "id": "slap",
-    "en": "slap"
+    "id": "medicine",
+    "en": "medicine"
    },
    {
-    "id": "pinch",
-    "en": "pinch"
+    "id": "health",
+    "en": "health"
    },
    {
-    "id": "ash",
-    "en": "ash"
+    "id": "hospital",
+    "en": "hospital"
    },
    {
-    "id": "smoke",
-    "en": "smoke"
+    "id": "doctor",
+    "en": "doctor"
    },
    {
-    "id": "crack",
-    "en": "crack"
+    "id": "tool",
+    "en": "tool"
    },
    {
-    "id": "valley",
-    "en": "valley"
+    "id": "project",
+    "en": "project"
    },
    {
-    "id": "clay",
-    "en": "clay"
+    "id": "problem",
+    "en": "problem"
    },
    {
-    "id": "grain",
-    "en": "grain"
+    "id": "solve",
+    "en": "solve"
    },
    {
-    "id": "crop",
-    "en": "crop"
+    "id": "university",
+    "en": "university"
    },
    {
-    "id": "harvest",
-    "en": "harvest"
+    "id": "step",
+    "en": "step"
    },
    {
-    "id": "thorn",
-    "en": "thorn"
+    "id": "discuss",
+    "en": "discuss"
    },
    {
-    "id": "log",
-    "en": "log"
+    "id": "interest",
+    "en": "interest"
    },
    {
-    "id": "fur",
-    "en": "fur"
+    "id": "language",
+    "en": "language"
    },
    {
-    "id": "web",
-    "en": "web"
+    "id": "wrong",
+    "en": "wrong"
    },
    {
-    "id": "mist",
-    "en": "mist"
+    "id": "word",
+    "en": "word"
    },
    {
-    "id": "frost",
-    "en": "frost"
+    "id": "write",
+    "en": "write"
    },
    {
-    "id": "breeze",
-    "en": "breeze"
+    "id": "teacher",
+    "en": "teacher"
    },
    {
-    "id": "dim",
-    "en": "dim"
+    "id": "student",
+    "en": "student"
    },
    {
-    "id": "bend",
-    "en": "bend"
+    "id": "school",
+    "en": "school"
    },
    {
-    "id": "crash",
-    "en": "crash"
+    "id": "classroom",
+    "en": "classroom"
    },
    {
-    "id": "rinse",
-    "en": "rinse"
+    "id": "homework",
+    "en": "homework"
    },
    {
-    "id": "shave",
-    "en": "shave"
+    "id": "library",
+    "en": "library"
    },
    {
-    "id": "sharp",
-    "en": "sharp"
+    "id": "course",
+    "en": "course"
    },
    {
-    "id": "drag",
-    "en": "drag"
+    "id": "subject",
+    "en": "subject"
    },
    {
-    "id": "drop",
-    "en": "drop"
+    "id": "change-the-world",
+    "en": "change the world"
    },
    {
-    "id": "lift",
-    "en": "lift"
+    "id": "get-better",
+    "en": "get better"
    },
    {
-    "id": "swing",
-    "en": "swing"
+    "id": "look-for",
+    "en": "look for"
    },
    {
-    "id": "march",
-    "en": "march"
+    "id": "thanks-to",
+    "en": "thanks to"
    },
    {
-    "id": "grip",
-    "en": "grip"
+    "id": "light-bulb",
+    "en": "light bulb"
    },
    {
-    "id": "toss",
-    "en": "toss"
+    "id": "printing-press",
+    "en": "printing press"
    },
    {
-    "id": "pat",
-    "en": "pat"
+    "id": "insist-on",
+    "en": "insist on"
    },
    {
-    "id": "scratch",
-    "en": "scratch"
+    "id": "agriculture",
+    "en": "agriculture"
    },
    {
-    "id": "wrap",
-    "en": "wrap"
+    "id": "blow",
+    "en": "blow"
    },
    {
-    "id": "stick",
-    "en": "stick"
+    "id": "climate",
+    "en": "climate"
    },
    {
-    "id": "blend",
-    "en": "blend"
+    "id": "damage",
+    "en": "damage"
    },
    {
-    "id": "pump",
-    "en": "pump"
+    "id": "death",
+    "en": "death"
    },
    {
-    "id": "drill",
-    "en": "drill"
+    "id": "deforestation",
+    "en": "deforestation"
    },
    {
-    "id": "paste",
-    "en": "paste"
+    "id": "enough",
+    "en": "enough"
    },
    {
-    "id": "print",
-    "en": "print"
+    "id": "environment",
+    "en": "environment"
    },
    {
-    "id": "scan",
-    "en": "scan"
+    "id": "factory",
+    "en": "factory"
    },
    {
-    "id": "type",
-    "en": "type"
+    "id": "future",
+    "en": "future"
    },
    {
-    "id": "pal",
-    "en": "pal"
+    "id": "government",
+    "en": "government"
    },
    {
-    "id": "chef",
-    "en": "chef"
+    "id": "increase",
+    "en": "increase"
    },
    {
-    "id": "miner",
-    "en": "miner"
+    "id": "injury",
+    "en": "injury"
    },
    {
-    "id": "pilot",
-    "en": "pilot"
+    "id": "lack",
+    "en": "lack"
    },
    {
-    "id": "coach",
-    "en": "coach"
+    "id": "land",
+    "en": "land"
    },
    {
-    "id": "fan",
-    "en": "fan"
+    "id": "lightning",
+    "en": "lightning"
    },
    {
-    "id": "rival",
-    "en": "rival"
+    "id": "liquid",
+    "en": "liquid"
    },
    {
-    "id": "mob",
-    "en": "mob"
+    "id": "mountain",
+    "en": "mountain"
    },
    {
-    "id": "troop",
-    "en": "troop"
+    "id": "movement",
+    "en": "movement"
    },
    {
-    "id": "keen",
-    "en": "keen"
+    "id": "ocean",
+    "en": "ocean"
    },
    {
-    "id": "bold",
-    "en": "bold"
+    "id": "past",
+    "en": "past"
    },
    {
-    "id": "fair",
-    "en": "fair"
+    "id": "prevent",
+    "en": "prevent"
    },
    {
-    "id": "firm",
-    "en": "firm"
+    "id": "river",
+    "en": "river"
    }
   ],
-  "metin": "spice. feed. palm. nerve. itch. blink. slap. pinch. ash. smoke. crack. valley. clay. grain. crop. harvest. thorn. log. fur. web. mist. frost. breeze. dim. bend. crash. rinse. shave. sharp. drag. drop. lift. swing. march. grip. toss. pat. scratch. wrap. stick. blend. pump. drill. paste. print. scan. type. pal. chef. miner. pilot. coach. fan. rival. mob. troop. keen. bold. fair. firm."
+  "metin": "typewriter. unique. universe. wonder. writer. chemistry. medicine. health. hospital. doctor. tool. project. problem. solve. university. step. discuss. interest. language. wrong. word. write. teacher. student. school. classroom. homework. library. course. subject. change the world. get better. look for. thanks to. light bulb. printing press. insist on. agriculture. blow. climate. damage. death. deforestation. enough. environment. factory. future. government. increase. injury. lack. land. lightning. liquid. mountain. movement. ocean. past. prevent. river."
  },
  {
   "no": 11,
   "ogeler": [
    {
-    "id": "plain",
-    "en": "plain"
+    "id": "save",
+    "en": "save"
    },
    {
-    "id": "spare",
-    "en": "spare"
+    "id": "shortage",
+    "en": "shortage"
    },
    {
-    "id": "fee",
-    "en": "fee"
+    "id": "snow",
+    "en": "snow"
    },
    {
-    "id": "tax",
-    "en": "tax"
+    "id": "solid",
+    "en": "solid"
    },
    {
-    "id": "fund",
-    "en": "fund"
+    "id": "strong",
+    "en": "strong"
    },
    {
-    "id": "budget",
-    "en": "budget"
+    "id": "sudden",
+    "en": "sudden"
    },
    {
-    "id": "stock",
-    "en": "stock"
+    "id": "suggestion",
+    "en": "suggestion"
    },
    {
-    "id": "brand",
-    "en": "brand"
+    "id": "surface",
+    "en": "surface"
    },
    {
-    "id": "profit",
-    "en": "profit"
+    "id": "warn",
+    "en": "warn"
    },
    {
-    "id": "shift",
-    "en": "shift"
+    "id": "wave",
+    "en": "wave"
    },
    {
-    "id": "curve",
-    "en": "curve"
+    "id": "wind",
+    "en": "wind"
    },
    {
-    "id": "brake",
-    "en": "brake"
+    "id": "earth",
+    "en": "earth"
    },
    {
-    "id": "cream",
-    "en": "cream"
+    "id": "heat",
+    "en": "heat"
    },
    {
-    "id": "cargo",
-    "en": "cargo"
+    "id": "area",
+    "en": "area"
    },
    {
-    "id": "deck",
-    "en": "deck"
+    "id": "life",
+    "en": "life"
    },
    {
-    "id": "dock",
-    "en": "dock"
+    "id": "soil",
+    "en": "soil"
    },
    {
-    "id": "tunnel",
-    "en": "tunnel"
+    "id": "reduce",
+    "en": "reduce"
    },
    {
-    "id": "bridge",
-    "en": "bridge"
+    "id": "air-pollution",
+    "en": "air pollution"
    },
    {
-    "id": "pit",
-    "en": "pit"
+    "id": "climate-change",
+    "en": "climate change"
    },
    {
-    "id": "ramp",
-    "en": "ramp"
+    "id": "first-aid",
+    "en": "first aid"
    },
    {
-    "id": "chalk",
-    "en": "chalk"
+    "id": "natural-disaster",
+    "en": "natural disaster"
    },
    {
-    "id": "board",
-    "en": "board"
+    "id": "forest-fire",
+    "en": "forest fire"
    },
    {
-    "id": "mark",
-    "en": "mark"
+    "id": "deal-with",
+    "en": "deal with"
    },
    {
-    "id": "quiz",
-    "en": "quiz"
+    "id": "lead-to",
+    "en": "lead to"
    },
    {
-    "id": "class",
-    "en": "class"
+    "id": "run-out-of",
+    "en": "run out of"
    },
    {
-    "id": "term",
-    "en": "term"
+    "id": "stay-away",
+    "en": "stay away"
    },
    {
-    "id": "note",
-    "en": "note"
+    "id": "warm-up",
+    "en": "warm up"
    },
    {
-    "id": "list",
-    "en": "list"
+    "id": "grow-crops",
+    "en": "grow crops"
    },
    {
-    "id": "file",
-    "en": "file"
-   },
-   {
-    "id": "folder",
-    "en": "folder"
-   },
-   {
-    "id": "draft",
-    "en": "draft"
-   },
-   {
-    "id": "sock",
-    "en": "sock"
-   },
-   {
-    "id": "scarf",
-    "en": "scarf"
-   },
-   {
-    "id": "jacket",
-    "en": "jacket"
-   },
-   {
-    "id": "pocket",
-    "en": "pocket"
-   },
-   {
-    "id": "cotton",
-    "en": "cotton"
-   },
-   {
-    "id": "silk",
-    "en": "silk"
-   },
-   {
-    "id": "patch",
-    "en": "patch"
-   },
-   {
-    "id": "zip",
-    "en": "zip"
-   },
-   {
-    "id": "gem",
-    "en": "gem"
-   },
-   {
-    "id": "steel",
-    "en": "steel"
-   },
-   {
-    "id": "tin",
-    "en": "tin"
-   },
-   {
-    "id": "brick",
-    "en": "brick"
-   },
-   {
-    "id": "cement",
-    "en": "cement"
-   },
-   {
-    "id": "plaster",
-    "en": "plaster"
-   },
-   {
-    "id": "blade",
-    "en": "blade"
-   },
-   {
-    "id": "lever",
-    "en": "lever"
-   },
-   {
-    "id": "gear",
-    "en": "gear"
-   },
-   {
-    "id": "valve",
-    "en": "valve"
-   },
-   {
-    "id": "pipe",
-    "en": "pipe"
-   },
-   {
-    "id": "tube",
-    "en": "tube"
-   },
-   {
-    "id": "tank",
-    "en": "tank"
-   },
-   {
-    "id": "dam",
-    "en": "dam"
-   },
-   {
-    "id": "mill",
-    "en": "mill"
-   },
-   {
-    "id": "stable",
-    "en": "stable"
-   },
-   {
-    "id": "net",
-    "en": "net"
-   },
-   {
-    "id": "goal",
-    "en": "goal"
-   },
-   {
-    "id": "score",
-    "en": "score"
-   },
-   {
-    "id": "race",
-    "en": "race"
-   },
-   {
-    "id": "medal",
-    "en": "medal"
+    "id": "rescue-team",
+    "en": "rescue team"
    }
   ],
-  "metin": "plain. spare. fee. tax. fund. budget. stock. brand. profit. shift. curve. brake. cream. cargo. deck. dock. tunnel. bridge. pit. ramp. chalk. board. mark. quiz. class. term. note. list. file. folder. draft. sock. scarf. jacket. pocket. cotton. silk. patch. zip. gem. steel. tin. brick. cement. plaster. blade. lever. gear. valve. pipe. tube. tank. dam. mill. stable. net. goal. score. race. medal."
- },
- {
-  "no": 12,
-  "ogeler": [
-   {
-    "id": "trophy",
-    "en": "trophy"
-   },
-   {
-    "id": "referee",
-    "en": "referee"
-   },
-   {
-    "id": "track",
-    "en": "track"
-   },
-   {
-    "id": "gym",
-    "en": "gym"
-   },
-   {
-    "id": "serve",
-    "en": "serve"
-   },
-   {
-    "id": "shoot",
-    "en": "shoot"
-   },
-   {
-    "id": "skate",
-    "en": "skate"
-   },
-   {
-    "id": "dog",
-    "en": "dog"
-   },
-   {
-    "id": "money",
-    "en": "money"
-   },
-   {
-    "id": "friend",
-    "en": "friend"
-   },
-   {
-    "id": "face",
-    "en": "face"
-   },
-   {
-    "id": "hand",
-    "en": "hand"
-   },
-   {
-    "id": "name",
-    "en": "name"
-   },
-   {
-    "id": "book",
-    "en": "book"
-   },
-   {
-    "id": "bed",
-    "en": "bed"
-   },
-   {
-    "id": "chair",
-    "en": "chair"
-   },
-   {
-    "id": "wall",
-    "en": "wall"
-   },
-   {
-    "id": "girl",
-    "en": "girl"
-   },
-   {
-    "id": "bus",
-    "en": "bus"
-   },
-   {
-    "id": "town",
-    "en": "town"
-   },
-   {
-    "id": "rain",
-    "en": "rain"
-   },
-   {
-    "id": "fire",
-    "en": "fire"
-   },
-   {
-    "id": "ice",
-    "en": "ice"
-   },
-   {
-    "id": "shop",
-    "en": "shop"
-   },
-   {
-    "id": "job",
-    "en": "job"
-   },
-   {
-    "id": "boss",
-    "en": "boss"
-   },
-   {
-    "id": "pay",
-    "en": "pay"
-   },
-   {
-    "id": "take",
-    "en": "take"
-   },
-   {
-    "id": "send",
-    "en": "send"
-   },
-   {
-    "id": "help",
-    "en": "help"
-   },
-   {
-    "id": "find",
-    "en": "find"
-   },
-   {
-    "id": "clean",
-    "en": "clean"
-   },
-   {
-    "id": "sleep",
-    "en": "sleep"
-   },
-   {
-    "id": "catch",
-    "en": "catch"
-   },
-   {
-    "id": "fall",
-    "en": "fall"
-   },
-   {
-    "id": "count",
-    "en": "count"
-   },
-   {
-    "id": "wish",
-    "en": "wish"
-   },
-   {
-    "id": "hungry",
-    "en": "hungry"
-   },
-   {
-    "id": "busy",
-    "en": "busy"
-   },
-   {
-    "id": "young",
-    "en": "young"
-   },
-   {
-    "id": "kind",
-    "en": "kind"
-   },
-   {
-    "id": "lazy",
-    "en": "lazy"
-   },
-   {
-    "id": "wet",
-    "en": "wet"
-   },
-   {
-    "id": "loud",
-    "en": "loud"
-   },
-   {
-    "id": "sour",
-    "en": "sour"
-   },
-   {
-    "id": "fast",
-    "en": "fast"
-   },
-   {
-    "id": "apple",
-    "en": "apple"
-   },
-   {
-    "id": "egg",
-    "en": "egg"
-   },
-   {
-    "id": "rice",
-    "en": "rice"
-   },
-   {
-    "id": "soup",
-    "en": "soup"
-   },
-   {
-    "id": "oil",
-    "en": "oil"
-   },
-   {
-    "id": "knife",
-    "en": "knife"
-   },
-   {
-    "id": "cow",
-    "en": "cow"
-   },
-   {
-    "id": "horse",
-    "en": "horse"
-   },
-   {
-    "id": "sheep",
-    "en": "sheep"
-   },
-   {
-    "id": "ant",
-    "en": "ant"
-   },
-   {
-    "id": "owl",
-    "en": "owl"
-   },
-   {
-    "id": "tooth",
-    "en": "tooth"
-   },
-   {
-    "id": "cheek",
-    "en": "cheek"
-   },
-   {
-    "id": "body",
-    "en": "body"
-   }
-  ],
-  "metin": "trophy. referee. track. gym. serve. shoot. skate. dog. money. friend. face. hand. name. book. bed. chair. wall. girl. bus. town. rain. fire. ice. shop. job. boss. pay. take. send. help. find. clean. sleep. catch. fall. count. wish. hungry. busy. young. kind. lazy. wet. loud. sour. fast. apple. egg. rice. soup. oil. knife. cow. horse. sheep. ant. owl. tooth. cheek. body."
- },
- {
-  "no": 13,
-  "ogeler": [
-   {
-    "id": "roof",
-    "en": "roof"
-   },
-   {
-    "id": "lake",
-    "en": "lake"
-   },
-   {
-    "id": "hat",
-    "en": "hat"
-   },
-   {
-    "id": "ring",
-    "en": "ring"
-   },
-   {
-    "id": "boot",
-    "en": "boot"
-   },
-   {
-    "id": "toy",
-    "en": "toy"
-   },
-   {
-    "id": "doll",
-    "en": "doll"
-   },
-   {
-    "id": "mirror",
-    "en": "mirror"
-   },
-   {
-    "id": "soap",
-    "en": "soap"
-   },
-   {
-    "id": "bird",
-    "en": "bird"
-   },
-   {
-    "id": "smile",
-    "en": "smile"
-   },
-   {
-    "id": "tent",
-    "en": "tent"
-   },
-   {
-    "id": "tower",
-    "en": "tower"
-   },
-   {
-    "id": "lock",
-    "en": "lock"
-   },
-   {
-    "id": "hammer",
-    "en": "hammer"
-   },
-   {
-    "id": "cage",
-    "en": "cage"
-   },
-   {
-    "id": "tail",
-    "en": "tail"
-   },
-   {
-    "id": "hide",
-    "en": "hide"
-   },
-   {
-    "id": "tie",
-    "en": "tie"
-   },
-   {
-    "id": "dig",
-    "en": "dig"
-   },
-   {
-    "id": "melt",
-    "en": "melt"
-   },
-   {
-    "id": "candy",
-    "en": "candy"
-   },
-   {
-    "id": "cook",
-    "en": "cook"
-   },
-   {
-    "id": "middle",
-    "en": "middle"
-   },
-   {
-    "id": "shell",
-    "en": "shell"
-   },
-   {
-    "id": "hunt",
-    "en": "hunt"
-   },
-   {
-    "id": "dinner",
-    "en": "dinner"
-   },
-   {
-    "id": "prize",
-    "en": "prize"
-   },
-   {
-    "id": "wallet",
-    "en": "wallet"
-   },
-   {
-    "id": "fog",
-    "en": "fog"
-   },
-   {
-    "id": "port",
-    "en": "port"
-   },
-   {
-    "id": "sailor",
-    "en": "sailor"
-   },
-   {
-    "id": "ghost",
-    "en": "ghost"
-   },
-   {
-    "id": "luck",
-    "en": "luck"
-   },
-   {
-    "id": "trap",
-    "en": "trap"
-   },
-   {
-    "id": "cliff",
-    "en": "cliff"
-   },
-   {
-    "id": "hay",
-    "en": "hay"
-   },
-   {
-    "id": "bubble",
-    "en": "bubble"
-   },
-   {
-    "id": "climb",
-    "en": "climb"
-   },
-   {
-    "id": "pray",
-    "en": "pray"
-   },
-   {
-    "id": "beg",
-    "en": "beg"
-   },
-   {
-    "id": "rob",
-    "en": "rob"
-   },
-   {
-    "id": "rough",
-    "en": "rough"
-   },
-   {
-    "id": "deaf",
-    "en": "deaf"
-   },
-   {
-    "id": "crowd",
-    "en": "crowd"
-   },
-   {
-    "id": "page",
-    "en": "page"
-   },
-   {
-    "id": "cherry",
-    "en": "cherry"
-   }
-  ],
-  "metin": "roof. lake. hat. ring. boot. toy. doll. mirror. soap. bird. smile. tent. tower. lock. hammer. cage. tail. hide. tie. dig. melt. candy. cook. middle. shell. hunt. dinner. prize. wallet. fog. port. sailor. ghost. luck. trap. cliff. hay. bubble. climb. pray. beg. rob. rough. deaf. crowd. page. cherry."
+  "metin": "save. shortage. snow. solid. strong. sudden. suggestion. surface. warn. wave. wind. earth. heat. area. life. soil. reduce. air pollution. climate change. first aid. natural disaster. forest fire. deal with. lead to. run out of. stay away. warm up. grow crops. rescue team."
  }
 ]

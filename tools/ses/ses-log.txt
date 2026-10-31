@@ -51,3 +51,25 @@
 2026-10-19T05:14|diyalog 19|tC7RAVRmZJ|6 kelime|esik 1.2s|supheli:
 2026-10-19T05:14|diyalog 20|Lw08mHAswO|6 kelime|esik 1s|supheli:
 2026-10-19T05:14|diyalog 8|p8jy9stehw|6 kelime|esik 0.6s|supheli:
+2026-10-31T13:10|parti 2|Cq3h785EEy|60 kelime|esik 0.4s|supheli:
+2026-10-31T13:10|parti 3|w4ol0xr7EI|60 kelime|esik 0.4s|supheli:
+2026-10-31T13:10|parti 4|0exnQAbTfW|60 kelime|esik 0.4s|supheli:
+2026-10-31T13:10|parti 5|gOdjYrGSXO|60 kelime|esik 0.4s|supheli:
+2026-10-31T13:10|parti 6|vQNIS8Fa47|60 kelime|esik 0.4s|supheli:
+2026-10-31T13:12|parti 7|1l0bRbPr4r|60 kelime|esik 0.4s|supheli:
+2026-10-31T13:13|parti 8|iGE4o9G3uK|60 kelime|esik 0.4s|supheli:
+2026-10-31T13:13|parti 9|MBscq0YDCm|60 kelime|esik 0.4s|supheli:
+2026-10-31T13:13|parti 10|dtUMkpYXSL|60 kelime|esik 0.4s|supheli:
+2026-10-31T13:13|parti 11|O6tUMJ5ynm|29 kelime|esik 0.4s|supheli:
+2026-10-31T13:14|parti 1|LwD1cZRswO|60 kelime|esik 0.4s|supheli:
+2026-10-31T16:20|parti 1 (31 Ekim, lgs-ek)|LwD1cZRswO|ses-plan.json|supheli:
+2026-10-31T16:20|parti 2 (31 Ekim, lgs-ek)|Cq3h785EEy|ses-plan.json|supheli:
+2026-10-31T16:20|parti 3 (31 Ekim, lgs-ek)|w4ol0xr7EI|ses-plan.json|supheli:
+2026-10-31T16:20|parti 4 (31 Ekim, lgs-ek)|0exnQAbTfW|ses-plan.json|supheli:
+2026-10-31T16:20|parti 5 (31 Ekim, lgs-ek)|gOdjYrGSXO|ses-plan.json|supheli:
+2026-10-31T16:20|parti 6 (31 Ekim, lgs-ek)|vQNIS8Fa47|ses-plan.json|supheli:
+2026-10-31T16:20|parti 7 (31 Ekim, lgs-ek)|1l0bRbPr4r|ses-plan.json|supheli:
+2026-10-31T16:20|parti 8 (31 Ekim, lgs-ek)|iGE4o9G3uK|ses-plan.json|supheli:
+2026-10-31T16:20|parti 9 (31 Ekim, lgs-ek)|MBscq0YDCm|ses-plan.json|supheli:
+2026-10-31T16:20|parti 10 (31 Ekim, lgs-ek)|dtUMkpYXSL|ses-plan.json|supheli:
+2026-10-31T16:20|parti 11 (31 Ekim, lgs-ek)|O6tUMJ5ynm|ses-plan.json|supheli:
