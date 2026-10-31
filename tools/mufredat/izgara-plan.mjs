@@ -19,16 +19,15 @@ export const lgsId = (en) => {
 };
 
 /** Genel'den yeniden cizilecek kartlar (izgaraya eklenir). */
-const EKSTRA = [
-  { id: 'rob', genel: true, ton: 'peach', sahne: 'A cute friendly round robot sneakily takes cookies out of a glass cookie jar standing on a small round table; the table is small and fully visible, its legs end well above the panel edge.' },
-];
+// rob 20 Ekim'de yeniden cizildi (gorsel-log.txt); bos.
+const EKSTRA = [];
 
 /** Gorseli zaten olan LGS kartlari (depoda webp) plandan cikar. */
 const HAZIR_KLASOR = path.join(KOK, 'src/assets/cards-lgs');
 const hazir = new Set(fs.existsSync(HAZIR_KLASOR) ? fs.readdirSync(HAZIR_KLASOR).map((f) => f.replace(/.webp$/, '')) : []);
 
 const POZ = ['top-left', 'top-right', 'bottom-left', 'bottom-right'];
-const ISKELET = `Copy only the drawing style of the reference image (line weight, flat colours), NOT its subject.
+const ISKELET = `Copy only the drawing style of the reference image (line weight, flat colours), NOT its subject. Do NOT draw the snake, the fly, any green creature or any loose eye from the reference image anywhere.
 
 COMPOSITION in EVERY panel: the subject occupies about 65% of the panel height, fully visible, with a WIDE even margin of empty background on all four sides — nothing touches or comes near the panel edge. Seen straight on, flat, not in perspective. Centred in its panel. People are shown full body including both feet with empty space below them, fully clothed, with friendly faces.
 
@@ -48,7 +47,8 @@ Child-friendly and wholesome: nothing scary, violent, dangerous, religious, roma
 
 const ogeler = [
   ...EKSTRA,
-  ...kartlar.filter((k) => k.sahne).map((k) => ({ id: lgsId(k.en), en: k.en, ton: k.ton, sahne: k.sahne })),
+  // YENIDEN=1: kusurlu kartlarin yeniden cizimi (19 Ekim) — her sahneye kenar uyarisi.
+  ...kartlar.filter((k) => k.sahne).map((k) => ({ id: lgsId(k.en), en: k.en, ton: k.ton, sahne: process.env.YENIDEN ? `${k.sahne} Everything in this panel is small and fully inside it, with clear empty space on all four sides.` : k.sahne })),
 ].filter((o) => o.genel || !hazir.has(o.id));
 const idSay = new Map();
 for (const o of ogeler) idSay.set(o.id, (idSay.get(o.id) || 0) + 1);
@@ -63,14 +63,16 @@ for (let i = 0; i < ogeler.length; i += 4) {
 ${dort.map((o, j) => `Panel ${j + 1} (${POZ[j]}), very pale ${o.ton} background: ${o.sahne}`).join('\n')}${dort.length < 4 ? `\n${[...Array(4 - dort.length).keys()].map((j) => `Panel ${dort.length + j + 1} (${POZ[dort.length + j]}), very pale cream background: a single small green potted plant.`).join('\n')}` : ''}
 
 ${ISKELET}`;
-  izgaralar.push({ no: izgaralar.length + 1, ids: dort.map((o) => o.id), genel: dort.map((o) => !!o.genel), prompt });
+  // Referans (snake ≈ sinek) yilan/sinek/goz olarak kenarlara siziyordu (19 Ekim, ~her 8 izgarada 1); iskelete yasak eklendi.
+  // 19 Ekim eki: numaralar 101'den (ilk tur 1–98, gorsel-log.txt ve gorseller/izgara ile cakismasin)
+  izgaralar.push({ no: Number(process.env.IZGARA_BASLA || 101) + izgaralar.length, ids: dort.map((o) => o.id), genel: dort.map((o) => !!o.genel), prompt });
 }
 fs.writeFileSync(path.join(KOK, 'tools/mufredat/izgara-plan.json'), JSON.stringify(izgaralar, null, 1));
 
 const goster = process.argv.indexOf('--goster');
 if (goster > 0) {
   const n = Number(process.argv[goster + 1]);
-  const g = izgaralar[n - 1];
+  const g = izgaralar.find((x) => x.no === n);
   console.log(JSON.stringify({ no: g.no, ids: g.ids }));
   console.log(g.prompt);
 } else {

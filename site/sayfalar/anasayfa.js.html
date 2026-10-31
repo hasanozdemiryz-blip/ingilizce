@@ -56,7 +56,7 @@
             sonuc.innerHTML =
               '<b>' + kac(dogruMu ? m.dogruBaslik : yaz(m.yanlisBaslik, k)) + '</b>' +
               '<span>' + kac(dogruMu ? m.dogruMetin : yaz(m.yanlisMetin, k)) + '</span><br>' +
-              '<a class="btn btn-lacivert" href="/ingilizce/?basla=1" data-basla>' + kac(m.devam) + '</a>';
+              '<a class="btn btn-lacivert" href="/ingilizce/?basla=1&amp;bolum=genel" data-basla>' + kac(m.devam) + '</a>';
             sonuc.classList.remove('gizli');
             // Ingilizce sayfadan gelen uygulamayi Ingilizce acsin (bkz. kabuk.html)
             if (document.documentElement.lang === 'en') {
@@ -154,5 +154,16 @@
     sira++;
     hedef = (hedef + 1) % gorunen;
   }, 2600);
+})();
+</script>
+<script>
+// LGS girisi geri sayimi (31 Ekim). Tarih site-bolumler.mjs LGS_TARIH'ten.
+(function () {
+  var k = document.querySelector('.lgs-giris-kutu[data-lgs]');
+  if (!k) return;
+  var gun = Math.ceil((new Date(k.getAttribute('data-lgs') + 'T09:30:00+03:00') - new Date()) / 864e5);
+  var s = k.querySelector('.lgs-giris-sayac');
+  if (gun < 0) { s.hidden = true; return; }
+  k.querySelector('[data-gun]').textContent = gun;
 })();
 </script>

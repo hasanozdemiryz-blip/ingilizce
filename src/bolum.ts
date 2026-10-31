@@ -11,8 +11,12 @@
  * bilgisayarda Genel calisabilir. Ilerleme ise iki bolumde de ORTAK ve
  * senkronlu — ayni kelime (share, invite) iki destede ayni kayitla durur.
  *
- * Tanitim sitesi `?bolum=lgs` ile getiriyor (bkz. tools/site.mjs
+ * Tanitim sitesi `?bolum=lgs` / `?bolum=genel` ile getiriyor (bkz. tools/site.mjs
  * `baslaYol`); adresten okunup siliniyor, yoksa yenileyen hep oraya doner.
+ *
+ * Platformun icinde bolum DEGISTIRILMEZ (kullanici, 31 Ekim; KARARLAR 14):
+ * LGS'den giren yalniz LGS'yi, Genel'den giren yalniz Genel'i gorur. Baska
+ * bolum sitedeki sekmeden, o sekmenin "Hemen basla"siyla acilir.
  */
 export type Bolum = 'genel' | 'lgs';
 
@@ -62,13 +66,3 @@ export const ISTENEN_UNITE: number | null = (() => {
   }
 })();
 
-/** Bolumu degistirir ve desteyi yeniden kurmak icin sayfayi yeniler. */
-export function bolumDegistir(b: Bolum): void {
-  if (b === AKTIF_BOLUM) return;
-  try {
-    localStorage.setItem(ANAHTAR, b);
-  } catch {
-    /* depolama yoksa yalnizca bu acilis icin */
-  }
-  window.location.reload();
-}

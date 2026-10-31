@@ -38,3 +38,80 @@ test tube|Pour the liquid into the test tube.|Sıvıyı deney tüpüne dök.
 tyre|The car has a flat tyre.|Arabanın lastiği patlak.
 vaccination|Vaccination protects children from many diseases.|Aşılama çocukları birçok hastalıktan korur.
 well-equipped|Our school has a well-equipped science lab.|Okulumuzun donanımlı bir fen laboratuvarı var.
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+allow|My parents allow me to play games at the weekend.|Ailem hafta sonu oyun oynamama izin veriyor.
+appreciate|I appreciate your help.|Yardımını takdir ediyorum.
+borrow|Can I borrow your pen?|Kalemini ödünç alabilir miyim?
+brilliant|That's a brilliant idea!|Bu harika bir fikir!
+bring|Bring your notebook tomorrow.|Yarın defterini getir.
+calculator|You can't use a calculator in the exam.|Sınavda hesap makinesi kullanamazsın.
+carry|Can you carry this box?|Bu kutuyu taşıyabilir misin?
+childhood|I had a happy childhood.|Mutlu bir çocukluğum oldu.
+create|Artists create beautiful works.|Sanatçılar güzel eserler yaratır.
+deserve|You deserve the prize.|Ödülü hak ediyorsun.
+design|I want to design my own clothes.|Kendi kıyafetlerimi tasarlamak istiyorum.
+discovery|It was an important discovery.|Bu önemli bir keşifti.
+education|Education is very important.|Eğitim çok önemli.
+engineering|My brother studies engineering.|Ağabeyim mühendislik okuyor.
+experiment|We did an experiment in the science class.|Fen dersinde bir deney yaptık.
+explorer|He was a famous explorer.|O ünlü bir kâşifti.
+fact|It is a fact that the Earth is round.|Dünyanın yuvarlak olduğu bir gerçek.
+forever|I will remember this day forever.|Bu günü sonsuza dek hatırlayacağım.
+forget|Don't forget your homework.|Ödevini unutma.
+human|A human needs water to live.|İnsanın yaşamak için suya ihtiyacı var.
+improve|I want to improve my English.|İngilizcemi geliştirmek istiyorum.
+invention|The telephone was a great invention.|Telefon büyük bir icattı.
+inventor|Edison was a famous inventor.|Edison ünlü bir mucitti.
+journalist|My aunt is a journalist.|Teyzem gazeteci.
+lend|Can you lend me your book?|Bana kitabını ödünç verebilir misin?
+live|I live in Ankara.|Ankara'da yaşıyorum.
+masterpiece|This painting is a masterpiece.|Bu tablo bir başyapıt.
+novel|I am reading a novel by Orhan Pamuk.|Orhan Pamuk'un bir romanını okuyorum.
+paint|Let's paint the fence.|Hadi çiti boyayalım.
+physics|Physics is my favourite subject.|Fizik en sevdiğim ders.
+poem|I wrote a poem for my mother.|Annem için bir şiir yazdım.
+publish|She wants to publish her first book.|İlk kitabını yayımlamak istiyor.
+realize|Did you realize your mistake?|Hatanı fark ettin mi?
+record|Let's record a song together.|Hadi birlikte bir şarkı kaydedelim.
+science|I love science.|Fen bilimlerini çok severim.
+scientist|She wants to be a scientist.|O bilim insanı olmak istiyor.
+space|I want to travel to space.|Uzaya gitmek istiyorum.
+strange|I heard a strange noise.|Garip bir ses duydum.
+struggle|Many animals struggle in cold winters.|Birçok hayvan soğuk kışlarda zorlanır.
+typewriter|My grandfather used a typewriter.|Dedem daktilo kullanırdı.
+unique|Every person is unique.|Her insan eşsizdir.
+universe|The universe is very big.|Evren çok büyük.
+wonder|I wonder what time it is.|Saatin kaç olduğunu merak ediyorum.
+writer|My favourite writer is Sabahattin Ali.|En sevdiğim yazar Sabahattin Ali.
+chemistry|Chemistry is difficult for me.|Kimya benim için zor.
+medicine|Take this medicine twice a day.|Bu ilacı günde iki kez al.
+health|Sport is good for your health.|Spor sağlığa iyidir.
+hospital|My aunt works at a hospital.|Teyzem bir hastanede çalışıyor.
+doctor|I want to be a doctor.|Doktor olmak istiyorum.
+tool|A hammer is a useful tool.|Çekiç faydalı bir alettir.
+project|We have a science project.|Bir fen projemiz var.
+problem|There is a problem with my computer.|Bilgisayarımda bir sorun var.
+solve|Can you solve this problem?|Bu problemi çözebilir misin?
+university|My sister goes to university.|Ablam üniversiteye gidiyor.
+step|The first step is the hardest.|İlk adım en zorudur.
+discuss|Let's discuss the problem.|Hadi sorunu konuşalım.
+interest|I have an interest in art.|Sanata ilgim var.
+language|English is an international language.|İngilizce uluslararası bir dildir.
+wrong|Your answer is wrong.|Cevabın yanlış.
+word|I don't know this word.|Bu kelimeyi bilmiyorum.
+write|Write your name here.|Adını buraya yaz.
+teacher|Our teacher is very kind.|Öğretmenimiz çok nazik.
+student|Every student has a locker.|Her öğrencinin bir dolabı var.
+school|I go to school by bus.|Okula otobüsle giderim.
+classroom|Our classroom is on the second floor.|Sınıfımız ikinci katta.
+homework|I do my homework after dinner.|Ödevimi akşam yemeğinden sonra yaparım.
+library|I borrowed this book from the library.|Bu kitabı kütüphaneden ödünç aldım.
+course|I take a swimming course.|Yüzme kursuna gidiyorum.
+subject|What is your favourite subject?|En sevdiğin ders hangisi?
+change the world|Great inventions change the world.|Büyük icatlar dünyayı değiştirir.
+get better|I hope you get better soon.|Umarım yakında iyileşirsin.
+look for|Can you help me look for my keys?|Anahtarlarımı aramama yardım eder misin?
+thanks to|Thanks to the internet, we can learn quickly.|İnternet sayesinde hızlı öğrenebiliyoruz.
+light bulb|Edison invented the light bulb.|Edison ampulü icat etti.
+printing press|The printing press changed the world.|Matbaa dünyayı değiştirdi.
+insist on|I insist on paying the bill.|Hesabı ödemekte ısrar ediyorum.

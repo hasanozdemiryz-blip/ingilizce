@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react';
 import { Avatar } from '../components/Avatar';
-import { BolumSecici } from '../components/BolumSecici';
 import { Button, Card, Ikon, Screen, Streak } from '../components/ui';
 import { SetFinale } from '../components/SetFinale';
 import { TAB_SPACE } from '../components/TabBar';
@@ -203,8 +202,6 @@ export function Home({
           )}
         </span>
       </header>
-
-      <BolumSecici />
 
       {/* Kahraman blok dikey ORTADA — ekran bos gorunmesin, karar tek olsun */}
       <div className={`flex-1 flex flex-col justify-center lg:justify-start pt-4 lg:pt-4 gap-4 ${TAB_SPACE}`}>

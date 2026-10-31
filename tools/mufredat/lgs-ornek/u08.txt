@@ -34,3 +34,54 @@ to-do list|I write a to-do list every Monday.|Her pazartesi bir yapılacaklar li
 tradition|Eating sweets at Bayram is a tradition.|Bayramda tatlı yemek bir gelenektir.
 wash the dishes|After dinner, I wash the dishes.|Akşam yemeğinden sonra bulaşıkları yıkarım.
 water the plants|Don't forget to water the plants.|Bitkileri sulamayı unutma.
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+annoy|Please don't annoy your sister.|Lütfen kız kardeşini rahatsız etme.
+article|I read an article about recycling.|Geri dönüşüm hakkında bir makale okudum.
+complain|Don't complain about the chores.|Ev işlerinden şikâyet etme.
+elder|My elder sister helps me with my homework.|Ablam ödevime yardım ediyor.
+hard|Ironing is hard work.|Ütü yapmak zor bir iş.
+housework|I help my mother with the housework.|Ev işlerinde anneme yardım ederim.
+lesson|I have a piano lesson on Friday.|Cuma günü piyano dersim var.
+mess|Your room is a mess!|Odan darmadağın!
+mind|Do you mind if I open the window?|Pencereyi açmamın sakıncası var mı?
+necessary|It is necessary to help at home.|Evde yardım etmek gerekli.
+peaceful|Our village is very peaceful.|Köyümüz çok huzurlu.
+responsible|I am responsible for feeding the cat.|Kediyi beslemekten ben sorumluyum.
+right|Your answer is right.|Cevabın doğru.
+rude|Don't be rude to your sister.|Kız kardeşine kaba davranma.
+say|What did you say?|Ne dedin?
+task|My task is to water the plants.|Benim görevim bitkileri sulamak.
+tidy|Keep your room tidy.|Odanı düzenli tut.
+dishwasher|Can you empty the dishwasher?|Bulaşık makinesini boşaltabilir misin?
+bathroom|Clean the bathroom, please.|Lütfen banyoyu temizle.
+clothes|Put your clothes in the wardrobe.|Kıyafetlerini dolaba koy.
+pet|Do you have a pet?|Evcil hayvanın var mı?
+house|Our house has a garden.|Evimizin bahçesi var.
+home|I go home at four.|Dörtte eve giderim.
+family|I have a big family.|Büyük bir ailem var.
+mother|My mother is a teacher.|Annem öğretmen.
+father|My father cooks dinner on Sundays.|Babam pazar günleri akşam yemeği pişirir.
+sister|My sister is ten years old.|Kız kardeşim on yaşında.
+cousin|My cousin lives in Bursa.|Kuzenim Bursa'da yaşıyor.
+grandparents|I visit my grandparents every weekend.|Her hafta sonu büyükannemleri ziyaret ederim.
+grandfather|My grandfather tells funny stories.|Dedem komik hikâyeler anlatır.
+husband|Her husband is a doctor.|Kocası doktor.
+parents|My parents work in a bank.|Annem ve babam bankada çalışıyor.
+boy|The boy in the red shirt is my brother.|Kırmızı tişörtlü çocuk benim kardeşim.
+old|My grandmother is old but very active.|Büyükannem yaşlı ama çok hareketli.
+little|I have a little brother.|Küçük bir erkek kardeşim var.
+small|Our flat is small.|Dairemiz küçük.
+long|She has long hair.|Onun uzun saçı var.
+black|I have a black bag.|Siyah bir çantam var.
+white|The walls are white.|Duvarlar beyaz.
+brown|My dog is brown.|Köpeğim kahverengi.
+green|My favourite colour is green.|En sevdiğim renk yeşil.
+dry the dishes|Can you dry the dishes?|Bulaşıkları kurulayabilir misin?
+walk the dog|I walk the dog every evening.|Her akşam köpeği gezdiririm.
+vacuum the carpet|I vacuum the carpet on Saturdays.|Cumartesileri halıyı süpürürüm.
+pocket money|I save my pocket money.|Harçlığımı biriktiririm.
+take care of|I take care of my little sister.|Küçük kız kardeşime ben bakarım.
+do the shopping|I help my father do the shopping.|Babama alışveriş yapmasında yardım ederim.
+in charge of|I am in charge of the plants.|Bitkilerden ben sorumluyum.
+responsible for|Who is responsible for the dishes?|Bulaşıklardan kim sorumlu?
+busy with|I am busy with my homework.|Ödevimle meşgulüm.

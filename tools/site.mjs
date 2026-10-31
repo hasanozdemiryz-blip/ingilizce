@@ -18,7 +18,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
 import { kelimeEk, konular, KONU_ADI, lgsKelimeleri, UNITELER } from './site-veri.mjs';
-import { lgsSayfalari, cocukSayfalari } from './site-bolumler.mjs';
+import { lgsSayfalari, cocukSayfalari, LGS_TARIH } from './site-bolumler.mjs';
 
 const KOK = path.resolve(import.meta.dirname, '..');
 const SITE = path.join(KOK, 'site');
@@ -57,12 +57,13 @@ const BOLUMLER = {
   cocuk: { ad: 'Çocuk', en: 'Kids', marka: 'Çocuklar için', ana: '/cocuk/' },
 };
 /** Uygulamaya gecis: bolum parametresi uygulama sekmeleri gelince (Faz 3) okunacak. */
-const baslaYol = (bolum) => (bolum && bolum !== 'genel' ? `/ingilizce/?basla=1&amp;bolum=${bolum}` : '/ingilizce/?basla=1');
+// Bolum her zaman adreste: platformda bolum gecisi yok, hangi sekmeden girildiyse o acilir (31 Ekim).
+const baslaYol = (bolum) => `/ingilizce/?basla=1&amp;bolum=${bolum || 'genel'}`;
 
 const MENU_LGS = [
   ['/lgs/#uniteler', 'Üniteler'],
-  ['/lgs/en-onemli-25-kelime/', 'En önemli 25'],
-  ['/lgs/cikmis-sorulardaki-kelimeler/', 'Çıkmış sorular'],
+  ['/lgs/ornek-kelimeler/', 'Örnekler'],
+  ['/lgs/cikmis-sorulardaki-kelimeler/', 'Çıkmış kelimeler'],
   ['/lgs/#yontem', 'Nasıl çalışıyor?'],
   ['/lgs/#veli', 'Veliler için'],
   ['/lgs/#sss', 'SSS'],
@@ -478,7 +479,9 @@ const enBuyuk = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
 /**
  * Blog yazilari: site/blog/<kisa-ad>.html. Ilk satirdaki HTML yorumu
- * yazinin kunyesi (JSON): baslik, aciklama, tarih, ozet.
+ * yazinin kunyesi (JSON): baslik, aciklama, tarih, ozet. Istege bagli (31 Ekim, SEO):
+ * seoBaslik (<title>, ~60 harf), guncelleme (dateModified), sss [[soru, cevap]...]
+ * (yazinin sonunda SSS + FAQPage), bolum: 'lgs' (cagri LGS'ye, sekme LGS), ilgili [kisa...].
  */
 function blogYazilari() {
   const klasor = path.join(SITE, 'blog');
@@ -780,6 +783,13 @@ async function derle(hedef) {
 
   /** Ana sayfadaki "Kimin icin?" — uc sekmenin kapisi (ic baglanti da). */
   const lgsSayi = lgsKelimeleri().length;
+  /** Genel destesi (platform content.ts genelDestesi ile ayni kural): gorselli eski kartlar + Genel'e uygun gorselli LGS kartlari. */
+  const genelSayi = (() => {
+    const var_ = (k, id) => fs.existsSync(path.join(KOK, k, `${id}.webp`));
+    const lgsJson = JSON.parse(fs.readFileSync(path.join(KOK, 'content/lgs.json'), 'utf8'));
+    return tumKartlar.filter((k) => var_('src/assets/cards', k.id)).length + lgsJson.kartlar.filter((k) => k.genel && var_('src/assets/cards-lgs', k.id)).length;
+  })();
+  const binlik = (n) => n.toLocaleString('tr-TR');
   const bolumKartlari = (dil) => {
     const en = dil === 'en';
     const kart = (b, baslik, metin, alt) =>
@@ -789,8 +799,8 @@ async function derle(hedef) {
     <h2>${en ? 'Who is it for?' : 'Kimin için?'}</h2>
     <p class="ust">${en ? 'One method, three tabs. Pick yours at the top of the page.' : 'Tek yöntem, üç sekme. Sayfanın en üstünden seçebilirsin.'}</p>
     <div class="bolum-kartlar">
-      ${kart('genel', en ? 'Everyday English' : 'Günlük İngilizce', en ? 'The most used English words with Turkish memory hooks.' : 'En sık kullanılan İngilizce kelimeler, çağrışımları ve görselleriyle.', en ? 'You are here' : 'Buradasın')}
-      ${kart('lgs', en ? '8th grade national exam' : '8. sınıf, LGS', en ? `${lgsSayi} words in 10 units, the most frequent exam words, mini tests.` : `10 ünitede ${lgsSayi} kelime ve kalıp, LGS'de en çok çıkanlar, mini testler.`, en ? 'LGS words (Turkish)' : 'LGS kelimeleri')}
+      ${kart('genel', en ? 'Everyday English' : 'Günlük İngilizce', en ? `${genelSayi} everyday English words with Turkish memory hooks, beginner and intermediate.` : `${binlik(genelSayi)} günlük İngilizce kelime, Başlangıç ve Orta seviye; çağrışımları ve görselleriyle.`, en ? 'You are here' : 'Buradasın')}
+      ${kart('lgs', en ? '8th grade national exam' : '8. sınıf, LGS', en ? `${lgsSayi} words in 10 units, the most frequent exam words, mini tests.` : `10 ünitede ${binlik(lgsSayi)} kelime ve kalıp; sesli diyaloglar, ünite testleri, LGS'de çıkan kelimeler.`, en ? 'LGS words (Turkish)' : 'LGS kelimeleri')}
       ${kart('cocuk', en ? 'Kids, grades 2–6' : 'Çocuklar, 2–6. sınıf', en ? 'School-curriculum words with pictures. Coming soon.' : 'Okul müfredatına uygun, resimli kelimeler. Hazırlanıyor.', en ? 'For parents (Turkish)' : 'Veliler için')}
     </div>
   </div>
@@ -807,6 +817,9 @@ async function derle(hedef) {
         .map((k) => `<article class="kanca-kart">${kartGovde(k)}</article>`)
         .join(''),
       BOLUM_KARTLARI: bolumKartlari(dil),
+      GENEL_SAYI: binlik(genelSayi),
+      LGS_SAYI: binlik(lgsSayi),
+      LGS_TARIH,
       SSS: en ? ingilizceye(sssHtml(SSS_EN)) : sssHtml(SSS),
       ILETISIM: en ? ingilizceye(iletisimBolum('Write to us')) : iletisimBolum('Bize yaz'),
       ...cizimler,
@@ -1007,33 +1020,41 @@ ${[...harfGruplari]
   }));
   const blogSayfalari = yazilar.map((y) => {
     const yol = `/blog/${y.kisa}/`;
-    const digerleri = yazilar.filter((x) => x !== y).slice(0, 3);
+    // Ilgili: kunyede verilenler once, sonra ayni bolumden, sonra en yeniler.
+    const elle = (y.ilgili || []).map((k) => yazilar.find((x) => x.kisa === k)).filter(Boolean);
+    const digerleri = [...new Set([...elle, ...yazilar.filter((x) => x !== y && (x.bolum || 'genel') === (y.bolum || 'genel')), ...yazilar.filter((x) => x !== y)])].slice(0, 4);
+    const lgs = y.bolum === 'lgs';
     return {
       yol,
-      baslik: `${y.baslik} — Hafızada İngilizce`,
+      bolum: lgs ? 'lgs' : undefined,
+      baslik: y.seoBaslik || `${y.baslik} — Hafızada İngilizce`,
       aciklama: y.aciklama,
       ogTur: 'article',
       icerik:
         altBaslik(y.baslik, null, [['Blog', '/blog/'], [y.baslik, yol]]) +
         `<div class="kap"><article class="metin">
-<p class="ustbilgi">${new Date(y.tarih).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' })} · Hafızada İngilizce</p>
+<p class="ustbilgi">${new Date(y.guncelleme || y.tarih).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' })}${y.guncelleme ? ' (güncellendi)' : ''} · Hafızada İngilizce</p>
 ${y.govde}
 <div class="cagri yazi-alt">
-  <p>Çağrışımları ve görselleriyle ilk kelimelerini şimdi öğren. Ücretsiz.</p>
-  <a class="btn btn-lacivert" href="/ingilizce/?basla=1" data-basla>Hemen başla</a>
+  <p>${lgs ? "LGS'nin bütün kelimeleri ünite ünite, çağrışım, görsel ve sesle. Ücretsiz." : 'Çağrışımları ve görselleriyle ilk kelimelerini şimdi öğren. Ücretsiz.'}</p>
+  <a class="btn btn-lacivert" href="${baslaYol(lgs ? 'lgs' : 'genel')}" data-basla>${lgs ? "LGS'ye başla" : 'Hemen başla'}</a>
 </div>
 <nav class="ilgili" aria-label="Diğer yazılar">
 ${digerleri.map((d) => `  <a href="/blog/${d.kisa}/">${d.baslik}</a>`).join('\n')}
 </nav>
-</article></div>`,
+</article></div>${y.sss ? sssHtml(y.sss) : ''}`,
       script: '',
-      ld: jsonld(kirinti([['Ana sayfa', '/'], ['Blog', '/blog/'], [y.baslik, yol]]), {
+      ld: jsonld(kirinti([['Ana sayfa', '/'], ['Blog', '/blog/'], [y.baslik, yol]]), ...(y.sss ? [{
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: y.sss.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a.replace(/<[^>]+>/g, '') } })),
+      }] : []), {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
         headline: y.baslik,
         description: y.aciklama,
         datePublished: y.tarih,
-        dateModified: y.tarih,
+        dateModified: y.guncelleme || y.tarih,
         inLanguage: 'tr',
         mainEntityOfPage: `${ALAN}${yol}`,
         image: OG,
@@ -1069,9 +1090,17 @@ ${yazilar
 
   // --- Sayfa listesi ---
   /** LGS ve Cocuk sayfalarinin (site-bolumler.mjs) kullandigi yardimcilar. */
+  /** LGS kart gorseli: yalniz sayfada kullanilan kopyalanir (vitrin; KARARLAR 10). */
+  const lgsResim = (id) => {
+    const kaynak = path.join(KOK, 'src/assets/cards-lgs', `${id}.webp`);
+    if (!fs.existsSync(kaynak)) return null;
+    fs.mkdirSync(path.join(hedef, 'varliklar/lgs'), { recursive: true });
+    fs.copyFileSync(kaynak, path.join(hedef, 'varliklar/lgs', `${id}.webp`));
+    return `/varliklar/lgs/${id}.webp`;
+  };
   const baglam = {
     ALAN, esc, jsonld, kirinti, altBaslik, baslaYol, TEST_JS,
-    sssHtml,
+    sssHtml, lgsResim,
     kartlar: new Map(kelimeler.map((k) => [k.en, k])),
   };
 
@@ -1246,6 +1275,15 @@ ${yazilar
   };
   for (const [k, d] of Object.entries(yerine404)) bulunamadi = bulunamadi.split(`__${k}__`).join(d);
   yaz(hedef, '404.html', bulunamadi);
+
+  /*
+    Tasinan sayfalar (31 Ekim): GitHub Pages sunucu yonlendirmesi yapmiyor; eski
+    adreste kanonik + aninda yenileme. Google bunu kalici yonlendirme sayiyor.
+  */
+  const TASINAN = { 'lgs/en-onemli-25-kelime': '/lgs/ornek-kelimeler/' };
+  for (const [eski, yeni] of Object.entries(TASINAN)) {
+    yaz(hedef, `${eski}/index.html`, `<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>Taşındı</title><link rel="canonical" href="${ALAN}${yeni}"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=${yeni}"></head><body><p><a href="${yeni}">Sayfa taşındı: ${yeni}</a></p></body></html>`);
+  }
 
   // --- Arama motorlari ---
   const bugun = new Date().toISOString().slice(0, 10);

@@ -4092,6 +4092,3601 @@
    "seviye": "baslangic",
    "cefr": "a1",
    "kaynak": "kalip-ilk"
+  },
+  "also": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "apologise": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "ask": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "become": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "better": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "boring": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "care": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "crazy": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "decide": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "describe": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "experience": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "fashionable": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "fun": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "funny": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "generation": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "give": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "guess": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "guest": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "idea": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "important": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "individual": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "instead": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "introduce": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "invitation": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "learn": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "letter": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "lie": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "loyal": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "oxford"
+  },
+  "match": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "mean": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "need": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "neighbour": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "occupied": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "offer": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "outgoing": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "patient": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "personality": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "rarely": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "reason": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "relaxed": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "reliable": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "remain": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "respectful": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "same": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "still": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "supportive": {
+   "seviye": "orta",
+   "cefr": "c1",
+   "kaynak": "oxford"
+  },
+  "sure": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "thing": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "thirsty": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "understand": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "want": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "birthday": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "party": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "classmate": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "dear": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "believe": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "truth": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "positive": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "similar": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "both": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "each": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "either": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "neither": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "another": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "thank you": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "sorry": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "please": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "nice": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "good": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "love": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "people": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "as soon as possible": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "break a promise": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "keep a promise": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "keep a secret": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "tell a lie": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "each other": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "give advice": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "have a lot in common": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "interested in": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "rely on": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "kalip-ilk"
+  },
+  "spend time": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "of course": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "not at all": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "that's why": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "feel alone": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "admire": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "adult": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "advise": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "always": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "amazing": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "band": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "chat": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "comfortable": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "different": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "documentary": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "drummer": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "easy": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "educational": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "enjoy": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "everywhere": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "express": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "follow": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "hate": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "healthy": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "hiking": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "historical": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "latest": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "mostly": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "national": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "reach": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "rest": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "seldom": {
+   "seviye": "orta",
+   "cefr": "c1",
+   "kaynak": "oxford"
+  },
+  "sometimes": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "suggest": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "think": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "ticket": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "usually": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "wear": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "weather": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "weekend": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "while": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "hobby": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "pop": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "rap": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "jazz": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "music": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "basketball": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "football": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "sport": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "bored": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "favourite": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "magazine": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "popular": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "movie": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "cinema": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "video": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "game": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "play": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "watch": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "weekday": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "dislike": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "english": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "social": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "train": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "photo": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "often": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "never": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "rather": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "quite": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "monday": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "tuesday": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "wednesday": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "thursday": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "friday": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "saturday": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "sunday": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "morning": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "afternoon": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "evening": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "today": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "month": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "time": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "late": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "start": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "finish": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "can't stand": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "keen on": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "kalip-ilk"
+  },
+  "hang around": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "kalip-ilk"
+  },
+  "work out": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "free time": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "do exercise": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "form a band": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "team sport": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "casual clothes": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "kalip-ilk"
+  },
+  "for example": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "to be honest": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "add": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "batter": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "bean": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "beef": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "celery": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "cinnamon": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "combine": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "cover": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "cumin": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "difficult": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "dissolve": {
+   "seviye": "orta",
+   "cefr": "c1",
+   "kaynak": "oxford"
+  },
+  "divide": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "finally": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "first": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "fridge": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "garlic": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "grated": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "hour": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "knead": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "later": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "method": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "minute": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "mixture": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "next": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "nut": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "parsley": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "pepper": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "place": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "pot": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "prawn": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "preheat": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "raisin": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "remember": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "remove": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "rise": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "saffron": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "second": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "shape": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "slightly": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "smooth": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "soak": {
+   "seviye": "orta",
+   "cefr": "c1",
+   "kaynak": "oxford"
+  },
+  "starch": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "stir": {
+   "seviye": "orta",
+   "cefr": "c1",
+   "kaynak": "oxford"
+  },
+  "strain": {
+   "seviye": "orta",
+   "cefr": "c1",
+   "kaynak": "oxford"
+  },
+  "syrup": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "tender": {
+   "seviye": "orta",
+   "cefr": "c1",
+   "kaynak": "oxford"
+  },
+  "top": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "tray": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "use": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "mussel": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "food": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "drink": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "breakfast": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "lunch": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "salad": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "tomato": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "onion": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "olive": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "milk": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "fruit": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "vegetable": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "sweet": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "cake": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "chocolate": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "lemonade": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "water": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "restaurant": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "order": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "half": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "piece": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "customer": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "a pinch of salt": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "after that": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "baking powder": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "frying pan": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "rolling pin": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "set aside": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "kalip-ilk"
+  },
+  "how long": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "how many": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "how much": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "application": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "arrange": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "begin": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "caller": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "change": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "delivery": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "oxford"
+  },
+  "fine": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "graduation": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "great": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "hear": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "ill": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "imagine": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "leave": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "possible": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "reminder": {
+   "seviye": "orta",
+   "cefr": "c1",
+   "kaynak": "oxford"
+  },
+  "repeat": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "replace": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "shout": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "try": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "way": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "phone": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "mobile": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "email": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "address": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "secretary": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "company": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "wait": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "speak": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "tonight": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "tomorrow": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "date": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "now": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "again": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "check": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "bill": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "sound": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "hold on": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "kalip-ilk"
+  },
+  "put through": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "at the moment": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "just a minute": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "keep in touch": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "take care": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "get well soon": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "feel better": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "make a phone call": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "send a message": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "smartphone": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "you're welcome": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "waste time": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "kalip-ilk"
+  },
+  "how often": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "o'clock": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "dial a number": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "addict": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "advantage": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "disadvantage": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "affect": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "broken": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "careful": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "communicate": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "dangerous": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "detail": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "harmful": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "oxford"
+  },
+  "member": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "percent": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "reset": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "useful": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "username": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "internet": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "computer": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "blog": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "network": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "television": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "radio": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "survey": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "visual": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "oxford"
+  },
+  "personal": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "daily": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "by mistake": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "log off": {
+   "seviye": "orta",
+   "cefr": "c1",
+   "kaynak": "kalip-ilk"
+  },
+  "make new friends": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "meet strangers": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "surf the internet": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "personal information": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "social media": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "kalip-ilk"
+  },
+  "isolated": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "oxford"
+  },
+  "absolutely": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "adventure": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "agree": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "amused": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "cave": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "oxford"
+  },
+  "cycling": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "desert": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "disagree": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "excitement": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "famous": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "height": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "high": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "less": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "nature": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "other": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "rare": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "row": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "scenery": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "skiing": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "travel": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "wooden": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "camping": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "ride": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "bike": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "scared": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "afraid": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "accident": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "outside": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "amusement park": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "have a picnic": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "afraid of": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "fall down": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "hot air balloon": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "scuba diving": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "would rather": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "on my own": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "so far": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "winter sports": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "outdoor activities": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "kalip-ilk"
+  },
+  "amphitheatre": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "attractive": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "beautiful": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "big": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "build": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "compare": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "country": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "cruise": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "oxford"
+  },
+  "dirty": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "entertainment": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "escape": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "excited": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "expedition": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "expensive": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "gorgeous": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "oxford"
+  },
+  "happen": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "heritage": {
+   "seviye": "orta",
+   "cefr": "c1",
+   "kaynak": "oxford"
+  },
+  "history": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "hospitable": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "huge": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "island": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "keep": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "location": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "lovely": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "natural": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "noisy": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "opinion": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "organize": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "palace": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "perfect": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "public": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "quiet": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "ready": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "rich": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "sail": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "spend": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "stay": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "sunbathe": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "terrible": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "theatre": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "tiring": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "together": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "traditional": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "transportation": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "oxford"
+  },
+  "unbelievable": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "world": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "city": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "museum": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "tourist": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "tour": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "flight": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "plane": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "centre": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "street": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "visit": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "arrive": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "return": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "price": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "century": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "local": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "modern": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "july": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "august": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "summer": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "in my opinion": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "have a rest": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "sightseeing tour": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "have been to": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "school trip": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "book a room": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "annoy": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "article": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "complain": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "elder": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "hard": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "housework": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "lesson": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "mess": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "mind": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "necessary": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "peaceful": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "responsible": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "right": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "rude": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "say": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "task": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "tidy": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "dishwasher": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "bathroom": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "clothes": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "pet": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "house": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "home": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "family": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "mother": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "father": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "sister": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "cousin": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "grandparents": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "grandfather": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "husband": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "parents": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "boy": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "old": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "little": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "small": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "long": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "black": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "white": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "brown": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "green": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "dry the dishes": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "kalip-ilk"
+  },
+  "walk the dog": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "vacuum the carpet": {
+   "seviye": "orta",
+   "cefr": "c1",
+   "kaynak": "kalip-ilk"
+  },
+  "pocket money": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "kalip-ilk"
+  },
+  "take care of": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "do the shopping": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "in charge of": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "responsible for": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "kalip-ilk"
+  },
+  "busy with": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "allow": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "appreciate": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "borrow": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "brilliant": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "bring": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "calculator": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "carry": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "childhood": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "create": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "deserve": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "oxford"
+  },
+  "design": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "discovery": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "education": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "engineering": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "experiment": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "explorer": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "fact": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "forever": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "forget": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "human": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "improve": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "invention": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "inventor": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "journalist": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "lend": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "live": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "masterpiece": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "novel": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "paint": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "physics": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "poem": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "publish": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "realize": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "record": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "science": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "scientist": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "space": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "strange": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "struggle": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "oxford"
+  },
+  "typewriter": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "unique": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "oxford"
+  },
+  "universe": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "oxford"
+  },
+  "wonder": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "writer": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "chemistry": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "medicine": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "health": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "hospital": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "doctor": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "tool": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "project": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "problem": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "solve": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "university": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "step": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "discuss": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "interest": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "language": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "wrong": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "word": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "write": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "teacher": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "student": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "school": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "classroom": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "homework": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "library": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "course": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "subject": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "change the world": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "get better": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "look for": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "thanks to": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "light bulb": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "printing press": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "kalip-ilk"
+  },
+  "insist on": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "kalip-ilk"
+  },
+  "agriculture": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "oxford"
+  },
+  "blow": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "climate": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "damage": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "death": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "deforestation": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "enough": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "environment": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "factory": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "future": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "government": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "increase": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "injury": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "lack": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "land": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "lightning": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "liquid": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "mountain": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "movement": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "ocean": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "past": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "prevent": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "river": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "save": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "shortage": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "oxford"
+  },
+  "snow": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "solid": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "strong": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "sudden": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "suggestion": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "surface": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "warn": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "wave": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "wind": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "earth": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "heat": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "area": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "life": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "soil": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "reduce": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "air pollution": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "climate change": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "kalip-ilk"
+  },
+  "first aid": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "natural disaster": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "forest fire": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "kalip-ilk"
+  },
+  "deal with": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "kalip-ilk"
+  },
+  "lead to": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "kalip-ilk"
+  },
+  "run out of": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "stay away": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "warm up": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "grow crops": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "kalip-ilk"
+  },
+  "rescue team": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "kalip-ilk"
+  },
+  "calm": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "fair": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "hope": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "meet": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "talk": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "tell": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "friend": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "happy": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "bad": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "name": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "buy": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "cheap": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "fast": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "gym": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "kind": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "send": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "type": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "listen": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "team": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "week": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "night": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "early": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "hat": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "butter": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "cook": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "dish": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "drain": {
+   "seviye": "orta",
+   "cefr": "c1",
+   "kaynak": "oxford"
+  },
+  "large": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "put": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "rinse": {
+   "seviye": "orta",
+   "cefr": "",
+   "kaynak": "sinif 8"
+  },
+  "salt": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "serve": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "sharp": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "stretch": {
+   "seviye": "orta",
+   "cefr": "b2",
+   "kaynak": "oxford"
+  },
+  "dinner": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "sauce": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "soup": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "egg": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "sugar": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "eat": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "kitchen": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "soon": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "web": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "net": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "climb": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "speed": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "book": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "clean": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "feel": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "taste": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "town": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "pay": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "money": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "year": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "car": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "bus": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "wish": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "wash": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "young": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "bed": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "floor": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "window": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "garden": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "help": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "rule": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "list": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "dog": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "brother": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "short": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "sit": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "count": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "lift": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "print": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "study": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "find": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "make": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "take": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "show": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "class": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "mark": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "fall": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "hill": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "mud": {
+   "seviye": "orta",
+   "cefr": "b1",
+   "kaynak": "oxford"
+  },
+  "rain": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "roof": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "safe": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "shake": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "storm": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
+  },
+  "cold": {
+   "seviye": "baslangic",
+   "cefr": "a1",
+   "kaynak": "oxford"
+  },
+  "rock": {
+   "seviye": "baslangic",
+   "cefr": "a2",
+   "kaynak": "oxford"
   }
  }
 }

@@ -80,22 +80,35 @@ export function lgsSayfalari(c) {
         ${v.tr !== k.tr ? `<span class="baska-anlam">Bu ünitede: <b>${c.esc(k.tr)}</b></span>` : ''}</span></a>`;
     }
     const vurgu = yazilisVurgu(k, c.esc);
-    return `<div class="hk hk-yazi">
+    // 31 Ekim: LGS kartlarinin gorselleri de sitede (yalniz vitrindekiler kopyalanir).
+    const resim = k.lgsKart ? c.lgsResim(k.id) : null;
+    return `<div class="hk${resim ? '' : ' hk-yazi'}">
+        ${resim ? `<img src="${resim}" alt="${c.esc(k.cumle || k.en)}" width="400" height="300" loading="lazy">` : ''}
         <span class="hk-alt"><span class="en">${vurgu}</span> <span class="tr">${c.esc(k.tr)}</span>
-        <span class="kanca-rozet">${c.esc(k.en)} ≈ ${c.esc(k.kanca)}</span>
-        <span class="yol-rozet">${k.yol === 'yazılış' ? 'yazılıştan' : k.yol === 'ses+yazılış' ? 'ses + yazılış' : 'sesten'}</span>
+        ${k.kanca ? `<span class="kanca-rozet">${c.esc(k.en)} ≈ ${c.esc(k.kanca)}</span>
+        <span class="yol-rozet">${k.yol === 'yazılış' ? 'yazılıştan' : k.yol === 'ses+yazılış' ? 'ses + yazılış' : 'sesten'}</span>` : '<span class="yol-rozet">görsel çağrışım</span>'}
         ${k.cumle ? `<span class="cumle">“${c.esc(k.cumle)}”</span>` : ''}</span></div>`;
+  };
+
+  /**
+   * 19 Ekim "her seyi verme": cagrisim vitrini unite basina en fazla 3. Once onayli,
+   * sonra yazilis cagrisimi (bizim farkimiz), sonra Genel'de sayfasi olan kart, sonra
+   * sesten. "Ornek kelimeler" sayfasi da ayni secimi gosterir (fazlasi acilmaz).
+   */
+  const vitrin = (no) => {
+    const liste = kelimeler.filter((k) => k.unite === no);
+    const sec = [
+      ...liste.filter((k) => k.tur === 'K' && /ONAYLI/.test(k.not)),
+      ...liste.filter((k) => k.tur === 'K' && k.yol.includes('yazılış')),
+      ...liste.filter((k) => k.tur === 'V' && kart(k.en)),
+      ...liste.filter((k) => k.tur === 'K'),
+    ];
+    return [...new Set(sec)].slice(0, VITRIN);
   };
 
   const uniteSayfalari = UNITELER.map((u, i) => {
     const liste = kelimeler.filter((k) => k.unite === u.no);
-    // Gorselli (mevcut kart) once; gorseli hazirlanan cagrisimlar sonra.
-    // 19 Ekim "her seyi verme": cagrisim vitrini unite basina en fazla 3 (once onayli, sonra gorselli kart).
-    const hafiza = [
-      ...liste.filter((k) => k.tur === 'K' && /ONAYLI/.test(k.not) && !kart(k.en)),
-      ...liste.filter((k) => k.tur === 'V' && kart(k.en)),
-      ...liste.filter((k) => k.tur === 'K' && !/ONAYLI/.test(k.not) && !kart(k.en)),
-    ].slice(0, VITRIN);
+    const hafiza = vitrin(u.no);
     const hafizaToplam = liste.filter((k) => k.tur === 'K' || k.tur === 'V').length;
     const soruHavuzu = liste.filter((k) => k.tur !== 'I');
     const sorular = karistir(soruHavuzu, u.no * 7).slice(0, 10).map((k, j) => soruAnlam(c, k, soruHavuzu, u.no * 31 + j));
@@ -111,6 +124,18 @@ export function lgsSayfalari(c) {
         return `<tr><td class="en">${v ? `<a href="/kelime/${v.id}/">${c.esc(k.en)}</a>` : c.esc(k.en)}</td><td>${c.esc(k.tr)}</td><td><span class="tur-rozet ${TUR_SINIF[k.tur]}">${TUR_ADI[k.tur]}</span></td><td class="cikti">${ck ? `<span title="${ck.yillar.join(', ')}">${ck.sinav} sınavda</span>` : ''}</td></tr>`;
       })
       .join('\n');
+    // Unite SSS (31 Ekim, SEO): rakip unite sayfalarinda yok; FAQPage semasiyla.
+    const enCok = liste
+      .filter((k) => cikan.has(k.en))
+      .sort((a, b) => cikan.get(b.en).sinav - cikan.get(a.en).sinav)
+      .slice(0, 6)
+      .map((k) => `${k.en} (${k.tr})`);
+    const kalipSay = liste.filter((k) => k.tur === 'I').length;
+    const sss = [
+      [`8. sınıf İngilizce ${u.no}. ünitede kaç kelime var?`, `${u.ad} ünitesinde ${liste.length - kalipSay} kelime ve ${kalipSay} kalıp var. Bunların ${cikanSayisi(u.no)} tanesi 2018–2025 arasındaki LGS'lerin İngilizce sorularında geçti.`],
+      [`${u.ad} ünitesinden LGS'de hangi kelimeler çıktı?`, enCok.length ? `En sık çıkanlar: ${enCok.join(', ')}. Bütün liste yukarıdaki tabloda "LGS'de" sütununda.` : '2018–2025 LGS sorularında bu ünitenin kelimeleri geçmedi; yine de sınavda her üniteden kelime gelebilir.'],
+      [`${u.ad} kelimelerini nasıl kalıcı öğrenirim?`, 'Her kelimeyi Türkçe bir çağrışıma ve tek bir sahneye bağla (succeed ≈ saksı), sonra unutmana yakın tekrar et. Hafızada platformunda ünitenin bütün kelimeleri çağrışım, görsel ve sesle; kalıplar, sesli diyaloglar ve ünite testi de var.'],
+    ];
     return {
       yol: u.yol,
       bolum: 'lgs',
@@ -142,6 +167,9 @@ ${tablo}
     <a href="/lgs/#uniteler">Bütün üniteler</a>
     ${sonraki ? `<a href="${sonraki.yol}">${sonraki.no}. Ünite: ${sonraki.ad} →</a>` : '<span></span>'}
   </nav>
+</div>
+${c.sssHtml(sss)}
+<div class="kap lgs-unite">
   <div class="cagri"><p>${LGS_UYGULAMADA ? `${u.no}. ünitenin kelimeleri çağrışım ve görselleriyle, kalıpları, sesli diyalogları ve ünite testi platformda. Ücretsiz.` : 'Kelimeleri hafıza teknikleri ve aralıklı tekrarla kalıcı öğren. Ücretsiz.'}</p><a class="btn btn-lacivert" href="${LGS_UYGULAMADA ? `${c.baslaYol('lgs')}&amp;unite=${u.no}` : c.baslaYol('lgs')}" data-basla>${LGS_UYGULAMADA ? 'Bu üniteyi çalış' : 'Hemen başla'}</a></div>
 </div>`,
       script: c.TEST_JS,
@@ -152,6 +180,10 @@ ${tablo}
         url: `${c.ALAN}${u.yol}`,
         inLanguage: 'en',
         hasDefinedTerm: liste.slice(0, 80).map((k) => ({ '@type': 'DefinedTerm', name: k.en, description: k.tr })),
+      }, {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: sss.map(([s, cv]) => ({ '@type': 'Question', name: s, acceptedAnswer: { '@type': 'Answer', text: cv } })),
       }),
     };
   });
@@ -164,17 +196,17 @@ ${tablo}
   const cikanSayfa = {
     yol: '/lgs/cikmis-sorulardaki-kelimeler/',
     bolum: 'lgs',
-    baslik: "LGS İngilizce Çıkmış Sorulardaki Kelimeler (2018–2025) | Hafızada",
+    baslik: "LGS'de Gerçekten Çıkmış İngilizce Kelimeler (Çıkmış Sorular 2018–2025) | Hafızada",
     aciklama: `2018–2025 arasındaki 8 LGS'nin İngilizce sorularında 8. sınıf kelimelerinden ${cikanlar.length} tanesi geçti. Hangi kelime kaç sınavda çıktı, hangi ünitede?`,
     ogTur: 'article',
     icerik:
-      c.altBaslik('LGS İngilizce çıkmış sorulardaki kelimeler', `2018–2025 arasındaki 8 LGS'nin İngilizce sorularında 8. sınıf ünite kelimelerinden ${cikanlar.length} tanesi geçti.`, [
+      c.altBaslik("LGS'de gerçekten çıkmış İngilizce kelimeler", `2018–2025 arasındaki 8 LGS'nin İngilizce sorularında 8. sınıf ünite kelimelerinden ${cikanlar.length} tanesi geçti. Hangisi kaç sınavda çıktı, aşağıda.`, [
         ['LGS', '/lgs/'],
         ['Çıkmış sorulardaki kelimeler', '/lgs/cikmis-sorulardaki-kelimeler/'],
       ]) +
       `<div class="kap lgs-unite">
   <div class="metin-kisa">
-    <p>MEB'in yayımladığı 2018–2025 LGS kitapçıklarının İngilizce bölümünü taradık ve 8. sınıf ders kitaplarındaki ${toplam} ünite kelimesinin her birinin kaç sınavda geçtiğini saydık. Kelimenin çekimli halleri de sayıldı (<i>invite, invited, inviting</i>). Liste bir tahmin değil; geçmişte ne çıktığını gösteriyor. Sınavda ünitelerin hepsinden kelime gelebilir.</p>
+    <p>MEB'in yayımladığı 2018–2025 LGS kitapçıklarının İngilizce bölümünü taradık ve platformdaki ${toplam} LGS kelimesi ve kalıbının her birinin kaç sınavda geçtiğini saydık. Kelimenin çekimli halleri de sayıldı (<i>invite, invited, inviting</i>). Liste bir tahmin değil; geçmişte ne çıktığını gösteriyor. Sınavda ünitelerin hepsinden kelime gelebilir.</p>
   </div>
   <div class="baslik-satir"><h2>${cikanlar.length} kelime</h2><button class="btn btn-beyaz yazdir" type="button" onclick="window.print()">Yazdır / PDF</button></div>
   <div class="tablo-kap"><table class="kelime-tablo">
@@ -184,7 +216,7 @@ ${cikanlar
   .map((k) => {
     const v = kart(k.en);
     const u = UNITELER[k.unite - 1];
-    return `<tr><td class="en">${v ? `<a href="/kelime/${v.id}/">${c.esc(k.en)}</a>` : c.esc(k.en)}</td><td>${c.esc(k.tr)}</td><td><b>${k.sinav}</b> / 8</td><td class="kucuk">${k.yillar.join(', ')}</td><td><a href="${u.yol}">${u.no}. ${u.ad}</a></td></tr>`;
+    return `<tr><td class="en">${v ? `<a href="/kelime/${v.id}/">${c.esc(k.en)}</a>` : c.esc(k.en)}</td><td>${c.esc(k.tr)}</td><td><b>${k.sinav}</b> / 8</td><td class="kucuk">${k.yillar.length ? k.yillar.join(', ') : '—'}</td><td><a href="${u.yol}">${u.no}. ${u.ad}</a></td></tr>`;
   })
   .join('\n')}
     </tbody>
@@ -196,9 +228,9 @@ ${cikanlar
   };
 
   // --- LGS ana sayfasi ---
-  const ornekler = kelimeler.filter((k) => k.tur === 'K' && /ONAYLI/.test(k.not)).slice(0, 6);
+  const ornekler = [1, 2, 3, 6, 9, 10].map((no) => vitrin(no)[0]).filter(Boolean);
   const SSS_LGS = [
-    ['LGS İngilizce için kaç kelime öğrenmem gerekiyor?', `8. sınıf ders kitaplarının sözlüklerinde 10 ünitede toplam ${toplam} kelime ve kalıp var. Ünite başına ortalama ${Math.round(toplam / 10)}. Hepsini ünite ünite burada bulabilirsin.`],
+    ['LGS İngilizce için kaç kelime öğrenmem gerekiyor?', `Platformda 10 ünitede toplam ${toplam} kelime ve kalıp var: ders kitaplarının sözlükleri, ünitelerin okuma ve diyalog metinleri ve 2018–2025 LGS sorularında geçen temel kelimeler. Son 8 LGS'nin İngilizce sorularındaki kelimelerin %95'ten fazlası bu listede. Hepsini ünite ünite burada bulabilirsin.`],
     ['Hangi yılın müfredatı?', '2027 LGS 8. sınıfın bugünkü programıyla yapılacak: 10 ünite (Friendship\'ten Natural Forces\'a). 2028\'de yeni Maarif programı başlıyor; kelimelerin çoğu aynı, gruplama değişiyor. Biz ikisini de takip ediyoruz.'],
     ['Hafıza tekniği ne demek?', 'Kelimenin sesi ya da yazılışı Türkçe bir kelimeyi çağrıştırıyor: succeed ≈ saksı, delicious içinde "deli". Çağrışımı anlamla aynı sahneye koyuyoruz ("Deli aşçının yemeği lezzetli çıktı"). Sahne aklına gelince anlam da geliyor.'],
     ['Ücretli mi?', 'Hayır, şu an her şey ücretsiz ve reklamsız.'],
@@ -218,7 +250,7 @@ ${cikanlar
       <p class="giris">10 ünitenin ${toplam} kelimesi ve kalıbı, Türkçe anlamları ve görselleştirilmiş hafıza teknikleriyle. <b>succeed</b> ≈ <b>saksı</b>, <b><u>deli</u>cious</b> ≈ <b>deli</b>.</p>
       <div class="dugmeler">
         <a class="btn btn-sari btn-buyuk" href="#uniteler">Ünitelere bak</a>
-        <a class="btn btn-beyaz btn-buyuk" href="/lgs/en-onemli-25-kelime/">En önemli 25 kelime</a>
+        <a class="btn btn-beyaz btn-buyuk" href="/lgs/ornek-kelimeler/">Örnek kelimeler</a>
       </div>
     </div>
     <div class="sayac-kutu" data-lgs="${LGS_TARIH}" data-kelime="${toplam}">
@@ -267,6 +299,7 @@ ${DALGA_ALT}
   <div class="kap veli-kap">
     <div><h2>Veliler için</h2>
     <p>Çocuğunuz günde 10–15 dakikayla 8. sınıfın bütün İngilizce kelimelerini sınava kadar bitirebilir. Reklam yok, ücret yok, içerik çocuğa uygun: şiddet, korku ya da uygunsuz hiçbir sahne kullanmıyoruz.</p>
+    <p><b>Sınavın istediği kelimeler.</b> Son 8 LGS'nin İngilizce sorularında geçen kelimelerin %95'ten fazlası platformda: ünite kelimeleri, kalıplar ve sorularda sık geçen temel kelimeler, toplam ${toplam}.</p>
     <p>Kelime listeleri MEB'in 8. sınıf ders kitaplarından; "LGS'de çıktı" bilgisi 2018–2025 sınav kitapçıklarından.</p></div>
   </div>
 </section>
@@ -296,48 +329,32 @@ ${DALGA_SARI}
     }),
   };
 
-  // --- En onemli 25: cikmis sinav sikligina gore, tanidik (T) haric ---
-  const onemli = kelimeler
-    .filter((k) => cikan.has(k.en) && k.tur !== 'T')
-    .map((k) => ({ ...k, ...cikan.get(k.en) }))
-    .sort((a, b) => b.sinav - a.sinav || b.toplam - a.toplam || a.en.localeCompare(b.en))
-    .slice(0, 25);
-  const onemliKart = (k, i) => {
-    const v = kart(k.en);
-    const u = UNITELER[k.unite - 1];
-    const cagrisim = v
-      ? `<span class="kanca-rozet">${c.esc(v.en)} ≈ ${c.esc(v.hook)}</span><span class="cumle">“${c.esc(v.sentence)}”</span>`
-      : k.kanca
-        ? `<span class="kanca-rozet">${c.esc(k.en)} ≈ ${c.esc(k.kanca)}</span>${k.cumle ? `<span class="cumle">“${c.esc(k.cumle)}”</span>` : ''}`
-        : `<span class="cumle">${LGS_UYGULAMADA ? 'Çağrışımı ve görseli platformda.' : 'Çağrışımı ve görseli hazırlanıyor.'}</span>`;
-    return `<div class="hk hk-yazi onemli">
-        ${v ? `<img src="${v.sayfaResmi}" alt="${c.esc(v.sentence)}" width="400" height="300" loading="lazy">` : ''}
-        <span class="hk-alt"><span class="sira-no">${i + 1}</span><span class="en">${yazilisVurgu(k, c.esc)}</span> <span class="tr">${c.esc(k.tr)}</span>
-        ${cagrisim}
-        <span class="yol-rozet">${k.sinav} sınavda · <a href="${u.yol}">${u.no}. ${u.ad}</a></span></span></div>`;
-  };
-  const onemliSayfa = {
-    yol: '/lgs/en-onemli-25-kelime/',
+  // --- Ornek kelimeler (31 Ekim; eski "En onemli 25"): her unitenin vitrini ---
+  // "En onemli" iddiasi dayanaksizdi ve menuyu uzatiyordu (kullanici, 19 Ekim). Yeni
+  // sayfa unite vitrinlerinin toplami: fazlasi acilmaz (KARARLAR 10). Eski adres
+  // site.mjs'te bu sayfaya yonlenir.
+  const ornekSayfa = {
+    yol: '/lgs/ornek-kelimeler/',
     bolum: 'lgs',
-    baslik: "LGS İngilizce: En Çok Çıkan ve Mutlaka Öğrenilmesi Gereken 25 Kelime | Hafızada",
-    aciklama: `2018–2025 LGS İngilizce sorularında en sık geçen, zaten bildiğin tanıdık kelimeler çıkarılmış 25 kelime: Türkçe anlamı, hafıza tekniği ve ünitesiyle.`,
+    baslik: 'LGS İngilizce Örnek Kelimeler: Hafıza Teknikleriyle 10 Ünite | Hafızada',
+    aciklama: `8. sınıf İngilizce 10 ünitenin her birinden örnek kelimeler: Türkçe çağrışımı, görseli ve sahnesiyle. Platformda ${toplam} kelime ve kalıbın hepsi var.`,
     ogTur: 'article',
     icerik:
-      c.altBaslik("LGS'de en çok çıkan ve mutlaka öğrenilmesi gereken 25 kelime", "2018–2025 arasındaki 8 LGS'de en sık geçen kelimeler. Türkçeye geçmiş, zaten bildiğin kelimeleri (concert, message, online…) çıkardık.", [
+      c.altBaslik('LGS İngilizce örnek kelimeler', `Her üniteden birkaç kelime, çağrışımı ve görseliyle. Platformda ${toplam} kelime ve kalıbın hepsi bu biçimde.`, [
         ['LGS', '/lgs/'],
-        ['En önemli 25 kelime', '/lgs/en-onemli-25-kelime/'],
+        ['Örnek kelimeler', '/lgs/ornek-kelimeler/'],
       ]) +
       `<div class="kap lgs-unite">
-  <div class="hk-izgara">${onemli.map(onemliKart).join('\n')}</div>
-  <p class="kucuk" style="margin-top:18px">Sayım: MEB'in 2018–2025 LGS kitapçıklarının İngilizce bölümü; kelimenin çekimli halleri dahil. Bütün liste: <a href="/lgs/cikmis-sorulardaki-kelimeler/">çıkmış sorulardaki kelimeler</a>.</p>
+${UNITELER.map((u) => `  <section><h2><a href="${u.yol}">${u.no}. Ünite: ${u.ad}</a></h2>
+  <div class="hk-izgara">${vitrin(u.no).map(hafizaKart).join('\n')}</div></section>`).join('\n')}
   ${yakinda}
-  <div class="cagri"><p>${LGS_UYGULAMADA ? 'LGS kelimelerinin hepsi çağrışımı ve görseliyle platformda. Ücretsiz.' : 'LGS kelimelerinin hepsi çağrışımı ve görseliyle platforma ekleniyor. Şimdilik genel kelimelerle başlayabilirsin; ücretsiz.'}</p><a class="btn btn-lacivert" href="${c.baslaYol('lgs')}" data-basla>Hemen başla</a></div>
+  <div class="cagri"><p>LGS kelimelerinin hepsi çağrışımı, görseli ve sesiyle platformda. Ücretsiz.</p><a class="btn btn-lacivert" href="${c.baslaYol('lgs')}" data-basla>Hemen başla</a></div>
 </div>`,
     script: '',
-    ld: c.jsonld(c.kirinti([['Ana sayfa', '/'], ['LGS', '/lgs/'], ['En önemli 25 kelime', '/lgs/en-onemli-25-kelime/']])),
+    ld: c.jsonld(c.kirinti([['Ana sayfa', '/'], ['LGS', '/lgs/'], ['Örnek kelimeler', '/lgs/ornek-kelimeler/']])),
   };
 
-  return [hub, ...uniteSayfalari, onemliSayfa, cikanSayfa];
+  return [hub, ...uniteSayfalari, ornekSayfa, cikanSayfa];
 }
 
 /** Cocuk sekmesi: veliye konusan tek sayfa. Icerik Faz 5'te dolacak. */

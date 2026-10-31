@@ -7,7 +7,7 @@ Projenin hafızası `NOTLAR.md`.
 kısa bir şey dediğinde:**
 
 1. `git pull` ile son hali al (site deposu `../hasanozdemiryz-blip.github.io` de varsa onu da).
-   **20 Ekim 2026'da `uc-bolum` `main`'e birleşti; çalışma dalı yine `main`.**
+   **31 Ekim 2026'da `lgs-ek` `main`'e birleşti; çalışma dalı `main`.**
    NOTLAR'ın "Sırada" bölümündeki **KARARLAR** tek kaynaktır; öneriden önce oku, çelişme.
 2. `NOTLAR.md`'nin **Sırada** bölümünü oku; en üstteki başlık sıradaki iştir
    (ör. "SIRADAKİ İŞ").

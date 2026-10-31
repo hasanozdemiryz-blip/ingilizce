@@ -39,3 +39,56 @@ quickness|The quickness of the internet surprised me.|İnternetin hızı beni ş
 reservation|I made a reservation for four people.|Dört kişilik rezervasyon yaptım.
 security|Call security if you see something strange.|Tuhaf bir şey görürsen güvenliği ara.
 staff|The hotel staff were very helpful.|Otel personeli çok yardımseverdi.
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+application|I downloaded a new application.|Yeni bir uygulama indirdim.
+arrange|Let's arrange a meeting for Friday.|Cuma için bir buluşma ayarlayalım.
+begin|Let's begin the lesson.|Hadi derse başlayalım.
+caller|The caller didn't say his name.|Arayan kişi adını söylemedi.
+change|Can I change my seat?|Yerimi değiştirebilir miyim?
+delivery|The delivery will arrive tomorrow.|Teslimat yarın gelecek.
+fine|I'm fine, thank you.|İyiyim, teşekkürler.
+graduation|My sister's graduation is in June.|Ablamın mezuniyeti haziranda.
+great|That's a great idea!|Bu harika bir fikir!
+hear|Can you hear me?|Beni duyabiliyor musun?
+ill|I can't come to school because I'm ill.|Hasta olduğum için okula gelemiyorum.
+imagine|Imagine a world without phones.|Telefonsuz bir dünya hayal et.
+leave|Can I leave a message?|Mesaj bırakabilir miyim?
+possible|Is it possible to meet tomorrow?|Yarın buluşmak mümkün mü?
+reminder|I set a reminder on my phone.|Telefonuma bir hatırlatıcı kurdum.
+repeat|Can you repeat that, please?|Bunu tekrarlar mısın lütfen?
+replace|We need to replace the old battery.|Eski pili değiştirmemiz gerekiyor.
+shout|Don't shout, please.|Lütfen bağırma.
+try|Can I try this jacket on?|Bu ceketi deneyebilir miyim?
+way|Can you tell me the way to the station?|İstasyonun yolunu söyler misiniz?
+phone|My phone is ringing.|Telefonum çalıyor.
+mobile|What is your mobile number?|Cep telefonu numaran ne?
+email|I sent you an email.|Sana bir e-posta gönderdim.
+address|What is your address?|Adresin ne?
+secretary|The secretary answered the phone.|Sekreter telefona cevap verdi.
+company|My father works for a big company.|Babam büyük bir şirkette çalışıyor.
+wait|Please wait here.|Lütfen burada bekleyin.
+speak|Can I speak to Ali, please?|Ali ile konuşabilir miyim lütfen?
+tonight|What are you doing tonight?|Bu gece ne yapıyorsun?
+tomorrow|See you tomorrow!|Yarın görüşürüz!
+date|What is the date today?|Bugün tarih ne?
+now|I am busy now.|Şimdi meşgulüm.
+again|Please say it again.|Lütfen tekrar söyle.
+check|Check your answers before you finish.|Bitirmeden önce cevaplarını kontrol et.
+bill|Can we have the bill, please?|Hesabı alabilir miyiz lütfen?
+sound|Your idea doesn't sound bad.|Fikrin kulağa kötü gelmiyor.
+hold on|Hold on a moment, please.|Bir dakika bekleyin lütfen.
+put through|Please put through this call to Mr Yılmaz.|Lütfen bu aramayı Bay Yılmaz'a bağlayın.
+at the moment|She is busy at the moment.|O şu anda meşgul.
+just a minute|Just a minute, please.|Bir dakika lütfen.
+keep in touch|Let's keep in touch.|İletişimde kalalım.
+take care|Bye! Take care.|Hoşça kal! Kendine iyi bak.
+get well soon|Get well soon!|Geçmiş olsun!
+feel better|I hope you feel better.|Umarım daha iyi hissedersin.
+make a phone call|I need to make a phone call.|Bir telefon etmem gerekiyor.
+send a message|I will send a message to you.|Sana bir mesaj göndereceğim.
+smartphone|My smartphone has a good camera.|Akıllı telefonumun kamerası iyi.
+you're welcome|Thank you! — You're welcome.|Teşekkürler! — Bir şey değil.
+waste time|Don't waste time on your phone.|Telefonda vakit kaybetme.
+how often|How often do you call your grandparents?|Büyükannenleri ne sıklıkla ararsın?
+o'clock|Let's meet at five o'clock.|Saat beşte buluşalım.
+dial a number|You need to dial a number to call your friend.|Arkadaşını aramak için bir numara çevirmelisin.

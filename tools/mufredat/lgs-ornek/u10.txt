@@ -38,3 +38,56 @@ tsunami|A tsunami is a giant wave caused by an earthquake.|Tsunami, depremin seb
 volcano|Mount Ararat is a volcano.|Ağrı Dağı bir yanardağdır.
 waste|Put the waste in the right bin.|Atığı doğru kutuya at.
 water shortage|Many cities have a water shortage in summer.|Birçok şehirde yazın su kıtlığı olur.
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+agriculture|Agriculture is important for our country.|Tarım ülkemiz için önemli.
+blow|The wind can blow very hard here.|Burada rüzgâr çok sert esebilir.
+climate|The climate is getting warmer.|İklim ısınıyor.
+damage|Storms can damage houses.|Fırtınalar evlere zarar verebilir.
+death|Strong buildings can prevent death in earthquakes.|Sağlam binalar depremde ölümleri önleyebilir.
+deforestation|Deforestation is a big problem.|Ormansızlaşma büyük bir sorun.
+enough|We don't have enough water.|Yeterli suyumuz yok.
+environment|We must protect the environment.|Çevreyi korumalıyız.
+factory|My uncle works in a factory.|Amcam bir fabrikada çalışıyor.
+future|What will the future be like?|Gelecek nasıl olacak?
+government|The government built new schools.|Hükümet yeni okullar inşa etti.
+increase|We must increase the number of trees.|Ağaç sayısını artırmalıyız.
+injury|He had a small injury in the match.|Maçta küçük bir yaralanma geçirdi.
+lack|Plants die because of a lack of water.|Bitkiler su eksikliği yüzünden ölür.
+land|The plane will land in ten minutes.|Uçak on dakika içinde inecek.
+lightning|Thunder and lightning scare my dog.|Gök gürültüsü ve şimşek köpeğimi korkutur.
+liquid|Water is a liquid.|Su bir sıvıdır.
+mountain|Ağrı is the highest mountain in Turkey.|Ağrı, Türkiye'nin en yüksek dağıdır.
+movement|A small movement of the ground can be an earthquake.|Yerin küçük bir hareketi deprem olabilir.
+ocean|The Pacific is the largest ocean.|Pasifik en büyük okyanustur.
+past|In the past, people didn't have electricity.|Geçmişte insanların elektriği yoktu.
+prevent|We can prevent floods by planting trees.|Ağaç dikerek selleri önleyebiliriz.
+river|The river is very long.|Nehir çok uzun.
+save|We must save water.|Su tasarrufu yapmalıyız.
+shortage|There is a water shortage in the city.|Şehirde su sıkıntısı var.
+snow|There is a lot of snow in Erzurum.|Erzurum'da çok kar var.
+solid|Ice is solid.|Buz katıdır.
+strong|We need strong buildings.|Sağlam binalara ihtiyacımız var.
+sudden|There was a sudden storm.|Ani bir fırtına çıktı.
+suggestion|I have a suggestion for the trip.|Gezi için bir önerim var.
+surface|Most of the Earth's surface is water.|Dünya yüzeyinin çoğu sudur.
+warn|We must warn people about the flood.|İnsanları sel hakkında uyarmalıyız.
+wave|A big wave hit the boat.|Büyük bir dalga tekneye çarptı.
+wind|The wind was very strong.|Rüzgâr çok sertti.
+earth|The Earth goes around the Sun.|Dünya Güneş'in etrafında döner.
+heat|Heat the milk.|Sütü ısıt.
+area|This area is dangerous in a flood.|Bu bölge selde tehlikeli.
+life|Life is beautiful.|Hayat güzel.
+soil|Plants grow in soil.|Bitkiler toprakta büyür.
+reduce|We should reduce plastic waste.|Plastik atığı azaltmalıyız.
+air pollution|Air pollution is bad for our health.|Hava kirliliği sağlığımıza zararlı.
+climate change|Climate change is a global problem.|İklim değişikliği küresel bir sorun.
+first aid|Every car should have a first aid kit.|Her arabada ilk yardım çantası olmalı.
+natural disaster|A flood is a natural disaster.|Sel bir doğal afettir.
+forest fire|A forest fire can destroy many trees.|Bir orman yangını birçok ağacı yok edebilir.
+deal with|We must learn to deal with earthquakes.|Depremlerle başa çıkmayı öğrenmeliyiz.
+lead to|Pollution can lead to climate change.|Kirlilik iklim değişikliğine yol açabilir.
+run out of|Don't run out of water in the desert.|Çölde suyun bitmesin.
+stay away|Stay away from windows during a storm.|Fırtınada pencerelerden uzak dur.
+warm up|Let's warm up before the match.|Maçtan önce ısınalım.
+grow crops|Farmers grow crops in spring.|Çiftçiler ilkbaharda ürün yetiştirir.
+rescue team|The rescue team arrived quickly.|Kurtarma ekibi hızla geldi.

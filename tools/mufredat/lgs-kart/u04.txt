@@ -39,3 +39,56 @@ quickness|çabukluk|G|||Çita çabukluğuyla herkesi geçti|A cheetah sprints fa
 reservation|rezervasyon|T|rezervasyon|ses|Restoranda iki kişilik rezervasyon yaptık|A waiter places a small blank reserved sign on a table set for two.|peach|E
 security|güvenlik|G|||Güvenlik görevlisi müze kapısında bekliyor|A friendly security guard in uniform stands at a museum entrance.|sky-blue|E
 staff|personel|G|||Otel personeli misafirleri karşıladı|Hotel staff in matching uniforms smile and greet guests at a reception desk.|cream|E
+# --- EK 19 Ekim 2026 (lgs-ek.mjs uretir, elle duzenleme: tools/mufredat/lgs-ek/) ---
+application|uygulama; başvuru|G|||Telefona yeni bir uygulama indirdi|A girl taps a phone screen showing a colourful grid of blank square app icons.|sky-blue|E
+arrange|ayarlamak, düzenlemek|K|aranjman|ses|Çiçekleri vazoda güzel bir aranjmanla düzenledi|A girl arranges colourful flowers neatly in a vase on a table.|pink|E
+begin|başlamak|G|||Orkestra şefi işaret verince müzik başladı|A conductor raises a baton and an orchestra of children begins to play.|lavender|E
+caller|arayan kişi|G|||Telefon çalınca arayanın kim olduğuna baktı|A girl holds a ringing phone and looks curiously at the screen; the screen is blank.|cream|E
+change|değiştirmek; bozuk para|G|||Bozuk ampulü yenisiyle değiştirdi|A boy on a small step stool changes a light bulb in a lamp.|yellow|E
+delivery|teslimat|G|||Kurye paketi kapıya teslim etti|A smiling delivery person hands a cardboard box to a girl at her door; the box is blank.|peach|E
+fine|iyi; ince|G|||Nasılsın diye sorunca iyiyim dedi|A smiling boy gives a thumbs up while talking on the phone.|green|E
+graduation|mezuniyet|G|||Mezuniyet töreninde keplerini havaya attılar|Smiling students in gowns throw their caps into the air.|lavender|E
+great|harika|G|||Takım galip gelince harika hissetti|A team of children jumps and cheers with arms up.|yellow|E
+hear|duymak|G|||Kuş sesini duyunca başını kaldırdı|A girl cups her hand behind her ear listening to a little bird singing on a branch.|green|E
+ill|hasta|G|||Hasta olunca yatakta çorba içti|A boy in bed with a thermometer in his mouth while his mother brings soup.|mint|E
+imagine|hayal etmek|G|||Uzayda uçtuğunu hayal etti|A girl lying on grass imagines herself as an astronaut, a thought bubble above her showing a rocket.|lavender|E
+leave|ayrılmak; bırakmak|G|||Tren istasyondan ayrıldı|A family waves goodbye as a colourful train leaves the station.|sky-blue|E
+possible|mümkün|G|||Tek ayak üstünde durmak mümkün mü diye denedi|A girl balances on one leg with her arms out, smiling.|mint|E
+reminder|hatırlatıcı|G|||Buzdolabına hatırlatma notu yapıştırdı|A boy sticks a yellow sticky note on a fridge door; the note is blank.|yellow|E
+repeat|tekrarlamak|G|||Papağan her kelimeyi tekrarladı|A colourful parrot on a perch repeats words to a laughing boy.|green|E
+replace|değiştirmek, yerine koymak|G|||Kırık bardağın yerine yenisini koydu|A girl puts a new glass on a shelf where a broken one was.|cream|E
+shout|bağırmak|G|||Karşı kıyıdaki arkadaşına bağırdı|A boy cups his hands around his mouth and shouts to a friend far away.|sky-blue|E
+try|denemek|G|||Mağazada yeni ayakkabıları denedi|A girl tries on a pair of red trainers in a shoe shop.|peach|E
+way|yol; yöntem|G|||Haritada okula giden yolu gösterdi|A boy points along a path on a simple paper map; the map has no text.|green|E
+phone|telefon|T|telefon|ses|Telefon çalınca hemen açtı|A girl answers a ringing phone with a smile.|sky-blue|E
+mobile|mobil, cep telefonu|T|mobil|ses|Mobil telefonunu cebine koydu|A boy puts a mobile phone into his jeans pocket; the screen is blank.|mint|E
+email|e-posta|T|imeyl|ses|Öğretmenine e-posta gönderdi|A girl types at a laptop while a small envelope icon flies away from the blank screen.|sky-blue|E
+address|adres|T|adres|ses|Zarfın üstüne adresi yazdı|A boy writes on an envelope with a pen; the envelope is blank.|cream|E
+secretary|sekreter|T|sekreter|ses|Sekreter telefonu açtı|A friendly secretary at a desk answers a phone with a headset.|lavender|E
+company|şirket|G|||Şirketin binası çok büyüktü|A tall modern office building with many windows and people walking in; no sign, no text.|sky-blue|E
+wait|beklemek|G|||Otobüs durağında sırayla bekledik|People wait in a neat line at a bus stop.|yellow|E
+speak|konuşmak|G|||Mikrofonla sınıfa konuştu|A girl speaks confidently into a microphone in front of her class.|lavender|E
+tonight|bu gece|G|||Bu gece gökyüzünde dolunay var|A boy looks out of a window at a big full moon and stars.|lavender|E
+tomorrow|yarın|G|||Yarınki gezi için çantasını hazırladı|A girl packs a backpack on her bed for a trip the next day.|green|E
+date|tarih; randevu|G|||Takvimde önemli tarihi işaretledi|A girl circles a day on a wall calendar with a red pen; no digits.|cream|E
+now|şimdi|G|||Yağmur şimdi başladı|A boy opens an umbrella as the first raindrops fall.|sky-blue|E
+again|tekrar|G|||Düşünce kalkıp tekrar denedi|A girl on roller skates gets up after falling and tries again with determination.|mint|E
+check|kontrol etmek|K|çek|ses|Çekmeceyi çekip anahtarı kontrol etti|A boy pulls open a drawer to check that his key is inside.|cream|E
+bill|fatura; hesap|G|||Garson hesabı masaya bıraktı|A waiter puts a small folded bill on a restaurant table; the paper is blank.|peach|E
+sound|ses; kulağa gelmek|K|sauna|ses|Saunadan tuhaf bir ses geldi|A surprised boy in a towel looks at a small wooden sauna door from which musical notes and a funny "boing" shape come out; no text.|peach|E
+hold on|beklemek (hatta)|I|||Hatta kal dedi ve kardeşini çağırdı|A boy holds a phone against his chest and calls to his sister in another room.|sky-blue|E
+put through|telefonu bağlamak|I|||Santral memuru aramayı bağladı|A smiling operator with a headset connects a call by pushing a button on a desk phone.|lavender|E
+at the moment|şu anda|I|||Şu anda banyoda, gelemez|A boy on the phone points to a closed bathroom door, explaining that his brother is busy.|cream|E
+just a minute|bir dakika|I|||Bir dakika deyip parmağını kaldırdı|A girl on the phone holds up one finger to her friend, asking her to wait.|yellow|E
+keep in touch|iletişimde kalmak|I|||Taşınsalar da iletişimde kaldılar|Two friends far apart wave to each other on video call screens; the screens show only faces.|pink|E
+take care|kendine iyi bak|I|||Ayrılırken kendine iyi bak dedi|A grandmother hugs her grandson goodbye at the door.|peach|E
+get well soon|geçmiş olsun|I|||Hasta arkadaşına geçmiş olsun kartı verdi|A girl gives a handmade card with a flower drawing to a friend in bed; the card has no text.|pink|E
+feel better|daha iyi hissetmek|I|||İlacını içince daha iyi hissetti|A boy sitting up in bed smiles after drinking a glass of warm tea.|mint|E
+make a phone call|telefon etmek|I|||Dedesine telefon etti|A girl dials a phone at home and smiles as she waits; the screen is blank.|cream|E
+send a message|mesaj göndermek|I|||Arkadaşına mesaj gönderdi|A boy types on his phone and a small speech bubble flies out; no text.|sky-blue|E
+smartphone|akıllı telefon|I|||Akıllı telefonla harita açtı|A girl holds a smartphone showing a simple map with a red pin; no text.|mint|E
+you're welcome|bir şey değil|I|||Teşekkür edince bir şey değil dedi|A boy holds a door open for a lady with shopping bags; she thanks him and he smiles.|green|E
+waste time|vakit kaybetmek|I|||Bütün gün koltukta vakit kaybetti|A boy lies on a sofa yawning while a clock and unfinished homework wait on the table.|cream|E
+how often|ne sıklıkla|I|||Ne sıklıkla yüzmeye gittiğini sordu|A girl in a swimsuit points at a calendar while her friend asks a question; no digits.|sky-blue|E
+o'clock|saat (tam)|I|||Saat tam üçte buluştular|Two friends meet under a big round street clock showing three o'clock with hands only; no digits.|cream|E
+dial a number|numara çevirmek|I|||Eski telefonda numara çevirdi|A girl turns the dial of an old rotary phone with one finger.|peach|E

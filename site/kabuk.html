@@ -43,14 +43,14 @@ __MENU__
     </nav>
     <div class="ust-sag">
 __DIL_SECICI__
-      <a class="ust-giris" href="/ingilizce/?giris=1" data-giris>__K_GIRIS__</a>
+      <a class="ust-giris" href="/ingilizce/?giris=1&amp;bolum=__BOLUM__" data-giris>__K_GIRIS__</a>
       <span class="ust-cta"><a class="btn btn-sari" href="__BASLA_YOL__" data-basla>__K_BASLA__</a></span>
       <button class="menu-dugme" type="button" aria-expanded="false" aria-controls="mobil-menu">__K_MENU__</button>
     </div>
   </div>
   <nav class="mobil-menu" id="mobil-menu" aria-label="__K_MENU__">
 __MENU__
-      <a href="/ingilizce/?giris=1" data-giris>__K_GIRIS__</a>
+      <a href="/ingilizce/?giris=1&amp;bolum=__BOLUM__" data-giris>__K_GIRIS__</a>
 __DIL_SECICI__
   </nav>
 </header>
@@ -78,7 +78,7 @@ __ICERIK__
     <nav aria-label="__K_UYGULAMA__">
       <h3>__K_UYGULAMA__</h3>
       <a href="__BASLA_YOL__" data-basla>__K_BASLA__</a>
-      <a href="/ingilizce/?giris=1" data-giris>__K_GIRIS__</a>
+      <a href="/ingilizce/?giris=1&amp;bolum=__BOLUM__" data-giris>__K_GIRIS__</a>
       <a href="__K_ANA__#yontem">__K_NASIL__</a>
       <a href="__K_ANA__#neden">__K_NEDEN__</a>
     </nav>
@@ -137,10 +137,24 @@ __OGREN_MENU__
   var dugme = document.querySelector('.menu-dugme');
   var menu = document.getElementById('mobil-menu');
   if (dugme && menu) {
-    dugme.addEventListener('click', function () {
+    var kapat = function () {
+      menu.classList.remove('acik');
+      dugme.setAttribute('aria-expanded', 'false');
+    };
+    dugme.addEventListener('click', function (e) {
+      e.stopPropagation();
       var acik = menu.classList.toggle('acik');
       dugme.setAttribute('aria-expanded', acik ? 'true' : 'false');
     });
+    /*
+      Bir maddeye dokununca menu kapanir (31 Ekim). Ozellikle ayni sayfadaki
+      #bolum baglantilarinda sayfa degismiyor, menu acik kalip icerigi
+      kapatiyordu; geri tusuyla donuste de (bfcache) acik geliyordu.
+    */
+    menu.addEventListener('click', function (e) { if (e.target.closest('a')) kapat(); });
+    document.addEventListener('click', function (e) { if (!menu.contains(e.target)) kapat(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') kapat(); });
+    window.addEventListener('pageshow', kapat);
   }
 
   /*
@@ -183,7 +197,9 @@ __OGREN_MENU__
     document.documentElement.classList.add('girisli');
     var don = en ? 'Back to lessons' : 'Derslerime dön';
     document.querySelectorAll('[data-giris]').forEach(function (a) {
-      a.href = '/ingilizce/';
+      // Girisli de bulundugu sekmenin bolumune doner (platformda bolum gecisi yok).
+      var b = document.body.getAttribute('data-bolum');
+      a.href = b === 'lgs' || b === 'genel' ? '/ingilizce/?bolum=' + b : '/ingilizce/';
       a.textContent = don;
     });
     // Ustteki giris baglantisi yalniz telefonda gorunuyor; 375 px'te kisa ad sigiyor.
