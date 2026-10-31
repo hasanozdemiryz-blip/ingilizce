@@ -564,3 +564,15 @@ a.bilgi-rozet.lgs { background: #e6f6ff; }
   .lgs-giris-sayac b { font-size: 2rem; }
   .lgs-giris-sayac span { margin-top: 0; }
 }
+
+/* Cerez seridi (31 Ekim) — altta, icerigin ustunde; secim yapilinca kaybolur */
+.cerez-serit { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 60; max-width: 720px; margin: 0 auto; display: flex; gap: 14px; align-items: center; justify-content: space-between; background: var(--beyaz); border: 2px solid var(--lacivert); border-radius: 18px; box-shadow: var(--sert); padding: 14px 16px; }
+.cerez-serit[hidden] { display: none; }
+.cerez-serit p { margin: 0; font-size: .9rem; color: var(--soft); }
+.cerez-serit p a { color: var(--lacivert); font-weight: 700; }
+.cerez-dugmeler { display: flex; gap: 8px; flex-shrink: 0; }
+.cerez-dugmeler .btn { padding: 9px 14px; font-size: .9rem; }
+@media (max-width: 620px) {
+  .cerez-serit { flex-direction: column; align-items: stretch; left: 10px; right: 10px; bottom: 10px; }
+  .cerez-dugmeler .btn { flex: 1; }
+}

@@ -1,4 +1,4 @@
-<p class="ustbilgi">Hafızada İngilizce · Yürürlük tarihi: 5 Ekim 2026</p>
+<p class="ustbilgi">Hafızada İngilizce · Yürürlük tarihi: 5 Ekim 2026 · Son güncelleme: 31 Ekim 2026</p>
 
 <div class="vurgu">
   <p>
@@ -75,8 +75,9 @@
 <p>
   Uygulamanın nerede işe yaradığını, nerede takıldığını anlayabilmek için
   <strong>kendi sunucumuzda</strong> (Supabase altyapısı) tuttuğumuz bir tabloya
-  anonim kullanım olayları yazıyoruz. Üçüncü taraf bir analitik hizmeti, reklam
-  ağı veya izleyici (tracker) kullanılmaz.
+  anonim kullanım olayları yazıyoruz. Reklam ağı kullanılmaz. Tek üçüncü taraf ölçüm
+  aracı, yalnızca <strong>izin verirsen</strong> çalışan Microsoft Clarity'dir
+  (bkz. <a href="#cerezler">Çerezler</a>).
 </p>
 
 <h3>Gönderilen olaylar</h3>
@@ -139,13 +140,29 @@
 <h2>8. Reklam yok, satış yok</h2>
 <p>
   Uygulamada reklam gösterilmez. Hiçbir veri satılmaz, kiralanmaz veya pazarlama
-  amacıyla üçüncü taraflarla paylaşılmaz. Analitik dışında üçüncü taraf izleyici
-  (tracker) kullanılmaz.
+  amacıyla üçüncü taraflarla paylaşılmaz. İzin verdiğinde çalışan Microsoft Clarity
+  dışında üçüncü taraf izleyici (tracker) kullanılmaz.
 </p>
 
-<h2>9. Çerezler</h2>
+<h2 id="cerezler">9. Çerezler ve Microsoft Clarity</h2>
 <p>
-  Web sürümünde takip amaçlı çerez kullanılmaz. Uygulamanın çalışması için
+  Sitede ve platformda, <strong>yalnızca alttaki çerez şeridinde “Kabul et” dersen</strong>,
+  Microsoft Clarity çalışır. Clarity sayfada nereye tıklandığını, sayfanın ne kadar
+  kaydırıldığını, hangi sayfada çıkıldığını ve bunların anonim oturum kaydını tutar;
+  bunun için çerez ve benzeri tanımlayıcılar kullanır. Amaç siteyi ve platformu
+  kullanımı kolay hâle getirmektir; reklam için kullanılmaz. Form alanlarına ve
+  şifrelere yazdıkların kayda girmez (maskelenir). Clarity, Microsoft Corporation
+  tarafından sağlanır ve veriler ABD'deki sunucularda işlenebilir. Ayrıntı:
+  <a href="https://privacy.microsoft.com/tr-tr/privacystatement" target="_blank" rel="noopener">Microsoft Gizlilik Bildirimi</a>.
+</p>
+<p>
+  “Reddet” dersen ya da hiçbir seçim yapmazsan Clarity hiç yüklenmez. Kararını
+  sayfanın en altındaki <strong>Çerez tercihleri</strong> bağlantısından istediğin an
+  değiştirebilirsin; platformda ayrıca <strong>Ayarlar → Kullanım istatistikleri</strong>
+  kapatılınca Clarity de çalışmaz.
+</p>
+<p>
+  Bunun dışında takip amaçlı çerez kullanılmaz. Uygulamanın çalışması için
   tarayıcının yerel depolama alanları (IndexedDB, Cache Storage, Local Storage)
   kullanılır. Giriş yaptıysan oturumunun açık kalması için bir oturum anahtarı da
   bu alanda tutulur.

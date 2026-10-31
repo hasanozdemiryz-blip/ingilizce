@@ -2549,6 +2549,15 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
 - **31 Ekim öğleden sonra bitti:** Google hesabına şifre belirleme, **Genel/LGS ilerlemesi
   ayrı** (PLAN v3 madde 1), platformda bölüm rozeti, girişli + misafir kullanıcı testi
   (ayrıntı: NEREDE KALDIK → "31 Ekim — ilerleme ayrımı").
+- **31 Ekim akşam:** PLAN v3 ilk tur yayında (Pekiştir, LGS haritası, tema, ünite görselleri);
+  profil hatası düzeltildi ("LGS'ye girince adım değişti": `profilSagla` öteki bölümden kopyalar,
+  `profilOtomatik` senkronda gerçeği ezmez). **Microsoft Clarity + çerez şeridi kodu hazır,
+  KİMLİK BEKLİYOR:** kullanıcı clarity.microsoft.com'da proje açıp kimliği verecek →
+  `clarity.config.json` `id` → platform push + `npm run site` → canlıda şerit çıkar. Yalnız
+  "Kabul et" diyende yüklenir (KVKK açık rıza; gizlilik §9 ve KVKK §6 güncellendi). Search
+  Console kurulu (kullanıcı). Site haritası her `npm run site`'ta kendiliğinden üretiliyor.
+  Supabase okuma (31 Ekim): 5 üye (hepsi Google), son 21 günde olaylar; bugünkü sayılar
+  Claude'un yerel testleriyle şişik (önizleme derlemesi .env.local ile gerçek tabloya yazıyor!).
 - **SIRADAKİ İŞ: PLAN v3'ün kalanı (madde 2–4) kullanıcıyla konuşulacak** (aşağıda), sonra
   blog yol haritası (NEREDE KALDIK → "31 Ekim"). Magnific bakiyesi **22.499** (31 Ekim;
   19 Ekim'deki "~57.000" notu eskimişti, arada başka işlerde harcanmış).

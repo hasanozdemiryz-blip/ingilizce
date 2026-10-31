@@ -6,6 +6,7 @@ import { olcumHazirla, olay } from './analitik';
 import { kaynakVerisi } from './kaynak';
 import { profilSagla } from './db';
 import { bolumleriAyir } from './senkron';
+import { clarityHazirla } from './clarity';
 import { geriHazirla } from './geri';
 import { hatirlatmaHazirla } from './reminder';
 import { telaffuzHazirla } from './speech';
@@ -62,6 +63,8 @@ void ayrim.then(profilSagla).then((state) => {
     disarida hicbir seye baglamiyor (bkz. analitik.ts).
   */
   olcumHazirla(state.olcum !== false, state.profil?.id);
+  // Clarity yalniz sitedeki cerez seridinde onay verilmisse (bkz. clarity.ts)
+  clarityHazirla(state.olcum !== false);
   // Nereden geldi (site ilk temasi + bu acilis): bkz. kaynak.ts
   olay('uygulama_acildi', kaynakVerisi());
 });

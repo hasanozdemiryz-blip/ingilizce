@@ -92,6 +92,7 @@ __OGREN_MENU__
       <a href="/gizlilik/">__K_GIZLILIK__</a>
       <a href="/kullanim-kosullari/">__K_KOSULLAR__</a>
       <a href="/kvkk/">__K_KVKK__</a>
+      <a href="#" data-cerez-ac hidden>__K_CEREZ__</a>
     </nav>
   </div>
   <div class="kap alt-cizgi">
@@ -213,6 +214,54 @@ __OGREN_MENU__
       a.textContent = en ? 'Continue' : 'Devam et';
     });
   } catch (e) {}
+})();
+</script>
+<div class="cerez-serit" id="cerez-serit" role="dialog" aria-live="polite" aria-label="__K_CEREZ__" hidden>
+  <p>__K_CEREZ_METIN__ <a href="/gizlilik/#cerezler">__K_CEREZ_AYRINTI__</a></p>
+  <div class="cerez-dugmeler">
+    <button type="button" class="btn btn-beyaz" data-cerez="hayir">__K_CEREZ_RET__</button>
+    <button type="button" class="btn btn-lacivert" data-cerez="evet">__K_CEREZ_KABUL__</button>
+  </div>
+</div>
+<script>
+/*
+  CEREZ ONAYI + MICROSOFT CLARITY (31 Ekim). Clarity (isi haritasi, oturum
+  kaydi) ucuncu taraf ve yurt disina aktarim: YALNIZ "Kabul et" denirse
+  yuklenir. Secim `hafizada-cerez`te; platform da ayni adreste ayni secimi
+  okuyor (src/clarity.ts). Kimlik bossa (clarity.config.json) serit de cikmaz.
+*/
+(function () {
+  var ID = '__CLARITY_ID__';
+  if (!ID) return;
+  var A = 'hafizada-cerez';
+  var serit = document.getElementById('cerez-serit');
+  var oku = function () { try { return localStorage.getItem(A); } catch (e) { return 'hayir'; } };
+  var yaz = function (v) { try { localStorage.setItem(A, v); } catch (e) {} };
+  var yukle = function () {
+    if (window.clarity) return;
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+      t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, 'clarity', 'script', ID);
+    window.clarity('set', 'alan', 'site');
+  };
+  document.querySelectorAll('[data-cerez-ac]').forEach(function (a) {
+    a.hidden = false;
+    a.addEventListener('click', function (e) { e.preventDefault(); serit.hidden = false; });
+  });
+  serit.querySelectorAll('[data-cerez]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var v = b.getAttribute('data-cerez');
+      yaz(v);
+      serit.hidden = true;
+      if (v === 'evet') yukle();
+      // Onay geri alindiysa Clarity'nin bu sayfada calismasi durmaz; bir sonraki sayfada yuklenmez.
+    });
+  });
+  var secim = oku();
+  if (secim === 'evet') yukle();
+  else if (secim !== 'hayir') serit.hidden = false;
 })();
 </script>
 __SCRIPT__
