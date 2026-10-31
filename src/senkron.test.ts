@@ -275,3 +275,17 @@ describe('paketiAyir — Genel ve LGS (31 Ekim)', () => {
     expect(satiriOku(null)).toEqual({ genel: null, lgs: null });
   });
 });
+
+describe('birlestir — otomatik profil (31 Ekim)', () => {
+  it('kendiliginden uretilmis profil, damgasi yeni olsa da gercek profili ezmez', () => {
+    const gercek = paket('2026-10-30T10:00:00Z', {
+      state: durum({ profil: { ad: 'Hasan' } as AppState['profil'], tercihDegisti: 1 }),
+    });
+    const otomatik = paket('2026-10-31T10:00:00Z', {
+      state: durum({ profil: { ad: 'Çevik Baykuş' } as AppState['profil'], profilOtomatik: true, tercihDegisti: 9 }),
+    });
+    expect(birlestir(otomatik, gercek).state.profil?.ad).toBe('Hasan');
+    expect(birlestir(gercek, otomatik).state.profil?.ad).toBe('Hasan');
+    expect(birlestir(otomatik, gercek).state.profilOtomatik).toBe(false);
+  });
+});

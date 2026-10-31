@@ -293,6 +293,14 @@ export type AppState = {
    * arttikca kalip daha seyrek geri gelir (bkz. Pekistir).
    */
   lgsKalip?: Record<string, { d: number; t: number }>;
+  /**
+   * Profil KENDILIGINDEN mi uretildi (rastgele ad + hayvan, bkz. db.ts profilSagla).
+   * 31 Ekim: bolumler ayrilinca LGS'yi bir cihazda ilk acan uyenin LGS kaydinda
+   * profil yoktu, rastgele uretildi ve senkronda hesaptaki gercek adi ezebildi
+   * (kullanici: "LGS'ye girdim, adim degisti"). Otomatik profil senkronda gercek
+   * bir profile asla ustun gelmiyor; kullanici profili kaydedince bayrak kalkiyor.
+   */
+  profilOtomatik?: boolean;
   /** LGS diyalog ilerlemesi: "3-2" → dogru cozuldugu zaman (ms). */
   lgsDiyalog?: Record<string, number>;
 };

@@ -225,7 +225,32 @@ export async function getState(): Promise<AppState> {
 export async function profilSagla(): Promise<AppState> {
   const state = await getState();
   if (state.profil) return state;
-  return setState({ profil: yeniProfil() });
+  /*
+    Once AYNI CIHAZDAKI oteki bolume bak (31 Ekim): LGS'yi ilk kez acan kisinin
+    Genel'de zaten bir adi ve resmi var; ona rastgele yeni bir ad uretmek
+    "adim degisti" demek. Oradaki profil damgasiyla birlikte tasiniyor ki
+    senkronda da gercek profil sayilsin.
+  */
+  for (const ad of Object.values(DB_ADI)) {
+    if (ad === db.name) continue;
+    const oteki = new AppDB(ad);
+    try {
+      const row = await oteki.meta.get(APP_KEY);
+      const s = row?.value as Partial<AppState> | undefined;
+      if (s?.profil) {
+        return setState({
+          profil: s.profil,
+          ...(s.tercihDegisti ? { tercihDegisti: s.tercihDegisti } : {}),
+          ...(s.profilOtomatik ? { profilOtomatik: true } : {}),
+        });
+      }
+    } catch {
+      /* oteki bolum hic acilmamis — sorun degil */
+    } finally {
+      oteki.close();
+    }
+  }
+  return setState({ profil: yeniProfil(), profilOtomatik: true });
 }
 
 /**
@@ -257,7 +282,7 @@ export async function setState(patch: Partial<AppState>): Promise<AppState> {
  * oldugunu biliyor (bkz. types.ts `tercihDegisti`).
  */
 export const tercihKaydet = (patch: Partial<AppState>): Promise<AppState> =>
-  setState({ ...patch, tercihDegisti: Date.now() });
+  setState({ ...patch, ...(patch.profil ? { profilOtomatik: false } : {}), tercihDegisti: Date.now() });
 
 /**
  * Seans tamamlaninca cagrilir: gunluk etkinligi kaydeder ve seriyi isler.

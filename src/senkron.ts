@@ -174,8 +174,17 @@ export function birlestir(a: Paket, b: Paket): Paket {
   const db_ = b.state.tercihDegisti ?? 0;
   const tercihKaynagi = da === db_ ? taze : da > db_ ? a : b;
   const t = tercihKaynagi.state;
+  /*
+    Profil ayrica: bir tarafinki KENDILIGINDEN uretilmis (rastgele ad), oteki
+    gercekse gercegi al — damgalar ne derse desin (bkz. types.ts profilOtomatik).
+  */
+  const profilKaynagi =
+    a.state.profil && b.state.profil && Boolean(a.state.profilOtomatik) !== Boolean(b.state.profilOtomatik)
+      ? (a.state.profilOtomatik ? b : a).state
+      : t;
   const tercihler: Partial<AppState> = {
-    profil: t.profil,
+    profil: profilKaynagi.profil,
+    profilOtomatik: Boolean(profilKaynagi.profilOtomatik),
     sound: t.sound,
     dailyLimit: t.dailyLimit,
     reminderHour: t.reminderHour,
@@ -233,7 +242,7 @@ export function birlestir(a: Paket, b: Paket): Paket {
 */
 
 /** Her iki bolume de giden kisisel tercihler. Ilerleme ve seri gitmez. */
-const ORTAK_TERCIHLER = ['profil', 'sound', 'dailyLimit', 'reminderHour', 'reminderMinute', 'olcum', 'tercihDegisti', 'uyelikDavetGorulen'] as const;
+const ORTAK_TERCIHLER = ['profil', 'profilOtomatik', 'sound', 'dailyLimit', 'reminderHour', 'reminderMinute', 'olcum', 'tercihDegisti', 'uyelikDavetGorulen'] as const;
 
 /**
  * Ayrilmamis paketi Genel ve LGS'ye boler. Saf fonksiyon.
