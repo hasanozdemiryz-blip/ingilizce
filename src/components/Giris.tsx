@@ -176,6 +176,18 @@ export function Giris({
       return;
     }
 
+    // Ayarlar'dan sifre belirlendi/degisti: sessizce kapanirsa "oldu mu?" sorusu kaliyor.
+    if (kip === 'yeniSifre' && !zorunlu) {
+      const e = uyeOku()?.eposta;
+      setBitis({
+        baslik: t('Şifren kaydedildi'),
+        metin: e
+          ? t('Artık {eposta} adresin ve bu şifreyle de giriş yapabilirsin.', { eposta: e })
+          : t('Artık bu şifreyle de giriş yapabilirsin.'),
+        ipucu: '',
+      });
+      return;
+    }
     // Giris, Google ve yeni sifre: oturum acildi, yapacak bir sey kalmadi.
     onKapat(true);
   }
@@ -206,8 +218,8 @@ export function Giris({
       dugme: t('Bağlantı gönder'),
     },
     yeniSifre: {
-      baslik: t('Yeni şifreni belirle'),
-      aciklama: t('Bundan sonra bu şifreyle gireceksin.'),
+      baslik: baslik ?? t('Yeni şifreni belirle'),
+      aciklama: aciklama ?? t('Bundan sonra bu şifreyle gireceksin.'),
       dugme: t('Şifreyi kaydet'),
     },
     bilgi: {

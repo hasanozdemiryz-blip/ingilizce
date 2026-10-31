@@ -166,6 +166,13 @@ export type Uye = {
   /** Saglayicinin verdigi ad (Google). Bilgi adimi atlandiysa gosterilen ad. */
   saglayiciAdi: string | null;
   /**
+   * E-posta + sifreyle girebilir mi (31 Ekim). Google ile acilan hesabin sifresi
+   * yok; Ayarlar'dan "Sifre belirle" ile bir tane koyunca ikisiyle de girer.
+   * Supabase `providers` listesine her zaman 'email' eklemiyor, bu yuzden
+   * sifre belirlenince `user_metadata.sifre` de yaziliyor (bkz. sifreBelirle).
+   */
+  sifreVar: boolean;
+  /**
    * "Kendini tanit" bir kez soruldu mu — doldurulsun ya da gecilsin.
    * Hesapta (`user_metadata.tanitim`) duruyor ki baska cihazdan girince
    * ayni soru tekrar gelmesin (bkz. GirisYapildi).
@@ -223,7 +230,7 @@ type HamKullanici = {
   id: string;
   email?: string | null;
   user_metadata?: unknown;
-  app_metadata?: { provider?: string };
+  app_metadata?: { provider?: string; providers?: string[] };
 };
 
 function uyeden(k: HamKullanici | null | undefined): Uye | null {
@@ -235,6 +242,10 @@ function uyeden(k: HamKullanici | null | undefined): Uye | null {
     eposta: k.email ?? null,
     saglayici: k.app_metadata?.provider ?? null,
     saglayiciAdi: sAdi ?? null,
+    sifreVar:
+      k.app_metadata?.provider === 'email' ||
+      Boolean(k.app_metadata?.providers?.includes('email')) ||
+      ham?.sifre === true,
     tanitimGoruldu: Boolean(ham?.tanitim) || Boolean(ham?.seviye || ham?.hedef),
     // `tamam` yoksa bilgi girilmemis demektir; yarim metadata'yi bilgi sayma.
     bilgi: ham?.tamam && ham.ad ? (ham as UyeBilgi) : null,
@@ -566,7 +577,8 @@ export async function sifreBelirle(yeniSifre: string): Promise<Sonuc> {
   }
   const c = await istemciyiKur();
   if (!c) return BAGLANAMADI;
-  const { error } = await c.auth.updateUser({ password: yeniSifre });
+  // `sifre: true`: Google ile acilan hesapta artik sifre de var (bkz. Uye.sifreVar).
+  const { error } = await c.auth.updateUser({ password: yeniSifre, data: { sifre: true } });
   return error ? { oldu: false, hata: cevir(error.message) } : { oldu: true };
 }
 

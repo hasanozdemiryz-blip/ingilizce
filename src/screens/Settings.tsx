@@ -332,10 +332,11 @@ export function Settings({
                 </div>
                 <div className="flex flex-wrap gap-2">
                   <Kucuk onClick={() => setBilgiAcik(true)}>{t('Bilgilerimi düzenle')}</Kucuk>
-                  {/* Google ile girenin sifresi yok; dugme kafa karistiriyordu */}
-                  {uye.saglayici !== 'google' && (
-                    <Kucuk onClick={() => setSifreAcik(true)}>{t('Şifre değiştir')}</Kucuk>
-                  )}
+                  {/*
+                    Google ile girenin sifresi yok: ona "Sifre belirle" (31 Ekim, kullanici:
+                    Google'la girdikten sonra e-posta + sifreyle de girebilmek istiyor).
+                  */}
+                  <Kucuk onClick={() => setSifreAcik(true)}>{uye.sifreVar ? t('Şifre değiştir') : t('Şifre belirle')}</Kucuk>
                   {/*
                     CIKIS BURADA, hesabin yaninda. Once sayfanin dibinde,
                     "Hesabi sil"in yaninda ve kirmiziydi; kullanici "cikis cok
@@ -538,7 +539,18 @@ export function Settings({
         diline hic benzemiyor.
       */}
       {girisAcik && <Giris onKapat={() => setGirisAcik(false)} />}
-      {sifreAcik && <Giris baslangicKip="yeniSifre" onKapat={() => setSifreAcik(false)} />}
+      {sifreAcik && (
+        <Giris
+          baslangicKip="yeniSifre"
+          onKapat={() => setSifreAcik(false)}
+          {...(uye && !uye.sifreVar
+            ? {
+                baslik: t('Şifre belirle'),
+                aciklama: t('Google’ın yanında {eposta} adresin ve bu şifreyle de girebileceksin.', { eposta: uye.eposta ?? '' }),
+              }
+            : {})}
+        />
+      )}
       {bilgiAcik && <Giris baslangicKip="bilgi" onKapat={() => setBilgiAcik(false)} />}
 
       {silmeDurum !== 'kapali' && (
