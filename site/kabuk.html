@@ -232,7 +232,7 @@ __OGREN_MENU__
 */
 (function () {
   var ID = '__CLARITY_ID__';
-  if (!ID) return;
+  if (!ID || /^(localhost|127.0.0.1)$/.test(location.hostname)) return;
   var A = 'hafizada-cerez';
   var serit = document.getElementById('cerez-serit');
   var oku = function () { try { return localStorage.getItem(A); } catch (e) { return 'hayir'; } };

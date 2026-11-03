@@ -46,6 +46,12 @@ describe('pekistirSec', () => {
     expect(pekistirSec(icerik, { ...temel, oran: 0.25, diyalog: { '1-1': 1 } }).diyalog).toBeNull();
   });
 
+  it('deneme dersi (ilk ders): esik olmadan diyalog, kelimesi gecen once', () => {
+    const s = pekistirSec(icerik, { ...temel, bugunKelimeler: ['come'], ilkDers: true });
+    expect(s.diyalog).toBe(0);
+    expect(s.kaliplar).toHaveLength(1);
+  });
+
   it('bos satir ilk satir degil, en uzun satir', () => {
     expect(bosSatir(icerik.diyaloglar[0].satirlar)).toBe(1);
   });

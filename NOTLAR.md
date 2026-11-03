@@ -2638,6 +2638,15 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
 16. **Kelime sayısı yeter** (kullanıcı, 19 Ekim): LGS'ye bundan sonra yeni kelime
     eklenmez; üretilen 1.016 LGS kartı (387 + 629 ek) + uniteye bağlı 121 Genel kartı ve Genel'e
     akanlar yeterli. Sıradaki iş içerik değil, LGS'nin ürün deneyimi.
+17. **LGS ders sonu kalıp/diyalog (31 Ekim):** kelimeler aynen kalır; ders sonuna o günün
+    kelimeleriyle 1–2 kalıp + ünite ilerledikçe diyalog ("Pekiştir"). Gramer anlatımı yine yok.
+18. **V3 kararları (3 Kasım):**
+    - **LGS deneme dersi** = ilk ders: 5 kelime + o kelimelerle 1 kalıp + kısa diyalog,
+      sonunda "ilerlemeni kaydet" daveti.
+    - **Ünite "bitti"** = kelimelerin %80'i + ünite testi ≥ 7/10 (kalıp/diyalog şart değil).
+    - **LGS günlük hedef** = 5/10/15 seçimi kalır; LGS'de "sınava yetişmek için günde N"
+      önerisi gösterilir, tek dokunuşla seçilir.
+    - Ölçüm tablosundaki 31 Ekim test kayıtları silindi (17 kayıt, 3 test cihazı).
 
 #### PLAN (onaylı 19 Ekim) — neden / ne / bitti
 

@@ -55,8 +55,13 @@ void hatirlatmaHazirla();
   bitmeden okuyan ekran LGS kartlarini Genel'de gosterirdi. IndexedDB, milisaniyeler.
 */
 const ayrim = bolumleriAyir();
+/*
+  Ekran profil HAZIR olduktan sonra aciliyor (3 Kasim): profil olusturma ile
+  ekranin ilk yazmalari (siteden gelen unite istegi) yarisiyordu.
+*/
+const profil = ayrim.then(profilSagla);
 
-void ayrim.then(profilSagla).then((state) => {
+void profil.then((state) => {
   /*
     Olcum profil KURULDUKTAN sonra basliyor: kullanici kimligi olarak
     `Profil.id` veriliyor — rastgele, kisisel veri degil, ve kullaniciyi
@@ -102,7 +107,7 @@ if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
  * giris baglantisindan donulduyse. Ilk kez gelen ziyaretciye tek bayt
  * inmiyor (bkz. uyelik.ts).
  */
-void ayrim.then(() => {
+void profil.catch(() => undefined).then(() => {
   void uyelikHazirla();
   createRoot(document.getElementById('root')!).render(
     <StrictMode>

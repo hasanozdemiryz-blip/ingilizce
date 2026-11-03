@@ -120,3 +120,19 @@ export function uniteKalipDurumu(
     diyalog: Object.keys(diyalog ?? {}).filter((k) => k.startsWith(on)).length,
   };
 }
+
+/**
+ * Unite "bitti" (KARARLAR 18, 3 Kasim): kelimelerin %80'i ve unite testi
+ * en az 7/10. Kalip ve diyalog tesvik ediliyor ama sart degil — kelimesini
+ * bilen ve testi gecen uniteyi biliyor demektir.
+ */
+export const UNITE_BITTI = { oran: 0.8, test: 7 } as const;
+export const uniteBittiMi = (kelime: number, toplam: number, test: number | undefined): boolean =>
+  toplam > 0 && kelime / toplam >= UNITE_BITTI.oran && (test ?? -1) >= UNITE_BITTI.test;
+
+/** Sinavdan once tekrara birakilan gun: yeni kelime hesabinda dusuluyor. */
+export const LGS_TEKRAR_PAYI = 14;
+
+/** Sinava yetismek icin gunde kac yeni kelime gerekiyor (son 2 hafta tekrara). */
+export const lgsGunlukGereken = (kalanKelime: number, simdi = new Date()): number =>
+  Math.ceil(kalanKelime / Math.max(1, lgsyeKalanGun(simdi) - LGS_TEKRAR_PAYI));

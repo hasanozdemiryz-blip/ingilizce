@@ -18,6 +18,8 @@ type Props = {
   bugunKelimeler: string[];
   /** Unitenin ogrenilmis kelime orani (0–1): diyalog esikleri */
   oran: number;
+  /** LGS'deki ilk ders mi (deneme dersi: esiksiz diyalog, bkz. pekistir.ts) */
+  ilkDers?: boolean;
   lgsKalip: AppState['lgsKalip'];
   lgsDiyalog: AppState['lgsDiyalog'];
   /** Her dogru cozumden sonra cagrilir; App state'e yazar (senkronlu). */
@@ -32,7 +34,7 @@ type Props = {
  * varsa [diyalog: dinle, bos satiri sec]. Hicbir sey secilmezse (unite
  * bitmis, tekrar vadesi yok) ekran hic gorunmeden bitiyor.
  */
-export function Pekistir({ unite, bugunKelimeler, oran, lgsKalip, lgsDiyalog, onKaydet, onBitti: bittiDisari }: Props) {
+export function Pekistir({ unite, bugunKelimeler, oran, ilkDers, lgsKalip, lgsDiyalog, onKaydet, onBitti: bittiDisari }: Props) {
   // Bir kez: Gec, geri tusu ve bos secim ayni anda tetiklenebilir.
   const bitti = useRef(false);
   const onBitti = useCallback(() => {
@@ -53,7 +55,7 @@ export function Pekistir({ unite, bugunKelimeler, oran, lgsKalip, lgsDiyalog, on
 
   // Secim icerik gelince BIR KEZ yapiliyor; cozdukce degisen kayit secimi oynatmasin.
   const secim = useMemo(
-    () => (icerik ? pekistirSec(icerik, { bugunKelimeler, kalip: lgsKalip, diyalog: lgsDiyalog, oran }) : null),
+    () => (icerik ? pekistirSec(icerik, { bugunKelimeler, kalip: lgsKalip, diyalog: lgsDiyalog, oran, ilkDers }) : null),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [icerik],
   );

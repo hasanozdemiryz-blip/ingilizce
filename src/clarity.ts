@@ -20,6 +20,8 @@ let yuklendi = false;
 export function clarityHazirla(olcumAcik: boolean): void {
   const id = (ayar as { id?: string }).id;
   if (!id || yuklendi || !olcumAcik || typeof window === 'undefined') return;
+  // Yerel onizleme kayda girmesin (bkz. analitik.ts YEREL).
+  if (/^(localhost|127.0.0.1)$/.test(location.hostname)) return;
   let onay: string | null = null;
   try {
     onay = localStorage.getItem(CEREZ_ANAHTARI);

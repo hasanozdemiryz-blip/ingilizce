@@ -60,6 +60,12 @@ export function pekistirSec(
     diyalog: Record<string, number> | undefined;
     /** Unitenin ogrenilmis kelime orani, 0–1 */
     oran: number;
+    /**
+     * LGS DENEME DERSI (KARARLAR 18): ilk derste esik beklenmeden bir diyalog
+     * gelir — ogrenci ilk 3 dakikada urunun kelime kartindan fazlasi oldugunu
+     * gorsun. Bugunun kelimelerinin en cok gectigi diyalog secilir.
+     */
+    ilkDers?: boolean;
     simdi?: number;
   },
 ): Secim {
@@ -83,6 +89,11 @@ export function pekistirSec(
       diyalog = i;
       break;
     }
+  }
+  if (diyalog === null && o.ilkDers && icerik.diyaloglar.length > 0) {
+    const puan = (i: number) =>
+      icerik.diyaloglar[i].satirlar.filter((st) => o.bugunKelimeler.some((w) => kelimeGeciyor(st.en, w))).length;
+    diyalog = icerik.diyaloglar.map((_, i) => i).sort((a, b) => puan(b) - puan(a) || a - b)[0];
   }
   const adet = diyalog === null ? PEKISTIR_KALIP : 1;
   return { kaliplar: [...yeni, ...vadeli].slice(0, adet).map((x) => x.i), diyalog };

@@ -1,14 +1,12 @@
 import { UniteGorseli } from './UniteGorseli';
 import { Card } from './ui';
 import { CARDS, uniteKartlari } from '../content';
-import { lgsyeKalanGun, UNITE_SAYILARI, uniteKalipDurumu, UNITELER } from '../lgs';
+import { LGS_TEKRAR_PAYI, lgsGunlukGereken, lgsyeKalanGun, UNITE_SAYILARI, uniteBittiMi, uniteKalipDurumu, UNITELER } from '../lgs';
 import type { AppState, Progress } from '../types';
 import { t } from '../dil';
 
 /** Hiz olculurken bakilan gun sayisi. */
 const HIZ_GUN = 14;
-/** Sinavdan once tekrara birakilan gun — "yetismek icin" hesabinda dusuluyor. */
-const TEKRAR_PAYI = 14;
 
 /**
  * LGS ILERLEMESI (31 Ekim, PLAN v3): Genel'in ekrani yalniz kelime sayiyordu;
@@ -43,8 +41,8 @@ export function LgsHarita({
   const pencere = Math.min(HIZ_GUN, Math.max(1, Math.ceil((simdi - ilk) / 864e5) || 1));
   const hiz = tarihler.length / pencere;
   const gerekenGun = hiz > 0 ? Math.ceil(kalanKelime / hiz) : null;
-  const gunlukGereken = Math.ceil(kalanKelime / Math.max(1, kalanGun - TEKRAR_PAYI));
-  const yetisiyor = gerekenGun !== null && gerekenGun <= Math.max(0, kalanGun - TEKRAR_PAYI);
+  const gunlukGereken = lgsGunlukGereken(kalanKelime);
+  const yetisiyor = gerekenGun !== null && gerekenGun <= Math.max(0, kalanGun - LGS_TEKRAR_PAYI);
 
   return (
     <>
@@ -93,6 +91,7 @@ export function LgsHarita({
             const test = state.lgsTest?.[String(u.no)];
             const pct = kartlar.length ? Math.round((kelime / kartlar.length) * 100) : 0;
             const aktif = state.lgsUnite === u.no;
+            const bitti = uniteBittiMi(kelime, kartlar.length, test);
             return (
               <li key={u.no}>
                 <button
@@ -107,6 +106,7 @@ export function LgsHarita({
                     <span className="min-w-0 flex-1">
                       <span className="word block text-sm font-extrabold leading-tight truncate">
                         {u.no}. {u.ad}
+                        {bitti && <span className="ml-1.5 text-grow-deep">✓</span>}
                       </span>
                       <span className="mt-1 block h-1.5 rounded-full bg-white overflow-hidden">
                         <span className="block h-full rounded-full bg-brand" style={{ width: `${pct}%` }} />
@@ -117,7 +117,7 @@ export function LgsHarita({
                         {kelime}/{kartlar.length} · {kd.kalip}/{say.kalip} · {kd.diyalog}/{say.diyalog}
                       </span>
                       <span className={`block ${test !== undefined ? (test >= 7 ? 'text-grow-deep' : 'text-blush') : 'text-ink-faint'}`}>
-                        {test !== undefined ? t('test {n}/10', { n: test }) : t('test —')}
+                        {bitti ? t('tamamlandı') : test !== undefined ? t('test {n}/10', { n: test }) : t('test —')}
                       </span>
                     </span>
                   </span>

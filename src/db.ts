@@ -270,10 +270,18 @@ export async function profilAdiniGuncelle(ad: string): Promise<void> {
   await tercihKaydet({ profil: { ...state.profil, ad: temiz } });
 }
 
-export async function setState(patch: Partial<AppState>): Promise<AppState> {
-  const next = { ...(await getState()), ...patch };
-  await db.meta.put({ key: APP_KEY, value: next });
-  return next;
+/*
+  Oku-degistir-yaz TEK ISLEMDE (3 Kasim). Ayri olunca ayni anda gelen iki
+  yazma (ornek: acilista profil olusturma + siteden gelen unite istegi) ayni
+  eski durumu okuyup birbirini eziyordu; ?unite=1 ile gelen LGS'liye unite
+  yine soruluyordu. Dexie islemleri ayni tabloda sirayla calistiriyor.
+*/
+export function setState(patch: Partial<AppState>): Promise<AppState> {
+  return db.transaction('rw', db.meta, async () => {
+    const next = { ...(await getState()), ...patch };
+    await db.meta.put({ key: APP_KEY, value: next });
+    return next;
+  });
 }
 
 /**

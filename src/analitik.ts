@@ -38,7 +38,15 @@ const ANAHTAR = import.meta.env.VITE_SUPABASE_ANON_KEY;
  * saglayan sey Postgres'in satir duzeyi guvenligi (RLS). Tablo yalnizca
  * INSERT'e acik; kimse yazilani geri okuyamaz (bkz. NOTLAR'daki SQL).
  */
-export const olcumVarMi = (): boolean => Boolean(ADRES && ANAHTAR);
+/*
+  YEREL KOPYADA OLCUM YOK (3 Kasim). Yerel onizleme (`npx serve`, localhost)
+  .env.local'daki gercek adresle derleniyor ve testler gercek tabloya yaziyordu:
+  31 Ekim'in sayilari test cihazlariyla sisti, elle silindi.
+*/
+const YEREL =
+  typeof location !== 'undefined' && /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+
+export const olcumVarMi = (): boolean => Boolean(ADRES && ANAHTAR) && !YEREL;
 
 /**
  * Olay adlari SABIT bir liste.

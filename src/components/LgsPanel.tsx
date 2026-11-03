@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { UniteGorseli } from './UniteGorseli';
 import { Button, Card } from './ui';
-import { lgsyeKalanGun, UNITE_SAYILARI, uniteKalipDurumu, UNITELER } from '../lgs';
+import { lgsyeKalanGun, UNITE_SAYILARI, uniteBittiMi, uniteKalipDurumu, UNITELER } from '../lgs';
 import { uniteKartlari } from '../content';
 import type { AppState, Progress } from '../types';
 import { t } from '../dil';
@@ -12,6 +12,7 @@ type Props = {
   unite?: number;
   lgsKalip?: AppState['lgsKalip'];
   lgsDiyalog?: AppState['lgsDiyalog'];
+  lgsTest?: AppState['lgsTest'];
   onYil: (yil: 2027 | 2028) => void;
   onUnite: (no: number) => void;
   /** Unite sayfasini ac (kaliplar, diyaloglar, test) */
@@ -26,7 +27,7 @@ type Props = {
  * KILITSIZ: her an baska uniteye gecilebilir; secim yalnizca yeni
  * kelimelerin hangi uniteden gelecegini belirliyor.
  */
-export function LgsPanel({ progress, yil, unite, lgsKalip, lgsDiyalog, onYil, onUnite, onUniteAc }: Props) {
+export function LgsPanel({ progress, yil, unite, lgsKalip, lgsDiyalog, lgsTest, onYil, onUnite, onUniteAc }: Props) {
   const [uniteSeciliyor, setUniteSeciliyor] = useState(false);
 
   if (!yil) {
@@ -83,6 +84,7 @@ export function LgsPanel({ progress, yil, unite, lgsKalip, lgsDiyalog, onYil, on
                     <span className="block text-sm opacity-75">{u.tr}</span>
                   </span>
                   <span className="shrink-0 text-sm font-bold tabular-nums opacity-80">
+                    {uniteBittiMi(d.bitti, d.toplam, lgsTest?.[String(u.no)]) ? '✓ ' : ''}
                     {d.bitti}/{d.toplam}
                   </span>
                 </button>
@@ -122,7 +124,14 @@ export function LgsPanel({ progress, yil, unite, lgsKalip, lgsDiyalog, onYil, on
           <p className="text-xs font-bold text-ink-soft">
             {t('{n}. ünite', { n: u.no })} · {u.tr}
           </p>
-          <p className="word text-xl font-extrabold leading-tight">{u.ad}</p>
+          <p className="word text-xl font-extrabold leading-tight">
+            {u.ad}
+            {uniteBittiMi(d.bitti, d.toplam, lgsTest?.[String(u.no)]) && (
+              <span className="ml-2 align-middle rounded-full bg-grow-soft px-2 py-0.5 text-[11px] font-extrabold text-grow-deep">
+                ✓ {t('tamamlandı')}
+              </span>
+            )}
+          </p>
         </div>
         <button
           type="button"

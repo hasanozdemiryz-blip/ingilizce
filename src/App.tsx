@@ -446,6 +446,8 @@ export default function App() {
         unite={unite}
         bugunKelimeler={ozet.yeniIdler.map((id) => CARD_BY_ID.get(id)?.en).filter((x): x is string => Boolean(x))}
         oran={oran}
+        // Deneme dersi (KARARLAR 18): LGS'de bugune kadar ogrenilenlerin hepsi bu dersten.
+        ilkDers={!state.lgsKalip && progress.filter((p) => p.introduced).length <= ozet.yeniIdler.length}
         lgsKalip={state.lgsKalip}
         lgsDiyalog={state.lgsDiyalog}
         onKaydet={(patch) => {
@@ -586,6 +588,7 @@ export default function App() {
                 unite={state.lgsUnite}
                 lgsKalip={state.lgsKalip}
                 lgsDiyalog={state.lgsDiyalog}
+                lgsTest={state.lgsTest}
                 onYil={(lgsYil) => {
                   olay('lgs_yil', { yil: lgsYil });
                   void tercihKaydet({ lgsYil });

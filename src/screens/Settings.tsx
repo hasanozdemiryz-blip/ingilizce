@@ -2,7 +2,9 @@ import { useRef, useState } from 'react';
 import { TAB_SPACE } from '../components/TabBar';
 import { Avatar } from '../components/Avatar';
 import { Button, Card, Screen } from '../components/ui';
-import { CARDS, LIMIT_CHOICES } from '../content';
+import { CARDS, LIMIT_CHOICES, LIMIT_MAX } from '../content';
+import { AKTIF_BOLUM } from '../bolum';
+import { lgsGunlukGereken } from '../lgs';
 import { olay, olcumHazirla, olcumVarMi, olcumuKapat } from '../analitik';
 import { exportProgress, importProgress, resetAll, setState, tercihKaydet } from '../db';
 import {
@@ -211,6 +213,7 @@ export function Settings({
               );
             })}
           </div>
+          {AKTIF_BOLUM === 'lgs' && <LgsHedefOnerisi state={state} progress={progress} />}
         </Card>
 
         {sesVar && (
@@ -696,6 +699,37 @@ function Satir({ ad, deger }: { ad: string; deger: string }) {
     <div className="flex items-center justify-between py-1.5 text-sm">
       <span className="text-ink-soft">{ad}</span>
       <span className="font-bold tabular-nums">{deger}</span>
+    </div>
+  );
+}
+
+/**
+ * LGS GUNLUK HEDEF ONERISI (KARARLAR 18): 5/10/15 secimi kaliyor; LGS'de altinda
+ * "sinava yetismek icin gunde N" yaziyor ve en yakin secim tek dokunusla seciliyor.
+ * Sinavdan once son 2 hafta tekrara birakiliyor (lgs.ts LGS_TEKRAR_PAYI).
+ */
+function LgsHedefOnerisi({ state, progress }: { state: AppState; progress: unknown[] }) {
+  const ogrenilen = (progress as { introduced?: boolean; bilinen?: boolean }[]).filter((p) => p.introduced || p.bilinen).length;
+  const kalan = Math.max(0, CARDS.length - ogrenilen);
+  if (kalan === 0) return null;
+  const gereken = lgsGunlukGereken(kalan);
+  const oneri = LIMIT_CHOICES.find((n) => n >= gereken) ?? LIMIT_MAX;
+  return (
+    <div className="mt-3 rounded-2xl bg-sunken px-4 py-3 text-sm">
+      <p className="text-ink-soft">
+        {gereken > LIMIT_MAX
+          ? t('LGS’ye yetişmek için günde {n} yeni kelime gerekiyor; en yüksek hedef 15. Ekstra dersle tamamlayabilirsin.', { n: gereken })
+          : t('LGS’ye yetişmek için günde {n} yeni kelime yeter.', { n: gereken })}
+      </p>
+      {state.dailyLimit !== oneri && (
+        <button
+          type="button"
+          onClick={() => void tercihKaydet({ dailyLimit: oneri })}
+          className="mt-2 rounded-full bg-brand px-4 py-1.5 text-sm font-bold text-white active:scale-95"
+        >
+          {t('Hedefimi {n} yap', { n: oneri })}
+        </button>
+      )}
     </div>
   );
 }
