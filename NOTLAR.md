@@ -2566,6 +2566,16 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
   (main.tsx `profil`). Yerel önizlemede (localhost) ölçüm ve Clarity KAPALI (analitik.ts
   `YEREL`). Blog 2. tur: veli rehberi, LGS kelime listesi merkez sayfası (13 yazı).
   Not: LGS katsayıları — Türkçe/Mat/Fen 4, Yabancı dil/İnkılap/Din 1 (yazılarda yanlış yazma).
+- **4 Kasım bitti:**
+  - **Çocuk sekmesi canlıdan kaldırıldı, silinmedi** (kullanıcı: "bizde olsun, canlıda görünmesin").
+    `tools/site.mjs` başında `COCUK_YAYINDA = false`: şerit, menü, altbilgi, ana sayfa kartı,
+    SSS cümlesi ve /cocuk/ sayfaları üretilmiyor; eski `/cocuk/` adresi ana sayfaya yönleniyor
+    (TASINAN). Kod ve `site-bolumler.mjs cocukSayfalari` duruyor; açmak için `true` + `npm run site`.
+  - **Instagram: 24 gönderi planlandı** (4–12 Kasım, günde 3: 09:30 / 13:00 / 20:00), Instagram
+    web'in kendi "İçeriği planla" özelliğiyle (Meta Business Suite değil). Liste ve yöntem:
+    `instagram/NOTLAR.md` → "4 Kasım planlama". Biyografi güncellendi. **Hikâyeler planlanamıyor**
+    (instagram.com ve uygulamada hikâye planlama yok; yalnız Business Suite) — Reels'ler
+    yayınlanınca "Hikâyene ekle" elle yapılacak ya da Business Suite'e karar verilecek.
 - **SIRADAKİ İŞ:** satış kararları (PLAN v2 I: ücretsiz sınır, fiyat, ödeme), Instagram
   reklamı (profil ziyareti; biyografi bağlantısı utm'li), Clarity verisi gelince UX analizi
   (birkaç gün sonra), Search Console'da yeni yazıların durumu. Magnific bakiyesi **22.499** (31 Ekim;
@@ -2583,7 +2593,8 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
    "uygulama" değil **"platform"**. `/ingilizce/` web platformu ürünün kendisi.
 2. **Sekmeler: Genel · LGS · Çocuk** (`/`, `/lgs/`, `/cocuk/`). Tidal tarzı şerit,
    sekmeye özel menü, logo bulunduğu sekmenin ana sayfasına gider.
-   **Çocuk bu süreçte tamamlanmayacak** (tanıtım sayfası duruyor).
+   **Çocuk bu süreçte tamamlanmayacak.** 4 Kasım: canlıda GİZLİ (`COCUK_YAYINDA = false`),
+   kod ve sayfalar depoda duruyor; geliştirince açılacak. Canlıda yalnız Genel · LGS.
 3. **Kancalar kalıyor**, kullanıcıya hep **"çağrışım"**. Yöntem: **görselleştirilmiş
    hafıza tekniği**. Çağrışım **ses** (succeed ≈ saksı) ya da **yazılış**
    (**deli**cious, **dev**ice, re**fuse** ≈ füze) — yazılış bizim farkımız.

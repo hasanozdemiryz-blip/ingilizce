@@ -54,11 +54,18 @@ const MENU = [
  * alt yazisi ve rengi var (stil.css `body[data-bolum]`). Ust serit
  * tidalcolors.com'daki marka sekmelerinden: kucuk "HAFIZADA" + bolum adi.
  */
-const BOLUMLER = {
+/**
+ * COCUK YAYINDA DEGIL (4 Kasim): kod ve sayfalar duruyor, canlida gorunmuyor.
+ * false iken: serit/menu/altbilgi/ana sayfa kartinda yok, /cocuk/ sayfalari
+ * uretilmiyor, eski /cocuk/ adresleri ana sayfaya yonleniyor. Acmak icin true.
+ */
+const COCUK_YAYINDA = false;
+const TUM_BOLUMLER = {
   genel: { ad: 'Genel', en: 'General', marka: 'İngilizce', ana: '/' },
   lgs: { ad: 'LGS', en: 'LGS', marka: 'LGS İngilizce', ana: '/lgs/' },
   cocuk: { ad: 'Çocuk', en: 'Kids', marka: 'Çocuklar için', ana: '/cocuk/' },
 };
+const BOLUMLER = COCUK_YAYINDA ? TUM_BOLUMLER : { genel: TUM_BOLUMLER.genel, lgs: TUM_BOLUMLER.lgs };
 /** Uygulamaya gecis: bolum parametresi uygulama sekmeleri gelince (Faz 3) okunacak. */
 // Bolum her zaman adreste: platformda bolum gecisi yok, hangi sekmeden girildiyse o acilir (31 Ekim).
 const baslaYol = (bolum) => `/ingilizce/?basla=1&amp;bolum=${bolum || 'genel'}`;
@@ -96,7 +103,7 @@ ${Object.entries(BOLUMLER)
 const OGREN = [
   ['/kelimeler/', 'Kelime listesi'],
   ['/lgs/', 'LGS kelimeleri'],
-  ['/cocuk/', 'Çocuklar için'],
+  ...(COCUK_YAYINDA ? [['/cocuk/', 'Çocuklar için']] : []),
   ['/blog/turkceye-benzeyen-ingilizce-kelimeler/', 'Türkçeye benzeyen kelimeler'],
   ['/blog/ses-kancasi-yontemi/', 'Çağrışım yöntemi'],
   ['/blog/', 'Blog'],
@@ -236,8 +243,8 @@ const SSS = [
     'Telefonun ve bilgisayarının tarayıcısında çalışır. Ana ekrana ekleyip uygulama gibi kullanabilirsin; internet yokken de açılır.',
   ],
   [
-    'LGS ve çocuklar için de var mı?',
-    'Evet. LGS sekmesinde 8. sınıfın 10 ünitesinin kelimeleri, LGS’de en çok çıkanlar ve mini testler var; platformda her ünitenin kelimeleri çağrışım ve görselleriyle, kalıpları, sesli diyalogları ve ünite testi. Çocuk sekmesi 2–6. sınıf için okul müfredatına uygun olarak hazırlanıyor.',
+    COCUK_YAYINDA ? 'LGS ve çocuklar için de var mı?' : 'LGS için de var mı?',
+    'Evet. LGS sekmesinde 8. sınıfın 10 ünitesinin kelimeleri, LGS’de en çok çıkanlar ve mini testler var; platformda her ünitenin kelimeleri çağrışım ve görselleriyle, kalıpları, sesli diyalogları ve ünite testi.' + (COCUK_YAYINDA ? ' Çocuk sekmesi 2–6. sınıf için okul müfredatına uygun olarak hazırlanıyor.' : ''),
   ],
 ];
 
@@ -269,8 +276,8 @@ const SSS_EN = [
     'It runs in the browser on your phone and computer. Add it to your home screen to use it like an app; it opens even without internet.',
   ],
   [
-    'Is there something for exams and kids?',
-    'Yes. The LGS tab covers the 8th-grade national exam vocabulary unit by unit, and the Kids tab is being prepared for grades 2–6 (both in Turkish).',
+    COCUK_YAYINDA ? 'Is there something for exams and kids?' : 'Is there something for exams?',
+    COCUK_YAYINDA ? 'Yes. The LGS tab covers the 8th-grade national exam vocabulary unit by unit, and the Kids tab is being prepared for grades 2–6 (both in Turkish).' : 'Yes. The LGS tab covers the 8th-grade national exam vocabulary unit by unit (in Turkish).',
   ],
 ];
 
@@ -812,11 +819,11 @@ async function derle(hedef) {
     return `<section class="kimin-icin" id="kimin-icin">
   <div class="kap">
     <h2>${en ? 'Who is it for?' : 'Kimin için?'}</h2>
-    <p class="ust">${en ? 'One method, three tabs. Pick yours at the top of the page.' : 'Tek yöntem, üç sekme. Sayfanın en üstünden seçebilirsin.'}</p>
+    <p class="ust">${en ? (COCUK_YAYINDA ? 'One method, three tabs. Pick yours at the top of the page.' : 'One method, two tabs. Pick yours at the top of the page.') : (COCUK_YAYINDA ? 'Tek yöntem, üç sekme. Sayfanın en üstünden seçebilirsin.' : 'Tek yöntem, iki sekme. Sayfanın en üstünden seçebilirsin.')}</p>
     <div class="bolum-kartlar">
       ${kart('genel', en ? 'Everyday English' : 'Günlük İngilizce', en ? `${genelSayi} everyday English words with Turkish memory hooks, beginner and intermediate.` : `${binlik(genelSayi)} günlük İngilizce kelime, Başlangıç ve Orta seviye; çağrışımları ve görselleriyle.`, en ? 'You are here' : 'Buradasın')}
       ${kart('lgs', en ? '8th grade national exam' : '8. sınıf, LGS', en ? `${lgsSayi} words in 10 units, the most frequent exam words, mini tests.` : `10 ünitede ${binlik(lgsSayi)} kelime ve kalıp; sesli diyaloglar, ünite testleri, LGS'de çıkan kelimeler.`, en ? 'LGS words (Turkish)' : 'LGS kelimeleri')}
-      ${kart('cocuk', en ? 'Kids, grades 2–6' : 'Çocuklar, 2–6. sınıf', en ? 'School-curriculum words with pictures. Coming soon.' : 'Okul müfredatına uygun, resimli kelimeler. Hazırlanıyor.', en ? 'For parents (Turkish)' : 'Veliler için')}
+      ${!COCUK_YAYINDA ? '' : kart('cocuk', en ? 'Kids, grades 2–6' : 'Çocuklar, 2–6. sınıf', en ? 'School-curriculum words with pictures. Coming soon.' : 'Okul müfredatına uygun, resimli kelimeler. Hazırlanıyor.', en ? 'For parents (Turkish)' : 'Veliler için')}
     </div>
   </div>
 </section>`;
@@ -1215,7 +1222,7 @@ ${yazilar
     blogListesi,
     ...blogSayfalari,
     ...lgsSayfalari(baglam),
-    ...cocukSayfalari(baglam),
+    ...(COCUK_YAYINDA ? cocukSayfalari(baglam) : []),
   ];
 
   /**
@@ -1298,6 +1305,8 @@ ${yazilar
     adreste kanonik + aninda yenileme. Google bunu kalici yonlendirme sayiyor.
   */
   const TASINAN = { 'lgs/en-onemli-25-kelime': '/lgs/ornek-kelimeler/' };
+  // Cocuk kapaliyken eski /cocuk/ adresleri bos kalmasin (4 Kasim).
+  if (!COCUK_YAYINDA) TASINAN.cocuk = '/';
   for (const [eski, yeni] of Object.entries(TASINAN)) {
     yaz(hedef, `${eski}/index.html`, `<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>Taşındı</title><link rel="canonical" href="${ALAN}${yeni}"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=${yeni}"></head><body><p><a href="${yeni}">Sayfa taşındı: ${yeni}</a></p></body></html>`);
   }
@@ -1334,7 +1343,7 @@ Sitemap: ${ALAN}/sitemap.xml
   );
 
   console.log(
-    `${hedef} — ${sayfalar.length} sayfa (${kelimeSayfalari.length} kelime, ${blogSayfalari.length} yazı, LGS + Çocuk ${sayfalar.filter((s) => s.bolum).length}) + 404, iletişim formu ${ILETISIM_HAZIR ? 'AÇIK' : 'kapalı (e-posta bağlantısı)'}`,
+    `${hedef} — ${sayfalar.length} sayfa (${kelimeSayfalari.length} kelime, ${blogSayfalari.length} yazı, LGS${COCUK_YAYINDA ? ' + Çocuk' : ''} ${sayfalar.filter((s) => s.bolum).length}) + 404, iletişim formu ${ILETISIM_HAZIR ? 'AÇIK' : 'kapalı (e-posta bağlantısı)'}`,
   );
 }
 
