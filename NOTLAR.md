@@ -2551,8 +2551,8 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
   (ayrıntı: NEREDE KALDIK → "31 Ekim — ilerleme ayrımı").
 - **31 Ekim akşam:** PLAN v3 ilk tur yayında (Pekiştir, LGS haritası, tema, ünite görselleri);
   profil hatası düzeltildi ("LGS'ye girince adım değişti": `profilSagla` öteki bölümden kopyalar,
-  `profilOtomatik` senkronda gerçeği ezmez). **Microsoft Clarity + çerez şeridi kodu hazır,
-  KİMLİK BEKLİYOR:** kullanıcı clarity.microsoft.com'da proje açıp kimliği verecek →
+  `profilOtomatik` senkronda gerçeği ezmez). **Microsoft Clarity + çerez şeridi CANLIDA (3 Kasım, kimlik z6e5yzcie8),
+  kimlik clarity.config.json.da.** Değiştirmek için:
   `clarity.config.json` `id` → platform push + `npm run site` → canlıda şerit çıkar. Yalnız
   "Kabul et" diyende yüklenir (KVKK açık rıza; gizlilik §9 ve KVKK §6 güncellendi). Search
   Console kurulu (kullanıcı). Site haritası her `npm run site`'ta kendiliğinden üretiliyor.
