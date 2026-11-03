@@ -2558,8 +2558,17 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
   Console kurulu (kullanıcı). Site haritası her `npm run site`'ta kendiliğinden üretiliyor.
   Supabase okuma (31 Ekim): 5 üye (hepsi Google), son 21 günde olaylar; bugünkü sayılar
   Claude'un yerel testleriyle şişik (önizleme derlemesi .env.local ile gerçek tabloya yazıyor!).
-- **SIRADAKİ İŞ: PLAN v3'ün kalanı (madde 2–4) kullanıcıyla konuşulacak** (aşağıda), sonra
-  blog yol haritası (NEREDE KALDIK → "31 Ekim"). Magnific bakiyesi **22.499** (31 Ekim;
+- **3 Kasım bitti (KARARLAR 18):** deneme dersi (ilk LGS dersinde eşiksiz diyalog,
+  `pekistirSec` `ilkDers`), ünite "bitti" rozeti (`lgs.ts uniteBittiMi`), Ayarlar'da LGS
+  günlük hedef önerisi (`lgsGunlukGereken`), Clarity kimliği canlıda. **Hata düzeltildi:**
+  `setState` artık tek Dexie işlemi — açılışta profil oluşturma, siteden gelen `?unite=`
+  isteğini eziyordu (ünite yine soruluyordu); ekran profil hazır olunca açılıyor
+  (main.tsx `profil`). Yerel önizlemede (localhost) ölçüm ve Clarity KAPALI (analitik.ts
+  `YEREL`). Blog 2. tur: veli rehberi, LGS kelime listesi merkez sayfası (13 yazı).
+  Not: LGS katsayıları — Türkçe/Mat/Fen 4, Yabancı dil/İnkılap/Din 1 (yazılarda yanlış yazma).
+- **SIRADAKİ İŞ:** satış kararları (PLAN v2 I: ücretsiz sınır, fiyat, ödeme), Instagram
+  reklamı (profil ziyareti; biyografi bağlantısı utm'li), Clarity verisi gelince UX analizi
+  (birkaç gün sonra), Search Console'da yeni yazıların durumu. Magnific bakiyesi **22.499** (31 Ekim;
   19 Ekim'deki "~57.000" notu eskimişti, arada başka işlerde harcanmış).
 - **Önce aşağıdaki KARARLAR'ı oku.** Bir şey önermeden önce onlara bak; çelişen
   öneri yapma. Yeni istekte önce tek cümleyle "anladığım şu" yaz.
