@@ -2576,6 +2576,8 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
     `instagram/NOTLAR.md` → "4 Kasım planlama". Biyografi güncellendi. **Hikâyeler planlanamıyor**
     (instagram.com ve uygulamada hikâye planlama yok; yalnız Business Suite) — Reels'ler
     yayınlanınca "Hikâyene ekle" elle yapılacak ya da Business Suite'e karar verilecek.
+- **4 Kasım gece — YARIM:** Instagram story'leri Business Suite'ten planlanıyor (0/24), reklam
+  5 Kasım'a kaldı. Ayrıntı ve ilk adım: `instagram/NOTLAR.md` → "HİKÂYELER — YARIM KALDI".
 - **SIRADAKİ İŞ:** satış kararları (PLAN v2 I: ücretsiz sınır, fiyat, ödeme), Instagram
   reklamı (profil ziyareti; biyografi bağlantısı utm'li), Clarity verisi gelince UX analizi
   (birkaç gün sonra), Search Console'da yeni yazıların durumu. Magnific bakiyesi **22.499** (31 Ekim;
