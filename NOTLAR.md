@@ -2578,6 +2578,10 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
     yayınlanınca "Hikâyene ekle" elle yapılacak ya da Business Suite'e karar verilecek.
 - **4 Kasım gece — YARIM:** Instagram story'leri Business Suite'ten planlanıyor (0/24), reklam
   5 Kasım'a kaldı. Ayrıntı ve ilk adım: `instagram/NOTLAR.md` → "HİKÂYELER — YARIM KALDI".
+- **7 Kasım:** Meta Pikseli (1903002600498688) site + platformda; çerez şeridi kısa ve standart, ölçüm
+  "Reddet" denmedikçe çalışıyor (Hasan kararı; KVKK riski konuşuldu). Gizlilik/KVKK metinleri buna göre.
+  Instagram reklam testi 7–13 Kasım yayında (A profil ziyareti 62 TL/gün, B siteye 50 TL/gün) —
+  ayrıntı `instagram/NOTLAR.md` → "REKLAM TESTİ YAYINDA". **13 Kasım'da sonuçlara bak.**
 - **SIRADAKİ İŞ:** satış kararları (PLAN v2 I: ücretsiz sınır, fiyat, ödeme), Instagram
   reklamı (profil ziyareti; biyografi bağlantısı utm'li), Clarity verisi gelince UX analizi
   (birkaç gün sonra), Search Console'da yeni yazıların durumu. Magnific bakiyesi **22.499** (31 Ekim;
