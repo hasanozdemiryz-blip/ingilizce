@@ -30,6 +30,8 @@
  *    baglamayan bir numara (bkz. profil.ts).
  */
 
+import { pixelOlay } from './pixel';
+
 const ADRES = import.meta.env.VITE_SUPABASE_URL;
 const ANAHTAR = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
@@ -206,6 +208,7 @@ export function olcumuKapat(): void {
  * olcum, olctugu akisi bozmamali.
  */
 export function olay(ad: Olay, veri?: Veri): void {
+  pixelOlay(ad);
   if (!acik || !kimlik) return;
   try {
     kuyruk.push({

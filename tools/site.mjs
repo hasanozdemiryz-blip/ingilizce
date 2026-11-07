@@ -21,6 +21,7 @@ import { kelimeEk, konular, KONU_ADI, lgsKelimeleri, UNITELER } from './site-ver
 
 /** Microsoft Clarity proje kimligi — platformla ortak dosya (31 Ekim). */
 const CLARITY_ID = JSON.parse(fs.readFileSync(new URL('../clarity.config.json', import.meta.url), 'utf8')).id || '';
+const PIXEL_ID = JSON.parse(fs.readFileSync(new URL('../meta-pixel.config.json', import.meta.url), 'utf8')).id || '';
 import { lgsSayfalari, cocukSayfalari, LGS_TARIH } from './site-bolumler.mjs';
 
 const KOK = path.resolve(import.meta.dirname, '..');
@@ -150,9 +151,8 @@ const KABUK = {
     KOSULLAR: 'Kullanım Koşulları',
     KVKK: 'KVKK Aydınlatma Metni',
     CEREZ: 'Çerez tercihleri',
-    CEREZ_METIN:
-      'Siteyi ve platformu geliştirmek için, izin verirsen Microsoft Clarity ile sayfada nereye tıklandığını ve nerede çıkıldığını anonim olarak kaydediyoruz. Reklam için kullanılmaz.',
-    CEREZ_AYRINTI: 'Ayrıntı',
+    CEREZ_METIN: 'Size daha iyi bir deneyim sunmak için çerezler kullanıyoruz.',
+    CEREZ_AYRINTI: 'Çerez Politikası',
     CEREZ_RET: 'Reddet',
     CEREZ_KABUL: 'Kabul et',
     ALT_SLOGAN: 'Ücretsiz · Reklamsız · Telefonda ve bilgisayarda',
@@ -177,9 +177,8 @@ const KABUK = {
     KOSULLAR: 'Terms of Use (Turkish)',
     KVKK: 'KVKK Notice (Turkish)',
     CEREZ: 'Cookie preferences',
-    CEREZ_METIN:
-      'With your permission we use Microsoft Clarity to record, anonymously, where people click and where they leave, so we can improve the site. Never used for ads.',
-    CEREZ_AYRINTI: 'Details',
+    CEREZ_METIN: 'We use cookies to give you a better experience.',
+    CEREZ_AYRINTI: 'Cookie Policy',
     CEREZ_RET: 'Decline',
     CEREZ_KABUL: 'Accept',
     ALT_SLOGAN: 'Free · No ads · On your phone and computer',
@@ -1242,6 +1241,7 @@ ${yazilar
       BOLUM: bolum,
       // Bos ise kabuktaki serit ve Clarity hic calismaz (bkz. clarity.config.json).
       CLARITY_ID,
+      PIXEL_ID,
       BOLUM_SERIDI: bolumSeridi(bolum, dil),
       MARKA_ALT: BOLUMLER[bolum].marka,
       // Logo bulundugu sekmenin ana sayfasina gider (LGS'de /lgs/, Ingilizce'de /en/).

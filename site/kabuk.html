@@ -225,20 +225,31 @@ __OGREN_MENU__
 </div>
 <script>
 /*
-  CEREZ ONAYI + MICROSOFT CLARITY (31 Ekim). Clarity (isi haritasi, oturum
-  kaydi) ucuncu taraf ve yurt disina aktarim: YALNIZ "Kabul et" denirse
-  yuklenir. Secim `hafizada-cerez`te; platform da ayni adreste ayni secimi
-  okuyor (src/clarity.ts). Kimlik bossa (clarity.config.json) serit de cikmaz.
+  CEREZ SERIDI + MICROSOFT CLARITY + META PIKSELI.
+  7 Kasim (kullanici karari): olcum secim yapmayanda da calisir, yalniz
+  "Reddet" (hayir) durdurur; serit kisa ve standart, secim yapilana kadar
+  altta durur. Secim `hafizada-cerez`te; platform da ayni adreste ayni secimi
+  okuyor (src/clarity.ts, src/pixel.ts). Iki kimlik de bossa serit cikmaz.
 */
 (function () {
   var ID = '__CLARITY_ID__';
-  if (!ID || /^(localhost|127.0.0.1)$/.test(location.hostname)) return;
+  var PIXEL = '__PIXEL_ID__';
+  if ((!ID && !PIXEL) || /^(localhost|127.0.0.1)$/.test(location.hostname)) return;
   var A = 'hafizada-cerez';
   var serit = document.getElementById('cerez-serit');
   var oku = function () { try { return localStorage.getItem(A); } catch (e) { return 'hayir'; } };
   var yaz = function (v) { try { localStorage.setItem(A, v); } catch (e) {} };
   var yukle = function () {
-    if (window.clarity) return;
+    if (PIXEL && !window.fbq) {
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = [];
+        t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+      }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      window.fbq('init', PIXEL);
+      window.fbq('track', 'PageView');
+    }
+    if (!ID || window.clarity) return;
     (function (c, l, a, r, i, t, y) {
       c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
       t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
@@ -255,13 +266,12 @@ __OGREN_MENU__
       var v = b.getAttribute('data-cerez');
       yaz(v);
       serit.hidden = true;
-      if (v === 'evet') yukle();
-      // Onay geri alindiysa Clarity'nin bu sayfada calismasi durmaz; bir sonraki sayfada yuklenmez.
+      // "Reddet" bu sayfada yuklenmis olani durdurmaz; bir sonraki sayfadan itibaren hic yuklenmez.
     });
   });
   var secim = oku();
-  if (secim === 'evet') yukle();
-  else if (secim !== 'hayir') serit.hidden = false;
+  if (secim !== 'hayir') yukle();
+  if (secim !== 'evet' && secim !== 'hayir') serit.hidden = false;
 })();
 </script>
 __SCRIPT__

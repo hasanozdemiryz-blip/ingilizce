@@ -28,7 +28,8 @@ export function clarityHazirla(olcumAcik: boolean): void {
   } catch {
     return;
   }
-  if (onay !== 'evet') return;
+  // 7 Kasim (kullanici karari): secim yapmayanda da calisir; yalniz "Reddet" (hayir) durdurur.
+  if (onay === 'hayir') return;
   yuklendi = true;
   const w = window as unknown as { clarity?: ((...a: unknown[]) => void) & { q?: unknown[] } };
   w.clarity =
