@@ -2582,6 +2582,9 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
   "Reddet" denmedikçe çalışıyor (Hasan kararı; KVKK riski konuşuldu). Gizlilik/KVKK metinleri buna göre.
   Instagram reklam testi 7–13 Kasım yayında (A profil ziyareti 62 TL/gün, B siteye 50 TL/gün) —
   ayrıntı `instagram/NOTLAR.md` → "REKLAM TESTİ YAYINDA". **13 Kasım'da sonuçlara bak.**
+  **10 Kasım ara kontrol (B, Supabase):** 180 cihaz platformu açtı (hepsi dokunmatik), yalnız 5'i
+  karşılamayı bitirdi, 5 derse başladı, 3 ders bitirdi, 2 yeni Google üyesi (9 Kasım). Kimse geri
+  dönmedi. Kayıp karşılama ekranında; adım adım olay yok → Clarity kayıtlarına bakılacak.
 - **SIRADAKİ İŞ:** satış kararları (PLAN v2 I: ücretsiz sınır, fiyat, ödeme), Instagram
   reklamı (profil ziyareti; biyografi bağlantısı utm'li), Clarity verisi gelince UX analizi
   (birkaç gün sonra), Search Console'da yeni yazıların durumu. Magnific bakiyesi **22.499** (31 Ekim;
