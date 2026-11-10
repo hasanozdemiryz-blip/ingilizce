@@ -8,12 +8,11 @@ import { t } from '../dil';
 
 type Props = {
   progress: Progress[];
-  yil?: 2027 | 2028;
+  yil: 2027 | 2028;
   unite?: number;
   lgsKalip?: AppState['lgsKalip'];
   lgsDiyalog?: AppState['lgsDiyalog'];
   lgsTest?: AppState['lgsTest'];
-  onYil: (yil: 2027 | 2028) => void;
   onUnite: (no: number) => void;
   /** Unite sayfasini ac (kaliplar, diyaloglar, test) */
   onUniteAc: (no: number) => void;
@@ -22,30 +21,14 @@ type Props = {
 /**
  * LGS ANA PANELI — ana ekranin ustunde, ders kartinin hemen uzerinde.
  *
- * Sira (KARARLAR 7): once "Hangi yıl?" (bir kez), sonra "Okulda hangi
- * ünitedesin?" (bir kez), sonra calisilan unitenin karti. Uniteler
+ * Sira: "Okulda hangi ünitedesin?" (bir kez), sonra calisilan unitenin
+ * karti. Yil sorusu 10 Kasim 2026'da kalkti (kullanici: herkese sade akis);
+ * yil 2027 varsayiliyor. Uniteler
  * KILITSIZ: her an baska uniteye gecilebilir; secim yalnizca yeni
  * kelimelerin hangi uniteden gelecegini belirliyor.
  */
-export function LgsPanel({ progress, yil, unite, lgsKalip, lgsDiyalog, lgsTest, onYil, onUnite, onUniteAc }: Props) {
+export function LgsPanel({ progress, yil, unite, lgsKalip, lgsDiyalog, lgsTest, onUnite, onUniteAc }: Props) {
   const [uniteSeciliyor, setUniteSeciliyor] = useState(false);
-
-  if (!yil) {
-    return (
-      <Card className="rise">
-        <p className="text-sm font-bold text-ink-soft">LGS</p>
-        <p className="word text-2xl font-extrabold mt-0.5 mb-4">{t('Hangi yıl LGS’ye gireceksin?')}</p>
-        <div className="grid grid-cols-2 gap-2.5">
-          <Button variant="spark" onClick={() => onYil(2027)}>
-            2027
-          </Button>
-          <Button variant="soft" onClick={() => onYil(2028)}>
-            2028
-          </Button>
-        </div>
-      </Card>
-    );
-  }
 
   const ogrenilen = new Set(progress.filter((p) => p.introduced || p.bilinen).map((p) => p.cardId));
   const durum = (no: number) => {

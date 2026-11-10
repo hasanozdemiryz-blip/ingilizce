@@ -60,6 +60,7 @@ export const olcumVarMi = (): boolean => Boolean(ADRES && ANAHTAR) && !YEREL;
 export type Olay =
   | 'uygulama_acildi'
   | 'karsilama_bitti'
+  | 'hizli_baslangic'
   | 'karsilama_atlandi'
   | 'giris_yapildi'
   | 'cikis_yapildi'

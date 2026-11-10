@@ -14,6 +14,7 @@ import {
   setteOlanlar,
   uniteKartlari,
   CARD_BY_ID,
+  LIMIT_DEFAULT,
 } from './content';
 import { AKTIF_BOLUM, ISTENEN_UNITE } from './bolum';
 import { LgsPanel } from './components/LgsPanel';
@@ -36,7 +37,6 @@ import { Lesson } from './screens/Lesson';
 import { Practice } from './screens/Practice';
 import { ProgressScreen } from './screens/Progress';
 import { SessionDone } from './screens/SessionDone';
-import { Welcome } from './screens/Welcome';
 import { Settings } from './screens/Settings';
 import { ProfilDuzenle } from './screens/ProfilDuzenle';
 import { Giris } from './components/Giris';
@@ -159,6 +159,13 @@ export default function App() {
 
   /* Snake karsilamasi yalnizca "Hemen basla" ile gelene (bkz. karsilama.ts) */
   const [karsilamaIzni] = useState(karsilamaIzniOku);
+  /*
+    "Hemen basla"dan gelen yeni kullanici dogrudan ilk derse girer (10 Kasim
+    2026, kullanici karari): karsilama ekranlari ve gunluk hedef sorusu yok.
+    LGS'de once tek soru — "Okulda hangi unitedesin?" — sonra ders. Bu bayrak
+    "ilk ders henuz acilmadi" demek; ders acilinca iner.
+  */
+  const [ilkDersBekliyor, setIlkDersBekliyor] = useState(false);
 
   /*
     ILERLEME SENKRONU. Oturum hazir olur olmaz bir kez: sunucudaki paket
@@ -399,19 +406,12 @@ export default function App() {
     if (!uye && !karsilamaIzni && tanitimaYolla()) return <SadeZemin />;
     return (
       <>
-        <Welcome
-        yalnizcaHedef={Boolean(uye)}
-        onDone={() => {
-          /*
-            Bir sure DOGRUDAN ilk derse giriliyordu — bir karar eksiltmek
-            icin. Kotu tarafi: kullanici hazir olup olmadigi sorulmadan
-            derse dusuyordu ve geri cikmanin yolu "dersi yarida birak"
-            uyarisiydi. Artik ana ekrana dusuyor; ilk ders orada kendi
-            karti olarak bekliyor (bkz. Home, `ilkDers`), baslatan o.
-          */
-          karsilamaIzniniSil();
-          setTab('ogren');
-        }}
+        <HizliBaslangic
+          onHazir={() => {
+            karsilamaIzniniSil();
+            setTab('ogren');
+            setIlkDersBekliyor(true);
+          }}
         />
         {girisPenceresi}
         {girisYapildiPenceresi}
@@ -430,7 +430,7 @@ export default function App() {
         tekrarOnce={flow.tekrarOnce}
         onExit={kapat}
         onFinish={(ozet) =>
-          setFlow(AKTIF_BOLUM === 'lgs' && state.lgsYil ? { name: 'pekistir', ozet } : { name: 'done', ...ozet })
+          setFlow(AKTIF_BOLUM === 'lgs' ? { name: 'pekistir', ozet } : { name: 'done', ...ozet })
         }
       />
     );
@@ -549,8 +549,8 @@ export default function App() {
   const deste = lgs
     ? lgsDestesi(state.lgsUnite)
     : genelDestesi(uye?.bilgi?.seviye === 'orta' ? 'orta' : 'baslangic');
-  /* LGS'de yil ve unite secilmeden ders acilmaz: once panel soruyor */
-  const lgsHazir = !lgs || (Boolean(state.lgsYil) && Boolean(state.lgsUnite));
+  /* LGS'de unite secilmeden ders acilmaz: once panel soruyor. Yil sorusu yok (2027 varsayilan). */
+  const lgsHazir = !lgs || Boolean(state.lgsUnite);
   /*
     Tarama yalnizca Genel'de ve seviyesini "Biraz" ya da "Orta" diyen uyeye,
     bir kez (yapilsin ya da gecilsin). "Hic bilmiyorum" diyen bastan baslar.
@@ -565,8 +565,14 @@ export default function App() {
   const bugununKartlari = todaysCards(progress);
   const ahead = aheadQueue(progress, AHEAD_BATCH);
 
+  const dersiAc = () => {
+    setIlkDersBekliyor(false);
+    setFlow({ name: 'ders', yeni: newCards, yedek: yedekKartlar, tekrar: due.slice(0, DAILY_REVIEW_CAP) });
+  };
+
   return (
     <>
+      {ilkDersBekliyor && lgsHazir && newCards.length > 0 && <OtomatikBasla onBasla={dersiAc} />}
       {tab === 'ogren' && (
         <Home
           progress={progress}
@@ -584,18 +590,14 @@ export default function App() {
             lgs ? (
               <LgsPanel
                 progress={progress}
-                yil={state.lgsYil}
+                yil={state.lgsYil ?? 2027}
                 unite={state.lgsUnite}
                 lgsKalip={state.lgsKalip}
                 lgsDiyalog={state.lgsDiyalog}
                 lgsTest={state.lgsTest}
-                onYil={(lgsYil) => {
-                  olay('lgs_yil', { yil: lgsYil });
-                  void tercihKaydet({ lgsYil });
-                }}
                 onUnite={(lgsUnite) => {
                   olay('lgs_unite', { unite: lgsUnite });
-                  void tercihKaydet({ lgsUnite });
+                  void tercihKaydet({ lgsUnite, ...(state.lgsYil ? {} : { lgsYil: 2027 as const }) });
                 }}
                 onUniteAc={(no) => setFlow({ name: 'unite', no })}
               />
@@ -607,9 +609,7 @@ export default function App() {
             ) : undefined
           }
           dersGizli={!lgsHazir}
-          onStart={() =>
-            setFlow({ name: 'ders', yeni: newCards, yedek: yedekKartlar, tekrar: due.slice(0, DAILY_REVIEW_CAP) })
-          }
+          onStart={dersiAc}
           /* Ayni ders, yalnizca tekrar bolumu basta — bkz. AGIR_TEKRAR */
           onReviewFirst={() =>
             setFlow({
@@ -701,4 +701,34 @@ export default function App() {
       )}
     </>
   );
+}
+
+/**
+ * Yeni kullanicinin kurulumu, ekransiz: varsayilan gunluk hedef (Ayarlar'dan
+ * degisir), LGS'de yil 2027. Bitince ana akis ilk dersi kendisi acar.
+ */
+function HizliBaslangic({ onHazir }: { onHazir: () => void }) {
+  const yapildi = useRef(false);
+  useEffect(() => {
+    if (yapildi.current) return;
+    yapildi.current = true;
+    olay('hizli_baslangic', { bolum: AKTIF_BOLUM });
+    void setState({
+      onboarded: true,
+      dailyLimit: LIMIT_DEFAULT,
+      ...(AKTIF_BOLUM === 'lgs' ? { lgsYil: 2027 as const } : {}),
+    }).then(onHazir);
+  }, [onHazir]);
+  return <Splash />;
+}
+
+/** Ilk dersi bir kez acar (bkz. `ilkDersBekliyor`). */
+function OtomatikBasla({ onBasla }: { onBasla: () => void }) {
+  const yapildi = useRef(false);
+  useEffect(() => {
+    if (yapildi.current) return;
+    yapildi.current = true;
+    onBasla();
+  }, [onBasla]);
+  return null;
 }
