@@ -37,19 +37,37 @@ function geriIleriMi(): boolean {
 export function karsilamaIzniOku(): boolean {
   if (tanitimSayfasiYok()) return true;
   const adres = new URL(window.location.href);
-  const basla = adres.searchParams.get('basla') === '1';
-  if (basla) {
+  /*
+    Reklam/kampanya baglantisi (utm_*) da "Hemen basla" sayilir. Instagram'in
+    uygulama ici tarayicisi arka plana atilan sayfayi geri gelince yeniden
+    yukluyor; `basla=1` o sirada adresten silinmis oldugu icin reklamdan gelen
+    tanitim sayfasina atiliyordu (Clarity, 10 Kasim 2026: 18. saniyede ana
+    sayfaya dusen oturumlar). utm adreste kaliyor, yeniden yuklemede de gecerli.
+  */
+  const basla =
+    adres.searchParams.get('basla') === '1' || adres.searchParams.has('utm_source');
+  if (adres.searchParams.has('basla')) {
     adres.searchParams.delete('basla');
     history.replaceState(null, '', adres.pathname + adres.search + adres.hash);
   }
-  // Geri/ileri tusuyla gelen asla: gecmisteki sayfa bir "Hemen basla" degil.
-  if (geriIleriMi()) return false;
+  let kayitli = false;
+  try {
+    kayitli = sessionStorage.getItem(ANAHTAR) === '1';
+  } catch {
+    // depo yok
+  }
+  /*
+    Geri/ileri tusuyla gelen, izni olmayan biri: gecmisteki sayfa bir "Hemen
+    basla" degil. Izni sekmede duruyorsa (karsilamanin ortasinda uygulama ici
+    tarayici sayfayi geri yukledi) karsilama surer — cikista izin zaten siliniyor.
+  */
+  if (geriIleriMi() && !kayitli) return false;
   try {
     if (basla) sessionStorage.setItem(ANAHTAR, '1');
-    return basla || sessionStorage.getItem(ANAHTAR) === '1';
   } catch {
-    return basla;
+    // depo yok
   }
+  return basla || kayitli;
 }
 
 /** Karsilama bitti ya da kullanici ayriliyor: izin bir daha kullanilmasin. */
