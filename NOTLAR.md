@@ -2601,7 +2601,11 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
   geçen süre. Asıl kayıp ilk saniyeler (reklam/tıklama kalitesi). İkinci hata bulundu ve düzeltildi:
   Instagram tarayıcısı sayfayı yeniden yükleyince `basla=1` silinmiş olduğundan reklamdan gelen tanıtım
   sayfasına atılıyordu → `karsilama.ts`: utm_source da izin sayılıyor; izin kayıtlıysa geri/ileri engellemiyor.
-  Karar bekliyor: reklam/"Hemen başla" → karşılama yerine doğrudan ilk ders (kullanıcı önerisi).
+  **YAYINDA (KARARLAR 19):** karşılama (snake, 3 adım, günlük hedef) KALKTI, herkes için: "Hemen başla" →
+  doğrudan ilk ders (`App.tsx` `HizliBaslangic` + `OtomatikBasla`, hedef 10 varsayılan). LGS'de yıl sorusu
+  kalktı (2027 varsayılan), yalnız "Okulda hangi ünitedesin?" → ders. `Welcome.tsx` silindi. Yeni olay
+  `hizli_baslangic`. Ölçü: uygulama_acildi → ders_basladi oranı (önceki ~%3).
+  45 gün özeti (testler dahil): 34 cihaz derse başladı, 24 bitirdi, 5'i 2+ gün, 1'i 4 gün geldi; 7 üye.
 - **SIRADAKİ İŞ:** satış kararları (PLAN v2 I: ücretsiz sınır, fiyat, ödeme), Instagram
   reklamı (profil ziyareti; biyografi bağlantısı utm'li), Clarity verisi gelince UX analizi
   (birkaç gün sonra), Search Console'da yeni yazıların durumu. Magnific bakiyesi **22.499** (31 Ekim;
@@ -2693,6 +2697,9 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
     - **LGS günlük hedef** = 5/10/15 seçimi kalır; LGS'de "sınava yetişmek için günde N"
       önerisi gösterilir, tek dokunuşla seçilir.
     - Ölçüm tablosundaki 31 Ekim test kayıtları silindi (17 kayıt, 3 test cihazı).
+19. **Sade giriş (10 Kasım):** karşılama ekranları yok, herkese. "Hemen başla" = doğrudan ilk ders.
+    LGS'de yıl sorusu YOK (2027 varsayılan; KARARLAR 7'deki yıl sorusu kalktı), yalnız ünite sorusu.
+    Üyelik isteğe bağlı kalır (ders sonunda davet).
 
 #### PLAN (onaylı 19 Ekim) — neden / ne / bitti
 
