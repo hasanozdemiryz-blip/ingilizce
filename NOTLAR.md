@@ -2585,6 +2585,12 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
   **10 Kasım ara kontrol (B, Supabase):** 180 cihaz platformu açtı (hepsi dokunmatik), yalnız 5'i
   karşılamayı bitirdi, 5 derse başladı, 3 ders bitirdi, 2 yeni Google üyesi (9 Kasım). Kimse geri
   dönmedi. Kayıp karşılama ekranında; adım adım olay yok → Clarity kayıtlarına bakılacak.
+  **Clarity ile bulundu ve düzeltildi (10 Kasım):** Instagram içi tarayıcıda (384×712) karşılamanın
+  ilk ekranındaki "Devam" katlanmanın altında kalıyordu (yalnız üst 26 px görünüyordu); ziyaretçiler
+  dokunmadan 10–30 sn bakıp çıkıyordu. `Welcome.tsx` `ALT_DUGME`: alt düğmeler ekrana yapışık (sticky),
+  360×600'de üç adım da sığıyor. Clarity'ye Claude, kullanıcının kendi Chrome'una bağlanarak bakıyor
+  (`~/.claude.json` chrome-devtools `--autoConnect` + Chrome'da `chrome://inspect/#remote-debugging`).
+  11–13 Kasım: karsilama_bitti / uygulama_acildi oranı %3'ten yükseldi mi, bak.
 - **SIRADAKİ İŞ:** satış kararları (PLAN v2 I: ücretsiz sınır, fiyat, ödeme), Instagram
   reklamı (profil ziyareti; biyografi bağlantısı utm'li), Clarity verisi gelince UX analizi
   (birkaç gün sonra), Search Console'da yeni yazıların durumu. Magnific bakiyesi **22.499** (31 Ekim;

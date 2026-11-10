@@ -12,6 +12,14 @@ import { DilSecici } from '../components/DilSecici';
 type Adim = 'vaat' | 'dene' | 'hedef';
 
 /**
+ * Alt dugme ekranin altina yapisik. Instagram'in uygulama ici tarayicisinda
+ * (gorunen yukseklik ~712px) ilk ekranin "Devam"i katlanmanin altinda kaliyordu:
+ * yalniz ust 26px'i gorunuyordu ve reklamdan gelen 180 kisiden 5'i gecebildi
+ * (Clarity, 10 Kasim 2026). Dugme kaydirmadan HER ZAMAN gorunmeli.
+ */
+const ALT_DUGME = 'shrink-0 sticky bottom-0 z-10 -mx-5 px-5 pt-3 pb-1 bg-paper';
+
+/**
  * ILK KARSILASMA — uc adim, ~30 saniye.
  *
  * Arastirma net: uygulamalar ilk hafta kullanicinin cogunu "aha" anina hic
@@ -72,7 +80,7 @@ export function Welcome({
     return (
       <Screen yanMenusuz>
         <Atla onClick={atla} />
-        <div className="flex-1 flex flex-col justify-center gap-6 py-6">
+        <div className="flex-1 flex flex-col justify-center gap-4 py-3">
           <div className="rise text-center">
             <h1 className="word text-3xl font-extrabold leading-tight">{t('Ezberleme. Bağla.')}</h1>
             <p className="text-ink-soft mt-2 leading-relaxed max-w-[30ch] mx-auto">
@@ -93,7 +101,7 @@ export function Welcome({
           </Card>
         </div>
 
-        <div className="shrink-0 rise delay-2">
+        <div className={`${ALT_DUGME} rise delay-2`}>
           <Button variant="brand" onClick={() => setAdim('dene')}>
             {t('Devam')}
           </Button>
@@ -158,7 +166,7 @@ export function Welcome({
         </div>
 
         {secilen !== null && (
-          <div className="shrink-0 rise delay-1">
+          <div className={`${ALT_DUGME} rise delay-1`}>
             <Button variant="brand" onClick={() => setAdim('hedef')}>
               {t('Devam')}
             </Button>
@@ -213,7 +221,7 @@ export function Welcome({
         </p>
       </div>
 
-      <div className="shrink-0 rise delay-3">
+      <div className={`${ALT_DUGME} rise delay-3`}>
         {/* "Baslayalim" ders hemen basliyor demekti; artik ana ekrana dusuyor */}
         <Button variant="brand" onClick={() => void bitir()}>
           {t('Hazırım')}
