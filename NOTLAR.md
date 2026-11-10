@@ -2591,6 +2591,11 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
   360×600'de üç adım da sığıyor. Clarity'ye Claude, kullanıcının kendi Chrome'una bağlanarak bakıyor
   (`~/.claude.json` chrome-devtools `--autoConnect` + Chrome'da `chrome://inspect/#remote-debugging`).
   11–13 Kasım: karsilama_bitti / uygulama_acildi oranı %3'ten yükseldi mi, bak.
+  Aynı gün: Clarity 150 reklam oturumunun 144'ü hiç dokunmamış. Reklam Yöneticisi (7–10 Kas): A 106 profil
+  ziyareti × 1,79 TL, B 168 bağlantı tıklaması × 0,74 TL. Pixel (13 Eki–9 Kas): PageView 187, DersBasladi 12,
+  DersBitti 9, GirisYapildi 3. Pixel tanısı giderildi: izin listesi = "hafizada.com ve alt domainler".
+  Search Console: 74 dizinde / 16 dışarıda (12 "keşfedildi", 3 yönlendirme, 1 robots = platform bağlantısı,
+  bilerek). 7 yeni blog yazısı için "Dizine eklenmesini iste" gönderildi (10 Kas).
 - **SIRADAKİ İŞ:** satış kararları (PLAN v2 I: ücretsiz sınır, fiyat, ödeme), Instagram
   reklamı (profil ziyareti; biyografi bağlantısı utm'li), Clarity verisi gelince UX analizi
   (birkaç gün sonra), Search Console'da yeni yazıların durumu. Magnific bakiyesi **22.499** (31 Ekim;
