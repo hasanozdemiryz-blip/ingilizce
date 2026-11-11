@@ -2612,6 +2612,7 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
   B 267 bağlantı tıklaması, A 175 profil ziyareti; takipçi 4.518 (~4.300'den). Organik: 9 Kas iki Reels ~1,7 B,
   10 Kas Nermin Teyze otel 1.617 görüntüleme / 14 takip. Pixel: PageView 256, DersBasladi 67, DersBitti 11, uyarı yok.
   Reklam Yöneticisi'nde "kimliğini doğrula" uyarısı var (reklamlar durmasın diye; Hasan yapmalı).
+  **Instagram 12–18 Kas: 14 Reels + 14 Story planlandı** (ayrıntı `instagram/NOTLAR.md` → "00. PLANLAMA DURUMU"). 19 Kas'tan sonrası boş.
 - **SIRADAKİ İŞ:** satış kararları (PLAN v2 I: ücretsiz sınır, fiyat, ödeme), Instagram
   reklamı (profil ziyareti; biyografi bağlantısı utm'li), Clarity verisi gelince UX analizi
   (birkaç gün sonra), Search Console'da yeni yazıların durumu. Magnific bakiyesi **22.499** (31 Ekim;
