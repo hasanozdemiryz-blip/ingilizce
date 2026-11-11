@@ -2606,6 +2606,12 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
   kalktı (2027 varsayılan), yalnız "Okulda hangi ünitedesin?" → ders. `Welcome.tsx` silindi. Yeni olay
   `hizli_baslangic`. Ölçü: uygulama_acildi → ders_basladi oranı (önceki ~%3).
   45 gün özeti (testler dahil): 34 cihaz derse başladı, 24 bitirdi, 5'i 2+ gün, 1'i 4 gün geldi; 7 üye.
+  **11 Kasım kontrol:** sade girişten sonra reklamdan 75 cihaz → 71 ders_basladi (otomatik açılış) ama yalnız 1
+  ders_bitti; Clarity: 66 oturumun 65'inde hiç dokunma yok, sayfa 1–4. sn'de gizleniyor (Instagram'a dönüş).
+  Günlük ders bitiren her gün ~2 (değişmedi) → sorun sayfa değil, B'nin tıklama kalitesi. Reklam (7–10 Kas):
+  B 267 bağlantı tıklaması, A 175 profil ziyareti; takipçi 4.518 (~4.300'den). Organik: 9 Kas iki Reels ~1,7 B,
+  10 Kas Nermin Teyze otel 1.617 görüntüleme / 14 takip. Pixel: PageView 256, DersBasladi 67, DersBitti 11, uyarı yok.
+  Reklam Yöneticisi'nde "kimliğini doğrula" uyarısı var (reklamlar durmasın diye; Hasan yapmalı).
 - **SIRADAKİ İŞ:** satış kararları (PLAN v2 I: ücretsiz sınır, fiyat, ödeme), Instagram
   reklamı (profil ziyareti; biyografi bağlantısı utm'li), Clarity verisi gelince UX analizi
   (birkaç gün sonra), Search Console'da yeni yazıların durumu. Magnific bakiyesi **22.499** (31 Ekim;
