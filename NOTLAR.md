@@ -2612,7 +2612,12 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
   B 267 bağlantı tıklaması, A 175 profil ziyareti; takipçi 4.518 (~4.300'den). Organik: 9 Kas iki Reels ~1,7 B,
   10 Kas Nermin Teyze otel 1.617 görüntüleme / 14 takip. Pixel: PageView 256, DersBasladi 67, DersBitti 11, uyarı yok.
   Reklam Yöneticisi'nde "kimliğini doğrula" uyarısı var (reklamlar durmasın diye; Hasan yapmalı).
-  **Instagram 12–18 Kas: 14 Reels + 14 Story planlandı** (ayrıntı `instagram/NOTLAR.md` → "00. PLANLAMA DURUMU"). 19 Kas'tan sonrası boş.
+  **Instagram 13–27 Kas (13 Kas gece, YENİ SİSTEM): 42 Reels + 42 Story planlı, hepsi dikey.** Her gün 1 "5 kalıp"
+  (genel konu, her kalıba yeni çizim, Serkan sesi anlatım) + 1 çağrışım (2 kelime); 13–22 Kas 12:00 eldeki video ·
+  17:00 kalıp · 20:00 çağrışım, 23–27 Kas 12:00 kalıp · 20:00 çağrışım (24–25 Kas 17:00 brake/tyre). Story = Reels'in
+  tamamı, 1 saat sonra. Instagram web'de kırpma varsayılanı KARE: her yüklemede "Orijinal" seçilip oran 1,78 doğrulandı.
+  12 Kas carrot kare yayınlandı, Hasan silinmesin dedi. Ayrıntı `instagram/NOTLAR.md` → "000. YENİ SİSTEM".
+  28 Kas'tan sonrası boş. Magnific yıllık kredisi 17 Kas'ta bitiyor.
 - **SIRADAKİ İŞ:** satış kararları (PLAN v2 I: ücretsiz sınır, fiyat, ödeme), Instagram
   reklamı (profil ziyareti; biyografi bağlantısı utm'li), Clarity verisi gelince UX analizi
   (birkaç gün sonra), Search Console'da yeni yazıların durumu. Magnific bakiyesi **22.499** (31 Ekim;
