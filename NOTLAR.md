@@ -2618,6 +2618,14 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
   tamamı, 1 saat sonra. Instagram web'de kırpma varsayılanı KARE: her yüklemede "Orijinal" seçilip oran 1,78 doğrulandı.
   12 Kas carrot kare yayınlandı, Hasan silinmesin dedi. Ayrıntı `instagram/NOTLAR.md` → "000. YENİ SİSTEM".
   28 Kas'tan sonrası boş. Magnific yıllık kredisi 17 Kas'ta bitiyor.
+  **13 Kas reklam/site kontrolü (7–12 Kas, reklamlar 13 Kas gece bitiyor):** toplam 627 TL.
+  A (Reels, profil ziyareti): 348 TL, 289 ziyaret (1,20 TL), erişim 3.983, kalite ortalamanın üstü; takipçi
+  ~4.300 → 4.566. B (gönderi, bağlantı): 280 TL, 451 tıklama (0,62 TL), 333 sayfa görüntüleme. Site (11–12 Kas):
+  129 cihaz hızlı başlangıç → 125 ders_basladi → ~4 cihaz ders_bitti (%3). Clarity 7 gün: 306 oturum, %98 yeni,
+  %95 Instagram içi tarayıcı, ortalama etkin süre 10 sn. Pixel: PageView 323, DersBasladi 129, DersBitti 27, Giriş 4.
+  Sonuç: giriş sorunu çözüldü, sorun ders içinde kopuş; B tipi tıklama reklamı ders bitirme getirmiyor,
+  A (takipçi) daha kalıcı. Yol haritası: kısa vadede ücretli reklam yok, organik 42 paylaşım ölçülür;
+  ders içi kopuş Clarity kayıtlarından incelenir; yeniden reklam olursa yalnız A tipi, en iyi kalıp Reels'i.
 - **SIRADAKİ İŞ:** satış kararları (PLAN v2 I: ücretsiz sınır, fiyat, ödeme), Instagram
   reklamı (profil ziyareti; biyografi bağlantısı utm'li), Clarity verisi gelince UX analizi
   (birkaç gün sonra), Search Console'da yeni yazıların durumu. Magnific bakiyesi **22.499** (31 Ekim;
