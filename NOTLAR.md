@@ -2620,7 +2620,8 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
   28 Kas'tan sonrası boş. Magnific yıllık kredisi 17 Kas'ta bitiyor.
   **13 Kas reklam/site kontrolü (7–12 Kas, reklamlar 13 Kas gece bitiyor):** toplam 627 TL.
   A (Reels, profil ziyareti): 348 TL, 289 ziyaret (1,20 TL), erişim 3.983, kalite ortalamanın üstü; takipçi
-  ~4.300 → 4.566. B (gönderi, bağlantı): 280 TL, 451 tıklama (0,62 TL), 333 sayfa görüntüleme. Site (11–12 Kas):
+  ~4.300 → 4.566 (Hasan takip-çıkarma yaptığı için ölçü değil). Gönderi bazında takip: A Reels 397 takip
+  (~0,88 TL/takip; organik kısım dahil), B gönderisi 22 takip (~12,8 TL/takip). B (gönderi, bağlantı): 280 TL, 451 tıklama (0,62 TL), 333 sayfa görüntüleme. Site (11–12 Kas):
   129 cihaz hızlı başlangıç → 125 ders_basladi → ~4 cihaz ders_bitti (%3). Clarity 7 gün: 306 oturum, %98 yeni,
   %95 Instagram içi tarayıcı, ortalama etkin süre 10 sn. Pixel: PageView 323, DersBasladi 129, DersBitti 27, Giriş 4.
   Sonuç: giriş sorunu çözüldü, sorun ders içinde kopuş; B tipi tıklama reklamı ders bitirme getirmiyor,
