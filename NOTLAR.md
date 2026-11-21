@@ -2629,7 +2629,7 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
   ders içi kopuş Clarity kayıtlarından incelenir; yeniden reklam olursa yalnız A tipi, en iyi kalıp Reels'i.
   **21 Kas kontrol (reklam sonrası, 14–20 Kas):** Instagram'a reklamsız haftada 90 takip geldi (günde ~13;
   reklam haftası 7–13 Kas 500). Takip getiren tek tür 2'li ÇAĞRIŞIM: chop 18 Kas 2.072 izlenme/36 takip, carrot
-  12 Kas 1.928/25, fry 18 Kas 500/20, goat? 16 Kas 339/9. "5 kalıp" 200–490 izlenme, takip 0–6 ama kaydetme en
+  12 Kas 1.928/25, fry 18 Kas 500/20, 16 Kas 20:00 çağrışımı 339/9. "5 kalıp" 200–490 izlenme, takip 0–6 ama kaydetme en
   yüksek (9–11). Tek soru / LGS harf / hız testi ~0 takip. 28 günde 597 takip, 830 takibi bırakma (Hasan'ın
   takip-çıkarma döngüsü); profil 4.398. SİTE: reklam bitince trafik sıfırlandı (14–21 Kas günde ~1 cihaz,
   Clarity 7 gün 4 oturum) → organik Instagram siteye kimseyi getirmiyor; site/sayfalar 200, çalışıyor.
