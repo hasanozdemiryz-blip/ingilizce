@@ -2635,6 +2635,18 @@ ortak kaldığı için bakım iki katına çıkmaz. Karar kullanıcıda.
   Clarity 7 gün 4 oturum) → organik Instagram siteye kimseyi getirmiyor; site/sayfalar 200, çalışıyor.
   Sırada: ilk dersi Reels kelimeleriyle başlatmak (carrot, pillow, kitchen...; bkz. konuşma 13 Kas),
   içerikte çağrışım ağırlığını artırmak.
+  **25 Kas kontrol (reklamsız, Meta günlük verisi 24 Kas'a kadar):** gelen takip 14–21 Kas 95 (günde ~12) →
+  22–24 Kas 67+48+43=158 (günde ~53). Görüntüleme günde ~1.260 → ~3.100, etkileşim ~48 → ~147. 1.000+ izlenen Reels:
+  14–21 Kas'ta 23'te 1 (chop), 22–25 Kas'ta 10'da 4: storm 2.780/77 takip, tell 2.059/53, Doktorda kalıp 1.842/33
+  (59 kaydetme), Hava durumu kalıbı 1.755/23 (46 kaydetme). Bu 5 videonun 4'ü 12:00'de; 13 Kas'tan beri 17:00'de 1.000'i geçen yok
+  (en iyi 512). Story ~40 izlenme, değişmedi. 28 günlük takipçi erişimi 468 → 600. Sadece 3-4 gün, kesin değil.
+  Reklam kapanış: A 365,81 TL / 300 profil ziyareti, B 297,62 TL / 472 tıklama, toplam 663,43 TL; ikisi de Tamamlandı.
+  Site 14–25 Kas: 6 cihaz; biri (12 Kas reklam döneminde gelmiş) 14–17 Kas'ta 12 ders bitirdi ve çok "biliyorum" dedi (51),
+  biri 25 Kas'ta LGS'de 4 ders bitirdi (kim oldukları bilinmiyor). Clarity 7 gün 7 oturum, 5'i Instagram bağlantısından.
+  Takvim değişmiş (Claude değiştirmedi): iş yeri 23 Kas 17:00 yayınlandı; boss 26 Kas 19:00, brake 28 Kas 12:00, ball 28 Kas 20:00,
+  tyre 29 Kas 12:00. Story'ler eski günlerinde kaldı (boss/brake/tyre Story'si çıktı). 29 Kas 12:00'den sonrası boş.
+  DÜZELTME (21 Kas notu): "tek takip getiren tür çağrışım" artık geçersiz, kalıp da getiriyor; 18 Kas sıçraması chop + fry;
+  "830 takibi bırakma = Hasan'ın çıkarması" doğrulanmadı (Meta ayırmıyor); "siteyi açan sen ya da ben" tahmindi.
 - **SIRADAKİ İŞ:** satış kararları (PLAN v2 I: ücretsiz sınır, fiyat, ödeme), Instagram
   reklamı (profil ziyareti; biyografi bağlantısı utm'li), Clarity verisi gelince UX analizi
   (birkaç gün sonra), Search Console'da yeni yazıların durumu. Magnific bakiyesi **22.499** (31 Ekim;
